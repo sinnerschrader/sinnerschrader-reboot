@@ -30,5 +30,8 @@
   "bugs": {
     "url": "https://github.com/sinnerschrader/sinnerschrader-reboot/issues"
   },
-  "homepage": "https://github.com/sinnerschrader/sinnerschrader-reboot#readme"
+  "homepage": "https://github.com/sinnerschrader/sinnerschrader-reboot#readme",
+  "dependencies": {
+    "html-minifier": "^4.0.0"
+  }
 }

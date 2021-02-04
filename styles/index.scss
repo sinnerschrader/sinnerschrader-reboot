@@ -1,6 +1,16 @@
-$color: lightblue;
+// core
+@import "./core/base";
+@import "./core/fonts";
+@import "./core/grid";
+@import "./core/variables";
 
+// includes
+@import "./includes/footer";
+@import "./includes/header";
+
+// test
 body {
-	position: sticky;
-	background-color: $color;
+	background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+	font-family: Arial, Helvetica, sans-serif;
+	color: #fff;
 }

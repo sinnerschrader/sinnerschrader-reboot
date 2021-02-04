@@ -11,9 +11,15 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.11.1",
+    "autoprefixer": "^10.2.4",
+    "cssnano": "^4.1.10",
+    "fibers": "^5.0.0",
+    "fs-extra": "^9.1.0",
     "husky": "^4.3.8",
     "lint-staged": "^10.5.3",
-    "prettier": "^2.2.1"
+    "postcss": "^8.2.4",
+    "prettier": "^2.2.1",
+    "sass": "^1.32.6"
   },
   "repository": {
     "type": "git",

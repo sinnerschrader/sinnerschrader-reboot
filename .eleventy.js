@@ -1,10 +1,19 @@
 const autoprefixer = require("autoprefixer");
 const cssnano = require("cssnano");
-const { default: postcss } = require("postcss");
-const processSassFiles = require("./config/process-sass");
+const chokidar = require("chokidar");
+const { utimes } = require("fs-extra");
 const htmlmin = require("html-minifier");
+const { join } = require("path");
+const { default: postcss } = require("postcss");
 
-module.exports = eleventyConfig => {
+const processSassFiles = require("./config/process-sass");
+
+module.exports = (eleventyConfig) => {
+	const watcher = chokidar.watch("styles/{includes,core}/*.scss", {
+		ignored: /(^|[\/\\])\../,
+		persistent: true,
+	});
+	watcher.on("add", touchFile).on("change", touchFile);
 	processSassFiles("./styles/index.scss", "./_includes/css/main.css");
 
 	eleventyConfig.setTemplateFormats(["liquid", "njk"]);
@@ -18,18 +27,18 @@ module.exports = eleventyConfig => {
 	});
 
 	eleventyConfig.setBrowserSyncConfig({
-		files: "./_site/stylesheet.css"
+		files: "./_site/stylesheet.css",
 	});
 
 	eleventyConfig.addWatchTarget("_site/index.css");
 	eleventyConfig.setBrowserSyncConfig({ files: ["_site/index.css"] });
 
-	eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
+	eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
 		if (outputPath.endsWith(".html")) {
 			let minified = htmlmin.minify(content, {
 				useShortDoctype: true,
 				removeComments: true,
-				collapseWhitespace: true
+				collapseWhitespace: true,
 			});
 			return minified;
 		}
@@ -37,3 +46,8 @@ module.exports = eleventyConfig => {
 		return content;
 	});
 };
+
+function touchFile() {
+	const time = new Date();
+	utimes(join(process.cwd(), "styles/index.scss"), time, time);
+}

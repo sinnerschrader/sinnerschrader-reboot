@@ -1,10 +1,19 @@
 const autoprefixer = require("autoprefixer");
 const cssnano = require("cssnano");
-const { default: postcss } = require("postcss");
-const processSassFiles = require("./config/process-sass");
+const chokidar = require("chokidar");
+const { utimes } = require("fs-extra");
 const htmlmin = require("html-minifier");
+const { join } = require("path");
+const { default: postcss } = require("postcss");
+
+const processSassFiles = require("./config/process-sass");
 
 module.exports = eleventyConfig => {
+	const watcher = chokidar.watch("styles/{includes,core}/*.scss", {
+		ignored: /(^|[\/\\])\../,
+		persistent: true
+	});
+	watcher.on("add", touchFile).on("change", touchFile);
 	processSassFiles("./styles/index.scss", "./_includes/css/main.css");
 
 	eleventyConfig.setTemplateFormats(["liquid", "njk"]);
@@ -37,3 +46,8 @@ module.exports = eleventyConfig => {
 		return content;
 	});
 };
+
+function touchFile() {
+	const time = new Date();
+	utimes(join(process.cwd(), "styles/index.scss"), time, time);
+}

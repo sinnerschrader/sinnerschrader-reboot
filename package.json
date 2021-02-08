@@ -12,9 +12,11 @@
   "devDependencies": {
     "@11ty/eleventy": "^0.11.1",
     "autoprefixer": "^10.2.4",
+    "chokidar": "^3.5.1",
     "cssnano": "^4.1.10",
     "fibers": "^5.0.0",
     "fs-extra": "^9.1.0",
+    "html-minifier": "^4.0.0",
     "husky": "^4.3.8",
     "lint-staged": "^10.5.3",
     "postcss": "^8.2.4",
@@ -30,8 +32,5 @@
   "bugs": {
     "url": "https://github.com/sinnerschrader/sinnerschrader-reboot/issues"
   },
-  "homepage": "https://github.com/sinnerschrader/sinnerschrader-reboot#readme",
-  "dependencies": {
-    "html-minifier": "^4.0.0"
-  }
+  "homepage": "https://github.com/sinnerschrader/sinnerschrader-reboot#readme"
 }

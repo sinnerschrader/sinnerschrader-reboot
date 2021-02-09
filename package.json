@@ -5,9 +5,11 @@
   "description": "SinnerSchrader website reboot",
   "main": "index.js",
   "scripts": {
+    "start:dev": "npm run watch && npm run bundlejs:dev",
     "build": "npx @11ty/eleventy",
     "watch": "npx @11ty/eleventy --serve",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bundlejs:dev": "webpack --config=./webpack.config.dev.js"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.11.1",
@@ -21,7 +23,9 @@
     "lint-staged": "^10.5.3",
     "postcss": "^8.2.4",
     "prettier": "^2.2.1",
-    "sass": "^1.32.6"
+    "sass": "^1.32.6",
+    "webpack": "^5.21.2",
+    "webpack-cli": "^4.5.0"
   },
   "repository": {
     "type": "git",

@@ -1,0 +1,26 @@
+// Breakpoints
+@mixin bp-xs {
+	@media screen and (max-width: 599px) {
+		@content;
+	}
+}
+@mixin bp-s {
+	@media screen and (min-width: 600px) and (max-width: 899px) {
+		@content;
+	}
+}
+@mixin bp-m {
+	@media screen and (min-width: 900px) and (max-width: 1199px) {
+		@content;
+	}
+}
+@mixin bp-l {
+	@media screen and (min-width: 1200px) and (max-width: 1799px) {
+		@content;
+	}
+}
+@mixin bp-xl {
+	@media screen and (min-width: 1800px) {
+		@content;
+	}
+}

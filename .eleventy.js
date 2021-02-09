@@ -31,8 +31,8 @@ module.exports = (eleventyConfig) => {
 	});
 
 	eleventyConfig.addWatchTarget("_site/index.css");
-	eleventyConfig.addWatchTarget("_site/main.js");
-	eleventyConfig.setBrowserSyncConfig({ files: ["_site/index.css", "_site/main.js"] });
+	eleventyConfig.addWatchTarget("_site/bundle.js");
+	eleventyConfig.setBrowserSyncConfig({ files: ["_site/index.css", "_site/bundle.js"] });
 
 	eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
 		if (outputPath.endsWith(".html")) {
@@ -45,10 +45,6 @@ module.exports = (eleventyConfig) => {
 		}
 
 		return content;
-	});
-
-	eleventyConfig.addPassthroughCopy({
-		"./_includes/js/*": "./js/",
 	});
 };
 

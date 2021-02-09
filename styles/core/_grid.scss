@@ -1,0 +1,124 @@
+@import "mixins";
+@import "grid-test";
+
+$grid-columns: 12 !default;
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat($grid-columns, 1fr);
+	grid-gap: 0;
+	padding: 0;
+
+	> * {
+		grid-column-end: span $grid-columns;
+	}
+}
+
+@for $i from 1 through $grid-columns {
+	.col-#{$i} {
+		grid-column-end: span #{$i};
+	}
+	.col-start-#{$i} {
+		grid-column-start: #{$i};
+	}
+	.col-end-#{$i + 1} {
+		grid-column-end: #{$i + 1};
+	}
+}
+
+.col-start {
+	grid-column-start: 1;
+}
+.col-end {
+	grid-column-end: -1;
+}
+
+@include bp-xs {
+	@for $i from 1 through $grid-columns {
+		.grid {
+			grid-gap: 1.2rem;
+			padding: 0 2.4rem;
+		}
+		.col-#{$i}\-xs {
+			grid-column-end: span #{$i};
+		}
+		.col-start-#{$i}\-xs {
+			grid-column-start: #{$i};
+		}
+		.col-end-#{$i + 1}\-xs {
+			grid-column-end: #{$i + 1};
+		}
+	}
+}
+
+@include bp-s {
+	.grid {
+		grid-gap: 1.6rem;
+		padding: 0 3.2rem;
+	}
+	@for $i from 1 through $grid-columns {
+		.col-#{$i}\-s {
+			grid-column-end: span #{$i};
+		}
+		.col-start-#{$i}\-s {
+			grid-column-start: #{$i};
+		}
+		.col-end-#{$i + 1}\-s {
+			grid-column-end: #{$i + 1};
+		}
+	}
+}
+
+@include bp-m {
+	.grid {
+		grid-gap: 1.6rem;
+		padding: 0 3.2rem;
+	}
+	@for $i from 1 through $grid-columns {
+		.col-#{$i}\-m {
+			grid-column-end: span #{$i};
+		}
+		.col-start-#{$i}\-m {
+			grid-column-start: #{$i};
+		}
+		.col-end-#{$i + 1}\-m {
+			grid-column-end: #{$i + 1};
+		}
+	}
+}
+
+@include bp-l {
+	@for $i from 1 through $grid-columns {
+		.grid {
+			grid-gap: 2.4rem;
+			padding: 0 4.8rem;
+		}
+		.col-#{$i}\-l {
+			grid-column-end: span #{$i};
+		}
+		.col-start-#{$i}\-l {
+			grid-column-start: #{$i};
+		}
+		.col-end-#{$i + 1}\-l {
+			grid-column-end: #{$i + 1};
+		}
+	}
+}
+
+@include bp-xl {
+	@for $i from 1 through $grid-columns {
+		.grid {
+			grid-gap: 2.4rem;
+			padding: 0 6.4rem;
+		}
+		.col-#{$i}\-xl {
+			grid-column-end: span #{$i};
+		}
+		.col-start-#{$i}\-xl {
+			grid-column-start: #{$i};
+		}
+		.col-end-#{$i + 1}\-xl {
+			grid-column-end: #{$i + 1};
+		}
+	}
+}

@@ -38,5 +38,9 @@
   "bugs": {
     "url": "https://github.com/sinnerschrader/sinnerschrader-reboot/issues"
   },
-  "homepage": "https://github.com/sinnerschrader/sinnerschrader-reboot#readme"
+  "homepage": "https://github.com/sinnerschrader/sinnerschrader-reboot#readme",
+  "dependencies": {
+    "@glidejs/glide": "^3.4.1",
+    "tiny-slider": "^2.9.3"
+  }
 }

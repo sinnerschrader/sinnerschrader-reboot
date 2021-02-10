@@ -1,10 +1,23 @@
+import Glide from "@glidejs/glide";
+
 class Slider {
 	constructor() {
-		this.init();
+		this.mountSlider();
 	}
 
-	init() {
-		console.log("... init Slider module ...");
+	mountSlider() {
+		const slider = new Glide(".glide", {
+			perView: 2,
+			gap: 24,
+			peek: 100,
+			perTouch: 1,
+			rewind: false,
+			1024: {
+				perView: 1,
+			},
+		});
+
+		slider.mount();
 	}
 }
 

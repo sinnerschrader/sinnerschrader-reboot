@@ -1,0 +1,21 @@
+.overlap-img-wrapper {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	position: relative;
+	#overlap-bg-1 {
+		width: 75%;
+	}
+	#overlap-bg-2 {
+		position: absolute;
+		width: 40%;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+	}
+}
+.overlap-text-wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}

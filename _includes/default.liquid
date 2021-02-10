@@ -1,9 +1,14 @@
+<script>
+	// load static site data into javascript
+	const LOCATION_DATA = {{ locations }};
+</script>
+
 <!DOCTYPE html>
 <html lang="en">
-	{% include head %}
-	<body>
-		<main>
-			{{ content }}
-		</main>
-	</body>
+  {% include head %}
+  <body>
+    <main>
+      {{ content }}
+    </main>
+  </body>
 </html>

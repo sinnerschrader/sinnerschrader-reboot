@@ -1,0 +1,48 @@
+<div class="grid">
+  <div class="section-headline">
+    <h3>Locations</h3>
+    <span>3</span>
+  </div>
+
+  <div class="col-start-1 col-end-3 location-navigation">
+    {% for location in locations %}
+      <span class="location-navigation-item" id="location-link-{{ forloop.index0 }}">{{ location.name }}</span>
+    {% endfor %}
+  </div>
+
+  {% for location in locations %}
+
+    {% if forloop.first %}
+      {% assign isHidden = "" %}
+    {% else %}
+      {% assign isHidden = "hidden" %}
+    {% endif %}
+
+
+    <div class="location-{{ forloop.index0 }} location-grid-item col-start-3 col-end-8 {{ isHidden }}">
+
+      <div class="location-main-content">
+        <img class="location-image-small" src="{{ location.imageSmall }}"/>
+
+        <div class="location-studio-container">
+          {% for studio in location.studios %}
+            <div class="location-studio-content">
+              <h4>{{ studio.name }}</h4>
+              <span>{{ studio.street }}</span>
+              <span>{{ studio.postal }}</span>
+              <span>{{ studio.tel }}</span>
+              <span>{{ studio.email }}</span>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="location-{{ forloop.index0 }} location-grid-item  col-start-8 col-end-13 {{ isHidden }}">
+      <img class="location-image-large" src="{{ location.imageBig }}"/>
+    </div>
+  {% endfor %}
+
+</div>

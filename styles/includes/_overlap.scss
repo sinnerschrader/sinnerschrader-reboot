@@ -1,12 +1,12 @@
-.overlap-img-wrapper {
+.overlap-img {
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
 	position: relative;
-	#overlap-bg-1 {
+	&__bg1 {
 		width: 75%;
 	}
-	#overlap-bg-2 {
+	&__bg2 {
 		position: absolute;
 		width: 40%;
 		top: 50%;
@@ -14,7 +14,7 @@
 		transform: translateY(-50%);
 	}
 }
-.overlap-text-wrapper {
+.overlap-txt {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;

@@ -40,7 +40,6 @@
   },
   "homepage": "https://github.com/sinnerschrader/sinnerschrader-reboot#readme",
   "dependencies": {
-    "@glidejs/glide": "^3.4.1",
-    "tiny-slider": "^2.9.3"
+    "@glidejs/glide": "^3.4.1"
   }
 }

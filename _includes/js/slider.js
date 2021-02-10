@@ -2,22 +2,47 @@ import Glide from "@glidejs/glide";
 
 class Slider {
 	constructor() {
-		this.mountSlider();
-	}
-
-	mountSlider() {
-		const slider = new Glide(".glide", {
+		const sliderOptions = {
+			type: "carousel",
 			perView: 2,
 			gap: 24,
-			peek: 100,
+			peek: {
+				before: 0,
+				after: 100,
+			},
 			perTouch: 1,
 			rewind: false,
-			1024: {
-				perView: 1,
+			animationTimingFunc: "ease",
+			breakpoints: {
+				1024: {
+					perView: 1,
+				},
 			},
-		});
+		};
 
-		slider.mount();
+		this.init();
+		this.mountSlider(sliderOptions);
+		this.bindEvents();
+	}
+
+	init() {
+		this.slider = {};
+		this.circleText = document.querySelector(".slider__circle-text");
+		this.rotationAngle = 0;
+	}
+
+	bindEvents() {
+		this.slider.on("run", this.rotateCircleText.bind(this));
+	}
+
+	mountSlider(options) {
+		this.slider = new Glide(".glide", options);
+		this.slider.mount();
+	}
+
+	rotateCircleText() {
+		this.rotationAngle += 60;
+		this.circleText.setAttribute("style", "transform: rotate(" + this.rotationAngle + "deg)");
 	}
 }
 

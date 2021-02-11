@@ -1,21 +1,23 @@
-.overlap-img {
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-	position: relative;
-	&__bg1 {
+.overlap {
+	&__container {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		position: relative;
+	}
+	&__img1 {
 		width: 75%;
 	}
-	&__bg2 {
+	&__img2 {
 		position: absolute;
 		width: 40%;
 		top: 50%;
 		left: 0;
 		transform: translateY(-50%);
 	}
-}
-.overlap-txt {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
+	&__txt {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
 }

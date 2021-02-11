@@ -9,17 +9,17 @@ body {
 }
 
 h1 {
-	font-size: $font-size-l;
-	line-height: $line-height-l;
+	font-size: $font-size--title-1;
+	line-height: $line-height--title-1;
 	font-family: $font-sans-serif;
 }
 
 h2 {
-	font-size: $font-size-m;
-	line-height: $line-height-m;
+	font-size: $font-size--title-2;
+	line-height: $line-height--title-2;
 }
 
 p {
-	font-size: $font-size-s;
-	line-height: $line-height-s;
+	font-size: $font-size--copy-1;
+	line-height: $line-height--copy-1;
 }

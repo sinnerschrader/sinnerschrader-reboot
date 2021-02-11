@@ -3,7 +3,7 @@ import Glide from "@glidejs/glide";
 class Slider {
 	constructor() {
 		const sliderOptions = {
-			type: "carousel",
+			type: "slider",
 			perView: 2,
 			gap: 24,
 			peek: {
@@ -42,7 +42,7 @@ class Slider {
 
 	rotateCircleText() {
 		this.rotationAngle += 60;
-		this.circleText.setAttribute("style", "transform: rotate(" + this.rotationAngle + "deg)");
+		this.circleText.setAttribute("style", `transform: rotate(${this.rotationAngle}deg)`);
 	}
 }
 

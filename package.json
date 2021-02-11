@@ -12,6 +12,9 @@
     "esbuild:dev": "esbuild ./_includes/js/main.js --outfile=_site/bundle.js --bundle --watch",
     "clean": "rimraf ./_site/"
   },
+  "dependencies": {
+    "@glidejs/glide": "^3.4.1"
+  },
   "devDependencies": {
     "@11ty/eleventy": "^0.11.1",
     "autoprefixer": "^10.2.4",
@@ -38,8 +41,5 @@
   "bugs": {
     "url": "https://github.com/sinnerschrader/sinnerschrader-reboot/issues"
   },
-  "homepage": "https://github.com/sinnerschrader/sinnerschrader-reboot#readme",
-  "dependencies": {
-    "@glidejs/glide": "^3.4.1"
-  }
+  "homepage": "https://github.com/sinnerschrader/sinnerschrader-reboot#readme"
 }

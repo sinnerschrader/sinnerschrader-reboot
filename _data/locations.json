@@ -2,7 +2,7 @@
 	{
 		"name": "Berlin",
 		"imageSmall": "https://placeimg.com/506/506/tech",
-		"imageBig": "https://placeimg.com/506/759/tech",
+		"imageLarge": "https://placeimg.com/506/759/tech",
 		"studios": [
 			{
 				"name": "SinnerSchrader",
@@ -16,7 +16,7 @@
 	{
 		"name": "Hamburg",
 		"imageSmall": "https://placeimg.com/506/506",
-		"imageBig": "https://placeimg.com/506/759",
+		"imageLarge": "https://placeimg.com/506/759",
 		"studios": [
 			{
 				"name": "SinnerSchrader",

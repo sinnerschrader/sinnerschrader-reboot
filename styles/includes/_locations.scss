@@ -1,18 +1,6 @@
 @import "../core/variables";
 @import "../core/mixins";
 
-.section-headline {
-	margin: $spacing-800 0 $spacing-700;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	width: 100%;
-
-	h3 {
-		margin: 0;
-	}
-}
-
 .locations {
 	&__grid {
 		grid-template-rows: auto 1fr;

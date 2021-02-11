@@ -1,0 +1,12 @@
+@import "../core/variables";
+
+.section-headline__container {
+	margin: $spacing-800 0 $spacing-700;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	h3 {
+		margin: 0;
+	}
+}

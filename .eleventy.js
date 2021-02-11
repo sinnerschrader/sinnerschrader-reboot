@@ -34,8 +34,6 @@ module.exports = (eleventyConfig) => {
 	eleventyConfig.addWatchTarget("_site/bundle.js");
 	eleventyConfig.setBrowserSyncConfig({ files: ["_site/index.css", "_site/bundle.js"] });
 
-	eleventyConfig.addPassthroughCopy("assets");
-
 	eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
 		if (outputPath.endsWith(".html")) {
 			let minified = htmlmin.minify(content, {

@@ -1,48 +1,61 @@
-<div class="grid">
+<div class="grid locations__grid">
   <div class="section-headline">
-    <h3>Locations</h3>
+    <h3>OFFICES</h3>
     <span>3</span>
   </div>
 
-  <div class="col-start-1 col-end-3 location-navigation">
+  <ol class="col-start-1 col-end-3 locations__navigation">
     {% for location in locations %}
-      <span class="location-navigation-item" id="location-link-{{ forloop.index0 }}">{{ location.name }}</span>
+        {% if forloop.first %}
+          {% assign isSelected = "locations__navigation-link--selected" %}
+        {% else %}
+          {% assign isSelected = "locations__navigation-link" %}
+        {% endif %}
+
+      <li class="locations__navigation-item">
+        <label class="{{ isSelected }}" for="locations__content-{{ location.name }}" id="locations__navigation-link-{{ location.name }}">{{ location.name }}</label>
+      </li>
     {% endfor %}
-  </div>
+  </ol>
 
   {% for location in locations %}
 
     {% if forloop.first %}
-      {% assign isHidden = "" %}
+      {% assign isHidden = "locations__content" %}
     {% else %}
-      {% assign isHidden = "hidden" %}
+      {% assign isHidden = "locations__content--hidden" %}
     {% endif %}
 
 
-    <div class="location-{{ forloop.index0 }} location-grid-item col-start-3 col-end-8 {{ isHidden }}">
+    <div class="{{ isHidden }} locations__image-wrapper-small locations__id-{{ location.name }} col-start-3 col-end-8">
+      <img class="locations__image" src="{{ location.imageSmall }}"/>
+    </div>
 
-      <div class="location-main-content">
-        <img class="location-image-small" src="{{ location.imageSmall }}"/>
 
-        <div class="location-studio-container">
-          {% for studio in location.studios %}
-            <div class="location-studio-content">
-              <h4>{{ studio.name }}</h4>
-              <span>{{ studio.street }}</span>
-              <span>{{ studio.postal }}</span>
-              <span>{{ studio.tel }}</span>
-              <span>{{ studio.email }}</span>
-            </div>
-          {% endfor %}
-        </div>
+    <div class="{{ isHidden }} locations__image-wrapper-large locations__id-{{ location.name }} col-start-8 col-end-13">
+      <img class="locations__image" src="{{ location.imageBig }}"/>
+    </div>
+
+    <div class="{{ isHidden }} locations__studio-info locations__id-{{ location.name }} col-start-3 col-end-8">
+
+      <div class="locations__studio-info-grid">
+
+        {% for studio in location.studios %}
+
+          <div class="locations__studio-info-container">
+            <h4>{{ studio.name }}</h4>
+            <span>{{ studio.street }}</span>
+            <span>{{ studio.postal }}</span>
+            <span>{{ studio.tel }}</span>
+            <span>{{ studio.email }}</span>
+          </div>
+        {% endfor %}
+
       </div>
 
     </div>
 
 
-    <div class="location-{{ forloop.index0 }} location-grid-item  col-start-8 col-end-13 {{ isHidden }}">
-      <img class="location-image-large" src="{{ location.imageBig }}"/>
-    </div>
   {% endfor %}
 
 </div>

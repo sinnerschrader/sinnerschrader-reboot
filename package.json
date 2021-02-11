@@ -5,12 +5,14 @@
   "description": "SinnerSchrader website reboot",
   "main": "index.js",
   "scripts": {
-    "start:dev": "run-p clean watch esbuild:dev",
-    "build": "npx @11ty/eleventy",
-    "watch": "npx @11ty/eleventy --serve",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "esbuild:dev": "esbuild ./_includes/js/main.js --outfile=_site/bundle.js --bundle --watch",
-    "clean": "rimraf ./_site/"
+    "start": "npm run start:dev",
+    "start:dev": "run-p clean 11ty:watch esbuild:watch",
+    "build": "npm run clean && npm run esbuild:build && npm run 11ty:build",
+    "clean": "rimraf ./_site/",
+    "11ty:build": "eleventy",
+    "11ty:watch": "eleventy --serve",
+    "esbuild:build": "esbuild ./_includes/js/main.js --outfile=_site/bundle.js --bundle",
+    "esbuild:watch": "esbuild ./_includes/js/main.js --outfile=_site/bundle.js --bundle --watch"
   },
   "dependencies": {
     "@glidejs/glide": "^3.4.1"

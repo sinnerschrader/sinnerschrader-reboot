@@ -9,11 +9,13 @@ const { default: postcss } = require("postcss");
 const processSassFiles = require("./config/process-sass");
 
 module.exports = (eleventyConfig) => {
-	const watcher = chokidar.watch("styles/{includes,core}/*.scss", {
-		ignored: /(^|[\/\\])\../,
-		persistent: true,
-	});
-	watcher.on("add", touchFile).on("change", touchFile);
+	if (process.argv.includes("--serve")) {
+		const watcher = chokidar.watch("styles/{includes,core}/*.scss", {
+			ignored: /(^|[\/\\])\../,
+			persistent: true,
+		});
+		watcher.on("add", touchFile).on("change", touchFile);
+	}
 	processSassFiles("./styles/index.scss", "./_includes/css/main.css");
 
 	eleventyConfig.setTemplateFormats(["liquid", "njk"]);

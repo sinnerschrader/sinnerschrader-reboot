@@ -1,0 +1,24 @@
+.stage {
+	background: #f5f1ee;
+	position: relative;
+	&__title,
+	&__image {
+		margin: auto;
+	}
+	&__overlap {
+		background: #fff;
+		height: 24rem;
+		position: relative;
+		z-index: 2;
+	}
+}
+.stage__dot-grid {
+	position: absolute;
+	height: 60rem;
+	width: 100%;
+	bottom: -60rem;
+	z-index: 1;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-image: url(assets/dot-grid.svg);
+}

@@ -6,12 +6,14 @@ html {
 
 body {
 	margin: 0;
+	font-size: $font-size--copy-1;
 }
 
 h1 {
 	font-size: $font-size--title-1;
 	line-height: $line-height--title-1;
 	font-family: $font-sans-serif;
+	font-weight: normal;
 }
 
 h2 {
@@ -22,4 +24,8 @@ h2 {
 p {
 	font-size: $font-size--copy-1;
 	line-height: $line-height--copy-1;
+}
+
+a {
+	text-decoration: none;
 }

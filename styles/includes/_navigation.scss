@@ -1,0 +1,26 @@
+.nav {
+	background: #fff;
+	font-family: $font-sans-serif;
+	font-size: $font-size--copy-2;
+	text-transform: uppercase;
+	height: 10rem;
+	&__logo {
+		margin: auto 0;
+	}
+	&__list {
+		display: flex;
+		align-items: stretch;
+		justify-content: space-between;
+		margin: auto 0;
+		line-height: 100px;
+		&__item {
+			text-decoration: none;
+			list-style-type: none;
+
+			a {
+				color: $color-primary--black;
+				text-decoration: none;
+			}
+		}
+	}
+}

@@ -1,3 +1,5 @@
+@import "variables";
+
 html {
 	font-size: 62.5%;
 }
@@ -7,16 +9,17 @@ body {
 }
 
 h1 {
-	font-size: 6rem;
-	line-height: 6.3rem;
+	font-size: $font-size--title-1;
+	line-height: $line-height--title-1;
+	font-family: $font-sans-serif;
 }
 
 h2 {
-	font-size: 4.8rem;
-	line-height: 4.8rem;
+	font-size: $font-size--title-2;
+	line-height: $line-height--title-2;
 }
 
 p {
-	font-size: 1.8rem;
-	line-height: 2.52rem;
+	font-size: $font-size--copy-1;
+	line-height: $line-height--copy-1;
 }

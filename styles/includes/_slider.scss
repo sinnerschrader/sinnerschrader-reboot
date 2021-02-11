@@ -1,0 +1,32 @@
+.slider {
+	position: relative;
+
+	&__heading {
+		max-width: 250px;
+		font-size: 48px;
+
+		@include bp-xs() {
+			max-width: 250px;
+			font-size: 32px;
+		}
+	}
+
+	&__circle-text {
+		position: absolute;
+		top: -149px;
+		right: 10%;
+		width: 300px;
+		z-index: 1;
+		transition: transform 0.3s ease-in-out;
+		pointer-events: none;
+
+		@include bp-xs() {
+			top: -75px;
+			right: -75px;
+			width: 150px;
+		}
+	}
+	.glide__slide > img {
+		width: 100%;
+	}
+}

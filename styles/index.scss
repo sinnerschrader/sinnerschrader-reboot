@@ -8,3 +8,8 @@
 @import "./includes/footer";
 @import "./includes/header";
 @import "./includes/overlap";
+@import "./includes/slider";
+
+// external
+@import "node_modules/@glidejs/glide/dist/css/glide.core";
+@import "node_modules/@glidejs/glide/dist/css/glide.theme";

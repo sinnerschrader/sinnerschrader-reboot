@@ -46,6 +46,10 @@ module.exports = (eleventyConfig) => {
 
 		return content;
 	});
+
+	eleventyConfig.addPassthroughCopy({
+		"./_includes/assets/*": "./assets/",
+	});
 };
 
 function touchFile() {

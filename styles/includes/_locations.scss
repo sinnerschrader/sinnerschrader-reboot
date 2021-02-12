@@ -102,6 +102,15 @@
 			display: flex;
 			flex-direction: column;
 
+			address {
+				font-style: normal;
+			}
+
+			a {
+				text-decoration: none;
+				color: $color-primary--black;
+			}
+
 			h4 {
 				margin: 0 0 $spacing-300;
 

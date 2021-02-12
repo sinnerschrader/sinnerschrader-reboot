@@ -12,7 +12,7 @@
         {% if forloop.first %}
           {% assign isSelected = "locations__navigation-link--selected" %}
         {% else %}
-          {% assign isSelected = "locations__navigation-link" %}
+          {% assign isSelected = "" %}
         {% endif %}
 
         <li class="locations__navigation-item">
@@ -24,7 +24,7 @@
     {% for location in locations %}
 
       {% if forloop.first %}
-        {% assign isHidden = "locations__content" %}
+        {% assign isHidden = "" %}
       {% else %}
         {% assign isHidden = "locations__content--hidden" %}
       {% endif %}
@@ -47,10 +47,11 @@
 
             <div class="locations__studio-info-container">
               <h4>{{ studio.name }}</h4>
-              <span>{{ studio.street }}</span>
-              <span>{{ studio.postal }}</span>
-              <span>{{ studio.tel }}</span>
-              <span>{{ studio.email }}</span>
+              <address>
+                {{ studio.street }}<br/>{{ studio.postal }}
+              </address>
+              <a href="tel:+49{{ studio.tel }}">{{ studio.tel }}</a>
+              <a href="mailto:{{ studio.email }}">{{ studio.email }}</a>
             </div>
           {% endfor %}
 

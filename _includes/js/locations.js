@@ -6,24 +6,19 @@ export class Locations {
 	LINK_NAME = "locations__navigation-link";
 	CONTENT_NAME = "locations__id";
 
-	CONTENT_VISIBLE_CLASS = "locations__content";
-	CONTENT_HIDDEN_CLASS = this.CONTENT_VISIBLE_CLASS + "--hidden";
+	CONTENT_HIDDEN_CLASS = "locations__content--hidden";
 
-	LINK_UNSELECTED_CLASS = "locations__navigation-link";
-	LINK_SELECTED_CLASS = this.LINK_UNSELECTED_CLASS + "--selected";
+	LINK_SELECTED_CLASS = "locations__navigation-link--selected";
 
 	locationContainers = [];
 	locationLinks = [];
 
 	constructor() {
-		console.log("... init Locations module ...");
-		waitForInitialPaint().then(this.init);
+		window.addEventListener("DOMContentLoaded", () => {
+			this.loadLocationContainers();
+			this.loadLocationLinks();
+		});
 	}
-
-	init = () => {
-		this.loadLocationContainers();
-		this.loadLocationLinks();
-	};
 
 	linkId = (locationName) => `${this.LINK_NAME}-${locationName}`;
 
@@ -51,17 +46,21 @@ export class Locations {
 		this.locationLinks.forEach((locationLink) => {
 			const isSelected = locationLink.id === this.linkId(newName);
 
-			const newClass = isSelected ? this.LINK_SELECTED_CLASS : this.LINK_UNSELECTED_CLASS;
-			locationLink.classList.replace(this.LINK_SELECTED_CLASS, newClass);
-			locationLink.classList.replace(this.LINK_UNSELECTED_CLASS, newClass);
+			if (isSelected) {
+				locationLink.classList.add(this.LINK_SELECTED_CLASS);
+			} else {
+				locationLink.classList.remove(this.LINK_SELECTED_CLASS);
+			}
 		});
 
 		this.locationContainers.forEach((locationContainer) => {
 			const isShown = locationContainer.classList.contains(this.contentClassName(newName));
 
-			const newClass = isShown ? this.CONTENT_VISIBLE_CLASS : this.CONTENT_HIDDEN_CLASS;
-			locationContainer.classList.replace(this.CONTENT_HIDDEN_CLASS, newClass);
-			locationContainer.classList.replace(this.CONTENT_VISIBLE_CLASS, newClass);
+			if (isShown) {
+				locationContainer.classList.remove(this.CONTENT_HIDDEN_CLASS);
+			} else {
+				locationContainer.classList.add(this.CONTENT_HIDDEN_CLASS);
+			}
 		});
 	};
 }

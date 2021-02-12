@@ -4,12 +4,12 @@
 		margin: 0 auto;
 	}
 	&__doodle {
-		background: no-repeat url("./assets/doodle-circle.svg");
+		background: no-repeat url("./assets/doodle-circle.png");
 		background-size: 100% 100%;
-		padding: 2rem 3rem;
-		margin: -2rem -3rem;
+		padding: 1rem 2.5rem;
+		margin: -1rem -2.5rem;
 	}
-	&__txt {
+	&__text {
 		margin-bottom: 3rem;
 	}
 	&__link {

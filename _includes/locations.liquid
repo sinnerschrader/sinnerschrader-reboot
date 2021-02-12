@@ -10,13 +10,13 @@
     <ol class="col-start-1 col-end-7-xs col-end-3 locations__navigation">
       {% for location in locations %}
         {% if forloop.first %}
-          {% assign isSelected = "locations__navigation-link--selected" %}
+          {% assign isSelected = "locations__navigation-button--selected" %}
         {% else %}
           {% assign isSelected = "" %}
         {% endif %}
 
         <li class="locations__navigation-item">
-          <label class="{{ isSelected }}" for="locations__content-{{ location.name }}" id="locations__navigation-link-{{ location.name }}">{{ location.name }}</label>
+          <button class="{{ isSelected }} locations__navigation-button" id="locations__navigation-button-{{ location.name }}">{{ location.name }}</button>
         </li>
       {% endfor %}
     </ol>

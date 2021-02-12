@@ -37,25 +37,32 @@
 		}
 	}
 
-	&__navigation-link--selected {
-		font-weight: bold;
-		position: relative;
+	&__navigation-button {
+		border: none;
+		background-color: unset;
+		padding: 0;
+		cursor: pointer;
 
-		&:before {
-			width: 4px;
-			height: 4px;
-			content: "";
-			display: inline-block;
-			border-radius: 2px;
-			background-color: $color-secondary--blue;
-			position: absolute;
-			top: 45%;
-			transform: translateY(-50%);
+		&--selected {
+			font-weight: bold;
+			position: relative;
 
-			left: calc(- #{$spacing-300});
+			&:before {
+				width: 4px;
+				height: 4px;
+				content: "";
+				display: inline-block;
+				border-radius: 2px;
+				background-color: $color-secondary--blue;
+				position: absolute;
+				top: 45%;
+				transform: translateY(-50%);
 
-			@include bp-xs {
-				left: calc(- #{$spacing-100});
+				left: calc(- #{$spacing-300});
+
+				@include bp-xs {
+					left: calc(- #{$spacing-100});
+				}
 			}
 		}
 	}

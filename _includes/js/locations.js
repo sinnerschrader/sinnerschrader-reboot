@@ -3,12 +3,12 @@ import { waitForInitialPaint } from "./utils";
 export class Locations {
 	data = LOCATION_DATA;
 
-	LINK_NAME = "locations__navigation-link";
+	LINK_NAME = "locations__navigation-button";
 	CONTENT_NAME = "locations__id";
 
 	CONTENT_HIDDEN_CLASS = "locations__content--hidden";
 
-	LINK_SELECTED_CLASS = "locations__navigation-link--selected";
+	LINK_SELECTED_CLASS = "locations__navigation-button--selected";
 
 	locationContainers = [];
 	locationLinks = [];

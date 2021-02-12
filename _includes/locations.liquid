@@ -6,9 +6,9 @@
 
   <div class="grid locations__grid">
 
-
     <ol class="col-start-1 col-end-7-xs col-end-3 locations__navigation">
       {% for location in locations %}
+
         {% if forloop.first %}
           {% assign isSelected = "locations__navigation-button--selected" %}
         {% else %}
@@ -18,6 +18,7 @@
         <li class="locations__navigation-item">
           <button class="{{ isSelected }} locations__navigation-button" id="locations__navigation-button-{{ location.name }}">{{ location.name }}</button>
         </li>
+
       {% endfor %}
     </ol>
 
@@ -29,11 +30,9 @@
         {% assign isHidden = "locations__content--hidden" %}
       {% endif %}
 
-
       <div class="{{ isHidden }} locations__image-wrapper-small locations__id-{{ location.name }} col-start-7-xs col-end-13-xs col-start-3 col-end-8">
         <img class="locations__image" src="{{ location.imageSmall }}"/>
       </div>
-
 
       <div class="{{ isHidden }} locations__image-wrapper-large locations__id-{{ location.name }} col-start-1-xs col-end-7-xs col-start-8 col-end-13">
         <img class="locations__image" src="{{ location.imageLarge }}"/>
@@ -58,7 +57,6 @@
         </div>
 
       </div>
-
 
     {% endfor %}
   </div>

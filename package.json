@@ -5,12 +5,13 @@
   "description": "SinnerSchrader website reboot",
   "main": "index.js",
   "scripts": {
-    "start:dev": "run-p clean watch esbuild:dev",
+    "start:dev": "run-p clean watch esbuild:dev responsiveImages",
     "build": "npx @11ty/eleventy",
     "watch": "npx @11ty/eleventy --serve",
     "test": "echo \"Error: no test specified\" && exit 1",
     "esbuild:dev": "esbuild ./_includes/js/main.js --outfile=_site/bundle.js --bundle --watch",
-    "clean": "rimraf ./_site/"
+    "clean": "rimraf ./_site/",
+    "responsiveImages": "rimraf ./_site/assets/images/ && node sharp.js"
   },
   "dependencies": {
     "@glidejs/glide": "^3.4.1"
@@ -30,7 +31,8 @@
     "postcss": "^8.2.4",
     "prettier": "^2.2.1",
     "rimraf": "^3.0.2",
-    "sass": "^1.32.6"
+    "sass": "^1.32.6",
+    "sharp": "^0.27.1"
   },
   "repository": {
     "type": "git",

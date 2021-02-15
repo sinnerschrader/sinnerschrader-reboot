@@ -16,13 +16,11 @@ export class Locations {
 	timeouts = [];
 
 	constructor() {
-		window.addEventListener("DOMContentLoaded", () => {
-			this.loadLocationContainers();
-			this.loadLocationLinks();
-			this.loadLocationIndicator();
+		this.loadLocationContainers();
+		this.loadLocationLinks();
+		this.loadLocationIndicator();
 
-			this.renderSelectedLocation(this.data[0].name);
-		});
+		this.renderSelectedLocation(this.data[0].name);
 	}
 
 	linkId = (locationName) => `${this.BUTTON_NAME}-${locationName}`;

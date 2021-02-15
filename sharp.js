@@ -70,16 +70,10 @@ resizes.forEach((resize) => {
 					.toFormat("webp")
 					.webp({ force: true })
 					.toFile(`${resize.dist}/${filename}`)
-					.catch((err) => {
-						console.log(err);
-					});
+					.catch(console.error);
 			})
-			.then(() => {
-				console.info("Processed image:", filename);
-			})
-			.catch((err) => {
-				console.log(err);
-			});
+			.then(() => console.info("Processed image:", filename))
+			.catch(console.error));
 	});
 });
 
@@ -101,8 +95,6 @@ formats.forEach((format) => {
 		let filename = path.basename(file);
 		const image = sharp(file);
 		// Convert to WebP via Sharp's inferencing automatically of extensions
-		image.toFile(`${format.dist}/${filename.replace("png", format.format)}`).catch((err) => {
-			console.log(err);
-		});
+		image.toFile(`${format.dist}/${filename.replace("png", format.format)}`).catch(console.error);
 	});
 });

@@ -1,5 +1,6 @@
 .slider {
 	position: relative;
+	overflow-x: hidden;
 
 	&__heading {
 		max-width: 250px;

@@ -17,8 +17,7 @@
     "responsiveImages": "rimraf ./_site/assets/images/ && node sharp.js"
   },
   "dependencies": {
-    "@glidejs/glide": "^3.4.1",
-    "glob": "latest"
+    "@glidejs/glide": "^3.4.1"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.11.1",
@@ -28,6 +27,7 @@
     "esbuild": "^0.8.44",
     "fibers": "^5.0.0",
     "fs-extra": "^9.1.0",
+    "glob": "^7.1.6",
     "html-minifier": "^4.0.0",
     "husky": "^5.0.9",
     "lint-staged": "^10.5.4",

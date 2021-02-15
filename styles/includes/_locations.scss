@@ -1,20 +1,42 @@
 @import "../core/variables";
 @import "../core/mixins";
 
+#locations__navigation-indicator {
+	width: 4px;
+	height: 4px;
+	background-color: $color-secondary--blue;
+	position: absolute;
+	border-radius: 2px;
+	left: calc(- #{$spacing--300});
+	transform: translateY(-50%);
+	transition: top 0.1s ease;
+
+	@include bp-xs {
+		left: calc(- #{$spacing--100});
+	}
+}
+
 .locations {
 	&__grid {
 		grid-template-rows: auto 1fr;
 
 		@include bp-xs {
-			grid-template-rows: auto 1fr auto;
+			grid-template-rows: auto auto 1fr;
 		}
 	}
 
-	&__content--hidden {
-		display: none;
+	&__content {
+		opacity: 1;
+		visibility: visible;
+		transition: opacity 0.2s ease;
+
+		&--hidden {
+			opacity: 0;
+		}
 	}
 
 	&__navigation {
+		position: relative;
 		display: flex;
 		flex-direction: column;
 		list-style: none;
@@ -33,7 +55,7 @@
 		}
 
 		& + & {
-			margin-top: $spacing-100;
+			margin-top: $spacing--100;
 		}
 	}
 
@@ -46,24 +68,6 @@
 		&--selected {
 			font-weight: bold;
 			position: relative;
-
-			&:before {
-				width: 4px;
-				height: 4px;
-				content: "";
-				display: inline-block;
-				border-radius: 2px;
-				background-color: $color-secondary--blue;
-				position: absolute;
-				top: 45%;
-				transform: translateY(-50%);
-
-				left: calc(- #{$spacing-300});
-
-				@include bp-xs {
-					left: calc(- #{$spacing-100});
-				}
-			}
 		}
 	}
 
@@ -82,7 +86,7 @@
 
 		@include bp-xs {
 			grid-row: 2/4;
-			padding-top: $spacing-400;
+			padding-top: $spacing--400;
 		}
 	}
 
@@ -95,13 +99,13 @@
 
 		&-grid {
 			display: grid;
-			grid-gap: $spacing-400;
+			grid-gap: $spacing--400;
 			grid-template-columns: 1fr 1fr;
 
 			@include bp-xs {
-				grid-gap: $spacing-300;
+				grid-gap: $spacing--300;
 				grid-template-columns: 1fr;
-				padding-bottom: $spacing-300;
+				padding-bottom: $spacing--300;
 			}
 		}
 
@@ -119,10 +123,10 @@
 			}
 
 			h4 {
-				margin: 0 0 $spacing-300;
+				margin: 0 0 $spacing--300;
 
 				@include bp-xs {
-					margin: 0 0 $spacing-100;
+					margin: 0 0 $spacing--100;
 				}
 			}
 		}

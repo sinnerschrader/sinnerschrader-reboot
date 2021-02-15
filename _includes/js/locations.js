@@ -3,33 +3,41 @@ import { waitForInitialPaint } from "./utils";
 export class Locations {
 	data = LOCATION_DATA;
 
-	LINK_NAME = "locations__navigation-button";
-	CONTENT_NAME = "locations__id";
+	BUTTON_NAME = "locations__navigation-button";
+	CONTENT_NAME = "locations__content";
 
-	CONTENT_HIDDEN_CLASS = "locations__content--hidden";
-
-	LINK_SELECTED_CLASS = "locations__navigation-button--selected";
+	CONTENT_HIDDEN_CLASS = this.CONTENT_NAME + "--hidden";
+	BUTTON_SELECTED_CLASS = this.BUTTON_NAME + "--selected";
 
 	locationContainers = [];
-	locationLinks = [];
+	locationButtons = [];
+	locationIndicator;
+
+	timeouts = [];
 
 	constructor() {
 		window.addEventListener("DOMContentLoaded", () => {
 			this.loadLocationContainers();
 			this.loadLocationLinks();
+			this.loadLocationIndicator();
+
+			this.renderSelectedLocation(this.data[0].name);
 		});
 	}
 
-	linkId = (locationName) => `${this.LINK_NAME}-${locationName}`;
-
+	linkId = (locationName) => `${this.BUTTON_NAME}-${locationName}`;
 	contentClassName = (locationName) => `${this.CONTENT_NAME}-${locationName}`;
 
+	loadLocationIndicator = () => {
+		this.locationIndicator = document.getElementById("locations__navigation-indicator");
+	};
+
 	loadLocationLinks = () => {
-		this.locationLinks = this.data.map((location) => {
+		this.locationButtons = this.data.map((location) => {
 			const link = document.getElementById(this.linkId(location.name));
 
 			if (link) {
-				link.addEventListener("click", this.renderSelectedLocation(location.name));
+				link.addEventListener("click", () => this.renderSelectedLocation(location.name));
 			}
 
 			return link;
@@ -42,25 +50,40 @@ export class Locations {
 			.reduce((acc, current) => [...acc, ...current], []);
 	};
 
-	renderSelectedLocation = (newName) => () => {
-		this.locationLinks.forEach((locationLink) => {
+	renderSelectedLocation = (newName) => {
+		this.locationButtons.forEach((locationLink) => {
 			const isSelected = locationLink.id === this.linkId(newName);
 
 			if (isSelected) {
-				locationLink.classList.add(this.LINK_SELECTED_CLASS);
+				this.locationIndicator.style.top = locationLink.offsetTop + locationLink.clientHeight / 2;
+				locationLink.classList.add(this.BUTTON_SELECTED_CLASS);
 			} else {
-				locationLink.classList.remove(this.LINK_SELECTED_CLASS);
+				locationLink.classList.remove(this.BUTTON_SELECTED_CLASS);
 			}
 		});
+
+		this.timeouts = this.timeouts.map(clearTimeout);
 
 		this.locationContainers.forEach((locationContainer) => {
 			const isShown = locationContainer.classList.contains(this.contentClassName(newName));
 
+			let animationCallback;
 			if (isShown) {
-				locationContainer.classList.remove(this.CONTENT_HIDDEN_CLASS);
+				locationContainer.style.display = "block";
+
+				animationCallback = () => {
+					locationContainer.classList.remove(this.CONTENT_HIDDEN_CLASS);
+				};
 			} else {
 				locationContainer.classList.add(this.CONTENT_HIDDEN_CLASS);
+
+				animationCallback = () => {
+					locationContainer.style.display = "none";
+				};
 			}
+
+			const timeout = setTimeout(animationCallback, 200);
+			this.timeouts.push(timeout);
 		});
 	};
 }

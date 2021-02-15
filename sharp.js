@@ -11,18 +11,28 @@ const sharp = require("sharp");
 const resizes = [
 	{
 		src: "./_includes/assets/images/*.{png,jpg,jpeg}",
-		dist: "./_site/assets/images/retina",
+		dist: "./_site/assets/images/desktop",
 		percent: 100,
 	},
 	{
 		src: "./_includes/assets/images/*.{png,jpg,jpeg}",
-		dist: "./_site/assets/images/desktop",
+		dist: "./_site/assets/images/tablet",
 		percent: 60,
 	},
 	{
 		src: "./_includes/assets/images/*.{png,jpg,jpeg}",
 		dist: "./_site/assets/images/mobile",
 		percent: 40,
+	},
+];
+
+// The formats to convert to, here this is converting all of these PNG files to the famed WebP format.
+
+const formats = [
+	{
+		src: "./_includes/assets/images/*.{png,jpg,jpeg}",
+		dist: "./_site/assets/images/fallback",
+		format: "jpg",
 	},
 ];
 
@@ -70,5 +80,29 @@ resizes.forEach((resize) => {
 			.catch((err) => {
 				console.log(err);
 			});
+	});
+});
+
+// Runnn the format converts
+
+formats.forEach((format) => {
+	// Create the `dist` folder if it doesn't exist already
+
+	if (!fs.existsSync(format.dist)) {
+		fs.mkdirSync(format.dist, { recursive: true }, (err) => {
+			if (err) throw err;
+		});
+	}
+
+	// Find all files matching the glob patterns specified in `src`
+	let files = glob.sync(format.src);
+
+	files.forEach((file) => {
+		let filename = path.basename(file);
+		const image = sharp(file);
+		// Convert to WebP via Sharp's inferencing automatically of extensions
+		image.toFile(`${format.dist}/${filename.replace("png", format.format)}`).catch((err) => {
+			console.log(err);
+		});
 	});
 });

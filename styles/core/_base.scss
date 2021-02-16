@@ -1,4 +1,5 @@
 @import "variables";
+@import "mixins";
 
 html {
 	font-size: 62.5%;
@@ -6,12 +7,18 @@ html {
 
 body {
 	margin: 0;
+	font-size: $font-size--copy-1;
 }
 
 h1 {
 	font-size: $font-size--title-1;
 	line-height: $line-height--title-1;
 	font-family: $font-sans-serif;
+	font-weight: normal;
+	@include bp-xs() {
+		font-size: $font-size--title-2;
+		line-height: $line-height--title-2;
+	}
 }
 
 h2 {
@@ -22,4 +29,24 @@ h2 {
 p {
 	font-size: $font-size--copy-1;
 	line-height: $line-height--copy-1;
+}
+
+a {
+	text-decoration: none;
+}
+
+.section__title,
+.section__number {
+	font-family: $font-sans-serif;
+	font-size: $font-size--title-3;
+	text-transform: $uppercase;
+	padding: 3rem 0;
+	z-index: 4;
+}
+
+.is-dot-grid {
+	background-image: radial-gradient($color-primary--black 5%, transparent 0);
+	background-size: 2rem 2rem;
+	background-position-x: center;
+	width: 100%;
 }

@@ -1,0 +1,39 @@
+@import "../core/variables";
+.stage {
+	background: $color-primary--black;
+	position: relative;
+	height: 90vh;
+	color: $color-primary--white;
+	&__title,
+	&__video {
+		margin: auto;
+		@include bp-xs() {
+			margin: 0;
+		}
+	}
+	&__video {
+		&__item {
+			width: 100%;
+		}
+	}
+	&__overlap {
+		background: $color-primary--white;
+		height: 24rem;
+		position: absolute;
+		width: 100%;
+		bottom: -16rem;
+		z-index: 4;
+		@include bp-xs() {
+			height: 15rem;
+			bottom: -10rem;
+		}
+		@include bp-s() {
+			height: 16rem;
+			bottom: -10rem;
+		}
+		@include bp-m() {
+			height: 18rem;
+			bottom: -10rem;
+		}
+	}
+}

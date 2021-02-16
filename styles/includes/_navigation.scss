@@ -1,0 +1,27 @@
+@import "../core/variables";
+.nav {
+	background: $color-primary--white;
+	font-family: $font-sans-serif;
+	font-size: $font-size--copy-2;
+	text-transform: $uppercase;
+	height: 9.5rem;
+	&__logo {
+		margin: auto 0;
+	}
+	&__list {
+		display: flex;
+		align-items: stretch;
+		justify-content: space-evenly;
+		margin: auto 0;
+		line-height: 9.5rem;
+		padding-left: 0;
+		&__item {
+			list-style-type: none;
+		}
+		&__link {
+			display: inline-block;
+			color: $color-primary--black;
+			text-decoration: none;
+		}
+	}
+}

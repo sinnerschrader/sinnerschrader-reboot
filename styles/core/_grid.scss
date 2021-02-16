@@ -5,7 +5,6 @@ $grid-columns: 12 !default;
 .grid {
 	display: grid;
 	grid-template-columns: repeat($grid-columns, 1fr);
-	grid-gap: 0;
 	padding: 0;
 
 	> * {
@@ -35,8 +34,10 @@ $grid-columns: 12 !default;
 @include bp-xs {
 	@for $i from 1 through $grid-columns {
 		.grid {
-			grid-gap: 1.2rem;
-			padding: 0 2.4rem;
+			margin: 0 2.4rem;
+			.is-grid--right {
+				margin: 0 0 0 2.4rem;
+			}
 		}
 		.col-#{$i}\-xs {
 			grid-column-end: span #{$i};
@@ -52,8 +53,10 @@ $grid-columns: 12 !default;
 
 @include bp-s {
 	.grid {
-		grid-gap: 1.6rem;
-		padding: 0 3.2rem;
+		margin: 0 3.2rem;
+		.is-grid--right {
+			margin: 0 0 0 3.2rem;
+		}
 	}
 	@for $i from 1 through $grid-columns {
 		.col-#{$i}\-s {
@@ -70,8 +73,10 @@ $grid-columns: 12 !default;
 
 @include bp-m {
 	.grid {
-		grid-gap: 1.6rem;
-		padding: 0 3.2rem;
+		margin: 0 3.2rem;
+		.is-grid--right {
+			margin: 0 0 0 3.4rem;
+		}
 	}
 	@for $i from 1 through $grid-columns {
 		.col-#{$i}\-m {
@@ -89,8 +94,10 @@ $grid-columns: 12 !default;
 @include bp-l {
 	@for $i from 1 through $grid-columns {
 		.grid {
-			grid-gap: 2.4rem;
-			padding: 0 4.8rem;
+			margin: 0 4.8rem;
+			.is-grid--right {
+				margin: 0 0 0 4.8rem;
+			}
 		}
 		.col-#{$i}\-l {
 			grid-column-end: span #{$i};
@@ -107,8 +114,10 @@ $grid-columns: 12 !default;
 @include bp-xl {
 	@for $i from 1 through $grid-columns {
 		.grid {
-			grid-gap: 2.4rem;
-			padding: 0 6.4rem;
+			margin: 0 6.4rem;
+			.is-grid--right {
+				margin: 0 0 0 6.4rem;
+			}
 		}
 		.col-#{$i}\-xl {
 			grid-column-end: span #{$i};

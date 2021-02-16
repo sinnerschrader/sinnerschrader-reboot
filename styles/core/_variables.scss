@@ -3,7 +3,7 @@ $color-primary--black: #000000;
 $color-primary--white: #ffffff;
 $color-secondary--blue: #2d2faf;
 $color-secondary--yellow: #ffd400;
-$color-secondary--purple: #7C44F1;
+$color-secondary--purple: #7c44f1;
 
 // Typography
 
@@ -13,6 +13,7 @@ $font-serif: Georgia, "Times New Roman", Times, serif;
 
 $font-size--title-1: 6rem;
 $font-size--title-2: 4.8rem;
+$font-size--title-3: 1rem;
 $font-size--copy-1: 1.8rem;
 $font-size--copy-2: 1.2rem;
 
@@ -30,3 +31,5 @@ $spacing--600: 8rem;
 $spacing--700: 9.6rem;
 $spacing--800: 16rem;
 $spacing--900: 20rem;
+
+$uppercase: uppercase;

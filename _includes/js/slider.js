@@ -4,7 +4,7 @@ class Slider {
 	constructor() {
 		const sliderOptions = {
 			type: "slider",
-			perView: 2,
+			perView: 3,
 			gap: 24,
 			peek: {
 				before: 0,

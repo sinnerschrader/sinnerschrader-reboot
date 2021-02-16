@@ -1,7 +1,11 @@
 <section class="locations">
-  <div class="grid section-headline__container">
-    <h3>OFFICES</h3>
-    <span>6</span>
+  <div class="grid">
+    <div class="section__title col-2">
+      <p>Offering</p>
+    </div>
+    <div class="section__number col-start-12 col-end-13">
+      <p>02</p>
+    </div>
   </div>
 
   <div class="grid locations__grid">
@@ -50,7 +54,7 @@
               <address>
                 {{ studio.street }}
                 <br/>{{ studio.postal }}
-                <br/><a href="tel:+49{{ studio.tel }}">{{ studio.tel }}</a>
+                <br/><a href="tel:{{ studio.tel }}">{{ studio.tel }}</a>
                 <br/><a href="mailto:{{ studio.email }}">{{ studio.email }}</a>
               </address>
             </div>

@@ -44,6 +44,10 @@ a {
 	z-index: 4;
 }
 
+.section__number {
+	text-align: end;
+}
+
 .is-dot-grid {
 	background-image: radial-gradient($color-primary--black 5%, transparent 0);
 	background-size: 2rem 2rem;

@@ -22,6 +22,23 @@
 
 		@include bp-xs {
 			grid-template-rows: auto auto 1fr;
+			grid-gap: 1.2rem;
+		}
+
+		@include bp-s {
+			grid-gap: 1.6rem;
+		}
+
+		@include bp-m {
+			grid-gap: 1.6rem;
+		}
+
+		@include bp-l {
+			grid-gap: 2.4rem;
+		}
+
+		@include bp-xl {
+			grid-gap: 2.4rem;
 		}
 	}
 
@@ -64,6 +81,7 @@
 		background-color: unset;
 		padding: 0;
 		cursor: pointer;
+		font-size: $font-size--copy-1;
 
 		&--selected {
 			font-weight: bold;
@@ -99,19 +117,30 @@
 
 		&-grid {
 			display: grid;
-			grid-gap: $spacing--400;
-			grid-template-columns: 1fr 1fr;
+			grid-gap: $spacing--300;
+			grid-template-columns: 1fr;
+			padding-bottom: $spacing--300;
 
-			@include bp-xs {
-				grid-gap: $spacing--300;
+			@include bp-m {
+				grid-gap: $spacing--400;
 				grid-template-columns: 1fr;
-				padding-bottom: $spacing--300;
+			}
+
+			@include bp-l {
+				grid-gap: $spacing--400;
+				grid-template-columns: 1fr 1fr;
+			}
+
+			@include bp-xl {
+				grid-gap: $spacing--400;
+				grid-template-columns: 1fr 1fr;
 			}
 		}
 
 		&-container {
 			display: flex;
 			flex-direction: column;
+			justify-content: space-between;
 
 			address {
 				font-style: normal;

@@ -13,11 +13,11 @@
 				position: absolute;
 				left: 26%;
 				width: 15%;
-				top: 18%;
+				top: 15%;
 				z-index: 4;
 				@include bp-xs() {
 					left: 15%;
-					top: 17%;
+					top: 14%;
 				}
 			}
 			@include bp-xs() {
@@ -34,7 +34,7 @@
 		height: auto;
 	}
 	&__img--left {
-		padding-top: 60%;
+		padding-top: 50%;
 		z-index: 2;
 	}
 	&__txt {

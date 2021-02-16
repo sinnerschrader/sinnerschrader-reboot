@@ -2,7 +2,16 @@
 .overlap {
 	position: relative;
 	&__wrapper {
+		position: relative;
 		margin-top: 12%;
+
+		&::after {
+			@include dotted-grid();
+			@include grid-right();
+
+			top: -12%;
+			height: 55%;
+		}
 	}
 	&__item {
 		grid-row: 1;

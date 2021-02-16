@@ -1,17 +1,20 @@
 @import "../core/mixins";
 .overlap {
 	position: relative;
+	&::after {
+		@include grid-right();
+		@include dotted-grid();
+		height: 55%;
+		z-index: 3;
+		top: 12rem;
+		@include bp-xs() {
+			top: 0;
+			height: 40%;
+		}
+	}
 	&__wrapper {
 		position: relative;
 		margin-top: 12%;
-
-		&::after {
-			@include dotted-grid();
-			@include grid-right();
-
-			top: -12%;
-			height: 55%;
-		}
 	}
 	&__item {
 		grid-row: 1;
@@ -51,14 +54,5 @@
 		@include bp-xs() {
 			grid-row: 2;
 		}
-	}
-}
-.is-dot-grid {
-	z-index: 3;
-	position: absolute;
-	height: 55%;
-	@include bp-xs() {
-		top: 0;
-		height: 40%;
 	}
 }

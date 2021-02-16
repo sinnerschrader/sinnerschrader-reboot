@@ -4,6 +4,7 @@
 	position: relative;
 	height: 90vh;
 	color: $color-primary--white;
+	@include grid-right();
 	&__title,
 	&__video {
 		margin: auto;

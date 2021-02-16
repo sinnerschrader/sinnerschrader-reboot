@@ -1,5 +1,12 @@
 .job-teaser {
-	text-align: center;
+	margin: 16rem 0;
+	&__wrapper {
+		@include dotted-grid();
+		position: relative;
+		width: auto;
+		text-align: center;
+		padding: 12rem 0;
+	}
 	&__header {
 		margin: 0 auto;
 	}

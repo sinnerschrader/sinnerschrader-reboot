@@ -1,0 +1,29 @@
+@import "../core/variables";
+@import "../core/mixins";
+
+.section-header {
+	display: flex;
+	justify-content: space-between;
+
+	margin-top: 96px;
+	margin-bottom: 64px;
+
+	font-family: $font-sans-serif;
+	font-size: $font-size--title-3;
+	text-transform: $uppercase;
+
+	&__title,
+	&__number {
+		z-index: 10;
+	}
+
+	@include bp-m {
+		margin-top: 120px;
+		margin-bottom: 80px;
+	}
+
+	@include bp-xl {
+		margin-top: 160px;
+		margin-bottom: 96px;
+	}
+}

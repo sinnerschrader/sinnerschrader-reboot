@@ -1,23 +1,55 @@
+@import "../core/mixins";
 .overlap {
-	&__container {
-		display: flex;
-		justify-content: flex-end;
-		align-items: center;
-		position: relative;
+	position: relative;
+	&__wrapper {
+		margin-top: 12%;
 	}
-	&__img1 {
-		width: 75%;
+	&__item {
+		grid-row: 1;
+		&:first-child {
+			position: relative;
+			padding: 0 10%;
+			.overlap__circle {
+				position: absolute;
+				left: 26%;
+				width: 15%;
+				top: 18%;
+				z-index: 4;
+				@include bp-xs() {
+					left: 15%;
+					top: 17%;
+				}
+			}
+			@include bp-xs() {
+				padding: 0;
+			}
+		}
+		&:nth-child(2) {
+			z-index: 2;
+		}
 	}
-	&__img2 {
-		position: absolute;
-		width: 40%;
-		top: 50%;
-		left: 0;
-		transform: translateY(-50%);
+	&__img--left,
+	&__img--right {
+		width: 100%;
+		height: auto;
+	}
+	&__img--left {
+		padding-top: 60%;
+		z-index: 2;
 	}
 	&__txt {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
+		margin: auto;
+		@include bp-xs() {
+			grid-row: 2;
+		}
+	}
+}
+.is-dot-grid {
+	z-index: 3;
+	position: absolute;
+	height: 55%;
+	@include bp-xs() {
+		top: 0;
+		height: 40%;
 	}
 }

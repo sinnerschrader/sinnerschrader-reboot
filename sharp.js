@@ -73,7 +73,7 @@ resizes.forEach((resize) => {
 					.catch(console.error);
 			})
 			.then(() => console.info("Processed image:", filename))
-			.catch(console.error));
+			.catch(console.error);
 	});
 });
 

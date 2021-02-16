@@ -6,12 +6,11 @@
 
 // includes
 @import "./includes/footer";
-@import "./includes/header";
+@import "./includes/navigation";
 @import "./includes/overlap";
 @import "./includes/slider";
+@import "./includes/stage";
 
 // external
 @import "node_modules/@glidejs/glide/dist/css/glide.core";
 @import "node_modules/@glidejs/glide/dist/css/glide.theme";
-@import "./includes/stage";
-@import "./includes/navigation";

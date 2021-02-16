@@ -5,8 +5,8 @@
 	display: flex;
 	justify-content: space-between;
 
-	margin-top: 96px;
-	margin-bottom: 64px;
+	margin-top: $spacing--200;
+	margin-bottom: 0px;
 
 	font-family: $font-sans-serif;
 	font-size: $font-size--title-3;
@@ -15,15 +15,57 @@
 	&__title,
 	&__number {
 		z-index: 10;
+		margin: 0;
 	}
 
-	@include bp-m {
-		margin-top: 120px;
-		margin-bottom: 80px;
+	&__small {
+		margin-top: $spacing--500;
+		margin-bottom: $spacing--700;
 	}
 
-	@include bp-xl {
-		margin-top: 160px;
-		margin-bottom: 96px;
+	&__medium {
+		margin-top: $spacing--800;
+		margin-bottom: $spacing--700;
+	}
+
+	&__large {
+		margin-top: $spacing--900;
+		margin-bottom: $spacing--700;
+	}
+
+	@include bp-tablet {
+		margin-top: $spacing--200;
+		margin-bottom: $spacing--300--tablet;
+
+		&__small {
+			margin-top: $spacing--500--tablet;
+			margin-bottom: $spacing--700--tablet;
+		}
+
+		&__medium {
+			margin-top: $spacing--800--tablet;
+			margin-bottom: $spacing--700--tablet;
+		}
+
+		&__large {
+			margin-top: $spacing--900--tablet;
+			margin-bottom: $spacing--700--tablet;
+		}
+	}
+
+	@include bp-desktop {
+		margin-top: $spacing--200;
+		margin-bottom: $spacing--300--desktop;
+
+		&__small {
+			margin-top: $spacing--500--desktop;
+			margin-bottom: $spacing--700--desktop;
+		}
+
+		&__medium,
+		&__large {
+			margin-top: $spacing--800--desktop;
+			margin-bottom: $spacing--700--desktop;
+		}
 	}
 }

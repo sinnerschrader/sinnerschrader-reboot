@@ -1,4 +1,11 @@
-<header class="grid section-header">
+{% if type %}
+  {% assign typeClassName = "section-header__" | append: type %}
+{% else %}
+  {% assign typeClassName = "" %}
+{% endif %}
+
+
+<header class="grid section-header {{ typeClassName }}">
   <p class="section-header__title">{{ title }}</p>
   <p class="section-header__number">{{ number }}</p>
 </header>

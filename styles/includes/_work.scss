@@ -1,0 +1,81 @@
+.work {
+	position: relative;
+
+	&::after {
+		@include dotted-grid();
+		content: "";
+		top: 0;
+		left: 0;
+		right: 30%;
+		bottom: 50%;
+		width: auto;
+	}
+
+	&__headline {
+		margin: 100px 0;
+
+		.is-right {
+			display: block;
+			margin-left: 96px;
+		}
+
+		.is-underline {
+			position: relative;
+
+			&::after {
+				position: absolute;
+				content: "";
+				bottom: 0;
+				left: -10px;
+				right: -10px;
+				height: 10px;
+				background: url("./assets/underline.svg");
+				background-repeat: no-repeat;
+				background-position: 100%;
+			}
+		}
+	}
+
+	&__inner-wrapper {
+		position: relative;
+		background: $color-primary--black;
+
+		&::after {
+			position: absolute;
+			content: "";
+			bottom: 0;
+			right: 0;
+			left: 50%;
+			height: 24px;
+			background-color: $color-primary--white;
+		}
+	}
+
+	&__logos {
+		text-align: center;
+		margin: 160px 0 80px;
+
+		img {
+			width: 16.66%;
+			max-height: 72px;
+			margin-bottom: 80px;
+		}
+	}
+
+	&__video {
+		&-container {
+			position: relative;
+		}
+
+		&-media-control {
+			position: absolute;
+			top: 50%;
+			right: 50%;
+			z-index: 5;
+		}
+
+		&-video-element {
+			z-index: 4;
+		}
+	}
+}

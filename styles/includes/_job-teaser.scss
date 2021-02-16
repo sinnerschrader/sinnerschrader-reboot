@@ -1,0 +1,28 @@
+.job-teaser {
+	text-align: center;
+	&__header {
+		margin: 0 auto;
+	}
+	&__doodle {
+		background: no-repeat url("./assets/doodle-circle.png");
+		background-size: 100% 100%;
+		padding: 1rem 2.5rem;
+		margin: -1rem -2.5rem;
+	}
+	&__text {
+		margin-bottom: 3rem;
+	}
+	&__link {
+		text-decoration: none;
+		color: black;
+		text-transform: uppercase;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 8rem;
+		height: 8rem;
+		margin: 0 auto;
+		border: 1rem solid $color-secondary--yellow;
+		border-radius: 50%;
+	}
+}

@@ -4,21 +4,25 @@
 		@content;
 	}
 }
+
 @mixin bp-s {
 	@media screen and (min-width: 600px) and (max-width: 899px) {
 		@content;
 	}
 }
+
 @mixin bp-m {
 	@media screen and (min-width: 900px) and (max-width: 1199px) {
 		@content;
 	}
 }
+
 @mixin bp-l {
 	@media screen and (min-width: 1200px) and (max-width: 1799px) {
 		@content;
 	}
 }
+
 @mixin bp-xl {
 	@media screen and (min-width: 1800px) {
 		@content;
@@ -28,28 +32,32 @@
 // Grid
 
 @mixin dotted-grid {
-	position: absolute;
+	background-image: radial-gradient($color-primary--black 5%, transparent 0);
+	background-position-x: center;
+	background-size: 2rem 2rem;
 	content: "";
+	position: absolute;
 	width: 100%;
 	z-index: 3;
-	background-image: radial-gradient($color-primary--black 5%, transparent 0);
-	background-size: 2rem 2rem;
-	background-position-x: center;
 }
 
 @mixin grid-right {
 	@include bp-xs {
 		margin: 0 0 0 2.4rem;
 	}
+
 	@include bp-s {
 		margin: 0 0 0 3.2rem;
 	}
+
 	@include bp-m {
 		margin: 0 0 0 3.4rem;
 	}
+
 	@include bp-l {
 		margin: 0 0 0 4.8rem;
 	}
+
 	@include bp-xl {
 		margin: 0 0 0 6.4rem;
 	}

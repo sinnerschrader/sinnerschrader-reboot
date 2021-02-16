@@ -1,54 +1,68 @@
 @import "../core/mixins";
+
 .overlap {
 	position: relative;
+
 	&::after {
 		@include grid-right();
 		@include dotted-grid();
+
 		height: 55%;
-		z-index: 3;
 		top: 12rem;
+		z-index: 3;
+
 		@include bp-xs() {
-			top: 0;
 			height: 40%;
+			top: 0;
 		}
 	}
+
 	&__wrapper {
-		position: relative;
 		margin-top: 12%;
+		position: relative;
 	}
+
 	&__item {
 		grid-row: 1;
+
 		&:first-child {
-			position: relative;
 			padding: 0 10%;
+			position: relative;
+			@include bp-xs() {
+				padding: 0;
+			}
+
 			.overlap__circle {
-				position: absolute;
 				left: 26%;
-				width: 15%;
+				position: absolute;
 				top: 15%;
+				width: 15%;
 				z-index: 4;
+
+				// stylelint-disable-next-line max-nesting-depth
 				@include bp-xs() {
 					left: 15%;
 					top: 14%;
 				}
 			}
-			@include bp-xs() {
-				padding: 0;
-			}
 		}
+
 		&:nth-child(2) {
 			z-index: 2;
 		}
 	}
+
 	&__img--left,
 	&__img--right {
-		width: 100%;
 		height: auto;
+		width: 100%;
 	}
+
 	&__img--left {
 		padding-top: 50%;
 		z-index: 2;
 	}
+
 	&__txt {
 		margin: auto;
 		@include bp-xs() {

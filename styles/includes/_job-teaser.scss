@@ -1,35 +1,41 @@
 .job-teaser {
 	margin: 16rem 0;
+
 	&__wrapper {
 		@include dotted-grid();
-		position: relative;
-		width: auto;
-		text-align: center;
+
 		padding: 12rem 0;
+		position: relative;
+		text-align: center;
+		width: auto;
 	}
+
 	&__header {
 		margin: 0 auto;
 	}
+
 	&__doodle {
 		background: no-repeat url("./assets/doodle-circle.png");
 		background-size: 100% 100%;
-		padding: 1rem 2.5rem;
 		margin: -1rem -2.5rem;
+		padding: 1rem 2.5rem;
 	}
+
 	&__text {
 		margin-bottom: 3rem;
 	}
+
 	&__link {
-		text-decoration: none;
-		color: black;
-		text-transform: uppercase;
-		display: flex;
-		justify-content: center;
 		align-items: center;
-		width: 8rem;
-		height: 8rem;
-		margin: 0 auto;
 		border: 1rem solid $color-secondary--yellow;
 		border-radius: 50%;
+		color: $color-primary--black;
+		display: flex;
+		height: 8rem;
+		justify-content: center;
+		margin: 0 auto;
+		text-decoration: none;
+		text-transform: uppercase;
+		width: 8rem;
 	}
 }

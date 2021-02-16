@@ -1,5 +1,3 @@
-import { waitForInitialPaint } from "./utils";
-
 export class Locations {
 	data = LOCATION_DATA;
 

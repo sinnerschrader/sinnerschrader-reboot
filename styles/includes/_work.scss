@@ -64,7 +64,10 @@
 
 	&__video {
 		&-container {
+			@include grid-right();
+
 			position: relative;
+			width: 100%;
 		}
 
 		&-media-control {
@@ -72,10 +75,58 @@
 			top: 50%;
 			right: 50%;
 			z-index: 5;
+			transform: translate(50%, -50%);
+			text-transform: uppercase;
+			background: $color-primary--black;
+			border-radius: 50%;
+			border: none;
+			height: 100px;
+			width: 100px;
+			color: $color-primary--white;
+			cursor: pointer;
+
+			.state--play {
+				display: none;
+			}
+
+			.state--pause {
+				display: inline-block;
+			}
+
+			&.is-playing {
+				.state--play {
+					display: inline-block;
+				}
+
+				.state--pause {
+					display: none;
+				}
+			}
 		}
 
-		&-video-element {
+		&-preview-loop {
+			position: relative;
+			width: 100%;
 			z-index: 4;
+
+			&.is-hidden {
+				display: none;
+			}
+		}
+
+		&-element {
+			display: none;
+			position: relative;
+			width: 100%;
+			z-index: 4;
+
+			&::-webkit-media-controls-play-button {
+				visibility: hidden;
+			}
+
+			&.is-visible {
+				display: block;
+			}
 		}
 	}
 }

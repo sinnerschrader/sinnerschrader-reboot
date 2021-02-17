@@ -18,10 +18,17 @@
 		</h2>
 	</div>
 	<div class="work__inner-wrapper">
-		<div class="grid is-grid--right">
+		<div class="grid">
 			<div class="work__video-container">
-				<video class="work__video-element" src="./assets/S2_160221.mp4" controls></video>
-				<button class="work__video-media-control">Play Reel</button>
+				<video class="work__video-preview-loop" autoplay muted loop>
+					<source src="./assets/5s_video.webm" type="video/webm">
+					<source src="./assets/5s_video.mp4" type="video/mp2">
+				</video>
+				<video class="work__video-element" src="./assets/S2_160221.mp4" controls preload="none" disablepictureinpicture controlslist="nodownload"></video>
+				<button class="work__video-media-control">
+					<span class="state--pause">Play Reel</span>
+					<span class="state--play">Pause Reel</span>
+				</button>
 			</div>
 			<div class="work__logos">
 				<img src="./assets/VW.svg" alt="">

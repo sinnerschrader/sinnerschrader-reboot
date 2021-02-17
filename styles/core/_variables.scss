@@ -1,8 +1,9 @@
 // Colors
-$color-primary--black: #000000;
-$color-primary--white: #ffffff;
+$color-primary--black: #000;
+$color-primary--white: #fff;
 $color-secondary--blue: #2d2faf;
 $color-secondary--yellow: #ffd400;
+$color-secondary--purple: #7c44f1;
 
 // Typography
 
@@ -20,5 +21,15 @@ $line-height--title-1: 6.3rem;
 $line-height--title-2: 5.2rem;
 $line-height--copy-1: 2.52rem;
 $line-height--copy-2: 1.6rem;
+
+$spacing--100: 0.8rem;
+$spacing--200: 1.6rem;
+$spacing--300: 2.4rem;
+$spacing--400: 4rem;
+$spacing--500: 5.6rem;
+$spacing--600: 8rem;
+$spacing--700: 9.6rem;
+$spacing--800: 16rem;
+$spacing--900: 20rem;
 
 $uppercase: uppercase;

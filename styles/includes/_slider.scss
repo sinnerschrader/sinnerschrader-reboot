@@ -1,32 +1,41 @@
 .slider {
 	position: relative;
-	overflow-x: hidden;
 
 	&__heading {
-		max-width: 250px;
 		font-size: 48px;
+		max-width: 250px;
 
 		@include bp-xs() {
-			max-width: 250px;
 			font-size: 32px;
+			max-width: 250px;
 		}
 	}
 
-	&__circle-text {
-		position: absolute;
-		top: -149px;
-		right: 10%;
-		width: 300px;
-		z-index: 1;
-		transition: transform 0.3s ease-in-out;
-		pointer-events: none;
+	&__wrapper {
+		position: relative;
 
-		@include bp-xs() {
-			top: -75px;
-			right: -75px;
-			width: 150px;
+		@include bp-xs {
+			margin-left: -2.4rem;
+		}
+		@include bp-s {
+			margin-left: -3.2rem;
+		}
+		@include bp-m {
+			margin-left: -3.4rem;
+		}
+		@include bp-l {
+			margin-left: -4.8rem;
+		}
+		@include bp-xl {
+			margin-left: -6.4rem;
 		}
 	}
+
+	.glide {
+		overflow-x: hidden;
+	}
+
+	// stylelint-disable-next-line selector-class-pattern
 	.glide__slide img {
 		width: 100%;
 	}

@@ -1,26 +1,31 @@
 @import "../core/variables";
+
 .nav {
 	background: $color-primary--white;
 	font-family: $font-sans-serif;
 	font-size: $font-size--copy-2;
-	text-transform: $uppercase;
 	height: 9.5rem;
+	text-transform: $uppercase;
+
 	&__logo {
 		margin: auto 0;
 	}
+
 	&__list {
-		display: flex;
 		align-items: stretch;
+		display: flex;
 		justify-content: space-evenly;
-		margin: auto 0;
 		line-height: 9.5rem;
+		margin: auto 0;
 		padding-left: 0;
+
 		&__item {
 			list-style-type: none;
 		}
+
 		&__link {
-			display: inline-block;
 			color: $color-primary--black;
+			display: inline-block;
 			text-decoration: none;
 		}
 	}

@@ -4,7 +4,7 @@ class Slider {
 	constructor() {
 		const sliderOptions = {
 			type: "slider",
-			perView: 3,
+			perView: 2,
 			gap: 24,
 			peek: {
 				before: 0,
@@ -14,35 +14,28 @@ class Slider {
 			rewind: false,
 			animationTimingFunc: "ease",
 			breakpoints: {
-				1024: {
+				1000: {
 					perView: 1,
+					gap: 16,
+				},
+				600: {
+					perView: 1,
+					gap: 12,
 				},
 			},
 		};
 
 		this.init();
 		this.mountSlider(sliderOptions);
-		this.bindEvents();
 	}
 
 	init() {
 		this.slider = {};
-		this.circleText = document.querySelector(".slider__circle-text");
-		this.rotationAngle = 0;
-	}
-
-	bindEvents() {
-		this.slider.on("run", this.rotateCircleText.bind(this));
 	}
 
 	mountSlider(options) {
 		this.slider = new Glide(".glide", options);
 		this.slider.mount();
-	}
-
-	rotateCircleText() {
-		this.rotationAngle += 60;
-		this.circleText.setAttribute("style", `transform: rotate(${this.rotationAngle}deg)`);
 	}
 }
 

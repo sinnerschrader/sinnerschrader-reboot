@@ -31,6 +31,7 @@ $grid-columns: 12 !default;
 .col-start {
 	grid-column-start: 1;
 }
+
 .col-end {
 	grid-column-end: -1;
 }
@@ -39,6 +40,7 @@ $grid-columns: 12 !default;
 	@for $i from 1 through $grid-columns {
 		.grid {
 			margin: 0 2.4rem;
+
 			.is-grid--right {
 				margin: 0 0 0 2.4rem;
 			}
@@ -58,6 +60,7 @@ $grid-columns: 12 !default;
 @include bp-s {
 	.grid {
 		margin: 0 3.2rem;
+
 		.is-grid--right {
 			margin: 0 0 0 3.2rem;
 		}
@@ -78,6 +81,7 @@ $grid-columns: 12 !default;
 @include bp-m {
 	.grid {
 		margin: 0 3.2rem;
+
 		.is-grid--right {
 			margin: 0 0 0 3.4rem;
 		}
@@ -99,6 +103,7 @@ $grid-columns: 12 !default;
 	@for $i from 1 through $grid-columns {
 		.grid {
 			margin: 0 4.8rem;
+
 			.is-grid--right {
 				margin: 0 0 0 4.8rem;
 			}
@@ -119,6 +124,7 @@ $grid-columns: 12 !default;
 	@for $i from 1 through $grid-columns {
 		.grid {
 			margin: 0 6.4rem;
+
 			.is-grid--right {
 				margin: 0 0 0 6.4rem;
 			}

@@ -3,69 +3,67 @@
 
 .section-header {
 	display: flex;
-	justify-content: space-between;
-
-	margin-top: $spacing--200;
-	margin-bottom: 0px;
-
 	font-family: $font-sans-serif;
 	font-size: $font-size--title-3;
+	justify-content: space-between;
+	margin-bottom: 0;
+	margin-top: $spacing--200;
 	text-transform: $uppercase;
 
-	&__title,
-	&__number {
-		z-index: 10;
-		margin: 0;
-	}
-
-	&__small {
-		margin-top: $spacing--500;
-		margin-bottom: $spacing--700;
-	}
-
-	&__medium {
-		margin-top: $spacing--800;
-		margin-bottom: $spacing--700;
-	}
-
-	&__large {
-		margin-top: $spacing--900;
-		margin-bottom: $spacing--700;
-	}
-
 	@include bp-tablet {
-		margin-top: $spacing--200;
 		margin-bottom: $spacing--300--tablet;
+		margin-top: $spacing--200;
 
 		&__small {
-			margin-top: $spacing--500--tablet;
 			margin-bottom: $spacing--700--tablet;
+			margin-top: $spacing--500--tablet;
 		}
 
 		&__medium {
-			margin-top: $spacing--800--tablet;
 			margin-bottom: $spacing--700--tablet;
+			margin-top: $spacing--800--tablet;
 		}
 
 		&__large {
-			margin-top: $spacing--900--tablet;
 			margin-bottom: $spacing--700--tablet;
+			margin-top: $spacing--900--tablet;
 		}
 	}
 
 	@include bp-desktop {
-		margin-top: $spacing--200;
 		margin-bottom: $spacing--300--desktop;
+		margin-top: $spacing--200;
 
 		&__small {
-			margin-top: $spacing--500--desktop;
 			margin-bottom: $spacing--700--desktop;
+			margin-top: $spacing--500--desktop;
 		}
 
 		&__medium,
 		&__large {
-			margin-top: $spacing--800--desktop;
 			margin-bottom: $spacing--700--desktop;
+			margin-top: $spacing--800--desktop;
 		}
+	}
+
+	&__title,
+	&__number {
+		margin: 0;
+		z-index: 10;
+	}
+
+	&__small {
+		margin-bottom: $spacing--700;
+		margin-top: $spacing--500;
+	}
+
+	&__medium {
+		margin-bottom: $spacing--700;
+		margin-top: $spacing--800;
+	}
+
+	&__large {
+		margin-bottom: $spacing--700;
+		margin-top: $spacing--900;
 	}
 }

@@ -1,1 +1,20 @@
-// Empty for now
+@import "mixins";
+
+@font-face {
+	font-family: "suisse-intl";
+	font-style: normal;
+	font-weight: 400;
+	font-display: auto;
+	src: local("suisse-intl"), url("./assets/fonts/SuisseIntl-Regular-WebTrial.woff2") format("woff2"),
+		url("./assets/fonts/SuisseIntl-Regular-WebTrial.woff") format("woff");
+	unicode-range: U+000-5FF;
+}
+
+@font-face {
+	font-family: "roboto";
+	font-style: normal;
+	font-weight: 400;
+	font-display: auto;
+	src: local("roboto"), url("./assets/fonts/RobotoMono-Regular.ttf") format("truetype");
+	unicode-range: U+000-5FF;
+}

@@ -140,3 +140,128 @@
 @mixin spacing-800($property) {
 	@include responsive-spacing($property, 9.6rem, 16rem, 20rem);
 }
+
+// Fonts
+// headline-1 shared styling
+@mixin headline-1-shared {
+	color: $color-primary--black;
+	@include bp-xs {
+		font-size: 4.8rem;
+		line-height: 5.8rem;
+	}
+	@include bp-s {
+		font-size: 5.6rem;
+		line-height: 6.7rem;
+	}
+	@include bp-l {
+		font-size: 6.4rem;
+		line-height: 77rem;
+	}
+}
+// Headlines 1
+@mixin headline-100 {
+	font-family: "suisse-intl";
+	@include headline-1-shared();
+}
+// TODO: Change font-family to Ogg
+@mixin headline-101 {
+	font-family: monospace;
+	@include headline-1-shared();
+}
+// headline-2 shared styling
+@mixin headline-2-shared {
+	color: $color-primary--black;
+	@include bp-xs {
+		font-size: 3.2rem;
+		line-height: 3.8rem;
+	}
+	@include bp-s {
+		font-size: 4rem;
+		line-height: 4rem;
+	}
+	@include bp-l {
+		font-size: 4.8rem;
+		line-height: 5.8rem;
+	}
+}
+// Headlines 2
+@mixin headline-200 {
+	font-family: "suisse-intl";
+	@include headline-2-shared();
+}
+// TODO: Change font-family to Ogg
+@mixin headline-201 {
+	font-family: monospace;
+	@include headline-2-shared();
+}
+
+// Paragraph and label shared styling
+@mixin text-shared {
+	font-family: "suisse-intl";
+	line-height: 140%;
+	color: $color-primary--gray;
+}
+
+// Labels
+@mixin label-100 {
+	font-weight: 600;
+	@include text-shared();
+	@include bp-xs {
+		font-size: 1.6rem;
+	}
+	@include bp-s {
+		font-size: 1.8rem;
+	}
+}
+@mixin label-200 {
+	font-weight: 600;
+	@include text-shared();
+	@include bp-xs {
+		font-size: 1.4rem;
+	}
+	@include bp-s {
+		font-size: 1.6rem;
+	}
+}
+
+// Paragraphs
+@mixin paragraph-100 {
+	font-weight: 200;
+	@include text-shared();
+	@include bp-xs {
+		font-size: 1.6rem;
+	}
+	@include bp-s {
+		font-size: 1.8rem;
+	}
+}
+@mixin paragraph-200 {
+	font-weight: 200;
+	@include text-shared();
+	@include bp-xs {
+		font-size: 1.4rem;
+	}
+	@include bp-s {
+		font-size: 1.6rem;
+	}
+}
+
+// Interactive and code shared styling
+@mixin interactive-shared {
+	font-size: 1.2rem;
+	line-height: 125%;
+	letter-spacing: 10%;
+	color: $color-primary--gray;
+	text-transform: $uppercase;
+}
+// Interactive
+@mixin interactive-100 {
+	font-family: "suisse-intl";
+	font-weight: 600;
+	@include interactive-shared();
+}
+// Code
+@mixin code-100 {
+	font-family: "roboto";
+	@include interactive-shared();
+}

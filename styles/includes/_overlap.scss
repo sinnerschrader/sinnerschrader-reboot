@@ -1,8 +1,8 @@
 @import "../core/mixins";
 
 .overlap {
-	position: relative;
 	overflow-x: hidden;
+	position: relative;
 
 	&::after {
 		@include grid-right();

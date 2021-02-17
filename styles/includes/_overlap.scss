@@ -2,6 +2,7 @@
 
 .overlap {
 	position: relative;
+	overflow-x: hidden;
 
 	&::after {
 		@include grid-right();

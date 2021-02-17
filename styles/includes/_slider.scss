@@ -1,5 +1,4 @@
 .slider {
-	overflow-x: hidden;
 	position: relative;
 
 	&__heading {
@@ -12,20 +11,28 @@
 		}
 	}
 
-	&__circle-text {
-		pointer-events: none;
-		position: absolute;
-		right: 10%;
-		top: -149px;
-		transition: transform 0.3s ease-in-out;
-		width: 300px;
-		z-index: 1;
+	&__wrapper {
+		position: relative;
 
-		@include bp-xs() {
-			right: -75px;
-			top: -75px;
-			width: 150px;
+		@include bp-xs {
+			margin-left: -2.4rem;
 		}
+		@include bp-s {
+			margin-left: -3.2rem;
+		}
+		@include bp-m {
+			margin-left: -3.4rem;
+		}
+		@include bp-l {
+			margin-left: -4.8rem;
+		}
+		@include bp-xl {
+			margin-left: -6.4rem;
+		}
+	}
+
+	.glide {
+		overflow-x: hidden;
 	}
 
 	// stylelint-disable-next-line selector-class-pattern

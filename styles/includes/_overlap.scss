@@ -55,13 +55,17 @@
 
 	&__img--left,
 	&__img--right {
-		height: auto;
-		width: 100%;
+		img {
+			height: auto;
+			width: 100%;
+		}
 	}
 
 	&__img--left {
-		padding-top: 50%;
-		z-index: 2;
+		img {
+			padding-top: 50%;
+			z-index: 2;
+		}
 	}
 
 	&__txt {

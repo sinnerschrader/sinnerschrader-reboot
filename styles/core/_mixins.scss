@@ -141,8 +141,7 @@
 	@include responsive-spacing($property, 9.6rem, 16rem, 20rem);
 }
 
-// Fonts
-// headline-1 shared styling
+// headline-1xx shared styling
 @mixin headline-1-shared {
 	color: $color-primary--black;
 	@include bp-xs {
@@ -153,14 +152,23 @@
 		font-size: 5.6rem;
 		line-height: 6.7rem;
 	}
+	@include bp-m {
+		font-size: 5.6rem;
+		line-height: 6.7rem;
+	}
 	@include bp-l {
 		font-size: 6.4rem;
-		line-height: 77rem;
+		line-height: 7.7rem;
+	}
+	@include bp-xl {
+		font-size: 6.4rem;
+		line-height: 7.7rem;
 	}
 }
-// Headlines 1
+
+// Headlines 1xx
 @mixin headline-100 {
-	font-family: "suisse-intl";
+	font-family: $font-suisse-intl;
 	@include headline-1-shared();
 }
 // TODO: Change font-family to Ogg
@@ -168,7 +176,8 @@
 	font-family: monospace;
 	@include headline-1-shared();
 }
-// headline-2 shared styling
+
+// headline-2xx shared styling
 @mixin headline-2-shared {
 	color: $color-primary--black;
 	@include bp-xs {
@@ -179,14 +188,22 @@
 		font-size: 4rem;
 		line-height: 4rem;
 	}
+	@include bp-m {
+		font-size: 4rem;
+		line-height: 4rem;
+	}
 	@include bp-l {
 		font-size: 4.8rem;
 		line-height: 5.8rem;
 	}
+	@include bp-xl {
+		font-size: 4.8rem;
+		line-height: 5.8rem;
+	}
 }
-// Headlines 2
+// Headlines 2xx
 @mixin headline-200 {
-	font-family: "suisse-intl";
+	font-family: $font-suisse-intl;
 	@include headline-2-shared();
 }
 // TODO: Change font-family to Ogg
@@ -197,14 +214,14 @@
 
 // Paragraph and label shared styling
 @mixin text-shared {
-	font-family: "suisse-intl";
+	font-family: $font-suisse-intl;
 	line-height: 140%;
 	color: $color-primary--gray;
 }
-
 // Labels
 @mixin label-100 {
 	font-weight: 600;
+	font-size: 1.8rem;
 	@include text-shared();
 	@include bp-xs {
 		font-size: 1.6rem;
@@ -215,6 +232,7 @@
 }
 @mixin label-200 {
 	font-weight: 600;
+	font-size: 1.6rem;
 	@include text-shared();
 	@include bp-xs {
 		font-size: 1.4rem;
@@ -223,10 +241,10 @@
 		font-size: 1.6rem;
 	}
 }
-
 // Paragraphs
 @mixin paragraph-100 {
 	font-weight: 200;
+	font-size: 1.8rem;
 	@include text-shared();
 	@include bp-xs {
 		font-size: 1.6rem;
@@ -237,6 +255,7 @@
 }
 @mixin paragraph-200 {
 	font-weight: 200;
+	font-size: 1.6rem;
 	@include text-shared();
 	@include bp-xs {
 		font-size: 1.4rem;
@@ -250,13 +269,13 @@
 @mixin interactive-shared {
 	font-size: 1.2rem;
 	line-height: 125%;
-	letter-spacing: 10%;
+	letter-spacing: 0.1rem;
 	color: $color-primary--gray;
 	text-transform: $uppercase;
 }
 // Interactive
 @mixin interactive-100 {
-	font-family: "suisse-intl";
+	font-family: $font-suisse-intl;
 	font-weight: 600;
 	@include interactive-shared();
 }

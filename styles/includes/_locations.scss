@@ -80,11 +80,10 @@
 		background-color: unset;
 		border-style: none;
 		cursor: pointer;
-		font-size: $font-size--copy-1;
-		padding: 0;
+		@include paragraph-100();
 
 		&--selected {
-			font-weight: bold;
+			@include label-100();
 			position: relative;
 		}
 	}
@@ -141,17 +140,19 @@
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
+			@include paragraph-200();
+			font-style: normal;
 
 			address {
 				font-style: normal;
+				a {
+					@include paragraph-200();
+					text-transform: none;
+					letter-spacing: normal;
+				}
 			}
-
-			a {
-				color: $color-primary--black;
-				text-decoration: none;
-			}
-
 			h4 {
+				@include label-200();
 				margin: 0 0 $spacing--300;
 
 				// stylelint-disable-next-line max-nesting-depth

@@ -12,26 +12,33 @@ body {
 }
 
 h1 {
-	font-family: $font-sans-serif;
-	font-size: $font-size--title-1;
-	font-weight: normal;
-	line-height: $line-height--title-1;
-	@include bp-xs() {
-		font-size: $font-size--title-2;
-		line-height: $line-height--title-2;
-	}
+	@include headline-100();
+	color: $color-primary--white;
 }
 
 h2 {
-	font-size: $font-size--title-2;
-	line-height: $line-height--title-2;
+	@include headline-200();
 }
 
 p {
-	font-size: $font-size--copy-1;
-	line-height: $line-height--copy-1;
+	@include paragraph-100();
 }
 
 a {
+	@include interactive-100();
 	text-decoration: none;
+}
+
+.section__title,
+.section__number {
+	padding: 3rem 0;
+	text-transform: $uppercase;
+	z-index: 4;
+	p {
+		@include code-100();
+	}
+}
+
+.section__number {
+	text-align: end;
 }

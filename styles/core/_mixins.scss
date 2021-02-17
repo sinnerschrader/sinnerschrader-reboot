@@ -168,13 +168,15 @@
 
 // Headlines 1xx
 @mixin headline-100 {
-	font-family: $font-suisse-intl;
 	@include headline-1-shared();
+
+	font-family: $font-suisse-intl;
 }
 // TODO: Change font-family to Ogg
 @mixin headline-101 {
-	font-family: monospace;
 	@include headline-1-shared();
+
+	font-family: monospace;
 }
 
 // headline-2xx shared styling
@@ -203,26 +205,29 @@
 }
 // Headlines 2xx
 @mixin headline-200 {
-	font-family: $font-suisse-intl;
 	@include headline-2-shared();
+
+	font-family: $font-suisse-intl;
 }
 // TODO: Change font-family to Ogg
 @mixin headline-201 {
-	font-family: monospace;
 	@include headline-2-shared();
+
+	font-family: monospace;
 }
 
 // Paragraph and label shared styling
 @mixin text-shared {
+	color: $color-primary--gray;
 	font-family: $font-suisse-intl;
 	line-height: 140%;
-	color: $color-primary--gray;
 }
 // Labels
 @mixin label-100 {
-	font-weight: 600;
-	font-size: 1.8rem;
 	@include text-shared();
+
+	font-size: 1.8rem;
+	font-weight: 600;
 	@include bp-xs {
 		font-size: 1.6rem;
 	}
@@ -231,9 +236,10 @@
 	}
 }
 @mixin label-200 {
-	font-weight: 600;
-	font-size: 1.6rem;
 	@include text-shared();
+
+	font-size: 1.6rem;
+	font-weight: 600;
 	@include bp-xs {
 		font-size: 1.4rem;
 	}
@@ -243,9 +249,10 @@
 }
 // Paragraphs
 @mixin paragraph-100 {
-	font-weight: 200;
-	font-size: 1.8rem;
 	@include text-shared();
+
+	font-size: 1.8rem;
+	font-weight: 200;
 	@include bp-xs {
 		font-size: 1.6rem;
 	}
@@ -254,9 +261,10 @@
 	}
 }
 @mixin paragraph-200 {
-	font-weight: 200;
-	font-size: 1.6rem;
 	@include text-shared();
+
+	font-size: 1.6rem;
+	font-weight: 200;
 	@include bp-xs {
 		font-size: 1.4rem;
 	}
@@ -267,20 +275,22 @@
 
 // Interactive and code shared styling
 @mixin interactive-shared {
-	font-size: 1.2rem;
-	line-height: 125%;
-	letter-spacing: 0.1rem;
 	color: $color-primary--gray;
+	font-size: 1.2rem;
+	letter-spacing: 0.1rem;
+	line-height: 125%;
 	text-transform: $uppercase;
 }
 // Interactive
 @mixin interactive-100 {
+	@include interactive-shared();
+
 	font-family: $font-suisse-intl;
 	font-weight: 600;
-	@include interactive-shared();
 }
 // Code
 @mixin code-100 {
-	font-family: "roboto";
 	@include interactive-shared();
+
+	font-family: "roboto", monospace;
 }

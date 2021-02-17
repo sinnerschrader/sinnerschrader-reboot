@@ -77,13 +77,15 @@
 	}
 
 	&__navigation-button {
+		@include paragraph-100();
+
 		background-color: unset;
 		border-style: none;
 		cursor: pointer;
-		@include paragraph-100();
 
 		&--selected {
 			@include label-100();
+
 			position: relative;
 		}
 	}
@@ -137,22 +139,27 @@
 		}
 
 		&-container {
+			@include paragraph-200();
+
 			display: flex;
 			flex-direction: column;
-			justify-content: space-between;
-			@include paragraph-200();
 			font-style: normal;
+			justify-content: space-between;
 
 			address {
 				font-style: normal;
-				a {
-					@include paragraph-200();
-					text-transform: none;
-					letter-spacing: normal;
-				}
 			}
+
+			a {
+				@include paragraph-200();
+
+				letter-spacing: normal;
+				text-transform: none;
+			}
+
 			h4 {
 				@include label-200();
+
 				margin: 0 0 $spacing--300;
 
 				// stylelint-disable-next-line max-nesting-depth

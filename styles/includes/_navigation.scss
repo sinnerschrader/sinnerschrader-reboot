@@ -8,8 +8,9 @@
 	text-transform: $uppercase;
 
 	&__logo {
-		margin: auto 0;
 		@include interactive-100();
+
+		margin: auto 0;
 	}
 
 	&__list {

@@ -19,16 +19,16 @@
 	}
 
 	&__wrapper {
-		margin-top: $spacing--700;
 		margin-bottom: $spacing--800;
+		margin-top: $spacing--700;
 	}
 
 	&__item {
 		grid-row: 1;
 
 		&--img {
-			display: flex;
 			align-items: center;
+			display: flex;
 		}
 
 		&:nth-child(2) {
@@ -36,14 +36,14 @@
 
 			.overlap__circle-container {
 				position: relative;
+			}
 
-				.overlap__circle {
-					right: -20%;
-					position: absolute;
-					top: -13%;
-					width: 40%;
-					z-index: 4;
-				}
+			.overlap__circle {
+				position: absolute;
+				right: -20%;
+				top: -13%;
+				width: 40%;
+				z-index: 4;
 			}
 		}
 	}

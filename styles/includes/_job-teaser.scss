@@ -11,14 +11,16 @@
 	}
 
 	&__header {
+		left: -5rem;
 		margin: 0 auto;
+		position: relative;
 	}
 
 	&__doodle {
 		background: no-repeat url("./assets/doodle-circle.png");
-		background-size: 100% 100%;
+		background-size: contain;
 		margin: -1rem -2.5rem;
-		padding: 1rem 2.5rem;
+		padding: 0 2.5rem;
 	}
 
 	&__text {
@@ -29,13 +31,21 @@
 		align-items: center;
 		border: 1rem solid $color-secondary--yellow;
 		border-radius: 50%;
+		box-shadow: inset 0 0 0 0 $color-secondary--yellow;
 		color: $color-primary--black;
 		display: flex;
 		height: 8rem;
 		justify-content: center;
 		margin: 0 auto;
+		position: relative;
 		text-decoration: none;
 		text-transform: uppercase;
+		transition: box-shadow 0.3s ease-out;
 		width: 8rem;
+
+		&:hover {
+			box-shadow: inset 0 0 0 10rem $color-secondary--yellow;
+			transition: box-shadow 0.3s ease-in;
+		}
 	}
 }

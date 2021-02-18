@@ -62,3 +62,61 @@
 		margin: 0 0 0 6.4rem;
 	}
 }
+
+@mixin responsive-spacing($property, $mobile, $tablet, $desktop) {
+	@include bp-xs {
+		#{$property}: $mobile;
+	}
+	@include bp-s {
+		#{$property}: $tablet;
+	}
+	@include bp-m {
+		#{$property}: $tablet;
+	}
+	@include bp-l {
+		#{$property}: $desktop;
+	}
+	@include bp-xl {
+		#{$property}: $desktop;
+	}
+}
+
+// SP100 (only desktop)
+@mixin spacing-100($property) {
+	@include responsive-spacing($property, 0rem, 0rem, 0.8rem);
+}
+
+// SP200 (only desktop)
+@mixin spacing-200($property) {
+	@include responsive-spacing($property, 0rem, 0rem, 1.6rem);
+}
+
+// SP300 (mobile and desktop)
+@mixin spacing-300($property) {
+	@include responsive-spacing($property, 2rem, 0rem, 2.4rem);
+}
+
+// SP400
+@mixin spacing-400($property) {
+	@include responsive-spacing($property, 2.4rem, 3.2rem, 4rem);
+}
+
+// SP500
+@mixin spacing-500($property) {
+	@include responsive-spacing($property, 3.2rem, 4.8rem, 5.6rem);
+}
+
+// SP600
+@mixin spacing-600($property) {
+	@include responsive-spacing($property, 4.8rem, 6.4rem, 8rem);
+}
+
+// SP700
+@mixin spacing-700($property) {
+	@include responsive-spacing($property, 6.4rem, 8rem, 9.6rem);
+}
+
+// SP800
+@mixin spacing-800($property) {
+	@include responsive-spacing($property, 9.6rem, 16rem, 20rem);
+}

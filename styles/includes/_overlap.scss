@@ -25,7 +25,9 @@
 
 	&__item {
 		@include spacing-400(margin-top);
+
 		grid-row: 1;
+		position: relative;
 
 		&--img {
 			align-items: center;
@@ -49,6 +51,27 @@
 		}
 	}
 
+	&__line-container {
+		background-color: $color-primary--white;
+		height: 55%;
+		position: absolute;
+		right: -1rem;
+		top: 50%;
+		width: 1.7rem;
+	}
+
+	&__line {
+		background-color: $color-secondary--yellow;
+		height: 10rem;
+		left: 0;
+		position: absolute;
+		top: 100%;
+		width: 0.3rem;
+		@include bp-xs {
+			display: none;
+		}
+	}
+
 	&__img--left,
 	&__img--right {
 		img {
@@ -65,9 +88,11 @@
 
 	&__txt {
 		@include spacing-400(margin-left);
+
 		margin: auto;
 		@include bp-xs() {
 			@include spacing-400(margin-top);
+
 			grid-row: 2;
 			margin-left: initial;
 		}

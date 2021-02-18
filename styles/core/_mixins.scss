@@ -83,17 +83,17 @@
 
 // SP100 (only desktop)
 @mixin spacing-100($property) {
-	@include responsive-spacing($property, 0rem, 0rem, 0.8rem);
+	@include responsive-spacing($property, 0, 0, 0.8rem);
 }
 
 // SP200 (only desktop)
 @mixin spacing-200($property) {
-	@include responsive-spacing($property, 0rem, 0rem, 1.6rem);
+	@include responsive-spacing($property, 0, 0, 1.6rem);
 }
 
 // SP300 (mobile and desktop)
 @mixin spacing-300($property) {
-	@include responsive-spacing($property, 2rem, 0rem, 2.4rem);
+	@include responsive-spacing($property, 2rem, 0, 2.4rem);
 }
 
 // SP400

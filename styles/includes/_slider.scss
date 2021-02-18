@@ -7,8 +7,8 @@
 
 		@include bp-xs() {
 			font-size: 3.2rem;
-			max-width: 250px;
 			margin-bottom: 2.4rem;
+			max-width: 250px;
 		}
 
 		@include bp-s {
@@ -17,8 +17,8 @@
 	}
 
 	&__copy {
-		margin: 0 0 9.6rem;
 		font-size: 1.8rem;
+		margin: 0 0 9.6rem;
 		max-width: 400px;
 
 		@include bp-xs() {

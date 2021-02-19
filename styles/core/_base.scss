@@ -31,15 +31,14 @@ a {
 	text-decoration: none;
 }
 
+.section-header p {
+	@include code-100();
+}
+
 .section__title,
 .section__number {
 	padding: 3rem 0;
-	text-transform: $uppercase;
 	z-index: 4;
-
-	p {
-		@include code-100();
-	}
 }
 
 .section__number {

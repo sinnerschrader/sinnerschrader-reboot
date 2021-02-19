@@ -29,6 +29,26 @@
 	}
 }
 
+@mixin bp-tablet {
+	@include bp-s {
+		@content;
+	}
+
+	@include bp-m {
+		@content;
+	}
+}
+
+@mixin bp-desktop {
+	@include bp-l {
+		@content;
+	}
+
+	@include bp-xl {
+		@content;
+	}
+}
+
 // Grid
 
 @mixin dotted-grid {

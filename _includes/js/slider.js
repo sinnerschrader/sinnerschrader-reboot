@@ -1,41 +1,37 @@
-import Glide from "@glidejs/glide";
+import Swiper from "swiper";
 
 class Slider {
 	constructor() {
-		const sliderOptions = {
-			type: "slider",
-			perView: 2,
-			gap: 24,
-			peek: {
-				before: 0,
-				after: 100,
-			},
-			perTouch: 1,
-			rewind: false,
-			animationTimingFunc: "ease",
+		this.swiper = {};
+		this.sliderOptions = {
+			direction: "horizontal",
+			slidesPerView: "auto",
+			spaceBetween: 12,
 			breakpoints: {
-				1000: {
-					perView: 1,
-					gap: 16,
+				// when window width is >= 600
+				500: {
+					spaceBetween: 16,
 				},
-				600: {
-					perView: 1,
-					gap: 12,
+				// when window width is >= 1024
+				900: {
+					spaceBetween: 24,
 				},
 			},
+			lazy: {
+				loadPrevNext: true,
+			},
+			grabCursor: true,
 		};
 
-		this.init();
-		this.mountSlider(sliderOptions);
+		this.bindEvents();
 	}
 
-	init() {
-		this.slider = {};
+	bindEvents() {
+		window.addEventListener("load", () => this.mountSlider(this.sliderOptions));
 	}
 
 	mountSlider(options) {
-		this.slider = new Glide(".glide", options);
-		this.slider.mount();
+		this.swiper = new Swiper(".swiper-container", options);
 	}
 }
 

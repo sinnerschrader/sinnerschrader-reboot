@@ -35,16 +35,3 @@ p {
 a {
 	text-decoration: none;
 }
-
-.section__title,
-.section__number {
-	font-family: $font-sans-serif;
-	font-size: $font-size--title-3;
-	padding: 3rem 0;
-	text-transform: $uppercase;
-	z-index: 4;
-}
-
-.section__number {
-	text-align: end;
-}

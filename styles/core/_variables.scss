@@ -9,8 +9,9 @@ $color-secondary--purple: #7c44f1;
 // Typography
 
 // would change the naming when we get the real fonts
-$font-suisse-intl: "suisse-intl", Arial, sans-serif;
-$font-serif: Georgia, "Times New Roman", Times, serif;
+$font-sans-serif: "suisse-intl", Arial, sans-serif;
+$font-serif: "ogg-regular", "Times New Roman", Times, serif;
+$font-serif-italic: "ogg-italic", "Times New Roman", Times, serif;
 
 $font-size--title-1: 6rem;
 $font-size--title-2: 4.8rem;

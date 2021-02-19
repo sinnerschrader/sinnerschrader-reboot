@@ -45,3 +45,21 @@ a {
 .section__number {
 	text-align: end;
 }
+
+// Font Ogg regular - large
+.headline-101 {
+	@include headline-101();
+}
+
+.headline-102 {
+	@include headline-102();
+}
+
+// Font Ogg italic - smaller
+.headline-201 {
+	@include headline-201();
+}
+
+.headline-202 {
+	@include headline-202();
+}

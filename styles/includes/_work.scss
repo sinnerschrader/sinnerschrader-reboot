@@ -11,13 +11,11 @@
 		width: auto;
 	}
 
+	&::before {
+	}
+
 	&__headline {
 		margin: 100px 0;
-
-		.is-right {
-			display: block;
-			margin-left: 96px;
-		}
 
 		.is-underline {
 			position: relative;

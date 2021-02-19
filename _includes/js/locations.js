@@ -1,5 +1,5 @@
 export class Locations {
-	data = LOCATION_DATA;
+	data = {};
 
 	BUTTON_NAME = "locations__navigation-button";
 	CONTENT_NAME = "locations__content";
@@ -14,10 +14,21 @@ export class Locations {
 	timeouts = [];
 
 	constructor() {
+		this.getLocationData();
+	}
+
+	getLocationData() {
+		fetch("./data/locations.json")
+			.then((response) => response.json())
+			.then((json) => this.init(json));
+	}
+
+	init(jsonData) {
+		this.data = jsonData;
+
 		this.loadLocationContainers();
 		this.loadLocationLinks();
 		this.loadLocationIndicator();
-
 		this.renderSelectedLocation(this.data[0].name);
 	}
 

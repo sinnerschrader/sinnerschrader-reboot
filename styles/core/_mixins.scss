@@ -144,6 +144,7 @@
 // headline-1xx shared styling
 @mixin headline-1-shared {
 	color: $color-primary--white;
+	font-weight: 200;
 	@include bp-xs {
 		font-size: 4.8rem;
 		line-height: 5.8rem;
@@ -186,6 +187,7 @@
 // headline-2xx shared styling
 @mixin headline-2-shared {
 	color: $color-primary--black;
+	font-weight: 200;
 	@include bp-xs {
 		font-size: 3.2rem;
 		line-height: 3.8rem;

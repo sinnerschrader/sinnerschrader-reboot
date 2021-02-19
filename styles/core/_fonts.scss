@@ -1,1 +1,39 @@
-// Empty for now
+@import "mixins";
+
+@font-face {
+	font-display: auto;
+	font-family: "suisse-intl";
+	font-style: normal;
+	font-weight: 400;
+	src: local("suisse-intl"), url("./assets/fonts/SuisseIntl-Regular-WebM.woff2") format("woff2"),
+		url("./assets/fonts/SuisseIntl-Regular-WebM.woff") format("woff");
+	unicode-range: U+000-5FF;
+}
+
+@font-face {
+	font-display: auto;
+	font-family: "ogg-regular";
+	font-style: normal;
+	font-weight: 400;
+	src: local("ogg-regular"), url("./assets/fonts/Ogg-Regular.woff2") format("woff2"), url("./assets/fonts/Ogg-Regular.woff") format("woff");
+	unicode-range: U+000-5FF;
+}
+
+@font-face {
+	font-display: auto;
+	font-family: "ogg-italic";
+	font-style: normal;
+	font-weight: 400;
+	src: local("ogg-italic"), url("./assets/fonts/Ogg-RegularItalic.woff2") format("woff2"),
+		url("./assets/fonts/Ogg-RegularItalic.woff") format("woff");
+	unicode-range: U+000-5FF;
+}
+
+@font-face {
+	font-display: auto;
+	font-family: "roboto";
+	font-style: normal;
+	font-weight: 400;
+	src: local("roboto"), url("./assets/fonts/RobotoMono-Regular.ttf") format("truetype");
+	unicode-range: U+000-5FF;
+}

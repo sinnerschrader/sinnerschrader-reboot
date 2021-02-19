@@ -345,5 +345,5 @@
 @mixin code-100 {
 	@include interactive-shared();
 
-	font-family: "roboto", monospace;
+	font-family: $font-code;
 }

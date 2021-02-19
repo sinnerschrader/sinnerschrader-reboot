@@ -9,6 +9,13 @@ body {
 	font-size: $font-size--copy-1;
 	margin: 0;
 	overflow-x: hidden;
+	background-color: $color-primary--white;
+	transition: background-color 800ms ease-in-out;
+
+	&.is-dark {
+		background-color: $color-primary--black;
+		color: $color-primary--white !important;
+	}
 }
 
 h1 {

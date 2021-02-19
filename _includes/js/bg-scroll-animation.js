@@ -1,7 +1,7 @@
+import throttle from "lodash.throttle";
+
 class BackgroundScrollAnimation {
 	animationStartElement = {};
-	animationEndElement = {};
-	bgIsDark = false;
 
 	constructor() {
 		this.init();
@@ -9,18 +9,21 @@ class BackgroundScrollAnimation {
 
 	init() {
 		this.animationStartElement = document.querySelectorAll('[data-js-item="bg-animation-to-black-start"]');
-		this.animationEndElement = document.querySelectorAll('[data-js-item="bg-animation-to-black-end"]');
-
-		console.log(this.animationStartElement, this.animationEndElement);
 
 		this.bindEvents();
 	}
 
 	bindEvents() {
-		document.addEventListener("scroll", this.scrollHandler.bind(this));
+		window.addEventListener("load", () => this.scrollListener());
+		// Load the detection once first to check if the element is already on load in the viewport
+		this.viewPortDetection();
 	}
 
-	scrollHandler() {
+	scrollListener() {
+		document.addEventListener("scroll", throttle(this.scrollHandler.bind(this), 200));
+	}
+
+	scrollHandler(e) {
 		let lastKnownScrollPosition = window.scrollY;
 		let ticking;
 
@@ -36,22 +39,24 @@ class BackgroundScrollAnimation {
 
 	viewPortDetection(scroll) {
 		console.log("Someone is scrolling", scroll);
+		this.animationStartElement.forEach((el) => {
+			this.isInViewport(el) ? this.toggleBackground("dark") : this.toggleBackground("light");
+		});
 	}
 
-	/*!
-	 * Determine if an element is in the viewport
-	 * (c) 2017 Chris Ferdinandi, MIT License, https://gomakethings.com
-	 * @param  {Node}    elem The element
-	 * @return {Boolean}      Returns true if element is in the viewport
-	 */
-	isInViewport(elem) {
-		let distance = elem.getBoundingClientRect();
-		return (
-			distance.top >= 0 &&
-			distance.left >= 0 &&
-			distance.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-			distance.right <= (window.innerWidth || document.documentElement.clientWidth)
-		);
+	toggleBackground(mode) {
+		if (mode === "dark") {
+			document.body.classList.add("is-dark");
+		} else {
+			document.body.classList.remove("is-dark");
+		}
+	}
+
+	isInViewport(el) {
+		const { top, bottom } = el.getBoundingClientRect();
+		const vHeight = window.innerHeight || document.documentElement.clientHeight;
+
+		return (top > 0 || bottom > 0) && top < vHeight;
 	}
 }
 

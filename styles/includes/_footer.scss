@@ -23,7 +23,7 @@
 	}
 
 	&__item {
-		padding-bottom: $spacing--100--desktop;
+		padding-bottom: $spacing--100;
 	}
 
 	&__link {
@@ -71,6 +71,6 @@
 
 	&__item {
 		background-color: $color-secondary--purple;
-		padding: 2.1rem 0 $spacing--200--desktop 0;
+		padding: 2.1rem 0 $spacing--200 0;
 	}
 }

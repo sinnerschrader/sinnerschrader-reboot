@@ -4502,28 +4502,32 @@
       this.locationContainers = this.data.map((location) => document.getElementsByClassName(this.contentClassName(location.name))).reduce((acc, current) => [...acc, ...current], []);
     };
     renderSelectedLocation = (newName) => {
-      this.locationButtons.forEach((locationLink) => {
-        const isSelected = locationLink.id === this.linkId(newName);
+      this.locationButtons.forEach((button) => {
+        if (!button)
+          return;
+        const isSelected = button.id === this.linkId(newName);
         if (isSelected) {
-          this.locationIndicator.style.top = locationLink.offsetTop + locationLink.clientHeight / 2;
-          locationLink.classList.add(this.BUTTON_SELECTED_CLASS);
+          this.locationIndicator.style.top = button.offsetTop + button.clientHeight / 2;
+          button.classList.add(this.BUTTON_SELECTED_CLASS);
         } else {
-          locationLink.classList.remove(this.BUTTON_SELECTED_CLASS);
+          button.classList.remove(this.BUTTON_SELECTED_CLASS);
         }
       });
       this.timeouts = this.timeouts.map(clearTimeout);
-      this.locationContainers.forEach((locationContainer) => {
-        const isShown = locationContainer.classList.contains(this.contentClassName(newName));
+      this.locationContainers.forEach((container) => {
+        if (!container)
+          return;
+        const isShown = container.classList.contains(this.contentClassName(newName));
         let animationCallback;
         if (isShown) {
-          locationContainer.style.display = "block";
+          container.style.display = "block";
           animationCallback = () => {
-            locationContainer.classList.remove(this.CONTENT_HIDDEN_CLASS);
+            container.classList.remove(this.CONTENT_HIDDEN_CLASS);
           };
         } else {
-          locationContainer.classList.add(this.CONTENT_HIDDEN_CLASS);
+          container.classList.add(this.CONTENT_HIDDEN_CLASS);
           animationCallback = () => {
-            locationContainer.style.display = "none";
+            container.style.display = "none";
           };
         }
         const timeout = setTimeout(animationCallback, 200);
@@ -4533,8 +4537,8 @@
   };
 
   // _includes/js/main.js
-  (() => {
+  window.onload = () => {
     new Locations();
     new Slider();
-  })();
+  };
 })();

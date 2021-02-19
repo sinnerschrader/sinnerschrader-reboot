@@ -1,37 +1,30 @@
 <section class="overlap">
-	<div class="grid">
-		<div class="section__title col-2">
-			<p>About</p>
-		</div>
-		<div class="section__number col-start-12 col-end-13">
-			<p>01</p>
-		</div>
-	</div>
+	{% include section-header, title: "Idea", number: "01" %}
+	
 	<div class="grid overlap__wrapper">
-		<div class="overlap__item overlap__item--img col-start-4 col-end-10
-			col-start-4-xs col-end-13-xs">
-			<img
-				class="overlap__img--right"
-				src="assets/born_from_digital_2.webp"
-				alt="old robot"
-				/>
-			<img class="overlap__circle" src="../assets/circle-overlap.svg" alt="">
+		<div class="overlap__item overlap__item--img col-start-5 col-end-9 col-start-4-xs col-end-13-xs">
+			<picture class="overlap__img--right">
+				<source srcset="./assets/born_from_digital_2.webp" type="image/webp" alt="" />
+				<img src="./assets/born_from_digital_2.jpg" alt="Look down an office hallway where two people are talking" />
+			</picture>
+			<div class="overlap__line-container">
+				<div class="overlap__line"></div>
+			</div>
 		</div>
-		<div class="overlap__item col-start-3 col-end-6 col-start-1-xs col-end-6-xs">
-			<img
-				class="overlap__img--left"
-				src="assets/born_from_digital_1.webp"
-				alt="fancy robot"
-				/>
+		<div class="overlap__item overlap__item--img col-start-4 col-end-6 col-start-1-xs col-end-6-xs">
+			<div class="overlap__circle-container">
+				<picture class="overlap__img--left">
+					<source srcset="./assets/born_from_digital_1.webp" type="image/webp" alt="" />
+					<img src="./assets/born_from_digital_1.jpg" alt="Person holding a glass infront of half of the face" />
+				</picture>
+				<img class="overlap__circle" src="./assets/circle-overlap.svg" alt="" />
+			</div>
 		</div>
-		<article class="overlap__item overlap__txt col col-start-10 col-end-13
-			col-start-1-xs col-end-13-xs">
-			<h2>Born from<br>digital,</h2>
+		<article class="overlap__item overlap__txt col col-start-9 col-end-13 col-start-1-xs col-end-13-xs">
+			<h2>Born from<br />digital,</h2>
 			<p>
-				By utilizing human science and design methodologies in an interdisciplinary
-				team, we empower our clients to design human and society
-				relevant innovation. In close co-creation with our experienced partners in
-				crime - our clients - we translate systems into
+				By utilizing human science and design methodologies in an interdisciplinary team, we empower our clients to design human and society
+				relevant innovation. In close co-creation with our experienced partners in crime - our clients - we translate systems into
 				transformative strategies.
 			</p>
 		</article>

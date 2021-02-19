@@ -51,7 +51,14 @@ module.exports = (eleventyConfig) => {
 
 	eleventyConfig.addPassthroughCopy({
 		"./_includes/assets/*": "./assets/",
+		"./_includes/data/*": "./data/",
 	});
+
+	return {
+		dir: {
+			data: "./_includes/data/",
+		},
+	};
 };
 
 function touchFile() {

@@ -1,82 +1,98 @@
-<section class="slider grid">
-	<div class="section__title col-2">
-		<p>culture</p>
+<section class="slider">
+	{% include section-header, title: "Culture", number: "03", type: "medium" %}
+	<div class="grid">
+		<h2 class="slider__heading">We are community.</h2>
+		<p class="slider__copy">
+			Every talent is special, every talent is needed.
+			That’s why we live in a culture of cultures, open and inclusive.
+			Welcoming everyone that welcomes everyone.
+		</p>
 	</div>
-	<div class="section__number col-start-12 col-end-13">
-		<p>03</p>
-	</div>
-	<h2 class="slider__heading">We are community.</h2>
-	<div class="slider__wrapper">
-		<div class="glide is-grid--right">
-			<div data-glide-el="track" class="glide__track">
-				<ul class="glide__slides">
-					<li class="glide__slide">
-						<picture>
-							<source media="(max-width: 599px)"
-							        srcset="./assets/images/mobile/code.webp">
-							<source media="(min-width: 600px)"
-							        srcset="./assets/images/tablet/code.webp">
-							<source media="(min-width: 1200px)"
-							        srcset="./assets/images/desktop/code.webp">
-							<img src="./assets/images/fallback/code.jpg" alt="alt text">
-						</picture>
-					</li>
-					<li class="glide__slide">
-						<picture>
-							<source media="(max-width: 599px)"
-							        srcset="./assets/images/mobile/office.webp">
-							<source media="(min-width: 600px)"
-							        srcset="./assets/images/tablet/office.webp">
-							<source media="(min-width: 1200px)"
-							        srcset="./assets/images/desktop/office.webp">
-							<img src="./assets/images/fallback/office.jpg" alt="alt text">
-						</picture>
-					</li>
-					<li class="glide__slide">
-						<picture>
-							<source media="(max-width: 599px)"
-							        srcset="./assets/images/mobile/data-idea.webp">
-							<source media="(min-width: 600px)"
-							        srcset="./assets/images/tablet/data-idea.webp">
-							<source media="(min-width: 1200px)"
-							        srcset="./assets/images/desktop/data-idea.webp">
-							<img src="./assets/images/fallback/data-idea.jpg" alt="alt text">
-						</picture>
-					</li>
-					<li class="glide__slide">
-						<picture>
-							<source media="(max-width: 599px)"
-							        srcset="./assets/images/mobile/desk.webp">
-							<source media="(min-width: 600px)"
-							        srcset="./assets/images/tablet/desk.webp">
-							<source media="(min-width: 1200px)"
-							        srcset="./assets/images/desktop/desk.webp">
-							<img src="./assets/images/fallback/desk.jpg" alt="alt text">
-						</picture>
-					</li>
-					<li class="glide__slide">
-						<picture>
-							<source media="(max-width: 599px)"
-							        srcset="./assets/images/mobile/desk-2.webp">
-							<source media="(min-width: 600px)"
-							        srcset="./assets/images/tablet/desk-2.webp">
-							<source media="(min-width: 1200px)"
-							        srcset="./assets/images/desktop/desk-2.webp">
-							<img src="./assets/images/fallback/desk-2.jpg" alt="alt text">
-						</picture>
-					</li>
-					<li class="glide__slide">
-						<picture>
-							<source media="(max-width: 599px)"
-							        srcset="./assets/images/mobile/group-working.webp">
-							<source media="(min-width: 600px)"
-							        srcset="./assets/images/tablet/group-working.webp">
-							<source media="(min-width: 1200px)"
-							        srcset="./assets/images/desktop/group-working.webp">
-							<img src="./assets/images/fallback/group-working.jpg" alt="alt text">
-						</picture>
-					</li>
-				</ul>
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<picture>
+				<source media="(max-width: 599px)"
+				        srcset="./assets/images/mobile/code.webp"
+				        type="image/webp">
+				<source media="(min-width: 600px)"
+				        srcset="./assets/images/tablet/code.webp"
+				        type="image/webp">
+				<source media="(min-width: 1200px)"
+				        srcset="./assets/images/desktop/code.webp"
+				        type="image/webp">
+				<img src="./assets/images/fallback/code.jpg" alt="alt text">
+			</picture>
+			</div>
+			<div class="swiper-slide">
+				<picture>
+					<source media="(max-width: 599px)"
+					        srcset="./assets/images/mobile/office.webp"
+					        type="image/webp">
+					<source media="(min-width: 600px)"
+					        srcset="./assets/images/tablet/office.webp"
+					        type="image/webp">
+					<source media="(min-width: 1200px)"
+					        srcset="./assets/images/desktop/office.webp"
+					        type="image/webp">
+					<img src="./assets/images/fallback/office.jpg" alt="alt text">
+				</picture>
+			</div>
+			<div class="swiper-slide">
+				<picture>
+					<source media="(max-width: 599px)"
+					        srcset="./assets/images/mobile/data-idea.webp"
+					        type="image/webp">
+					<source media="(min-width: 600px)"
+					        srcset="./assets/images/tablet/data-idea.webp"
+					        type="image/webp">
+					<source media="(min-width: 1200px)"
+					        srcset="./assets/images/desktop/data-idea.webp"
+					        type="image/webp">
+					<img src="./assets/images/fallback/data-idea.jpg" alt="alt text">
+				</picture>
+			</div>
+			<div class="swiper-slide">
+				<picture>
+					<source media="(max-width: 599px)"
+					        srcset="./assets/images/mobile/desk.webp"
+					        type="image/webp">
+					<source media="(min-width: 600px)"
+					        srcset="./assets/images/tablet/desk.webp"
+					        type="image/webp">
+					<source media="(min-width: 1200px)"
+					        srcset="./assets/images/desktop/desk.webp"
+					        type="image/webp">
+					<img src="./assets/images/fallback/desk.jpg" alt="alt text">
+				</picture>
+			</div>
+			<div class="swiper-slide">
+				<picture>
+					<source media="(max-width: 599px)"
+					        srcset="./assets/images/mobile/desk-2.webp"
+					        type="image/webp">
+					<source media="(min-width: 600px)"
+					        srcset="./assets/images/tablet/desk-2.webp"
+					        type="image/webp">
+					<source media="(min-width: 1200px)"
+					        srcset="./assets/images/desktop/desk-2.webp"
+					        type="image/webp">
+					<img src="./assets/images/fallback/desk-2.jpg" alt="alt text">
+				</picture>
+			</div>
+			<div class="swiper-slide">
+				<picture>
+					<source media="(max-width: 599px)"
+					        srcset="./assets/images/mobile/group-working.webp"
+					        type="image/webp">
+					<source media="(min-width: 600px)"
+					        srcset="./assets/images/tablet/group-working.webp"
+					        type="image/webp">
+					<source media="(min-width: 1200px)"
+					        srcset="./assets/images/desktop/group-working.webp"
+					        type="image/webp">
+					<img src="./assets/images/fallback/group-working.jpg" alt="alt text">
+				</picture>
 			</div>
 		</div>
 	</div>

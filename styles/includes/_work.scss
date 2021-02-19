@@ -51,75 +51,39 @@
 		flex-wrap: wrap;
 		margin: 120px 0 80px;
 
+		@include bp-xs() {
+			margin: 56px 0 16px;
+		}
+
+		@include bp-s() {
+			margin: 80px 0 40px;
+		}
+
 		&-el-wrapper {
 			position: relative;
 			width: 20%;
 			padding: 40px 0;
 			text-align: center;
 
-			&::before,
-			&::after {
-				//content: "";
-				position: absolute;
-				height: 100%;
-				width: 2px;
-				top: 0;
-				bottom: 0;
-				background-image: radial-gradient($color-primary--white 5%, transparent 0);
-				background-position: top center, bottom center;
-				background-size: 2rem 2rem;
-				background-repeat: no-repeat;
+			@include bp-xs() {
+				width: 50%;
 			}
-
-			&::before {
-				left: 0;
-			}
-
-			&::after {
-				right: 0;
+			@include bp-s() {
+				width: 50%;
 			}
 		}
 
-		/*&-dot {
-			position: absolute;
-			display: inline-block;
-			background-color: $color-primary--white;
-			width: 2px;
-			height: 2px;
-			border-radius: 50%;
-
-			&.is-top-left {
-				top: -2px;
-				left: 0;
-			}
-
-			&.is-top-right {
-				top: -2px;
-				right: 0;
-			}
-
-			&.is-bottom-left {
-				bottom: 0;
-				left: 0;
-			}
-
-			&.is-bottom-right {
-				bottom: 0;
-				right: 0;
-			}
-		}*/
-
 		img {
 			max-height: 72px;
+			width: 100%;
 		}
 	}
 
 	&__video {
 		&-container {
-			@include grid-right();
+			@include responsive-spacing(margin-left, 2.4rem, 6.4rem, 9.6rem);
 
 			position: relative;
-			width: 100%;
 		}
 
 		&-media-control {
@@ -164,6 +128,10 @@
 			position: relative;
 			width: 100%;
 			z-index: 4;
+
+			@include bp-xs() {
+				width: 150vw;
+			}
 
 			&.is-hidden {
 				display: none;

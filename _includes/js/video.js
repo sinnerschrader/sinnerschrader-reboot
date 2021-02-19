@@ -15,6 +15,7 @@ class Video {
 
 	bindEvents() {
 		this.video.playButton.addEventListener("click", this.togglePlay.bind(this));
+		this.video.videoElement.addEventListener("ended", this.toggleBtn.bind(this));
 	}
 
 	togglePlay() {
@@ -25,6 +26,10 @@ class Video {
 		}
 
 		this.video.videoElement.paused === true ? this.video.videoElement.play() : this.video.videoElement.pause();
+		this.toggleBtn();
+	}
+
+	toggleBtn() {
 		this.video.playButton.classList.toggle("is-playing");
 	}
 
@@ -39,7 +44,7 @@ class Video {
 	}
 
 	fullscreenOnMobile() {
-		this.video.videoElement.requestFullscreen().error("Request to go in fullscreen unsuccessful");
+		this.video.videoElement.requestFullscreen().then(() => this.video.videoElement.play());
 	}
 
 	isTouchDevice() {

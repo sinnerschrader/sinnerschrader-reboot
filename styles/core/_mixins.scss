@@ -140,3 +140,210 @@
 @mixin spacing-800($property) {
 	@include responsive-spacing($property, 9.6rem, 16rem, 20rem);
 }
+
+// Fonts
+
+// Headline large sans serif
+@mixin headline-100 {
+	color: $color-primary--white;
+	font-family: $font-sans-serif;
+	font-weight: 200;
+	@include bp-xs {
+		font-size: 4.8rem;
+		line-height: 5.8rem;
+	}
+	@include bp-s {
+		font-size: 5.6rem;
+		line-height: 6.7rem;
+	}
+	@include bp-m {
+		font-size: 5.6rem;
+		line-height: 6.7rem;
+	}
+	@include bp-l {
+		font-size: 6.4rem;
+		line-height: 7.7rem;
+	}
+	@include bp-xl {
+		font-size: 6.4rem;
+		line-height: 7.7rem;
+	}
+}
+
+// Headlines large serif - shared
+@mixin font-serif-shared-large {
+	font-weight: 200;
+	@include bp-xs {
+		font-size: 5.2rem;
+		line-height: 5.8rem;
+	}
+	@include bp-s {
+		font-size: 6.1rem;
+		line-height: 6.7rem;
+	}
+	@include bp-m {
+		font-size: 6.1rem;
+		line-height: 6.7rem;
+	}
+	@include bp-l {
+		font-size: 6.9rem;
+		line-height: 7.7rem;
+	}
+	@include bp-xl {
+		font-size: 6.9rem;
+		line-height: 7.7rem;
+	}
+}
+// Headline large serif
+@mixin headline-101 {
+	@include font-serif-shared-large();
+
+	font-family: $font-serif;
+}
+// Headline large serif italic
+@mixin headline-102 {
+	@include font-serif-shared-large();
+
+	font-family: $font-serif-italic;
+}
+
+// Headline smaller sans serif
+@mixin headline-200 {
+	font-family: $font-sans-serif;
+	font-weight: 200;
+	@include bp-xs {
+		font-size: 3.2rem;
+		line-height: 3.8rem;
+	}
+	@include bp-s {
+		font-size: 4rem;
+		line-height: 4.8rem;
+	}
+	@include bp-m {
+		font-size: 4rem;
+		line-height: 4.8rem;
+	}
+	@include bp-l {
+		font-size: 4.8rem;
+		line-height: 5.8rem;
+	}
+	@include bp-xl {
+		font-size: 4.8rem;
+		line-height: 5.8rem;
+	}
+}
+// Headline smaller serif - shared
+@mixin font-serif-shared-small {
+	font-weight: 200;
+	@include bp-xs {
+		font-size: 3.5rem;
+		line-height: 3.8rem;
+	}
+	@include bp-s {
+		font-size: 4.4rem;
+		line-height: 4.8rem;
+	}
+	@include bp-m {
+		font-size: 4.4rem;
+		line-height: 4.8rem;
+	}
+	@include bp-l {
+		font-size: 5.2rem;
+		line-height: 5.8rem;
+	}
+	@include bp-xl {
+		font-size: 5.2rem;
+		line-height: 5.8rem;
+	}
+}
+// Headline smaller serif
+@mixin headline-201 {
+	@include font-serif-shared-small();
+
+	font-family: $font-serif;
+}
+// Headline smaller serif italic
+@mixin headline-202 {
+	@include font-serif-shared-small();
+
+	font-family: $font-serif-italic;
+}
+
+// Paragraph and label shared styling
+@mixin text-shared {
+	color: $color-primary--gray;
+	font-family: $font-sans-serif;
+	line-height: 140%;
+}
+// Labels
+@mixin label-100 {
+	@include text-shared();
+
+	font-size: 1.8rem;
+	font-weight: 600;
+	@include bp-xs {
+		font-size: 1.6rem;
+	}
+	@include bp-s {
+		font-size: 1.8rem;
+	}
+}
+@mixin label-200 {
+	@include text-shared();
+
+	font-size: 1.6rem;
+	font-weight: 600;
+	@include bp-xs {
+		font-size: 1.4rem;
+	}
+	@include bp-s {
+		font-size: 1.6rem;
+	}
+}
+// Paragraphs
+@mixin paragraph-100 {
+	@include text-shared();
+
+	font-size: 1.8rem;
+	font-weight: 200;
+	@include bp-xs {
+		font-size: 1.6rem;
+	}
+	@include bp-s {
+		font-size: 1.8rem;
+	}
+}
+@mixin paragraph-200 {
+	@include text-shared();
+
+	font-size: 1.6rem;
+	font-weight: 200;
+	@include bp-xs {
+		font-size: 1.4rem;
+	}
+	@include bp-s {
+		font-size: 1.6rem;
+	}
+}
+
+// Interactive and code shared styling
+@mixin interactive-shared {
+	color: $color-primary--gray;
+	font-size: 1.2rem;
+	letter-spacing: 0.1rem;
+	line-height: 125%;
+	text-transform: $uppercase;
+}
+// Interactive
+@mixin interactive-100 {
+	@include interactive-shared();
+
+	font-family: $font-sans-serif;
+	font-weight: 600;
+}
+// Code
+@mixin code-100 {
+	@include interactive-shared();
+
+	font-family: $font-code;
+}

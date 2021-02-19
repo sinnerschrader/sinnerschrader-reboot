@@ -2,12 +2,14 @@
 
 .nav {
 	background: $color-primary--white;
-	font-family: $font-sans-serif;
+	// font-family: $font-sans-serif;
 	font-size: $font-size--copy-2;
 	height: 9.5rem;
 	text-transform: $uppercase;
 
 	&__logo {
+		@include interactive-100();
+
 		margin: auto 0;
 	}
 

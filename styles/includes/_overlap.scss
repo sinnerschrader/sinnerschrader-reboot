@@ -90,6 +90,7 @@
 		@include spacing-400(margin-left);
 
 		margin: auto;
+		padding-left: $spacing--400;
 		@include bp-xs() {
 			@include spacing-400(margin-top);
 

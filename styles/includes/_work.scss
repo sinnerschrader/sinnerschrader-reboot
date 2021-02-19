@@ -11,9 +11,6 @@
 		width: auto;
 	}
 
-	&::before {
-	}
-
 	&__headline {
 		margin: 100px 0;
 
@@ -50,13 +47,70 @@
 	}
 
 	&__logos {
-		text-align: center;
-		margin: 160px 0 80px;
+		display: flex;
+		flex-wrap: wrap;
+		margin: 120px 0 80px;
+
+		&-el-wrapper {
+			position: relative;
+			width: 20%;
+			padding: 40px 0;
+			text-align: center;
+
+			&::before,
+			&::after {
+				//content: "";
+				position: absolute;
+				height: 100%;
+				width: 2px;
+				top: 0;
+				bottom: 0;
+				background-image: radial-gradient($color-primary--white 5%, transparent 0);
+				background-position: top center, bottom center;
+				background-size: 2rem 2rem;
+				background-repeat: no-repeat;
+			}
+
+			&::before {
+				left: 0;
+			}
+
+			&::after {
+				right: 0;
+			}
+		}
+
+		/*&-dot {
+			position: absolute;
+			display: inline-block;
+			background-color: $color-primary--white;
+			width: 2px;
+			height: 2px;
+			border-radius: 50%;
+
+			&.is-top-left {
+				top: -2px;
+				left: 0;
+			}
+
+			&.is-top-right {
+				top: -2px;
+				right: 0;
+			}
+
+			&.is-bottom-left {
+				bottom: 0;
+				left: 0;
+			}
+
+			&.is-bottom-right {
+				bottom: 0;
+				right: 0;
+			}
+		}*/
 
 		img {
-			width: 16.66%;
 			max-height: 72px;
-			margin-bottom: 80px;
 		}
 	}
 
@@ -82,6 +136,10 @@
 			width: 100px;
 			color: $color-primary--white;
 			cursor: pointer;
+
+			&:focus {
+				outline: none;
+			}
 
 			.state--play {
 				display: none;

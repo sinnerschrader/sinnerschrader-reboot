@@ -89,5 +89,19 @@
 				"email": "info@sinnerschrader.com"
 			}
 		]
+	},
+	{
+		"name": "Zurich",
+		"imageSmall": "https://placeimg.com/506/506/nature/sepia",
+		"imageLarge": "https://placeimg.com/506/759/nature/sepia",
+		"studios": [
+			{
+				"name": "SinnerSchrader Studio Swipe",
+				"street": "St. Annagasse 9",
+				"postal": "8001 Zurich",
+				"tel": "+41 79 614 04 99",
+				"email": "swipe@sinnerschrader.com"
+			}
+		]
 	}
 ]

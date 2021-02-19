@@ -1,5 +1,5 @@
 export class Locations {
-	data = LOCATION_DATA;
+	data = {};
 
 	BUTTON_NAME = "locations__navigation-button";
 	CONTENT_NAME = "locations__content";
@@ -14,12 +14,20 @@ export class Locations {
 	timeouts = [];
 
 	constructor() {
+		fetch("./data/locations.json")
+			.then((response) => response.json())
+			.then((json) => this.init(json))
+			.catch((error) => console.error("Couldn't fetch locations data: " + error));
+	}
+
+	init = (jsonData) => {
+		this.data = jsonData;
+
 		this.loadLocationContainers();
 		this.loadLocationLinks();
 		this.loadLocationIndicator();
-
 		this.renderSelectedLocation(this.data[0].name);
-	}
+	};
 
 	linkId = (locationName) => `${this.BUTTON_NAME}-${locationName}`;
 	contentClassName = (locationName) => `${this.CONTENT_NAME}-${locationName}`;
@@ -47,34 +55,38 @@ export class Locations {
 	};
 
 	renderSelectedLocation = (newName) => {
-		this.locationButtons.forEach((locationLink) => {
-			const isSelected = locationLink.id === this.linkId(newName);
+		this.locationButtons.forEach((button) => {
+			if (!button) return;
+
+			const isSelected = button.id === this.linkId(newName);
 
 			if (isSelected) {
-				this.locationIndicator.style.top = locationLink.offsetTop + locationLink.clientHeight / 2;
-				locationLink.classList.add(this.BUTTON_SELECTED_CLASS);
+				this.locationIndicator.style.top = button.offsetTop + button.clientHeight / 2 + "px";
+				button.classList.add(this.BUTTON_SELECTED_CLASS);
 			} else {
-				locationLink.classList.remove(this.BUTTON_SELECTED_CLASS);
+				button.classList.remove(this.BUTTON_SELECTED_CLASS);
 			}
 		});
 
 		this.timeouts = this.timeouts.map(clearTimeout);
 
-		this.locationContainers.forEach((locationContainer) => {
-			const isShown = locationContainer.classList.contains(this.contentClassName(newName));
+		this.locationContainers.forEach((container) => {
+			if (!container) return;
+
+			const isShown = container.classList.contains(this.contentClassName(newName));
 
 			let animationCallback;
 			if (isShown) {
-				locationContainer.style.display = "block";
+				container.style.display = "block";
 
 				animationCallback = () => {
-					locationContainer.classList.remove(this.CONTENT_HIDDEN_CLASS);
+					container.classList.remove(this.CONTENT_HIDDEN_CLASS);
 				};
 			} else {
-				locationContainer.classList.add(this.CONTENT_HIDDEN_CLASS);
+				container.classList.add(this.CONTENT_HIDDEN_CLASS);
 
 				animationCallback = () => {
-					locationContainer.style.display = "none";
+					container.style.display = "none";
 				};
 			}
 

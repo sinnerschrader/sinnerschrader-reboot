@@ -19,16 +19,19 @@
 	}
 
 	&__wrapper {
-		margin-top: $spacing--700;
-		margin-bottom: $spacing--800;
+		@include spacing-700(margin-top);
+		@include spacing-800(margin-bottom);
 	}
 
 	&__item {
+		@include spacing-400(margin-top);
+
 		grid-row: 1;
+		position: relative;
 
 		&--img {
-			display: flex;
 			align-items: center;
+			display: flex;
 		}
 
 		&:nth-child(2) {
@@ -36,15 +39,36 @@
 
 			.overlap__circle-container {
 				position: relative;
-
-				.overlap__circle {
-					right: -20%;
-					position: absolute;
-					top: -13%;
-					width: 40%;
-					z-index: 4;
-				}
 			}
+
+			.overlap__circle {
+				position: absolute;
+				right: -20%;
+				top: -13%;
+				width: 40%;
+				z-index: 4;
+			}
+		}
+	}
+
+	&__line-container {
+		background-color: $color-primary--white;
+		height: 55%;
+		position: absolute;
+		right: -1rem;
+		top: 50%;
+		width: 1.7rem;
+	}
+
+	&__line {
+		background-color: $color-secondary--yellow;
+		height: 10rem;
+		left: 0;
+		position: absolute;
+		top: 100%;
+		width: 0.3rem;
+		@include bp-xs {
+			display: none;
 		}
 	}
 
@@ -63,11 +87,15 @@
 	}
 
 	&__txt {
+		@include spacing-400(margin-left);
+
 		margin: auto;
 		padding-left: $spacing--400;
 		@include bp-xs() {
+			@include spacing-400(margin-top);
+
 			grid-row: 2;
-			padding-left: initial;
+			margin-left: initial;
 		}
 	}
 }

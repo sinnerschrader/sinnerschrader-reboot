@@ -55,10 +55,10 @@ $grid-columns: 12 !default;
 
 @include bp-s {
 	.grid {
-		margin: 0 3.2rem;
+		margin: 0 9.6rem;
 
 		.is-grid--right {
-			margin: 0 0 0 3.2rem;
+			margin: 0 0 0 9.6rem;
 		}
 	}
 	@for $i from 1 through $grid-columns {
@@ -76,10 +76,10 @@ $grid-columns: 12 !default;
 
 @include bp-m {
 	.grid {
-		margin: 0 3.2rem;
+		margin: 0 9.6rem;
 
 		.is-grid--right {
-			margin: 0 0 0 3.4rem;
+			margin: 0 0 0 9.6rem;
 		}
 	}
 	@for $i from 1 through $grid-columns {
@@ -98,10 +98,10 @@ $grid-columns: 12 !default;
 @include bp-l {
 	@for $i from 1 through $grid-columns {
 		.grid {
-			margin: 0 4.8rem;
+			margin: 0 9.6rem;
 
 			.is-grid--right {
-				margin: 0 0 0 4.8rem;
+				margin: 0 0 0 9.6rem;
 			}
 		}
 		.col-#{$i}\-l {
@@ -119,10 +119,10 @@ $grid-columns: 12 !default;
 @include bp-xl {
 	@for $i from 1 through $grid-columns {
 		.grid {
-			margin: 0 6.4rem;
+			margin: 0 9.6rem;
 
 			.is-grid--right {
-				margin: 0 0 0 6.4rem;
+				margin: 0 0 0 9.6rem;
 			}
 		}
 		.col-#{$i}\-xl {

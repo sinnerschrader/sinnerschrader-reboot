@@ -13,7 +13,7 @@
 	}
 
 	&__headline {
-		margin: 100px 0;
+		margin: 10rem 0;
 
 		.is-underline {
 			position: relative;
@@ -22,9 +22,9 @@
 				position: absolute;
 				content: "";
 				bottom: 0;
-				left: -10px;
-				right: -10px;
-				height: 10px;
+				left: -1rem;
+				right: -1rem;
+				height: 1rem;
 				background: url("./assets/underline.svg");
 				background-repeat: no-repeat;
 				background-position: 100%;
@@ -42,7 +42,7 @@
 			bottom: 0;
 			right: 0;
 			left: 50%;
-			height: 24px;
+			height: 2.4rem;
 			background-color: $color-primary--white;
 		}
 	}
@@ -50,20 +50,20 @@
 	&__logos {
 		display: flex;
 		flex-wrap: wrap;
-		margin: 120px 0 80px;
+		margin: 12rem 0 8rem;
 
 		@include bp-xs() {
-			margin: 56px 0 16px;
+			margin: 5.6rem 0 1.6rem;
 		}
 
 		@include bp-s() {
-			margin: 80px 0 40px;
+			margin: 8rem 0 4rem;
 		}
 
 		&-el-wrapper {
 			position: relative;
 			width: 20%;
-			padding: 40px 0;
+			padding: $spacing--400--desktop 0;
 			text-align: center;
 
 			@include bp-xs() {
@@ -75,7 +75,7 @@
 		}
 
 		img {
-			max-height: 72px;
+			max-height: 7.2rem;
 			width: 100%;
 		}
 	}
@@ -127,8 +127,8 @@
 		background: $color-primary--black;
 		border-radius: 50%;
 		border: transparent;
-		height: 100px;
-		width: 100px;
+		height: 10rem;
+		width: 10rem;
 		color: $color-primary--white;
 		cursor: pointer;
 

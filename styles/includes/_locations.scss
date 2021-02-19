@@ -74,6 +74,7 @@
 		background-color: unset;
 		border-style: none;
 		cursor: pointer;
+		padding: 0;
 
 		&--selected {
 			@include label-100();

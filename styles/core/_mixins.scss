@@ -141,9 +141,12 @@
 	@include responsive-spacing($property, 9.6rem, 16rem, 20rem);
 }
 
-// headline-1xx shared styling
-@mixin headline-1-shared {
+// Fonts
+
+// Headline large sans serif
+@mixin headline-100 {
 	color: $color-primary--white;
+	font-family: $font-sans-serif;
 	font-weight: 200;
 	@include bp-xs {
 		font-size: 4.8rem;
@@ -167,26 +170,46 @@
 	}
 }
 
-// Headlines 1xx
-@mixin headline-100 {
-	@include headline-1-shared();
-
-	font-family: $font-sans-serif;
+// Headlines large serif - shared
+@mixin font-serif-shared-large {
+	font-weight: 200;
+	@include bp-xs {
+		font-size: 5.2rem;
+		line-height: 5.8rem;
+	}
+	@include bp-s {
+		font-size: 6.1rem;
+		line-height: 6.7rem;
+	}
+	@include bp-m {
+		font-size: 6.1rem;
+		line-height: 6.7rem;
+	}
+	@include bp-l {
+		font-size: 6.9rem;
+		line-height: 7.7rem;
+	}
+	@include bp-xl {
+		font-size: 6.9rem;
+		line-height: 7.7rem;
+	}
 }
+// Headline large serif
 @mixin headline-101 {
-	@include headline-1-shared();
+	@include font-serif-shared-large();
 
 	font-family: $font-serif;
 }
+// Headline large serif italic
 @mixin headline-102 {
-	@include headline-1-shared();
+	@include font-serif-shared-large();
 
 	font-family: $font-serif-italic;
 }
 
-// headline-2xx shared styling
-@mixin headline-2-shared {
-	color: $color-primary--black;
+// Headline smaller sans serif
+@mixin headline-200 {
+	font-family: $font-sans-serif;
 	font-weight: 200;
 	@include bp-xs {
 		font-size: 3.2rem;
@@ -194,11 +217,11 @@
 	}
 	@include bp-s {
 		font-size: 4rem;
-		line-height: 4rem;
+		line-height: 4.8rem;
 	}
 	@include bp-m {
 		font-size: 4rem;
-		line-height: 4rem;
+		line-height: 4.8rem;
 	}
 	@include bp-l {
 		font-size: 4.8rem;
@@ -209,19 +232,39 @@
 		line-height: 5.8rem;
 	}
 }
-// Headlines 2xx
-@mixin headline-200 {
-	@include headline-2-shared();
-
-	font-family: $font-sans-serif;
+// Headline smaller serif - shared
+@mixin font-serif-shared-small {
+	font-weight: 200;
+	@include bp-xs {
+		font-size: 3.5rem;
+		line-height: 3.8rem;
+	}
+	@include bp-s {
+		font-size: 4.4rem;
+		line-height: 4.8rem;
+	}
+	@include bp-m {
+		font-size: 4.4rem;
+		line-height: 4.8rem;
+	}
+	@include bp-l {
+		font-size: 5.2rem;
+		line-height: 5.8rem;
+	}
+	@include bp-xl {
+		font-size: 5.2rem;
+		line-height: 5.8rem;
+	}
 }
+// Headline smaller serif
 @mixin headline-201 {
-	@include headline-2-shared();
+	@include font-serif-shared-small();
 
 	font-family: $font-serif;
 }
+// Headline smaller serif italic
 @mixin headline-202 {
-	@include headline-2-shared();
+	@include font-serif-shared-small();
 
 	font-family: $font-serif-italic;
 }

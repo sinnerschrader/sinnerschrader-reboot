@@ -3,11 +3,12 @@
 
 	&::after {
 		@include dotted-grid();
-		content: "";
-		top: 0;
-		left: 0;
-		right: 30%;
+
 		bottom: 50%;
+		content: "";
+		left: 0;
+		top: 0;
+		right: 30%;
 		width: auto;
 	}
 
@@ -86,44 +87,6 @@
 			position: relative;
 		}
 
-		&-media-control {
-			position: absolute;
-			top: 50%;
-			right: 50%;
-			z-index: 5;
-			transform: translate(50%, -50%);
-			text-transform: uppercase;
-			background: $color-primary--black;
-			border-radius: 50%;
-			border: none;
-			height: 100px;
-			width: 100px;
-			color: $color-primary--white;
-			cursor: pointer;
-
-			&:focus {
-				outline: none;
-			}
-
-			.state--play {
-				display: none;
-			}
-
-			.state--pause {
-				display: inline-block;
-			}
-
-			&.is-playing {
-				.state--play {
-					display: inline-block;
-				}
-
-				.state--pause {
-					display: none;
-				}
-			}
-		}
-
 		&-preview-loop {
 			position: relative;
 			width: 100%;
@@ -150,6 +113,44 @@
 
 			&.is-visible {
 				display: block;
+			}
+		}
+	}
+
+	&__video-media-control {
+		position: absolute;
+		top: 50%;
+		right: 50%;
+		z-index: 5;
+		transform: translate(50%, -50%);
+		text-transform: uppercase;
+		background: $color-primary--black;
+		border-radius: 50%;
+		border: transparent;
+		height: 100px;
+		width: 100px;
+		color: $color-primary--white;
+		cursor: pointer;
+
+		&:focus {
+			outline: none;
+		}
+
+		.state--play {
+			display: none;
+		}
+
+		.state--pause {
+			display: inline-block;
+		}
+
+		&.is-playing {
+			.state--play {
+				display: inline-block;
+			}
+
+			.state--pause {
+				display: none;
 			}
 		}
 	}

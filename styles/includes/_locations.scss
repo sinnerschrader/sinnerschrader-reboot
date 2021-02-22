@@ -161,12 +161,11 @@
 				text-transform: none;
 			}
 
-			h4 {
+			span {
 				@include label-200();
 
 				margin: 0 0 $spacing--300;
 
-				// stylelint-disable-next-line max-nesting-depth
 				@include bp-xs {
 					margin: 0 0 $spacing--100;
 				}

@@ -39,7 +39,9 @@
 		}
 
 		&__creator {
+			@include paragraph-200();
 			bottom: 0;
+			color: $color-primary--white;
 			left: 0;
 			position: absolute;
 

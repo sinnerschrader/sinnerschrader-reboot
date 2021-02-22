@@ -1,36 +1,26 @@
 <section class="locations">
-  {% include section-header, title: "Here we are", number: "06", type: "medium" %}
+	{% include section-header, title: "Here we are", number: "06", type: "medium" %}
 
-  <div class="grid locations__grid">
+	<div class="grid locations__grid">
+		<ol class="col-start-1 col-end-7-xs col-end-3 locations__navigation">
+			{% for location in locations %} {% if forloop.first %} {% assign isSelected = "locations__navigation-button--selected" %} {% else %}
+			{% assign isSelected = "" %} {% endif %}
 
-    <ol class="col-start-1 col-end-7-xs col-end-3 locations__navigation">
-      {% for location in locations %}
+			<li class="locations__navigation-item">
+				<button class="{{ isSelected }} locations__navigation-button" id="locations__navigation-button-{{ location.name }}">
+					{{ location.name }}
+				</button>
+			</li>
 
-        {% if forloop.first %}
-          {% assign isSelected = "locations__navigation-button--selected" %}
-        {% else %}
-          {% assign isSelected = "" %}
-        {% endif %}
+			{% endfor %}
+			<div class="locations__navigation-indicator" id="locations__navigation-indicator"></div>
+		</ol>
 
-        <li class="locations__navigation-item">
-          <button class="{{ isSelected }} locations__navigation-button" id="locations__navigation-button-{{ location.name }}">
-            {{ location.name}}
-          </button>
-        </li>
+		{% for location in locations %} {% if forloop.first %} {% assign isHidden = "" %} {% else %} {% assign isHidden =
+		"locations__content--hidden" %} {% endif %}
 
-      {% endfor %}
-      <div class="locations__navigation-indicator" id="locations__navigation-indicator"></div>
-    </ol>
-
-    {% for location in locations %}
-
-      {% if forloop.first %}
-        {% assign isHidden = "" %}
-      {% else %}
-        {% assign isHidden = "locations__content--hidden" %}
-      {% endif %}
-
-      <div class="locations__content {{ isHidden }} locations__image-wrapper-small
+		<div
+			class="locations__content {{ isHidden }} locations__image-wrapper-small
                 locations__content-{{ location.name }} col-start-7-xs col-end-13-xs
                 col-start-3 col-end-8">
 
@@ -54,7 +44,8 @@
 				</picture>
       </div>
 
-      <div class="locations__content {{ isHidden }} locations__image-wrapper-large
+		<div
+			class="locations__content {{ isHidden }} locations__image-wrapper-large
                 locations__content-{{ location.name }} col-start-1-xs col-end-7-xs
                 col-start-8 col-end-13">
 
@@ -78,29 +69,28 @@
 				</picture>
       </div>
 
-      <div class="locations__content {{ isHidden }} locations__studio-info
+		<div
+			class="locations__content {{ isHidden }} locations__studio-info
                 locations__content-{{ location.name }} col-start-7-xs col-end-13-xs
-                col-start-3 col-end-8">
+                col-start-3 col-end-8"
+		>
+			<div class="locations__studio-info-grid">
+				{% for studio in location.studios %}
 
-        <div class="locations__studio-info-grid">
+				<div class="locations__studio-info-container">
+					<span>{{ studio.name }}</span>
+					<address>
+						<br />
+						{{ studio.street }}
+						<br />{{ studio.postal }} <br /><a href="tel:{{ studio.tel }}">{{ studio.tel }}</a> <br /><a href="mailto:{{ studio.email }}">{{
+							studio.email
+						}}</a>
+					</address>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
 
-          {% for studio in location.studios %}
-
-            <div class="locations__studio-info-container">
-              <h4>{{ studio.name }}</h4>
-              <address>
-                {{ studio.street }}
-                <br/>{{ studio.postal }}
-                <br/><a href="tel:{{ studio.tel }}">{{ studio.tel }}</a>
-                <br/><a href="mailto:{{ studio.email }}">{{ studio.email }}</a>
-              </address>
-            </div>
-          {% endfor %}
-
-        </div>
-
-      </div>
-
-    {% endfor %}
-  </div>
+		{% endfor %}
+	</div>
 </section>

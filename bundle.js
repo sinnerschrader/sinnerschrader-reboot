@@ -230,11 +230,11 @@
     };
     return _wrapNativeSuper(Class);
   }
-  function _assertThisInitialized(self) {
-    if (self === void 0) {
+  function _assertThisInitialized(self2) {
+    if (self2 === void 0) {
       throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
     }
-    return self;
+    return self2;
   }
   function makeReactive(obj) {
     var proto = obj.__proto__;
@@ -1379,75 +1379,75 @@
   // node_modules/swiper/esm/components/core/events-emitter.js
   var events_emitter_default = {
     on: function on2(events, handler, priority) {
-      var self = this;
+      var self2 = this;
       if (typeof handler !== "function")
-        return self;
+        return self2;
       var method = priority ? "unshift" : "push";
       events.split(" ").forEach(function(event) {
-        if (!self.eventsListeners[event])
-          self.eventsListeners[event] = [];
-        self.eventsListeners[event][method](handler);
+        if (!self2.eventsListeners[event])
+          self2.eventsListeners[event] = [];
+        self2.eventsListeners[event][method](handler);
       });
-      return self;
+      return self2;
     },
     once: function once(events, handler, priority) {
-      var self = this;
+      var self2 = this;
       if (typeof handler !== "function")
-        return self;
+        return self2;
       function onceHandler() {
-        self.off(events, onceHandler);
+        self2.off(events, onceHandler);
         if (onceHandler.__emitterProxy) {
           delete onceHandler.__emitterProxy;
         }
         for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
           args[_key] = arguments[_key];
         }
-        handler.apply(self, args);
+        handler.apply(self2, args);
       }
       onceHandler.__emitterProxy = handler;
-      return self.on(events, onceHandler, priority);
+      return self2.on(events, onceHandler, priority);
     },
     onAny: function onAny(handler, priority) {
-      var self = this;
+      var self2 = this;
       if (typeof handler !== "function")
-        return self;
+        return self2;
       var method = priority ? "unshift" : "push";
-      if (self.eventsAnyListeners.indexOf(handler) < 0) {
-        self.eventsAnyListeners[method](handler);
+      if (self2.eventsAnyListeners.indexOf(handler) < 0) {
+        self2.eventsAnyListeners[method](handler);
       }
-      return self;
+      return self2;
     },
     offAny: function offAny(handler) {
-      var self = this;
-      if (!self.eventsAnyListeners)
-        return self;
-      var index2 = self.eventsAnyListeners.indexOf(handler);
+      var self2 = this;
+      if (!self2.eventsAnyListeners)
+        return self2;
+      var index2 = self2.eventsAnyListeners.indexOf(handler);
       if (index2 >= 0) {
-        self.eventsAnyListeners.splice(index2, 1);
+        self2.eventsAnyListeners.splice(index2, 1);
       }
-      return self;
+      return self2;
     },
     off: function off2(events, handler) {
-      var self = this;
-      if (!self.eventsListeners)
-        return self;
+      var self2 = this;
+      if (!self2.eventsListeners)
+        return self2;
       events.split(" ").forEach(function(event) {
         if (typeof handler === "undefined") {
-          self.eventsListeners[event] = [];
-        } else if (self.eventsListeners[event]) {
-          self.eventsListeners[event].forEach(function(eventHandler, index2) {
+          self2.eventsListeners[event] = [];
+        } else if (self2.eventsListeners[event]) {
+          self2.eventsListeners[event].forEach(function(eventHandler, index2) {
             if (eventHandler === handler || eventHandler.__emitterProxy && eventHandler.__emitterProxy === handler) {
-              self.eventsListeners[event].splice(index2, 1);
+              self2.eventsListeners[event].splice(index2, 1);
             }
           });
         }
       });
-      return self;
+      return self2;
     },
     emit: function emit() {
-      var self = this;
-      if (!self.eventsListeners)
-        return self;
+      var self2 = this;
+      if (!self2.eventsListeners)
+        return self2;
       var events;
       var data;
       var context;
@@ -1457,27 +1457,27 @@
       if (typeof args[0] === "string" || Array.isArray(args[0])) {
         events = args[0];
         data = args.slice(1, args.length);
-        context = self;
+        context = self2;
       } else {
         events = args[0].events;
         data = args[0].data;
-        context = args[0].context || self;
+        context = args[0].context || self2;
       }
       data.unshift(context);
       var eventsArray = Array.isArray(events) ? events : events.split(" ");
       eventsArray.forEach(function(event) {
-        if (self.eventsAnyListeners && self.eventsAnyListeners.length) {
-          self.eventsAnyListeners.forEach(function(eventHandler) {
+        if (self2.eventsAnyListeners && self2.eventsAnyListeners.length) {
+          self2.eventsAnyListeners.forEach(function(eventHandler) {
             eventHandler.apply(context, [event].concat(data));
           });
         }
-        if (self.eventsListeners && self.eventsListeners[event]) {
-          self.eventsListeners[event].forEach(function(eventHandler) {
+        if (self2.eventsListeners && self2.eventsListeners[event]) {
+          self2.eventsListeners[event].forEach(function(eventHandler) {
             eventHandler.apply(context, data);
           });
         }
       });
-      return self;
+      return self2;
     }
   };
 
@@ -1516,6 +1516,24 @@
   // node_modules/swiper/esm/components/core/update/updateSlides.js
   function updateSlides() {
     var swiper = this;
+    var getDirectionLabel = function getDirectionLabel2(property) {
+      if (swiper.isHorizontal()) {
+        return property;
+      }
+      return {
+        width: "height",
+        "margin-top": "margin-left",
+        "margin-bottom ": "margin-right",
+        "margin-left": "margin-top",
+        "margin-right": "margin-bottom",
+        "padding-left": "padding-top",
+        "padding-right": "padding-bottom",
+        marginRight: "marginBottom"
+      }[property];
+    };
+    var getDirectionPropertyValue = function getDirectionPropertyValue2(node, label) {
+      return parseFloat(node.getPropertyValue(getDirectionLabel(label)) || 0);
+    };
     var window2 = getWindow();
     var params = swiper.params;
     var $wrapperEl = swiper.$wrapperEl, swiperSize = swiper.size, rtl = swiper.rtlTranslate, wrongRTL = swiper.wrongRTL;
@@ -1615,7 +1633,7 @@
           row = Math.floor(i / slidesPerRow);
           column = i - row * slidesPerRow;
         }
-        slide.css("margin-" + (swiper.isHorizontal() ? "top" : "left"), row !== 0 && params.spaceBetween && params.spaceBetween + "px");
+        slide.css(getDirectionLabel("margin-top"), row !== 0 && params.spaceBetween && params.spaceBetween + "px");
       }
       if (slide.css("display") === "none")
         continue;
@@ -1632,32 +1650,17 @@
         if (params.roundLengths) {
           slideSize = swiper.isHorizontal() ? slide.outerWidth(true) : slide.outerHeight(true);
         } else {
-          if (swiper.isHorizontal()) {
-            var width = parseFloat(slideStyles.getPropertyValue("width") || 0);
-            var paddingLeft = parseFloat(slideStyles.getPropertyValue("padding-left") || 0);
-            var paddingRight = parseFloat(slideStyles.getPropertyValue("padding-right") || 0);
-            var marginLeft = parseFloat(slideStyles.getPropertyValue("margin-left") || 0);
-            var marginRight = parseFloat(slideStyles.getPropertyValue("margin-right") || 0);
-            var boxSizing = slideStyles.getPropertyValue("box-sizing");
-            if (boxSizing && boxSizing === "border-box") {
-              slideSize = width + marginLeft + marginRight;
-            } else {
-              var _slide$ = slide[0], clientWidth = _slide$.clientWidth, offsetWidth = _slide$.offsetWidth;
-              slideSize = width + paddingLeft + paddingRight + marginLeft + marginRight + (offsetWidth - clientWidth);
-            }
+          var width = getDirectionPropertyValue(slideStyles, "width");
+          var paddingLeft = getDirectionPropertyValue(slideStyles, "padding-left");
+          var paddingRight = getDirectionPropertyValue(slideStyles, "padding-right");
+          var marginLeft = getDirectionPropertyValue(slideStyles, "margin-left");
+          var marginRight = getDirectionPropertyValue(slideStyles, "margin-right");
+          var boxSizing = slideStyles.getPropertyValue(slideStyles, "box-sizing");
+          if (boxSizing && boxSizing === "border-box") {
+            slideSize = width + marginLeft + marginRight;
           } else {
-            var height = parseFloat(slideStyles.getPropertyValue("height") || 0);
-            var paddingTop = parseFloat(slideStyles.getPropertyValue("padding-top") || 0);
-            var paddingBottom = parseFloat(slideStyles.getPropertyValue("padding-bottom") || 0);
-            var marginTop = parseFloat(slideStyles.getPropertyValue("margin-top") || 0);
-            var marginBottom = parseFloat(slideStyles.getPropertyValue("margin-bottom") || 0);
-            var _boxSizing = slideStyles.getPropertyValue("box-sizing");
-            if (_boxSizing && _boxSizing === "border-box") {
-              slideSize = height + marginTop + marginBottom;
-            } else {
-              var _slide$2 = slide[0], clientHeight = _slide$2.clientHeight, offsetHeight = _slide$2.offsetHeight;
-              slideSize = height + paddingTop + paddingBottom + marginTop + marginBottom + (offsetHeight - clientHeight);
-            }
+            var _slide$ = slide[0], clientWidth = _slide$.clientWidth, offsetWidth = _slide$.offsetWidth;
+            slideSize = width + paddingLeft + paddingRight + marginLeft + marginRight + (offsetWidth - clientWidth);
           }
         }
         if (currentTransform) {
@@ -1673,11 +1676,7 @@
         if (params.roundLengths)
           slideSize = Math.floor(slideSize);
         if (slides[i]) {
-          if (swiper.isHorizontal()) {
-            slides[i].style.width = slideSize + "px";
-          } else {
-            slides[i].style.height = slideSize + "px";
-          }
+          slides[i].style[getDirectionLabel("width")] = slideSize + "px";
         }
       }
       if (slides[i]) {
@@ -1717,26 +1716,14 @@
       });
     }
     if (params.setWrapperSize) {
-      if (swiper.isHorizontal())
-        $wrapperEl.css({
-          width: swiper.virtualSize + params.spaceBetween + "px"
-        });
-      else
-        $wrapperEl.css({
-          height: swiper.virtualSize + params.spaceBetween + "px"
-        });
+      var _$wrapperEl$css;
+      $wrapperEl.css((_$wrapperEl$css = {}, _$wrapperEl$css[getDirectionLabel("width")] = swiper.virtualSize + params.spaceBetween + "px", _$wrapperEl$css));
     }
     if (params.slidesPerColumn > 1) {
+      var _$wrapperEl$css2;
       swiper.virtualSize = (slideSize + params.spaceBetween) * slidesNumberEvenToRows;
       swiper.virtualSize = Math.ceil(swiper.virtualSize / params.slidesPerColumn) - params.spaceBetween;
-      if (swiper.isHorizontal())
-        $wrapperEl.css({
-          width: swiper.virtualSize + params.spaceBetween + "px"
-        });
-      else
-        $wrapperEl.css({
-          height: swiper.virtualSize + params.spaceBetween + "px"
-        });
+      $wrapperEl.css((_$wrapperEl$css2 = {}, _$wrapperEl$css2[getDirectionLabel("width")] = swiper.virtualSize + params.spaceBetween + "px", _$wrapperEl$css2));
       if (params.centeredSlides) {
         newSlidesGrid = [];
         for (var _i = 0; _i < snapGrid.length; _i += 1) {
@@ -1767,19 +1754,9 @@
     if (snapGrid.length === 0)
       snapGrid = [0];
     if (params.spaceBetween !== 0) {
-      if (swiper.isHorizontal()) {
-        if (rtl)
-          slides.filter(slidesForMargin).css({
-            marginLeft: spaceBetween + "px"
-          });
-        else
-          slides.filter(slidesForMargin).css({
-            marginRight: spaceBetween + "px"
-          });
-      } else
-        slides.filter(slidesForMargin).css({
-          marginBottom: spaceBetween + "px"
-        });
+      var _slides$filter$css;
+      var key = swiper.isHorizontal() && rtl ? "marginLeft" : getDirectionLabel("marginRight");
+      slides.filter(slidesForMargin).css((_slides$filter$css = {}, _slides$filter$css[key] = spaceBetween + "px", _slides$filter$css));
     }
     if (params.centeredSlides && params.centeredSlidesBounds) {
       var allSlidesSize = 0;
@@ -3773,7 +3750,8 @@
     }, {
       "css-mode": params.cssMode
     }], params.containerModifierClass);
-    $el.addClass([].concat(classNames, suffixes).join(" "));
+    classNames.push.apply(classNames, suffixes);
+    $el.addClass([].concat(classNames).join(" "));
     swiper.emitContainerClasses();
   }
 
@@ -4540,6 +4518,275 @@
     };
   };
 
+  // node_modules/lodash-es/_freeGlobal.js
+  var freeGlobal = typeof global == "object" && global && global.Object === Object && global;
+  var freeGlobal_default = freeGlobal;
+
+  // node_modules/lodash-es/_root.js
+  var freeSelf = typeof self == "object" && self && self.Object === Object && self;
+  var root = freeGlobal_default || freeSelf || Function("return this")();
+  var root_default = root;
+
+  // node_modules/lodash-es/_Symbol.js
+  var Symbol = root_default.Symbol;
+  var Symbol_default = Symbol;
+
+  // node_modules/lodash-es/_getRawTag.js
+  var objectProto = Object.prototype;
+  var hasOwnProperty = objectProto.hasOwnProperty;
+  var nativeObjectToString = objectProto.toString;
+  var symToStringTag = Symbol_default ? Symbol_default.toStringTag : void 0;
+  function getRawTag(value) {
+    var isOwn = hasOwnProperty.call(value, symToStringTag), tag = value[symToStringTag];
+    try {
+      value[symToStringTag] = void 0;
+      var unmasked = true;
+    } catch (e) {
+    }
+    var result = nativeObjectToString.call(value);
+    if (unmasked) {
+      if (isOwn) {
+        value[symToStringTag] = tag;
+      } else {
+        delete value[symToStringTag];
+      }
+    }
+    return result;
+  }
+  var getRawTag_default = getRawTag;
+
+  // node_modules/lodash-es/_objectToString.js
+  var objectProto2 = Object.prototype;
+  var nativeObjectToString2 = objectProto2.toString;
+  function objectToString(value) {
+    return nativeObjectToString2.call(value);
+  }
+  var objectToString_default = objectToString;
+
+  // node_modules/lodash-es/_baseGetTag.js
+  var nullTag = "[object Null]";
+  var undefinedTag = "[object Undefined]";
+  var symToStringTag2 = Symbol_default ? Symbol_default.toStringTag : void 0;
+  function baseGetTag(value) {
+    if (value == null) {
+      return value === void 0 ? undefinedTag : nullTag;
+    }
+    return symToStringTag2 && symToStringTag2 in Object(value) ? getRawTag_default(value) : objectToString_default(value);
+  }
+  var baseGetTag_default = baseGetTag;
+
+  // node_modules/lodash-es/isObjectLike.js
+  function isObjectLike(value) {
+    return value != null && typeof value == "object";
+  }
+  var isObjectLike_default = isObjectLike;
+
+  // node_modules/lodash-es/isSymbol.js
+  var symbolTag = "[object Symbol]";
+  function isSymbol(value) {
+    return typeof value == "symbol" || isObjectLike_default(value) && baseGetTag_default(value) == symbolTag;
+  }
+  var isSymbol_default = isSymbol;
+
+  // node_modules/lodash-es/_trimmedEndIndex.js
+  var reWhitespace = /\s/;
+  function trimmedEndIndex(string) {
+    var index2 = string.length;
+    while (index2-- && reWhitespace.test(string.charAt(index2))) {
+    }
+    return index2;
+  }
+  var trimmedEndIndex_default = trimmedEndIndex;
+
+  // node_modules/lodash-es/_baseTrim.js
+  var reTrimStart = /^\s+/;
+  function baseTrim(string) {
+    return string ? string.slice(0, trimmedEndIndex_default(string) + 1).replace(reTrimStart, "") : string;
+  }
+  var baseTrim_default = baseTrim;
+
+  // node_modules/lodash-es/isObject.js
+  function isObject3(value) {
+    var type = typeof value;
+    return value != null && (type == "object" || type == "function");
+  }
+  var isObject_default = isObject3;
+
+  // node_modules/lodash-es/toNumber.js
+  var NAN = 0 / 0;
+  var reIsBadHex = /^[-+]0x[0-9a-f]+$/i;
+  var reIsBinary = /^0b[01]+$/i;
+  var reIsOctal = /^0o[0-7]+$/i;
+  var freeParseInt = parseInt;
+  function toNumber(value) {
+    if (typeof value == "number") {
+      return value;
+    }
+    if (isSymbol_default(value)) {
+      return NAN;
+    }
+    if (isObject_default(value)) {
+      var other = typeof value.valueOf == "function" ? value.valueOf() : value;
+      value = isObject_default(other) ? other + "" : other;
+    }
+    if (typeof value != "string") {
+      return value === 0 ? value : +value;
+    }
+    value = baseTrim_default(value);
+    var isBinary = reIsBinary.test(value);
+    return isBinary || reIsOctal.test(value) ? freeParseInt(value.slice(2), isBinary ? 2 : 8) : reIsBadHex.test(value) ? NAN : +value;
+  }
+  var toNumber_default = toNumber;
+
+  // node_modules/lodash-es/now.js
+  var now2 = function() {
+    return root_default.Date.now();
+  };
+  var now_default = now2;
+
+  // node_modules/lodash-es/debounce.js
+  var FUNC_ERROR_TEXT = "Expected a function";
+  var nativeMax = Math.max;
+  var nativeMin = Math.min;
+  function debounce(func, wait, options) {
+    var lastArgs, lastThis, maxWait, result, timerId, lastCallTime, lastInvokeTime = 0, leading = false, maxing = false, trailing = true;
+    if (typeof func != "function") {
+      throw new TypeError(FUNC_ERROR_TEXT);
+    }
+    wait = toNumber_default(wait) || 0;
+    if (isObject_default(options)) {
+      leading = !!options.leading;
+      maxing = "maxWait" in options;
+      maxWait = maxing ? nativeMax(toNumber_default(options.maxWait) || 0, wait) : maxWait;
+      trailing = "trailing" in options ? !!options.trailing : trailing;
+    }
+    function invokeFunc(time) {
+      var args = lastArgs, thisArg = lastThis;
+      lastArgs = lastThis = void 0;
+      lastInvokeTime = time;
+      result = func.apply(thisArg, args);
+      return result;
+    }
+    function leadingEdge(time) {
+      lastInvokeTime = time;
+      timerId = setTimeout(timerExpired, wait);
+      return leading ? invokeFunc(time) : result;
+    }
+    function remainingWait(time) {
+      var timeSinceLastCall = time - lastCallTime, timeSinceLastInvoke = time - lastInvokeTime, timeWaiting = wait - timeSinceLastCall;
+      return maxing ? nativeMin(timeWaiting, maxWait - timeSinceLastInvoke) : timeWaiting;
+    }
+    function shouldInvoke(time) {
+      var timeSinceLastCall = time - lastCallTime, timeSinceLastInvoke = time - lastInvokeTime;
+      return lastCallTime === void 0 || timeSinceLastCall >= wait || timeSinceLastCall < 0 || maxing && timeSinceLastInvoke >= maxWait;
+    }
+    function timerExpired() {
+      var time = now_default();
+      if (shouldInvoke(time)) {
+        return trailingEdge(time);
+      }
+      timerId = setTimeout(timerExpired, remainingWait(time));
+    }
+    function trailingEdge(time) {
+      timerId = void 0;
+      if (trailing && lastArgs) {
+        return invokeFunc(time);
+      }
+      lastArgs = lastThis = void 0;
+      return result;
+    }
+    function cancel() {
+      if (timerId !== void 0) {
+        clearTimeout(timerId);
+      }
+      lastInvokeTime = 0;
+      lastArgs = lastCallTime = lastThis = timerId = void 0;
+    }
+    function flush() {
+      return timerId === void 0 ? result : trailingEdge(now_default());
+    }
+    function debounced() {
+      var time = now_default(), isInvoking = shouldInvoke(time);
+      lastArgs = arguments;
+      lastThis = this;
+      lastCallTime = time;
+      if (isInvoking) {
+        if (timerId === void 0) {
+          return leadingEdge(lastCallTime);
+        }
+        if (maxing) {
+          clearTimeout(timerId);
+          timerId = setTimeout(timerExpired, wait);
+          return invokeFunc(lastCallTime);
+        }
+      }
+      if (timerId === void 0) {
+        timerId = setTimeout(timerExpired, wait);
+      }
+      return result;
+    }
+    debounced.cancel = cancel;
+    debounced.flush = flush;
+    return debounced;
+  }
+  var debounce_default = debounce;
+
+  // node_modules/lodash-es/throttle.js
+  var FUNC_ERROR_TEXT2 = "Expected a function";
+  function throttle(func, wait, options) {
+    var leading = true, trailing = true;
+    if (typeof func != "function") {
+      throw new TypeError(FUNC_ERROR_TEXT2);
+    }
+    if (isObject_default(options)) {
+      leading = "leading" in options ? !!options.leading : leading;
+      trailing = "trailing" in options ? !!options.trailing : trailing;
+    }
+    return debounce_default(func, wait, {
+      leading,
+      maxWait: wait,
+      trailing
+    });
+  }
+  var throttle_default = throttle;
+
+  // _includes/js/bg-scroll-animation.js
+  var BackgroundScrollAnimation = class {
+    animationStartElement = [];
+    animationOffsetTop = 300;
+    animationOffsetBottom = 500;
+    constructor() {
+      this.init();
+    }
+    init() {
+      this.animationStartElement = [document.querySelector(".offering"), document.querySelector(".work")];
+      this.bindEvents();
+    }
+    bindEvents() {
+      window.addEventListener("load", () => this.scrollListener());
+      this.viewPortDetection();
+    }
+    scrollListener() {
+      document.addEventListener("scroll", throttle_default(this.viewPortDetection.bind(this), 200));
+    }
+    viewPortDetection() {
+      const elementsInViewport = this.animationStartElement.some((el) => this.isInViewport(el));
+      elementsInViewport ? this.toggleBackground("dark") : this.toggleBackground("light");
+    }
+    toggleBackground(mode) {
+      if (mode === "dark") {
+        document.body.classList.add("is-dark");
+      } else {
+        document.body.classList.remove("is-dark");
+      }
+    }
+    isInViewport(el) {
+      const {top, bottom} = el.getBoundingClientRect();
+      const vHeight = window.innerHeight || document.documentElement.clientHeight;
+      return (top > 0 || bottom > 0) && top + this.animationOffsetTop < vHeight && bottom > this.animationOffsetBottom;
+    }
+  };
+
   // _includes/js/video.js
   var Video = class {
     constructor() {
@@ -4588,6 +4835,7 @@
   (() => {
     new Locations();
     new Slider();
+    new BackgroundScrollAnimation();
     new Video();
   })();
 })();

@@ -54,11 +54,23 @@ export class Locations {
 			.reduce((acc, current) => [...acc, ...current], []);
 	};
 
-	renderSelectedLocation = (newName) => {
+	viewPortByMediaQuery = (query) => {
+		switch (query) {
+			case "(max-width: 599px)":
+				return "mobile";
+			case "(min-width: 600px) and (max-width: 1199px)":
+				return "tablet";
+			case "(min-width: 1200px)":
+			default:
+				return "desktop";
+		}
+	};
+
+	renderLocationButtons = (newButtonId) => {
 		this.locationButtons.forEach((button) => {
 			if (!button) return;
 
-			const isSelected = button.id === this.linkId(newName);
+			const isSelected = button.id === newButtonId;
 
 			if (isSelected) {
 				this.locationIndicator.style.top = button.offsetTop + button.clientHeight / 2 + "px";
@@ -67,13 +79,44 @@ export class Locations {
 				button.classList.remove(this.BUTTON_SELECTED_CLASS);
 			}
 		});
+	};
 
+	setPictureSrc = (container, isShown, { imageLarge, imageSmall }) => {
+		const picture = container.querySelector("picture");
+		if (!picture) {
+			return;
+		}
+
+		const sources = picture.querySelectorAll("source");
+		const img = picture.querySelector("img");
+
+		if (isShown) {
+			const isBigImage = container.classList.contains("locations__image-wrapper-large");
+			const imageName = isBigImage ? imageLarge : imageSmall;
+
+			img.src = `./assets/images/fallback/${imageName}`;
+			sources.forEach((source) => {
+				const viewport = this.viewPortByMediaQuery(source.media);
+				source.srcset = `./assets/images/${viewport}/${imageName}`;
+			});
+		} else {
+			img.src = "";
+			sources.forEach((source) => {
+				source.src = "";
+			});
+		}
+	};
+
+	renderLocationContainers = (newLocationData) => {
 		this.timeouts = this.timeouts.map(clearTimeout);
 
 		this.locationContainers.forEach((container) => {
 			if (!container) return;
 
-			const isShown = container.classList.contains(this.contentClassName(newName));
+			const shownClassName = this.contentClassName(newLocationData.name);
+			const isShown = container.classList.contains(shownClassName);
+
+			this.setPictureSrc(container, isShown, newLocationData);
 
 			let animationCallback;
 			if (isShown) {
@@ -90,8 +133,15 @@ export class Locations {
 				};
 			}
 
-			const timeout = setTimeout(animationCallback, 200);
-			this.timeouts.push(timeout);
+			this.timeouts.push(setTimeout(animationCallback, 200));
 		});
+	};
+
+	renderSelectedLocation = (newName) => {
+		const newButtonId = this.linkId(newName);
+		this.renderLocationButtons(newButtonId);
+
+		const newLocationData = this.data.find((location) => location.name === newName);
+		this.renderLocationContainers(newLocationData);
 	};
 }

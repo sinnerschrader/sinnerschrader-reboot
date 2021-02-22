@@ -361,5 +361,5 @@
 }
 
 @mixin default-animation($property) {
-	transition: $property 500ms linear;
+	transition: $property 500ms ease-in-out;
 }

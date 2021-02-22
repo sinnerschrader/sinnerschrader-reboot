@@ -3,7 +3,6 @@
 
 	&::after {
 		@include dotted-grid();
-		@include default-animation(filter);
 
 		bottom: 50%;
 		content: "";
@@ -27,8 +26,6 @@
 			position: relative;
 
 			&::after {
-				@include default-animation(filter);
-
 				position: absolute;
 				content: "";
 				bottom: 0;

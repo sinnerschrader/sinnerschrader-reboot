@@ -14,12 +14,14 @@ class OfferingHeader {
 	}
 
 	bindEvents() {
-		document.addEventListener("scroll", throttle(this.scrollHandler.bind(this), 50));
+		document.addEventListener("scroll", throttle(this.scrollHandler.bind(this), 150));
 	}
 
 	updateTextPathOffset(offsetTop, offsetBottom) {
-		this.textPathTop.setAttribute("style", `transform: translate3d(${offsetTop}px, 0, 0)`);
-		this.textPathBottom.setAttribute("style", `transform: translate3d(${offsetBottom}px, 0, 0)`);
+		//this.textPathTop.setAttribute("style", `transform: translate3d(${offsetTop}px, 0, 0)`);
+		//this.textPathBottom.setAttribute("style", `transform: translate3d(${offsetBottom}px, 0, 0)`);
+		this.textPathTop.style.transform = `translateX(${offsetTop}px)`;
+		this.textPathBottom.style.transform = `translateX(${offsetBottom}px)`;
 	}
 
 	scrollHandler() {

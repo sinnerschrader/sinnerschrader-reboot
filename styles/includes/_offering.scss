@@ -15,8 +15,7 @@
 		font-size: 9.6rem;
 		line-height: 120%;
 		white-space: nowrap;
-		transform: translateZ(0);
-		transition: transform 100ms linear;
+		transition: transform 500ms ease;
 
 		.is-font-ogg {
 			font-family: $font-serif;
@@ -24,26 +23,29 @@
 	}
 
 	&--wrapper {
-		overflow-x: scroll;
 		padding: 6.4rem 0;
-	}
-
-	&--info {
-		padding: 12rem 0;
 		position: relative;
 
 		&::after {
-			@include dotted-grid--white();
-			@include default-animation(filter);
+			@include dotted-grid();
+			@include grid-right();
 
-			filter: invert(1);
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			filter: invert(0);
 		}
 
 		.is-dark & {
 			&::after {
-				filter: invert(0);
+				filter: invert(1);
 			}
 		}
+	}
+
+	&--info {
+		padding: 12rem 0;
+		overflow-x: scroll;
 
 		@include bp-s {
 			width: 150%;
@@ -65,8 +67,6 @@
 	}
 
 	&__circle {
-		@include default-animation(filter);
-
 		position: absolute;
 		right: 0;
 		bottom: -15rem;

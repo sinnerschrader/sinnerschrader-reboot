@@ -8,8 +8,8 @@
 		@include grid-right();
 		@include dotted-grid();
 
-		height: 55%;
-		top: 12rem;
+		height: 50%;
+		top: 5rem;
 		z-index: 3;
 
 		@include bp-xs() {

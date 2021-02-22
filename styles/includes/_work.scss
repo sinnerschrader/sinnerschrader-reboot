@@ -85,6 +85,7 @@
 			@include responsive-spacing(margin-left, 2.4rem, 6.4rem, 9.6rem);
 
 			position: relative;
+			overflow-x: hidden;
 		}
 
 		&-preview-loop {

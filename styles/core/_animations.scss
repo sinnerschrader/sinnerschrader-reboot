@@ -1,3 +1,6 @@
+@import "../core/mixins";
+@import "../core/variables";
+
 .slide-in {
 	display: inline-block;
 	opacity: 0;
@@ -5,9 +8,21 @@
 
 .switch {
 	display: inline-block;
-	height: 4.2rem;
+	height: 4rem;
 	position: relative;
 	text-align: left;
+
+	@include bp-xs {
+		height: 2.6rem;
+	}
+
+	@include bp-s {
+		height: 3.4rem;
+	}
+
+	@include bp-m {
+		height: 3.4rem;
+	}
 
 	.switch-item {
 		animation: switch-text 6s linear infinite 0s;
@@ -19,6 +34,47 @@
 		&:nth-child(2) {
 			animation-delay: 3s;
 		}
+	}
+}
+
+.nav__list__item {
+	&::after,
+	&::before {
+		top: 65%;
+	}
+}
+
+.locations__navigation-button {
+	&::after,
+	&::before {
+		top: 90%;
+	}
+}
+
+.nav__list__item,
+.locations__navigation-button {
+	position: relative;
+
+	&::after,
+	&::before {
+		position: absolute;
+		background: $color-primary--gray;
+		width: 100%;
+		height: 1px;
+		left: 0;
+		pointer-events: none;
+	}
+
+	&::before {
+		content: "";
+		transform-origin: 100% 50%;
+		transform: scale3d(0, 1, 1);
+		transition: transform 0.3s;
+	}
+
+	&:hover::before {
+		transform-origin: 0% 50%;
+		transform: scale3d(1, 1, 1);
 	}
 }
 

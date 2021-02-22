@@ -1,6 +1,7 @@
 .work {
 	display: inline-block;
 	position: relative;
+	margin-top: 16rem;
 
 	&::after {
 		@include dotted-grid();

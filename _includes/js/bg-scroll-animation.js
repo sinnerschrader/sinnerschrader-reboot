@@ -25,21 +25,11 @@ class BackgroundScrollAnimation {
 		document.addEventListener("scroll", throttle(this.scrollHandler.bind(this), 100));
 	}
 
-	scrollHandler(e) {
-		let lastKnownScrollPosition = window.scrollY;
-		let ticking;
-
-		if (!ticking) {
-			window.requestAnimationFrame(() => {
-				this.viewPortDetection(lastKnownScrollPosition);
-				ticking = false;
-			});
-
-			ticking = true;
-		}
+	scrollHandler() {
+		this.viewPortDetection();
 	}
 
-	viewPortDetection(scroll) {
+	viewPortDetection() {
 		let elementsInViewport = [];
 
 		this.animationStartElement.forEach((el) => {

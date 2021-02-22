@@ -151,6 +151,8 @@
 			justify-content: space-between;
 
 			address {
+				@include spacing-300(margin-bottom);
+
 				font-style: normal;
 			}
 
@@ -163,12 +165,7 @@
 
 			span {
 				@include label-200();
-
-				margin: 0 0 $spacing--300;
-
-				@include bp-xs {
-					margin: 0 0 $spacing--100;
-				}
+				@include spacing-200(margin-bottom);
 			}
 		}
 	}

@@ -104,21 +104,26 @@
 
 	&__header > * {
 		display: block;
-		&:nth-child(2) {
-			margin-left: 3rem;
-		}
-		&:nth-child(3) {
-			margin-left: 6rem;
-		}
+
 		@include bp-xs() {
 			display: inline-block;
+
 			&:nth-child(2),
 			&:nth-child(3) {
 				margin-left: initial;
 			}
+
 			&:nth-child(2) {
 				@include headline-201();
 			}
+		}
+
+		&:nth-child(2) {
+			margin-left: 3rem;
+		}
+
+		&:nth-child(3) {
+			margin-left: 6rem;
 		}
 	}
 }

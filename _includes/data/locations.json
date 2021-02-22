@@ -5,16 +5,16 @@
 		"imageLarge": "Berlin2.webp",
 		"studios": [
 			{
-				"name": "SinnerSchrader",
+				"name": "SinnerSchrader Deutschland GmbH",
 				"street": "Bergmannstraße 72",
-				"postal": "10961 Berlin",
+				"postal": "10961 Berlin, Germany",
 				"tel": "+49 30 34 65 59 45 - 0",
 				"email": "info@sinnerschrader.com"
 			},
 			{
 				"name": "SinnerSchrader Swipe",
 				"street": "Bergmannstraße 72",
-				"postal": "10961 Berlin",
+				"postal": "10961 Berlin, Germany",
 				"tel": "+49 30 34 65 59 45 - 0",
 				"email": "swipe@sinnerschrader.com"
 			}
@@ -26,9 +26,9 @@
 		"imageLarge": "Frankfurt2.webp",
 		"studios": [
 			{
-				"name": "SinnerSchrader",
+				"name": "SinnerSchrader Deutschland GmbH",
 				"street": "Mayfarthstraße 15",
-				"postal": "60314 Frankfurt am Main",
+				"postal": "60314 Frankfurt am Main, Germany",
 				"tel": "+49 69 42 72 64 50 - 0",
 				"email": "info@sinnerschrader.com"
 			}
@@ -40,7 +40,7 @@
 		"imageLarge": "Hamburg2.webp",
 		"studios": [
 			{
-				"name": "SinnerSchrader",
+				"name": "SinnerSchrader Deutschland GmbH",
 				"street": "Völckersstr. 38",
 				"postal": "22765 Hamburg",
 				"tel": "+49 40 39 88 55-0",
@@ -68,7 +68,7 @@
 		"imageLarge": "Munich2.webp",
 		"studios": [
 			{
-				"name": "SinnerSchrader",
+				"name": "SinnerSchrader Deutschland GmbH",
 				"street": "Schackstr. 3",
 				"postal": "80539 Munich",
 				"tel": "+49 89 20 60 26 - 800",
@@ -82,9 +82,9 @@
 		"imageLarge": "Prague2.webp",
 		"studios": [
 			{
-				"name": "SinnerSchrader",
+				"name": "SinnerSchrader Prague s.r.o",
 				"street": "Lihovarská 1060/12",
-				"postal": "Czech Republic Prague 9",
+				"postal": "Czech Republic Prague 9, Czech Republic",
 				"tel": "+420 776 16 32 58",
 				"email": "info@sinnerschrader.com"
 			}

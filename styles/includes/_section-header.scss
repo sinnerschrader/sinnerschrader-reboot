@@ -46,6 +46,7 @@
 	&__title,
 	&__number {
 		@include code-100();
+
 		font-weight: initial;
 		margin: 0;
 		z-index: 10;

@@ -3,6 +3,7 @@
 
 	&::after {
 		@include dotted-grid();
+		@include default-animation(filter);
 
 		bottom: 50%;
 		content: "";
@@ -10,6 +11,13 @@
 		top: 0;
 		right: 30%;
 		width: auto;
+		filter: invert(0);
+	}
+
+	.is-dark & {
+		&::after {
+			filter: invert(1);
+		}
 	}
 
 	&__headline {
@@ -19,15 +27,24 @@
 			position: relative;
 
 			&::after {
+				@include default-animation(filter);
+
 				position: absolute;
 				content: "";
 				bottom: 0;
 				left: -1rem;
 				right: -1rem;
 				height: 1rem;
+				filter: invert(0);
 				background: url("./assets/underline.svg");
 				background-repeat: no-repeat;
 				background-position: 100%;
+			}
+
+			.is-dark & {
+				&::after {
+					filter: invert(1);
+				}
 			}
 		}
 	}
@@ -37,7 +54,7 @@
 		background: $color-primary--black;
 
 		&::after {
-			@include background-fade-to();
+			@include default-animation(background-color);
 
 			position: absolute;
 			content: "";

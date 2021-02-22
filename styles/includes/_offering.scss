@@ -1,7 +1,7 @@
 .offering {
 	position: relative;
-  
-  &__heading-top {
+
+	&__heading-top {
 		margin-bottom: 2.4rem;
 	}
 
@@ -15,11 +15,12 @@
 		font-size: 9.6rem;
 		line-height: 120%;
 		white-space: nowrap;
-		transition: transform 200ms ease;
-    
-    .is-font-ogg {
-		  font-family: ogg-regular;
-	  }
+		transform: translateZ(0);
+		transition: transform 100ms linear;
+
+		.is-font-ogg {
+			font-family: $font-serif;
+		}
 	}
 
 	&--wrapper {
@@ -33,6 +34,15 @@
 
 		&::after {
 			@include dotted-grid--white();
+			@include default-animation(filter);
+
+			filter: invert(1);
+		}
+
+		.is-dark & {
+			&::after {
+				filter: invert(0);
+			}
 		}
 
 		@include bp-s {
@@ -55,11 +65,17 @@
 	}
 
 	&__circle {
+		@include default-animation(filter);
+
 		position: absolute;
 		right: 0;
 		bottom: -15rem;
-		filter: invert(1);
+		filter: invert(0);
 		animation: rotating 5s linear infinite;
+
+		.is-dark & {
+			filter: invert(1);
+		}
 	}
 }
 
@@ -69,5 +85,5 @@
 	}
 	to {
 		transform: rotate(360deg);
-  }
+	}
 }

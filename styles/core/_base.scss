@@ -6,12 +6,13 @@ html {
 }
 
 body {
+	@include default-animation(background-color);
+
 	font-size: $font-size--copy-1;
 	color: $color-primary--gray;
 	margin: 0;
 	overflow-x: hidden;
 	background-color: $color-primary--white;
-	transition: background-color 500ms linear;
 
 	/* stylelint-disable-next-line */
 	&.is-dark {

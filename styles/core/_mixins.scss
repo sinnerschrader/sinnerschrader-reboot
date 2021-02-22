@@ -360,6 +360,6 @@
 	font-family: $font-code;
 }
 
-@mixin background-fade-to {
-	transition: background-color 500ms linear;
+@mixin default-animation($property) {
+	transition: $property 500ms linear;
 }

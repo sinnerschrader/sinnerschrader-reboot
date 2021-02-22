@@ -1,4 +1,5 @@
 @import "../core/variables";
+@import "../core/mixins";
 
 .nav {
 	background: $color-primary--white;
@@ -16,13 +17,17 @@
 	&__list {
 		align-items: stretch;
 		display: flex;
-		justify-content: space-evenly;
+		justify-content: flex-end;
 		line-height: 9.5rem;
 		margin: auto 0;
 		padding-left: 0;
 
 		&__item {
 			list-style-type: none;
+
+			& + & {
+				@include spacing-300(margin-left);
+			}
 		}
 
 		&__link {

@@ -10,6 +10,10 @@ $grid-columns: 12 !default;
 	> * {
 		grid-column-end: span $grid-columns;
 	}
+
+	&.is-background--black {
+		background: $color-primary--black;
+	}
 }
 
 @for $i from 1 through $grid-columns {

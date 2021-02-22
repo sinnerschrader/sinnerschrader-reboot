@@ -1,7 +1,26 @@
 .offering {
-	background-color: $color-primary--black;
-	color: $color-primary--white;
 	position: relative;
+  
+  &__heading-top {
+		margin-bottom: 2.4rem;
+	}
+
+	&__heading-bottom {
+		margin-top: 0;
+	}
+
+	&__heading-top,
+	&__heading-bottom {
+		display: inline-block;
+		font-size: 9.6rem;
+		line-height: 120%;
+		white-space: nowrap;
+		transition: transform 200ms ease;
+    
+    .is-font-ogg {
+		  font-family: ogg-regular;
+	  }
+	}
 
 	&--wrapper {
 		overflow-x: scroll;
@@ -50,5 +69,5 @@
 	}
 	to {
 		transform: rotate(360deg);
-	}
+  }
 }

@@ -12,6 +12,7 @@ body {
 	background-color: $color-primary--white;
 	transition: background-color 500ms linear;
 
+	/* stylelint-disable-next-line */
 	&.is-dark {
 		background-color: $color-primary--black;
 		color: $color-primary--white !important;
@@ -50,18 +51,19 @@ a {
 	}
 }
 
+.section__number {
+	text-align: end;
+}
+
 .section__title,
 .section__number {
 	padding: 3rem 0;
 	z-index: 4;
 
+	/* stylelint-disable-next-line */
 	.is-dark & {
 		color: $color-primary--white;
 	}
-}
-
-.section__number {
-	text-align: end;
 }
 
 // Font Ogg regular - large

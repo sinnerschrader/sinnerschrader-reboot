@@ -38,6 +38,7 @@
 
 		&::after {
 			@include background-fade-to();
+
 			position: absolute;
 			content: "";
 			bottom: 0;

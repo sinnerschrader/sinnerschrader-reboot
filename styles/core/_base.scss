@@ -12,7 +12,8 @@ body {
 	background-color: $color-primary--white;
 	transition: background-color 500ms linear;
 
-	.is-dark {
+	/* stylelint-disable-next-line */
+	&.is-dark {
 		background-color: $color-primary--black;
 		color: $color-primary--white !important;
 	}

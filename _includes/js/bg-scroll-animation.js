@@ -22,7 +22,7 @@ class BackgroundScrollAnimation {
 	}
 
 	scrollListener() {
-		document.addEventListener("scroll", throttle(this.scrollHandler.bind(this), 100));
+		document.addEventListener("scroll", throttle(this.scrollHandler.bind(this), 200));
 	}
 
 	scrollHandler() {
@@ -30,16 +30,15 @@ class BackgroundScrollAnimation {
 	}
 
 	viewPortDetection() {
-		let elementsInViewport = [];
+		const elementsInViewport = this.animationStartElement.some((el) => this.isInViewport(el));
 
-		this.animationStartElement.forEach((el) => {
-			elementsInViewport.push(this.isInViewport(el));
-		});
+		console.log("elementsInViewport", elementsInViewport);
 
-		elementsInViewport.some((e) => e === true) ? this.toggleBackground("dark") : this.toggleBackground("light");
+		elementsInViewport ? this.toggleBackground("dark") : this.toggleBackground("light");
 	}
 
 	toggleBackground(mode) {
+		console.log("toggling", mode);
 		if (mode === "dark") {
 			document.body.classList.add("is-dark");
 		} else {

@@ -347,3 +347,7 @@
 
 	font-family: $font-code;
 }
+
+@mixin background-fade-to {
+	transition: background-color 500ms linear;
+}

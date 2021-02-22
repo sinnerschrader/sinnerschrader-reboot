@@ -1,0 +1,54 @@
+.offering {
+	background-color: $color-primary--black;
+	color: $color-primary--white;
+	position: relative;
+
+	&--wrapper {
+		overflow-x: scroll;
+		padding: 6.4rem 0;
+	}
+
+	&--info {
+		padding: 12rem 0;
+		position: relative;
+
+		&::after {
+			@include dotted-grid--white();
+		}
+
+		@include bp-s {
+			width: 150%;
+		}
+
+		@include bp-xs {
+			width: 270%;
+		}
+	}
+
+	&__title {
+		margin-bottom: 2.4rem;
+		@include label-200;
+	}
+
+	&__item {
+		padding-bottom: 0.8rem;
+		@include paragraph-200;
+	}
+
+	&__circle {
+		position: absolute;
+		right: 0;
+		bottom: -15rem;
+		filter: invert(1);
+		animation: rotating 5s linear infinite;
+	}
+}
+
+@keyframes rotating {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}

@@ -26,6 +26,7 @@
 	}
 
 	&__link {
+		@include interactive-100();
 		align-items: center;
 		border: 1rem solid $color-secondary--yellow;
 		border-radius: 50%;

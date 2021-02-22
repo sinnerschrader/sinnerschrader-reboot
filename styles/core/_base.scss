@@ -7,6 +7,7 @@ html {
 
 body {
 	font-size: $font-size--copy-1;
+	color: $color-primary--gray;
 	margin: 0;
 	overflow-x: hidden;
 }
@@ -26,9 +27,14 @@ p {
 }
 
 a {
-	@include interactive-100();
-
 	text-decoration: none;
+}
+
+ul {
+	@include paragraph-100();
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
 }
 
 .section-header p {

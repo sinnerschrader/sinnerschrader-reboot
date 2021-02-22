@@ -55,9 +55,21 @@
 	background-image: radial-gradient($color-primary--black 5%, transparent 0);
 	background-position-x: center;
 	background-size: 2rem 2rem;
-	content: "";
 	position: absolute;
 	width: 100%;
+	content: "";
+	z-index: 3;
+}
+
+@mixin dotted-grid--white {
+	background-image: radial-gradient($color-primary--white 5%, transparent 0);
+	background-position-x: center;
+	background-size: 2rem 2rem;
+	position: absolute;
+	width: 113%;
+	height: 100%;
+	left: -13%;
+	content: "";
 	z-index: 3;
 }
 
@@ -271,10 +283,10 @@
 
 // Paragraph and label shared styling
 @mixin text-shared {
-	color: $color-primary--gray;
 	font-family: $font-sans-serif;
 	line-height: 140%;
 }
+
 // Labels
 @mixin label-100 {
 	@include text-shared();

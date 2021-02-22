@@ -1,3 +1,5 @@
+import { throttle } from "lodash-es";
+
 class OfferingHeader {
 	textContainer = document.querySelector(".offering__heading-wrapper");
 	textPathTop = document.querySelector(".offering__heading-top");
@@ -12,7 +14,7 @@ class OfferingHeader {
 	}
 
 	bindEvents() {
-		document.addEventListener("scroll", this.scrollHandler.bind(this));
+		document.addEventListener("scroll", throttle(this.scrollHandler.bind(this), 200));
 	}
 
 	updateTextPathOffset(offsetTop, offsetBottom) {

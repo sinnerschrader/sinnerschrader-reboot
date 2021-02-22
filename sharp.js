@@ -10,17 +10,17 @@ const sharp = require("sharp");
 
 const resizes = [
 	{
-		src: "./_includes/assets/images/*.{png,jpg,jpeg}",
+		src: "./_includes/assets/images/*.{png,jpg,jpeg,webp}",
 		dist: "./_site/assets/images/desktop",
 		percent: 100,
 	},
 	{
-		src: "./_includes/assets/images/*.{png,jpg,jpeg}",
+		src: "./_includes/assets/images/*.{png,jpg,jpeg,webp}",
 		dist: "./_site/assets/images/tablet",
 		percent: 60,
 	},
 	{
-		src: "./_includes/assets/images/*.{png,jpg,jpeg}",
+		src: "./_includes/assets/images/*.{png,jpg,jpeg,webp}",
 		dist: "./_site/assets/images/mobile",
 		percent: 40,
 	},
@@ -30,7 +30,7 @@ const resizes = [
 
 const formats = [
 	{
-		src: "./_includes/assets/images/*.{png,jpg,jpeg}",
+		src: "./_includes/assets/images/*.{png,jpg,jpeg,webp}",
 		dist: "./_site/assets/images/fallback",
 		format: "jpg",
 	},

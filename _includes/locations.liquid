@@ -33,13 +33,25 @@
       <div class="locations__content {{ isHidden }} locations__image-wrapper-small
                 locations__content-{{ location.name }} col-start-7-xs col-end-13-xs
                 col-start-3 col-end-8">
-        <img class="locations__image" src="{{ location.imageSmall }}"/>
+
+        <picture>
+					<source media="(max-width: 599px)" srcset="./assets/images/mobile/{{ location.imageSmall }}" type="image/webp" />
+					<source media="(min-width: 600px)" srcset="./assets/images/tablet/{{ location.imageSmall }}" type="image/webp" />
+					<source media="(min-width: 1200px)" srcset="./assets/images/desktop/{{ location.imageSmall }}" type="image/webp" />
+					<img class="locations__image" src="./assets/images/fallback/{{ location.imageSmall }}" alt="Small Image of the {{ location.name }} SinnerSchrader Office" />
+				</picture>
       </div>
 
       <div class="locations__content {{ isHidden }} locations__image-wrapper-large
                 locations__content-{{ location.name }} col-start-1-xs col-end-7-xs
                 col-start-8 col-end-13">
-        <img class="locations__image" src="{{ location.imageLarge }}"/>
+
+        <picture>
+					<source media="(max-width: 599px)" srcset="./assets/images/mobile/{{ location.imageLarge }}" type="image/webp" />
+					<source media="(min-width: 600px)" srcset="./assets/images/tablet/{{ location.imageLarge }}" type="image/webp" />
+					<source media="(min-width: 1200px)" srcset="./assets/images/desktop/{{ location.imageLarge }}" type="image/webp" />
+					<img class="locations__image" src="./assets/images/fallback/{{ location.imageLarge }}" alt="Big Image of the {{ location.name }} SinnerSchrader Office" />
+				</picture>
       </div>
 
       <div class="locations__content {{ isHidden }} locations__studio-info

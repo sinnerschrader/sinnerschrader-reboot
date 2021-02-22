@@ -32,10 +32,6 @@
 		width: 100%;
 		z-index: 4;
 
-		.is-dark & {
-			background-color: $color-primary--black;
-		}
-
 		@include bp-xs() {
 			bottom: -10rem;
 			height: 15rem;
@@ -49,6 +45,10 @@
 		@include bp-m() {
 			bottom: -10rem;
 			height: 18rem;
+		}
+
+		.is-dark & {
+			background-color: $color-primary--black;
 		}
 	}
 }

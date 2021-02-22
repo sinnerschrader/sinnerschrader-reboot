@@ -39,6 +39,7 @@
 			}
 
 			.is-dark & {
+				/* stylelint-disable-next-line */
 				&::after {
 					filter: invert(1);
 				}

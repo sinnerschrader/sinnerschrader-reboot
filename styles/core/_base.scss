@@ -10,7 +10,7 @@ body {
 	margin: 0;
 	overflow-x: hidden;
 	background-color: $color-primary--white;
-	transition: background-color 800ms ease-in-out;
+	transition: background-color 500ms linear;
 
 	&.is-dark {
 		background-color: $color-primary--black;
@@ -30,6 +30,10 @@ h2 {
 
 p {
 	@include paragraph-100();
+
+	.is-dark & {
+		color: $color-primary--white;
+	}
 }
 
 a {
@@ -40,12 +44,20 @@ a {
 
 .section-header p {
 	@include code-100();
+
+	.is-dark & {
+		color: $color-primary--white;
+	}
 }
 
 .section__title,
 .section__number {
 	padding: 3rem 0;
 	z-index: 4;
+
+	.is-dark & {
+		color: $color-primary--white;
+	}
 }
 
 .section__number {

@@ -1,14 +1,16 @@
 import throttle from "lodash.throttle";
 
 class BackgroundScrollAnimation {
-	animationStartElement = {};
+	animationStartElement = [];
+	animationOffsetTop = 300;
+	animationOffsetBottom = 500;
 
 	constructor() {
 		this.init();
 	}
 
 	init() {
-		this.animationStartElement = document.querySelectorAll('[data-js-item="bg-animation-to-black-start"]');
+		this.animationStartElement = [document.querySelector(".offering"), document.querySelector(".work")];
 
 		this.bindEvents();
 	}
@@ -20,7 +22,7 @@ class BackgroundScrollAnimation {
 	}
 
 	scrollListener() {
-		document.addEventListener("scroll", throttle(this.scrollHandler.bind(this), 200));
+		document.addEventListener("scroll", throttle(this.scrollHandler.bind(this), 100));
 	}
 
 	scrollHandler(e) {
@@ -38,10 +40,13 @@ class BackgroundScrollAnimation {
 	}
 
 	viewPortDetection(scroll) {
-		console.log("Someone is scrolling", scroll);
+		let elementsInViewport = [];
+
 		this.animationStartElement.forEach((el) => {
-			this.isInViewport(el) ? this.toggleBackground("dark") : this.toggleBackground("light");
+			elementsInViewport.push(this.isInViewport(el));
 		});
+
+		elementsInViewport.some((e) => e === true) ? this.toggleBackground("dark") : this.toggleBackground("light");
 	}
 
 	toggleBackground(mode) {
@@ -56,7 +61,7 @@ class BackgroundScrollAnimation {
 		const { top, bottom } = el.getBoundingClientRect();
 		const vHeight = window.innerHeight || document.documentElement.clientHeight;
 
-		return (top > 0 || bottom > 0) && top < vHeight;
+		return (top > 0 || bottom > 0) && top + this.animationOffsetTop < vHeight && bottom > this.animationOffsetBottom;
 	}
 }
 

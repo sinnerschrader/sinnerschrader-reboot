@@ -37,6 +37,7 @@
 		background: $color-primary--black;
 
 		&::after {
+			@include background-fade-to();
 			position: absolute;
 			content: "";
 			bottom: 0;
@@ -44,6 +45,12 @@
 			left: 50%;
 			height: 2.4rem;
 			background-color: $color-primary--white;
+		}
+
+		.is-dark & {
+			&::after {
+				background-color: $color-primary--black;
+			}
 		}
 	}
 
@@ -85,6 +92,7 @@
 			@include responsive-spacing(margin-left, 2.4rem, 6.4rem, 9.6rem);
 
 			position: relative;
+			overflow-x: hidden;
 		}
 
 		&-preview-loop {

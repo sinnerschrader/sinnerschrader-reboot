@@ -6,7 +6,6 @@ html {
 }
 
 body {
-	font-size: $font-size--copy-1;
 	margin: 0;
 	overflow-x: hidden;
 	background-color: $color-primary--white;
@@ -23,10 +22,13 @@ h1 {
 	@include headline-100();
 
 	color: $color-primary--white;
+	font-weight: 200;
 }
 
-h2 {
+h3 {
 	@include headline-200();
+
+	font-weight: 200;
 }
 
 p {
@@ -39,30 +41,6 @@ p {
 
 a {
 	@include interactive-100();
-
-	text-decoration: none;
-}
-
-.section-header p {
-	@include code-100();
-
-	.is-dark & {
-		color: $color-primary--white;
-	}
-}
-
-.section__number {
-	text-align: end;
-}
-
-.section__title,
-.section__number {
-	padding: 3rem 0;
-	z-index: 4;
-
-	.is-dark & {
-		color: $color-primary--white;
-	}
 }
 
 // Font Ogg regular - large

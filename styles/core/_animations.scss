@@ -1,0 +1,75 @@
+.slide-in {
+	display: inline-block;
+	opacity: 0;
+}
+
+.switch {
+	display: inline-block;
+	height: 4.2rem;
+	position: relative;
+	text-align: left;
+
+	.switch-item {
+		animation: switch-text 6s linear infinite 0s;
+		display: inline-block;
+		opacity: 0;
+		overflow: hidden;
+		position: absolute;
+
+		&:nth-child(2) {
+			animation-delay: 3s;
+		}
+	}
+}
+
+@keyframes slidein {
+	from {
+		opacity: 0;
+		transform: translateY(100%);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0%);
+	}
+}
+
+@keyframes switch-text {
+	0% {
+		opacity: 0;
+	}
+
+	8% {
+		opacity: 0;
+		transform: translateY(100%);
+	}
+
+	10% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	25% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	40% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	57% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	60% {
+		opacity: 0;
+		transform: translateY(-100%);
+	}
+
+	100% {
+		opacity: 0;
+	}
+}

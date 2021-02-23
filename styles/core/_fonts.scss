@@ -2,11 +2,31 @@
 
 @font-face {
 	font-display: swap;
-	font-family: "suisse-intl";
+	font-family: "suisse-intl-regular";
 	font-style: normal;
 	font-weight: 400;
-	src: local("suisse-intl"), url("./assets/fonts/SuisseIntl-Regular-WebM.woff2") format("woff2"),
+	src: local("suisse-intl-regular"), url("./assets/fonts/SuisseIntl-Regular-WebM.woff2") format("woff2"),
 		url("./assets/fonts/SuisseIntl-Regular-WebM.woff") format("woff");
+	unicode-range: U+000-5FF;
+}
+
+@font-face {
+	font-display: swap;
+	font-family: "suisse-intl-light";
+	font-style: normal;
+	font-weight: 400;
+	src: local("suisse-intl-light"), url("./assets/fonts/SuisseIntl-Light-WebM.woff2") format("woff2"),
+		url("./assets/fonts/SuisseIntl-Light-WebM.woff") format("woff");
+	unicode-range: U+000-5FF;
+}
+
+@font-face {
+	font-display: swap;
+	font-family: "suisse-intl-semibold";
+	font-style: normal;
+	font-weight: 400;
+	src: local("suisse-intl-semibold"), url("./assets/fonts/SuisseIntl-SemiBold-WebM.woff2") format("woff2"),
+		url("./assets/fonts/SuisseIntl-SemiBold-WebM.woff") format("woff");
 	unicode-range: U+000-5FF;
 }
 

@@ -6,15 +6,15 @@
 	@include spacing-300(margin-bottom);
 
 	display: flex;
-	font-family: $font-sans-serif;
-	font-size: $font-size--title-3;
 	justify-content: space-between;
 	margin-bottom: $spacing--300;
 	margin-top: $spacing--200;
-	text-transform: $uppercase;
 
 	&__title,
 	&__number {
+		@include code-100();
+
+		font-weight: initial;
 		margin: 0;
 		z-index: 10;
 	}

@@ -48,8 +48,8 @@ p {
 }
 
 a {
-  	@include interactive-100();
-  
+	@include interactive-100();
+
 	text-decoration: none;
 }
 
@@ -81,7 +81,6 @@ ul {
 	.is-dark & {
 		color: $color-primary--white;
 	}
-
 }
 
 // Font Ogg regular - large

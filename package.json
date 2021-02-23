@@ -18,6 +18,7 @@
     "stylelint": "stylelint styles/**/*.scss"
   },
   "dependencies": {
+    "lodash-es": "^4.17.21",
     "swiper": "^6.4.14"
   },
   "devDependencies": {

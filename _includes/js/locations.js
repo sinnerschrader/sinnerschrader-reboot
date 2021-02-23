@@ -24,7 +24,7 @@ export class Locations {
 		this.data = jsonData;
 
 		this.loadLocationContainers();
-		this.loadLocationLinks();
+		this.loadLocationButtons();
 		this.loadLocationIndicator();
 		this.renderSelectedLocation(this.data[0].name);
 	};
@@ -36,7 +36,7 @@ export class Locations {
 		this.locationIndicator = document.getElementById("locations__navigation-indicator");
 	};
 
-	loadLocationLinks = () => {
+	loadLocationButtons = () => {
 		this.locationButtons = this.data.map((location) => {
 			const link = document.getElementById(this.linkId(location.name));
 
@@ -90,19 +90,14 @@ export class Locations {
 		const sources = picture.querySelectorAll("source");
 		const img = picture.querySelector("img");
 
-		if (isShown) {
+		if (isShown && !img.getAttribute("src")) {
 			const isBigImage = container.classList.contains("locations__image-wrapper-large");
 			const imageName = isBigImage ? imageLarge : imageSmall;
 
-			img.src = `./assets/images/fallback/${imageName}`;
+			img.setAttribute("src", `./assets/images/fallback/${imageName}`);
 			sources.forEach((source) => {
 				const viewport = this.viewPortByMediaQuery(source.media);
-				source.srcset = `./assets/images/${viewport}/${imageName}`;
-			});
-		} else {
-			img.src = "";
-			sources.forEach((source) => {
-				source.src = "";
+				source.setAttribute("srcset", `./assets/images/${viewport}/${imageName}`);
 			});
 		}
 	};

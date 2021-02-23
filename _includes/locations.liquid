@@ -34,11 +34,23 @@
                 locations__content-{{ location.name }} col-start-7-xs col-end-13-xs
                 col-start-3 col-end-8">
 
+        {% if forloop.first %}
+          {% assign desktopImgSmall = "assets/images/desktop/" | append: location.imageSmall %}
+          {% assign tabletImgSmall = "assets/images/tablet/" | append: location.imageSmall %}
+          {% assign desktopImgSmall = "assets/images/mobile/" | append: location.imageSmall %}
+          {% assign fallbackImgSmall = "assets/images/fallback/" | append: location.imageSmall %}
+        {% else %}
+          {% assign desktopImgSmall = "" %}
+          {% assign tabletImgSmall = "" %}
+          {% assign desktopImgSmall = "" %}
+          {% assign fallbackImgSmall = "" %}
+        {% endif %}
+
         <picture>
-					<source media="(max-width: 599px)" srcset="" type="image/webp" />
-					<source media="(min-width: 600px) and (max-width: 1199px)" srcset="" type="image/webp" />
-					<source media="(min-width: 1200px)" srcset="" type="image/webp" />
-					<img class="locations__image" src="" alt="Small Image of the {{ location.name }} SinnerSchrader Office" />
+					<source media="(max-width: 599px)" srcset="{{ mobileImgSmall }}" type="image/webp" />
+					<source media="(min-width: 600px) and (max-width: 1199px)" srcset="{{ tabletImgSmall }}" type="image/webp" />
+					<source media="(min-width: 1200px)" srcset="{{ desktopImgSmall }}" type="image/webp" />
+					<img class="locations__image" src="{{ fallbackImgSmall }}" alt="Small Image of the {{ location.name }} SinnerSchrader Office" />
 				</picture>
       </div>
 
@@ -46,11 +58,23 @@
                 locations__content-{{ location.name }} col-start-1-xs col-end-7-xs
                 col-start-8 col-end-13">
 
+        {% if forloop.first %}
+          {% assign desktopImgLarge = "assets/images/desktop/" | append: location.imageLarge %}
+          {% assign tabletImgLarge = "assets/images/tablet/" | append: location.imageLarge %}
+          {% assign desktopImgLarge = "assets/images/mobile/" | append: location.imageLarge %}
+          {% assign fallbackImgLarge = "assets/images/fallback/" | append: location.imageLarge %}
+        {% else %}
+          {% assign desktopImgLarge = "" %}
+          {% assign tabletImgLarge = "" %}
+          {% assign desktopImgLarge = "" %}
+          {% assign fallbackImgLarge = "" %}
+        {% endif %}
+
         <picture>
-					<source media="(max-width: 599px)" srcset="" type="image/webp" />
-					<source media="(min-width: 600px) and (max-width: 1199px)" srcset="" type="image/webp" />
-					<source media="(min-width: 1200px)" srcset="" type="image/webp" />
-					<img class="locations__image" src="" alt="Big Image of the {{ location.name }} SinnerSchrader Office" />
+				<source media="(max-width: 599px)" srcset="{{ mobileImgLarge }}" type="image/webp" />
+					<source media="(min-width: 600px) and (max-width: 1199px)" srcset="{{ tabletImgLarge }}" type="image/webp" />
+					<source media="(min-width: 1200px)" srcset="{{ desktopImgLarge }}" type="image/webp" />
+					<img class="locations__image" src="{{ fallbackImgLarge }}" alt="Large Image of the {{ location.name }} SinnerSchrader Office" />
 				</picture>
       </div>
 

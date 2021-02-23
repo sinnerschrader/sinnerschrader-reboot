@@ -1,6 +1,6 @@
 name: Run a build
 
-on: [pull_request]
+on: pull_request
 
 jobs:
   build:

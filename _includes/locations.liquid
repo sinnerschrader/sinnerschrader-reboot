@@ -3,8 +3,13 @@
 
 	<div class="grid locations__grid">
 		<ol class="col-start-1 col-end-7-xs col-end-3 locations__navigation">
-			{% for location in locations %} {% if forloop.first %} {% assign isSelected = "locations__navigation-button--selected" %} {% else %}
-			{% assign isSelected = "" %} {% endif %}
+
+			{% for location in locations %} 
+				{% if forloop.first %} 
+					{% assign isSelected = "locations__navigation-button--selected" %} 
+				{% else %}
+					{% assign isSelected = "" %} 
+				{% endif %}
 
 			<li class="locations__navigation-item">
 				<button class="{{ isSelected }} locations__navigation-button" id="locations__navigation-button-{{ location.name }}">
@@ -13,11 +18,16 @@
 			</li>
 
 			{% endfor %}
+
 			<div class="locations__navigation-indicator" id="locations__navigation-indicator"></div>
 		</ol>
 
-		{% for location in locations %} {% if forloop.first %} {% assign isHidden = "" %} {% else %} {% assign isHidden =
-		"locations__content--hidden" %} {% endif %}
+		{% for location in locations %} 
+			{% if forloop.first %} 
+				{% assign isHidden = "" %} 
+			{% else %} 
+				{% assign isHidden = "locations__content--hidden" %} 
+			{% endif %}
 
 		<div
 			class="locations__content {{ isHidden }} locations__image-wrapper-small
@@ -80,11 +90,13 @@
 				<div class="locations__studio-info-container">
 					<span>{{ studio.name }}</span>
 					<address>
-						<br />
 						{{ studio.street }}
-						<br />{{ studio.postal }} <br /><a href="tel:{{ studio.tel }}">{{ studio.tel }}</a> <br /><a href="mailto:{{ studio.email }}">{{
-							studio.email
-						}}</a>
+						<br />
+						{{ studio.postal }} 
+						<br />
+						<a href="tel:{{ studio.tel }}">{{ studio.tel }}</a> 
+						<br />
+						<a href="mailto:{{ studio.email }}">{{studio.email}}</a>
 					</address>
 				</div>
 				{% endfor %}

@@ -9,20 +9,7 @@
 	justify-content: space-between;
 	margin-bottom: $spacing--300;
 	margin-top: $spacing--200;
-
-	&__title,
-	&__number {
-		@include code-100();
-
-		font-weight: initial;
-		margin: 0;
-		z-index: 10;
-	}
-
-	&__number {
-		position: relative;
-	}
-
+	
 	&__circle {
 		position: absolute;
 		left: 50%;
@@ -41,6 +28,19 @@
 				max-width: 158px;
 			}
 		}
+	}
+
+	&__title,
+	&__number {
+		@include code-100();
+
+		font-weight: initial;
+		margin: 0;
+		z-index: 10;
+	}
+
+	&__number {
+		position: relative;
 	}
 
 	&__small {

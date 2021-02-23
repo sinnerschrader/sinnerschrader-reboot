@@ -37,21 +37,7 @@
 	}
 }
 
-.nav__list__item {
-	&::after,
-	&::before {
-		top: 65%;
-	}
-}
-
-.locations__navigation-button {
-	&::after,
-	&::before {
-		top: 90%;
-	}
-}
-
-.nav__list__item,
+.nav__list__link,
 .locations__navigation-button {
 	position: relative;
 
@@ -60,13 +46,14 @@
 		position: absolute;
 		background: $color-primary--gray;
 		width: 100%;
-		height: 1px;
+		height: 0.1rem;
 		left: 0;
 		pointer-events: none;
 	}
 
 	&::before {
 		content: "";
+		top: 90%;
 		transform-origin: 100% 50%;
 		transform: scale3d(0, 1, 1);
 		transition: transform 0.3s;

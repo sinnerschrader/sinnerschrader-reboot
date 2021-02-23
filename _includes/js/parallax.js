@@ -6,9 +6,9 @@ class Parallax {
 	}
 
 	init() {
-		const fastElements = document.querySelectorAll('[class="parallax-fast"]');
-		const mediumElements = document.querySelectorAll('[class="parallax-medium"]');
-		const slowElements = document.querySelectorAll('[class="parallax-slow"]');
+		const fastElements = document.querySelectorAll(".parallax-fast");
+		const mediumElements = document.querySelectorAll(".parallax-medium");
+		const slowElements = document.querySelectorAll(".parallax-slow");
 
 		new simpleParallax(fastElements, {
 			scale: 1.3,

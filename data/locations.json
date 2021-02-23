@@ -1,8 +1,8 @@
 [
 	{
 		"name": "Berlin",
-		"imageSmall": "https://placeimg.com/506/506/tech",
-		"imageLarge": "https://placeimg.com/506/759/tech",
+		"imageSmall": "Berlin1.webp",
+		"imageLarge": "Berlin2.webp",
 		"studios": [
 			{
 				"name": "SinnerSchrader",
@@ -22,8 +22,8 @@
 	},
 	{
 		"name": "Frankfurt",
-		"imageSmall": "https://placeimg.com/506/506/people",
-		"imageLarge": "https://placeimg.com/506/759/people",
+		"imageSmall": "Frankfurt1.webp",
+		"imageLarge": "Frankfurt2.webp",
 		"studios": [
 			{
 				"name": "SinnerSchrader",
@@ -36,8 +36,8 @@
 	},
 	{
 		"name": "Hamburg",
-		"imageSmall": "https://placeimg.com/506/506/arch",
-		"imageLarge": "https://placeimg.com/506/759/arch",
+		"imageSmall": "Hamburg1.webp",
+		"imageLarge": "Hamburg2.webp",
 		"studios": [
 			{
 				"name": "SinnerSchrader",
@@ -64,8 +64,8 @@
 	},
 	{
 		"name": "Munich",
-		"imageSmall": "https://placeimg.com/506/506/animals",
-		"imageLarge": "https://placeimg.com/506/759/animals",
+		"imageSmall": "Munich1.webp",
+		"imageLarge": "Munich2.webp",
 		"studios": [
 			{
 				"name": "SinnerSchrader",
@@ -78,8 +78,8 @@
 	},
 	{
 		"name": "Prague",
-		"imageSmall": "https://placeimg.com/506/506/nature",
-		"imageLarge": "https://placeimg.com/506/759/nature",
+		"imageSmall": "Prague1.webp",
+		"imageLarge": "Prague2.webp",
 		"studios": [
 			{
 				"name": "SinnerSchrader",
@@ -92,8 +92,8 @@
 	},
 	{
 		"name": "Zurich",
-		"imageSmall": "https://placeimg.com/506/506/nature/sepia",
-		"imageLarge": "https://placeimg.com/506/759/nature/sepia",
+		"imageSmall": "Zurich1.webp",
+		"imageLarge": "Zurich2.webp",
 		"studios": [
 			{
 				"name": "SinnerSchrader Studio Swipe",

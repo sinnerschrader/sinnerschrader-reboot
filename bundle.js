@@ -4462,7 +4462,7 @@
     init = (jsonData) => {
       this.data = jsonData;
       this.loadLocationContainers();
-      this.loadLocationLinks();
+      this.loadLocationButtons();
       this.loadLocationIndicator();
       this.renderSelectedLocation(this.data[0].name);
     };
@@ -4471,7 +4471,7 @@
     loadLocationIndicator = () => {
       this.locationIndicator = document.getElementById("locations__navigation-indicator");
     };
-    loadLocationLinks = () => {
+    loadLocationButtons = () => {
       this.locationButtons = this.data.map((location) => {
         const link = document.getElementById(this.linkId(location.name));
         if (link) {
@@ -4483,11 +4483,22 @@
     loadLocationContainers = () => {
       this.locationContainers = this.data.map((location) => document.getElementsByClassName(this.contentClassName(location.name))).reduce((acc, current) => [...acc, ...current], []);
     };
-    renderSelectedLocation = (newName) => {
+    viewPortByMediaQuery = (query) => {
+      switch (query) {
+        case "(max-width: 599px)":
+          return "mobile";
+        case "(min-width: 600px) and (max-width: 1199px)":
+          return "tablet";
+        case "(min-width: 1200px)":
+        default:
+          return "desktop";
+      }
+    };
+    renderLocationButtons = (newButtonId) => {
       this.locationButtons.forEach((button) => {
         if (!button)
           return;
-        const isSelected = button.id === this.linkId(newName);
+        const isSelected = button.id === newButtonId;
         if (isSelected) {
           this.locationIndicator.style.top = button.offsetTop + button.clientHeight / 2 + "px";
           button.classList.add(this.BUTTON_SELECTED_CLASS);
@@ -4495,11 +4506,32 @@
           button.classList.remove(this.BUTTON_SELECTED_CLASS);
         }
       });
+    };
+    setPictureSrc = (container, isShown, {imageLarge, imageSmall}) => {
+      const picture = container.querySelector("picture");
+      if (!picture) {
+        return;
+      }
+      const sources = picture.querySelectorAll("source");
+      const img = picture.querySelector("img");
+      if (isShown && !img.getAttribute("src")) {
+        const isBigImage = container.classList.contains("locations__image-wrapper-large");
+        const imageName = isBigImage ? imageLarge : imageSmall;
+        img.setAttribute("src", `./assets/images/fallback/${imageName}`);
+        sources.forEach((source) => {
+          const viewport = this.viewPortByMediaQuery(source.media);
+          source.setAttribute("srcset", `./assets/images/${viewport}/${imageName}`);
+        });
+      }
+    };
+    renderLocationContainers = (newLocationData) => {
       this.timeouts = this.timeouts.map(clearTimeout);
       this.locationContainers.forEach((container) => {
         if (!container)
           return;
-        const isShown = container.classList.contains(this.contentClassName(newName));
+        const shownClassName = this.contentClassName(newLocationData.name);
+        const isShown = container.classList.contains(shownClassName);
+        this.setPictureSrc(container, isShown, newLocationData);
         let animationCallback;
         if (isShown) {
           container.style.display = "block";
@@ -4512,9 +4544,14 @@
             container.style.display = "none";
           };
         }
-        const timeout = setTimeout(animationCallback, 200);
-        this.timeouts.push(timeout);
+        this.timeouts.push(setTimeout(animationCallback, 200));
       });
+    };
+    renderSelectedLocation = (newName) => {
+      const newButtonId = this.linkId(newName);
+      this.renderLocationButtons(newButtonId);
+      const newLocationData = this.data.find((location) => location.name === newName);
+      this.renderLocationContainers(newLocationData);
     };
   };
 

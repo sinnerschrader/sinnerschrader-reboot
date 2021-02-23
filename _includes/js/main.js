@@ -3,6 +3,7 @@ import { Locations } from "./locations";
 import { BackgroundScrollAnimation } from "./bg-scroll-animation";
 import { Video } from "./video.js";
 import { OfferingHeader } from "./offering-header";
+import { Offerings } from "./offerings";
 
 (() => {
 	new Locations();
@@ -10,4 +11,5 @@ import { OfferingHeader } from "./offering-header";
 	new BackgroundScrollAnimation();
 	new Video();
 	new OfferingHeader();
+	new Offerings();
 })();

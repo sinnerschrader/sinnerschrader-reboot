@@ -1,6 +1,10 @@
 .offering {
 	position: relative;
 
+	&__heading-wrapper {
+		overflow-x: hidden;
+	}
+
 	&__heading-top {
 		margin-bottom: 2.4rem;
 	}
@@ -44,16 +48,9 @@
 	}
 
 	&--info {
+		position: relative;
+		z-index: 4;
 		padding: 12rem 0;
-		overflow-x: scroll;
-
-		@include bp-s {
-			width: 150%;
-		}
-
-		@include bp-xs {
-			width: 270%;
-		}
 	}
 
 	&__title {

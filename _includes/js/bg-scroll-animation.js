@@ -11,6 +11,7 @@ class BackgroundScrollAnimation {
 
 	init() {
 		this.animationStartElement = [document.querySelector(".offering"), document.querySelector(".work")];
+		this.circleElement = document.querySelector(".section-header__circle > img");
 
 		this.bindEvents();
 	}
@@ -23,6 +24,7 @@ class BackgroundScrollAnimation {
 
 	scrollListener() {
 		document.addEventListener("scroll", throttle(this.viewPortDetection.bind(this), 200));
+		document.addEventListener("scroll", this.rotateCircle.bind(this));
 	}
 
 	viewPortDetection() {
@@ -37,6 +39,10 @@ class BackgroundScrollAnimation {
 		} else {
 			document.body.classList.remove("is-dark");
 		}
+	}
+
+	rotateCircle() {
+		this.circleElement.style.transform = `rotate(${window.pageYOffset / 4}deg)`;
 	}
 
 	isInViewport(el) {

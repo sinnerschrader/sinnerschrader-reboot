@@ -1,10 +1,9 @@
 .job-teaser {
-	margin: 16rem 0;
-
 	&__wrapper {
 		@include dotted-grid();
+		@include spacing-800(padding-top);
+		@include spacing-700(padding-bottom);
 
-		padding: 12rem 0;
 		position: relative;
 		text-align: center;
 		width: auto;

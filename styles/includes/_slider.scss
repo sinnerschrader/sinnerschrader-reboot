@@ -1,4 +1,6 @@
 .slider {
+	@include spacing-800(margin-bottom);
+
 	position: relative;
 
 	&__heading {

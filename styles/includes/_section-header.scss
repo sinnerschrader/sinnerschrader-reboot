@@ -10,6 +10,30 @@
 	margin-bottom: $spacing--300;
 	margin-top: $spacing--200;
 
+	&__circle {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		filter: invert(0);
+		transform: translate(-50%, -50%);
+
+		.is-dark & {
+			filter: invert(1);
+		}
+
+		img {
+			transition: transform 50ms ease-in-out;
+
+			@include bp-xs() {
+				max-width: 158px;
+			}
+		}
+	}
+
+	&__number {
+		position: relative;
+	}
+
 	&__title,
 	&__number {
 		@include code-100();

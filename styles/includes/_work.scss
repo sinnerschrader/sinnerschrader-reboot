@@ -1,26 +1,22 @@
 .work {
+	display: inline-block;
 	position: relative;
 
-	&__wrapper {
-		padding: 6.4rem 0;
-		position: relative;
+	&::after {
+		@include dotted-grid();
 
+		bottom: 50%;
+		content: "";
+		left: 0;
+		top: 0;
+		right: 30%;
+		width: auto;
+		filter: invert(0);
+	}
+
+	.is-dark & {
 		&::after {
-			@include dotted-grid();
-
-			bottom: 50%;
-			content: "";
-			left: 0;
-			top: 0;
-			right: 30%;
-			width: auto;
-			filter: invert(0);
-		}
-
-		.is-dark & {
-			&::after {
-				filter: invert(1);
-			}
+			filter: invert(1);
 		}
 	}
 
@@ -31,7 +27,9 @@
 	}
 
 	&__headline {
-		margin: 10rem 0;
+		@include spacing-700(margin-bottom);
+
+		margin: 0;
 
 		.is-dark & {
 			color: $color-primary--white;

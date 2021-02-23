@@ -9,7 +9,7 @@
 	justify-content: space-between;
 	margin-bottom: $spacing--300;
 	margin-top: $spacing--200;
-	
+
 	&__circle {
 		position: absolute;
 		left: 50%;
@@ -30,6 +30,10 @@
 		}
 	}
 
+	&__number {
+		position: relative;
+	}
+
 	&__title,
 	&__number {
 		@include code-100();
@@ -41,10 +45,6 @@
 		.is-dark & {
 			color: $color-primary--white;
 		}
-	}
-
-	&__number {
-		position: relative;
 	}
 
 	&__small {

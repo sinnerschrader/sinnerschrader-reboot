@@ -17,6 +17,10 @@
 		font-weight: initial;
 		margin: 0;
 		z-index: 10;
+
+		.is-dark & {
+			color: $color-primary--white;
+		}
 	}
 
 	&__small {

@@ -1,0 +1,70 @@
+[
+	{
+		"title": "Insight & Direction",
+		"list": [
+			{
+				"item": "Futurecasting & Ethnography"
+			},
+			{
+				"item": "Visioneering & Scenario Planning"
+			},
+			{
+				"item": "Service & Business Design"
+			},
+			{
+				"item": "Business Intelligence"
+			}
+		]
+	},
+	{
+		"title": "Products & Services",
+		"list": [
+			{
+				"item": "Research & Testing"
+			},
+			{
+				"item": "Ideation & Proof of Concepts"
+			},
+			{
+				"item": "Product Design & Development"
+			},
+			{
+				"item": "Quantitative Modelling"
+			}
+		]
+	},
+	{
+		"title": "Digital Platforms",
+		"list": [
+			{
+				"item": "UI/UX Transformation & Architecture"
+			},
+			{
+				"item": "Design Systems & Dev Ops"
+			},
+			{
+				"item": "eCommerce & Living Ecosystems"
+			},
+			{
+				"item": "Data Science & Engineering"
+			}
+		]
+	},
+	{
+		"title": "Marketing Growth",
+		"list": [
+			{
+				"item": "Visual & Editorial Content"
+			},
+			{
+				"item": "Marketing & Personalization"
+			},
+			{
+				"item": "Performance & Growth"
+			},
+			{
+				"item": "Analytics"
+			}
+		]
+	}
+]

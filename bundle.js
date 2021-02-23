@@ -4868,6 +4868,72 @@
     }
   };
 
+  // _includes/js/offering-header.js
+  var OfferingHeader = class {
+    textContainer = document.querySelector(".offering__heading-wrapper");
+    textPathTop = document.querySelector(".offering__heading-top");
+    textPathBottom = document.querySelector(".offering__heading-bottom");
+    constructor() {
+      this.init();
+    }
+    init() {
+      this.bindEvents();
+    }
+    bindEvents() {
+      document.addEventListener("scroll", throttle_default(this.scrollHandler.bind(this), 150));
+    }
+    updateTextPathOffset(offsetTop, offsetBottom) {
+      this.textPathTop.style.transform = `translateX(${offsetTop}px)`;
+      this.textPathBottom.style.transform = `translateX(${offsetBottom}px)`;
+    }
+    scrollHandler() {
+      requestAnimationFrame(() => {
+        let rect = this.textContainer.getBoundingClientRect();
+        let scrollPercent = rect.y / window.innerHeight;
+        let offsetTop = scrollPercent * this.textPathTop.clientWidth * 0.5 - this.textPathTop.clientWidth / 2;
+        let offsetBottom = scrollPercent * this.textPathBottom.clientWidth * -0.75;
+        this.updateTextPathOffset(offsetTop, offsetBottom);
+      });
+    }
+  };
+
+  // _includes/js/offerings.js
+  var Offerings = class {
+    constructor() {
+      this.swiper = {};
+      this.sliderOptions = {
+        direction: "horizontal",
+        spaceBetween: 12,
+        breakpoints: {
+          300: {
+            slidesPerView: 1,
+            grabCursor: true
+          },
+          450: {
+            slidesPerView: 2,
+            grabCursor: true,
+            spaceBetween: 24
+          },
+          900: {
+            slidesPerView: 4,
+            spaceBetween: 36,
+            allowTouchMove: false,
+            noSwiping: true,
+            draggable: false,
+            grabCursor: false
+          }
+        }
+      };
+      this.bindEvents();
+    }
+    bindEvents() {
+      window.addEventListener("load", () => this.mountSlider(this.sliderOptions));
+    }
+    mountSlider(options) {
+      this.swiper = new core_class_default(".offering--info", options);
+    }
+  };
+
   // _includes/js/animate-slidein.js
   var SlideIn = class {
     titles = document.querySelectorAll(".slide-in");
@@ -4896,6 +4962,8 @@
     new Slider();
     new BackgroundScrollAnimation();
     new Video();
+    new OfferingHeader();
+    new Offerings();
     new SlideIn();
   })();
 })();

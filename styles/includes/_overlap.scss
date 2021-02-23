@@ -1,7 +1,7 @@
 @import "../core/mixins";
 
 .overlap {
-	overflow-x: hidden;
+	overflow: hidden;
 	position: relative;
 
 	&::after {

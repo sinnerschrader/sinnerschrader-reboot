@@ -15,7 +15,6 @@ class Video {
 
 	bindEvents() {
 		this.video.playButton.addEventListener("click", this.togglePlay.bind(this));
-		this.video.videoElement.addEventListener("ended", this.toggleBtn.bind(this));
 	}
 
 	togglePlay() {
@@ -26,11 +25,11 @@ class Video {
 		}
 
 		this.video.videoElement.paused === true ? this.video.videoElement.play() : this.video.videoElement.pause();
-		this.toggleBtn();
+		this.hidePlayBtn();
 	}
 
-	toggleBtn() {
-		this.video.playButton.classList.toggle("is-playing");
+	hidePlayBtn() {
+		this.video.playButton.classList.add("is-hidden");
 	}
 
 	displayVideo() {

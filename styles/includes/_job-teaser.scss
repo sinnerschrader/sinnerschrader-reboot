@@ -16,11 +16,11 @@
 		position: relative;
 	}
 
-	&__doodle {
-		background: no-repeat url("./assets/doodle-circle.png");
-		background-size: contain;
-		margin: -1rem -2.5rem;
-		padding: 0 2.5rem;
+	&__sketch {
+		background: no-repeat url("./assets/sketch-circle.png");
+		background-size: 100% 100%;
+		margin: -2rem -4.5rem -3rem -6rem;
+		padding: 2rem 4.5rem 3rem 6rem;
 	}
 
 	&__text {

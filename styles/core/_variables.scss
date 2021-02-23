@@ -10,7 +10,9 @@ $color-secondary--purple: #7c44f1;
 // Typography
 
 // would change the naming when we get the real fonts
-$font-sans-serif: "suisse-intl", Arial, sans-serif;
+$font-sans-serif-regular: "suisse-intl-regular", Arial, sans-serif;
+$font-sans-serif-light: "suisse-intl-light", Arial, sans-serif;
+$font-sans-serif-semibold: "suisse-intl-semibold", Arial, sans-serif;
 $font-serif: "ogg-regular", "Times New Roman", Times, serif;
 $font-serif-italic: "ogg-italic", "Times New Roman", Times, serif;
 $font-code: "roboto", monospace;

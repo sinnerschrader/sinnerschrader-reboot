@@ -279,7 +279,7 @@
 
 // Paragraph and label shared styling
 @mixin text-shared {
-	font-family: $font-sans-serif;
+	font-family: $font-sans-serif-regular;
 	color: $color-primary--gray;
 	line-height: 160%;
 }

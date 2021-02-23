@@ -88,15 +88,16 @@
 			text-align: center;
 			filter: invert(1);
 
-			.is-dark & {
-				filter: invert(0);
-			}
-
 			@include bp-xs() {
 				width: 50%;
 			}
+
 			@include bp-s() {
 				width: 50%;
+			}
+
+			.is-dark & {
+				filter: invert(0);
 			}
 		}
 

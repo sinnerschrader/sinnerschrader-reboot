@@ -21,6 +21,8 @@
 	}
 
 	&__link {
+		@include paragraph-200();
+
 		color: $color-primary--white;
 	}
 

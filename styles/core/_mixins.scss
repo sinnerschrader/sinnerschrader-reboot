@@ -218,7 +218,6 @@
 // Headline smaller sans serif
 @mixin headline-200 {
 	font-family: $font-sans-serif-light;
-	color: $color-primary--black;
 	@include bp-xs {
 		font-size: 3.2rem;
 		line-height: 3.2rem;
@@ -242,7 +241,6 @@
 }
 // Headline smaller serif - shared
 @mixin font-serif-shared-small {
-	color: $color-primary--black;
 	@include bp-xs {
 		font-size: 3.5rem;
 		line-height: 3.2rem;
@@ -280,7 +278,6 @@
 // Paragraph and label shared styling
 @mixin text-shared {
 	font-family: $font-sans-serif-regular;
-	color: $color-primary--gray;
 	line-height: 160%;
 }
 
@@ -305,8 +302,7 @@
 }
 // Paragraphs
 @mixin paragraph-100 {
-	@include text-shared();
-
+	line-height: 160%;
 	font-family: $font-sans-serif-light;
 	font-size: 1.8rem;
 	@include bp-xs {
@@ -331,11 +327,9 @@
 
 // Interactive and code shared styling
 @mixin interactive-shared {
-	color: $color-primary--gray;
 	font-size: 1.2rem;
 	letter-spacing: 0.1rem;
 	line-height: 125%;
-	text-transform: $uppercase;
 }
 // Interactive
 @mixin interactive-100 {
@@ -344,6 +338,7 @@
 	font-family: $font-sans-serif-semibold;
 	text-decoration: none;
 }
+
 // Code
 @mixin code-100 {
 	@include interactive-shared();

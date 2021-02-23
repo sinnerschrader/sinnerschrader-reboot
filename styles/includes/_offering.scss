@@ -54,14 +54,10 @@
 	}
 
 	&__title {
-		@include label-200;
-
-		margin-bottom: 2.4rem;
+		@include label-100;
 	}
 
 	&__item {
-		@include paragraph-200;
-
 		padding-bottom: 0.8rem;
 	}
 }

@@ -10,7 +10,7 @@ body {
 	@include default-animation(background-color);
 
 	font-size: $font-size--copy-1;
-	color: $color-primary--gray;
+	color: $color-primary--black;
 	margin: 0;
 	overflow-x: hidden;
 	background-color: $color-primary--white;
@@ -99,4 +99,8 @@ ul {
 
 .headline-202 {
 	@include headline-202();
+}
+
+.copy--gray {
+	color: $color-primary--gray;
 }

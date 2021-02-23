@@ -12,7 +12,7 @@
 				{% endif %}
 
 			<li class="locations__navigation-item">
-				<button class="{{ isSelected }} locations__navigation-button" id="locations__navigation-button-{{ location.name }}">
+				<button class="{{ isSelected }} locations__navigation-button copy--gray" id="locations__navigation-button-{{ location.name }}">
 					{{ location.name }}
 				</button>
 			</li>
@@ -29,8 +29,7 @@
 				{% assign isHidden = "locations__content--hidden" %} 
 			{% endif %}
 
-		<div
-			class="locations__content {{ isHidden }} locations__image-wrapper-small
+		<div class="locations__content {{ isHidden }} locations__image-wrapper-small
                 locations__content-{{ location.name }}">
 
         {% if forloop.first %}
@@ -68,7 +67,7 @@
           {% assign fallbackImgLarge = "" %}
         {% endif %}
 
-        <picture>
+        	<picture>
 				<source media="(max-width: 599px)" srcset="{{ mobileImgLarge }}" type="image/webp" />
 					<source media="(min-width: 600px) and (max-width: 1199px)" srcset="{{ tabletImgLarge }}" type="image/webp" />
 					<source media="(min-width: 1200px)" srcset="{{ desktopImgLarge }}" type="image/webp" />
@@ -83,7 +82,7 @@
 			<div class="locations__studio-info-grid">
 				{% for studio in location.studios %}
 
-				<div class="locations__studio-info-container">
+				<div class="locations__studio-info-container copy--gray">
 					<span>{{ studio.name }}</span>
 					<address>
 						{{ studio.street }}

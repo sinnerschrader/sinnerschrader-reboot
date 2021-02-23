@@ -53,12 +53,18 @@
 	}
 
 	&__line-container {
+		@include default-animation(background-color);
+
 		background-color: $color-primary--white;
 		height: 55%;
 		position: absolute;
 		right: -1rem;
 		top: 50%;
 		width: 1.7rem;
+
+		.is-dark & {
+			background-color: $color-primary--black;
+		}
 	}
 
 	&__line {

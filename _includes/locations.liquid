@@ -2,7 +2,7 @@
 	{% include section-header, title: "Here we are", number: "06", type: "medium" %}
 
 	<div class="grid locations__grid">
-		<ol class="col-start-1 col-end-7-xs col-end-3 locations__navigation">
+		<ol class="locations__navigation">
 
 			{% for location in locations %} 
 				{% if forloop.first %} 
@@ -31,8 +31,7 @@
 
 		<div
 			class="locations__content {{ isHidden }} locations__image-wrapper-small
-                locations__content-{{ location.name }} col-start-7-xs col-end-13-xs
-                col-start-3 col-end-8">
+                locations__content-{{ location.name }}">
 
         {% if forloop.first %}
           {% assign desktopImgSmall = "assets/images/desktop/" | append: location.imageSmall %}
@@ -54,10 +53,8 @@
 				</picture>
       </div>
 
-		<div
-			class="locations__content {{ isHidden }} locations__image-wrapper-large
-                locations__content-{{ location.name }} col-start-1-xs col-end-7-xs
-                col-start-8 col-end-13">
+      <div class="locations__content {{ isHidden }} locations__image-wrapper-large
+                locations__content-{{ location.name }}">
 
         {% if forloop.first %}
           {% assign desktopImgLarge = "assets/images/desktop/" | append: location.imageLarge %}
@@ -81,8 +78,7 @@
 
 		<div
 			class="locations__content {{ isHidden }} locations__studio-info
-                locations__content-{{ location.name }} col-start-7-xs col-end-13-xs
-                col-start-3 col-end-8"
+                locations__content-{{ location.name }}"
 		>
 			<div class="locations__studio-info-grid">
 				{% for studio in location.studios %}

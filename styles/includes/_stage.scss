@@ -23,7 +23,9 @@
 	}
 
 	&__overlap {
-		background: $color-primary--white;
+		@include default-animation(background-color);
+
+		background-color: $color-primary--white;
 		bottom: -16rem;
 		height: 24rem;
 		position: absolute;
@@ -43,6 +45,10 @@
 		@include bp-m() {
 			bottom: -10rem;
 			height: 18rem;
+		}
+
+		.is-dark & {
+			background-color: $color-primary--black;
 		}
 	}
 }

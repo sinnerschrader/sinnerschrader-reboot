@@ -1,20 +1,20 @@
 [
 	{
 		"name": "Berlin",
-		"imageSmall": "https://placeimg.com/506/506/tech",
-		"imageLarge": "https://placeimg.com/506/759/tech",
+		"imageSmall": "Berlin1.webp",
+		"imageLarge": "Berlin2.webp",
 		"studios": [
 			{
-				"name": "SinnerSchrader",
+				"name": "SinnerSchrader Deutschland GmbH",
 				"street": "Bergmannstraße 72",
-				"postal": "10961 Berlin",
+				"postal": "10961 Berlin, Germany",
 				"tel": "+49 30 34 65 59 45 - 0",
 				"email": "info@sinnerschrader.com"
 			},
 			{
 				"name": "SinnerSchrader Swipe",
 				"street": "Bergmannstraße 72",
-				"postal": "10961 Berlin",
+				"postal": "10961 Berlin, Germany",
 				"tel": "+49 30 34 65 59 45 - 0",
 				"email": "swipe@sinnerschrader.com"
 			}
@@ -22,13 +22,13 @@
 	},
 	{
 		"name": "Frankfurt",
-		"imageSmall": "https://placeimg.com/506/506/people",
-		"imageLarge": "https://placeimg.com/506/759/people",
+		"imageSmall": "Frankfurt1.webp",
+		"imageLarge": "Frankfurt2.webp",
 		"studios": [
 			{
-				"name": "SinnerSchrader",
+				"name": "SinnerSchrader Deutschland GmbH",
 				"street": "Mayfarthstraße 15",
-				"postal": "60314 Frankfurt am Main",
+				"postal": "60314 Frankfurt am Main, Germany",
 				"tel": "+49 69 42 72 64 50 - 0",
 				"email": "info@sinnerschrader.com"
 			}
@@ -36,11 +36,11 @@
 	},
 	{
 		"name": "Hamburg",
-		"imageSmall": "https://placeimg.com/506/506/arch",
-		"imageLarge": "https://placeimg.com/506/759/arch",
+		"imageSmall": "Hamburg1.webp",
+		"imageLarge": "Hamburg2.webp",
 		"studios": [
 			{
-				"name": "SinnerSchrader",
+				"name": "SinnerSchrader Deutschland GmbH",
 				"street": "Völckersstr. 38",
 				"postal": "22765 Hamburg",
 				"tel": "+49 40 39 88 55-0",
@@ -64,11 +64,11 @@
 	},
 	{
 		"name": "Munich",
-		"imageSmall": "https://placeimg.com/506/506/animals",
-		"imageLarge": "https://placeimg.com/506/759/animals",
+		"imageSmall": "Munich1.webp",
+		"imageLarge": "Munich2.webp",
 		"studios": [
 			{
-				"name": "SinnerSchrader",
+				"name": "SinnerSchrader Deutschland GmbH",
 				"street": "Schackstr. 3",
 				"postal": "80539 Munich",
 				"tel": "+49 89 20 60 26 - 800",
@@ -78,13 +78,13 @@
 	},
 	{
 		"name": "Prague",
-		"imageSmall": "https://placeimg.com/506/506/nature",
-		"imageLarge": "https://placeimg.com/506/759/nature",
+		"imageSmall": "Prague1.webp",
+		"imageLarge": "Prague2.webp",
 		"studios": [
 			{
-				"name": "SinnerSchrader",
+				"name": "SinnerSchrader Prague s.r.o",
 				"street": "Lihovarská 1060/12",
-				"postal": "Czech Republic Prague 9",
+				"postal": "Czech Republic Prague 9, Czech Republic",
 				"tel": "+420 776 16 32 58",
 				"email": "info@sinnerschrader.com"
 			}
@@ -92,13 +92,13 @@
 	},
 	{
 		"name": "Zurich",
-		"imageSmall": "https://placeimg.com/506/506/nature/sepia",
-		"imageLarge": "https://placeimg.com/506/759/nature/sepia",
+		"imageSmall": "Zurich1.webp",
+		"imageLarge": "Zurich2.webp",
 		"studios": [
 			{
 				"name": "SinnerSchrader Studio Swipe",
 				"street": "St. Annagasse 9",
-				"postal": "8001 Zurich",
+				"postal": "8001 Zurich, Switzerland",
 				"tel": "+41 79 614 04 99",
 				"email": "swipe@sinnerschrader.com"
 			}

@@ -4,6 +4,7 @@ import { BackgroundScrollAnimation } from "./bg-scroll-animation";
 import { Video } from "./video.js";
 import { OfferingHeader } from "./offering-header";
 import { Offerings } from "./offerings";
+import { SlideIn } from "./animate-slidein";
 
 (() => {
 	new Locations();
@@ -12,4 +13,5 @@ import { Offerings } from "./offerings";
 	new Video();
 	new OfferingHeader();
 	new Offerings();
+	new SlideIn();
 })();

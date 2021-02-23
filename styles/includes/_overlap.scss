@@ -8,8 +8,9 @@
 		@include grid-right();
 		@include dotted-grid();
 
-		height: 50%;
-		top: 5rem;
+		height: 55%;
+		pointer-events: none;
+		top: 12rem;
 		z-index: 3;
 
 		@include bp-xs() {
@@ -101,6 +102,34 @@
 
 			grid-row: 2;
 			margin-left: initial;
+		}
+		@include bp-desktop {
+			@include spacing-400(margin-right);
+		}
+	}
+
+	&__header > * {
+		display: block;
+
+		@include bp-xs() {
+			display: inline-block;
+
+			&:nth-child(2),
+			&:nth-child(3) {
+				margin-left: initial;
+			}
+
+			&:nth-child(2) {
+				@include headline-201();
+			}
+		}
+
+		&:nth-child(2) {
+			margin-left: 3rem;
+		}
+
+		&:nth-child(3) {
+			margin-left: 6rem;
 		}
 	}
 }

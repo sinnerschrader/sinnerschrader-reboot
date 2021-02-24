@@ -57,5 +57,15 @@
 		text-decoration: none;
 		text-transform: uppercase;
 		width: 8rem;
+
+		&:hover {
+			box-shadow: inset 0 0 0 10rem $color-secondary--yellow;
+			transition: box-shadow 0.3s ease-in, transform 0.3s ease-in;
+			transform: scale(0.8);
+
+			.text-scale {
+				transform: scale(0.9);
+			}
+		}
 	}
 }

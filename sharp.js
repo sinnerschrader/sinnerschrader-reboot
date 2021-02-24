@@ -95,6 +95,6 @@ formats.forEach((format) => {
 		let filename = path.basename(file);
 		const image = sharp(file);
 		// Convert to WebP via Sharp's inferencing automatically of extensions
-		image.toFile(`${format.dist}/${filename.replace("png", format.format)}`).catch(console.error);
+		image.toFile(`${format.dist}/${filename.replace("webp", format.format)}`).catch(console.error);
 	});
 });

@@ -36,7 +36,7 @@
           {% assign desktopImgSmall = "assets/images/desktop/" | append: location.imageSmall %}
           {% assign tabletImgSmall = "assets/images/tablet/" | append: location.imageSmall %}
           {% assign desktopImgSmall = "assets/images/mobile/" | append: location.imageSmall %}
-          {% assign fallbackImgSmall = "assets/images/fallback/" | append: location.imageSmall %}
+          {% assign fallbackImgSmall = "assets/images/fallback/" | append: location.imageFallbackSmall %}
         {% else %}
           {% assign desktopImgSmall = "" %}
           {% assign tabletImgSmall = "" %}
@@ -59,7 +59,7 @@
           {% assign desktopImgLarge = "assets/images/desktop/" | append: location.imageLarge %}
           {% assign tabletImgLarge = "assets/images/tablet/" | append: location.imageLarge %}
           {% assign desktopImgLarge = "assets/images/mobile/" | append: location.imageLarge %}
-          {% assign fallbackImgLarge = "assets/images/fallback/" | append: location.imageLarge %}
+          {% assign fallbackImgLarge = "assets/images/fallback/" | append: location.imageFallbackLarge %}
         {% else %}
           {% assign desktopImgLarge = "" %}
           {% assign tabletImgLarge = "" %}
@@ -67,8 +67,8 @@
           {% assign fallbackImgLarge = "" %}
         {% endif %}
 
-        	<picture>
-				<source media="(max-width: 599px)" srcset="{{ mobileImgLarge }}" type="image/webp" />
+				<picture>
+					<source media="(max-width: 599px)" srcset="{{ mobileImgLarge }}" type="image/webp" />
 					<source media="(min-width: 600px) and (max-width: 1199px)" srcset="{{ tabletImgLarge }}" type="image/webp" />
 					<source media="(min-width: 1200px)" srcset="{{ desktopImgLarge }}" type="image/webp" />
 					<img class="locations__image parallax-slow" src="{{ fallbackImgLarge }}" alt="Large Image of the {{ location.name }} SinnerSchrader Office" />
@@ -89,9 +89,9 @@
 						<br />
 						{{ studio.postal }} 
 						<br />
-						<a class="copy--gray" href="tel:{{ studio.tel }}">{{ studio.tel }}</a> 
+						<a class="copy--gray locations__studio-info-link" href="tel:{{ studio.tel }}">{{ studio.tel }}</a> 
 						<br />
-						<a class="copy--gray" href="mailto:{{ studio.email }}">{{studio.email}}</a>
+						<a class="copy--gray locations__studio-info-link" href="mailto:{{ studio.email }}">send mail</a>
 					</address>
 				</div>
 				{% endfor %}

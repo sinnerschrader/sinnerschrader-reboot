@@ -4818,7 +4818,7 @@
         }
       });
     };
-    setPictureSrc = (container, isShown, {imageLarge, imageSmall}) => {
+    setPictureSrc = (container, isShown, {imageLarge, imageSmall, imageFallbackLarge, imageFallbackSmall}) => {
       const picture = container.querySelector("picture");
       if (!picture) {
         return;
@@ -4828,7 +4828,8 @@
       if (isShown && !img.getAttribute("src")) {
         const isBigImage = container.classList.contains("locations__image-wrapper-large");
         const imageName = isBigImage ? imageLarge : imageSmall;
-        img.setAttribute("src", `./assets/images/fallback/${imageName}`);
+        const fallbackName = isBigImage ? imageFallbackLarge : imageFallbackSmall;
+        img.setAttribute("src", `./assets/images/fallback/${fallbackName}`);
         sources.forEach((source) => {
           const viewport = this.viewPortByMediaQuery(source.media);
           source.setAttribute("srcset", `./assets/images/${viewport}/${imageName}`);

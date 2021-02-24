@@ -3,6 +3,8 @@
 		"name": "Berlin",
 		"imageSmall": "Berlin1.webp",
 		"imageLarge": "Berlin2.webp",
+		"imageFallbackSmall": "Berlin1.jpg",
+		"imageFallbackLarge": "Berlin2.jpg",
 		"studios": [
 			{
 				"name": "SinnerSchrader Deutschland GmbH",
@@ -24,6 +26,8 @@
 		"name": "Frankfurt",
 		"imageSmall": "Frankfurt1.webp",
 		"imageLarge": "Frankfurt2.webp",
+		"imageFallbackSmall": "Frankfurt1.jpg",
+		"imageFallbackLarge": "Frankfurt2.jpg",
 		"studios": [
 			{
 				"name": "SinnerSchrader Deutschland GmbH",
@@ -38,6 +42,8 @@
 		"name": "Hamburg",
 		"imageSmall": "Hamburg1.webp",
 		"imageLarge": "Hamburg2.webp",
+		"imageFallbackSmall": "Hamburg1.jpg",
+		"imageFallbackLarge": "Hamburg2.jpg",
 		"studios": [
 			{
 				"name": "SinnerSchrader Deutschland GmbH",
@@ -66,6 +72,8 @@
 		"name": "Munich",
 		"imageSmall": "Munich1.webp",
 		"imageLarge": "Munich2.webp",
+		"imageFallbackSmall": "Munich1.jpg",
+		"imageFallbackLarge": "Munich2.jpg",
 		"studios": [
 			{
 				"name": "SinnerSchrader Deutschland GmbH",
@@ -80,6 +88,8 @@
 		"name": "Prague",
 		"imageSmall": "Prague1.webp",
 		"imageLarge": "Prague2.webp",
+		"imageFallbackSmall": "Prague1.jpg",
+		"imageFallbackLarge": "Prague2.jpg",
 		"studios": [
 			{
 				"name": "SinnerSchrader Prague s.r.o",
@@ -94,6 +104,8 @@
 		"name": "Zurich",
 		"imageSmall": "Zurich1.webp",
 		"imageLarge": "Zurich2.webp",
+		"imageFallbackSmall": "Zurich1.jpg",
+		"imageFallbackLarge": "Zurich2.jpg",
 		"studios": [
 			{
 				"name": "SinnerSchrader Studio Swipe",

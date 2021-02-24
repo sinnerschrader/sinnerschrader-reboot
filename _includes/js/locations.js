@@ -81,7 +81,7 @@ export class Locations {
 		});
 	};
 
-	setPictureSrc = (container, isShown, { imageLarge, imageSmall }) => {
+	setPictureSrc = (container, isShown, { imageLarge, imageSmall, imageFallbackLarge, imageFallbackSmall }) => {
 		const picture = container.querySelector("picture");
 		if (!picture) {
 			return;
@@ -93,7 +93,7 @@ export class Locations {
 		if (isShown && !img.getAttribute("src")) {
 			const isBigImage = container.classList.contains("locations__image-wrapper-large");
 			const imageName = isBigImage ? imageLarge : imageSmall;
-			const fallbackName = imageName.split(".").slice(0, -1).join(".") + ".jpg";
+			const fallbackName = isBigImage ? imageFallbackLarge : imageFallbackSmall;
 
 			img.setAttribute("src", `./assets/images/fallback/${fallbackName}`);
 

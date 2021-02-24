@@ -59,10 +59,10 @@ $grid-columns: 12 !default;
 
 @include bp-s {
 	.grid {
-		margin: 0 9.6rem;
+		margin: 0 6.4rem;
 
 		.is-grid--right {
-			margin: 0 0 0 9.6rem;
+			margin: 0 0 0 6.4rem;
 		}
 	}
 	@for $i from 1 through $grid-columns {

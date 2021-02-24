@@ -2,24 +2,6 @@
 	overflow-y: auto;
 	position: relative;
 
-	&::after {
-		@include dotted-grid();
-
-		bottom: 50%;
-		content: "";
-		left: 0;
-		top: 0;
-		right: 30%;
-		width: auto;
-		filter: invert(0);
-	}
-
-	.is-dark & {
-		&::after {
-			filter: invert(1);
-		}
-	}
-
 	&__headline > .headline-201 {
 		.is-dark & {
 			color: $color-primary--white;

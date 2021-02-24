@@ -35,7 +35,8 @@
 	}
 
 	&--wrapper {
-		padding: 6.4rem 0;
+		@include spacing-500(padding-top);
+
 		position: relative;
 
 		&::after {
@@ -56,13 +57,11 @@
 	}
 
 	&--info {
+		@include spacing-700(padding-top);
+		@include spacing-700(padding-bottom);
+
 		position: relative;
 		z-index: 4;
-		padding: 12rem 0;
-
-		@include bp-xs() {
-			padding: 9.6rem 0;
-		}
 	}
 
 	&__title {

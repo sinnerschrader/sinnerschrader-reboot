@@ -59,18 +59,11 @@
 	width: 100%;
 	content: "";
 	z-index: 3;
-}
 
-@mixin dotted-grid--white {
-	background-image: radial-gradient($color-primary--white 5%, transparent 0);
-	background-position-x: center;
-	background-size: 2rem 2rem;
-	position: absolute;
-	width: 113%;
-	height: 100%;
-	left: -13%;
-	content: "";
-	z-index: 3;
+	.is-dark & {
+		opacity: 0.6;
+		filter: invert(1);
+	}
 }
 
 @mixin grid-right {

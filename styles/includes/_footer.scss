@@ -1,18 +1,35 @@
 @import "../core/variables";
 
 .footer {
+	@include spacing-600(padding-bottom);
+	@include spacing-700(padding-top);
+
 	background: $color-primary--black;
 	color: $color-primary--white;
-	margin-top: $spacing--900--desktop;
-	padding-bottom: $spacing--600--desktop;
-	padding-top: $spacing--700--desktop;
 	position: relative;
+	margin-top: calc(#{$spacing--800} + #{$spacing--500});
 
-	@include bp-xs() {
-		padding: $spacing--700 0;
+	@include bp-tablet {
+		margin-top: calc(#{$spacing--800--tablet} + #{$spacing--500--tablet});
+	}
 
-		&__wrapper {
-			margin-bottom: $spacing--500;
+	@include bp-desktop {
+		margin-top: calc(#{$spacing--800--desktop} + #{$spacing--500--desktop});
+	}
+
+	&__wrapper {
+		grid-template-rows: auto auto auto;
+	}
+
+	&__s2-creator {
+		@include paragraph-200();
+
+		grid-row: 3/4;
+		color: $color-primary--white;
+		margin: 0;
+
+		@include bp-xs() {
+			margin-top: $spacing--500;
 		}
 	}
 
@@ -26,33 +43,30 @@
 		color: $color-primary--white;
 	}
 
-	&__s2 {
-		position: relative;
-
+	&__s2-link {
 		@include bp-xs() {
 			margin-bottom: $spacing--500;
 			position: unset;
 		}
+	}
 
-		&__creator {
-			@include paragraph-200();
+	&__s2-links {
+		grid-row: 2/4;
 
-			bottom: 0;
-			color: $color-primary--white;
-			left: 0;
-			position: absolute;
-
-			@include bp-xs() {
-				left: $spacing--400;
-			}
+		@include bp-xs {
+			grid-row: 2/3;
 		}
 	}
 }
 
 .accenture-brand {
 	position: absolute;
-	top: -5.8rem;
+	top: -5.6rem;
 	width: 100%;
+
+	@include bp-xs {
+		top: -5.8rem;
+	}
 
 	&::before {
 		background-color: $color-secondary--purple;

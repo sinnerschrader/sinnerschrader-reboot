@@ -26,7 +26,7 @@ class OfferingHeader {
 		requestAnimationFrame(() => {
 			let rect = this.textContainer.getBoundingClientRect();
 			let scrollPercent = rect.y / window.innerHeight;
-			let offsetTop = scrollPercent * this.textPathTop.clientWidth * 0.5 - this.textPathTop.clientWidth / 2;
+			let offsetTop = scrollPercent * this.textPathTop.clientWidth * 0.5 - this.textPathTop.clientWidth / 4;
 			let offsetBottom = scrollPercent * this.textPathBottom.clientWidth * -0.75;
 
 			this.updateTextPathOffset(offsetTop, offsetBottom);

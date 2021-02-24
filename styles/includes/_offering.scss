@@ -21,6 +21,14 @@
 		white-space: nowrap;
 		transition: transform 500ms ease;
 
+		@include bp-xs() {
+			font-size: 6rem;
+		}
+
+		@include bp-tablet() {
+			font-size: 7rem;
+		}
+
 		.is-font-ogg {
 			font-family: $font-serif;
 		}
@@ -38,12 +46,6 @@
 			top: 0;
 			bottom: 0;
 			filter: invert(0);
-		}
-
-		.is-dark & {
-			&::after {
-				filter: invert(1);
-			}
 		}
 	}
 

@@ -53,6 +53,7 @@
 	position: absolute;
 	top: -5.8rem;
 	width: 100%;
+	z-index: -1;
 
 	&::before {
 		background-color: $color-secondary--purple;

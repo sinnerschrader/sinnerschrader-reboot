@@ -111,6 +111,33 @@
 			}
 		}
 
+		&--reduced-motion {
+			display: none;
+		}
+
+		@media (prefers-reduced-motion: reduce) {
+			&-preview-loop {
+				display: none;
+			}
+
+			&--reduced-motion {
+				display: block;
+				position: relative;
+				width: 100%;
+				z-index: 4;
+				max-height: 100vh;
+				object-fit: contain;
+
+				@include bp-xs() {
+					width: 150vw;
+				}
+
+				&.is-hidden {
+					display: none;
+				}
+			}
+		}
+
 		&-element {
 			display: none;
 			position: relative;

@@ -6,6 +6,7 @@ class Video {
 	init() {
 		this.video = {
 			previewElement: document.querySelector(".work__video-preview-loop"),
+			reducedMotionElement: document.querySelector(".work__video--reduced-motion"),
 			playButton: document.querySelector(".work__video-media-control"),
 			videoElement: document.querySelector(".work__video-element"),
 		};
@@ -34,6 +35,7 @@ class Video {
 
 	displayVideo() {
 		this.video.previewElement.classList.add("is-hidden");
+		this.video.reducedMotionElement.classList.add("is-hidden");
 		this.video.videoElement.classList.add("is-visible");
 		this.video.videoElement.setAttribute("preload", "auto");
 	}

@@ -4855,7 +4855,7 @@
             container.style.display = "none";
           };
         }
-        this.timeouts.push(setTimeout(animationCallback, 200));
+        this.timeouts.push(setTimeout(animationCallback, 250));
       });
     };
     renderSelectedLocation = (newName) => {

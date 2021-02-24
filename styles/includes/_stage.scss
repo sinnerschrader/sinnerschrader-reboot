@@ -20,7 +20,10 @@
 
 	&__video {
 		&__item {
-			width: 100%;
+			width: 90%;
+			@include bp-xs() {
+				width: 100%;
+			}
 		}
 	}
 

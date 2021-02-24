@@ -8,6 +8,12 @@
 	height: 90vh;
 	position: relative;
 
+	&__headline {
+		.headline-202 {
+			@include font-serif-shared-large;
+		}
+	}
+
 	&__title,
 	&__video {
 		margin: auto;

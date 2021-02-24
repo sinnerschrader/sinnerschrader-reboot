@@ -93,8 +93,10 @@ export class Locations {
 		if (isShown && !img.getAttribute("src")) {
 			const isBigImage = container.classList.contains("locations__image-wrapper-large");
 			const imageName = isBigImage ? imageLarge : imageSmall;
+			const fallbackName = imageName.split(".").slice(0, -1).join(".") + ".jpg";
 
-			img.setAttribute("src", `./assets/images/fallback/${imageName}`);
+			img.setAttribute("src", `./assets/images/fallback/${fallbackName}`);
+
 			sources.forEach((source) => {
 				const viewport = this.viewPortByMediaQuery(source.media);
 				source.setAttribute("srcset", `./assets/images/${viewport}/${imageName}`);

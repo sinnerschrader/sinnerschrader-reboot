@@ -19,11 +19,24 @@
 	}
 
 	&__video {
+		overflow: hidden;
 		&__item {
 			width: 90%;
 			@include bp-xs() {
 				width: 100%;
 			}
+		}
+		&--reduced-motion {
+			display: none;
+		}
+	}
+
+	@media (prefers-reduced-motion) {
+		&__video__item {
+			display: none;
+		}
+		&__video--reduced-motion {
+			display: block;
 		}
 	}
 

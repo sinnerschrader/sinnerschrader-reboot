@@ -33,12 +33,6 @@ h1 {
 	font-weight: 200;
 }
 
-h2 {
-	.is-dark & {
-		color: $color-primary--white;
-	}
-}
-
 h3 {
 	@include headline-200();
 

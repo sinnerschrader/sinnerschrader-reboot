@@ -5221,7 +5221,7 @@
         spaceBetween: 12,
         breakpoints: {
           300: {
-            slidesPerView: 1,
+            slidesPerView: "auto",
             grabCursor: true
           },
           450: {

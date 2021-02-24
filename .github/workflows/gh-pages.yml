@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages (interim)
 on:
   push:
     branches:
-      - development
+      - main
 
 jobs:
   build:

@@ -1,6 +1,17 @@
-{% if type %} {% assign typeClassName = "section-header__" | append: type %} {% else %} {% assign typeClassName = "" %} {% endif %}
+{% if type %} 
+	{% assign typeClassName = "section-header__" | append: type %} 
+{%else %} 
+	{% assign typeClassName = "" %} 
+{% endif %}
 
 <header class="grid section-header {{ typeClassName }}">
 	<h2 class="section-header__title">{{ title }}</h2>
-	<p class="section-header__number">{{ number }}</p>
+	<span class="section-header__number {{ spinningWheel }}">
+		{{ number }}
+		{% if spinningWheel %}
+			<div class="section-header__circle">
+				<img src="./assets/circle-text.svg" alt="">
+			</div>
+		{% endif %}
+	</span>
 </header>

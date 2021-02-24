@@ -54,36 +54,10 @@
 	}
 
 	&__title {
-		@include label-200;
-
-		margin-bottom: 2.4rem;
+		@include label-100;
 	}
 
 	&__item {
-		@include paragraph-200;
-
 		padding-bottom: 0.8rem;
-	}
-
-	&__circle {
-		position: absolute;
-		right: 0;
-		bottom: -15rem;
-		filter: invert(0);
-		animation: rotating 5s linear infinite;
-
-		.is-dark & {
-			filter: invert(1);
-		}
-	}
-}
-
-@keyframes rotating {
-	from {
-		transform: rotate(0deg);
-	}
-
-	to {
-		transform: rotate(360deg);
 	}
 }

@@ -12,7 +12,7 @@
 				{% endif %}
 
 			<li class="locations__navigation-item">
-				<button class="{{ isSelected }} locations__navigation-button" id="locations__navigation-button-{{ location.name }}">
+				<button class="{{ isSelected }} locations__navigation-button copy--gray" id="locations__navigation-button-{{ location.name }}">
 					{{ location.name }}
 				</button>
 			</li>
@@ -29,8 +29,7 @@
 				{% assign isHidden = "locations__content--hidden" %} 
 			{% endif %}
 
-		<div
-			class="locations__content {{ isHidden }} locations__image-wrapper-small
+		<div class="locations__content {{ isHidden }} locations__image-wrapper-small
                 locations__content-{{ location.name }}">
 
         {% if forloop.first %}
@@ -49,7 +48,7 @@
 					<source media="(max-width: 599px)" srcset="{{ mobileImgSmall }}" type="image/webp" />
 					<source media="(min-width: 600px) and (max-width: 1199px)" srcset="{{ tabletImgSmall }}" type="image/webp" />
 					<source media="(min-width: 1200px)" srcset="{{ desktopImgSmall }}" type="image/webp" />
-					<img class="locations__image" src="{{ fallbackImgSmall }}" alt="Small Image of the {{ location.name }} SinnerSchrader Office" />
+					<img class="locations__image parallax-slow" src="{{ fallbackImgSmall }}" alt="Small Image of the {{ location.name }} SinnerSchrader Office" />
 				</picture>
       </div>
 
@@ -68,11 +67,11 @@
           {% assign fallbackImgLarge = "" %}
         {% endif %}
 
-        <picture>
+        	<picture>
 				<source media="(max-width: 599px)" srcset="{{ mobileImgLarge }}" type="image/webp" />
 					<source media="(min-width: 600px) and (max-width: 1199px)" srcset="{{ tabletImgLarge }}" type="image/webp" />
 					<source media="(min-width: 1200px)" srcset="{{ desktopImgLarge }}" type="image/webp" />
-					<img class="locations__image" src="{{ fallbackImgLarge }}" alt="Large Image of the {{ location.name }} SinnerSchrader Office" />
+					<img class="locations__image parallax-slow" src="{{ fallbackImgLarge }}" alt="Large Image of the {{ location.name }} SinnerSchrader Office" />
 				</picture>
       </div>
 
@@ -83,16 +82,16 @@
 			<div class="locations__studio-info-grid">
 				{% for studio in location.studios %}
 
-				<div class="locations__studio-info-container">
+				<div class="locations__studio-info-container copy--gray">
 					<span>{{ studio.name }}</span>
 					<address>
 						{{ studio.street }}
 						<br />
 						{{ studio.postal }} 
 						<br />
-						<a href="tel:{{ studio.tel }}">{{ studio.tel }}</a> 
+						<a class="copy--gray" href="tel:{{ studio.tel }}">{{ studio.tel }}</a> 
 						<br />
-						<a href="mailto:{{ studio.email }}">{{studio.email}}</a>
+						<a class="copy--gray" href="mailto:{{ studio.email }}">{{studio.email}}</a>
 					</address>
 				</div>
 				{% endfor %}

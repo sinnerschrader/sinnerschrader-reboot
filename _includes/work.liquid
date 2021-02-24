@@ -1,18 +1,12 @@
 <section class="work">
-	<div class="grid">
-		<div class="section__title col-2">
-			<p>Work</p>
-		</div>
-		<div class="section__number col-start-12 col-end-13">
-			<p>04</p>
-		</div>
-	</div>
+	{% include section-header, title: "Work", number: "04", type: "small" %}
+
 	<div class="grid">
 		<h3 class="work__headline col-start-6 col-start-1-xs col-end-12">
-			<span class="headline-201">We push companies</span>
-			<br />
-			out of their comfort <span class="is-underline">zone</span>
-		</h3>
+				We push companies
+				<br />
+				out of their comfort <span class="headline-202">zone</span>
+			</h3>
 	</div>
 	<div class="work__inner-wrapper">
 		<div class="work__video-container">
@@ -21,16 +15,15 @@
 				<source src="./assets/5s_video.mp4" type="video/mp2" />
 			</video>
 			<video
-				class="work__video-element"
-				src="./assets/S2_160221.mp4"
-				controls
-				preload="none"
-				disablepictureinpicture
-				controlslist="nodownload"
+					class="work__video-element"
+					src="./assets/S2_160221.mp4"
+					controls
+					preload="none"
+					disablepictureinpicture
+					controlslist="nodownload"
 			></video>
 			<button class="work__video-media-control">
-				<span class="state--pause">Play Reel</span>
-				<span class="state--play">Pause Reel</span>
+				Play Reel
 			</button>
 		</div>
 		<div class="grid">

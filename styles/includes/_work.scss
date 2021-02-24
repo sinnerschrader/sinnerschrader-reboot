@@ -1,5 +1,7 @@
 .work {
+	display: inline-block;
 	position: relative;
+	margin-top: 16rem;
 
 	&::after {
 		@include dotted-grid();
@@ -19,8 +21,20 @@
 		}
 	}
 
+	&__headline > .headline-201 {
+		.is-dark & {
+			color: $color-primary--white;
+		}
+	}
+
 	&__headline {
-		margin: 10rem 0;
+		@include spacing-700(margin-bottom);
+
+		margin: 0;
+
+		.is-dark & {
+			color: $color-primary--white;
+		}
 
 		.is-underline {
 			position: relative;
@@ -49,25 +63,6 @@
 
 	&__inner-wrapper {
 		position: relative;
-		background: $color-primary--black;
-
-		&::after {
-			@include default-animation(background-color);
-
-			position: absolute;
-			content: "";
-			bottom: 0;
-			right: 0;
-			left: 50%;
-			height: 2.4rem;
-			background-color: $color-primary--white;
-		}
-
-		.is-dark & {
-			&::after {
-				background-color: $color-primary--black;
-			}
-		}
 	}
 
 	&__logos {
@@ -84,16 +79,24 @@
 		}
 
 		&-el-wrapper {
+			@include default-animation(filter);
+
 			position: relative;
 			width: 20%;
 			padding: $spacing--400--desktop 0;
 			text-align: center;
+			filter: invert(1);
 
 			@include bp-xs() {
 				width: 50%;
 			}
+
 			@include bp-s() {
 				width: 50%;
+			}
+
+			.is-dark & {
+				filter: invert(0);
 			}
 		}
 
@@ -115,6 +118,7 @@
 			position: relative;
 			width: 100%;
 			z-index: 4;
+			max-height: 100vh;
 
 			@include bp-xs() {
 				width: 150vw;
@@ -130,10 +134,7 @@
 			position: relative;
 			width: 100%;
 			z-index: 4;
-
-			&::-webkit-media-controls-play-button {
-				visibility: hidden;
-			}
+			max-height: 100vh;
 
 			&.is-visible {
 				display: block;
@@ -148,34 +149,20 @@
 		z-index: 5;
 		transform: translate(50%, -50%);
 		text-transform: uppercase;
-		background: $color-primary--black;
+		background: $color-primary--white;
 		border-radius: 50%;
 		border: transparent;
 		height: 10rem;
 		width: 10rem;
-		color: $color-primary--white;
+		color: $color-primary--black;
 		cursor: pointer;
 
 		&:focus {
 			outline: none;
 		}
 
-		.state--play {
+		&.is-hidden {
 			display: none;
-		}
-
-		.state--pause {
-			display: inline-block;
-		}
-
-		&.is-playing {
-			.state--play {
-				display: inline-block;
-			}
-
-			.state--pause {
-				display: none;
-			}
 		}
 	}
 }

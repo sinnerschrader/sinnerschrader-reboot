@@ -21,16 +21,16 @@
 		white-space: nowrap;
 		transition: transform 500ms ease;
 
-		.is-font-ogg {
-			font-family: $font-serif;
-		}
-
 		@include bp-xs() {
 			font-size: 6rem;
 		}
 
 		@include bp-tablet() {
 			font-size: 7rem;
+		}
+
+		.is-font-ogg {
+			font-family: $font-serif;
 		}
 	}
 

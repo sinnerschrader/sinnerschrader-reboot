@@ -36,18 +36,6 @@ class Video {
 		this.video.previewElement.classList.add("is-hidden");
 		this.video.videoElement.classList.add("is-visible");
 		this.video.videoElement.setAttribute("preload", "auto");
-
-		if (this.isTouchDevice()) {
-			this.fullscreenOnMobile();
-		}
-	}
-
-	fullscreenOnMobile() {
-		this.video.videoElement.requestFullscreen().then(() => this.video.videoElement.play());
-	}
-
-	isTouchDevice() {
-		return "ontouchstart" in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
 	}
 }
 

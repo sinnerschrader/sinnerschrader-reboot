@@ -129,14 +129,18 @@
 		}
 
 		&-element {
-			display: none;
+			display: block;
+			visibility: hidden;
+			height: 0;
+			width: 0;
 			position: relative;
-			width: 100%;
 			z-index: 4;
 			max-height: 100vh;
 
 			&.is-visible {
-				display: block;
+				visibility: visible;
+				width: 100%;
+				height: auto;
 			}
 		}
 	}

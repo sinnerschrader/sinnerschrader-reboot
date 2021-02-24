@@ -7,9 +7,29 @@
 	text-transform: $uppercase;
 
 	&__logo {
-		@include interactive-100();
-
+		position: relative;
 		margin: auto 0;
+
+		&--sinnerschrader {
+			@include interactive-100();
+
+			color: $color-primary--black;
+			margin: 0;
+			position: relative;
+		}
+
+		&--accenture {
+			font-family: $font-sans-serif-light;
+			font-size: 0.8rem;
+			margin: 0;
+			text-transform: none;
+			position: absolute;
+			min-width: 200px;
+		}
+
+		&--accenture-bold {
+			font-family: $font-sans-serif-semibold;
+		}
 	}
 
 	&__list {

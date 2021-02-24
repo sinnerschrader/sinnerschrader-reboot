@@ -128,7 +128,7 @@ export class Locations {
 				};
 			}
 
-			this.timeouts.push(setTimeout(animationCallback, 200));
+			this.timeouts.push(setTimeout(animationCallback, 250));
 		});
 	};
 

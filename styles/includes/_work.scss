@@ -118,6 +118,7 @@
 			width: 100%;
 			z-index: 4;
 			max-height: 100vh;
+			object-fit: contain;
 
 			@include bp-xs() {
 				width: 150vw;

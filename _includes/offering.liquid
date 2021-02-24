@@ -1,20 +1,20 @@
 <section class="offering">
-  {% include section-header, title: "Offering", number: "02" %}
+  {% include section-header, title: "Our Offer", number: "02" %}
   <div class="offering--wrapper">
 	  <div class="offering__heading-wrapper">
-		  <h2 class="offering__heading-top">
+		  <h3 class="offering__heading-top">
 			  Insight <span class="is-font-ogg"> & Direction - </span>Products <span class="is-font-ogg">& Services</span>
-		  </h2>
-		  <h2 class="offering__heading-bottom">
-			  <span class="is-font-ogg">Digital Platforms -</span> Marketing <span class="is-font-ogg">Growth</span>
-		  </h2>
+		  </h3>
+		  <h3 class="offering__heading-bottom">
+			  Digital <span class="is-font-ogg"> Platforms -</span> Marketing <span class="is-font-ogg">& Growth</span>
+		  </h3>
 	  </div>
 
 	  <div class="offering--info grid">
 		  <div class="swiper-wrapper">
 			  {% for offering in offerings %}
 			  <div class="swiper-slide">
-				  <h3 class="offering__title">{{ offering.title }}</h3>
+				  <h4 class="offering__title">{{ offering.title }}</h4>
 				  <ul class="offering__list">
 					  {% for item in offering.list %}
 					  <li class="offering__item">{{ item.item }}</li>

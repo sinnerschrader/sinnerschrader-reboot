@@ -108,28 +108,37 @@
 		}
 	}
 
-	&__header > * {
-		display: block;
-
+	&__header {
 		@include bp-xs() {
-			display: inline-block;
-
-			&:nth-child(2),
-			&:nth-child(3) {
-				margin-left: initial;
-			}
-
-			&:nth-child(2) {
+			> *:nth-child(2) {
 				@include headline-201();
 			}
 		}
 
-		&:nth-child(2) {
-			margin-left: 3rem;
+		@include bp-tablet() {
+			display: flex;
+			flex-flow: column nowrap;
+
+			> *:nth-child(2) {
+				margin-left: 3rem;
+			}
+
+			> *:nth-child(3) {
+				margin-left: 6rem;
+			}
 		}
 
-		&:nth-child(3) {
-			margin-left: 6rem;
+		@include bp-desktop() {
+			display: flex;
+			flex-flow: column nowrap;
+
+			> *:nth-child(2) {
+				margin-left: 3rem;
+			}
+
+			> *:nth-child(3) {
+				margin-left: 6rem;
+			}
 		}
 	}
 }

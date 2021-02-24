@@ -12,7 +12,7 @@
     "clean": "rimraf ./_site/",
     "11ty:build": "eleventy",
     "11ty:watch": "eleventy --serve",
-    "esbuild:build": "esbuild ./_includes/js/main.js --outfile=_site/bundle.js --bundle",
+    "esbuild:build": "esbuild ./_includes/js/main.js --outfile=_site/bundle.js --bundle --minify",
     "esbuild:watch": "esbuild ./_includes/js/main.js --outfile=_site/bundle.js --bundle --watch",
     "responsiveImages": "rimraf ./_site/assets/images/ && node sharp.js",
     "stylelint": "stylelint styles/**/*.scss"

@@ -1,16 +1,16 @@
 <section>
     <div class="stage grid">
-        <div class="stage__title col-start-2 col-end-5
+        <div class="stage__title col-start-2 col-end-6
             col-end-12-xs">
-            <h1><span class="headline-101 slide-in" data-delay="0s">brains</span>
+            <h1 class="stage__headline"><span class="headline-101 slide-in" data-delay="0s">brains</span>
                 <br>
                 <span class="slide-in" data-delay="0.3s">that build</span></h1>
         </div>
-        <div class="stage__video col-start-6 col-end-12 col-start-2-xs
+        <div class="stage__video col-start-6 col-end-11 col-start-2-xs
             col-end-12-xs">
-            <video class="stage__video" autoplay muted loop >
-				<source src="./assets/faces-3d.webm" type="video/webm" />
-				<source src="./assets/faces-3d.mp4" type="video/mp4" />
+            <video class="stage__video__item" autoplay muted loop playsinline>
+				{% comment %} <source src="./assets/faces-3d.webm" type="video/webm" /> {% endcomment %}
+				<source src="./assets/face-square.mp4" type="video/mp4" />
 			</video>
         </div>
         <div class="stage__overlap col-start-1 col-end-11"></div>

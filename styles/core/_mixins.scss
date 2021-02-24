@@ -344,6 +344,7 @@
 	@include interactive-shared();
 
 	font-family: $font-code;
+	text-transform: uppercase;
 }
 
 @mixin default-animation($property) {

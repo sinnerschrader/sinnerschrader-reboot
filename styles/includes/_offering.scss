@@ -58,6 +58,8 @@
 	}
 
 	&__item {
+		@include paragraph-200();
+
 		padding-bottom: 0.8rem;
 	}
 }

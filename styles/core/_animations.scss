@@ -8,20 +8,20 @@
 
 .switch {
 	display: inline-block;
-	height: 4rem;
+	height: 4.2rem;
 	position: relative;
 	text-align: left;
 
 	@include bp-xs {
-		height: 2.6rem;
+		height: 2.9rem;
 	}
 
 	@include bp-s {
-		height: 3.4rem;
+		height: 3.6rem;
 	}
 
 	@include bp-m {
-		height: 3.4rem;
+		height: 3.6rem;
 	}
 
 	.switch-item {

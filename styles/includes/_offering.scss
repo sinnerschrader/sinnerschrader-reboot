@@ -25,22 +25,22 @@
 		white-space: nowrap;
 		transition: transform 500ms ease;
 
-		&.is-mobile {
-			display: none;
-		}
-
 		@include bp-xs() {
 			font-size: 6rem;
 			margin-bottom: 0.8rem;
-
-			&.is-mobile {
-				display: block;
-				margin: 0 0 0.8rem;
-			}
 		}
 
 		@include bp-tablet() {
 			font-size: 7rem;
+		}
+
+		&.is-mobile {
+			display: none;
+
+			@include bp-xs() {
+				display: block;
+				margin: 0 0 0.8rem;
+			}
 		}
 
 		.is-font-ogg {

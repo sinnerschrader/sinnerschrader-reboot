@@ -4,6 +4,8 @@ class OfferingHeader {
 	textContainer = document.querySelector(".offering__heading-wrapper");
 	textPathTop = document.querySelector(".offering__heading-top");
 	textPathBottom = document.querySelector(".offering__heading-bottom");
+	textPathTopMobile = document.querySelector(".offering__heading-top.is-mobile");
+	textPathBottomMobile = document.querySelector(".offering__heading-bottom.is-mobile");
 
 	constructor() {
 		this.init();
@@ -18,8 +20,15 @@ class OfferingHeader {
 	}
 
 	updateTextPathOffset(offsetTop, offsetBottom) {
-		this.textPathTop.style.transform = `translateX(${offsetTop}px)`;
-		this.textPathBottom.style.transform = `translateX(${offsetBottom}px)`;
+		if (document.documentElement.clientWidth < 600) {
+			this.textPathTop.style.transform = `translateX(${offsetTop}px)`;
+			this.textPathTopMobile.style.transform = `translateX(${offsetBottom}px)`;
+			this.textPathBottom.style.transform = `translateX(${offsetTop}px)`;
+			this.textPathBottomMobile.style.transform = `translateX(${offsetBottom}px)`;
+		} else {
+			this.textPathTop.style.transform = `translateX(${offsetTop}px)`;
+			this.textPathBottom.style.transform = `translateX(${offsetBottom}px)`;
+		}
 	}
 
 	scrollHandler() {

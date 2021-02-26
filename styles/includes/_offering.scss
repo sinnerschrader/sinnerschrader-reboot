@@ -46,6 +46,12 @@
 		.is-font-ogg {
 			font-family: $font-serif;
 		}
+
+		@media (prefers-reduced-motion: reduce) {
+			position: relative;
+			left: 50%;
+			transform: translateX(-50%);
+		}
 	}
 
 	&--wrapper {

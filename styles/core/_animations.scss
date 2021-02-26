@@ -34,6 +34,14 @@
 		&:nth-child(2) {
 			animation-delay: 3s;
 		}
+
+		@media (prefers-reduced-motion: reduce) {
+			animation: none;
+
+			&:nth-child(1) {
+				opacity: 1;
+			}
+		}
 	}
 }
 

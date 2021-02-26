@@ -5,6 +5,8 @@ class BackgroundScrollAnimation {
 	animationOffsetTop = 300;
 	animationOffsetBottom = 500;
 
+	showAnimations = window.matchMedia("(prefers-reduced-motion: no-preference)");
+
 	constructor() {
 		this.init();
 	}
@@ -42,7 +44,9 @@ class BackgroundScrollAnimation {
 	}
 
 	rotateCircle() {
-		this.circleElement.style.transform = `rotate(${window.pageYOffset / 4}deg)`;
+		if (this.showAnimations.matches) {
+			this.circleElement.style.transform = `rotate(${window.pageYOffset / 4}deg)`;
+		}
 	}
 
 	isInViewport(el) {

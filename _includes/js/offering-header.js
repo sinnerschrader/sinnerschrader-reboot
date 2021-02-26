@@ -7,6 +7,8 @@ class OfferingHeader {
 	textPathTopMobile = document.querySelector(".offering__heading-top.is-mobile");
 	textPathBottomMobile = document.querySelector(".offering__heading-bottom.is-mobile");
 
+	showAnimations = window.matchMedia("(prefers-reduced-motion: no-preference)");
+
 	constructor() {
 		this.init();
 	}
@@ -38,7 +40,9 @@ class OfferingHeader {
 			let offsetTop = scrollPercent * this.textPathTop.clientWidth * 0.5 - this.textPathTop.clientWidth / 4;
 			let offsetBottom = scrollPercent * this.textPathBottom.clientWidth * -0.75;
 
-			this.updateTextPathOffset(offsetTop, offsetBottom);
+			if (this.showAnimations.matches) {
+				this.updateTextPathOffset(offsetTop, offsetBottom);
+			}
 		});
 	}
 }

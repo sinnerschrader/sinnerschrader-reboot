@@ -44,16 +44,15 @@
 		text-transform: uppercase;
 		transition: box-shadow 0.3s ease-out, transform 0.3s ease-out;
 		width: 8rem;
+	}
+	@media (prefers-reduced-motion: no-preference) {
+		&__link:hover {
+			box-shadow: inset 0 0 0 10rem $color-secondary--yellow;
+			transition: box-shadow 0.3s ease-in, transform 0.3s ease-in;
+			transform: scale(0.8);
 
-		@media (prefers-reduced-motion: no-preference) {
-			&:hover {
-				box-shadow: inset 0 0 0 10rem $color-secondary--yellow;
-				transition: box-shadow 0.3s ease-in, transform 0.3s ease-in;
-				transform: scale(0.8);
-
-				.text-scale {
-					transform: scale(0.9);
-				}
+			.text-scale {
+				transform: scale(0.9);
 			}
 		}
 	}

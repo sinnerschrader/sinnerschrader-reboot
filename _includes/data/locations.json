@@ -8,7 +8,7 @@
 		"imageFallbackLarge": "Berlin2.jpg",
 		"studios": [
 			{
-				"name": "SinnerSchrader Deutschland",
+				"name": "SinnerSchrader",
 				"street": "Bergmannstraße 72",
 				"postal": "10961 Berlin, Germany",
 				"tel": "+49 30 34 65 59 45 - 0",
@@ -32,7 +32,7 @@
 		"imageFallbackLarge": "Frankfurt2.jpg",
 		"studios": [
 			{
-				"name": "SinnerSchrader Deutschland",
+				"name": "SinnerSchrader",
 				"street": "Mayfarthstraße 15",
 				"postal": "60314 Frankfurt am Main, Germany",
 				"tel": "+49 69 42 72 64 50 - 0",
@@ -49,7 +49,7 @@
 		"imageFallbackLarge": "Hamburg2.jpg",
 		"studios": [
 			{
-				"name": "SinnerSchrader Deutschland",
+				"name": "SinnerSchrader",
 				"street": "Völckersstr. 38",
 				"postal": "22765 Hamburg, Germany",
 				"tel": "+49 40 39 88 55-0",
@@ -80,7 +80,7 @@
 		"imageFallbackLarge": "Munich2.jpg",
 		"studios": [
 			{
-				"name": "SinnerSchrader Deutschland",
+				"name": "SinnerSchrader",
 				"street": "Schackstr. 3",
 				"postal": "80539 Munich, Germany",
 				"tel": "+49 89 20 60 26 - 800",

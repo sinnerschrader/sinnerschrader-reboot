@@ -12,8 +12,10 @@
 				{% endif %}
 
 			<li class="locations__navigation-item">
-				<button class="{{ isSelected }} locations__navigation-button copy--gray" id="locations__navigation-button-{{ location.name }}">
-					{{ location.name }}
+				<button class="{{ isSelected }} locations__navigation-button copy--gray" id="locations__navigation-button-{{ location.id }}">
+
+						{{ location.name }}
+		
 				</button>
 			</li>
 
@@ -30,7 +32,7 @@
 			{% endif %}
 
 		<div class="locations__content {{ isHidden }} locations__image-wrapper-small
-                locations__content-{{ location.name }}">
+                locations__content-{{ location.id }}">
 
         {% if forloop.first %}
           {% assign desktopImgSmall = "assets/images/desktop/" | append: location.imageSmall %}
@@ -53,7 +55,7 @@
       </div>
 
       <div class="locations__content {{ isHidden }} locations__image-wrapper-large
-                locations__content-{{ location.name }} image-delay">
+                locations__content-{{ location.id }} image-delay">
 
         {% if forloop.first %}
           {% assign desktopImgLarge = "assets/images/desktop/" | append: location.imageLarge %}
@@ -77,7 +79,7 @@
 
 		<div
 			class="locations__content {{ isHidden }} locations__studio-info
-                locations__content-{{ location.name }}"
+                locations__content-{{ location.id }}"
 		>
 			<div class="locations__studio-info-grid">
 				{% for studio in location.studios %}

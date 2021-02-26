@@ -38,10 +38,10 @@ export class Locations {
 
 	loadLocationButtons = () => {
 		this.locationButtons = this.data.map((location) => {
-			const link = document.getElementById(this.linkId(location.name));
+			const link = document.getElementById(this.linkId(location.id));
 
 			if (link) {
-				link.addEventListener("click", () => this.renderSelectedLocation(location.name));
+				link.addEventListener("click", () => this.renderSelectedLocation(location.id));
 			}
 
 			return link;
@@ -50,7 +50,7 @@ export class Locations {
 
 	loadLocationContainers = () => {
 		this.locationContainers = this.data
-			.map((location) => document.getElementsByClassName(this.contentClassName(location.name)))
+			.map((location) => document.getElementsByClassName(this.contentClassName(location.id)))
 			.reduce((acc, current) => [...acc, ...current], []);
 	};
 
@@ -110,7 +110,7 @@ export class Locations {
 		this.locationContainers.forEach((container) => {
 			if (!container) return;
 
-			const shownClassName = this.contentClassName(newLocationData.name);
+			const shownClassName = this.contentClassName(newLocationData.id);
 			const isShown = container.classList.contains(shownClassName);
 
 			this.setPictureSrc(container, isShown, newLocationData);
@@ -138,7 +138,7 @@ export class Locations {
 		const newButtonId = this.linkId(newName);
 		this.renderLocationButtons(newButtonId);
 
-		const newLocationData = this.data.find((location) => location.name === newName);
+		const newLocationData = this.data.find((location) => location.id === newName.toLowerCase());
 		this.renderLocationContainers(newLocationData);
 	};
 }

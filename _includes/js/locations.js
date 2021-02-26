@@ -135,7 +135,7 @@ export class Locations {
 	};
 
 	renderSelectedLocation = (newName) => {
-		const newButtonId = this.linkId(newName);
+		const newButtonId = this.linkId(newName).toLowerCase();
 		this.renderLocationButtons(newButtonId);
 
 		const newLocationData = this.data.find((location) => location.id === newName.toLowerCase());

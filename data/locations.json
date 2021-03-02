@@ -1,5 +1,6 @@
 [
 	{
+		"id": "berlin",
 		"name": "Berlin",
 		"imageSmall": "Berlin1.webp",
 		"imageLarge": "Berlin2.webp",
@@ -7,7 +8,7 @@
 		"imageFallbackLarge": "Berlin2.jpg",
 		"studios": [
 			{
-				"name": "SinnerSchrader Deutschland GmbH",
+				"name": "SinnerSchrader",
 				"street": "Bergmannstraße 72",
 				"postal": "10961 Berlin, Germany",
 				"tel": "+49 30 34 65 59 45 - 0",
@@ -23,6 +24,7 @@
 		]
 	},
 	{
+		"id": "frankfurt",
 		"name": "Frankfurt",
 		"imageSmall": "Frankfurt1.webp",
 		"imageLarge": "Frankfurt2.webp",
@@ -30,7 +32,7 @@
 		"imageFallbackLarge": "Frankfurt2.jpg",
 		"studios": [
 			{
-				"name": "SinnerSchrader Deutschland GmbH",
+				"name": "SinnerSchrader",
 				"street": "Mayfarthstraße 15",
 				"postal": "60314 Frankfurt am Main, Germany",
 				"tel": "+49 69 42 72 64 50 - 0",
@@ -39,14 +41,15 @@
 		]
 	},
 	{
-		"name": "Hamburg",
+		"id": "hamburg",
+		"name": "Hamburg HQ",
 		"imageSmall": "Hamburg1.webp",
 		"imageLarge": "Hamburg2.webp",
 		"imageFallbackSmall": "Hamburg1.jpg",
 		"imageFallbackLarge": "Hamburg2.jpg",
 		"studios": [
 			{
-				"name": "SinnerSchrader Deutschland GmbH",
+				"name": "SinnerSchrader",
 				"street": "Völckersstr. 38",
 				"postal": "22765 Hamburg, Germany",
 				"tel": "+49 40 39 88 55-0",
@@ -69,6 +72,7 @@
 		]
 	},
 	{
+		"id": "munich",
 		"name": "Munich",
 		"imageSmall": "Munich1.webp",
 		"imageLarge": "Munich2.webp",
@@ -76,7 +80,7 @@
 		"imageFallbackLarge": "Munich2.jpg",
 		"studios": [
 			{
-				"name": "SinnerSchrader Deutschland GmbH",
+				"name": "SinnerSchrader",
 				"street": "Schackstr. 3",
 				"postal": "80539 Munich, Germany",
 				"tel": "+49 89 20 60 26 - 800",
@@ -85,6 +89,7 @@
 		]
 	},
 	{
+		"id": "prague",
 		"name": "Prague",
 		"imageSmall": "Prague1.webp",
 		"imageLarge": "Prague2.webp",
@@ -101,6 +106,7 @@
 		]
 	},
 	{
+		"id": "zurich",
 		"name": "Zurich",
 		"imageSmall": "Zurich1.webp",
 		"imageLarge": "Zurich2.webp",

@@ -50,7 +50,10 @@ module.exports = (eleventyConfig) => {
 	});
 
 	eleventyConfig.addPassthroughCopy({
-		"./_includes/assets/": "./assets/",
+		"./_includes/assets/fonts": "./assets/fonts",
+		"./_includes/assets/videos": "./assets/videos",
+		"./_includes/assets/svg": "./assets/svg",
+		"./_includes/assets/meta-assets": "./assets/meta-assets",
 		"./_includes/data/*": "./data/",
 	});
 

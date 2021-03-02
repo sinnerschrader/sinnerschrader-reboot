@@ -16,14 +16,25 @@
 				<source src="/assets/videos/work-video-loop.webm" type="video/webm" />
 				<source src="/assets/videos/work-video-loop.mp4" type="video/mp4" />
 			</video>
-			<video
-					class="work__video-element"
-					src="/assets/videos/s2-cases.mp4"
-					controls
-					preload="none"
-					disablepictureinpicture
-					controlslist="nodownload"
-			></video>
+			<video class="work__video-element"
+			       controls
+			       preload="none"
+			       disablepictureinpicture
+			       controlslist="nodownload"
+			>
+				<source src="/assets/videos/s2-cases.webm"
+						type="video/webm"
+						media="screen and (min-width: 600)"/>
+				<source src="/assets/videos/s2-cases.mp4"
+				        type="video/mp4"
+				        media="screen and (min-width: 600)"/>
+				<source src="/assets/videos/s2-cases-mobile.webm"
+				        type="video/webm"
+				        media="screen and (max-width: 600)"/>
+				<source src="/assets/videos/s2-cases-mobile.mp4"
+				        type="video/mp4"
+				        media="screen and (max-width: 600)"/>
+			</video>
 			<button class="work__video-media-control">
 				Play Reel
 			</button>

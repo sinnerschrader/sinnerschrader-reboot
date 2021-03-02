@@ -1,7 +1,7 @@
 @import "../core/mixins";
 
 .overlap {
-	overflow-y: visible;
+	overflow: hidden;
 	position: relative;
 
 	&::after {
@@ -69,12 +69,11 @@
 
 	&__line {
 		background-color: $color-secondary--yellow;
-		height: 16rem;
+		height: 10rem;
 		left: 0;
 		position: absolute;
 		top: 100%;
-		width: 0.2rem;
-
+		width: 0.3rem;
 		@include bp-xs {
 			display: none;
 		}

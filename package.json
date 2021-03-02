@@ -8,7 +8,7 @@
     "postinstall": "husky install && patch-package",
     "start": "npm run start:dev",
     "start:dev": "run-p clean 11ty:watch esbuild:watch responsiveImages",
-    "build": "run-s clean esbuild:build 11ty:build responsiveImages",
+    "build": "run-s clean responsiveImages 11ty:build esbuild:build ",
     "clean": "rimraf ./_site/",
     "11ty:build": "eleventy",
     "11ty:watch": "eleventy --serve",

@@ -5,7 +5,7 @@ class Offerings {
 		this.swiper = {};
 		this.sliderOptions = {
 			direction: "horizontal",
-			spaceBetween: 12,
+			spaceBetween: 24,
 			breakpoints: {
 				300: {
 					slidesPerView: "auto",
@@ -14,7 +14,9 @@ class Offerings {
 				450: {
 					slidesPerView: 2,
 					grabCursor: true,
-					spaceBetween: 24,
+				},
+				700: {
+					slidesPerView: 3,
 				},
 				900: {
 					slidesPerView: 4,

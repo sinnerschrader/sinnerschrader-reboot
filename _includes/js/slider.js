@@ -7,6 +7,7 @@ class Slider {
 			direction: "horizontal",
 			slidesPerView: "auto",
 			spaceBetween: 12,
+			slidesOffsetAfter: 24,
 			breakpoints: {
 				// when window width is >= 600
 				500: {

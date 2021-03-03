@@ -70,6 +70,7 @@
 
 			@include bp-xs() {
 				width: 50%;
+				padding: $spacing--400 0;
 			}
 
 			@include bp-s() {
@@ -84,6 +85,10 @@
 		img {
 			max-height: 7.2rem;
 			width: 100%;
+
+			@include bp-xs() {
+				max-height: 4rem;
+			}
 		}
 	}
 

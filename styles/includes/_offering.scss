@@ -24,6 +24,8 @@
 		line-height: 120%;
 		white-space: nowrap;
 		transition: transform 500ms ease;
+		-webkit-transform-style: preserve-3d;
+		-webkit-backface-visibility: hidden;
 
 		@include bp-xs() {
 			font-size: 6rem;

@@ -75,6 +75,7 @@ export class Locations {
 			if (isSelected) {
 				this.locationIndicator.style.top = button.offsetTop + button.clientHeight / 2 + "px";
 				button.classList.add(this.BUTTON_SELECTED_CLASS);
+				this.locationIndicator.classList.add("selected-indicator");
 			} else {
 				button.classList.remove(this.BUTTON_SELECTED_CLASS);
 			}

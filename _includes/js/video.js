@@ -25,7 +25,12 @@ class Video {
 			this.displayVideo();
 		}
 
-		this.video.videoElement.paused === true ? this.video.videoElement.play() : this.video.videoElement.pause();
+		if (this.video.videoElement.paused === true) {
+			this.video.videoElement.play();
+			this.video.videoElement.focus();
+		} else {
+			this.video.videoElement.pause();
+		}
 		this.hidePlayBtn();
 	}
 

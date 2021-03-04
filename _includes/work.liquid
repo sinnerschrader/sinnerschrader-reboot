@@ -1,14 +1,9 @@
 <div class="work">
 	<div class="grid">
 		<h3 class="work__headline col-start-6 col-start-1-xs col-end-12">
-			<span class="slide-in" data-delay="0s">
-				{{ data.work.headline.top }}
-			</span>
-				<br/>
-			<span class="slide-in" data-delay="0.3s">
-				{{ data.work.headline.bottomFirst }}
-				<span class="headline-201">{{ data.work.headline.bottomSecond }}</span><span class="headline-202">{{ data.work.headline.bottomThird }}</span>
-			</span>
+			<div class="clip"><span class="slide-in" data-delay="0s">{{ data.work.headline.top }}</span></div>
+				<br />
+			<div class="clip"><span class="slide-in" data-delay="0.1s">{{ data.work.headline.bottomFirst }}<span class="headline-201"> {{ data.work.headline.bottomSecond }}</span><span class="headline-202">{{ data.work.headline.bottomThird }}</span></span></div>
 		</h3>
 	</div>
 	<div class="work__inner-wrapper">

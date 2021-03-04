@@ -6,22 +6,45 @@
 	opacity: 0;
 }
 
+.clip {
+	display: inline-block;
+	overflow: hidden;
+	width: fit-content;
+
+	&__text-large {
+		padding: 1rem 2rem;
+
+		@include bp-xs() {
+			padding: 0.3rem 1.5rem;
+		}
+	}
+
+	&__text-small {
+		padding: 0.4rem 0;
+	}
+}
+
 .switch {
 	display: inline-block;
-	height: 4.2rem;
+	height: 4.4rem;
 	position: relative;
 	text-align: left;
+	overflow: hidden;
+	width: 20rem;
 
 	@include bp-xs {
-		height: 2.9rem;
+		height: 3rem;
+		width: 13rem;
 	}
 
 	@include bp-s {
-		height: 3.6rem;
+		height: 3.7rem;
+		width: 15rem;
 	}
 
 	@include bp-m {
-		height: 3.6rem;
+		height: 3.65rem;
+		width: 15rem;
 	}
 
 	.switch-item {

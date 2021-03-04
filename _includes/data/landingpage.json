@@ -118,7 +118,7 @@
 		"headlineCopy": {
 			"headline": {
 				"delayTop": "0s",
-				"delayBottom": "0.5s",
+				"delayBottom": "0.1s",
 				"top": "We are",
 				"bottom": "community"
 			},

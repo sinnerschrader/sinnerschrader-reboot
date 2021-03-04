@@ -15,6 +15,7 @@ export class SlideIn {
 
 				if (entry.intersectionRatio > 0) {
 					entry.target.style.animation = `slidein 0.5s ${entry.target.dataset.delay} forwards ease`;
+					observer.unobserve(entry.target);
 				} else {
 					entry.target.style.animation = "none";
 				}

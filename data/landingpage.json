@@ -1,0 +1,260 @@
+{
+	"stage": {
+		"headline": {
+			"topStart": "bra",
+			"topEnd": "ins",
+			"bottom": "that build"
+		},
+		"video": {
+			"webm": "/assets/videos/faces-3d.webm",
+			"mp4": "/assets/videos/s2-stage.mp4",
+			"reducedMotionFrame": "./assets/videos/s2-stage.mp4#t=0.5"
+		}
+	},
+	"overlap": {
+		"leftImage": {
+			"webpSrc": "/assets/images/desktop/born_from_digital_1.webp",
+			"fallbackSrc": "/assets/images/fallback/born_from_digital_1.jpg",
+			"altText": "Person holding a glass infront of half of the face"
+		},
+		"rightImage": {
+			"webpSrc": "/assets/images/desktop/born_from_digital_2.webp",
+			"fallbackSrc": "/assets/images/fallback/born_from_digital_2.jpg",
+			"altText": "Look down an office hallway where two people are talking"
+		},
+		"overlapCircleSrc": "/assets/svg/circle-overlap.svg",
+		"headline": {
+			"top": "Born",
+			"middle": "from",
+			"bottom": "digital,"
+		},
+		"copy": "we are working on tomorrow. Connecting diverse minds to create results that matter. We craft experiences for a more open, resilient, and optimistic world."
+	},
+	"offerings": {
+		"topHeadline": {
+			"first": "Insight ",
+			"second": "& Direction - ",
+			"third": "Products ",
+			"fourth": "& Services"
+		},
+		"bottomHeadline": {
+			"first": "Digital ",
+			"second": "Platforms - ",
+			"third": "Marketing",
+			"fourth": "& Growth"
+		},
+		"offeringList": [
+			{
+				"title": "Insight & Direction",
+				"list": [
+					{
+						"item": "Futurecasting & Ethnography"
+					},
+					{
+						"item": "Visioneering & Scenario Planning"
+					},
+					{
+						"item": "Service & Business Design"
+					},
+					{
+						"item": "Business Intelligence"
+					}
+				]
+			},
+			{
+				"title": "Products & Services",
+				"list": [
+					{
+						"item": "Research & Testing"
+					},
+					{
+						"item": "Ideation & Proof of Concepts"
+					},
+					{
+						"item": "Product Design & Development"
+					},
+					{
+						"item": "Quantitative Modelling"
+					}
+				]
+			},
+			{
+				"title": "Digital Platforms",
+				"list": [
+					{
+						"item": "UI/UX Transformation & Architecture"
+					},
+					{
+						"item": "Design Systems & Dev Ops"
+					},
+					{
+						"item": "eCommerce & Living Ecosystems"
+					},
+					{
+						"item": "Data Science & Engineering"
+					}
+				]
+			},
+			{
+				"title": "Marketing & Growth",
+				"list": [
+					{
+						"item": "Visual & Editorial Content"
+					},
+					{
+						"item": "Marketing & Personalization"
+					},
+					{
+						"item": "Performance & Growth"
+					},
+					{
+						"item": "Analytics"
+					}
+				]
+			}
+		]
+	},
+	"slider": {
+		"headlineCopy": {
+			"headline": {
+				"delayTop": "0s",
+				"delayBottom": "0.5s",
+				"top": "We are",
+				"bottom": "community"
+			},
+			"copy": {
+				"modifier": "copy--gray",
+				"text": "Every talent is special, every talent is needed. That’s why we live in a culture of cultures, open and inclusive. Welcoming everyone that welcomes everyone."
+			}
+		},
+		"slides": [
+			{
+				"mobileSrc": "./assets/images/mobile/culture1.webp",
+				"tabletSrc": "./assets/images/tablet/culture1.webp",
+				"desktopSrc": "./assets/images/desktop/culture1.webp",
+				"fallbackSrc": "./assets/images/fallback/culture1.jpg",
+				"altText": "Person sitting at a desk in an office, a bonsai tree is seen in the foreground"
+			},
+			{
+				"mobileSrc": "./assets/images/mobile/culture2.webp",
+				"tabletSrc": "./assets/images/tablet/culture2.webp",
+				"desktopSrc": "./assets/images/desktop/culture2.webp",
+				"fallbackSrc": "./assets/images/fallback/culture2.jpg",
+				"altText": "Person swinging on an swing in an office with a floor in a geometric pattern"
+			},
+			{
+				"mobileSrc": "./assets/images/mobile/culture3.webp",
+				"tabletSrc": "./assets/images/tablet/culture3.webp",
+				"desktopSrc": "./assets/images/desktop/culture3.webp",
+				"fallbackSrc": "./assets/images/fallback/culture3.jpg",
+				"altText": "Person standing in a room wearing a motorcycle helmet"
+			},
+			{
+				"mobileSrc": "./assets/images/mobile/culture4.webp",
+				"tabletSrc": "./assets/images/tablet/culture4.webp",
+				"desktopSrc": "./assets/images/desktop/culture4.webp",
+				"fallbackSrc": "./assets/images/fallback/culture4.jpg",
+				"altText": "Dog of the breed french bulldog sitting in an office hallway"
+			},
+			{
+				"mobileSrc": "./assets/images/mobile/culture5.webp",
+				"tabletSrc": "./assets/images/tablet/culture5.webp",
+				"desktopSrc": "./assets/images/desktop/culture5.webp",
+				"fallbackSrc": "./assets/images/fallback/culture5.jpg",
+				"altText": "Person sitting on an orange moped in front of an orange wall"
+			},
+			{
+				"mobileSrc": "./assets/images/mobile/culture6.webp",
+				"tabletSrc": "./assets/images/tablet/culture6.webp",
+				"desktopSrc": "./assets/images/desktop/culture6.webp",
+				"fallbackSrc": "./assets/images/fallback/culture6.jpg",
+				"altText": "Person wearing a VR headset"
+			}
+		]
+	},
+	"work": {
+		"headline": {
+			"top": "We push companies",
+			"bottomFirst": "out of their comfort",
+			"bottomSecond": "zo",
+			"bottomThird": "ne"
+		},
+		"previewVideo": {
+			"webmSrc": "/assets/videos/work-video-loop.webm",
+			"mp4Src": "/assets/videos/work-video-loop.mp4"
+		},
+		"caseVideo": {
+			"mobile": {
+				"webmSrc": "/assets/videos/s2-cases-mobile.webm",
+				"mp4Src": "/assets/videos/s2-cases-mobile.mp4"
+			},
+			"webmSrc": "/assets/videos/s2-cases.webm",
+			"mp4Src": "/assets/videos/s2-cases.mp4"
+		},
+		"reducedMotion": {
+			"webmSrc": "/assets/videos/work-video-loop.webm#t=2",
+			"mp4Src": "/assets/videos/work-video-loop.mp4#t=2"
+		},
+		"customVideoButton": {
+			"text": "Play Reel"
+		},
+		"logos": [
+			{
+				"imgSrc": "/assets/svg/VW.svg",
+				"altText": "VW logo"
+			},
+			{
+				"imgSrc": "/assets/svg/Audi.svg",
+				"altText": "Audi logo"
+			},
+			{
+				"imgSrc": "/assets/svg/Comdirect.svg",
+				"altText": "comdirect logo"
+			},
+			{
+				"imgSrc": "/assets/svg/ADAC.svg",
+				"altText": "ADAC logo"
+			},
+			{
+				"imgSrc": "/assets/svg/Telefonica.svg",
+				"altText": "Telefónica logo"
+			},
+			{
+				"imgSrc": "/assets/svg/Bosch.svg",
+				"altText": "Bosch logo"
+			},
+			{
+				"imgSrc": "/assets/svg/Roche.svg",
+				"altText": "Roche logo"
+			},
+			{
+				"imgSrc": "/assets/svg/Deutsche_Bank.svg",
+				"altText": "Deutsche Bank logo"
+			},
+			{
+				"imgSrc": "/assets/svg/Deutsche_Bahn.svg",
+				"altText": "Deutsche Bahn logo"
+			},
+			{
+				"imgSrc": "/assets/svg/Airbus.svg",
+				"altText": "Airbus logo"
+			}
+		]
+	},
+	"jobTeaser": {
+		"headline": {
+			"first": "We",
+			"second": "love",
+			"third": "thinkers",
+			"fourth": "doers",
+			"fifth": "that",
+			"sixth": "do.",
+			"seventh": "think."
+		},
+		"copy": "Ever thought of amplifying your impact on the world?<br /> Ever clicked on a call to action in a yellow circle?",
+		"button": {
+			"href": "https://sinnerschrader.jobs",
+			"text": "Join us"
+		}
+	}
+}

@@ -1,0 +1,35 @@
+.headline-copy {
+	&__headline {
+		font-size: 4.8rem;
+		max-width: 250px;
+
+		@include bp-xs() {
+			font-size: 3.2rem;
+			margin-bottom: 2.4rem;
+			max-width: 250px;
+		}
+
+		@include bp-s {
+			margin-bottom: 3.2rem;
+		}
+
+		.slide-in {
+			display: block;
+		}
+	}
+
+	&__copy {
+		font-size: 1.8rem;
+		margin: 0 0 9.6rem;
+		max-width: 360px;
+
+		@include bp-xs() {
+			margin-bottom: 6.4rem;
+			max-width: unset;
+		}
+
+		@include bp-s {
+			margin-bottom: 8rem;
+		}
+	}
+}

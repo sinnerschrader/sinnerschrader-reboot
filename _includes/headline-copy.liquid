@@ -1,0 +1,18 @@
+<h3 class="headline-copy__headline">
+	{% if data.headline.top %}
+		<span class="slide-in" data-delay="{{ data.headline.delayTop }}">
+			{{ data.headline.top }}
+		</span>
+	{% endif %}
+	{% if data.headline.bottom %}
+		<span class="headline-201 slide-in" data-delay="{{ data.headline.delayBottom }}">
+			{{ data.headline.bottom }}
+		</span>
+	{% endif %}
+	{% if data.headline.text %}
+		{{ data.headline.text }}
+	{% endif %}
+</h3>
+<p class="headline-copy__copy {{ data.copy.modifier }}">
+	{{ data.copy.text }}
+</p>

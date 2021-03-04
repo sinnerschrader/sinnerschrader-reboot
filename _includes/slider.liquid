@@ -1,16 +1,6 @@
 <div class="slider">
 	<div class="grid">
-		<h3 class="slider__heading">
-			<span class="slide-in" data-delay="0s">
-				{{ data.slider.headline.top }}
-			</span>
-			<span class="headline-201 slide-in" data-delay="0.5s">
-				{{ data.slider.headline.bottom }}
-			</span>
-		</h3>
-		<p class="slider__copy copy--gray">
-			{{ data.slider.copy }}
-		</p>
+		{% include headline-copy, data: data.slider.headlineCopy %}
 	</div>
 	<div class="swiper-container is-grid--right">
 		<div class="swiper-wrapper">

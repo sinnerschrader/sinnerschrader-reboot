@@ -1,26 +1,4 @@
 {
-	"navigation": {
-		"logo": {
-			"top": "SinnerSchrader",
-			"bottom": {
-				"start": "Part of ",
-				"middle": "Accenture",
-				"end": " Interactive"
-			}
-		},
-		"links": [
-			{
-				"ariaLabel": "Jobs",
-				"href": "https://sinnerschrader.jobs",
-				"linkText": "Jobs"
-			},
-			{
-				"ariaLabel": "News",
-				"href": "https://sinnerschrader.news",
-				"linkText": "News"
-			}
-		]
-	},
 	"stage": {
 		"headline": {
 			"topStart": "bra",
@@ -137,11 +115,18 @@
 		]
 	},
 	"slider": {
-		"headline": {
-			"top": "We are",
-			"bottom": "community"
+		"headlineCopy": {
+			"headline": {
+				"delayTop": "0s",
+				"delayBottom": "0.5s",
+				"top": "We are",
+				"bottom": "community"
+			},
+			"copy": {
+				"modifier": "copy--gray",
+				"text": "Every talent is special, every talent is needed. That’s why we live in a culture of cultures, open and inclusive. Welcoming everyone that welcomes everyone."
+			}
 		},
-		"copy": "Every talent is special, every talent is needed. That’s why we live in a culture of cultures, open and inclusive. Welcoming everyone that welcomes everyone.",
 		"slides": [
 			{
 				"mobileSrc": "./assets/images/mobile/culture1.webp",

@@ -2,20 +2,26 @@
     <div class="grid stage">
         <div class="stage__title col-start-2 col-end-6
             col-end-12-xs">
-            <h1 class="stage__headline"><span class="headline-101 slide-in" data-delay="0s">bra<span class="headline-202">ins</span></span>
+            <h1 class="stage__headline">
+	            <span class="headline-101 slide-in" data-delay="0s">
+		            {{ data.stage.headline.topStart }}<span class="headline-202">{{ data.stage.headline.topEnd }}</span>
+	            </span>
                 <br>
-                <span class="slide-in" data-delay="0.3s">that build</span>
+                <span class="slide-in"
+                      data-delay="0.3s">
+	                {{ data.stage.headline.bottom }}
+                </span>
             </h1>
         </div>
         <div class="stage__video col-start-6 col-end-11 col-start-2-xs
             col-end-12-xs">
             <video class="stage__video__item" autoplay muted loop playsinline>
-				{% comment %} <source src="/assets/videos/faces-3d.webm" type="video/webm" /> {% endcomment %}
-				<source src="/assets/videos/s2-stage.mp4" type="video/mp4" />
+				{% comment %} <source src="{{ data.stage.video.webm }}" type="video/webm" /> {% endcomment %}
+				<source src="{{ data.stage.video.mp4 }}" type="video/mp4" />
 			</video>
             <!-- Below video tag shows first frame if prefers-reduced-motion is enabled. To be replaced with image -->
             <video class="stage__video__item stage__video--reduced-motion">
-				<source src="./assets/videos/s2-stage.mp4#t=0.5" type="video/mp4" />
+				<source src="{{ data.stage.video.reducedMotionFrame }}" type="video/mp4" />
 			</video>
         </div>
         <div class="stage__overlap col-start-1 col-end-11"></div>

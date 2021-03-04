@@ -1,14 +1,13 @@
-<section class="overlap">
-	{% include section-header, title: "Idea", number: "01" %}
-
+<div class="overlap">
 	<div class="grid overlap__wrapper">
 		<div class="overlap__item overlap__item--img col-start-5 col-end-9
 			col-start-4-xs col-end-13-xs">
 			<picture class="overlap__img--right">
-				<source srcset="/assets/images/desktop/born_from_digital_2.webp" type="image/webp" alt=""
-					/>
-				<img src="/assets/images/fallback/born_from_digital_2.jpg" alt="Look down an office hallway
-					where two people are talking" class="parallax-slow"/>
+				<source srcset="{{ data.overlap.rightImage.webpSrc }}"
+				        type="image/webp" />
+				<img src="{{ data.overlap.rightImage.fallbackSrc }}"
+				     alt="{{ data.overlap.rightImage.altText }}"
+				     class="parallax-slow" />
 			</picture>
 			<div class="overlap__line-container">
 				<div class="overlap__line"></div>
@@ -18,24 +17,25 @@
 			col-start-1-xs col-end-6-xs">
 			<div class="overlap__circle-container">
 				<picture class="overlap__img--left">
-					<source srcset="/assets/images/desktop/born_from_digital_1.webp" type="image/webp" alt=""
-					/>
-					<img src="/assets/images/fallback/born_from_digital_1.jpg" alt="Person holding a glass
-						infront of half of the face" class="parallax-medium"/>
+					<source srcset="{{ data.overlap.leftImage.webpSrc }}"
+					        type="image/webp" />
+					<img src="{{ data.overlap.leftImage.fallbackSrc }}"
+					     alt="{{ data.overlap.leftImage.altText }}"
+					     class="parallax-medium"/>
 				</picture>
-				<img class="overlap__circle" src="/assets/svg/circle-overlap.svg" alt="" />
+				<img class="overlap__circle" src="{{ data.overlap.overlapCircleSrc }}" alt="" />
 			</div>
 		</div>
 		<article class="overlap__item overlap__txt col-start-9 col-end-12
 			col-start-1-xs col-end-12-xs">
 			<h3 class="overlap__header">
-				<span class="headline-201 slide-in" data-delay="0s">Born</span>
-				<span class="headline-202 slide-in" data-delay="0.5s">from</span>
-				<span class="slide-in" data-delay="0.7s">digital,</span>
+				<span class="headline-201 slide-in" data-delay="0s">{{ data.overlap.headline.top }}</span>
+				<span class="headline-202 slide-in" data-delay="0.5s">{{ data.overlap.headline.middle }}</span>
+				<span class="slide-in" data-delay="0.7s">{{ data.overlap.headline.bottom }}</span>
 			</h3>
 			<p class="copy--gray">
-				we are working on tomorrow. Connecting diverse minds to create results that matter. We craft experiences for a more open, resilient, and optimistic world.
+				{{ data.overlap.copy }}
 			</p>
 		</article>
 	</div>
-</section>
+</div>

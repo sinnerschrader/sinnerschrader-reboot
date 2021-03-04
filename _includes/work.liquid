@@ -1,81 +1,56 @@
-<section class="work">
-	{% include section-header, title: "Work", number: "04", type: "small" %}
-
+<div class="work">
 	<div class="grid">
 		<h3 class="work__headline col-start-6 col-start-1-xs col-end-12">
-			<span class="slide-in" data-delay="0s">We push companies</span>
+			<span class="slide-in" data-delay="0s">
+				{{ data.work.headline.top }}
+			</span>
 				<br/>
 			<span class="slide-in" data-delay="0.3s">
-				out of their comfort <span class="headline-201">zo</span><span class="headline-202">ne</span>
+				{{ data.work.headline.bottomFirst }}
+				<span class="headline-201">{{ data.work.headline.bottomSecond }}</span><span class="headline-202">{{ data.work.headline.bottomThird }}</span>
 			</span>
 		</h3>
 	</div>
 	<div class="work__inner-wrapper">
 		<div class="work__video-container">
 			<video class="work__video-preview-loop" autoplay muted playsinline loop>
-				<source src="/assets/videos/work-video-loop.webm" type="video/webm" />
-				<source src="/assets/videos/work-video-loop.mp4" type="video/mp4" />
+				<source src="{{ data.work.previewVideo.webmSrc }}" type="video/webm" />
+				<source src="{{ data.work.previewVideo.mp4Src }}" type="video/mp4" />
 			</video>
 			<video class="work__video-element"
 			       controls
 			       preload="none"
 			       disablepictureinpicture
-			       controlslist="nodownload"
-			>
-				<source src="/assets/videos/s2-cases.webm"
+			       controlslist="nodownload">
+				<source src="{{ data.work.caseVideo.webmSrc }}"
 						type="video/webm"
 						media="screen and (min-width: 600)"/>
-				<source src="/assets/videos/s2-cases.mp4"
+				<source src="{{ data.work.caseVideo.mp4Src }}"
 				        type="video/mp4"
 				        media="screen and (min-width: 600)"/>
-				<source src="/assets/videos/s2-cases-mobile.webm"
+				<source src="{{ data.work.caseVideo.mobile.webmSrc }}"
 				        type="video/webm"
 				        media="screen and (max-width: 600)"/>
-				<source src="/assets/videos/s2-cases-mobile.mp4"
+				<source src="{{ data.work.caseVideo.mobile.mp4Src }}"
 				        type="video/mp4"
 				        media="screen and (max-width: 600)"/>
 			</video>
 			<video class="work__video--reduced-motion">
-				<source src="/assets/videos/work-video-loop.webm#t=2" type="video/webm" />
-				<source src="/assets/videos/work-video-loop.mp4#t=2" type="video/mp4" />
+				<source src="{{ data.work.reducedMotion.webmSrc }}" type="video/webm" />
+				<source src="{{ data.work.reducedMotion.mp4Src }}" type="video/mp4" />
 			</video>
 			<button class="work__video-media-control">
-				Play Reel
+				{{ data.work.customVideoButton.text }}
 			</button>
 		</div>
 		<div class="grid">
 			<div class="work__logos">
-				<div class="work__logos-el-wrapper">
-					<img src="/assets/svg/VW.svg" alt="VW logo" />
-				</div>
-				<div class="work__logos-el-wrapper">
-					<img src="/assets/svg/Audi.svg" alt="Audi logo" />
-				</div>
-				<div class="work__logos-el-wrapper">
-					<img src="/assets/svg/Comdirect.svg" alt="comdirect logo" />
-				</div>
-				<div class="work__logos-el-wrapper">
-					<img src="/assets/svg/ADAC.svg" alt="ADAC logo" />
-				</div>
-				<div class="work__logos-el-wrapper">
-					<img src="/assets/svg/Telefonica.svg" alt="Telefónica logo" />
-				</div>
-				<div class="work__logos-el-wrapper">
-					<img src="/assets/svg/Bosch.svg" alt="Bosch logo" />
-				</div>
-				<div class="work__logos-el-wrapper">
-					<img src="/assets/svg/Roche.svg" alt="Roche logo" />
-				</div>
-				<div class="work__logos-el-wrapper">
-					<img src="/assets/svg/Deutsche_Bank.svg" alt="Deutsche Bank logo" />
-				</div>
-				<div class="work__logos-el-wrapper">
-					<img src="/assets/svg/Deutsche_Bahn.svg" alt="Deutsche Bahn logo" />
-				</div>
-				<div class="work__logos-el-wrapper">
-					<img src="/assets/svg/Airbus.svg" alt="Airbus logo" />
-				</div>
+				{% for logo in data.work.logos %}
+					<div class="work__logos-el-wrapper">
+						<img src="{{ logo.imgSrc }}" alt="{{ logo.altText }}" />
+					</div>
+				{% endfor %}
 			</div>
 		</div>
 	</div>
-</section>
+</div>

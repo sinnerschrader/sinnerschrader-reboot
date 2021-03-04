@@ -1,27 +1,38 @@
-<section class="job-teaser">
-	{% include section-header, title: "Hey There", number: "05", type: "large" %}
+<div class="job-teaser">
 	<div class="grid job-teaser__wrapper">
 		<div class="col-start-4 col-end-10 col-start-3-s col-end-11-s col-start-1-xs
 			col-end-13-xs">
 			<h3 class="job-teaser__header">
-				We
-				<span class="job-teaser__sketch"> love </span>
-				<span class="switch">
-					<span class="headline-201 switch-item">thinkers</span>
-					<span class="headline-201 switch-item">doers</span>
+				{{ data.jobTeaser.headline.first }}
+				<span class="job-teaser__sketch">
+					{{ data.jobTeaser.headline.second }}
 				</span>
-				<br/>that
-					<span class="switch">
-						<span class="headline-201 switch-item">do.</span>
-						<span class="headline-201 switch-item">think.</span>
+				<span class="switch">
+					<span class="headline-201 switch-item">
+						{{ data.jobTeaser.headline.third }}
 					</span>
-				</h3>
-				<p class="job-teaser__text copy--gray">
-					Ever thought of amplifying your impact on the world?<br /> Ever clicked on a
-					call to action in a yellow circle?
-				</p>
-				<a class="job-teaser__link" rel="external nofollow"
-					href="https://sinnerschrader.jobs"><span class="text-scale">Join us</span></a>
-			</div>
+					<span class="headline-201 switch-item">
+						{{ data.jobTeaser.headline.fourth }}
+					</span>
+				</span>
+				<br/>
+				{{ data.jobTeaser.headline.fifth }}
+				<span class="switch">
+					<span class="headline-201 switch-item">
+						{{ data.jobTeaser.headline.sixth }}
+					</span>
+					<span class="headline-201 switch-item">
+						{{ data.jobTeaser.headline.seventh }}
+					</span>
+				</span>
+			</h3>
+			<p class="job-teaser__text copy--gray">
+				{{ data.jobTeaser.copy }}
+			</p>
+			<a class="job-teaser__link" rel="external nofollow"
+				href="{{ data.jobTeaser.button.href }}">
+				<span class="text-scale">{{ data.jobTeaser.button.text }}</span>
+			</a>
 		</div>
-	</section>
+	</div>
+</div>

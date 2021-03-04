@@ -60,6 +60,7 @@ module.exports = (eleventyConfig) => {
 	return {
 		dir: {
 			data: "./_includes/data/",
+			layouts: "_includes/layouts",
 		},
 	};
 };

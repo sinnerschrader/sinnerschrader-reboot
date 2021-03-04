@@ -1,18 +1,53 @@
 ---
 title: SinnerSchrader
-layout: default
+layout: default.liquid
 permalink: index.html
 homepage: true
+renderData: landingpage
 ---
 
 <script async src="bundle.js" type="text/javascript"></script>
 
-{% include navigation %}
-{% include stage %}
-{% include overlap %}
-{% include offering %}
-{% include slider %}
-{% include work %}
-{% include job-teaser %}
-{% include locations %}
-{% include footer %}
+<header>
+	{% include navigation, data: landingpage %}
+</header>
+
+<main>
+	{% include stage, data: landingpage %}
+
+	<section>
+		{% include section-header, title: "Idea", number: "01" %}
+		{% include overlap, data: landingpage %}
+	</section>
+
+	<section>
+		{% include section-header, title: "Our Offer", number: "02" %}
+		{% include offering, data: landingpage %}
+	</section>
+
+	<section>
+		{% include section-header, title: "Culture", number: "03", type: "medium", spinningWheel: "spinning-wheel" %}
+		{% include slider, data: landingpage %}
+	</section>
+
+	<section>
+		{% include section-header, title: "Work", number: "04", type: "small" %}
+		{% include work, data: landingpage %}
+	</section>
+
+	<section>
+		{% include section-header, title: "Hey There", number: "05", type: "large" %}
+		{% include job-teaser, data: landingpage %}
+	</section>
+
+	<section>
+		{% include section-header, title: "Here we are", number: "06", type: "medium" %}
+		{% include locations %}
+	</section>
+
+</main>
+
+<footer>
+	{% include footer %}
+</footer>
+

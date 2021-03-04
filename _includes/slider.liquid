@@ -1,82 +1,33 @@
-<section class="slider">
-	{% include section-header, title: "Culture", number: "03", type: "medium", spinningWheel: "spinning-wheel" %}
+<div class="slider">
 	<div class="grid">
-		<h3 class="slider__heading"><span class="slide-in" data-delay="0s">We are</span><span
-				class="headline-201 slide-in" data-delay="0.5s">community</span></h3>
+		<h3 class="slider__heading">
+			<span class="slide-in" data-delay="0s">
+				{{ data.slider.headline.top }}
+			</span>
+			<span class="headline-201 slide-in" data-delay="0.5s">
+				{{ data.slider.headline.bottom }}
+			</span>
+		</h3>
 		<p class="slider__copy copy--gray">
-			Every talent is special, every talent is needed. That’s why we live in a
-			culture of cultures, open and inclusive. Welcoming everyone
-			that welcomes everyone.
+			{{ data.slider.copy }}
 		</p>
 	</div>
 	<div class="swiper-container is-grid--right">
 		<div class="swiper-wrapper">
-			<div class="swiper-slide">
-				<picture>
-					<source media="(max-width: 599px)"
-						srcset="./assets/images/mobile/culture1.webp" type="image/webp" />
-					<source media="(min-width: 600px) and (max-width: 1199px)"
-						srcset="./assets/images/tablet/culture1.webp" type="image/webp" />
-					<source media="(min-width: 1200px)"
-						srcset="./assets/images/desktop/culture1.webp" type="image/webp" />
-					<img loading="lazy" src="./assets/images/fallback/culture1.jpg" alt="Person sitting at a desk in an office, a bonsai tree is seen in the foreground" class="parallax-medium" />
-				</picture>
-			</div>
-			<div class="swiper-slide">
-				<picture>
-					<source media="(max-width: 599px)"
-						srcset="./assets/images/mobile/culture2.webp" type="image/webp" />
-					<source media="(min-width: 600px) and (max-width: 1199px)"
-						srcset="./assets/images/tablet/culture2.webp" type="image/webp" />
-					<source media="(min-width: 1200px)"
-						srcset="./assets/images/desktop/culture2.webp" type="image/webp" />
-					<img loading="lazy" src="./assets/images/fallback/culture2.jpg" alt="Person swinging on an swing in an office with a floor in a geometric pattern" class="parallax-medium" />
-				</picture>
-			</div>
-			<div class="swiper-slide">
-				<picture>
-					<source media="(max-width: 599px)"
-						srcset="./assets/images/mobile/culture3.webp" type="image/webp" />
-					<source media="(min-width: 600px) and (max-width: 1199px)"
-						srcset="./assets/images/tablet/culture3.webp" type="image/webp" />
-					<source media="(min-width: 1200px)"
-						srcset="./assets/images/desktop/culture3.webp" type="image/webp" />
-					<img loading="lazy" src="./assets/images/fallback/culture3.jpg" alt="Person standing in a room wearing a motorcycle helmet" class="parallax-medium" />
-				</picture>
-			</div>
-			<div class="swiper-slide">
-				<picture>
-					<source media="(max-width: 599px)"
-						srcset="./assets/images/mobile/culture4.webp" type="image/webp" />
-					<source media="(min-width: 600px) and (max-width: 1199px)"
-						srcset="./assets/images/tablet/culture4.webp" type="image/webp" />
-					<source media="(min-width: 1200px)"
-						srcset="./assets/images/desktop/culture4.webp" type="image/webp" />
-					<img loading="lazy" src="./assets/images/fallback/culture4.jpg" alt="Dog of the breed french bulldog sitting in an office hallway" class="parallax-medium" />
-				</picture>
-			</div>
-			<div class="swiper-slide">
-				<picture>
-					<source media="(max-width: 599px)"
-						srcset="./assets/images/mobile/culture5.webp" type="image/webp" />
-					<source media="(min-width: 600px) and (max-width: 1199px)"
-						srcset="./assets/images/tablet/culture5.webp" type="image/webp" />
-					<source media="(min-width: 1200px)"
-						srcset="./assets/images/desktop/culture5.webp" type="image/webp" />
-					<img loading="lazy" src="./assets/images/fallback/culture5.jpg" alt="Person sitting on an orange moped in front of an orange wall" class="parallax-medium" />
-				</picture>
-			</div>
-			<div class="swiper-slide">
-				<picture>
-					<source media="(max-width: 599px)"
-						srcset="./assets/images/mobile/culture6.webp" type="image/webp" />
-					<source media="(min-width: 600px) and (max-width: 1199px)"
-						srcset="./assets/images/tablet/culture6.webp" type="image/webp" />
-					<source media="(min-width: 1200px)"
-						srcset="./assets/images/desktop/culture6.webp" type="image/webp" />
-					<img loading="lazy" src="./assets/images/fallback/culture6.jpg" alt="Person wearing a VR headset" class="parallax-medium" />
-				</picture>
-			</div>
+			{% for slide in data.slider.slides %}
+				<div class="swiper-slide">
+					<picture>
+						<source media="(max-width: 599px)"
+							srcset="{{ slide.mobileSrc }}" type="image/webp" />
+						<source media="(min-width: 600px) and (max-width: 1199px)"
+							srcset="{{ slide.tabletSrc }}" type="image/webp" />
+						<source media="(min-width: 1200px)"
+							srcset="{{ slide.desktopSrc }}" type="image/webp" />
+						<img loading="lazy" src="{{ slide.fallbackSrc }}"
+						     alt="{{ slide.altText }}" class="parallax-medium" />
+					</picture>
+				</div>
+			{% endfor %}
 		</div>
 	</div>
-</section>
+</div>

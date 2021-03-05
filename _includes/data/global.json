@@ -1,6 +1,6 @@
 {
 	"navigation": {
-		"ariaLabel": "Main Navigation",
+		"ariaLabel": "Main",
 		"logo": {
 			"top": "SinnerSchrader",
 			"bottom": {
@@ -11,12 +11,10 @@
 		},
 		"links": [
 			{
-				"ariaLabel": "Jobs",
 				"href": "https://sinnerschrader.jobs",
 				"linkText": "Jobs"
 			},
 			{
-				"ariaLabel": "News",
 				"href": "https://sinnerschrader.news",
 				"linkText": "News"
 			}

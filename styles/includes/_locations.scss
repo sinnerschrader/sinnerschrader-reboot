@@ -18,6 +18,7 @@
 
 .locations {
 	&__grid {
+		position: relative;
 		grid-gap: 0 1.2rem;
 		grid-template-rows: auto auto 1fr;
 
@@ -54,7 +55,6 @@
 		list-style: none;
 		margin: 0;
 		padding: 0;
-		position: relative;
 
 		@include bp-xs {
 			grid-column: 1/7;

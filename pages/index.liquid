@@ -8,9 +8,7 @@ renderData: landingpage
 
 <script async src="bundle.js" type="text/javascript"></script>
 
-<header>
-	{% include navigation, data: global %}
-</header>
+{% include navigation, data: global %}
 
 <main>
 	{% include stage, data: landingpage %}
@@ -47,7 +45,6 @@ renderData: landingpage
 
 </main>
 
-<footer>
-	{% include footer, data: global %}
-</footer>
+{% include footer, data: global %}
+
 

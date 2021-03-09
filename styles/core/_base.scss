@@ -20,6 +20,10 @@ body {
 		background-color: $color-primary--black;
 		color: $color-primary--white !important;
 	}
+
+	*:focus {
+		outline: 1px dashed red;
+	}
 }
 
 main {

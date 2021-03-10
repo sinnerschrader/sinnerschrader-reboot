@@ -1,5 +1,5 @@
 .data-policy {
-	&__page-headline {
+	&__headline {
 		@include headline-200();
 		@include spacing-900(margin-top);
 		@include spacing-900(margin-bottom);

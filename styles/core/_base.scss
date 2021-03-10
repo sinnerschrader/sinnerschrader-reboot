@@ -88,15 +88,17 @@ ul {
 	@include headline-101();
 }
 
+// Font Ogg Italic - large
 .headline-102 {
 	@include headline-102();
 }
 
-// Font Ogg italic - smaller
+// Font Ogg regular - smaller
 .headline-201 {
 	@include headline-201();
 }
 
+// Font Ogg Italic - smaller
 .headline-202 {
 	@include headline-202();
 }

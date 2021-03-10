@@ -1,0 +1,23 @@
+<h1 
+  {% for attribute in data.headline.htmlAttributes %}
+    {{ attribute[0] }}={{ attribute[1] }}
+  {% endfor %}
+>
+  {% for headlineElement in data.headline.headlineElements %}
+  
+    <span 
+      {% if headlineElement.htmlAttributes %}
+        {% for attribute in headlineElement.htmlAttributes %}
+          {{ attribute[0] }}={{ attribute[1] }}
+        {% endfor %}
+      {% endif %}
+    >
+      {{ headlineElement.text }}
+    </span>
+
+    {% if headlineElement.lineBreakAfter %}
+      <br>
+    {% endif %}
+
+  {% endfor %}
+</h1>

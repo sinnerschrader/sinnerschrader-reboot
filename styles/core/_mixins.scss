@@ -83,7 +83,7 @@
 	}
 
 	@include bp-xl {
-		margin: 0 0 0 9.6rem;
+		margin: 0 0 0 12.8rem;
 	}
 }
 
@@ -149,6 +149,7 @@
 // Headline large sans serif
 @mixin headline-100 {
 	font-family: $font-sans-serif-light;
+
 	@include bp-xs {
 		font-size: 5.6rem;
 		line-height: 6.2rem;
@@ -157,9 +158,13 @@
 		font-size: 7.2rem;
 		line-height: 8rem;
 	}
-	@include bp-desktop {
+	@include bp-l {
 		font-size: 8rem;
 		line-height: 8.8rem;
+	}
+	@include bp-xl {
+		font-size: 9.6rem;
+		line-height: 10.6rem;
 	}
 }
 
@@ -173,9 +178,13 @@
 		font-size: 7.8rem;
 		line-height: 8rem;
 	}
-	@include bp-desktop {
+	@include bp-l {
 		font-size: 8.6rem;
 		line-height: 8.8rem;
+	}
+	@include bp-xl {
+		font-size: 10.4rem;
+		line-height: 10.6rem;
 	}
 }
 // Headline large serif
@@ -194,6 +203,7 @@
 // Headline smaller sans serif
 @mixin headline-200 {
 	font-family: $font-sans-serif-light;
+
 	@include bp-xs {
 		font-size: 3.2rem;
 		line-height: 3.6rem;
@@ -202,9 +212,13 @@
 		font-size: 4rem;
 		line-height: 4.4rem;
 	}
-	@include bp-desktop {
+	@include bp-l {
 		font-size: 4.8rem;
 		line-height: 5.3rem;
+	}
+	@include bp-xl {
+		font-size: 6.4rem;
+		line-height: 7.1rem;
 	}
 }
 // Headline smaller serif - shared
@@ -217,9 +231,13 @@
 		font-size: 4.4rem;
 		line-height: 4.4rem;
 	}
-	@include bp-desktop {
+	@include bp-l {
 		font-size: 5.2rem;
 		line-height: 5.3rem;
+	}
+	@include bp-xl {
+		font-size: 7rem;
+		line-height: 7.1rem;
 	}
 }
 // Headline smaller serif
@@ -235,6 +253,48 @@
 	font-family: $font-serif-italic;
 }
 
+@mixin headline-300 {
+	font-family: $font-sans-serif-regular;
+
+	@include bp-xs {
+		font-size: 2.4rem;
+		line-height: 2.6rem;
+	}
+	@include bp-tablet {
+		font-size: 3.2rem;
+		line-height: 3.6rem;
+	}
+	@include bp-l {
+		font-size: 3.2rem;
+		line-height: 3.6rem;
+	}
+	@include bp-xl {
+		font-size: 4.8rem;
+		line-height: 5.3rem;
+	}
+}
+
+@mixin headline-400 {
+	font-family: $font-sans-serif-regular;
+
+	@include bp-xs {
+		font-size: 1.8rem;
+		line-height: 2rem;
+	}
+	@include bp-tablet {
+		font-size: 2.4rem;
+		line-height: 2.6rem;
+	}
+	@include bp-l {
+		font-size: 2.4rem;
+		line-height: 2.6rem;
+	}
+	@include bp-xl {
+		font-size: 3.2rem;
+		line-height: 2.6rem;
+	}
+}
+
 // Paragraph and label shared styling
 @mixin text-shared {
 	font-family: $font-sans-serif-regular;
@@ -247,6 +307,7 @@
 
 	font-family: $font-sans-serif-semibold;
 	font-size: 1.8rem;
+
 	@include bp-xs {
 		font-size: 1.6rem;
 	}
@@ -256,6 +317,7 @@
 
 	font-family: $font-sans-serif-semibold;
 	font-size: 1.6rem;
+
 	@include bp-xs {
 		font-size: 1.4rem;
 	}
@@ -265,11 +327,9 @@
 	line-height: 160%;
 	font-family: $font-sans-serif-light;
 	font-size: 1.8rem;
+
 	@include bp-xs {
 		font-size: 1.6rem;
-	}
-	@include bp-s {
-		font-size: 1.8rem;
 	}
 }
 @mixin paragraph-200 {
@@ -277,11 +337,9 @@
 
 	font-family: $font-sans-serif-light;
 	font-size: 1.6rem;
+
 	@include bp-xs {
 		font-size: 1.4rem;
-	}
-	@include bp-s {
-		font-size: 1.6rem;
 	}
 }
 

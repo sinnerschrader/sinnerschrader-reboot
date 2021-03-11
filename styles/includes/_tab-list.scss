@@ -1,0 +1,29 @@
+.tab-list {
+	@include underline-animation($color-primary--black);
+
+	position: relative;
+	cursor: pointer;
+	width: fit-content;
+	white-space: nowrap;
+
+	&:focus {
+		outline: none;
+	}
+
+	& + & {
+		@include spacing-100(margin-top);
+	}
+
+	&[aria-selected="true"] {
+		@include label-100();
+		&::after {
+			content: "•";
+			position: absolute;
+			color: $color-secondary--purple;
+			left: -1.5rem;
+			width: 0.4rem;
+			height: 0.4rem;
+			background: transparent;
+		}
+	}
+}

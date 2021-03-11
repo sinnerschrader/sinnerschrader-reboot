@@ -1,5 +1,5 @@
 <div class="locations grid">
-	<ul aria-controls="tab-example" role="tablist" class="locations__list-wrapper">
+	<ul aria-controls="locations" role="tablist" class="locations__list-wrapper">
 		{% for location in locations %}
 		<li role="tab"
 		    aria-controls="{{location.id}}"
@@ -9,7 +9,7 @@
 		    {% else %}
 		    aria-selected="false"
 		    {% endif %}
-		    class="locations__list-items">
+		    class="tab-list">
 			{{location.name}}
 		</li>
 		{% endfor %}

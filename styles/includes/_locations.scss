@@ -6,7 +6,7 @@
 	overflow-y: hidden;
 	grid-gap: 0 1.2rem;
 	grid-template-rows: auto auto 1fr;
-	padding-left: 15px;
+	padding-left: 1.5rem;
 
 	@include bp-tablet {
 		grid-gap: 0 1.6rem;
@@ -29,35 +29,6 @@
 		}
 	}
 
-	&__list-items {
-		@include paragraph-200();
-		@include underline-animation($color-primary--black);
-
-		position: relative;
-		cursor: pointer;
-		width: fit-content;
-
-		& + & {
-			@include spacing-100(margin-top);
-		}
-
-		&[aria-selected="true"] {
-			@include label-200();
-
-			&::after {
-				content: "";
-				position: absolute;
-				left: -15px;
-				top: 50%;
-				transform: translateY(-50%);
-				width: 4px;
-				height: 4px;
-				background-color: $color-secondary--purple;
-				border-radius: 50%;
-			}
-		}
-	}
-
 	&__panel {
 		display: grid;
 		height: 0;
@@ -68,6 +39,10 @@
 		grid-row: 1/3;
 		opacity: 0;
 		transition: opacity 0.3s ease-in-out;
+
+		&:focus {
+			outline: none;
+		}
 
 		&[aria-expanded="true"] {
 			visibility: visible;
@@ -130,6 +105,22 @@
 
 		&.image-delay {
 			transition-delay: 0.2s;
+		}
+	}
+
+	@include bp-xs() {
+		#hamburg,
+		#berlin {
+			.is-large {
+				grid-row: 1/4;
+				margin-top: 20rem;
+			}
+		}
+
+		#munich {
+			.is-large {
+				margin-top: 5rem;
+			}
 		}
 	}
 

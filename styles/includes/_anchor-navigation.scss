@@ -1,0 +1,39 @@
+.anchor-navigation {
+	&__item {
+		position: relative;
+		margin-bottom: $spacing--200;
+
+		&::before {
+			@include default-animation(opacity);
+
+			position: absolute;
+			content: "";
+			top: 50%;
+			left: -$spacing--400;
+			background-color: $color-secondary--purple;
+			width: 4px;
+			height: 4px;
+			opacity: 0;
+			border-radius: 50%;
+		}
+
+		&:hover,
+		&:active {
+			.anchor-navigation__item-link {
+				font-family: $font-sans-serif-semibold;
+			}
+
+			&::before {
+				opacity: 1;
+			}
+		}
+	}
+
+	&__item-link {
+		@include paragraph-100();
+		@include underline-animation($color-primary--black);
+
+		font-size: 1.8rem;
+		color: $color-primary--black;
+	}
+}

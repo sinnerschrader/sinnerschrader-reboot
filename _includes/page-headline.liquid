@@ -1,7 +1,9 @@
 <h1 
-  {% for attribute in data.headline.htmlAttributes %}
-    {{ attribute[0] }}={{ attribute[1] }}
-  {% endfor %}
+  {% if classModifier %} 
+    class="headline-1 {{data.headline.classModifier}}" 
+  {% else %} 
+    class="headline-1" 
+  {% endif %}
 >
   {% for headlineElement in data.headline.headlineElements %}
   

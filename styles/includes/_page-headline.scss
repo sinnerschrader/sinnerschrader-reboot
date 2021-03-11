@@ -1,9 +1,0 @@
-.data-policy {
-	&__headline {
-		@include headline-200();
-		@include spacing-900(margin-top);
-		@include spacing-900(margin-bottom);
-
-		color: $color-primary--black;
-	}
-}

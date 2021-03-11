@@ -1,8 +1,5 @@
 {
 	"headline": {
-		"htmlAttributes": {
-			"class": "data-policy__headline"
-		},
 		"headlineElements": [
 			{
 				"text": "Data protection",

@@ -33,6 +33,14 @@ h1 {
 	font-weight: 200;
 }
 
+.headline-1 {
+	@include headline-200();
+	@include spacing-900(margin-top);
+	@include spacing-900(margin-bottom);
+
+	color: $color-primary--black;
+}
+
 h3 {
 	@include headline-200();
 

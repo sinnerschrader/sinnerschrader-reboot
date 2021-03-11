@@ -5,21 +5,9 @@
     class="headline-1" 
   {% endif %}
 >
-  {% for headlineElement in data.headline.headlineElements %}
-  
-    <span 
-      {% if headlineElement.htmlAttributes %}
-        {% for attribute in headlineElement.htmlAttributes %}
-          {{ attribute[0] }}={{ attribute[1] }}
-        {% endfor %}
-      {% endif %}
-    >
-      {{ headlineElement.text }}
-    </span>
-
-    {% if headlineElement.lineBreakAfter %}
-      <br>
-    {% endif %}
-
-  {% endfor %}
+  {{ data.headline.firstline }}
+  {% if data.headline.secondline %}
+  <br>
+  {{ data.headline.secondline }}
+  {% endif %}
 </h1>

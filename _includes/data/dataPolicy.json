@@ -1,13 +1,6 @@
 {
 	"headline": {
-		"headlineElements": [
-			{
-				"text": "Data protection",
-				"lineBreakAfter": true
-			},
-			{
-				"text": "policy"
-			}
-		]
+		"firstline": "Data protection",
+		"secondline": "policy"
 	}
 }

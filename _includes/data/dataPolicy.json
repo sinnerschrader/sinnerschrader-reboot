@@ -1,0 +1,59 @@
+{
+	"navigationItems": [
+		{
+			"id": "general-information",
+			"text": "General information",
+			"isActive": true
+		},
+		{
+			"id": "responsible-website",
+			"text": "Responsible for Website",
+			"isActive": false
+		},
+		{
+			"id": "responsible-data-protection",
+			"text": "Responsible For Data Protection",
+			"isActive": false
+		},
+		{
+			"id": "providing-website",
+			"text": "Providing The Website",
+			"isActive": false
+		},
+		{
+			"id": "rights-data-protection",
+			"text": "Rights according to legal data protection regulations",
+			"isActive": false
+		},
+		{
+			"id": "children",
+			"text": "Children",
+			"isActive": false
+		},
+		{
+			"id": "github",
+			"text": "GitHub",
+			"isActive": false
+		},
+		{
+			"id": "embedding-external",
+			"text": "Embedding of external platforms",
+			"isActive": false
+		},
+		{
+			"id": "social-media",
+			"text": "Online presence on social media",
+			"isActive": false
+		},
+		{
+			"id": "policy-facebook-fan-pages",
+			"text": "Data policy statement for Facebook fan pages",
+			"isActive": false
+		},
+		{
+			"id": "processing-facebook-fan-pages",
+			"text": "Data processing on our Facebook fan page",
+			"isActive": false
+		}
+	]
+}

@@ -1,0 +1,12 @@
+<div class="anchor-navigation">
+	<ul class="anchor-navigation__list">
+		{% for items in data.navigationItems %}
+			<li class="anchor-navigation__item">
+				<a href="#{{item.id}}"
+				   class="anchor-navigation__item-link {{item.isActive}}">
+					{{item.text}}
+				</a>
+			</li>
+		{% endfor
+	</ul>
+</div>

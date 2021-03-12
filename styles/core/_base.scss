@@ -36,8 +36,8 @@ h1 {
 .headline-1 {
 	@include headline-200();
 	@include spacing-900(margin-top);
-	margin-bottom: 0;
 
+	margin-bottom: 0;
 	color: $color-primary--black;
 }
 

@@ -2,15 +2,18 @@ import { throttle } from "lodash-es";
 
 class OfferingHeader {
 	textContainer = document.querySelector(".offering__heading-wrapper");
-	textPathTop = document.querySelector(".offering__heading-top");
-	textPathBottom = document.querySelector(".offering__heading-bottom");
-	textPathTopMobile = document.querySelector(".offering__heading-top.is-mobile");
-	textPathBottomMobile = document.querySelector(".offering__heading-bottom.is-mobile");
 
 	showAnimations = window.matchMedia("(prefers-reduced-motion: no-preference)");
 
 	constructor() {
-		this.init();
+		if (this.textContainer) {
+			this.textPathTop = this.textContainer.querySelector(".offering__heading-top");
+			this.textPathBottom = this.textContainer.querySelector(".offering__heading-bottom");
+			this.textPathTopMobile = this.textContainer.querySelector(".offering__heading-top.is-mobile");
+			this.textPathBottomMobile = this.textContainer.querySelector(".offering__heading-bottom.is-mobile");
+
+			this.init();
+		}
 	}
 
 	init() {

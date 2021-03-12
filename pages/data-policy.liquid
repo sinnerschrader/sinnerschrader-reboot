@@ -1,17 +1,16 @@
 ---
 title: SinnerSchrader
-
-=======
 layout: default.liquid
 permalink: data-policy.html
-
 ---
 
 {% include navigation, data: global %}
 
 <main>
+	<section class="grid">
+		{% include page-headline, data: dataPolicy %}
+	</section>
 	<section>
-    {% include page-headline, data: dataPolicy %}
 		{% include section-header, title: "Data Protection", number: "01" %}
 	</section>
 

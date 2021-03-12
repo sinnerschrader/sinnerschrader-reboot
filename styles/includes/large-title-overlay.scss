@@ -5,6 +5,7 @@
 
 		position: relative;
 	}
+
 	&__text {
 		@include spacing-200(right);
 		@include spacing-900(padding-top);

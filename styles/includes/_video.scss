@@ -1,0 +1,83 @@
+.video-container {
+	position: relative;
+	overflow-x: hidden;
+}
+
+.video-preview-loop {
+	position: relative;
+	width: 100%;
+	z-index: 4;
+	max-height: 100vh;
+	object-fit: contain;
+
+	@include bp-xs() {
+		width: 150vw;
+	}
+
+	&.is-hidden {
+		display: none;
+	}
+}
+
+.video-reduced-motion {
+	display: none;
+}
+
+.video-element {
+	display: none;
+	position: relative;
+	z-index: 4;
+	width: 100%;
+	max-height: 100vh;
+
+	&.is-visible {
+		display: block;
+	}
+}
+
+.video-media-control {
+	position: absolute;
+	top: 50%;
+	right: 50%;
+	z-index: 5;
+	transform: translate(50%, -50%);
+	text-transform: uppercase;
+	background: $color-primary--white;
+	border-radius: 50%;
+	border: transparent;
+	height: 10rem;
+	width: 10rem;
+	color: $color-primary--black;
+	cursor: pointer;
+
+	&:focus {
+		outline: none;
+	}
+
+	&.is-hidden {
+		display: none;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.video-preview-loop {
+		display: none;
+	}
+
+	.video-reduced-motion {
+		display: block;
+		position: relative;
+		width: 100%;
+		z-index: 4;
+		max-height: 100vh;
+		object-fit: contain;
+
+		@include bp-xs() {
+			width: 150vw;
+		}
+
+		&.is-hidden {
+			display: none;
+		}
+	}
+}

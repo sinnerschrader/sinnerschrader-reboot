@@ -16,6 +16,7 @@
 
 	&[aria-selected="true"] {
 		@include label-100();
+
 		&::after {
 			content: "•";
 			position: absolute;

@@ -83,65 +83,68 @@
 	}
 
 	@include bp-xl {
-		margin: 0 0 0 9.6rem;
+		margin: 0 0 0 12.8rem;
 	}
 }
 
-@mixin responsive-spacing($property, $mobile, $tablet, $desktop) {
+@mixin responsive-spacing($property, $mobile, $tablet, $desktop, $desktop-xl) {
 	@include bp-xs {
 		#{$property}: $mobile;
 	}
 	@include bp-tablet {
 		#{$property}: $tablet;
 	}
-	@include bp-desktop {
+	@include bp-l {
 		#{$property}: $desktop;
+	}
+	@include bp-xl {
+		#{$property}: $desktop-xl;
 	}
 }
 
 // SP100 (only desktop)
 @mixin spacing-100($property) {
-	@include responsive-spacing($property, $spacing--100, $spacing--100, $spacing--100);
+	@include responsive-spacing($property, $spacing--100, $spacing--100, $spacing--100, $spacing--100);
 }
 
 // SP200 (only desktop)
 @mixin spacing-200($property) {
-	@include responsive-spacing($property, $spacing--200, $spacing--200, $spacing--200);
+	@include responsive-spacing($property, $spacing--200, $spacing--200, $spacing--200, $spacing--200);
 }
 
 // SP300 (mobile and desktop)
 @mixin spacing-300($property) {
-	@include responsive-spacing($property, $spacing--300, $spacing--300--tablet, $spacing--300--tablet);
+	@include responsive-spacing($property, $spacing--300, $spacing--300--tablet, $spacing--300--tablet, $spacing--300--tablet);
 }
 
 // SP400
 @mixin spacing-400($property) {
-	@include responsive-spacing($property, $spacing--400, $spacing--400--tablet, $spacing--400--desktop);
+	@include responsive-spacing($property, $spacing--400, $spacing--400--tablet, $spacing--400--desktop, $spacing--400--desktop-xl);
 }
 
 // SP500
 @mixin spacing-500($property) {
-	@include responsive-spacing($property, $spacing--500, $spacing--500--tablet, $spacing--500--desktop);
+	@include responsive-spacing($property, $spacing--500, $spacing--500--tablet, $spacing--500--desktop, $spacing--500--desktop-xl);
 }
 
 // SP600
 @mixin spacing-600($property) {
-	@include responsive-spacing($property, $spacing--600, $spacing--600--tablet, $spacing--600--desktop);
+	@include responsive-spacing($property, $spacing--600, $spacing--600--tablet, $spacing--600--desktop, $spacing--600--desktop-xl);
 }
 
 // SP700
 @mixin spacing-700($property) {
-	@include responsive-spacing($property, $spacing--700, $spacing--700--tablet, $spacing--700--desktop);
+	@include responsive-spacing($property, $spacing--700, $spacing--700--tablet, $spacing--700--desktop, $spacing--700--desktop-xl);
 }
 
 // SP800
 @mixin spacing-800($property) {
-	@include responsive-spacing($property, $spacing--800, $spacing--800--tablet, $spacing--800--desktop);
+	@include responsive-spacing($property, $spacing--800, $spacing--800--tablet, $spacing--800--desktop, $spacing--800--desktop-xl);
 }
 
 // SP900
 @mixin spacing-900($property) {
-	@include responsive-spacing($property, $spacing--900, $spacing--900--tablet, $spacing--900--desktop);
+	@include responsive-spacing($property, $spacing--900, $spacing--900--tablet, $spacing--900--desktop, $spacing--900--desktop-xl);
 }
 
 // Fonts
@@ -149,6 +152,7 @@
 // Headline large sans serif
 @mixin headline-100 {
 	font-family: $font-sans-serif-light;
+
 	@include bp-xs {
 		font-size: 5.6rem;
 		line-height: 6.2rem;
@@ -157,9 +161,13 @@
 		font-size: 7.2rem;
 		line-height: 8rem;
 	}
-	@include bp-desktop {
+	@include bp-l {
 		font-size: 8rem;
 		line-height: 8.8rem;
+	}
+	@include bp-xl {
+		font-size: 9.6rem;
+		line-height: 10.6rem;
 	}
 }
 
@@ -173,9 +181,13 @@
 		font-size: 7.8rem;
 		line-height: 8rem;
 	}
-	@include bp-desktop {
+	@include bp-l {
 		font-size: 8.6rem;
 		line-height: 8.8rem;
+	}
+	@include bp-xl {
+		font-size: 10.4rem;
+		line-height: 10.6rem;
 	}
 }
 // Headline large serif
@@ -194,6 +206,7 @@
 // Headline smaller sans serif
 @mixin headline-200 {
 	font-family: $font-sans-serif-light;
+
 	@include bp-xs {
 		font-size: 3.2rem;
 		line-height: 3.6rem;
@@ -202,9 +215,13 @@
 		font-size: 4rem;
 		line-height: 4.4rem;
 	}
-	@include bp-desktop {
+	@include bp-l {
 		font-size: 4.8rem;
 		line-height: 5.3rem;
+	}
+	@include bp-xl {
+		font-size: 6.4rem;
+		line-height: 7.1rem;
 	}
 }
 // Headline smaller serif - shared
@@ -217,9 +234,13 @@
 		font-size: 4.4rem;
 		line-height: 4.4rem;
 	}
-	@include bp-desktop {
+	@include bp-l {
 		font-size: 5.2rem;
 		line-height: 5.3rem;
+	}
+	@include bp-xl {
+		font-size: 7rem;
+		line-height: 7.1rem;
 	}
 }
 // Headline smaller serif
@@ -235,6 +256,48 @@
 	font-family: $font-serif-italic;
 }
 
+@mixin headline-300 {
+	font-family: $font-sans-serif-regular;
+
+	@include bp-xs {
+		font-size: 2.4rem;
+		line-height: 2.6rem;
+	}
+	@include bp-tablet {
+		font-size: 3.2rem;
+		line-height: 3.6rem;
+	}
+	@include bp-l {
+		font-size: 3.2rem;
+		line-height: 3.6rem;
+	}
+	@include bp-xl {
+		font-size: 4.8rem;
+		line-height: 5.3rem;
+	}
+}
+
+@mixin headline-400 {
+	font-family: $font-sans-serif-regular;
+
+	@include bp-xs {
+		font-size: 1.8rem;
+		line-height: 2rem;
+	}
+	@include bp-tablet {
+		font-size: 2.4rem;
+		line-height: 2.6rem;
+	}
+	@include bp-l {
+		font-size: 2.4rem;
+		line-height: 2.6rem;
+	}
+	@include bp-xl {
+		font-size: 3.2rem;
+		line-height: 2.6rem;
+	}
+}
+
 // Paragraph and label shared styling
 @mixin text-shared {
 	font-family: $font-sans-serif-regular;
@@ -247,6 +310,7 @@
 
 	font-family: $font-sans-serif-semibold;
 	font-size: 1.8rem;
+
 	@include bp-xs {
 		font-size: 1.6rem;
 	}
@@ -256,6 +320,7 @@
 
 	font-family: $font-sans-serif-semibold;
 	font-size: 1.6rem;
+
 	@include bp-xs {
 		font-size: 1.4rem;
 	}
@@ -265,11 +330,9 @@
 	line-height: 160%;
 	font-family: $font-sans-serif-light;
 	font-size: 1.8rem;
+
 	@include bp-xs {
 		font-size: 1.6rem;
-	}
-	@include bp-s {
-		font-size: 1.8rem;
 	}
 }
 @mixin paragraph-200 {
@@ -277,11 +340,9 @@
 
 	font-family: $font-sans-serif-light;
 	font-size: 1.6rem;
+
 	@include bp-xs {
 		font-size: 1.4rem;
-	}
-	@include bp-s {
-		font-size: 1.6rem;
 	}
 }
 

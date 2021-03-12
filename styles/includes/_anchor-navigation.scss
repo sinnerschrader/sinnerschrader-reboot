@@ -1,0 +1,13 @@
+.anchor-navigation {
+	&__item {
+		position: relative;
+		margin-bottom: $spacing--200;
+
+		&:hover,
+		&:active {
+			.anchor-navigation__item-link {
+				font-family: $font-sans-serif-semibold;
+			}
+		}
+	}
+}

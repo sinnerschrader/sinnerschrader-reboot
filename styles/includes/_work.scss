@@ -94,7 +94,7 @@
 
 	&__video {
 		&-container {
-			@include responsive-spacing(margin-left, 2.4rem, 6.4rem, 9.6rem);
+			@include responsive-spacing(margin-left, 2.4rem, 6.4rem, 9.6rem, 12.8rem);
 
 			position: relative;
 			overflow-x: hidden;

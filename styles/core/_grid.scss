@@ -40,6 +40,7 @@ $grid-columns: 12 !default;
 	@for $i from 1 through $grid-columns {
 		.grid {
 			margin: 0 2.4rem;
+			grid-gap: 1.2rem;
 
 			.is-grid--right {
 				margin: 0 0 0 2.4rem;
@@ -60,6 +61,7 @@ $grid-columns: 12 !default;
 @include bp-s {
 	.grid {
 		margin: 0 6.4rem;
+		grid-gap: 1.2rem;
 
 		.is-grid--right {
 			margin: 0 0 0 6.4rem;
@@ -81,6 +83,7 @@ $grid-columns: 12 !default;
 @include bp-m {
 	.grid {
 		margin: 0 9.6rem;
+		grid-gap: 1.6rem;
 
 		.is-grid--right {
 			margin: 0 0 0 9.6rem;
@@ -103,6 +106,7 @@ $grid-columns: 12 !default;
 	@for $i from 1 through $grid-columns {
 		.grid {
 			margin: 0 9.6rem;
+			grid-gap: 2.4rem;
 
 			.is-grid--right {
 				margin: 0 0 0 9.6rem;
@@ -123,10 +127,11 @@ $grid-columns: 12 !default;
 @include bp-xl {
 	@for $i from 1 through $grid-columns {
 		.grid {
-			margin: 0 9.6rem;
+			margin: 0 12.8rem;
+			grid-gap: 3.2rem;
 
 			.is-grid--right {
-				margin: 0 0 0 9.6rem;
+				margin: 0 0 0 12.8rem;
 			}
 		}
 		.col-#{$i}\-xl {

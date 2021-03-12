@@ -40,10 +40,6 @@
 		opacity: 0;
 		transition: opacity 0.3s ease-in-out;
 
-		&:focus {
-			outline: none;
-		}
-
 		&[aria-expanded="true"] {
 			visibility: visible;
 			height: auto;
@@ -137,6 +133,7 @@
 			grid-column: 7/13;
 			grid-row: 1/2;
 			margin-bottom: 0;
+			min-height: 16.5rem;
 		}
 
 		@include bp-tablet {

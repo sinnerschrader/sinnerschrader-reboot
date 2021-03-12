@@ -10,12 +10,15 @@ class Slider {
 			slidesOffsetAfter: 24,
 			breakpoints: {
 				// when window width is >= 600
-				500: {
+				600: {
 					spaceBetween: 16,
 				},
 				// when window width is >= 1024
 				900: {
 					spaceBetween: 24,
+				},
+				1800: {
+					spaceBetween: 32,
 				},
 			},
 			lazy: {

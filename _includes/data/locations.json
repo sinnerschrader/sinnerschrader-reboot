@@ -6,6 +6,7 @@
 		"imageLarge": "Berlin2.webp",
 		"imageFallbackSmall": "Berlin1.jpg",
 		"imageFallbackLarge": "Berlin2.jpg",
+		"initialActive": true,
 		"studios": [
 			{
 				"name": "SinnerSchrader",

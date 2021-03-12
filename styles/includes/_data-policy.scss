@@ -32,10 +32,8 @@
 			margin-bottom: $spacing--400;
 		}
 
-		section {
-			& > :last-child {
-				@include responsive-spacing(margin-bottom, $spacing--600, $spacing--600--tablet, $spacing--600--desktop, $spacing--600--desktop-xl);
-			}
+		section > :last-child {
+			@include responsive-spacing(margin-bottom, $spacing--600, $spacing--600--tablet, $spacing--600--desktop, $spacing--600--desktop-xl);
 		}
 
 		address {
@@ -57,11 +55,11 @@
 			}
 		}
 
-		& > :first-child {
+		> :first-child {
 			margin-top: 0;
 		}
 
-		& > :last-child {
+		> :last-child {
 			margin-bottom: 0;
 		}
 	}

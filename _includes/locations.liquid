@@ -1,103 +1,60 @@
-<div class="locations">
-	<div class="grid locations__grid">
-		<div class="locations__navigation-indicator" id="locations__navigation-indicator"></div>
-		<ol class="locations__navigation">
-
-			{% for location in locations %} 
-				{% if forloop.first %} 
-					{% assign isSelected = "locations__navigation-button--selected" %} 
-				{% else %}
-					{% assign isSelected = "" %} 
-				{% endif %}
-
-			<li class="locations__navigation-item">
-				<button class="{{ isSelected }} locations__navigation-button copy--gray" id="locations__navigation-button-{{ location.id }}">
-
-						{{ location.name }}
-		
-				</button>
-			</li>
-
-			{% endfor %}
-
-		</ol>
-
-		{% for location in locations %} 
-			{% if forloop.first %} 
-				{% assign isHidden = "" %} 
-			{% else %} 
-				{% assign isHidden = "locations__content--hidden" %} 
-			{% endif %}
-
-		<div class="locations__content {{ isHidden }} locations__image-wrapper-small
-                locations__content-{{ location.id }}">
-
-        {% if forloop.first %}
-          {% assign desktopImgSmall = "assets/images/desktop/" | append: location.imageSmall %}
-          {% assign tabletImgSmall = "assets/images/tablet/" | append: location.imageSmall %}
-          {% assign desktopImgSmall = "assets/images/mobile/" | append: location.imageSmall %}
-          {% assign fallbackImgSmall = "assets/images/fallback/" | append: location.imageFallbackSmall %}
-        {% else %}
-          {% assign desktopImgSmall = "" %}
-          {% assign tabletImgSmall = "" %}
-          {% assign desktopImgSmall = "" %}
-          {% assign fallbackImgSmall = "" %}
-        {% endif %}
-
-        <picture>
-					<source media="(max-width: 599px)" srcset="{{ mobileImgSmall }}" type="image/webp" />
-					<source media="(min-width: 600px) and (max-width: 1199px)" srcset="{{ tabletImgSmall }}" type="image/webp" />
-					<source media="(min-width: 1200px)" srcset="{{ desktopImgSmall }}" type="image/webp" />
-					<img class="locations__image parallax-slow" src="{{ fallbackImgSmall }}" alt="Small Image of the {{ location.name }} SinnerSchrader Office" />
-				</picture>
-      </div>
-
-      <div class="locations__content {{ isHidden }} locations__image-wrapper-large
-                locations__content-{{ location.id }} image-delay">
-
-        {% if forloop.first %}
-          {% assign desktopImgLarge = "assets/images/desktop/" | append: location.imageLarge %}
-          {% assign tabletImgLarge = "assets/images/tablet/" | append: location.imageLarge %}
-          {% assign desktopImgLarge = "assets/images/mobile/" | append: location.imageLarge %}
-          {% assign fallbackImgLarge = "assets/images/fallback/" | append: location.imageFallbackLarge %}
-        {% else %}
-          {% assign desktopImgLarge = "" %}
-          {% assign tabletImgLarge = "" %}
-          {% assign desktopImgLarge = "" %}
-          {% assign fallbackImgLarge = "" %}
-        {% endif %}
-
-				<picture>
-					<source media="(max-width: 599px)" srcset="{{ mobileImgLarge }}" type="image/webp" />
-					<source media="(min-width: 600px) and (max-width: 1199px)" srcset="{{ tabletImgLarge }}" type="image/webp" />
-					<source media="(min-width: 1200px)" srcset="{{ desktopImgLarge }}" type="image/webp" />
-					<img class="locations__image parallax-slow" src="{{ fallbackImgLarge }}" alt="Large Image of the {{ location.name }} SinnerSchrader Office" />
-				</picture>
-      </div>
-
-		<div
-			class="locations__content {{ isHidden }} locations__studio-info
-                locations__content-{{ location.id }}"
-		>
-			<div class="locations__studio-info-grid">
-				{% for studio in location.studios %}
-
-				<div class="locations__studio-info-container copy--gray">
-					<span class="locations__studio-info-container--name">{{ studio.name }}</span>
-					<address>
-						{{ studio.street }}
-						<br />
-						{{ studio.postal }} 
-						<br />
-						<a class="copy--gray locations__studio-info-link" href="tel:{{ studio.tel }}">{{ studio.tel }}</a> 
-						<br />
-						<a class="copy--gray locations__studio-info-link" href="mailto:{{ studio.email }}">send mail</a>
-					</address>
-				</div>
-				{% endfor %}
-			</div>
-		</div>
-
+<div class="locations grid">
+	<ul aria-controls="locations" role="tablist" class="locations__list-wrapper">
+		{% for location in locations %}
+		<li role="tab"
+		    aria-controls="{{location.id}}"
+		    tabindex="0"
+		    {% if location.initialActive %}
+		    aria-selected="true"
+		    {% else %}
+		    aria-selected="false"
+		    {% endif %}
+		    class="tab-list">
+			{{location.name}}
+		</li>
 		{% endfor %}
-	</div>
+	</ul>
+	{% for location in locations %}
+		<div id="{{location.id}}"
+		     role="tabpanel"
+		     tabindex="0"
+		     {% if location.initialActive %}
+		     aria-expanded="true"
+		     {% else %}
+		     aria-expanded="false"
+		     {% endif %}
+		     class="locations__panel">
+				<picture class="locations__content-picture is-small">
+					<source media="(max-width: 599px)" srcset="./assets/images/mobile/{{location.imageSmall}}">
+					<source media="(min-width: 600px)" srcset="./assets/images/tablet/{{location.imageSmall}}">
+					<source media="(min-width: 1200px)" srcset="./assets/images/desktop/{{location.imageSmall}}">
+					<img src="./assets/images/fallback/{{location.imageFallbackSmall}}"
+					     alt="Small image of the {{location.name}} SinnerSchrader office">
+				</picture>
+				<picture class="locations__content-picture is-large image-delay">
+					<source media="(max-width: 599px)" srcset="./assets/images/mobile/{{location.imageLarge}}">
+					<source media="(min-width: 600px)" srcset="./assets/images/tablet/{{location.imageLarge}}">
+					<source media="(min-width: 1200px)" srcset="./assets/images/desktop/{{location.imageLarge}}">
+					<img src="./assets/images/fallback/{{location.imageFallbackLarge}}"
+					     alt="Large image of the {{location.name}} SinnerSchrader office">
+				</picture>
+				<div class="locations__content-studio-wrapper">
+					{% for studio in location.studios %}
+
+					<div class="locations__studio">
+						<span class="locations__studio-name">{{ studio.name }}</span>
+						<address>
+							{{ studio.street }}
+							<br />
+							{{ studio.postal }}
+							<br />
+							<a class="locations__studio-link copy--gray " href="tel:{{ studio.tel }}">{{ studio.tel }}</a>
+							<br />
+							<a class="locations__studio-link copy--gray " href="mailto:{{ studio.email }}">send mail</a>
+						</address>
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+	{% endfor %}
 </div>

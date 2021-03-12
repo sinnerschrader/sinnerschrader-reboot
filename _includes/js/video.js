@@ -4,14 +4,18 @@ class Video {
 	}
 
 	init() {
-		this.video = {
-			previewElement: document.querySelector(".work__video-preview-loop"),
-			reducedMotionElement: document.querySelector(".work__video--reduced-motion"),
-			playButton: document.querySelector(".work__video-media-control"),
-			videoElement: document.querySelector(".work__video-element"),
-		};
+		this.videoContainer = document.querySelector(".video-container");
 
-		this.bindEvents();
+		if (this.videoContainer) {
+			this.video = {
+				previewElement: this.videoContainer.querySelector(".video-preview-loop"),
+				reducedMotionElement: this.videoContainer.querySelector(".video-reduced-motion"),
+				playButton: this.videoContainer.querySelector(".video-media-control"),
+				videoElement: this.videoContainer.querySelector(".video-element"),
+			};
+
+			this.bindEvents();
+		}
 	}
 
 	bindEvents() {

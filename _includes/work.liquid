@@ -7,12 +7,12 @@
 		</h3>
 	</div>
 	<div class="work__inner-wrapper">
-		<div class="work__video-container">
-			<video class="work__video-preview-loop" autoplay muted playsinline loop>
+		<div class="video-container">
+			<video class="video-preview-loop" autoplay muted playsinline loop>
 				<source src="{{ data.work.previewVideo.webmSrc }}" type="video/webm" />
 				<source src="{{ data.work.previewVideo.mp4Src }}" type="video/mp4" />
 			</video>
-			<video class="work__video-element"
+			<video class="video-element"
 			       controls
 			       preload="none"
 			       disablepictureinpicture
@@ -30,11 +30,11 @@
 				        type="video/mp4"
 				        media="screen and (max-width: 600)"/>
 			</video>
-			<video class="work__video--reduced-motion">
+			<video class="video-reduced-motion">
 				<source src="{{ data.work.reducedMotion.webmSrc }}" type="video/webm" />
 				<source src="{{ data.work.reducedMotion.mp4Src }}" type="video/mp4" />
 			</video>
-			<button class="work__video-media-control">
+			<button class="video-media-control">
 				{{ data.work.customVideoButton.text }}
 			</button>
 		</div>

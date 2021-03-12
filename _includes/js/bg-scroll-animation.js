@@ -8,7 +8,9 @@ class BackgroundScrollAnimation {
 	showAnimations = window.matchMedia("(prefers-reduced-motion: no-preference)");
 
 	constructor() {
-		this.init();
+		if (document.body.classList.contains("is-bg-scroll")) {
+			this.init();
+		}
 	}
 
 	init() {

@@ -1,5 +1,5 @@
 .data-policy {
-	@include responsive-spacing(margin-top, $spacing--700, $spacing--700--tablet, $spacing--700--desktop);
+	@include responsive-spacing(margin-top, $spacing--700, $spacing--700--tablet, $spacing--700--desktop, $spacing--700--desktop-xl);
 
 	.anchor-navigation {
 		@include bp-xs {
@@ -21,8 +21,12 @@
 			letter-spacing: inherit;
 		}
 
-		h3 {
+		h2 {
 			@include headline-200();
+		}
+
+		h3 {
+			@include headline-300();
 
 			font-family: $font-sans-serif-regular;
 			margin-bottom: $spacing--400;
@@ -30,7 +34,7 @@
 
 		section {
 			& > :last-child {
-				@include responsive-spacing(margin-bottom, $spacing--600, $spacing--600--tablet, $spacing--600--desktop);
+				@include responsive-spacing(margin-bottom, $spacing--600, $spacing--600--tablet, $spacing--600--desktop, $spacing--600--desktop-xl);
 			}
 		}
 

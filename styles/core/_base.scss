@@ -33,6 +33,14 @@ h1 {
 	font-weight: 200;
 }
 
+.headline-1 {
+	@include headline-200();
+	@include spacing-900(margin-top);
+
+	margin-bottom: 0;
+	color: $color-primary--black;
+}
+
 h3 {
 	@include headline-200();
 
@@ -88,15 +96,17 @@ ul {
 	@include headline-101();
 }
 
+// Font Ogg Italic - large
 .headline-102 {
 	@include headline-102();
 }
 
-// Font Ogg italic - smaller
+// Font Ogg regular - smaller
 .headline-201 {
 	@include headline-201();
 }
 
+// Font Ogg Italic - smaller
 .headline-202 {
 	@include headline-202();
 }

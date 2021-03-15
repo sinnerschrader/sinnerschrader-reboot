@@ -1,4 +1,8 @@
 {
+	"headline": {
+		"firstline": "Data protection",
+		"secondline": "policy"
+	},
 	"navigationItems": [
 		{
 			"id": "general-information",

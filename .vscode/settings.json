@@ -1,5 +1,8 @@
 {
 	"editor.formatOnPaste": true,
 	"editor.formatOnSave": true,
-	"cSpell.words": ["eleventy"]
+	"cSpell.words": ["eleventy"],
+	"search.exclude": {
+		"package-lock.json": true
+	}
 }

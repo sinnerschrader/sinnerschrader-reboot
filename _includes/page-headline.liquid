@@ -1,0 +1,13 @@
+<h1 
+  {% if classModifier %} 
+    class="headline-1 {{data.headline.classModifier}}" 
+  {% else %} 
+    class="headline-1" 
+  {% endif %}
+>
+  {{ data.headline.firstline }}
+  {% if data.headline.secondline %}
+  <br>
+  {{ data.headline.secondline }}
+  {% endif %}
+</h1>

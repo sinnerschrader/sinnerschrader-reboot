@@ -2,14 +2,14 @@
 title: SinnerSchrader
 layout: default.liquid
 permalink: data-policy.html
-
 ---
-
-<script async src="bundle.js" type="text/javascript"></script>
 
 {% include navigation, data: global %}
 
 <main>
+	<section class="grid">
+		{% include page-headline, data: dataPolicy %}
+	</section>
 	<section>
 		{% include section-header, title: "Data Protection", number: "01" %}
 	</section>
@@ -338,5 +338,3 @@ permalink: data-policy.html
 </main>
 
 {% include footer, data: global %}
-
-

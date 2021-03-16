@@ -3,6 +3,10 @@
 		"firstline": "Data protection",
 		"secondline": "policy"
 	},
+	"headlineLarge": {
+		"text": "Privacy",
+		"circleSrc": "/assets/svg/circle-thin-large.svg"
+	},
 	"navigationItems": [
 		{
 			"id": "general-information",

@@ -9,6 +9,7 @@ class Offerings {
 			breakpoints: {
 				300: {
 					slidesPerView: "auto",
+					spaceBetween: 48,
 					grabCursor: true,
 				},
 				450: {

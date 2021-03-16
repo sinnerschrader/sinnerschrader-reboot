@@ -74,6 +74,10 @@
 
 		position: relative;
 		z-index: 4;
+
+		.offering__slide {
+			width: auto;
+		}
 	}
 
 	&__title {

@@ -1,0 +1,100 @@
+.large-title {
+	margin: 3rem 0;
+
+	&__background-grid {
+		@include grid-right();
+
+		@include dotted-grid();
+
+		position: relative;
+		width: 100%;
+		height: 73.6rem;
+
+		@include bp-l {
+			height: 60rem;
+		}
+
+		@include bp-m {
+			height: 43rem;
+		}
+
+		@include bp-s {
+			height: 43rem;
+		}
+
+		@include bp-xs {
+			height: 31.8rem;
+		}
+	}
+
+	&__text {
+		top: 30%;
+		font-family: $font-serif;
+		font-size: 15rem;
+		margin: 0;
+		position: absolute;
+		line-height: 70%;
+		right: 3.5rem;
+
+		@include bp-xs {
+			font-size: 20rem;
+			right: -32rem;
+		}
+
+		@include bp-s {
+			font-size: 20rem;
+		}
+
+		@include bp-m {
+			font-size: 30rem;
+		}
+
+		@include bp-l {
+			font-size: 40rem;
+		}
+
+		@include bp-xl {
+			font-size: 50rem;
+		}
+	}
+
+	&__circle {
+		border: 0.4rem solid $color-secondary--yellow;
+		border-bottom: 0.4rem solid $color-secondary--green;
+		border-radius: 50%;
+		transform: rotate(-45deg);
+		width: 7.5rem;
+		height: 7.5rem;
+		position: absolute;
+		bottom: -20%;
+		right: 45%;
+
+		@include bp-xs {
+			right: 45%;
+		}
+
+		@include bp-s {
+			width: 10.2rem;
+			height: 10.2rem;
+			right: 62%;
+		}
+
+		@include bp-m {
+			width: 10.2rem;
+			height: 10.2rem;
+			right: 75%;
+		}
+
+		@include bp-l {
+			width: 14.8rem;
+			height: 14.8rem;
+			right: 68%;
+		}
+
+		@include bp-xl {
+			width: 23.8rem;
+			height: 23.8rem;
+			right: 65%;
+		}
+	}
+}

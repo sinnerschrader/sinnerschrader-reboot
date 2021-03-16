@@ -13,6 +13,10 @@
 			margin-bottom: 3.2rem;
 		}
 
+		@include bp-xl() {
+			font-size: 6.4rem;
+		}
+
 		.slide-in {
 			display: block;
 		}

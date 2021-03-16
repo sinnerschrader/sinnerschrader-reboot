@@ -2,6 +2,9 @@
 	@include responsive-spacing(margin-top, $spacing--700, $spacing--700--tablet, $spacing--700--desktop, $spacing--700--desktop-xl);
 
 	.anchor-navigation {
+		position: sticky;
+		top: 2rem;
+
 		@include bp-xs {
 			display: none;
 		}
@@ -63,4 +66,8 @@
 			margin-bottom: 0;
 		}
 	}
+}
+
+.privacy {
+	overflow-x: initial;
 }

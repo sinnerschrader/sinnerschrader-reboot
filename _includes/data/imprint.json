@@ -1,0 +1,33 @@
+{
+	"headline": {
+		"firstline": "Imprint"
+	},
+	"headlineLarge": {
+		"text": "Liability",
+		"circleSrc": "/assets/svg/circle-thin-large.svg"
+	},
+	"contact": {
+		"address": "Völckersstr. 38",
+		"postalCode": "22765 Hamburg",
+		"country": "Germany",
+		"tel": "Tel.: +49 40 39 88 55-0",
+		"fax": "Fax: +49 40 39 88 55-55",
+		"mail": "info@sinnerschrader.com"
+	},
+	"managmentBoardAG": {
+		"managersFirstLine": "Dr. Axel Averdung (chairperson), Holger Blank, Kristina Bonitz,",
+		"managersSecondLine": "Philipp Kafkoulas, Florian Langmack, Sven Schmiede, Pia Schott u. a."
+	},
+	"courtOfRegistryAG": {
+		"courtFirstLine": "Amtsgericht Hamburg Registration Number – HRB 63663",
+		"courtSecondLine": "Sales Tax Identification Number: DE812160091"
+	},
+	"managmentBoardDE": {
+		"managersFirstLine": "Thomas Dyckhoff, Evalotta Kahlen Chairperson",
+		"managersSecondLine": "Supervisory Board: Frank Riemensperger"
+	},
+	"courtOfRegistryDE": {
+		"courtFirstLine": "Amtsgericht Hamburg Registration Number – HRB 74455",
+		"courtSecondLine": "EU VAT ID: DE812894649"
+	}
+}

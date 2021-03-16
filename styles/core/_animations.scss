@@ -46,6 +46,10 @@
 		height: 3.65rem;
 		width: 15rem;
 	}
+	@include bp-xl {
+		height: 5.8rem;
+		width: 24rem;
+	}
 
 	.switch-item {
 		animation: switch-text 6s linear infinite 0s;

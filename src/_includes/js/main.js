@@ -6,6 +6,7 @@ import { OfferingHeader } from "./offering-header";
 import { Offerings } from "./offerings";
 import { SlideIn } from "./animate-slidein";
 import { Parallax } from "./parallax";
+import { Navigation } from "./navigation";
 
 (() => {
 	new Locations();
@@ -16,4 +17,5 @@ import { Parallax } from "./parallax";
 	new Offerings();
 	new SlideIn();
 	new Parallax();
+	new Navigation();
 })();

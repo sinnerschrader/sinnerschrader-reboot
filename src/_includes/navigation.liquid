@@ -11,7 +11,7 @@
             {{ data.navigation.logo.bottom.end}}
         </p>
     </div>
-    <nav class="col-start-11 col-end-13 col-start-9-xs col-end-13-xs" aria-label="{{ data.navigation.ariaLabel }}">
+    <nav class="nav__wrapper col-10" aria-label="{{ data.navigation.ariaLabel }}">
         <ul class="nav__list">
             {% for item in data.navigation.links %}
                 <li class="nav__list__item">
@@ -23,5 +23,61 @@
                 </li>
             {% endfor %}
         </ul>
+	    <button class="nav__mobile-toggle">Toggle Nav</button>
     </nav>
+
+	<div class="nav__offset-panel">
+        <nav class="nav__offset-panel__wrapper grid" aria-label="{{ data.navigation.ariaLabel }}">
+	        <ul class="nav__offset-panel__list">
+		        <li class="offset-panel__list-item">
+			        <a class="nav__offset-panel__list-link"
+			           rel="external nofollow"
+			           href="{{ data.navigation.mobilePanel.homeLink.href}}">
+                        {{ data.navigation.mobilePanel.homeLink.linkText }}
+			        </a>
+		        </li>
+		        {% for item in data.navigation.links %}
+		        <li class="nav__offset-panel__list-item">
+			        <a class="nav__offset-panel__list-link"
+			           rel="external nofollow"
+			           href="{{item.href}}">
+                        {{ item.linkText }}
+			        </a>
+		        </li>
+		        {% endfor %}
+	        </ul>
+	        <div class="nav__offset-panel__bottom-wrapper">
+            <span class="nav__offset-panel__bottom-headline">
+                {{ data.navigation.mobilePanel.miscTitle }}
+            </span>
+		        <ul class="nav__offset-panel__bottom-list">
+			        {% for item in data.navigation.mobilePanel.miscLinks %}
+			        <li class="nav__offset-panel__bottom-item">
+				        <a class="nav__offset-panel__bottom-link"
+				           rel="external nofollow"
+				           href="{{item.href}}">
+                            {{ item.linkText }}
+				        </a>
+			        </li>
+			        {% endfor %}
+		        </ul>
+	        </div>
+	        <div class="nav__offset-panel__bottom-wrapper">
+	        <span class="nav__offset-panel__bottom-headline">
+                {{ data.navigation.mobilePanel.socialTitle }}
+	        </span>
+		        <ul class="nav__offset-panel__bottom-list">
+			        {% for item in data.navigation.mobilePanel.socialLinks %}
+			        <li class="nav__offset-panel__bottom-item">
+				        <a class="nav__offset-panel__bottom-link"
+				           rel="external nofollow"
+				           href="{{item.href}}">
+                            {{ item.linkText }}
+				        </a>
+			        </li>
+			        {% endfor %}
+		        </ul>
+	        </div>
+        </nav>
+    </div>
 </header>

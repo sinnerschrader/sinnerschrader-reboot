@@ -11,14 +11,78 @@
 		},
 		"links": [
 			{
-				"href": "https://sinnerschrader.jobs",
-				"linkText": "Jobs"
+				"href": "https://sinnerschrader.news",
+				"linkText": "Beliefs"
 			},
 			{
 				"href": "https://sinnerschrader.news",
-				"linkText": "News"
+				"linkText": "Offering"
+			},
+			{
+				"href": "https://sinnerschrader.news",
+				"linkText": "Cases"
+			},
+			{
+				"href": "https://sinnerschrader.news",
+				"linkText": "Culture"
+			},
+			{
+				"href": "https://sinnerschrader.jobs",
+				"linkText": "Careers"
 			}
-		]
+		],
+		"mobilePanel": {
+			"homeLink": {
+				"href": "https://sinnerschrader.com",
+				"linkText": "Home"
+			},
+			"miscTitle": "Misc",
+			"miscLinks": [
+				{
+					"href": "https://sinnerschrader.com",
+					"linkText": "Contact"
+				},
+				{
+					"href": "https://sinnerschrader.com",
+					"linkText": "Data policy"
+				},
+				{
+					"href": "https://sinnerschrader.com",
+					"linkText": "Imprint"
+				},
+				{
+					"href": "https://sinnerschrader.com",
+					"linkText": "Improve this site"
+				}
+			],
+			"socialTitle": "Social",
+			"socialLinks": [
+				{
+					"href": "https://sinnerschrader.com",
+					"linkText": "Medium"
+				},
+				{
+					"href": "https://sinnerschrader.com",
+					"linkText": "Twitter"
+				},
+				{
+					"href": "https://sinnerschrader.com",
+					"linkText": "Facebook"
+				},
+				{
+					"href": "https://sinnerschrader.com",
+					"linkText": "LinkedIn"
+				},
+				{
+					"href": "https://sinnerschrader.com",
+					"linkText": "Dev.to"
+				},
+				{
+					"href": "https://sinnerschrader.com",
+					"linkText": "Github"
+				}
+			]
+		}
 	},
 	"footer": {
 		"topline": {

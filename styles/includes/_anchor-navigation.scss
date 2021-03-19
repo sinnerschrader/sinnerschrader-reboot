@@ -4,7 +4,7 @@
 		margin-bottom: $spacing--200;
 
 		&:hover,
-		&:active {
+		&:focus {
 			.anchor-navigation__item-link {
 				font-family: $font-sans-serif-semibold;
 			}

@@ -114,3 +114,16 @@ ul {
 .copy--gray {
 	color: $color-primary--gray;
 }
+
+.copy-mail {
+	@include paragraph-100;
+
+	color: $color-primary--black;
+	border-bottom: 1px solid $color-secondary--yellow;
+}
+
+.contact-address {
+	@include paragraph-100();
+
+	font-style: normal;
+}

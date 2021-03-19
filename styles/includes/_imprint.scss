@@ -1,0 +1,18 @@
+.imprint {
+	&__title {
+		@include headline-300();
+	}
+}
+
+.imprint-large-title {
+	@include bp-xs {
+		.large-title__text {
+			right: -30rem;
+		}
+	}
+
+	.large-title__circle {
+		right: 15%;
+		top: -20%;
+	}
+}

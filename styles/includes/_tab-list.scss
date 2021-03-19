@@ -1,6 +1,4 @@
 .tab-list {
-	@include underline-animation($color-primary--black);
-
 	position: relative;
 	cursor: pointer;
 	width: fit-content;
@@ -33,4 +31,10 @@
 			background: transparent;
 		}
 	}
+}
+
+.tab-list--underline {
+	@include underline-animation($color-primary--black);
+
+	white-space: nowrap;
 }

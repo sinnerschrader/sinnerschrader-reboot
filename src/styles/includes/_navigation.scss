@@ -8,9 +8,45 @@
 }
 
 .nav {
-	background: $color-primary--white;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: $color-primary--white;
 	height: 9.5rem;
+	z-index: 5;
 	text-transform: $uppercase;
+	transition: transform 300ms ease-in-out;
+
+	&.is-mobile-active {
+		.nav__offset-panel {
+			opacity: 1;
+			left: 0;
+		}
+
+		.dot-wrapper {
+			width: 24px;
+			height: 24px;
+			transform: rotate(45deg);
+		}
+
+		.dot {
+			background-color: $color-primary--white;
+
+			&:nth-child(odd) {
+				margin-right: 12px;
+				margin-bottom: 12px;
+			}
+		}
+	}
+
+	&.is-animate-out {
+		transform: translateY(-100px);
+	}
+
+	&.is-animate-in {
+		transform: translateY(0);
+	}
 
 	&__wrapper {
 		display: flex;
@@ -74,10 +110,36 @@
 
 	&__mobile-toggle {
 		display: none;
+		cursor: pointer;
 		z-index: 6;
+		background: none;
+		border: unset;
 
 		@include bp-navigation {
 			display: block;
+		}
+
+		.dot-wrapper {
+			width: 16px;
+			height: 16px;
+			display: flex;
+			flex-wrap: wrap;
+			transition: transform 300ms ease 300ms, height 300ms ease, width 300ms ease;
+		}
+
+		.dot {
+			display: block;
+			height: 4px;
+			width: 4px;
+			background-color: $color-primary--black;
+			border-radius: 50%;
+			transition: background-color 0ms ease 300ms;
+
+			&:nth-child(odd) {
+				margin-right: 8px;
+				margin-bottom: 8px;
+				transition: margin 300ms ease 300ms;
+			}
 		}
 	}
 
@@ -91,11 +153,10 @@
 		color: $color-primary--white;
 		z-index: 5;
 		opacity: 0;
-		transition: left 300ms ease, opacity 300ms ease;
+		transition: left 300ms ease, opacity 0ms ease 300ms;
 
-		&.is-active {
-			opacity: 1;
-			left: 0;
+		&__wrapper {
+			margin-top: $spacing--900;
 		}
 	}
 }

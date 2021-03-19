@@ -18,7 +18,7 @@ module.exports = (eleventyConfig) => {
 	}
 	processSassFiles("./src/styles/index.scss", "./src/_includes/css/main.css");
 
-	eleventyConfig.setTemplateFormats(["liquid", "njk"]);
+	eleventyConfig.setTemplateFormats(["md", "liquid", "njk"]);
 
 	eleventyConfig.addTransform("async-transform-name", async (content, outputPath) => {
 		if (outputPath.endsWith(".css")) {
@@ -55,6 +55,8 @@ module.exports = (eleventyConfig) => {
 		"./src/_includes/assets/svg": "./assets/svg",
 		"./src/_includes/assets/meta-assets": "./assets/meta-assets",
 		"./src/_includes/data/*": "./data/",
+		"./config/netlify-cms-config.yml": "./admin/config.yml",
+		"./node_modules/netlify-cms/dist/netlify-cms.js": "./netlify-cms.js",
 	});
 
 	return {

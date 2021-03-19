@@ -1,0 +1,24 @@
+---
+title: SinnerSchrader
+layout: default
+permalink: jobs.html
+homepage: false
+---
+
+{% include navigation, data: global %}
+
+<ul>
+  {% for job in collections.jobs %}
+    <li>
+      <strong>
+        <a href="{{ job.url | url }}">{{ job.data.title }}</a>
+      </strong>
+      -
+      <time datetime="{{ job.date | htmlDateString }}">{{ job.date | readableDate }}</time>
+      -
+      <span>{{ job.data.description }}</span>
+    </li>
+  {% endfor %}
+</ul>
+
+{% include footer %}

@@ -1,0 +1,60 @@
+{
+	"filters": [
+		{
+			"legend": "Discipline",
+			"key": "discipline",
+			"tags": [
+				{
+					"label": "Account Management",
+					"key": "management"
+				},
+				{
+					"label": "Creative",
+					"key": "creative"
+				},
+				{
+					"label": "Strategy",
+					"key": "strategy"
+				},
+				{
+					"label": "Tech",
+					"key": "tech"
+				},
+				{
+					"label": "General",
+					"key": "general"
+				}
+			]
+		},
+		{
+			"legend": "Location",
+			"key": "location",
+			"tags": [
+				{
+					"label": "Berlin",
+					"key": "berlin"
+				},
+				{
+					"label": "Frankfurt",
+					"key": "frankfurt"
+				},
+				{
+					"label": "Hamburg",
+					"key": "hamburg"
+				},
+				{
+					"label": "Munich",
+					"key": "munich"
+				},
+				{
+					"label": "Prague",
+					"key": "prague"
+				},
+				{
+					"label": "Zurich",
+					"key": "zurich"
+				}
+			]
+		}
+	]
+}

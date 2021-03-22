@@ -1,0 +1,221 @@
+// reset form groups.
+// TODO: we might consider to reset them globally
+fieldset {
+	font-family: inherit;
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+// local variables
+$filter-bar__height--mobile: 7.2rem;
+$filter-bar__height--desktop: 11.8rem;
+
+@mixin active-filters {
+	font-size: 1rem;
+	color: $color-primary--600;
+	text-transform: uppercase;
+	letter-spacing: 0.15rem;
+}
+
+// needed to make position: sticky; work
+.jobs-page {
+	overflow-x: initial;
+}
+
+.job-filter-bar {
+	z-index: 1;
+	// TODO: not sure how typography works here
+	@include paragraph-100();
+
+	// sticky scroll behaviour
+	position: sticky;
+	top: 0;
+
+	background-color: $color-primary--black;
+	color: $color-primary--white;
+	box-sizing: border-box;
+
+	// this is the height of the closed menu
+	max-height: $filter-bar__height--mobile;
+	overflow: hidden;
+
+	@media screen and (min-width: 600px) {
+		max-height: $filter-bar__height--desktop;
+		padding-top: $spacing--400--desktop;
+	}
+
+	// This is toggle without animation for now.
+	// because animating height changes is not a good idea performance wise
+	// TODO: find an elegant solution for animation
+	&.is-open {
+		max-height: initial;
+	}
+
+	// this is only for the mobile view
+	&__mobile-header {
+		text-transform: uppercase;
+		@include interactive-100;
+		margin: 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 $spacing--400;
+		height: $filter-bar__height--mobile;
+
+		// reset p-tag styles
+		.job-filter-bar__mobile-legend {
+			margin: 0;
+			line-height: 1;
+		}
+
+		.mobile-active-filters {
+			@include active-filters();
+		}
+
+		@media screen and (min-width: 600px) {
+			display: none;
+		}
+	}
+
+	// fieldset -> filter group
+	&__category {
+		padding-right: 1em;
+	}
+
+	// fieldset legend
+	&__category-legend {
+		font-size: 2.4rem;
+		margin-bottom: 4.6rem;
+
+		// those are the labels showing which filters apply for each category
+		.active-filters {
+			@include active-filters();
+		}
+	}
+
+	// filter chip
+	&__filter-item {
+		line-height: initial;
+	}
+
+	// active filter state
+	input[type="checkbox"]:checked + &__filter-item {
+		background-color: $color-primary--white;
+		color: $color-primary--900;
+	}
+
+	// focus visible: only applies on keyboard-focus
+	input[type="checkbox"]:focus-visible + &__filter-item {
+		outline: $color-secondary--blue auto 1px;
+	}
+
+	// Button for open close the filter section
+	&__toggle {
+		text-align: right;
+
+		// TODO: replace when icon button is implemented
+		.toggle-button {
+			border: 0;
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+			width: 4rem;
+			height: 4rem;
+			border-radius: 50%;
+			background-color: $color-primary--900;
+			color: $color-primary--white;
+		}
+	}
+
+	// Buttons for dismiss / apply filters
+	&__confirm-group {
+		display: flex;
+		justify-content: space-between;
+
+		.button {
+			flex: 1;
+			justify-content: center;
+		}
+
+		@media screen and (min-width: 600px) {
+			text-align: right;
+
+			.button:last-of-type {
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+.job-list {
+	padding-top: $spacing--600;
+
+	// A category holds subheadline for discipline
+	// and a list for the offerings
+	&__category {
+		border-bottom: 1px solid $color-primary--900;
+
+		&-headline {
+			@include headline-200();
+			position: sticky;
+			top: $filter-bar__height--desktop + $spacing--400;
+			z-index: 0;
+		}
+	}
+
+	// UL
+	&__list {
+		padding: $spacing--400 0;
+	}
+
+	// LI
+	&__item {
+		border-bottom: 1px solid $color-primary--600;
+
+		// is-last gets added via JS
+		&.is-last,
+		&:last-of-type {
+			border: 0;
+		}
+
+		// Job Title
+		&-title {
+			font-family: $font-sans-serif-light;
+			font-size: 2.4rem;
+			margin-bottom: $spacing--100;
+		}
+
+		// Jobs Location
+		&-location {
+			font-family: $font-sans-serif-light;
+			font-size: 1.6rem;
+		}
+	}
+
+	// Styling for the link
+	&__anchor {
+		display: block;
+		color: $color-primary--black;
+		padding: $spacing--400 0;
+		transition: transform 0.2s linear;
+
+		&:hover {
+			// TODO: actually this is guessed
+			transform: translateX($spacing--100);
+		}
+
+		// reset a tag styling
+		&:hover,
+		&:focus,
+		&:active,
+		&:visited {
+			color: $color-primary--black;
+		}
+	}
+
+	// hides list items and discipline categories
+	.hidden {
+		display: none;
+	}
+}

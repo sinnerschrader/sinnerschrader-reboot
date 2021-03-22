@@ -5,6 +5,7 @@
 @import "./core/grid";
 @import "./core/variables";
 @import "./core/components-page";
+@import "./core/buttons";
 
 // includes
 @import "./includes/footer";
@@ -28,9 +29,9 @@
 @import "./includes/text-teaser";
 @import "./includes/button-notext";
 @import "./includes/button-icon";
-@import "./includes//button";
 @import "./includes/filter-checkbox";
 @import "./includes/share-buttons";
+@import "./includes/jobs-page";
 
 // External
 @import "node_modules/swiper/swiper";

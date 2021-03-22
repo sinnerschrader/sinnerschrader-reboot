@@ -179,3 +179,29 @@ ul {
 		font-style: normal;
 	}
 }
+
+.hidden-xs {
+	display: none;
+
+	@media screen and (min-width: 600px) {
+		display: initial;
+	}
+}
+
+.visible-xs {
+	display: initial;
+
+	@media screen and (min-width: 600px) {
+		display: none;
+	}
+}
+// Source: https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html
+.sr-only {
+	clip: rect(0 0 0 0);
+	clip-path: inset(100%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}

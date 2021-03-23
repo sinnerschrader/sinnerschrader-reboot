@@ -1,0 +1,69 @@
+@import "../core/variables";
+
+.icon-button {
+	border-radius: 50%;
+	border: 0;
+	height: 48px;
+	width: 48px;
+	background-color: $color-primary--black;
+
+	.is-dark & {
+		background-color: $color-primary--beige;
+	}
+
+	&--small {
+		height: 40px;
+		width: 40px;
+	}
+
+	&--secondary {
+		background-color: $color-primary--beige;
+
+		.is-dark & {
+			background-color: $color-primary--darkgray;
+		}
+	}
+
+	&--tertiary {
+		background-color: transparent;
+	}
+
+	&:hover {
+		transform: scale(1.4);
+	}
+
+	&__icon {
+		height: 32px;
+		width: 32px;
+		filter: invert(0);
+
+		.is-dark & {
+			filter: invert(1);
+		}
+
+		&--small {
+			height: 16px;
+			width: 16px;
+		}
+
+		&--secondary {
+			filter: invert(1);
+
+			.is-dark & {
+				filter: invert(0);
+			}
+		}
+
+		&--tertiary {
+			filter: invert(1);
+
+			.is-dark & {
+				filter: invert(0);
+			}
+		}
+
+		&:hover {
+			transform: scale(1.2);
+		}
+	}
+}

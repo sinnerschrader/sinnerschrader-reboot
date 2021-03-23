@@ -205,7 +205,7 @@
 
 // Headline smaller sans serif
 @mixin headline-200 {
-	font-family: $font-sans-serif-light;
+	font-family: $font-sans-serif-regular;
 
 	@include bp-xs {
 		font-size: 3.2rem;

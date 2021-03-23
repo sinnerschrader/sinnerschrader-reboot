@@ -12,10 +12,10 @@
     "clean": "rimraf ./_site/",
     "11ty:build": "eleventy",
     "11ty:watch": "eleventy --serve",
-    "esbuild:build": "esbuild ./_includes/js/main.js --outfile=_site/bundle.js --bundle --minify",
-    "esbuild:watch": "esbuild ./_includes/js/main.js --outfile=_site/bundle.js --bundle --watch",
-    "responsiveImages": "rimraf ./_site/assets/images/ && node sharp.js",
-    "stylelint": "stylelint styles/**/*.scss"
+    "esbuild:build": "esbuild ./src/_includes/js/main.js --outfile=_site/bundle.js --bundle --minify",
+    "esbuild:watch": "esbuild ./src/_includes/js/main.js --outfile=_site/bundle.js --bundle --watch",
+    "responsiveImages": "rimraf ./_site/assets/images/ && node ./config/sharp.js",
+    "stylelint": "stylelint ./src/styles/**/*.scss"
   },
   "dependencies": {
     "lodash-es": "^4.17.21",

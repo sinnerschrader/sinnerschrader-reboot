@@ -23,7 +23,7 @@ const renderSassAndSave = (src, dest) => {
 		.then((result) => writeFile(dest, result.css.toString()))
 		.then((_) => {
 			const time = new Date();
-			return utimes(join(process.cwd(), "pages/stylesheet.njk"), time, time);
+			return utimes(join(process.cwd(), "src/pages/stylesheet.njk"), time, time);
 		})
 		.catch(console.error);
 };

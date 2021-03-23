@@ -2,9 +2,9 @@ export class SlideIn {
 	titles = document.querySelectorAll(".slide-in");
 	hideAnimations = window.matchMedia("(prefers-reduced-motion: reduce)");
 	constructor() {
-		if (this.titles) {
-			this.init();
-		}
+		if (!this.titles) return;
+
+		this.init();
 	}
 	init() {
 		let observer = new IntersectionObserver((entries) => {

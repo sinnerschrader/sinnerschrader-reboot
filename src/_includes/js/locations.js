@@ -2,13 +2,13 @@ export class Locations {
 	constructor() {
 		this.container = document.querySelector(".locations");
 
-		if (this.container) {
-			this.tabs = this.container.querySelectorAll("[role=tab]");
-			this.tabpanels = this.container.querySelectorAll("[role=tabpanel]");
-			this.activeTab = this.container.querySelector("[role=tab][aria-selected=true]");
+		if (!this.container) return;
 
-			this.bindEvents();
-		}
+		this.tabs = this.container.querySelectorAll("[role=tab]");
+		this.tabpanels = this.container.querySelectorAll("[role=tabpanel]");
+		this.activeTab = this.container.querySelector("[role=tab][aria-selected=true]");
+
+		this.bindEvents();
 	}
 
 	bindEvents() {

@@ -15,34 +15,16 @@
 	}
 
 	&__content {
-		a {
-			@include paragraph-100;
-
-			color: $color-primary--black;
-			border-bottom: 1px solid $color-secondary--yellow;
-			word-break: break-all;
-			letter-spacing: inherit;
-		}
-
 		h2 {
 			@include headline-200();
 		}
 
 		h3 {
-			@include headline-300();
-
-			font-family: $font-sans-serif-regular;
 			margin-bottom: $spacing--400;
 		}
 
 		section > :last-child {
 			@include responsive-spacing(margin-bottom, $spacing--600, $spacing--600--tablet, $spacing--600--desktop, $spacing--600--desktop-xl);
-		}
-
-		address {
-			@include paragraph-100;
-
-			font-style: normal;
 		}
 
 		ul {

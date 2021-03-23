@@ -46,14 +46,14 @@
 					"rel": ""
 				},
 				{
-					"href": "https://github.com/sinnerschrader/sinnerschrader-reboot/blob/main/pages/data-policy.md",
+					"href": "/data-policy",
 					"text": "Data Policy",
-					"rel": "external nofollow"
+					"rel": "nofollow"
 				},
 				{
-					"href": "https://github.com/sinnerschrader/sinnerschrader-reboot/blob/main/pages/imprint.md",
+					"href": "/imprint",
 					"text": "Imprint",
-					"rel": "external nofollow"
+					"rel": "nofollow"
 				},
 				{
 					"href": "https://github.com/sinnerschrader/sinnerschrader-reboot",

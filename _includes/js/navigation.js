@@ -19,8 +19,16 @@ class Navigation {
 	}
 
 	bindEvents() {
+		this.onLoadPosition();
+
 		window.addEventListener("scroll", throttle(this.detectScroll.bind(this), 50));
 		this.mobileToggleBtn.addEventListener("click", this.toggleMobilePanel.bind(this));
+	}
+
+	onLoadPosition() {
+		if (window.pageYOffset === 0) {
+			this.navigationContainer.classList.add(this.topClass);
+		}
 	}
 
 	toggleMobilePanel() {

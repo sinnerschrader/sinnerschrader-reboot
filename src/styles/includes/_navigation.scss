@@ -16,7 +16,7 @@
 	height: 9.5rem;
 	z-index: 5;
 	text-transform: $uppercase;
-	transition: transform 300ms ease-in-out;
+	transition: transform 300ms ease-in-out, background-color 300ms ease-in-out;
 
 	&.is-mobile-active {
 		.nav__offset-panel {
@@ -25,9 +25,9 @@
 		}
 
 		.dot-wrapper {
-			width: 24px;
-			height: 24px;
-			transform: rotate(45deg);
+			width: $spacing--400;
+			height: $spacing--400;
+			transform: rotate(45deg) translateY(10px);
 		}
 
 		.dot {
@@ -38,20 +38,61 @@
 				margin-bottom: 12px;
 			}
 		}
+
+		.nav__logo--sinnerschrader {
+			color: $color-primary--white;
+		}
 	}
 
 	&.is-animate-out {
-		transform: translateY(-100px);
+		transform: translateY(-10rem);
 	}
 
 	&.is-animate-in {
 		transform: translateY(0);
 	}
 
+	&.is-top {
+		background-color: transparent;
+		color: $color-primary--white;
+
+		.nav__list__link {
+			color: $color-primary--white;
+		}
+
+		.dot {
+			background-color: $color-primary--white;
+		}
+
+		.nav__logo--sinnerschrader {
+			color: $color-primary--white;
+		}
+	}
+
+	.is-dark & {
+		background-color: $color-primary--black;
+
+		.nav__list__link {
+			color: $color-primary--white;
+		}
+
+		.dot {
+			background-color: $color-primary--white;
+		}
+
+		.nav__logo--sinnerschrader {
+			color: $color-primary--white;
+		}
+	}
+
 	&__wrapper {
 		display: flex;
 		flex-direction: row;
 		justify-content: flex-end;
+	}
+
+	&__container {
+		height: 100%;
 	}
 
 	&__logo {
@@ -114,17 +155,19 @@
 		z-index: 6;
 		background: none;
 		border: unset;
+		width: 3.6rem;
 
 		@include bp-navigation {
 			display: block;
 		}
 
 		.dot-wrapper {
-			width: 16px;
-			height: 16px;
+			width: $spacing--200;
+			height: $spacing--200;
 			display: flex;
 			flex-wrap: wrap;
-			transition: transform 300ms ease 300ms, height 300ms ease, width 300ms ease;
+			padding-top: 7px;
+			transition: transform 300ms ease 300ms, height 300ms ease, width 300ms ease 300ms;
 		}
 
 		.dot {
@@ -136,8 +179,8 @@
 			transition: background-color 0ms ease 300ms;
 
 			&:nth-child(odd) {
-				margin-right: 8px;
-				margin-bottom: 8px;
+				margin-right: $spacing--100;
+				margin-bottom: $spacing--100;
 				transition: margin 300ms ease 300ms;
 			}
 		}
@@ -157,6 +200,72 @@
 
 		&__wrapper {
 			margin-top: $spacing--900;
+			text-align: right;
+		}
+
+		&__list-item {
+			margin-bottom: $spacing--400;
+		}
+
+		&__list-link {
+			position: relative;
+			font-size: 3.2rem;
+			color: $color-primary--white;
+
+			&::after {
+				position: absolute;
+				display: none;
+				content: "";
+				right: -1.7rem;
+				top: 50%;
+				width: 4px;
+				height: 4px;
+				background-color: $color-secondary--purple;
+				border-radius: 50%;
+				transform: translateY(-50%);
+			}
+
+			&.is-active {
+				font-size: 3.5rem;
+				font-family: $font-serif;
+
+				&::after {
+					display: block;
+				}
+			}
+		}
+
+		&__bottom-container {
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-end;
+		}
+
+		&__bottom-wrapper {
+			margin-right: $spacing--500;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+
+		&__bottom-headline {
+			@include code-100();
+
+			display: block;
+			color: $color-primary--gray;
+			margin-bottom: $spacing--400;
+		}
+
+		&__bottom-link {
+			@include paragraph-100();
+
+			color: $color-primary--white;
+			line-height: 2.56rem;
+		}
+
+		&__bottom-item {
+			margin-bottom: $spacing--100;
 		}
 	}
 }

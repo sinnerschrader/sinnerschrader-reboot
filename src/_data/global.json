@@ -11,74 +11,90 @@
 		},
 		"links": [
 			{
-				"href": "https://sinnerschrader.news",
+				"baseUrl": "https://sinnerschrader.com",
+				"subUrl": "/beliefs",
 				"linkText": "Beliefs"
 			},
 			{
-				"href": "https://sinnerschrader.news",
+				"baseUrl": "https://sinnerschrader.com",
+				"subUrl": "/offering",
 				"linkText": "Offering"
 			},
 			{
-				"href": "https://sinnerschrader.news",
+				"baseUrl": "https://sinnerschrader.com",
+				"subUrl": "/cases",
 				"linkText": "Cases"
 			},
 			{
-				"href": "https://sinnerschrader.news",
+				"baseUrl": "https://sinnerschrader.com",
+				"subUrl": "/culture",
 				"linkText": "Culture"
 			},
 			{
-				"href": "https://sinnerschrader.jobs",
+				"baseUrl": "https://sinnerschrader.com",
+				"subUrl": "/jobs",
 				"linkText": "Careers"
 			}
 		],
 		"mobilePanel": {
 			"homeLink": {
-				"href": "https://sinnerschrader.com",
+				"baseUrl": "https://sinnerschrader.com",
+				"subUrl": "/",
 				"linkText": "Home"
 			},
 			"miscTitle": "Misc",
 			"miscLinks": [
 				{
-					"href": "https://sinnerschrader.com",
+					"baseUrl": "https://sinnerschrader.com",
+					"subUrl": "/contact",
 					"linkText": "Contact"
 				},
 				{
-					"href": "https://sinnerschrader.com",
+					"baseUrl": "https://sinnerschrader.com",
+					"subUrl": "/data-policy",
 					"linkText": "Data policy"
 				},
 				{
-					"href": "https://sinnerschrader.com",
+					"baseUrl": "https://sinnerschrader.com",
+					"subUrl": "/imprint",
 					"linkText": "Imprint"
 				},
 				{
-					"href": "https://sinnerschrader.com",
+					"baseUrl": "https://sinnerschrader.com",
+					"subUrl": "/improve",
 					"linkText": "Improve this site"
 				}
 			],
 			"socialTitle": "Social",
 			"socialLinks": [
 				{
-					"href": "https://sinnerschrader.com",
+					"baseUrl": "https://sinnerschrader.com",
+					"subUrl": "",
 					"linkText": "Medium"
 				},
 				{
-					"href": "https://sinnerschrader.com",
+					"baseUrl": "https://sinnerschrader.com",
+					"subUrl": "",
 					"linkText": "Twitter"
 				},
 				{
-					"href": "https://sinnerschrader.com",
+					"baseUrl": "https://sinnerschrader.com",
+					"subUrl": "",
 					"linkText": "Facebook"
 				},
 				{
-					"href": "https://sinnerschrader.com",
+					"baseUrl": "https://sinnerschrader.com",
+					"subUrl": "",
 					"linkText": "LinkedIn"
 				},
 				{
-					"href": "https://sinnerschrader.com",
+					"baseUrl": "https://sinnerschrader.com",
+					"subUrl": "",
 					"linkText": "Dev.to"
 				},
 				{
-					"href": "https://sinnerschrader.com",
+					"baseUrl": "https://sinnerschrader.com",
+					"subUrl": "",
 					"linkText": "Github"
 				}
 			]

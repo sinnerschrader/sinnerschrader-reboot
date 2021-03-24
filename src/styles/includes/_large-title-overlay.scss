@@ -98,3 +98,8 @@
 		}
 	}
 }
+@include bp-xs {
+	.privacy {
+		overflow-x: hidden;
+	}
+}

@@ -18,7 +18,8 @@
 	}
 
 	&[aria-selected="true"],
-	&:hover {
+	&:hover,
+	&.active-list {
 		@include label-100();
 
 		&::after {

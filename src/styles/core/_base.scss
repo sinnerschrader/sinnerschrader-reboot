@@ -124,6 +124,10 @@ ul {
 		letter-spacing: inherit;
 		color: $color-primary--black;
 		border-bottom: 1px solid $color-secondary--yellow;
+
+		&:hover {
+			font-weight: bold;
+		}
 	}
 
 	&--title {

@@ -13,19 +13,19 @@ class Parallax {
 	}
 
 	init() {
-		if (this.fastElements) {
+		if (this.fastElements.length) {
 			new simpleParallax(this.fastElements, {
 				scale: 1.3,
 			});
 		}
 
-		if (this.mediumElements) {
+		if (this.mediumElements.length) {
 			new simpleParallax(this.mediumElements, {
 				scale: 1.2,
 			});
 		}
 
-		if (this.slowElements) {
+		if (this.slowElements.length) {
 			new simpleParallax(this.slowElements, {
 				scale: 1.1,
 			});

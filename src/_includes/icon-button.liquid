@@ -1,6 +1,6 @@
 {% if option %}
     {% assign buttonOption = "icon-button--" | append: option %}
-    {% assign iconOption = "icon-button__icon--" | append: option %}
+    {% assign iconOption = "button-icon--" | append: option %}
     {%else%}
     {% assign buttonOption = "" %}
     {% assign iconOption = "" %}
@@ -8,13 +8,13 @@
 
 {% if size == "small" %}
     {% assign buttonSize = "icon-button--" | append: size %}
-    {% assign iconSize = "icon-button__icon--" | append: size %}
+    {% assign iconSize = "button-icon--" | append: size %}
     {%else%}
     {% assign buttonSize = "" %}
     {% assign iconSize = "" %}
 {% endif %}
 
 
-<button class="icon-button {{buttonOption}} {{buttonSize}}" onclick="{{ onclick }}">
-    <img class="icon-button__icon {{iconOption}} {{iconSize}}" src={{iconSrc}}/>
+<button class="icon-button {{buttonOption}} {{buttonSize}}" id="js-{{ isReference }}">
+    <img class="button-icon {{iconOption}} {{iconSize}}" src="{{iconSrc}}"/>
 </button>

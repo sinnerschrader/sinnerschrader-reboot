@@ -4,8 +4,8 @@
 .icon-button {
 	border-radius: 50%;
 	border: 0;
-	height: 4.8rem;
-	width: 4.8rem;
+	height: $spacing--600;
+	width: $spacing--600;
 	background-color: $color-primary--black;
 	cursor: pointer;
 
@@ -20,8 +20,8 @@
 	}
 
 	&--small {
-		height: 4rem;
-		width: 4rem;
+		height: $spacing--400--desktop;
+		width: $spacing--400--desktop;
 	}
 
 	&--secondary {
@@ -37,43 +37,6 @@
 
 		.is-dark & {
 			background-color: transparent;
-		}
-	}
-
-	&__icon {
-		height: 3.2rem;
-		width: 3.2rem;
-		filter: invert(0);
-
-		.is-dark & {
-			filter: invert(1);
-		}
-
-		.icon-button:hover & {
-			@include default-animation(transform);
-
-			transform: scale(0.86);
-		}
-
-		&--small {
-			height: 1.6rem;
-			width: 1.6rem;
-		}
-
-		&--secondary {
-			filter: invert(1);
-
-			.is-dark & {
-				filter: invert(0);
-			}
-		}
-
-		&--tertiary {
-			filter: invert(1);
-
-			.is-dark & {
-				filter: invert(0);
-			}
 		}
 	}
 }

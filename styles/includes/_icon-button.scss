@@ -3,17 +3,21 @@
 .icon-button {
 	border-radius: 50%;
 	border: 0;
-	height: 48px;
-	width: 48px;
+	height: 4.8rem;
+	width: 4.8rem;
 	background-color: $color-primary--black;
 
 	.is-dark & {
 		background-color: $color-primary--beige;
 	}
 
+	&:hover {
+		transform: scale(1.4);
+	}
+
 	&--small {
-		height: 40px;
-		width: 40px;
+		height: 4rem;
+		width: 4rem;
 	}
 
 	&--secondary {
@@ -26,24 +30,28 @@
 
 	&--tertiary {
 		background-color: transparent;
-	}
 
-	&:hover {
-		transform: scale(1.4);
+		.is-dark & {
+			background-color: transparent;
+		}
 	}
 
 	&__icon {
-		height: 32px;
-		width: 32px;
+		height: 3.2rem;
+		width: 3.2rem;
 		filter: invert(0);
 
 		.is-dark & {
 			filter: invert(1);
 		}
 
+		.icon-button:hover & {
+			transform: scale(0.86);
+		}
+
 		&--small {
-			height: 16px;
-			width: 16px;
+			height: 1.6rem;
+			width: 1.6rem;
 		}
 
 		&--secondary {
@@ -60,10 +68,6 @@
 			.is-dark & {
 				filter: invert(0);
 			}
-		}
-
-		&:hover {
-			transform: scale(1.2);
 		}
 	}
 }

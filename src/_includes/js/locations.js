@@ -1,7 +1,9 @@
 export class Locations {
 	constructor() {
 		this.container = document.querySelector(".locations");
-		this.tablist = this.container.querySelector("[role=tablist]");
+
+		if (!this.container) return;
+
 		this.tabs = this.container.querySelectorAll("[role=tab]");
 		this.tabpanels = this.container.querySelectorAll("[role=tabpanel]");
 		this.activeTab = this.container.querySelector("[role=tab][aria-selected=true]");

@@ -6,16 +6,16 @@ class Video {
 	init() {
 		this.videoContainer = document.querySelector(".video-container");
 
-		if (this.videoContainer) {
-			this.video = {
-				previewElement: this.videoContainer.querySelector(".video-preview-loop"),
-				reducedMotionElement: this.videoContainer.querySelector(".video-reduced-motion"),
-				playButton: this.videoContainer.querySelector(".video-media-control"),
-				videoElement: this.videoContainer.querySelector(".video-element"),
-			};
+		if (!this.videoContainer) return;
 
-			this.bindEvents();
-		}
+		this.video = {
+			previewElement: this.videoContainer.querySelector(".video-preview-loop"),
+			reducedMotionElement: this.videoContainer.querySelector(".video-reduced-motion"),
+			playButton: this.videoContainer.querySelector(".video-media-control"),
+			videoElement: this.videoContainer.querySelector(".video-element"),
+		};
+
+		this.bindEvents();
 	}
 
 	bindEvents() {

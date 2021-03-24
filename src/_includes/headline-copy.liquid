@@ -1,14 +1,14 @@
 <h3 class="headline-copy__headline">
 	{% if data.headline.top %}
 		<div class="clip">
-			<span class="slide-in" data-delay="{{ data.headline.delayTop }}">
+			<span class="slide-in" data-js-item="slide-in" data-delay="{{ data.headline.delayTop }}">
 				{{ data.headline.top }}
 			</span>
 		</div>
 	{% endif %}
 	{% if data.headline.bottom %}
 		<div class="clip">
-			<span class="headline-201 slide-in" data-delay="{{ data.headline.delayBottom }}">
+			<span class="headline-201 slide-in" data-js-item="slide-in" data-delay="{{ data.headline.delayBottom }}">
 				{{ data.headline.bottom }}
 			</span>
 		</div>

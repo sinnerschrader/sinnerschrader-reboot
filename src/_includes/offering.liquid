@@ -1,6 +1,6 @@
 <div class="offering">
   <div class="offering--wrapper">
-	  <div class="offering__heading-wrapper">
+	  <div class="offering__heading-wrapper" data-js-item="offering-header">
 		  <h3 class="offering__heading-top">
 			  {{ data.offerings.topHeadline.first}}
 			  <span class="is-font-ogg">
@@ -43,7 +43,7 @@
 		  </h3>
 	  </div>
 
-	  <div class="offering--info grid">
+	  <div class="offering--info grid" data-js-item="offerings">
 		  <div class="swiper-wrapper">
 			  {% for offering in data.offerings.offeringList %}
 			  <div class="swiper-slide offering__slide">

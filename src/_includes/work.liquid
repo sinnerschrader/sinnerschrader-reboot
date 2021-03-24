@@ -1,13 +1,27 @@
 <div class="work">
 	<div class="grid">
 		<h3 class="work__headline col-start-6 col-start-1-xs col-end-12">
-			<div class="clip"><span class="slide-in" data-delay="0s">{{ data.work.headline.top }}</span></div>
+			<div class="clip">
+				<span class="slide-in" data-delay="0s" data-js-item="slide-in">
+					{{ data.work.headline.top }}
+				</span>
+			</div>
 				<br />
-			<div class="clip"><span class="slide-in" data-delay="0.1s">{{ data.work.headline.bottomFirst }}<span class="headline-201"> {{ data.work.headline.bottomSecond }}</span><span class="headline-202">{{ data.work.headline.bottomThird }}</span></span></div>
+			<div class="clip">
+				<span class="slide-in" data-delay="0.1s" data-js-item="slide-in">
+					{{ data.work.headline.bottomFirst }}
+					<span class="headline-201">
+						{{ data.work.headline.bottomSecond }}
+					</span>
+					<span class="headline-202">
+						{{ data.work.headline.bottomThird }}
+					</span>
+				</span>
+			</div>
 		</h3>
 	</div>
 	<div class="work__inner-wrapper">
-		<div class="video-container">
+		<div class="video-container" data-js-item="video">
 			<video class="video-preview-loop" autoplay muted playsinline loop>
 				<source src="{{ data.work.previewVideo.webmSrc }}" type="video/webm" />
 				<source src="{{ data.work.previewVideo.mp4Src }}" type="video/mp4" />

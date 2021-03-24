@@ -6,14 +6,14 @@ class OfferingHeader {
 	showAnimations = window.matchMedia("(prefers-reduced-motion: no-preference)");
 
 	constructor() {
-		if (this.textContainer) {
-			this.textPathTop = this.textContainer.querySelector(".offering__heading-top");
-			this.textPathBottom = this.textContainer.querySelector(".offering__heading-bottom");
-			this.textPathTopMobile = this.textContainer.querySelector(".offering__heading-top.is-mobile");
-			this.textPathBottomMobile = this.textContainer.querySelector(".offering__heading-bottom.is-mobile");
+		if (!this.textContainer) return;
 
-			this.init();
-		}
+		this.textPathTop = this.textContainer.querySelector(".offering__heading-top");
+		this.textPathBottom = this.textContainer.querySelector(".offering__heading-bottom");
+		this.textPathTopMobile = this.textContainer.querySelector(".offering__heading-top.is-mobile");
+		this.textPathBottomMobile = this.textContainer.querySelector(".offering__heading-bottom.is-mobile");
+
+		this.init();
 	}
 
 	init() {

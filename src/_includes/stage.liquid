@@ -3,10 +3,17 @@
         <div class="stage__title col-start-2 col-end-6
             col-end-12-xs">
             <h1 class="stage__headline">
-                <div class="clip"><span class="headline-101 clip__text-small slide-in" data-delay="0s">{{ data.stage.headline.topStart }}<span class="headline-202">{{ data.stage.headline.topEnd }}</span></span></div>
+                <div class="clip">
+                    <span class="headline-101 clip__text-small slide-in" data-js-item="slide-in"
+                                        data-delay="0s">{{ data.stage.headline.topStart }}
+                    <span class="headline-202">{{ data.stage.headline.topEnd }}</span></span>
+                </div>
                 <br>
-                <div class="clip"><span class="slide-in" data-delay="0.1s">{{ data.stage.headline.bottom }}</span><div>
-               
+                <div class="clip">
+                    <span class="slide-in" data-js-item="slide-in" data-delay="0.1s">
+                        {{ data.stage.headline.bottom }}
+                    </span>
+                </div>
             </h1>
         </div>
         <div class="stage__video col-start-6 col-end-11 col-start-2-xs

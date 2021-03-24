@@ -8,12 +8,37 @@ import { SlideIn } from "./animate-slidein";
 import { Parallax } from "./parallax";
 
 (() => {
-	new Locations();
-	new Slider();
-	new BackgroundScrollAnimation();
-	new Video();
-	new OfferingHeader();
-	new Offerings();
-	new SlideIn();
+	if (isModuleNeeded("locations")) {
+		new Locations();
+	}
+
+	if (isModuleNeeded("slider")) {
+		new Slider();
+	}
+
+	if (isModuleNeeded("bg-scroll-animation")) {
+		new BackgroundScrollAnimation();
+	}
+
+	if (isModuleNeeded("video")) {
+		new Video();
+	}
+
+	if (isModuleNeeded("offering-header")) {
+		new OfferingHeader();
+	}
+
+	if (isModuleNeeded("offerings")) {
+		new Offerings();
+	}
+
+	if (isModuleNeeded("slide-in")) {
+		new SlideIn();
+	}
+
 	new Parallax();
 })();
+
+function isModuleNeeded(moduleName) {
+	return document.querySelectorAll(`[data-js-item='${moduleName}']`).length !== 0;
+}

@@ -30,7 +30,7 @@ h1 {
 	@include headline-100();
 
 	color: $color-primary--white;
-	font-weight: 200;
+	font-weight: 400;
 }
 
 .headline-1 {
@@ -44,7 +44,7 @@ h1 {
 h3 {
 	@include headline-200();
 
-	font-weight: 200;
+	font-weight: 400;
 }
 
 p {
@@ -58,6 +58,7 @@ p {
 a {
 	@include interactive-100();
 
+	color: $color-primary--black;
 	text-decoration: none;
 }
 
@@ -111,19 +112,54 @@ ul {
 	@include headline-202();
 }
 
-.copy--gray {
-	color: $color-primary--gray;
-}
+.copy {
+	&--gray {
+		color: $color-primary--gray;
+	}
 
-.copy-mail {
-	@include paragraph-100;
+	&--mail {
+		@include paragraph-100;
 
-	color: $color-primary--black;
-	border-bottom: 1px solid $color-secondary--yellow;
-}
+		word-break: break-all;
+		letter-spacing: inherit;
+		color: $color-primary--black;
+		border-bottom: 1px solid $color-secondary--yellow;
 
-.contact-address {
-	@include paragraph-100();
+		&:hover {
+			font-weight: bold;
+		}
+	}
 
-	font-style: normal;
+	&--title {
+		@include headline-300();
+
+		font-family: $font-sans-serif-regular;
+		margin-top: 8rem;
+
+		@include bp-xs {
+			margin-top: 4.8rem;
+		}
+
+		@include bp-s {
+			margin-top: 6.4rem;
+		}
+	}
+
+	&--list-title {
+		margin: 4rem 0;
+
+		@include bp-xs {
+			margin: 2.4rem 0;
+		}
+
+		@include bp-s {
+			margin: 3.2rem 0;
+		}
+	}
+
+	&--address {
+		@include paragraph-100();
+
+		font-style: normal;
+	}
 }

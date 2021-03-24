@@ -2,6 +2,7 @@
 	&__headline {
 		font-size: 4.8rem;
 		max-width: 250px;
+		margin: 0;
 
 		@include bp-xs() {
 			font-size: 3.2rem;

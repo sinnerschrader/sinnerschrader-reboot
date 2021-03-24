@@ -11,7 +11,7 @@
 		filter: invert(1);
 	}
 
-	.icon-button:hover & {
+	.button-notext:hover & {
 		@include default-animation(transform);
 
 		transform: scale(calc(1.2 / 1.4));

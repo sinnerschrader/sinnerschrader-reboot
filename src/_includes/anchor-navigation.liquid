@@ -1,9 +1,9 @@
-<div class="anchor-navigation">
+<div class="anchor-navigation" data-js-item="anchor-navigation">
 	<ul class="anchor-navigation__list">
 		{% for item in data.navigationItems %}
 			<li class="anchor-navigation__item tab-list">
 				<a href="#{{item.id}}"
-				   class="anchor-navigation__item-link {{item.isActive}}">
+				   class="anchor-navigation__item-link">
 					{{item.text}}
 				</a>
 			</li>

@@ -23,13 +23,15 @@
 		@include label-100();
 
 		&::after {
-			content: "•";
+			content: "";
 			position: absolute;
-			color: $color-secondary--purple;
-			left: -1.5rem;
+			top: 50%;
+			transform: translateY(-50%);
+			left: -1.6rem;
 			width: 0.4rem;
 			height: 0.4rem;
-			background: transparent;
+			background: $color-secondary--purple;
+			border-radius: 50%;
 		}
 	}
 }

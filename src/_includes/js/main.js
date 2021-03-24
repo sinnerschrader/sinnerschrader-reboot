@@ -6,6 +6,7 @@ import { OfferingHeader } from "./offering-header";
 import { Offerings } from "./offerings";
 import { SlideIn } from "./animate-slidein";
 import { Parallax } from "./parallax";
+import { AnchorNavigation } from "./anchor-navigation";
 
 (() => {
 	if (isModuleNeeded("locations")) {
@@ -34,6 +35,10 @@ import { Parallax } from "./parallax";
 
 	if (isModuleNeeded("slide-in")) {
 		new SlideIn();
+	}
+
+	if (isModuleNeeded("anchor-navigation")) {
+		new AnchorNavigation();
 	}
 
 	new Parallax();

@@ -1,4 +1,5 @@
 @import "../core/variables";
+@import "mixins";
 
 .icon-button {
 	border-radius: 50%;
@@ -6,12 +7,15 @@
 	height: 4.8rem;
 	width: 4.8rem;
 	background-color: $color-primary--black;
+	cursor: pointer;
 
 	.is-dark & {
 		background-color: $color-primary--beige;
 	}
 
 	&:hover {
+		@include default-animation(transform);
+
 		transform: scale(1.4);
 	}
 
@@ -46,6 +50,8 @@
 		}
 
 		.icon-button:hover & {
+			@include default-animation(transform);
+
 			transform: scale(0.86);
 		}
 

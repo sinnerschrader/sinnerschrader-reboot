@@ -8,6 +8,7 @@ import { SlideIn } from "./animate-slidein";
 import { Parallax } from "./parallax";
 import { AnchorNavigation } from "./anchor-navigation";
 import { Navigation } from "./navigation";
+import { FilterList } from "./jobs";
 
 (() => {
 	if (isModuleNeeded("locations")) {
@@ -44,6 +45,12 @@ import { Navigation } from "./navigation";
 
 	if (isModuleNeeded("navigation")) {
 		new Navigation();
+		
+	if (isModuleNeeded("job-filter-list")) {
+		const filterList = new FilterList({
+			controlsSelector: "#js-job-filter-bar",
+			listSelector: "#js-job-listing",
+		});
 	}
 
 	new Parallax();

@@ -1,4 +1,4 @@
-class FilterList {
+export class FilterList {
 	// Reference to parent element / not shure if needed
 	parent;
 	// Filter inputs container
@@ -190,9 +190,3 @@ class FilterList {
 			});
 	}
 }
-
-// init
-const filterList = new FilterList({
-	controlsSelector: "#js-job-filter-bar",
-	listSelector: "#js-job-listing",
-});

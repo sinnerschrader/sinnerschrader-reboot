@@ -6,8 +6,8 @@
     <div class="col-12-xs col-7">
         <ul class="job-list__list">
             {% for job in jobs %}
-            <li class="job-list__item" data-level="{{job.data.level | downcase}}"
-                data-location="{{job.data.location | downcase}}" data-discipline="{{job.data.discipline | downcase}}">
+            <li class="job-list__item" data-location="{{job.data.location | downcase}}"
+                data-discipline="{{job.data.discipline | downcase}}">
                 <a class="job-list__anchor" href="{{ job.url | url }}">
                     <div class="job-list__item-title">
                         {{ job.data.title }} (f/m/d/-)

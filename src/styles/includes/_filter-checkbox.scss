@@ -1,0 +1,15 @@
+@import "../core/variables";
+
+.filter-checkbox {
+	border-radius: 10rem;
+	background-color: $color-primary--beige;
+	display: flex;
+
+	.is-dark & {
+		background-color: $color-primary--gray;
+	}
+
+	&__input {
+		appearance: none;
+	}
+}

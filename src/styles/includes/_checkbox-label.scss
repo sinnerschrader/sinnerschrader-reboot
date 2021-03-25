@@ -1,0 +1,60 @@
+@import "../core/variables";
+@import "../core/mixins";
+
+.checkbox-label {
+	display: flex;
+
+	&__text {
+		margin: 1rem $spacing--200 0 1rem;
+		font-size: $font-size--copy-2;
+		font-family: $font-sans-serif-semibold;
+		line-height: $line-height--copy-2;
+		text-transform: uppercase;
+
+		.is-dark & {
+			color: $color-primary--white;
+		}
+	}
+
+	&__icon {
+		margin: 0.8rem 0.6rem;
+		vertical-align: middle;
+
+		circle {
+			fill: $color-primary--black;
+			transform-origin: center;
+			transform: scale(0);
+
+			.is-dark & {
+				fill: $color-primary--white;
+			}
+
+			.filter-checkbox:hover & {
+				@include default-animation(transform);
+
+				transform: scale(1);
+			}
+		}
+
+		path {
+			stroke: $color-primary--black;
+
+			.is-dark & {
+				stroke: $color-primary--white;
+			}
+
+			.filter-checkbox:hover & {
+				filter: invert(1);
+			}
+		}
+
+		:nth-child(2) {
+			.filter-checkbox:hover & {
+				@include default-animation(transform);
+
+				transform-origin: center;
+				transform: rotate(90deg);
+			}
+		}
+	}
+}

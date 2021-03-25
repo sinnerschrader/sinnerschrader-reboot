@@ -43,7 +43,7 @@
 	},
 	{
 		"id": "hamburg",
-		"name": "Hamburg HQ",
+		"name": "Hamburg",
 		"imageSmall": "Hamburg1.webp",
 		"imageLarge": "Hamburg2.webp",
 		"imageFallbackSmall": "Hamburg1.jpg",

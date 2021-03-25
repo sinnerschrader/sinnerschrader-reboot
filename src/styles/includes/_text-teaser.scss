@@ -1,0 +1,33 @@
+.text-teaser {
+	&__headline {
+		@include headline-300();
+
+		color: $color-primary--black;
+
+		.is-dark & {
+			color: $color-primary--white;
+		}
+	}
+
+	&__text {
+		@include subheadline-200();
+
+		color: $color-primary--black;
+
+		.is-dark & {
+			color: $color-primary--white;
+		}
+	}
+
+	&__link {
+		@include interactive-100();
+		@include underline-animation($color-secondary--yellow);
+
+		text-transform: uppercase;
+		color: $color-primary--black;
+
+		.is-dark & {
+			color: $color-primary--white;
+		}
+	}
+}

@@ -20,6 +20,11 @@ body {
 		background-color: $color-primary--black;
 		color: $color-primary--white !important;
 	}
+
+	&.is-no-scroll {
+		height: 100%;
+		overflow: hidden;
+	}
 }
 
 main {

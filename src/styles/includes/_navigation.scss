@@ -15,28 +15,36 @@
 	background-color: $color-primary--white;
 	height: 9.5rem;
 	z-index: 5;
-	text-transform: $uppercase;
 	transition: transform 300ms ease-in-out, background-color 300ms ease-in-out;
 
 	&.is-mobile-active {
 		.nav__offset-panel {
-			opacity: 1;
 			left: 0;
-		}
-
-		.dot-wrapper {
-			width: $spacing--400;
-			height: $spacing--400;
-			transform: rotate(45deg) translateY(10px);
+			overflow-y: auto;
 		}
 
 		.dot {
 			background-color: $color-primary--white;
+		}
 
-			&:nth-child(odd) {
-				margin-right: 12px;
-				margin-bottom: 12px;
-			}
+		.dot-1 {
+			top: -0.6rem;
+			left: 0.6rem;
+		}
+
+		.dot-2 {
+			top: 0.6rem;
+			right: -0.6rem;
+		}
+
+		.dot-3 {
+			bottom: 0.6rem;
+			left: -0.6rem;
+		}
+
+		.dot-4 {
+			bottom: -0.6rem;
+			right: 0.6rem;
 		}
 
 		.nav__logo--sinnerschrader {
@@ -57,6 +65,8 @@
 		color: $color-primary--white;
 
 		.nav__list__link {
+			@include underline-animation($color-primary--white);
+
 			color: $color-primary--white;
 		}
 
@@ -73,6 +83,8 @@
 		background-color: $color-primary--black;
 
 		.nav__list__link {
+			@include underline-animation($color-primary--white);
+
 			color: $color-primary--white;
 		}
 
@@ -98,6 +110,7 @@
 	&__logo {
 		position: relative;
 		margin: auto 0;
+		text-transform: uppercase;
 
 		&--sinnerschrader {
 			@include interactive-100();
@@ -142,10 +155,13 @@
 		}
 
 		&__link {
+			@include underline-animation($color-primary--black);
+
 			color: $color-primary--black;
 			display: inline-block;
 			text-decoration: none;
 			padding: 1rem 0;
+			text-transform: uppercase;
 		}
 	}
 
@@ -159,30 +175,50 @@
 
 		@include bp-navigation {
 			display: block;
+
+			&:focus {
+				outline: none;
+			}
 		}
 
 		.dot-wrapper {
+			position: absolute;
+			top: 50%;
 			width: $spacing--200;
 			height: $spacing--200;
 			display: flex;
 			flex-wrap: wrap;
-			padding-top: 7px;
-			transition: transform 300ms ease 300ms, height 300ms ease, width 300ms ease 300ms;
+			transition: transform 300ms ease, height 300ms ease, width 300ms ease 300ms;
 		}
 
 		.dot {
+			position: absolute;
 			display: block;
 			height: 4px;
 			width: 4px;
 			background-color: $color-primary--black;
 			border-radius: 50%;
-			transition: background-color 0ms ease 300ms;
+			transition: background-color 0ms ease 300ms, top 300ms ease, right 300ms ease, left 300ms ease, bottom 300ms ease;
+		}
 
-			&:nth-child(odd) {
-				margin-right: $spacing--100;
-				margin-bottom: $spacing--100;
-				transition: margin 300ms ease 300ms;
-			}
+		.dot-1 {
+			top: 0;
+			left: 0;
+		}
+
+		.dot-2 {
+			top: 0;
+			right: 0;
+		}
+
+		.dot-3 {
+			bottom: 0;
+			left: 0;
+		}
+
+		.dot-4 {
+			bottom: 0;
+			right: 0;
 		}
 	}
 
@@ -190,16 +226,18 @@
 		position: fixed;
 		left: 100vw;
 		top: 0;
+		bottom: 0;
 		height: 100vh;
 		width: 100vw;
 		background: $color-primary--black;
 		color: $color-primary--white;
 		z-index: 5;
-		opacity: 0;
-		transition: left 300ms ease, opacity 0ms ease 300ms;
+		opacity: 1;
+		transition: left 300ms ease;
 
 		&__wrapper {
 			margin-top: $spacing--900;
+			padding-right: $spacing--200;
 			text-align: right;
 		}
 
@@ -209,6 +247,7 @@
 
 		&__list-link {
 			position: relative;
+			font-family: $font-sans-serif-regular;
 			font-size: 3.2rem;
 			color: $color-primary--white;
 
@@ -253,7 +292,7 @@
 			@include code-100();
 
 			display: block;
-			color: $color-primary--gray;
+			color: $color-primary--600;
 			margin-bottom: $spacing--400;
 		}
 

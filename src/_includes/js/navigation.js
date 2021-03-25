@@ -1,6 +1,7 @@
 import throttle from "lodash-es/throttle";
 
 class Navigation {
+	bodyOverlayClass = "is-no-scroll";
 	mobileActiveClass = "is-mobile-active";
 	topClass = "is-top";
 	animateInClass = "is-animate-in";
@@ -26,12 +27,13 @@ class Navigation {
 	}
 
 	onLoadPosition() {
-		if (window.pageYOffset === 0) {
+		if (window.pageYOffset <= 150) {
 			this.navigationContainer.classList.add(this.topClass);
 		}
 	}
 
 	toggleMobilePanel() {
+		document.body.classList.toggle(this.bodyOverlayClass);
 		this.navigationContainer.classList.toggle(this.mobileActiveClass);
 	}
 
@@ -46,7 +48,7 @@ class Navigation {
 			this.navigationContainer.classList.add(this.animateInClass);
 		}
 
-		if (scrollTop === 0) {
+		if (scrollTop <= 150) {
 			this.navigationContainer.classList.add(this.topClass);
 		} else {
 			this.navigationContainer.classList.remove(this.topClass);

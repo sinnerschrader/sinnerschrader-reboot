@@ -10,4 +10,24 @@
 			}
 		}
 	}
+
+	&__item-link {
+		position: relative;
+
+		&.is-active {
+			font-family: $font-sans-serif-semibold;
+
+			&::before {
+				content: "";
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				left: -1.6rem;
+				width: 0.4rem;
+				height: 0.4rem;
+				background: $color-secondary--purple;
+				border-radius: 45%;
+			}
+		}
+	}
 }

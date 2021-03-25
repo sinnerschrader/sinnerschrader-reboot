@@ -17,6 +17,20 @@
 	&__content {
 		h2 {
 			@include headline-200();
+
+			font-weight: 400;
+
+			@include bp-m {
+				max-width: 33rem;
+			}
+
+			@include bp-l {
+				max-width: 40rem;
+			}
+
+			@include bp-xl {
+				max-width: 50rem;
+			}
 		}
 
 		h3 {

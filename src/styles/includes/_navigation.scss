@@ -6,6 +6,11 @@
 	height: 9.5rem;
 	text-transform: $uppercase;
 
+	.is-dark & {
+		background: $color-primary--black;
+		color: $color-primary--white;
+	}
+
 	&__logo {
 		position: relative;
 		margin: auto 0;
@@ -16,6 +21,10 @@
 			color: $color-primary--black;
 			margin: 0;
 			position: relative;
+
+			.is-dark & {
+				color: $color-primary--white;
+			}
 		}
 
 		&--accenture {
@@ -53,6 +62,10 @@
 			display: inline-block;
 			text-decoration: none;
 			padding: 1rem 0;
+
+			.is-dark & {
+				color: $color-primary--white;
+			}
 		}
 	}
 }

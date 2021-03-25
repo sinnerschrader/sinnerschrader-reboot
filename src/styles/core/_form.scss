@@ -1,0 +1,67 @@
+.form {
+	@include paragraph-100();
+
+	&__field {
+		font: inherit;
+		display: block;
+		width: 100%;
+		box-shadow: none;
+		border: 0;
+		border-bottom: 1px solid $color-primary--white;
+		background-color: inherit;
+	}
+
+	&__radiobox {
+		border: 1px solid $color-primary--white;
+		background-color: inherit;
+		line-height: inherit;
+		margin-right: $spacing--300;
+	}
+
+	&__label {
+		@include headline-300();
+
+		display: block;
+		width: 100%;
+	}
+
+	&__radioboxLabel {
+		@include paragraph-200();
+
+		display: inline;
+	}
+
+	&__radio-group {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__required {
+		@include paragraph-200();
+	}
+
+	&__error-message {
+		display: block;
+		color: $color-secondary--orange;
+
+		&.is-hidden {
+			display: none;
+		}
+	}
+
+	&__subline {
+		@include paragraph-200();
+
+		color: $color-secondary--gray;
+	}
+
+	&__button {
+		border-radius: $spacing--200;
+		border: 0;
+		background-color: $color-primary--white;
+		text-transform: uppercase;
+		width: auto;
+		display: inline-block;
+		padding: $spacing--100 $spacing--200;
+	}
+}

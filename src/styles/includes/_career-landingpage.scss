@@ -1,0 +1,65 @@
+.career-landingpage {
+	.background {
+		&--raster {
+			background: #000 url("./assets/meta-assets/background.png") no-repeat;
+		}
+	}
+
+	.large-title {
+		margin: 3rem 0;
+		position: relative;
+		width: 100%;
+		height: 73.6rem;
+
+		@include bp-l {
+			height: 60rem;
+		}
+
+		@include bp-m {
+			height: 43rem;
+		}
+
+		@include bp-s {
+			height: 43rem;
+		}
+
+		@include bp-xs {
+			height: 31.8rem;
+		}
+
+		&__text {
+			top: 30%;
+			font-family: $font-serif;
+			font-size: 15rem;
+			margin: 0;
+			position: absolute;
+			line-height: 70%;
+			left: -3rem;
+
+			@include bp-xs {
+				font-size: 20rem;
+				right: -32rem;
+			}
+
+			@include bp-s {
+				font-size: 20rem;
+			}
+
+			@include bp-m {
+				font-size: 30rem;
+			}
+
+			@include bp-l {
+				font-size: 40rem;
+			}
+
+			@include bp-xl {
+				font-size: 50rem;
+			}
+
+			&--ogg {
+				font-family: $font-serif-italic;
+			}
+		}
+	}
+}

@@ -1,0 +1,80 @@
+// BUTTON
+
+// TODO: update color variables according to the changes in Figma
+// TODO: add styling to change color on the icon for different backgrounds and states (icon is currently just an img tag with svg-file as src)
+
+.button {
+	@include interactive-100();
+	border: 0;
+	display: inline-flex;
+	align-items: center;
+
+	&__icon {
+		&--left {
+			padding-right: $spacing--200;
+		}
+
+		&--right {
+			padding-left: $spacing--200;
+		}
+	}
+
+	// buttonOption
+	&--primary {
+		background-color: $color-primary--black;
+		color: $color-primary--white;
+
+		.is-dark & {
+			background-color: $color-primary--beige;
+			color: $color-primary--black;
+		}
+	}
+
+	&--secondary {
+		background-color: $color-primary--beige;
+		color: $color-primary--black;
+
+		.is-dark & {
+			background-color: #181818;
+			color: $color-primary--white;
+		}
+	}
+
+	&--tertiary {
+		background: none;
+		.button__text {
+			border-bottom: 0.1rem solid $color-secondary--yellow;
+
+			&:hover {
+				border-bottom: none;
+			}
+		}
+		.is-dark & {
+			color: $color-primary--white;
+		}
+	}
+
+	// buttonSize
+	&--large {
+		padding: $spacing--200 $spacing--500;
+		border-radius: 2.4rem;
+	}
+
+	&--small {
+		padding: 1.2rem $spacing--400;
+		border-radius: 2rem;
+	}
+
+	// TODO: add style when design for hover state is ready
+	&:hover {
+	}
+
+	// state
+	&:disabled {
+		color: #798086;
+
+		.button__text {
+			border-bottom: none;
+		}
+	}
+}

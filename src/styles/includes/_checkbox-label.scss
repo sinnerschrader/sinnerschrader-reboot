@@ -69,6 +69,10 @@
 		}
 
 		:nth-child(2) {
+			@include default-animation(transform);
+
+			transform-origin: center;
+
 			.filter-checkbox--checked & {
 				@include default-animation(transform);
 

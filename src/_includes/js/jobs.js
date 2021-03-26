@@ -58,9 +58,10 @@ class FilterList {
 			this.toggleFilterBarOpen();
 		});
 
-		this.controls.querySelector("#js-toggle-filter-bar--mobile").addEventListener("click", (evt) => {
+		this.controls.querySelector(".js-toggle-filter-bar--mobile").addEventListener("click", (evt) => {
 			evt.preventDefault();
 			this.toggleFilterBarOpen();
+			document.body.classList.toggle("jobs-filter");
 		});
 
 		// Apply Filters

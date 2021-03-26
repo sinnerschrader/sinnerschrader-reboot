@@ -4,10 +4,6 @@
 	position: relative;
 
 	.swiper-container {
-		&:focus {
-			overflow-x: scroll;
-		}
-
 		@include bp-xs {
 			margin-left: 2.4rem;
 		}
@@ -22,6 +18,10 @@
 		}
 		@include bp-xl {
 			margin-left: 9.6rem;
+		}
+
+		&:focus {
+			overflow-x: scroll;
 		}
 
 		.swiper-slide-active {

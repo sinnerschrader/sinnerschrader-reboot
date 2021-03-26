@@ -1,10 +1,9 @@
 // BUTTON
-
 // TODO: update color variables according to the changes in Figma
 // TODO: add styling to change color on the icon for different backgrounds and states (icon is currently just an img tag with svg-file as src)
-
 .button {
 	@include interactive-100();
+
 	border: 0;
 	display: inline-flex;
 	align-items: center;
@@ -42,13 +41,15 @@
 
 	&--tertiary {
 		background: none;
+
 		.button__text {
 			border-bottom: 0.1rem solid $color-secondary--yellow;
 
 			&:hover {
-				border-bottom: none;
+				border-bottom: 0;
 			}
 		}
+
 		.is-dark & {
 			color: $color-primary--white;
 		}
@@ -65,16 +66,12 @@
 		border-radius: 2rem;
 	}
 
-	// TODO: add style when design for hover state is ready
-	&:hover {
-	}
-
 	// state
 	&:disabled {
 		color: #798086;
 
 		.button__text {
-			border-bottom: none;
+			border-bottom: 0;
 		}
 	}
 }

@@ -5,11 +5,19 @@
 	display: flex;
 
 	&__text {
-		margin: 1rem $spacing--200 0 1rem;
+		margin: 1rem $spacing--200 0 0;
 		font-size: $font-size--copy-2;
 		font-family: $font-sans-serif-semibold;
 		line-height: $line-height--copy-2;
 		text-transform: uppercase;
+
+		.filter-checkbox--checked & {
+			color: $color-primary--white;
+
+			.is-dark & {
+				color: $color-primary--black;
+			}
+		}
 
 		.is-dark & {
 			color: $color-primary--white;
@@ -17,7 +25,7 @@
 	}
 
 	&__icon {
-		margin: 0.8rem 0.6rem;
+		margin: 0.8rem 0.6rem 0.8rem 0;
 		vertical-align: middle;
 
 		circle {
@@ -27,6 +35,14 @@
 
 			.is-dark & {
 				fill: $color-primary--white;
+			}
+
+			.filter-checkbox--checked & {
+				fill: $color-primary--white;
+
+				.is-dark & {
+					fill: $color-primary--black;
+				}
 			}
 
 			.filter-checkbox:hover & {
@@ -43,13 +59,21 @@
 				stroke: $color-primary--white;
 			}
 
+			.filter-checkbox--checked & {
+				stroke: $color-primary--white;
+
+				.is-dark & {
+					stroke: $color-primary--black;
+				}
+			}
+
 			.filter-checkbox:hover & {
 				filter: invert(1);
 			}
 		}
 
 		:nth-child(2) {
-			.filter-checkbox:hover & {
+			.filter-checkbox--checked & {
 				@include default-animation(transform);
 
 				transform-origin: center;

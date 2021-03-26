@@ -1,6 +1,8 @@
-<div class="filter-checkbox" onclick="filterCheckboxHandler()">
-	<input type="checkbox" class="filter-checkbox__input" id="{{ id }}" name="{{ name }}"/>
-	<label class="checkbox-label" for="{{ id }}">
+<script src="./js/filter-checkbox.js"></script>
+
+<div class="filter-checkbox" onclick="filterCheckboxHandler('{{isReference}}')" id="checkbox-{{ isReference }}">
+	<input type="checkbox" class="filter-checkbox__input" id="{{ isReference }}" name="{{ name }}"/>
+	<label class="checkbox-label" for="{{ isReference }}">
 		<svg class="checkbox-label__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<circle cx="10" cy="10" r="10" fill="#181818" />
 			<path d="M10 5V15" stroke="white" stroke-width="1.5" />

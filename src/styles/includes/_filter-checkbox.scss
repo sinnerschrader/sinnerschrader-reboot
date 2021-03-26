@@ -12,4 +12,12 @@
 	&__input {
 		appearance: none;
 	}
+
+	&--checked {
+		background-color: $color-primary--black;
+
+		.is-dark & {
+			background-color: $color-primary--white;
+		}
+	}
 }

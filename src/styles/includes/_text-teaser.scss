@@ -12,6 +12,7 @@
 	&__text {
 		@include subheadline-200();
 
+		font-family: $font-sans-serif-light;
 		color: $color-primary--black;
 
 		.is-dark & {
@@ -25,6 +26,7 @@
 
 		text-transform: uppercase;
 		color: $color-primary--black;
+		margin-bottom: $spacing--800;
 
 		.is-dark & {
 			color: $color-primary--white;

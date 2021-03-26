@@ -2,7 +2,7 @@
 @import "../core/mixins";
 
 @mixin bp-navigation {
-	@media screen and (max-width: 800px) {
+	@media screen and (max-width: 810px) {
 		@content;
 	}
 }
@@ -14,10 +14,14 @@
 	right: 0;
 	background-color: $color-primary--white;
 	height: 9.5rem;
-	z-index: 5;
+	z-index: 6;
 	transition: transform 300ms ease-in-out, background-color 300ms ease-in-out;
 
 	&.is-mobile-active {
+		body {
+			overflow: hidden;
+		}
+
 		.nav__offset-panel {
 			left: 0;
 			overflow-y: auto;
@@ -50,9 +54,23 @@
 		.nav__logo--sinnerschrader {
 			color: $color-primary--white;
 		}
+
+		.nav__container {
+			position: relative;
+			background-color: $color-primary--black;
+			z-index: 10;
+			margin: 0;
+			padding: 0 2.4rem;
+			transition: background-color 300ms ease-in-out 300ms;
+		}
+
+		.nav__logo {
+			visibility: hidden;
+		}
 	}
 
 	&.is-animate-out {
+		background-color: inherit;
 		transform: translateY(-10rem);
 	}
 
@@ -63,6 +81,7 @@
 	&.is-top {
 		background-color: transparent;
 		color: $color-primary--white;
+		transform: translateY(0);
 
 		.nav__list__link {
 			@include underline-animation($color-primary--white);

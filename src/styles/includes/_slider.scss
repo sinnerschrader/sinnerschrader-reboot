@@ -4,6 +4,10 @@
 	position: relative;
 
 	.swiper-container {
+		&:focus {
+			overflow-x: scroll;
+		}
+
 		@include bp-xs {
 			margin-left: 2.4rem;
 		}

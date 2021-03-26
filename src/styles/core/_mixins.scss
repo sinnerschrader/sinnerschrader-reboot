@@ -206,6 +206,7 @@
 // Headline smaller sans serif
 @mixin headline-200 {
 	font-family: $font-sans-serif-regular;
+	font-weight: 400;
 
 	@include bp-xs {
 		font-size: 3.2rem;
@@ -279,7 +280,7 @@
 
 @mixin headline-400 {
 	font-family: $font-sans-serif-regular;
-
+	font-weight: 400;
 	@include bp-xs {
 		font-size: 1.8rem;
 		line-height: 2rem;

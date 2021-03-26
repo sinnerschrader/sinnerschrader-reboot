@@ -24,14 +24,13 @@ $filter-bar__height--desktop: 11.8rem;
 }
 
 .job-filter-bar {
-	z-index: 1;
-	// TODO: not sure how typography works here
 	@include paragraph-100();
+
+	z-index: 1;
 
 	// sticky scroll behaviour
 	position: sticky;
 	top: 0;
-
 	background-color: $color-primary--black;
 	color: $color-primary--white;
 	box-sizing: border-box;
@@ -39,6 +38,10 @@ $filter-bar__height--desktop: 11.8rem;
 	// this is the height of the closed menu
 	max-height: $filter-bar__height--mobile;
 	overflow: hidden;
+
+	@include bp-xs {
+		position: initial;
+	}
 
 	@media screen and (min-width: 600px) {
 		max-height: $filter-bar__height--desktop;
@@ -54,8 +57,9 @@ $filter-bar__height--desktop: 11.8rem;
 
 	// this is only for the mobile view
 	&__mobile-header {
-		text-transform: uppercase;
 		@include interactive-100;
+
+		text-transform: uppercase;
 		margin: 0;
 		display: flex;
 		justify-content: space-between;
@@ -87,6 +91,10 @@ $filter-bar__height--desktop: 11.8rem;
 	&__category-legend {
 		font-size: 2.4rem;
 		margin-bottom: 4.6rem;
+
+		@include bp-xs {
+			padding-top: 3.2rem;
+		}
 
 		// those are the labels showing which filters apply for each category
 		.active-filters {
@@ -136,6 +144,7 @@ $filter-bar__height--desktop: 11.8rem;
 		.button {
 			flex: 1;
 			justify-content: center;
+			height: fit-content;
 		}
 
 		@media screen and (min-width: 600px) {
@@ -158,9 +167,11 @@ $filter-bar__height--desktop: 11.8rem;
 
 		&-headline {
 			@include headline-200();
+
 			position: sticky;
 			top: $filter-bar__height--desktop + $spacing--400;
 			z-index: 0;
+			padding-right: 20rem;
 		}
 	}
 
@@ -181,15 +192,14 @@ $filter-bar__height--desktop: 11.8rem;
 
 		// Job Title
 		&-title {
-			font-family: $font-sans-serif-light;
-			font-size: 2.4rem;
-			margin-bottom: $spacing--100;
+			@include headline-400();
 		}
 
 		// Jobs Location
 		&-location {
-			font-family: $font-sans-serif-light;
-			font-size: 1.6rem;
+			@include paragraph-200();
+
+			padding: 0.8rem 0;
 		}
 	}
 
@@ -217,5 +227,48 @@ $filter-bar__height--desktop: 11.8rem;
 	// hides list items and discipline categories
 	.hidden {
 		display: none;
+	}
+}
+
+// Tamara - mobile nav
+.jobs-filter {
+	height: 100vh;
+	overflow: hidden;
+}
+
+.job-filter-wrapper {
+	@include bp-xs {
+		transform: translateX(100%);
+		transition: transform 0.5s ease-in-out;
+
+		.job-filter-bar__category {
+			padding-bottom: 3.2rem;
+
+			&:first-of-type {
+				border-bottom: 1px solid $color-primary--600;
+			}
+		}
+
+		.job-filter-bar__confirm-group {
+			margin-top: 15rem;
+		}
+	}
+}
+
+.is-open .job-filter-wrapper {
+	@include bp-xs {
+		height: 100%;
+		overflow: scroll;
+		z-index: 2;
+		top: 0;
+		background: $color-primary--black;
+		position: absolute;
+		margin: 0;
+		padding: 0 2.4rem;
+		transform: translateX(0);
+	}
+
+	.job-filter-bar__mobile-header {
+		padding: 0;
 	}
 }

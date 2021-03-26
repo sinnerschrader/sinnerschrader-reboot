@@ -25,7 +25,7 @@
 	}
 
 	&__icon {
-		margin: 0.8rem 0.6rem 0.8rem 0;
+		margin: $spacing--100 0.6rem $spacing--100 0;
 		vertical-align: middle;
 
 		circle {
@@ -34,15 +34,11 @@
 			transform: scale(0);
 
 			.is-dark & {
-				fill: $color-primary--white;
+				filter: invert(1);
 			}
 
 			.filter-checkbox--checked & {
 				fill: $color-primary--white;
-
-				.is-dark & {
-					fill: $color-primary--black;
-				}
 			}
 
 			.filter-checkbox:hover & {
@@ -55,19 +51,19 @@
 		path {
 			stroke: $color-primary--black;
 
-			.is-dark & {
-				stroke: $color-primary--white;
-			}
-
 			.filter-checkbox--checked & {
 				stroke: $color-primary--white;
-
-				.is-dark & {
-					stroke: $color-primary--black;
-				}
 			}
 
 			.filter-checkbox:hover & {
+				stroke: $color-primary--white;
+			}
+
+			.filter-checkbox--checked:hover & {
+				stroke: $color-primary--black;
+			}
+
+			.is-dark & {
 				filter: invert(1);
 			}
 		}

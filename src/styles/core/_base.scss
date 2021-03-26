@@ -22,6 +22,15 @@ body {
 	}
 }
 
+// Remove outline by default, is added with JavaScript the first time user hits "tab"
+body:not(.uses-keyboard) {
+	button:focus,
+	a:focus,
+	li:focus {
+		outline: none;
+	}
+}
+
 main {
 	overflow-x: hidden;
 }

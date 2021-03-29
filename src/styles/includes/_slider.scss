@@ -20,6 +20,10 @@
 			margin-left: 9.6rem;
 		}
 
+		&:focus {
+			overflow-x: scroll;
+		}
+
 		.swiper-slide-active {
 			margin-right: 80px;
 		}

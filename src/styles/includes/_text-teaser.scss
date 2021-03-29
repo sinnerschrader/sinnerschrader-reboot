@@ -50,7 +50,7 @@
 			margin-top: $spacing--100;
 		}
 
-		& > *:first-child {
+		*:first-child {
 			@include bp-xs() {
 				margin-top: 0;
 			}

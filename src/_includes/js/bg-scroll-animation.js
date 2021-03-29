@@ -1,7 +1,7 @@
 import { throttle } from "lodash-es";
 
 class BackgroundScrollAnimation {
-	animationStartElement = [];
+	animationStartElements = [];
 	animationOffsetTop = 300;
 	animationOffsetBottom = 500;
 
@@ -14,7 +14,7 @@ class BackgroundScrollAnimation {
 	}
 
 	init() {
-		this.animationStartElement = document.querySelectorAll(".fade-bg-black");
+		this.animationStartElements = document.querySelectorAll(".fade-bg-black");
 		this.circleElement = document.querySelector(".section-header__circle > img");
 
 		this.bindEvents();
@@ -37,7 +37,7 @@ class BackgroundScrollAnimation {
 	viewPortDetection() {
 		let elementInViewport = [];
 
-		this.animationStartElement.forEach((el) => {
+		this.animationStartElements.forEach((el) => {
 			this.isInViewport(el) ? elementInViewport.push(true) : elementInViewport.push(false);
 		});
 

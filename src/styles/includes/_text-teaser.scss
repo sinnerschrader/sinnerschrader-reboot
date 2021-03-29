@@ -47,7 +47,7 @@
 
 	&__content-wrapper {
 		@include bp-xs() {
-			margin-top: 8px;
+			margin-top: $spacing--100;
 		}
 
 		& > *:first-child {

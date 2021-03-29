@@ -1,4 +1,5 @@
 @import "../core/variables";
+@import "../core/mixins";
 
 .filter-checkbox {
 	border-radius: 10rem;
@@ -14,11 +15,90 @@
 		appearance: none;
 	}
 
-	&--checked {
-		background-color: $color-primary--black;
+	&__text {
+		margin-right: $spacing--200;
+		font-size: $font-size--copy-2;
+		font-family: $font-sans-serif-semibold;
+		line-height: $line-height--copy-2;
+		letter-spacing: 0.15rem;
+		align-self: center;
 
 		.is-dark & {
-			background-color: $color-primary--white;
+			color: $color-primary--white;
 		}
+	}
+
+	&__icon {
+		margin: 0 0.6rem 0 $spacing--100;
+		align-self: center;
+
+		circle {
+			fill: $color-primary--black;
+			transform-origin: center;
+			transform: scale(0);
+
+			.is-dark & {
+				filter: invert(1);
+			}
+
+			.filter-checkbox--checked & {
+				fill: $color-primary--white;
+			}
+
+			.filter-checkbox:hover & {
+				@include default-animation(transform);
+
+				transform: scale(1);
+			}
+		}
+
+		path {
+			stroke: $color-primary--black;
+
+			.filter-checkbox--checked & {
+				stroke: $color-primary--white;
+			}
+
+			.filter-checkbox:hover & {
+				stroke: $color-primary--white;
+			}
+
+			.filter-checkbox--checked:hover & {
+				stroke: $color-primary--black;
+			}
+
+			.is-dark & {
+				filter: invert(1);
+			}
+		}
+
+		:nth-child(2) {
+			@include default-animation(transform);
+
+			transform-origin: center;
+		}
+	}
+}
+
+.filter-checkbox__input:checked + .filter-checkbox {
+	background-color: $color-primary--black;
+
+	.is-dark & {
+		background-color: $color-primary--white;
+	}
+
+	.filter-checkbox__text {
+		filter: invert(1);
+	}
+
+	.filter-checkbox__icon {
+		filter: invert(1);
+	}
+
+	:nth-child(2).filter-checkbox__icon {
+		@include default-animation(transform);
+
+		transform-origin: center;
+		transform: rotate(90deg);
 	}
 }

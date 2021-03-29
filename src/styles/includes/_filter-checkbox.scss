@@ -41,10 +41,6 @@
 				filter: invert(1);
 			}
 
-			.filter-checkbox--checked & {
-				fill: $color-primary--white;
-			}
-
 			.filter-checkbox:hover & {
 				@include default-animation(transform);
 
@@ -55,16 +51,8 @@
 		path {
 			stroke: $color-primary--black;
 
-			.filter-checkbox--checked & {
-				stroke: $color-primary--white;
-			}
-
 			.filter-checkbox:hover & {
 				stroke: $color-primary--white;
-			}
-
-			.filter-checkbox--checked:hover & {
-				stroke: $color-primary--black;
 			}
 
 			.is-dark & {
@@ -72,7 +60,7 @@
 			}
 		}
 
-		:nth-child(2) {
+		&__animated-path {
 			@include default-animation(transform);
 
 			transform-origin: center;
@@ -95,7 +83,7 @@
 		filter: invert(1);
 	}
 
-	:nth-child(2).filter-checkbox__icon {
+	.filter-checkbox__icon__animated-path {
 		@include default-animation(transform);
 
 		transform-origin: center;

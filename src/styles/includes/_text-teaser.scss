@@ -28,8 +28,32 @@
 		color: $color-primary--black;
 		margin-bottom: $spacing--800;
 
+		&::before {
+			position: absolute;
+			content: "";
+			top: 90%;
+			transform: scaleX(1);
+			background: #ffd400;
+			width: 100%;
+			height: 0.1rem;
+			left: 0;
+			pointer-events: none;
+		}
+
 		.is-dark & {
 			color: $color-primary--white;
+		}
+	}
+
+	&__content-wrapper {
+		@include bp-xs() {
+			margin-top: 8px;
+		}
+
+		& > *:first-child {
+			@include bp-xs() {
+				margin-top: 0;
+			}
 		}
 	}
 }

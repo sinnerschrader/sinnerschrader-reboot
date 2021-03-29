@@ -2,6 +2,8 @@
 @import "../core/mixins";
 
 .button-notext {
+	@include default-animation(transform);
+
 	border-radius: 50%;
 	border: 0;
 	height: $spacing--600;

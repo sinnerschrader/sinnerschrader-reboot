@@ -2,6 +2,8 @@
 @import "../core/mixins";
 
 .button-icon {
+	@include default-animation(transform);
+
 	height: $spacing--500;
 	width: $spacing--500;
 	vertical-align: middle;

@@ -5,11 +5,12 @@
 	display: flex;
 
 	&__text {
-		margin: 1rem $spacing--200 0 0;
+		margin-right: $spacing--200;
 		font-size: $font-size--copy-2;
 		font-family: $font-sans-serif-semibold;
 		line-height: $line-height--copy-2;
-		text-transform: uppercase;
+		letter-spacing: 0.15rem;
+		align-self: center;
 
 		.filter-checkbox--checked & {
 			color: $color-primary--white;
@@ -25,8 +26,8 @@
 	}
 
 	&__icon {
-		margin: $spacing--100 0.6rem $spacing--100 0;
-		vertical-align: middle;
+		margin-right: 0.6rem;
+		align-self: center;
 
 		circle {
 			fill: $color-primary--black;

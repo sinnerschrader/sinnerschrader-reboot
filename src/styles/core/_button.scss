@@ -4,11 +4,16 @@
 .button {
 	@include interactive-100();
 
+	line-height: initial;
 	border: 0;
 	display: inline-flex;
 	align-items: center;
 
 	&__icon {
+		fill: none;
+		width: 1.6rem;
+		height: 1.6rem;
+
 		&--left {
 			padding-right: $spacing--200;
 		}
@@ -27,6 +32,14 @@
 			background-color: $color-primary--beige;
 			color: $color-primary--black;
 		}
+
+		.button__icon {
+			stroke: $color-primary--white;
+		}
+
+		.is-dark & .button__icon {
+			stroke: $color-primary--black;
+		}
 	}
 
 	&--secondary {
@@ -36,6 +49,14 @@
 		.is-dark & {
 			background-color: #181818;
 			color: $color-primary--white;
+		}
+
+		.button__icon {
+			stroke: $color-primary--black;
+		}
+
+		.is-dark & .button__icon {
+			stroke: $color-primary--white;
 		}
 	}
 
@@ -77,6 +98,10 @@
 
 		.button__text {
 			border-bottom: 0;
+		}
+
+		.button__icon {
+			stroke: #798086;
 		}
 	}
 }

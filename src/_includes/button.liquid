@@ -1,12 +1,16 @@
 <button id="{{ jsReference }}" class="button button--{{ buttonOption }} button--{{ buttonSize }}" {{ state }} >
-  {% if iconSrcLeft %}
-    <img class="button__icon button__icon--left" src="{{ iconSrcLeft }}" alt=""/>
+  {% if iconLeftID %}
+    <svg class="button__icon button__icon--left">
+      <use href="/assets/svg/icons.svg#{{ iconLeftID }}" />
+    </svg>
   {% endif %}
   
   <span class="button__text">{{ buttonText }}</span>
 
-  {% if iconSrcRight %}
-    <img class="button__icon button__icon--right" src="{{ iconSrcRight }}" alt=""/>
+  {% if iconRightID %}
+    <svg class="button__icon button__icon--right">
+      <use href="/assets/svg/icons.svg#{{ iconRightID }}" />
+    </svg>
   {% endif %}
 </button>
 

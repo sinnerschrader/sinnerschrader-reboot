@@ -1,30 +1,41 @@
 .career-landingpage {
 	.background {
 		&--raster {
+			row-gap: 0;
 			background: #000 url("./assets/meta-assets/background.png") no-repeat;
+
+			@include bp-xs {
+				background-image: none;
+			}
 		}
 	}
 
+	&__intro {
+		@include spacing-600(margin-top);
+	}
+
+	&__intro-text {
+		@include subheadline-200();
+		margin: 0;
+	}
+
 	.large-title {
-		margin: 3rem 0;
+		margin: 0 0 3rem 0;
 		position: relative;
 		width: 100%;
-		height: 73.6rem;
+		height: 24.4rem;
 
-		@include bp-l {
-			height: 60rem;
+		@include bp-s {
+			margin: 3rem 0;
+			height: 43rem;
 		}
 
 		@include bp-m {
 			height: 43rem;
 		}
 
-		@include bp-s {
-			height: 43rem;
-		}
-
-		@include bp-xs {
-			height: 31.8rem;
+		@include bp-l {
+			height: 45rem;
 		}
 
 		&__text {
@@ -37,8 +48,7 @@
 			left: -3rem;
 
 			@include bp-xs {
-				font-size: 20rem;
-				right: -32rem;
+				font-size: 16rem;
 			}
 
 			@include bp-s {
@@ -50,7 +60,7 @@
 			}
 
 			@include bp-l {
-				font-size: 40rem;
+				font-size: 36rem;
 			}
 
 			@include bp-xl {
@@ -60,6 +70,18 @@
 			&--ogg {
 				font-family: $font-serif-italic;
 			}
+		}
+	}
+
+	.form__group {
+		@include responsive-spacing(margin-bottom, $spacing--600, 2.4rem, 2.4rem, 2.4rem);
+	}
+
+	.form__radio-group {
+		@include responsive-spacing(margin-bottom, $spacing--600, 5.6rem, 5.6rem, 5.6rem);
+
+		.form__label {
+			margin-bottom: 2.4rem;
 		}
 	}
 }

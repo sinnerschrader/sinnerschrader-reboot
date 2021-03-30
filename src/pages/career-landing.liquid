@@ -13,20 +13,17 @@ bodyClass: is-dark
 	<section class="grid">
 		{% include page-headline, data: careerLandingpage %}
 	</section>
-	<section class="grid">
-		<div class="background--raster">
-			<p>
+	<section class="grid background--raster">
+		<div class="career-landingpage__intro col-start-6 col-start-1-xs">
+			<p class="career-landingpage__intro-text">
 				We’re a colorful community of creators, developers, coders, and dreamers that craft experiences for an open and
 				optimistic world. We’re also among one of the fastest growing agency families in the world – and happy to say
 			</p>
-		
-			{% include large-title, data: careerLandingpage %}
 		</div>
-	</section>
+		{% include large-title, data: careerLandingpage %}
 
-	<section class="grid">
-		<form class=" form">
-			<label for="full-name">
+		<form class="career-landingpage__form form col-start-6 col-start-1-xs">
+			<label class="form__group" for="full-name">
 				<span class="form__label">Full Name <span class="form__required">(required)</span></span>
 				
 				<span class="form__error-message is-hidden">
@@ -36,49 +33,49 @@ bodyClass: is-dark
 				<input class="form__field" id="full-name" name="full-name" required type="text">
 			</label>
 		
-			<label for="email">
+			<label class="form__group" for="email">
 				<span class="form__label">How to reach you best? <span class="form__required">(required)</span></span>
 		
 				<span class="form__error-message is-hidden">
-					email address or phone number.
+					please add your email address or phone number.
 				</span>
 		
 				<input class="form__field" id="email" name="email" required type="email">
 		
 				<span class="form__subline">
-					email. phone
+					e.g. email address or phone number
 				</span>
 			</label>
 			
-			<label for="profile">
-				<span class="form__label">Just drop us a link to one of your profiles<span class="form__required">(required)</span></span>
+			<label class="form__group" for="profile">
+				<span class="form__label">Just drop us a link to one of your profiles <span class="form__required">(required)</span></span>
 			
 				<span class="form__error-message is-hidden">
 					please put in a valid | url_escape
 				</span>
 			
-				<input class="form__field" id="profile" name="profile" required type="url">
+				<input class="form__field" id="profile" name="profile" required  type="url">
 			
 				<span class="form__subline">
 					e.g. linkedIn, github, gitlab, Xing, ...
 				</span>
 			</label>
 
-			<div aria-labelledby='legend-1' role='radiogroup' class="form__radio-group">
+			<div aria-labelledby='legend-1' role='radiogroup' class="form__group form__radio-group">
 				<span class="form__label">To whom do you wanna speak to? <span class="form__required">(required)</span></span>
 				
-				<label for="recruiter">
+				<label for="recruiter" class="form__radiobox">
+					<input id="recruiter" required type="radio" name="answers" value="recruiter">
 					<span class="form__radiobox-label">Recruiter</span>
-					<input class="form__radiobox" id="recruiter" required type="radio" name="answers" value="recruiter">
 				</label>
-				<label for="developer">
+				<label for="developer" class="form__radiobox">
+					<input id="developer" type="radio" name="answers" value="developer">
 					<span class="form__radiobox-label">Developer</span>
-					<input class="form__radiobox" id="developer" type="radio" name="answers" value="developer">
 				</label>
 
-				<label for="whoever">
+				<label for="whoever" class="form__radiobox">
+					<input id="whoever" type="radio" name="answers" value="whoever">
 					<span class="form__radiobox-label">Whoever</span>
-					<input class="form__radiobox" id="whoever" type="radio" name="answers" value="whoever">
 				</label>
 				<span class="form__error-message is-hidden">
 					Please select one option.
@@ -90,13 +87,6 @@ bodyClass: is-dark
 			
 		</form>
 	</section>
-
-	<section>
-		{% include section-header, title: "Here we are", number: "06", type: "medium" %}
-		{% include locations %}
-	</section>
-
-	
 
 </main>
 

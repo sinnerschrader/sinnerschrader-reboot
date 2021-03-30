@@ -33,7 +33,7 @@
 			display: inline-block;
 			font-size: 2.4rem;
 
-			&:before {
+			&::before {
 				content: "";
 				display: inline-block;
 				box-sizing: border-box;
@@ -51,7 +51,7 @@
 			width: 0;
 			height: 0;
 
-			&:checked + .form__radiobox-label:before {
+			&:checked + .form__radiobox-label::before {
 				background: radial-gradient($color-secondary--yellow 40%, $color-primary--black 41%);
 			}
 		}
@@ -61,10 +61,6 @@
 		display: flex;
 		flex-wrap: wrap;
 
-		label + label {
-			margin-left: $spacing--300;
-		}
-
 		@include bp-xs {
 			flex-direction: column;
 
@@ -72,6 +68,10 @@
 				margin-left: 0;
 				margin-top: $spacing--400;
 			}
+		}
+
+		label + label {
+			margin-left: $spacing--300;
 		}
 	}
 

@@ -6,6 +6,7 @@
 	background-color: $color-primary--beige;
 	display: flex;
 	height: 3.6rem;
+	cursor: pointer;
 
 	.is-dark & {
 		background-color: $color-primary--darkgray;
@@ -32,13 +33,17 @@
 		margin: 0 0.6rem 0 $spacing--100;
 		align-self: center;
 
+		.filter-checkbox:hover & {
+			filter: invert(1);
+		}
+
 		circle {
-			fill: $color-primary--black;
+			fill: $color-primary--white;
 			transform-origin: center;
 			transform: scale(0);
 
 			.is-dark & {
-				filter: invert(1);
+				fill: $color-primary--black;
 			}
 
 			.filter-checkbox:hover & {
@@ -51,12 +56,8 @@
 		path {
 			stroke: $color-primary--black;
 
-			.filter-checkbox:hover & {
-				stroke: $color-primary--white;
-			}
-
 			.is-dark & {
-				filter: invert(1);
+				stroke: $color-primary--white;
 			}
 		}
 
@@ -89,4 +90,16 @@
 		transform-origin: center;
 		transform: rotate(90deg);
 	}
+}
+
+.filter-checkbox__input:checked + .filter-checkbox:hover {
+	.filter-checkbox__icon {
+		filter: invert(0);
+	}
+}
+
+.filter-checkbox__input:focus-visible + .filter-checkbox {
+	outline-offset: 1px;
+	outline: Highlight auto 1px;
+	outline: -webkit-focus-ring-color auto 1px;
 }

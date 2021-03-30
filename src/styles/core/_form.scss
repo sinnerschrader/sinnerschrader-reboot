@@ -1,6 +1,8 @@
 .form {
 	@include paragraph-100();
 
+	position: relative;
+
 	&__field {
 		font: inherit;
 		display: block;

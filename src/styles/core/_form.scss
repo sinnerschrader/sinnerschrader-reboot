@@ -7,15 +7,13 @@
 		width: 100%;
 		box-shadow: none;
 		border: 0;
-		border-bottom: 1px solid $color-primary--white;
+		border-bottom: 1px solid $color-primary--black;
 		background-color: inherit;
-	}
 
-	&__radiobox {
-		border: 1px solid $color-primary--white;
-		background-color: inherit;
-		line-height: inherit;
-		margin-right: $spacing--300;
+		.is-dark & {
+			color: $color-primary--white;
+			border-bottom: 1px solid $color-primary--white;
+		}
 	}
 
 	&__label {
@@ -25,15 +23,56 @@
 		width: 100%;
 	}
 
-	&__radioboxLabel {
-		@include paragraph-200();
+	&__group {
+		display: block;
+		margin-bottom: $spacing--600;
+	}
 
-		display: inline;
+	&__radiobox {
+		&-label {
+			display: inline-block;
+			font-size: 2.4rem;
+
+			&:before {
+				content: "";
+				display: inline-block;
+				box-sizing: border-box;
+				width: 2.3rem;
+				height: 2.3rem;
+				border-radius: 50%;
+				border: 1px solid $color-primary--white;
+				background-color: inherit;
+				transform: translateX(-0.5em);
+			}
+		}
+
+		input {
+			opacity: 0;
+			width: 0;
+			height: 0;
+
+			&:checked + .form__radiobox-label:before {
+				background: radial-gradient($color-secondary--yellow 40%, $color-primary--black 41%);
+			}
+		}
 	}
 
 	&__radio-group {
 		display: flex;
 		flex-wrap: wrap;
+
+		label + label {
+			margin-left: $spacing--300;
+		}
+
+		@include bp-xs {
+			flex-direction: column;
+
+			label + label {
+				margin-left: 0;
+				margin-top: $spacing--400;
+			}
+		}
 	}
 
 	&__required {
@@ -52,6 +91,8 @@
 	&__subline {
 		@include paragraph-200();
 
+		display: inline-block;
+		margin-top: $spacing--100;
 		color: $color-secondary--gray;
 	}
 

@@ -1,4 +1,6 @@
 .text-teaser {
+	padding-bottom: $spacing--100;
+
 	&__headline {
 		@include headline-300();
 
@@ -31,7 +33,7 @@
 		&::before {
 			position: absolute;
 			content: "";
-			top: 90%;
+			top: 110%;
 			transform: scaleX(1);
 			background: #ffd400;
 			width: 100%;

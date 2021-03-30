@@ -63,15 +63,18 @@
 
 		@include bp-xs {
 			flex-direction: column;
-
-			label + label {
-				margin-left: 0;
-				margin-top: $spacing--400;
-			}
+		}
+		@include bp-s {
+			flex-direction: column;
 		}
 
-		label + label {
-			margin-left: $spacing--300;
+		label {
+			margin-right: $spacing--300;
+			margin-bottom: $spacing--400;
+		}
+
+		.form__label {
+			margin-bottom: $spacing--400;
 		}
 	}
 

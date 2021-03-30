@@ -79,10 +79,6 @@
 	}
 
 	.form__radio-group {
-		@include responsive-spacing(margin-bottom, $spacing--600, 5.6rem, 5.6rem, 5.6rem);
-
-		.form__label {
-			margin-bottom: 2.4rem;
-		}
+		@include responsive-spacing(margin-bottom, 2.4rem, 3.2rem, 3.2rem, 3.2rem);
 	}
 }

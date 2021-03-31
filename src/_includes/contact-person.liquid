@@ -1,0 +1,22 @@
+<section class="contact">
+  <h4 class="contact__headline">{{ data.headline }}</h4>
+  <div class="contact__person">
+    <img class="contact__image" src="{{ data.details.imgUrl }}" alt="">
+    <div>
+      <p class="contact__person-data">{{ data.details.name }}</p>
+      <p class="contact__person-data">{{ data.details.title }}</p>
+      <address>
+        <a class="contact__link" href="tel:{{ data.details.phone }}">{{ data.details.phone }}</a>
+        <div class="contact__link-container">
+          <a class="contact__link" href="mailto:{{ data.details.mail }}">Mail</a>
+          <span class="contact__link-separator"></span>
+          <a class="contact__link" href="{{ data.details.linkedIn }}">LinkedIn</a>
+          <span class="contact__link-separator"></span>
+          <a class="contact__link" href="{{ data.details.xing }}">Xing</a>
+        </div>
+      </address>
+    </div>
+  </div>
+  <button>{{ data.buttonText }}</button>
+</section>
+  

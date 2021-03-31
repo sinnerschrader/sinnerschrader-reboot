@@ -298,6 +298,27 @@
 	}
 }
 
+@mixin subheadline-200 {
+	font-family: $font-sans-serif-regular;
+
+	@include bp-xs {
+		font-size: 1.8rem;
+		line-height: 2.88rem;
+	}
+	@include bp-tablet {
+		font-size: 2.4rem;
+		line-height: 3.84rem;
+	}
+	@include bp-l {
+		font-size: 2.4rem;
+		line-height: 3.84rem;
+	}
+	@include bp-xl {
+		font-size: 3.2rem;
+		line-height: 5.12rem;
+	}
+}
+
 // Paragraph and label shared styling
 @mixin text-shared {
 	font-family: $font-sans-serif-regular;

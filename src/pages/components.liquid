@@ -9,17 +9,39 @@ dataJsItem: bg-scroll-animation
 {% include navigation, data: global %}
 
 <main>
-	<section>
-		{% include section-header, title: "Text-Teaser", number: "01" %}
-		{% include text-teaser, data: components %}
-	</section>
+    <section>
+        {% include section-header, title: "Text-Teaser", number: "01" %}
+        {% include text-teaser, data: components %}
+    </section>
 
-	<section class="fade-bg-black">
-		{% include section-header, title: "Text-Teaser (on dark)", number: "02" %}
-		{% include text-teaser, data: components%}
-	</section>
+    <section class="fade-bg-black">
+        {% include section-header, title: "Text-Teaser (on dark)", number: "02" %}
+        {% include text-teaser, data: components%}
+    </section>
+
+    <section>
+        {% include section-header, title: "Icon-Button", number: "03" %}
+        <div style="display: flex; padding: 10rem; justify-content: space-between;">
+            {% include button-notext, iconSrc:"/assets/svg/Chevron-down.svg" %}
+            {% include button-notext, iconSrc:"/assets/svg/Chevron-down.svg" option:"secondary"%}
+            {% include button-notext, iconSrc:"/assets/svg/Chevron-down.svg" option:"tertiary"%}
+            {% include button-notext, iconSrc:"/assets/svg/Chevron-down.svg" size:"small"%}
+            {% include button-notext, iconSrc:"/assets/svg/Chevron-down.svg" option:"secondary" size:"small"%}
+            {% include button-notext, iconSrc:"/assets/svg/Chevron-down.svg" option:"tertiary" size:"small"%}
+        </div>
+    </section>
+
+    <section class="fade-bg-black">
+        {% include section-header, title: "Icon-Button(on dark)", number: "04" %}
+        <div style="display: flex; padding: 10rem; justify-content: space-between;">
+            {% include button-notext, iconSrc:"/assets/svg/Chevron-down.svg" %}
+            {% include button-notext, iconSrc:"/assets/svg/Chevron-down.svg" option:"secondary"%}
+            {% include button-notext, iconSrc:"/assets/svg/Chevron-down.svg" option:"tertiary"%}
+            {% include button-notext, iconSrc:"/assets/svg/Chevron-down.svg" size:"small"%}
+            {% include button-notext, iconSrc:"/assets/svg/Chevron-down.svg" option:"secondary" size:"small"%}
+            {% include button-notext, iconSrc:"/assets/svg/Chevron-down.svg" option:"tertiary" size:"small"%}
+        </div>
+    </section>
 </main>
 
 {% include footer, data: global %}
-
-

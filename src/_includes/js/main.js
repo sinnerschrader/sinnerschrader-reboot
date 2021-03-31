@@ -8,7 +8,7 @@ import { SlideIn } from "./animate-slidein";
 import { Parallax } from "./parallax";
 import { AnchorNavigation } from "./anchor-navigation";
 import { Navigation } from "./navigation";
-import { FilterList } from "./jobs";
+import { FilterList, FloatObserver } from "./jobs";
 
 (() => {
 	if (isModuleNeeded("locations")) {
@@ -45,11 +45,19 @@ import { FilterList } from "./jobs";
 
 	if (isModuleNeeded("navigation")) {
 		new Navigation();
-		
+	}
+
 	if (isModuleNeeded("job-filter-list")) {
 		const filterList = new FilterList({
+			parentSelector: "#js-filter-list",
 			controlsSelector: "#js-job-filter-bar",
 			listSelector: "#js-job-listing",
+		});
+
+		const floatObserver = new FloatObserver({
+			objectiveSelector: "#js-mobile-filter-header",
+			targetSelector: "#js-job-filter-bar",
+			targetClass: "is-floating",
 		});
 	}
 

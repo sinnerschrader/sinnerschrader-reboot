@@ -1,5 +1,5 @@
 export class FilterList {
-	// Reference to parent element / not shure if needed
+	// Reference to parent element
 	parent;
 	// Filter inputs container
 	controls;
@@ -12,14 +12,14 @@ export class FilterList {
 	hiddenClass = "hidden";
 
 	constructor(props) {
-		// not shure if needed
+		// parent container
 		this.parent = document.querySelector(props.parentSelector);
 		// inputs
 		this.controls = document.querySelector(props.controlsSelector);
 		// output
 		this.list = document.querySelector(props.listSelector);
 
-		if (this.controls === null) {
+		if (this.parent === null || this.controls === null || this.list === null) {
 			console.warn("No DOM elements found");
 			return;
 		}
@@ -52,16 +52,20 @@ export class FilterList {
 			});
 		});
 
-		// Toggle Menu
+		// Toggle Menu / Desktop
 		this.controls.querySelector("#js-toggle-filter-bar").addEventListener("click", (evt) => {
 			evt.preventDefault();
 			this.toggleFilterBarOpen();
 		});
 
-		this.controls.querySelector(".js-toggle-filter-bar--mobile").addEventListener("click", (evt) => {
-			evt.preventDefault();
-			this.toggleFilterBarOpen();
-			document.body.classList.toggle("jobs-filter");
+		// Toggle Menu / Mobile
+		this.parent.querySelectorAll(".js-toggle-filter-bar--mobile").forEach((elem) => {
+			elem.addEventListener("click", (evt) => {
+				evt.preventDefault();
+				this.toggleFilterBarOpen();
+				// Full screen menu open so prevent scrolling in the background
+				document.body.classList.toggle("freeze-scroll");
+			});
 		});
 
 		// Apply Filters
@@ -70,6 +74,9 @@ export class FilterList {
 			this.updateList();
 			this.updateListCategories();
 			this.toggleFilterBarOpen();
+			if (document.body.classList.contains("freeze-scroll")) {
+				document.body.classList.remove("freeze-scroll");
+			}
 		});
 
 		// Clear Filters
@@ -128,7 +135,9 @@ export class FilterList {
 		// updates mobile active labels
 		const mobileTags = Object.values(this.filters).flatMap((x) => x);
 		const activeMobileKeyWords = mobileTags.length !== 0 ? mobileTags.join(", ") : "All";
-		this.controls.querySelector("#js-mobile-active-filters").innerHTML = activeMobileKeyWords;
+		this.controls.querySelectorAll(".mobile-active-filters").forEach((elem) => {
+			elem.innerHTML = activeMobileKeyWords;
+		});
 
 		// updates filter group labels
 		Object.keys(this.filters).forEach((category) => {
@@ -188,5 +197,36 @@ export class FilterList {
 			.forEach((item, index, self) => {
 				item.classList.add(this.hiddenClass);
 			});
+	}
+}
+
+export class FloatObserver {
+	objective;
+	target;
+	targetClass = "";
+	observer;
+
+	constructor(props) {
+		this.objective = document.querySelector(props.objectiveSelector);
+		this.target = document.querySelector(props.targetSelector);
+		this.targetClass = props.targetClass;
+
+		if (this.objective === null || this.target === null) {
+			console.warn("No DOM elements found!");
+			return;
+		}
+
+		this.bindListeners();
+	}
+
+	bindListeners() {
+		this.observer = new IntersectionObserver((changes) => {
+			if (changes[0].isIntersecting) {
+				this.target.classList.remove(this.targetClass);
+			} else {
+				this.target.classList.add(this.targetClass);
+			}
+		});
+		this.observer.observe(this.objective);
 	}
 }

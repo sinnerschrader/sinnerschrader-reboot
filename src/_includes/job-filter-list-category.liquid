@@ -1,7 +1,9 @@
 <div class="job-list__category grid" id="js-list-category__{{ discipline | | downcase }}">
-    <div class="col-12-xs col-5">
-        <h2 class="job-list__category-headline">{{ discipline }}</h2>
+    <div class="col-12-xs col-5 hidden-xs">
+        <h2 class="job-list__category-headline col-12-xs col-5">{{ discipline }}</h2>
     </div>
+
+    <h2 class="job-list__category-headline col-12-xs col-5 visible-xs">{{ discipline }}</h2>
 
     <div class="col-12-xs col-7">
         <ul class="job-list__list">

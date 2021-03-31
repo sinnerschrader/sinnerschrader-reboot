@@ -1,0 +1,23 @@
+backend:
+  name: github
+  repo: sinnerschrader/sinnerschrader-reboot
+  branch: main
+
+media_folder: "_includes/assets/images"
+
+publish_mode: editorial_workflow
+
+collections:
+  - label: "Job"
+    name: "job"
+    folder: "src/jobs"
+    create: true
+    delete: true
+    slug: "{{title}}-{{location}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Location", name: "location", widget: "string" }
+      - { label: "Level", name: "level", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Date", name: "date", widget: "date", default: "" }
+      - { label: "Job Body", name: "body", widget: "markdown" }

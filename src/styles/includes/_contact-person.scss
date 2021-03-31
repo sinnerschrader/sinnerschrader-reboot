@@ -1,0 +1,53 @@
+.contact {
+	@include paragraph-200();
+
+	&__headline {
+		@include label-100();
+		@include spacing-300(margin-bottom);
+
+		margin-top: 0;
+	}
+
+	&__person {
+		@include spacing-300(gap);
+		@include spacing-400(margin-bottom);
+
+		display: flex;
+		flex-flow: column nowrap;
+
+		@include bp-xs {
+			@include spacing-500(margin-bottom);
+
+			flex-flow: row nowrap;
+		}
+	}
+
+	&__image {
+		width: 100px;
+		border-radius: 50%;
+	}
+
+	&__person-data {
+		margin: 0;
+	}
+
+	&__link-container {
+		display: flex;
+		align-items: center;
+	}
+
+	&__link {
+		@include paragraph-200();
+
+		font-style: normal;
+	}
+
+	&__link-separator {
+		display: inline-block;
+		width: 0.2rem;
+		height: 0.2rem;
+		margin: 0.5rem;
+		border-radius: 50%;
+		background: $color-primary--black;
+	}
+}

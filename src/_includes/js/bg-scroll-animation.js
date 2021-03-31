@@ -1,7 +1,7 @@
 import { throttle } from "lodash-es";
 
 class BackgroundScrollAnimation {
-	animationStartElement = [];
+	animationStartElements = [];
 	animationOffsetTop = 300;
 	animationOffsetBottom = 500;
 
@@ -14,7 +14,7 @@ class BackgroundScrollAnimation {
 	}
 
 	init() {
-		this.animationStartElement = [document.querySelector(".offering"), document.querySelector(".work")];
+		this.animationStartElements = document.querySelectorAll(".fade-bg-black");
 		this.circleElement = document.querySelector(".section-header__circle > img");
 
 		this.bindEvents();
@@ -22,19 +22,26 @@ class BackgroundScrollAnimation {
 
 	bindEvents() {
 		window.addEventListener("load", () => this.scrollListener());
-		// Load the detection once first to check if the element is already on load in the viewport
+
 		this.viewPortDetection();
 	}
 
 	scrollListener() {
 		document.addEventListener("scroll", throttle(this.viewPortDetection.bind(this), 200));
+
+		if (!this.circleElement) return;
+
 		document.addEventListener("scroll", this.rotateCircle.bind(this));
 	}
 
 	viewPortDetection() {
-		const elementsInViewport = this.animationStartElement.some((el) => this.isInViewport(el));
+		let elementInViewport = [];
 
-		elementsInViewport ? this.toggleBackground("dark") : this.toggleBackground("light");
+		this.animationStartElements.forEach((el) => {
+			this.isInViewport(el) ? elementInViewport.push(true) : elementInViewport.push(false);
+		});
+
+		elementInViewport.indexOf(true) !== -1 ? this.toggleBackground("dark") : this.toggleBackground("light");
 	}
 
 	toggleBackground(mode) {
@@ -52,6 +59,8 @@ class BackgroundScrollAnimation {
 	}
 
 	isInViewport(el) {
+		if (!el) return;
+
 		const { top, bottom } = el.getBoundingClientRect();
 		const vHeight = window.innerHeight || document.documentElement.clientHeight;
 

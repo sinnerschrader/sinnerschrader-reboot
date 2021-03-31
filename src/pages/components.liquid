@@ -1,0 +1,25 @@
+---
+title: SinnerSchrader
+layout: default.liquid
+permalink: components.html
+bodyClass: is-bg-scroll
+dataJsItem: bg-scroll-animation
+---
+
+{% include navigation, data: global %}
+
+<main>
+	<section>
+		{% include section-header, title: "Text-Teaser", number: "01" %}
+		{% include text-teaser, data: components %}
+	</section>
+
+	<section class="fade-bg-black">
+		{% include section-header, title: "Text-Teaser (on dark)", number: "02" %}
+		{% include text-teaser, data: components%}
+	</section>
+</main>
+
+{% include footer, data: global %}
+
+

@@ -11,6 +11,10 @@
 	background-color: $color-primary--black;
 	cursor: pointer;
 
+	&:not(:focus-visible) {
+		outline: none;
+	}
+
 	.is-dark & {
 		background-color: $color-primary--beige;
 	}

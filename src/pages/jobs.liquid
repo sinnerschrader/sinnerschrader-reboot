@@ -8,60 +8,74 @@ renderData: filterbar
 {% include navigation, data: global %}
 
 <main class="jobs-page">
-    <form id="js-job-filter-bar" class="job-filter-bar" data-js-item="job-filter-list">
-        <!-- Mobile Filter Header -->
-        <header class="job-filter-bar__mobile-header">
-            <p class="job-filter-bar__mobile-legend">
-                Filter <br>
-                <small id="js-mobile-active-filters" class="mobile-active-filters">All</small>
-            </p>
-            <!-- Open / Close Filterbar MOBILE ONLY -->
-            <div class="job-filter-bar__toggle">
-                <button class="toggle-button js-toggle-filter-bar--mobile">+</button>
-            </div>
-        </header>
+    <!-- Open / Close Filterbar MOBILE ONLY -->
+    <section id="js-filter-list" class="filter-list">
+        <form id="js-job-filter-bar" class="job-filter-bar" data-js-item="job-filter-list">
 
-        <div class="grid job-filter-wrapper">
-        <header class="job-filter-bar__mobile-header">
-            <p class="job-filter-bar__mobile-legend">
-                Filter <br>
-                <small id="js-mobile-active-filters" class="mobile-active-filters">All</small>
-            </p>
-            <div class="job-filter-bar__toggle">
-                <button class="toggle-button js-toggle-filter-bar--mobile">x</button>
-            </div>
-        </header>
-            <!-- Builds the Filtergroups in the Filterbar -->
-            {% for filter in filterbar.filters %}
-            {% include job-filter-group, filter: filter %}
-            {% endfor %}
+            <!-- Mobile Filter Bar Floating -->
+            <header id="js-mobile-filter-header"
+                class="job-filter-bar__mobile-header job-filter-bar__mobile-header--floatable">
+                <p class="job-filter-bar__mobile-legend">
+                    Filter <br>
+                    <small class="mobile-active-filters">All</small>
+                </p>
+                <!-- Open / Close Filterbar MOBILE ONLY -->
+                <div class="job-filter-bar__toggle">
+                    <button class="toggle-button js-toggle-filter-bar--mobile">+</button>
+                </div>
+            </header>
 
-            <!-- Open / Close Filterbar -->
-            <div class="job-filter-bar__toggle col-1 col-start-12 hidden-xs">
-                <button id="js-toggle-filter-bar" class="toggle-button">+</button>
-            </div>
+            <div class="grid job-filter-wrapper">
+                <!-- This is the mobile header in the Flyout -->
+                <header class="job-filter-bar__mobile-header">
+                    <p class="job-filter-bar__mobile-legend">
+                        Filter <br>
+                        <small class="mobile-active-filters">All</small>
+                    </p>
 
-            <!-- Clear filters / Apply Filters -->
-            <div class="job-filter-bar__confirm-group col-12-xs col-start-1-xs col-4 col-start-9">
-                <button class="button button--primary" id="js-clear-filter">Clear</button>
-                <button class="button button--secondary" id="js-apply-filter">Apply</button>
+                    <!-- Open / Close Filterbar MOBILE ONLY -->
+                    <div class="job-filter-bar__toggle">
+                        <button class="toggle-button js-toggle-filter-bar--mobile">x</button>
+                    </div>
+                </header -->
+
+                <!-- Builds the Filtergroups in the Filterbar -->
+                {% for filter in filterbar.filters %}
+                {% include job-filter-group, filter: filter %}
+                {% endfor %}
+
+                <!-- Open / Close Filterbar -->
+                <div class="job-filter-bar__toggle col-1 col-start-12 hidden-xs">
+                    <button id="js-toggle-filter-bar" class="toggle-button">+</button>
+                </div>
+
+                <!-- Clear filters / Apply Filters -->
+                <div class="job-filter-bar__confirm-group col-12-xs col-start-1-xs col-4 col-start-9">
+                    <button class="button button--primary" id="js-clear-filter">Clear</button>
+                    <button class="button button--secondary" id="js-apply-filter">Apply</button>
+                </div>
             </div>
+        </form>
+
+        <!-- Filter Container Floating Bubble / Appears when filterbar is out of sight -->
+        <div id="js-mobile-floater" class="mobile-floater visible-xs">
+            <button class="toggle-button js-toggle-filter-bar--mobile">F</button>
         </div>
-    </form>
 
-    <!-- Categories in the listing -->
-    <section id="js-job-listing" class="job-list">
-        <!-- Filter out jobs for each discipline -->
-        {% assign creativeJobs = collections.jobs | groupByDiscipline: 'creative' %}
-        {% assign techJobs = collections.jobs | groupByDiscipline: 'tech' %}
-        {% assign managementJobs = collections.jobs | groupByDiscipline: 'management' %}
-        {% assign strategyJobs = collections.jobs | groupByDiscipline: 'strategy' %}
+        <!-- Categories in the listing -->
+        <section id="js-job-listing" class="job-list">
+            <!-- Filter out jobs for each discipline -->
+            {% assign creativeJobs = collections.jobs | groupByDiscipline: 'creative' %}
+            {% assign techJobs = collections.jobs | groupByDiscipline: 'tech' %}
+            {% assign managementJobs = collections.jobs | groupByDiscipline: 'management' %}
+            {% assign strategyJobs = collections.jobs | groupByDiscipline: 'strategy' %}
 
-        <!-- Render their dedicated lists -->
-        {% include job-filter-list-category, discipline: 'Account Management', jobs: managementJobs %}
-        {% include job-filter-list-category, discipline: 'Creative', jobs: creativeJobs %}
-        {% include job-filter-list-category, discipline: 'Strategy', jobs: strategyJobs %}
-        {% include job-filter-list-category, discipline: 'Tech', jobs: techJobs %}
+            <!-- Render their dedicated lists -->
+            {% include job-filter-list-category, discipline: 'Account Management', jobs: managementJobs %}
+            {% include job-filter-list-category, discipline: 'Creative', jobs: creativeJobs %}
+            {% include job-filter-list-category, discipline: 'Strategy', jobs: strategyJobs %}
+            {% include job-filter-list-category, discipline: 'Tech', jobs: techJobs %}
+        </section>
     </section>
 
 

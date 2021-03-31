@@ -18,15 +18,32 @@ $filter-bar__height--desktop: 11.8rem;
 	letter-spacing: 0.15rem;
 }
 
+@mixin icon-button {
+	border: 0;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	width: 4rem;
+	height: 4rem;
+	border-radius: 50%;
+	background-color: $color-primary--900;
+	color: $color-primary--white;
+}
+
 // needed to make position: sticky; work
 .jobs-page {
 	overflow-x: initial;
 }
 
+.filter-list {
+	position: relative;
+}
+
 .job-filter-bar {
 	@include paragraph-100();
-
+	overflow-x: hidden;
 	z-index: 1;
+	width: 100%;
 
 	// sticky scroll behaviour
 	position: sticky;
@@ -43,7 +60,7 @@ $filter-bar__height--desktop: 11.8rem;
 		position: initial;
 	}
 
-	@media screen and (min-width: 600px) {
+	@include bp-s-and-above {
 		max-height: $filter-bar__height--desktop;
 		padding-top: $spacing--400--desktop;
 	}
@@ -77,7 +94,7 @@ $filter-bar__height--desktop: 11.8rem;
 			@include active-filters();
 		}
 
-		@media screen and (min-width: 600px) {
+		@include bp-s-and-above {
 			display: none;
 		}
 	}
@@ -124,15 +141,7 @@ $filter-bar__height--desktop: 11.8rem;
 
 		// TODO: replace when icon button is implemented
 		.toggle-button {
-			border: 0;
-			display: inline-flex;
-			justify-content: center;
-			align-items: center;
-			width: 4rem;
-			height: 4rem;
-			border-radius: 50%;
-			background-color: $color-primary--900;
-			color: $color-primary--white;
+			@include icon-button();
 		}
 	}
 
@@ -147,11 +156,41 @@ $filter-bar__height--desktop: 11.8rem;
 			height: fit-content;
 		}
 
-		@media screen and (min-width: 600px) {
+		@include bp-s-and-above {
 			text-align: right;
 
 			.button:last-of-type {
 				margin-right: 0;
+			}
+		}
+	}
+}
+
+// Filter Button that floats with scrolling
+@include bp-xs {
+	.mobile-floater {
+		display: block;
+		position: sticky;
+		top: 90vh;
+		text-align: right;
+		max-width: 100%;
+		overflow: hidden;
+		z-index: 100;
+
+		.toggle-button {
+			@include icon-button();
+			cursor: pointer;
+			transform: translateX(4rem);
+			transition: transform 0.4s ease-in;
+		}
+
+		.freeze-scroll & {
+			display: none;
+		}
+
+		.is-floating ~ & {
+			.toggle-button {
+				transform: translateX(-4rem);
 			}
 		}
 	}
@@ -167,11 +206,17 @@ $filter-bar__height--desktop: 11.8rem;
 
 		&-headline {
 			@include headline-200();
-
+			border-bottom: 1px solid $color-primary--600;
 			position: sticky;
-			top: $filter-bar__height--desktop + $spacing--400;
+			top: 0;
+			background-color: $color-primary--white;
 			z-index: 0;
-			padding-right: 20rem;
+			padding: $spacing--400 20rem $spacing--400 0;
+
+			@include bp-s-and-above {
+				top: $filter-bar__height--desktop + $spacing--400;
+				border: 0;
+			}
 		}
 	}
 
@@ -230,16 +275,26 @@ $filter-bar__height--desktop: 11.8rem;
 	}
 }
 
-// Tamara - mobile nav
-.jobs-filter {
+// When the fullscreen filter menu is open we want to prevent scrolling in the background
+.freeze-scroll {
 	height: 100vh;
-	overflow: hidden;
+	overflow-y: hidden;
 }
 
 .job-filter-wrapper {
 	@include bp-xs {
 		transform: translateX(100%);
-		transition: transform 0.5s ease-in-out;
+		// transition: transform 0.4s ease-in-out;
+		transition: transform 0.2s linear;
+
+		height: 100vh;
+		overflow: scroll;
+		z-index: 2;
+		top: 0;
+		background: $color-primary--black;
+		position: fixed;
+		margin: 0;
+		padding: 0 2.4rem;
 
 		.job-filter-bar__category {
 			padding-bottom: 3.2rem;
@@ -257,14 +312,6 @@ $filter-bar__height--desktop: 11.8rem;
 
 .is-open .job-filter-wrapper {
 	@include bp-xs {
-		height: 100%;
-		overflow: scroll;
-		z-index: 2;
-		top: 0;
-		background: $color-primary--black;
-		position: absolute;
-		margin: 0;
-		padding: 0 2.4rem;
 		transform: translateX(0);
 	}
 

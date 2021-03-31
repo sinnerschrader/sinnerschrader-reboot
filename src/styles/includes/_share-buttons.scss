@@ -1,0 +1,15 @@
+@import "../core/variables";
+@import "../core/mixins";
+
+.share-buttons {
+	&__text {
+		font-size: $font-size--copy-1;
+	}
+
+	&__button-wrapper {
+		@include spacing-300(margin-top);
+
+		display: flex;
+		flex-wrap: wrap;
+	}
+}

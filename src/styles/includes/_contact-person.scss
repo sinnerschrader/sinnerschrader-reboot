@@ -1,6 +1,11 @@
 .contact {
 	@include paragraph-200();
 
+	@include bp-xs {
+		display: flex;
+		flex-flow: column nowrap;
+	}
+
 	&__headline {
 		@include label-100();
 		@include spacing-300(margin-bottom);
@@ -40,6 +45,14 @@
 		@include paragraph-200();
 
 		font-style: normal;
+
+		.is-dark & {
+			color: $color-primary--white;
+		}
+	}
+
+	&__link-social {
+		border-bottom: 0.1rem solid $color-secondary--yellow;
 	}
 
 	&__link-separator {
@@ -49,5 +62,9 @@
 		margin: 0.5rem;
 		border-radius: 50%;
 		background: $color-primary--black;
+
+		.is-dark & {
+			background: $color-primary--white;
+		}
 	}
 }

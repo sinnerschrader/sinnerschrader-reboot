@@ -8,15 +8,15 @@
       <address>
         <a class="contact__link" href="tel:{{ data.details.phone }}">{{ data.details.phone }}</a>
         <div class="contact__link-container">
-          <a class="contact__link" href="mailto:{{ data.details.mail }}">Mail</a>
+          <a class="contact__link contact__link-social" href="mailto:{{ data.details.mail }}">Mail</a>
           <span class="contact__link-separator"></span>
-          <a class="contact__link" href="{{ data.details.linkedIn }}">LinkedIn</a>
+          <a class="contact__link contact__link-social" href="{{ data.details.linkedIn }}">LinkedIn</a>
           <span class="contact__link-separator"></span>
-          <a class="contact__link" href="{{ data.details.xing }}">Xing</a>
+          <a class="contact__link contact__link-social" href="{{ data.details.xing }}">Xing</a>
         </div>
       </address>
     </div>
   </div>
-  <button>{{ data.buttonText }}</button>
+  <button class="contact__button">{{ data.buttonText }}</button>
 </section>
   

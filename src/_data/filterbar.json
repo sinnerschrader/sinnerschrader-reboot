@@ -6,7 +6,7 @@
 			"tags": [
 				{
 					"label": "Account Management",
-					"key": "management"
+					"key": "Account Management"
 				},
 				{
 					"label": "Creative",
@@ -21,8 +21,8 @@
 					"key": "tech"
 				},
 				{
-					"label": "General",
-					"key": "general"
+					"label": "Corporate Functions",
+					"key": "Corporate Functions"
 				}
 			]
 		},

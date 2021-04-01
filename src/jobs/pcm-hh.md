@@ -2,7 +2,7 @@
 title: Product & Client Manager
 location: Hamburg
 level: Junior
-discipline: management
+discipline: Account Management
 description: We build things, we break things
 date: 2021-03-16T23:00:00.000Z
 ---

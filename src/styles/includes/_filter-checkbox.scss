@@ -21,7 +21,7 @@
 		font-size: $font-size--copy-2;
 		font-family: $font-sans-serif-semibold;
 		line-height: $line-height--copy-2;
-		letter-spacing: 0.15rem;
+		letter-spacing: $latter-spacing--label;
 		align-self: center;
 
 		.is-dark & {

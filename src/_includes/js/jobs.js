@@ -7,6 +7,8 @@ export class FilterList {
 	list;
 	// filter Object gets filled depending on content
 	filters = {};
+	// live update list
+	liveUpdate = false;
 
 	// CSS constants
 	hiddenClass = "hidden";
@@ -18,6 +20,8 @@ export class FilterList {
 		this.controls = document.querySelector(props.controlsSelector);
 		// output
 		this.list = document.querySelector(props.listSelector);
+		// settings
+		this.liveUpdate = props.liveUpdate ? props.liveUpdate : this.liveUpdate;
 
 		if (this.parent === null || this.controls === null || this.list === null) {
 			console.warn("No DOM elements found");
@@ -46,9 +50,13 @@ export class FilterList {
 					const index = this.filters[filter].indexOf(value);
 					this.filters[filter].splice(index, 1);
 				}
+
 				this.updateActiveFilterTags();
-				this.updateList();
 				this.updateListCategories();
+
+				if (this.liveUpdate) {
+					this.updateList();
+				}
 			});
 		});
 
@@ -183,7 +191,7 @@ export class FilterList {
 			// by discipline
 			.filter((item) => {
 				const discipline = item.dataset.discipline;
-				const level = item.dataset.level;
+				// const level = item.dataset.level;
 				const location = item.dataset.location;
 				const excluded =
 					// discipline doesn't match and discipline section is active
@@ -217,16 +225,5 @@ export class FloatObserver {
 		}
 
 		this.bindListeners();
-	}
-
-	bindListeners() {
-		this.observer = new IntersectionObserver((changes) => {
-			if (changes[0].isIntersecting) {
-				this.target.classList.remove(this.targetClass);
-			} else {
-				this.target.classList.add(this.targetClass);
-			}
-		});
-		this.observer.observe(this.objective);
 	}
 }

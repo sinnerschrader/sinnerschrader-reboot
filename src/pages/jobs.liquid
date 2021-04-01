@@ -12,7 +12,7 @@ renderData: filterbar
     <section id="js-filter-list" class="filter-list">
         <form id="js-job-filter-bar" class="job-filter-bar" data-js-item="job-filter-list">
 
-            <!-- Mobile Filter Bar Floating -->
+            <!-- Mobile Filter Bar Floating– -->
             <header id="js-mobile-filter-header"
                 class="job-filter-bar__mobile-header job-filter-bar__mobile-header--floatable">
                 <p class="job-filter-bar__mobile-legend">
@@ -67,7 +67,7 @@ renderData: filterbar
             <!-- Filter out jobs for each discipline -->
             {% assign creativeJobs = collections.jobs | groupByDiscipline: 'creative' %}
             {% assign techJobs = collections.jobs | groupByDiscipline: 'tech' %}
-            {% assign managementJobs = collections.jobs | groupByDiscipline: 'management' %}
+            {% assign managementJobs = collections.jobs | groupByDiscipline: 'Account Management' %}
             {% assign strategyJobs = collections.jobs | groupByDiscipline: 'strategy' %}
 
             <!-- Render their dedicated lists -->

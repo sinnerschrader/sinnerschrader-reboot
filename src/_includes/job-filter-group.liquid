@@ -5,7 +5,8 @@
     </legend>
     {% for filterItem in filter.tags %}
     <label>
-        <input class="sr-only" type="checkbox" name="{{ filter.key }}" value="{{ filterItem.key }}">
+        <input class="sr-only" type="checkbox" name="{{ filter.key | downcase }}"
+            value="{{ filterItem.key | downcase}}">
         <span class="job-filter-bar__filter-item button button--primary button--icon-left">
             {{ filterItem.label }}
         </span>

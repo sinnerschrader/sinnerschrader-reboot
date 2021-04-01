@@ -7,10 +7,10 @@
 	height: $spacing--500;
 	width: $spacing--500;
 	vertical-align: middle;
-	filter: invert(0);
+	filter: invert(1);
 
 	.is-dark & {
-		filter: invert(1);
+		filter: invert(0);
 	}
 
 	.button-notext:hover & {
@@ -26,18 +26,18 @@
 	}
 
 	&--secondary {
-		filter: invert(1);
+		filter: invert(0);
 
 		.is-dark & {
-			filter: invert(0);
+			filter: invert(1);
 		}
 	}
 
 	&--tertiary {
-		filter: invert(1);
+		filter: invert(0);
 
 		.is-dark & {
-			filter: invert(0);
+			filter: invert(1);
 		}
 	}
 }

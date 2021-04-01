@@ -7,7 +7,6 @@ import { Offerings } from "./offerings";
 import { SlideIn } from "./animate-slidein";
 import { Parallax } from "./parallax";
 import { AnchorNavigation } from "./anchor-navigation";
-import { ShowOutlinesOnTab } from "./show-outlines-on-tab";
 
 (() => {
 	if (isModuleNeeded("locations")) {
@@ -43,7 +42,6 @@ import { ShowOutlinesOnTab } from "./show-outlines-on-tab";
 	}
 
 	new Parallax();
-	new ShowOutlinesOnTab();
 })();
 
 function isModuleNeeded(moduleName) {

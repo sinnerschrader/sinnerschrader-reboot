@@ -1,7 +1,6 @@
 // core
 @import "./core/animations";
 @import "./core/base";
-@import "./core/button";
 @import "./core/fonts";
 @import "./core/grid";
 @import "./core/variables";
@@ -28,6 +27,7 @@
 @import "./includes/text-teaser";
 @import "./includes/button-notext";
 @import "./includes/button-icon";
+@import "./includes//button";
 
 // External
 @import "node_modules/swiper/swiper";

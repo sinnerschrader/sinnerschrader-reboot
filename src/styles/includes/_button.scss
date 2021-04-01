@@ -46,7 +46,7 @@
 		color: $color-primary--black;
 
 		.is-dark & {
-			background-color: #181818;
+			background-color: $color-primary--gray;
 			color: $color-primary--white;
 		}
 
@@ -93,14 +93,14 @@
 
 	// state
 	&:disabled {
-		color: #798086;
+		color: $color-primary--light-gray;
 
 		.button__text {
 			border-bottom: 0;
 		}
 
 		.button__icon {
-			stroke: #798086;
+			stroke: $color-primary--light-gray;
 		}
 	}
 }

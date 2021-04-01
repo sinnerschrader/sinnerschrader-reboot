@@ -4,12 +4,26 @@
 .share-buttons {
 	&__text {
 		font-size: $font-size--copy-1;
+		font-family: $font-sans-serif-semibold;
+
+		@include bp-xs() {
+			text-align: center;
+		}
 	}
 
-	&__button-wrapper {
+	&__button-grid {
 		@include spacing-300(margin-top);
 
-		display: flex;
-		flex-wrap: wrap;
+		display: grid;
+		column-gap: $spacing--100;
+		row-gap: $spacing--100;
+		grid-template-columns: $spacing--600 $spacing--600 $spacing--600;
+
+		@include bp-xs() {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-around;
+		}
 	}
 }

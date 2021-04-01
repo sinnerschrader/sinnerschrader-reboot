@@ -4,6 +4,9 @@
 .button-notext {
 	@include default-animation(transform);
 
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	border-radius: 50%;
 	border: 0;
 	height: $spacing--600;

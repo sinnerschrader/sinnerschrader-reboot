@@ -226,4 +226,14 @@ export class FloatObserver {
 
 		this.bindListeners();
 	}
+	bindListeners() {
+		this.observer = new IntersectionObserver((changes) => {
+			if (changes[0].isIntersecting) {
+				this.target.classList.remove(this.targetClass);
+			} else {
+				this.target.classList.add(this.targetClass);
+			}
+		});
+		this.observer.observe(this.objective);
+	}
 }

@@ -9,6 +9,8 @@
 	padding-left: 1.6rem;
 
 	@include bp-xs() {
+		margin-left: calc(2.4rem - 1.6rem);
+
 		#hamburg,
 		#berlin {
 			.is-large {
@@ -22,6 +24,22 @@
 				margin-top: 5rem;
 			}
 		}
+	}
+
+	@include bp-s {
+		margin-left: calc(6.4rem - 1.6rem);
+	}
+
+	@include bp-m {
+		margin-left: calc(9.6rem - 1.6rem);
+	}
+
+	@include bp-l {
+		margin-left: calc(9.6rem - 1.6rem);
+	}
+
+	@include bp-xl {
+		margin-left: calc(12.8rem - 1.6rem);
 	}
 
 	@include bp-tablet {

@@ -6,10 +6,10 @@
 	overflow-y: hidden;
 	grid-gap: 0 1.2rem;
 	grid-template-rows: auto auto 1fr;
-	padding-left: 1.6rem;
+	padding-left: $spacing--200;
 
 	@include bp-xs() {
-		margin-left: calc(2.4rem - 1.6rem);
+		margin-left: calc(#{$spacing--400} - #{$spacing--200});
 
 		#hamburg,
 		#berlin {
@@ -27,19 +27,19 @@
 	}
 
 	@include bp-s {
-		margin-left: calc(6.4rem - 1.6rem);
+		margin-left: calc(#{$spacing--700} - #{$spacing--200});
 	}
 
 	@include bp-m {
-		margin-left: calc(9.6rem - 1.6rem);
+		margin-left: calc(#{$spacing--700--desktop} - #{$spacing--200});
 	}
 
 	@include bp-l {
-		margin-left: calc(9.6rem - 1.6rem);
+		margin-left: calc(#{$spacing--700--desktop} - #{$spacing--200});
 	}
 
 	@include bp-xl {
-		margin-left: calc(12.8rem - 1.6rem);
+		margin-left: calc(12.8rem - #{$spacing--200});
 	}
 
 	@include bp-tablet {

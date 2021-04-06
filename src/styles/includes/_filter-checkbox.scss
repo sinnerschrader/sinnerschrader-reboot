@@ -100,8 +100,12 @@
 	}
 }
 
-.filter-checkbox__input:focus-visible + .filter-checkbox {
+.filter-checkbox__input:focus + .filter-checkbox {
 	outline-offset: 1px;
 	outline: Highlight auto 1px;
 	outline: -webkit-focus-ring-color auto 1px;
+}
+
+.filter-checkbox__input:not(:focus-visible) + .filter-checkbox {
+	outline: none;
 }

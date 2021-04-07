@@ -35,8 +35,10 @@
 		margin: 0 $spacing--100;
 		align-self: center;
 
-		.filter-checkbox:hover & {
-			filter: invert(1);
+		@media (hover: hover) {
+			.filter-checkbox:hover & {
+				filter: invert(1);
+			}
 		}
 
 		circle {
@@ -46,12 +48,6 @@
 
 			.is-dark & {
 				fill: $color-primary--black;
-			}
-
-			.filter-checkbox:hover & {
-				@include default-animation(transform);
-
-				transform: scale(1);
 			}
 		}
 
@@ -94,9 +90,19 @@
 	}
 }
 
-.filter-checkbox__input:checked + .filter-checkbox:hover {
-	.filter-checkbox__icon {
-		filter: invert(0);
+@media (hover: hover) {
+	.filter-checkbox__input:checked + .filter-checkbox:hover {
+		.filter-checkbox__icon {
+			filter: invert(0);
+		}
+	}
+
+	.filter-checkbox:hover > .filter-checkbox__icon {
+		circle {
+			@include default-animation(transform);
+
+			transform: scale(1);
+		}
 	}
 }
 

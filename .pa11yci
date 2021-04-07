@@ -3,7 +3,6 @@
     "./_site/index.html",
     "./_site/404.html",
     "./_site/data-policy.html",
-    "./_site/imprint.html",
-    "./_site/components.html"
+    "./_site/imprint.html"
   ]
 }

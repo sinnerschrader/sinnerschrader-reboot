@@ -3,6 +3,7 @@
 .button {
 	@include interactive-100();
 
+	text-transform: uppercase;
 	line-height: initial;
 	border: 0;
 	display: inline-flex;

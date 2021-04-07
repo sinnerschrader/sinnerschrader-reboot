@@ -17,6 +17,11 @@
       </address>
     </div>
   </div>
-  {% include button, buttonOption: "primary", buttonSize: "large", buttonText: data.buttonText, iconRightID: "mail" %}
+  <a class="button button--primary button--large" href="mailto:{{ data.details.mail }}">
+    {{ data.buttonText }}
+    <svg class="button__icon button__icon--right">
+      <use href="/assets/svg/icons.svg#{{ data.buttonIconId }}" />
+    </svg>
+  </a>
 </section>
   

@@ -9,17 +9,71 @@ dataJsItem: bg-scroll-animation
 {% include navigation, data: global %}
 
 <main>
-	<section>
-		{% include section-header, title: "Text-Teaser", number: "01" %}
-		{% include text-teaser, data: components %}
-	</section>
+    <section>
+        {% include section-header, title: "Text-Teaser", number: "01" %}
+        {% include text-teaser, data: components %}
+    </section>
 
-	<section class="fade-bg-black">
-		{% include section-header, title: "Text-Teaser (on dark)", number: "02" %}
-		{% include text-teaser, data: components%}
-	</section>
+    <section class="fade-bg-black">
+        {% include section-header, title: "Text-Teaser (on dark)", number: "02" %}
+        {% include text-teaser, data: components%}
+    </section>
+
+    <section>
+        {% include section-header, title: "Icon-Button", number: "03" %}
+        <div style="display: flex; padding: 2rem 10rem; justify-content: space-between; flex-wrap:wrap;">
+            {% include button-notext, iconSrc:"/assets/svg/Chevron-down-L.svg" %}
+            {% include button-notext, iconSrc:"/assets/svg/Chevron-down-L.svg" option:"secondary"%}
+            {% include button-notext, iconSrc:"/assets/svg/Chevron-down-L.svg" option:"tertiary"%}
+            {% include button-notext, iconSrc:"/assets/svg/Chevron-down-S.svg" size:"small"%}
+            {% include button-notext, iconSrc:"/assets/svg/Chevron-down-S.svg" option:"secondary" size:"small"%}
+            {% include button-notext, iconSrc:"/assets/svg/Chevron-down-S.svg" option:"tertiary" size:"small"%}
+        </div>
+        <div style="display: flex; padding: 2rem 10rem; justify-content: space-between; flex-wrap:wrap;">
+            {% include button-notext, iconSrc:"/assets/svg/Close-L.svg" aria:"close" %}
+            {% include button-notext, iconSrc:"/assets/svg/Close-L.svg" aria:"close" option:"secondary"%}
+            {% include button-notext, iconSrc:"/assets/svg/Close-L.svg" aria:"close" option:"tertiary"%}
+            {% include button-notext, iconSrc:"/assets/svg/Close-S.svg" aria:"close" size:"small"%}
+            {% include button-notext, iconSrc:"/assets/svg/Close-S.svg" aria:"close" option:"secondary" size:"small"%}
+            {% include button-notext, iconSrc:"/assets/svg/Close-S.svg" aria:"close" option:"tertiary" size:"small"%}
+        </div>
+        <div style="display: flex; padding: 2rem 10rem; justify-content: space-between; flex-wrap:wrap;">
+            {% include button-notext, iconSrc:"/assets/svg/Filter-L.svg" aria:"filter" %}
+            {% include button-notext, iconSrc:"/assets/svg/Filter-L.svg" aria:"filter" option:"secondary"%}
+            {% include button-notext, iconSrc:"/assets/svg/Filter-L.svg" aria:"filter" option:"tertiary"%}
+            {% include button-notext, iconSrc:"/assets/svg/Filter-S.svg" aria:"filter" size:"small"%}
+            {% include button-notext, iconSrc:"/assets/svg/Filter-S.svg" aria:"filter" option:"secondary" size:"small"%}
+            {% include button-notext, iconSrc:"/assets/svg/Filter-S.svg" aria:"filter" option:"tertiary" size:"small"%}
+        </div>
+    </section>
+
+    <section class="fade-bg-black">
+        {% include section-header, title: "Icon-Button(on dark)", number: "04" %}
+        <div style="display: flex; padding: 2rem 10rem; justify-content: space-between; flex-wrap:wrap;">
+            {% include button-notext, iconSrc:"/assets/svg/Chevron-down-L.svg" %}
+            {% include button-notext, iconSrc:"/assets/svg/Chevron-down-L.svg" option:"secondary"%}
+            {% include button-notext, iconSrc:"/assets/svg/Chevron-down-L.svg" option:"tertiary"%}
+            {% include button-notext, iconSrc:"/assets/svg/Chevron-down-S.svg" size:"small"%}
+            {% include button-notext, iconSrc:"/assets/svg/Chevron-down-S.svg" option:"secondary" size:"small"%}
+            {% include button-notext, iconSrc:"/assets/svg/Chevron-down-S.svg" option:"tertiary" size:"small"%}
+        </div>
+        <div style="display: flex; padding: 2rem 10rem; justify-content: space-between; flex-wrap:wrap;">
+            {% include button-notext, iconSrc:"/assets/svg/Close-L.svg" aria:"close" %}
+            {% include button-notext, iconSrc:"/assets/svg/Close-L.svg" aria:"close" option:"secondary"%}
+            {% include button-notext, iconSrc:"/assets/svg/Close-L.svg" aria:"close" option:"tertiary"%}
+            {% include button-notext, iconSrc:"/assets/svg/Close-S.svg" aria:"close" size:"small"%}
+            {% include button-notext, iconSrc:"/assets/svg/Close-S.svg" aria:"close" option:"secondary" size:"small"%}
+            {% include button-notext, iconSrc:"/assets/svg/Close-S.svg" aria:"close" option:"tertiary" size:"small"%}
+        </div>
+        <div style="display: flex; padding: 2rem 10rem; justify-content: space-between; flex-wrap:wrap;">
+            {% include button-notext, iconSrc:"/assets/svg/Filter-L.svg" aria:"filter" %}
+            {% include button-notext, iconSrc:"/assets/svg/Filter-L.svg" aria:"filter" option:"secondary"%}
+            {% include button-notext, iconSrc:"/assets/svg/Filter-L.svg" aria:"filter" option:"tertiary"%}
+            {% include button-notext, iconSrc:"/assets/svg/Filter-S.svg" aria:"filter" size:"small"%}
+            {% include button-notext, iconSrc:"/assets/svg/Filter-S.svg" aria:"filter" option:"secondary" size:"small"%}
+            {% include button-notext, iconSrc:"/assets/svg/Filter-S.svg" aria:"filter" option:"tertiary" size:"small"%}
+        </div>
+    </section>
 </main>
 
 {% include footer, data: global %}
-
-

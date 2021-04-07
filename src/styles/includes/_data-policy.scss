@@ -35,15 +35,9 @@
 		}
 
 		h3 {
+			@include responsive-spacing(margin-top, $spacing--600, $spacing--600--tablet, $spacing--600--desktop, $spacing--600--desktop-xl);
+
 			margin-bottom: $spacing--400;
-		}
-
-		:target::before {
-			@include responsive-spacing(height, $spacing--600, $spacing--600--tablet, $spacing--600--desktop, $spacing--600--desktop-xl);
-			@include responsive-spacing(margin, -$spacing--600, -$spacing--600--tablet, -$spacing--600--desktop, -$spacing--600--desktop-xl);
-
-			content: "";
-			display: block;
 		}
 
 		section > :last-child {
@@ -61,6 +55,22 @@
 			&:last-child {
 				margin-bottom: $spacing--400--desktop;
 			}
+		}
+
+		&__text-divider {
+			@include responsive-spacing(margin-top, $spacing--600, $spacing--600--tablet, $spacing--600--desktop, $spacing--600--desktop-xl);
+			@include responsive-spacing(margin-bottom, $spacing--600, $spacing--600--tablet, $spacing--600--desktop, $spacing--600--desktop-xl);
+
+			border-top: 0.5px solid $color-primary--gray;
+			border-bottom: 0.5px solid $color-primary--gray;
+		}
+
+		:target::before {
+			@include responsive-spacing(height, $spacing--600, $spacing--600--tablet, $spacing--600--desktop, $spacing--600--desktop-xl);
+			@include responsive-spacing(margin, -$spacing--600, -$spacing--600--tablet, -$spacing--600--desktop, -$spacing--600--desktop-xl);
+
+			content: "";
+			display: block;
 		}
 
 		> :first-child {

@@ -1,49 +1,60 @@
 <div class="work">
-    <div class="grid">
-        <h3 class="work__headline col-start-6 col-start-1-xs col-end-12">
-            <div class="clip">
-                <span class="slide-in" data-delay="0s" data-js-item="slide-in">
-                    {{ data.work.headline.top }}
-                </span>
-            </div>
-            <br/>
-            <div class="clip">
-                <span class="slide-in" data-delay="0.1s" data-js-item="slide-in">
-                    {{ data.work.headline.bottomFirst }}
-                    <span class="headline-201">{{ data.work.headline.bottomSecond }}</span>
-                    <span class="headline-202 clip__zone">{{ data.work.headline.bottomThird }}</span>
-                </span>
-            </div>
-        </h3>
-    </div>
-    <div class="work__inner-wrapper">
-        <div class="video-container" data-js-item="video">
-            <video autoplay class="video-preview-loop" loop muted playsinline>
-                <source src="{{ data.work.previewVideo.webmSrc }}" type="video/webm"/>
-                <source src="{{ data.work.previewVideo.mp4Src }}" type="video/mp4"/>
-            </video>
-            <video class="video-element" controls controlslist="nodownload" disablepictureinpicture preload="none">
-                <source src="{{ data.work.caseVideo.webmSrc }}" type="video/webm" media="screen and (min-width: 600)"/>
-                <source src="{{ data.work.caseVideo.mp4Src }}" type="video/mp4" media="screen and (min-width: 600)"/>
-                <source src="{{ data.work.caseVideo.mobile.webmSrc }}" type="video/webm" media="screen and (max-width: 600)"/>
-                <source src="{{ data.work.caseVideo.mobile.mp4Src }}" type="video/mp4" media="screen and (max-width: 600)"/>
-            </video>
-            <video class="video-reduced-motion">
-                <source src="{{ data.work.reducedMotion.webmSrc }}" type="video/webm"/>
-                <source src="{{ data.work.reducedMotion.mp4Src }}" type="video/mp4"/>
-            </video>
-            <button class="video-media-control">
-                {{ data.work.customVideoButton.text }}
-            </button>
-        </div>
-        <div class="grid">
-            <div class="work__logos">
-                {% for logo in data.work.logos %}
-                    <div class="work__logos-el-wrapper">
-                        <img src="{{ logo.imgSrc }}" alt="{{ logo.altText }}"/>
-                    </div>
-                {% endfor %}
-            </div>
-        </div>
-    </div>
+	<div class="grid">
+		<h3 class="work__headline col-start-6 col-start-1-xs col-end-12">
+			<div class="clip">
+				<span class="slide-in" data-delay="0s" data-js-item="slide-in">
+					{{ data.work.headline.top }}
+				</span>
+			</div>
+				<br />
+			<div class="clip">
+				<span class="slide-in" data-delay="0.1s" data-js-item="slide-in">
+					{{ data.work.headline.bottomFirst }}
+					<span class="headline-201">{{ data.work.headline.bottomSecond }}</span><span class="headline-202 clip__zone">{{ data.work.headline.bottomThird }}</span>
+				</span>
+			</div>
+		</h3>
+	</div>
+	<div class="work__inner-wrapper">
+		<div class="video-container" data-js-item="video">
+			<video class="video-preview-loop" autoplay muted playsinline loop>
+				<source src="{{ data.work.previewVideo.webmSrc }}" type="video/webm" />
+				<source src="{{ data.work.previewVideo.mp4Src }}" type="video/mp4" />
+			</video>
+			<video class="video-element"
+			       controls
+			       preload="none"
+			       disablepictureinpicture
+			       controlslist="nodownload">
+				<source src="{{ data.work.caseVideo.webmSrc }}"
+						type="video/webm"
+						media="screen and (min-width: 600)"/>
+				<source src="{{ data.work.caseVideo.mp4Src }}"
+				        type="video/mp4"
+				        media="screen and (min-width: 600)"/>
+				<source src="{{ data.work.caseVideo.mobile.webmSrc }}"
+				        type="video/webm"
+				        media="screen and (max-width: 600)"/>
+				<source src="{{ data.work.caseVideo.mobile.mp4Src }}"
+				        type="video/mp4"
+				        media="screen and (max-width: 600)"/>
+			</video>
+			<video class="video-reduced-motion">
+				<source src="{{ data.work.reducedMotion.webmSrc }}" type="video/webm" />
+				<source src="{{ data.work.reducedMotion.mp4Src }}" type="video/mp4" />
+			</video>
+			<button class="video-media-control">
+				{{ data.work.customVideoButton.text }}
+			</button>
+		</div>
+		<div class="grid">
+			<div class="work__logos">
+				{% for logo in data.work.logos %}
+					<div class="work__logos-el-wrapper">
+						<img src="{{ logo.imgSrc }}" alt="{{ logo.altText }}" />
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
 </div>

@@ -15,8 +15,8 @@
 		@include spacing-300(margin-top);
 
 		display: grid;
-		column-gap: $spacing--100;
-		row-gap: $spacing--100;
+		column-gap: $spacing--200;
+		row-gap: $spacing--200;
 		grid-template-columns: $spacing--600 $spacing--600 $spacing--600;
 
 		@include bp-xs() {

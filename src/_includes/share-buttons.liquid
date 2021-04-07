@@ -3,11 +3,23 @@
         {{title}}
     </div>
     <div class="share-buttons__button-grid">
-        <button style="width: 48px; height: 48px;"></button>
-        <button style="width: 48px; height: 48px;"></button>
-        <button style="width: 48px; height: 48px;"></button>
-        <button style="width: 48px; height: 48px;"></button>
-        <button style="width: 48px; height: 48px;"></button>
-        <button style="width: 48px; height: 48px;"></button>
+        {% if link == true %}
+        {% include button-notext, iconSrc:"/assets/svg/Link-S.svg" option:"secondary" size:"small" aria:"copy link to share" isReference:"linkShareButton"%}
+        {%endif%}
+        {% if linkedIn == true %}
+        {% include button-notext, iconSrc:"/assets/svg/LinkedIn-S.svg" option:"secondary" size:"small" aria:"share on LinkedIn" isReference:"linkedInShareButton"%}
+        {%endif%}
+        {% if xing == true %}
+        {% include button-notext, iconSrc:"/assets/svg/Xing-S.svg" option:"secondary" size:"small" aria:"share on Xing" isReference:"xingShareButton"%}
+        {%endif%}
+        {% if devTo == true %}
+        {% include button-notext, iconSrc:"/assets/svg/Dev.to-S.svg" option:"secondary" size:"small" aria:"share on Dev.to" isReference:"devToShareButton"%}
+        {%endif%}
+        {% if facebook == true %}
+        {% include button-notext, iconSrc:"/assets/svg/Facebook-S.svg" option:"secondary" size:"small" aria:"share on Facebook" isReference:"facebookShareButton"%}
+        {%endif%}
+        {% if twitter == true %}
+        {% include button-notext, iconSrc:"/assets/svg/Twitter-S.svg" option:"secondary" size:"small" aria:"share on Twitter" isReference:"twitterShareButton"%}
+        {%endif%}
     </div>
 </div>

@@ -124,6 +124,13 @@ dataJsItem: bg-scroll-animation
 	</section>
 
 	<section>{% include share-buttons, title:"Share this job" %}</section>
+
+	<section>
+		{% include section-header, title: "Share-buttons", number: "05" %}
+		<div style="display: flex; justify-content: space-around; margin: 2rem">
+			{% include share-buttons, title:"Share this job" link:true facebook:true twitter:true devTo:true xing:true linkedIn:true %}
+		</div>
+	</section>
 </main>
 
 {% include footer, data: global %}

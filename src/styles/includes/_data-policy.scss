@@ -2,8 +2,9 @@
 	@include responsive-spacing(margin-top, $spacing--700, $spacing--700--tablet, $spacing--700--desktop, $spacing--700--desktop-xl);
 
 	.anchor-navigation {
+		@include responsive-spacing(top, $spacing--600, $spacing--600--tablet, $spacing--600--desktop, $spacing--600--desktop-xl);
+
 		position: sticky;
-		top: 2rem;
 
 		@include bp-xs {
 			display: none;
@@ -35,6 +36,14 @@
 
 		h3 {
 			margin-bottom: $spacing--400;
+		}
+
+		:target::before {
+			@include responsive-spacing(height, $spacing--600, $spacing--600--tablet, $spacing--600--desktop, $spacing--600--desktop-xl);
+			@include responsive-spacing(margin, -$spacing--600, -$spacing--600--tablet, -$spacing--600--desktop, -$spacing--600--desktop-xl);
+
+			content: "";
+			display: block;
 		}
 
 		section > :last-child {

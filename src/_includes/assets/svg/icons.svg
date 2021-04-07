@@ -4,5 +4,10 @@
       <path d="M9 13L12.9393 9.06066C13.5251 8.47487 13.5251 7.52513 12.9393 6.93934L9 3" stroke-width="1.5"/>
       <path d="M2 8H13" stroke-width="1.5"/>
     </g>
+
+    <g id="mail">
+      <path d="M2 4.5L6.93934 9.43934C7.52513 10.0251 8.47487 10.0251 9.06066 9.43934L14 4.5" stroke="white" stroke-width="1.5"/>
+      <rect x="1.75" y="4.25" width="12.5" height="8.5" rx="1.25" stroke="white" stroke-width="1.5"/>
+    </g>
   </defs>
 </svg>

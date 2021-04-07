@@ -6,5 +6,19 @@
 			"text": "Linktext",
 			"href": "#"
 		}
+	},
+	"contact": {
+		"headline": "Contact",
+		"details": {
+			"name": "Victoria Breuer",
+			"title": "Talent Acquisition",
+			"phone": "+49 40 398855 485",
+			"mail": "jobs@sinnerschrader.com",
+			"linkedIn": "https://www.linkedin.com/",
+			"xing": "https://www.xing.com/",
+			"imgUrl": "/assets/meta-assets/contact-person.png"
+		},
+		"buttonText": "Apply now",
+		"buttonIconUrl": "/assets/meta-assets/favicon.png"
 	}
 }

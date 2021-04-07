@@ -17,6 +17,6 @@
       </address>
     </div>
   </div>
-  <button class="contact__button">{{ data.buttonText }}</button>
+  {% include button, buttonOption: "primary", buttonSize: "large", buttonText: data.buttonText, iconRightID: "mail" %}
 </section>
   

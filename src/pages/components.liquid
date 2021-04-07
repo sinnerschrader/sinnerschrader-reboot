@@ -74,6 +74,48 @@ dataJsItem: bg-scroll-animation
             {% include button-notext, iconSrc:"/assets/svg/Filter-S.svg" aria:"filter" option:"tertiary" size:"small"%}
         </div>
     </section>
+
+		{% include section-header, title: "Button", number: "05" %}
+		<section class="grid">
+			<div>
+				<p>Primary</p>
+				{% include button, buttonText: "Large", buttonOption: "primary", buttonSize: "large", iconLeftID: "arrow-right" %}
+				{% include button, buttonText: "Small", buttonOption: "primary", buttonSize: "small" %}
+				{% include button, buttonText: "Disabled", buttonOption: "primary", buttonSize: "small", iconRightID: "arrow-right", state: "disabled" %}
+			</div>
+			<div>
+				<p>Secondary</p>
+				{% include button, buttonText: "Large", buttonOption: "secondary", buttonSize: "large", iconRightID: "arrow-right" %}
+				{% include button, buttonText: "Small", buttonOption: "secondary", buttonSize: "small" %}
+				{% include button, buttonText: "Disabled", buttonOption: "secondary", buttonSize: "small", iconLeftID: "arrow-right", state: "disabled" %}
+			</div>
+			<div>
+				<p>Tertiary</p>
+				{% include button, buttonText: "Large", buttonOption: "tertiary", buttonSize: "large" %}
+				{% include button, buttonText: "Disabled", buttonOption: "tertiary", buttonSize: "large", state: "disabled" %}
+			</div>
+		</section>
+
+		{% include section-header, title: "Button (on dark)", number: "06" %}
+		<section class="grid fade-bg-black">
+			<div>
+				<p>Primary</p>
+				{% include button, buttonText: "Large", buttonOption: "primary", buttonSize: "large", iconLeftID: "arrow-right" %}
+				{% include button, buttonText: "Small", buttonOption: "primary", buttonSize: "small" %}
+				{% include button, buttonText: "Disabled", buttonOption: "primary", buttonSize: "small", iconRightID: "arrow-right", state: "disabled" %}
+			</div>
+			<div>
+				<p>Secondary</p>
+				{% include button, buttonText: "Large", buttonOption: "secondary", buttonSize: "large", iconRightID: "arrow-right" %}
+				{% include button, buttonText: "Small", buttonOption: "secondary", buttonSize: "small" %}
+				{% include button, buttonText: "Disabled", buttonOption: "secondary", buttonSize: "small", iconLeftID: "arrow-right", state: "disabled" %}
+			</div>
+			<div>
+				<p>Tertiary</p>
+				{% include button, buttonText: "Large", buttonOption: "tertiary", buttonSize: "large" %}
+				{% include button, buttonText: "Disabled", buttonOption: "tertiary", buttonSize: "large", state: "disabled" %}
+			</div>
+		</section>
 </main>
 
 {% include footer, data: global %}

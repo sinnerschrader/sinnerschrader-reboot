@@ -1,8 +1,79 @@
+// BUTTON
+// TODO: update color variables according to the changes in Figma
 .button {
 	@include interactive-100();
 
 	line-height: initial;
 	border: 0;
+	display: inline-flex;
+	align-items: center;
+
+	&__icon {
+		fill: none;
+		width: 1.6rem;
+		height: 1.6rem;
+
+		&--left {
+			padding-right: $spacing--200;
+		}
+
+		&--right {
+			padding-left: $spacing--200;
+		}
+	}
+
+	// buttonOption
+	&--primary {
+		background-color: $color-primary--black;
+		color: $color-primary--white;
+
+		.is-dark & {
+			background-color: $color-primary--beige;
+			color: $color-primary--black;
+		}
+
+		.button__icon {
+			stroke: $color-primary--white;
+		}
+
+		.is-dark & .button__icon {
+			stroke: $color-primary--black;
+		}
+	}
+
+	&--secondary {
+		background-color: $color-primary--beige;
+		color: $color-primary--black;
+
+		.is-dark & {
+			background-color: $color-primary--gray;
+			color: $color-primary--white;
+		}
+
+		.button__icon {
+			stroke: $color-primary--black;
+		}
+
+		.is-dark & .button__icon {
+			stroke: $color-primary--white;
+		}
+	}
+
+	&--tertiary {
+		background: none;
+
+		.button__text {
+			border-bottom: 0.1rem solid $color-secondary--yellow;
+
+			&:hover {
+				border-bottom: 0;
+			}
+		}
+
+		.is-dark & {
+			color: $color-primary--white;
+		}
+	}
 
 	&--mobile-full-width {
 		@include bp-xs() {
@@ -11,16 +82,15 @@
 		}
 	}
 
-	&--primary {
-		.is-dark & {
-			background-color: $color-primary--beige;
-			color: $color-primary--black;
-		}
-	}
-
+	// buttonSize
 	&--large {
 		padding: $spacing--200 $spacing--500;
 		border-radius: 2.4rem;
+	}
+
+	&--small {
+		padding: 1.2rem $spacing--400;
+		border-radius: 2rem;
 	}
 
 	// hover
@@ -30,6 +100,14 @@
 
 	// state
 	&:disabled {
-		opacity: 0.5;
+		color: $color-primary--light-gray;
+
+		.button__text {
+			border-bottom: 0;
+		}
+
+		.button__icon {
+			stroke: $color-primary--light-gray;
+		}
 	}
 }

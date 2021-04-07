@@ -1,0 +1,19 @@
+{% if option %}
+    {% assign buttonOption = "button-notext--" | append: option %}
+    {% assign iconOption = "button-icon--" | append: option %}
+{%else%}
+    {% assign buttonOption = "" %}
+    {% assign iconOption = "" %}
+{% endif %}
+
+{% if size == "small" %}
+    {% assign buttonSize = "button-notext--" | append: size %}
+    {% assign iconSize = "button-icon--" | append: size %}
+{%else%}
+    {% assign buttonSize = "" %}
+    {% assign iconSize = "" %}
+{% endif %}
+
+<button class="button-notext {{buttonOption}} {{buttonSize}}" id="js-{{ isReference }}" aria-label="{{aria}}">
+    <img class="button-icon {{iconOption}} {{iconSize}}" src="{{iconSrc}}"/>
+</button>

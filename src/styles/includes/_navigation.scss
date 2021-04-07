@@ -26,6 +26,12 @@
 			overflow-y: auto;
 		}
 
+		&.is-light {
+			.dot {
+				background-color: $color-primary--white;
+			}
+		}
+
 		.dot {
 			background-color: $color-primary--white;
 		}
@@ -201,6 +207,8 @@
 			text-decoration: none;
 			padding: 1rem 0;
 			text-transform: uppercase;
+			overflow-y: hidden;
+			vertical-align: text-top;
 		}
 	}
 
@@ -237,7 +245,7 @@
 			width: 4px;
 			background-color: $color-primary--black;
 			border-radius: 50%;
-			transition: background-color 0ms ease 300ms, top 300ms ease, right 300ms ease, left 300ms ease, bottom 300ms ease;
+			transition: background-color 300ms ease, top 300ms ease, right 300ms ease, left 300ms ease, bottom 300ms ease;
 		}
 
 		.dot-1 {
@@ -317,6 +325,7 @@
 			display: flex;
 			flex-direction: row;
 			justify-content: flex-end;
+			margin-bottom: $spacing--800;
 		}
 
 		&__bottom-wrapper {

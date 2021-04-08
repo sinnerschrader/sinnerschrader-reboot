@@ -11,4 +11,10 @@
 		justify-content: space-around;
 		margin: 2rem;
 	}
+
+	&__filter-checkbox-wrapper {
+		display: flex;
+		padding: 10rem;
+		justify-content: space-between;
+	}
 }

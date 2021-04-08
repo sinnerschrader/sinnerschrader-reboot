@@ -124,12 +124,57 @@ $filter-bar__height--desktop: 11.8rem;
 	// filter chip
 	&__filter-item {
 		line-height: initial;
+		background-color: $color-primary--900;
+
+		svg {
+			margin-left: 0;
+			filter: invert(1);
+		}
+
+		&:hover {
+			svg {
+				filter: invert(0);
+			}
+
+			circle {
+				transition: transform 0.3s ease-in-out;
+				transform: scale(1);
+			}
+		}
+
+		.filter-checkbox__icon__animated-path {
+			@include default-animation(transform);
+
+			transform-origin: center;
+		}
 	}
 
 	// active filter state
 	input[type="checkbox"]:checked + &__filter-item {
 		background-color: $color-primary--white;
 		color: $color-primary--900;
+
+		svg {
+			filter: invert(0);
+		}
+
+		&:hover {
+			svg {
+				filter: invert(1);
+			}
+
+			circle {
+				transition: transform 0.3s ease-in-out;
+				transform: scale(1);
+			}
+		}
+
+		.filter-checkbox__icon__animated-path {
+			@include default-animation(transform);
+
+			transform-origin: center;
+			transform: rotate(90deg);
+		}
 	}
 
 	// focus visible: only applies on keyboard-focus

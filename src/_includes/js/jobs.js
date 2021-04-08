@@ -45,10 +45,12 @@ export class FilterList {
 				if (evt.target.checked) {
 					// adds filter value
 					this.filters[filter].push(value);
+					evt.target.classList.add("is-active");
 				} else {
 					// removes filter value
 					const index = this.filters[filter].indexOf(value);
 					this.filters[filter].splice(index, 1);
+					evt.target.classList.remove("is-active");
 				}
 
 				this.updateActiveFilterTags();

@@ -4,7 +4,7 @@
 .locations {
 	display: grid;
 	overflow-y: hidden;
-	grid-gap: 0 1.2rem;
+	grid-gap: 0 $spacing--150;
 	grid-template-rows: auto auto 1fr;
 	padding-left: 1.6rem;
 
@@ -84,7 +84,7 @@
 	&__panel {
 		display: grid;
 		height: 0;
-		grid-gap: 0 1.2rem;
+		grid-gap: 0 $spacing--150;
 		grid-template-rows: auto auto 1fr;
 		visibility: hidden;
 		grid-column: 4/13;

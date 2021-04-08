@@ -4,22 +4,22 @@
     </div>
     <div class="share-buttons__button-grid">
         {% if link == true %}
-        {% include button-notext, iconSrc:"/assets/svg/Link-S.svg" option:"secondary" size:"small" aria:"copy link to share" isReference:"linkShareButton"%}
+        {% include button-notext, iconSrc:"/assets/svg/Link-S.svg" option:"secondary" size:"small" aria:"copy link to share" isReference:"linkShareButton" alt:"Link Icon"%}
         {%endif%}
         {% if linkedIn == true %}
-        {% include button-notext, iconSrc:"/assets/svg/LinkedIn-S.svg" option:"secondary" size:"small" aria:"share on LinkedIn" isReference:"linkedInShareButton"%}
+        {% include button-notext, iconSrc:"/assets/svg/LinkedIn-S.svg" option:"secondary" size:"small" aria:"share on LinkedIn" isReference:"linkedInShareButton" alt:"LinkedIn Logo"%}
         {%endif%}
         {% if xing == true %}
-        {% include button-notext, iconSrc:"/assets/svg/Xing-S.svg" option:"secondary" size:"small" aria:"share on Xing" isReference:"xingShareButton"%}
+        {% include button-notext, iconSrc:"/assets/svg/Xing-S.svg" option:"secondary" size:"small" aria:"share on Xing" isReference:"xingShareButton" alt:"Xing Logo"%}
         {%endif%}
         {% if devTo == true %}
-        {% include button-notext, iconSrc:"/assets/svg/Dev.to-S.svg" option:"secondary" size:"small" aria:"share on Dev.to" isReference:"devToShareButton"%}
+        {% include button-notext, iconSrc:"/assets/svg/Dev.to-S.svg" option:"secondary" size:"small" aria:"share on Dev.to" isReference:"devToShareButton" alt:"Dev.to Logo" %}
         {%endif%}
         {% if facebook == true %}
-        {% include button-notext, iconSrc:"/assets/svg/Facebook-S.svg" option:"secondary" size:"small" aria:"share on Facebook" isReference:"facebookShareButton"%}
+        {% include button-notext, iconSrc:"/assets/svg/Facebook-S.svg" option:"secondary" size:"small" aria:"share on Facebook" isReference:"facebookShareButton" alt:"Facebook Logo"%}
         {%endif%}
         {% if twitter == true %}
-        {% include button-notext, iconSrc:"/assets/svg/Twitter-S.svg" option:"secondary" size:"small" aria:"share on Twitter" isReference:"twitterShareButton"%}
+        {% include button-notext, iconSrc:"/assets/svg/Twitter-S.svg" option:"secondary" size:"small" aria:"share on Twitter" isReference:"twitterShareButton" alt:"Twitter Logo"%}
         {%endif%}
     </div>
 </div>

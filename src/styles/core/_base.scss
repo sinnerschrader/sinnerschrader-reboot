@@ -22,6 +22,16 @@ body {
 	}
 }
 
+// Hide focus outline on mouse click
+:focus:not(:focus-visible) {
+	outline: 0;
+}
+
+// Show focus outline when user is navigating with the keyboard
+:focus-visible {
+	outline: 0.3rem solid $color-secondary--yellow;
+}
+
 main {
 	overflow-x: hidden;
 }

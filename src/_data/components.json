@@ -23,5 +23,69 @@
 			"copy": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias.",
 			"buttonText": "Backward"
 		}
+	},
+	"offerings": {
+		"offeringList": [
+			{
+				"list": [
+					{
+						"emoji": "/assets/emojis/working-hours.png",
+						"item": "Flexible Working Hours"
+					},
+					{
+						"emoji": "/assets/emojis/remote-work.png",
+						"item": "Opportunity to work remotely"
+					},
+					{
+						"emoji": "/assets/emojis/health-benefits.png",
+						"item": "Health benefits (sports, massage etc.)"
+					},
+					{
+						"emoji": "/assets/emojis/company-bicycle.png",
+						"item": "Company bicycle"
+					}
+				]
+			},
+			{
+				"list": [
+					{
+						"emoji": "/assets/emojis/public-transport.png",
+						"item": "Public Transport (In Hambug)"
+					},
+					{
+						"emoji": "/assets/emojis/discount.png",
+						"item": "Employee discount program"
+					},
+					{
+						"emoji": "/assets/emojis/holidays.png",
+						"item": "Christmas & New year off"
+					},
+					{
+						"emoji": "/assets/emojis/pension.png",
+						"item": "Pension plan"
+					}
+				]
+			},
+			{
+				"list": [
+					{
+						"emoji": "/assets/emojis/accident-insurance.png",
+						"item": "Accident insurance"
+					},
+					{
+						"emoji": "/assets/emojis/workers-council.png",
+						"item": "Workers Council"
+					},
+					{
+						"emoji": "/assets/emojis/shares.png",
+						"item": "Employer share purchase program"
+					},
+					{
+						"emoji": "/assets/emojis/referral.png",
+						"item": "Employee Referral Program"
+					}
+				]
+			}
+		]
 	}
 }

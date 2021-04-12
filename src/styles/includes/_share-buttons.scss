@@ -2,6 +2,10 @@
 @import "../core/mixins";
 
 .share-buttons {
+	@include bp-xs() {
+		width: 100%;
+	}
+
 	&__text {
 		font-size: $font-size--copy-1;
 		font-family: $font-sans-serif-semibold;

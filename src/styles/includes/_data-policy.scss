@@ -61,8 +61,8 @@
 			@include responsive-spacing(margin-top, $spacing--600, $spacing--600--tablet, $spacing--600--desktop, $spacing--600--desktop-xl);
 			@include responsive-spacing(margin-bottom, $spacing--600, $spacing--600--tablet, $spacing--600--desktop, $spacing--600--desktop-xl);
 
-			border-top: 0.5rem solid $color-primary--gray;
-			border-bottom: 0.5rem solid $color-primary--gray;
+			border-top: 0.5px solid $color-primary--light-gray;
+			border-bottom: 0.5px solid $color-primary--light-gray;
 		}
 
 		:target::before {

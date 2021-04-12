@@ -9,6 +9,10 @@ dataJsItem: bg-scroll-animation
 {% include navigation, data: global %}
 
 <main>
+	<section class="fade-bg-black">
+		{% include image-text-teaser, data: components %}
+	</section>
+
 	<section>{% include section-header, title: "Text-Teaser", number: "01" %} {% include text-teaser, data: components %}</section>
 
 	<section class="fade-bg-black">

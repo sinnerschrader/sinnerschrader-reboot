@@ -1,0 +1,49 @@
+@import "./button";
+
+.image-text-teaser {
+	@include responsive-spacing(margin-left, $spacing--400, $spacing--700, $spacing--800, $spacing--900);
+
+	position: relative;
+	margin-bottom: $spacing--900;
+
+	img {
+		width: 100%;
+
+		@include bp-xs() {
+			width: auto;
+			height: 52.6rem;
+		}
+	}
+
+	&__content {
+		@include responsive-spacing(left, 0, 60%, 70%, 80%);
+
+		position: absolute;
+		right: 0;
+		top: $spacing--900;
+		bottom: -$spacing--700;
+		background: $color-primary--white;
+		color: $color-primary--black;
+		padding: $spacing--700;
+
+		@include bp-xs() {
+			position: relative;
+			top: 0;
+			bottom: 0;
+			margin-top: -19.2rem;
+			margin-right: 7.7rem;
+		}
+	}
+
+	&__headline {
+		margin-top: 0;
+	}
+
+	&__copy {
+		color: $color-primary--black;
+
+		.is-dark & {
+			color: $color-primary--black;
+		}
+	}
+}

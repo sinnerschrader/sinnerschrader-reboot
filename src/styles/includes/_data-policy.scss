@@ -66,9 +66,7 @@
 		}
 
 		:target::before {
-			@include responsive-spacing(height, $spacing--600, $spacing--600--tablet, $spacing--600--desktop, $spacing--600--desktop-xl);
-			@include responsive-spacing(margin, -$spacing--600, -$spacing--600--tablet, -$spacing--600--desktop, -$spacing--600--desktop-xl);
-
+			height: 0.1px;
 			content: "";
 			display: block;
 		}

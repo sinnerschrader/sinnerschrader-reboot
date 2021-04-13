@@ -7,6 +7,7 @@ import { Offerings } from "./offerings";
 import { SlideIn } from "./animate-slidein";
 import { Parallax } from "./parallax";
 import { AnchorNavigation } from "./anchor-navigation";
+import { ImageTextTeaser } from "./image-text-teaser";
 
 (() => {
 	if (isModuleNeeded("locations")) {
@@ -39,6 +40,10 @@ import { AnchorNavigation } from "./anchor-navigation";
 
 	if (isModuleNeeded("anchor-navigation")) {
 		new AnchorNavigation();
+	}
+
+	if (isModuleNeeded("image-text-teaser-content")) {
+		new ImageTextTeaser();
 	}
 
 	new Parallax();

@@ -1,4 +1,4 @@
-<div class="image-text-teaser">
+<div class="image-text-teaser" data-js-item="image-text-teaser">
 	<picture class="image-text-teaser__picture">
 		<source media="(max-width: 599px)"
 		        srcset="{{ data.image-text-teaser.image.mobileSrc }}" type="image/webp" />
@@ -10,8 +10,29 @@
 		     alt="{{ data.image-text-teaser.image.altText }}"/>
 	</picture>
 	<div class="image-text-teaser__content">
-		<h3 class="image-text-teaser__headline">{{ data.image-text-teaser.headline }}</h3>
-		<p class="image-text-teaser__copy">{{ data.image-text-teaser.copy }}</p>
-		<button class="button button--primary button--small">{{ data.image-text-teaser.buttonText }}</button>
+		{% if data.image-text-teaser.sideContent %}
+			<div class="image-text-teaser__content-inner" data-js-item="image-text-teaser-content">
+				<h3 class="image-text-teaser__headline">{{ data.image-text-teaser.headline }}</h3>
+				<p class="image-text-teaser__copy">{{ data.image-text-teaser.copy }}</p>
+				<button class="button button--primary button--small"
+				        data-js-atom="image-text-teaser-forward"
+				>{{ data.image-text-teaser.buttonText }}</button>
+			</div>
+			<div class="image-text-teaser__content-inner-hidden" data-js-item="image-text-teaser-content-hidden">
+				<h3 class="image-text-teaser__headline">{{ data.image-text-teaser.sideContent.headline }}</h3>
+				<p class="image-text-teaser__copy">{{ data.image-text-teaser.sideContent.copy }}</p>
+				<button class="button button--primary button--small"
+				        data-js-atom="image-text-teaser-backward">
+					{{ data.image-text-teaser.sideContent.buttonText }}
+				</button>
+			</div>
+		{% else %}
+			<h3 class="image-text-teaser__headline">{{ data.image-text-teaser.headline }}</h3>
+			<p class="image-text-teaser__copy">{{ data.image-text-teaser.copy }}</p>
+			<a class="button button--primary button--small"
+			   href="{{ data.image-text-teaser.linkHref }}">
+				{{ data.image-text-teaser.linkText }}
+			</a>
+		{% endif %}
 	</div>
 </div>

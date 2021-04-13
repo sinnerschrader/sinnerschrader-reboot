@@ -1,18 +1,25 @@
 .job-details {
 	&__description {
 		@include spacing-600(margin-top);
+
 		@include spacing-900(margin-bottom);
+	}
+	.button {
+		text-transform: uppercase;
 	}
 	.headline-1 {
 		@include spacing-700(margin-top);
+
 		span {
 			@include headline-202();
 		}
 	}
 	&__info {
 		@include spacing-700(margin-top);
+
 		.copy--title {
 			@include spacing-600(margin-top);
+
 			&:first-of-type {
 				margin-top: 0;
 			}
@@ -21,8 +28,18 @@
 	&__apply,
 	.text-teaser {
 		@include spacing-700(margin-top);
+
 		.copy--title {
 			margin-top: 0;
+		}
+
+		@include bp-xs {
+			.button {
+				width: 100%;
+				display: inline-block;
+				text-align: center;
+				padding: 1.2rem 0;
+			}
 		}
 	}
 }

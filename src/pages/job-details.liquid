@@ -11,10 +11,12 @@ dataJsItem: bg-scroll-animation
 <main class="job-details">
 	<section class="fade-bg-black grid">{% include page-headline, data: job-details.first %}</section>
 	<section class="fade-bg-black job-details__description grid">
-		<div class="col-5">
-		{% include button, buttonText: "see details", buttonOption: "secondary", buttonSize: "small" %}
+		<div class="col-5 col-12-xs">
+		<a href="#job-description" class="button button--primary button--small">
+			<span class="button__text">see details</span>
+		</a>
 		</div>
-		<div class="col-7">
+		<div class="col-7 col-12-xs">
 		<p class="text-teaser__text">As a hands-on designer, you are sometimes an idea generator, sometimes an aggregator in the intensive collaboration between Product Design, Product Strategy, Product Engineering and Product and Client Management. What is unfamiliar to you arouses your curiosity; you approach the familiar with self-critical distance.  You quickly find convincing solutions and are the leading creative force in winning new customers and deliver real added value for our existing customers with your work.</p>
 		</div>
 	</section>
@@ -25,26 +27,28 @@ dataJsItem: bg-scroll-animation
 	<section>
 	{% include slider, data: job-details %}
 	</section>
-	{% include section-header, title: "job details", number: "02" %}
+	<section id="job-description">
+		{% include section-header, title: "job details", number: "02" %}
+	</section>
 	<section class="job-details__info grid">
-		<div class="job-details__info__content col-7">
+		<div class="job-details__info__content col-7 col-12-xs">
 		{% include job-info, data: job-details %}
 		</div>
-		<div class="col-5">
+		<div class="col-5 col-12-xs">
 		contact
 		</div>
 	</section>
 	<section>{% include text-teaser, data: job-details.about %}</section>
 	<section>{% include text-teaser, data: job-details %}</section>
-		<section class="job-details__apply grid">
-		<div class="col-5">
+	<section class="job-details__apply grid">
+		<div class="col-5 col-12-xs">
 		<h3 class="copy--title">Sounds like you?</h3>
 		</div>
-		<div class="col-7">
-		<a href="mailto:someone@yoursite.com" class="button button--primary button--small">
+		<div class="col-7 col-12-xs">
+		<a href="mailto:jobs@sinnerschrader.com" class="button button--primary button--small">
 			<span class="button__text">apply</span>
 			<svg class="button__icon button__icon--right">
-				<use href="/assets/svg/mail.svg" />
+				<use href="/assets/svg/icons.svg#mail" />
 			</svg>
 		</a>
 		</div>

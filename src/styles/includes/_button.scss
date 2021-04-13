@@ -8,6 +8,11 @@
 	display: inline-flex;
 	align-items: center;
 
+	@include bp-xs() {
+		width: 100%;
+		justify-content: center;
+	}
+
 	&__icon {
 		fill: none;
 		width: 1.6rem;

@@ -32,10 +32,19 @@ dataJsItem: bg-scroll-animation
 	</section>
 	<section class="job-details__info grid">
 		<div class="job-details__info__content col-7 col-12-xs">
-		{% include job-info, data: job-details %}
+			{% include job-info, data: job-details %}
 		</div>
 		<div class="col-5 col-12-xs">
-		contact
+		</div>
+	</section>
+	<section class="job-details__apply grid">
+		<div class="col-7 col-12-xs">
+			<h3 class="copy--title">What you should bring with you</h3>
+			<p>Please send us your application documents (including a link to your online portfolio) exclusively by e-mail to jobs@sinnerschrader.com.</p>
+			<p>We look forward to hearing from you.</p>
+		</div>
+		<div class="col-start-11 col-end-12 col-start-1-xs col-end-12-xs">
+			{% include share-buttons, title:"Share this job" link:true facebook:true twitter:true devTo:true xing:true linkedIn:true %}
 		</div>
 	</section>
 	<section>{% include text-teaser, data: job-details.about %}</section>

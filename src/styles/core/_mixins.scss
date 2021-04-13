@@ -112,9 +112,9 @@
 	@include responsive-spacing($property, $spacing--200, $spacing--200, $spacing--200, $spacing--200);
 }
 
-// SP300 (mobile and desktop)
+// SP300 (mobile and desktop-xl)
 @mixin spacing-300($property) {
-	@include responsive-spacing($property, $spacing--300, $spacing--300--tablet, $spacing--300--tablet, $spacing--300--tablet);
+	@include responsive-spacing($property, $spacing--300, $spacing--300--tablet, $spacing--300--tablet, $spacing--300--desktop-xl);
 }
 
 // SP400

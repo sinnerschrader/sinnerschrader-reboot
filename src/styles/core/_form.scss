@@ -30,6 +30,37 @@
 		margin-bottom: $spacing--600;
 	}
 
+	&__checkbox {
+		display: flex;
+		flex-wrap: wrap;
+
+		&-label {
+			display: inline-block;
+			font-size: 2.4rem;
+
+			&::before {
+				content: "";
+				display: inline-block;
+				box-sizing: border-box;
+				width: 2.3rem;
+				height: 2.3rem;
+				margin-right: 1rem;
+				border: 1px solid $color-primary--white;
+				background-color: inherit;
+			}
+		}
+
+		input {
+			opacity: 0;
+			width: 0;
+			height: 0;
+
+			&:checked + .form__checkbox-label::before {
+				background: radial-gradient($color-secondary--yellow 40%, $color-primary--black 41%);
+			}
+		}
+	}
+
 	&__radiobox {
 		&-label {
 			display: inline-block;
@@ -108,6 +139,7 @@
 		text-transform: uppercase;
 		width: auto;
 		display: inline-block;
+		margin-top: $spacing--500;
 		padding: $spacing--100 $spacing--200;
 	}
 }

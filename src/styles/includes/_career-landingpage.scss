@@ -10,6 +10,10 @@
 		}
 	}
 
+	a {
+		color: inherit;
+	}
+
 	&__intro {
 		@include spacing-600(margin-top);
 	}
@@ -80,5 +84,43 @@
 
 	.form__radio-group {
 		@include responsive-spacing(margin-bottom, 2.4rem, 3.2rem, 3.2rem, 3.2rem);
+	}
+
+	.form {
+		margin-bottom: 5em;
+	}
+}
+
+.grid .grid {
+	margin: 0;
+}
+
+.buzzword {
+	&__headline {
+		@include headline-200();
+
+		margin-top: 0;
+	}
+
+	&__list {
+		@include paragraph-200();
+
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: $spacing--400;
+		margin-right: -0.75em; // make list bigger, so the last element in a row fits
+
+		li {
+			display: inline-block;
+			padding: 0.25em 1em;
+			margin: 0 0.75em 0.75em 0;
+			background-color: $color-primary--gray;
+			border-radius: 1em;
+		}
+	}
+
+	&__link {
+		border-bottom: 2px solid $color-secondary--yellow;
+		text-transform: uppercase;
 	}
 }

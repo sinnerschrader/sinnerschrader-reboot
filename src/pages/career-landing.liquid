@@ -1,7 +1,7 @@
 ---
 title: SinnerSchrader - Contact Me
 layout: default.liquid
-permalink: landingpage.html
+permalink: wearehiring.html
 homepage: true
 renderData: careerLandingpage
 bodyClass: is-dark
@@ -14,15 +14,80 @@ bodyClass: is-dark
 		{% include page-headline, data: careerLandingpage %}
 	</section>
 	<section class="grid background--raster">
-		<div class="career-landingpage__intro col-start-6 col-start-1-xs">
+		<div class="career-landingpage__intro col-start-5 col-7 col-start-1-xs col-12-xs">
 			<p class="career-landingpage__intro-text">
 				We’re a colorful community of creators, developers, coders, and dreamers that craft experiences for an open and
 				optimistic world. We’re also among one of the fastest growing agency families in the world – and happy to say
 			</p>
 		</div>
 		{% include large-title, data: careerLandingpage %}
-
-		<form class="career-landingpage__form form col-start-6 col-start-1-xs">
+	</section>
+	<section class="grid buzzword">
+		{% include section-header, title: "Our Mission", number: "02" %}
+		<h3 class="buzzword__headline col-start-1 col-end-13-s col-end-5">What we are doing and looking for</h3>
+		<div class="col-end-13 col-start-1-xs col-start-5">
+			<ul class="buzzword__list">
+				<li>A11y</li>
+				<li>AEM</li>
+				<li>Agile</li>
+				<li>Android</li>
+				<li>AWS</li>
+				<li>CI / CD</li>
+				<li>CMS</li>
+				<li>Code Reviews</li>
+				<li>Cross functional teams</li>
+				<li>CSS</li>
+				<li>Data Engineering</li>
+				<li>DevOps </li>
+				<li>Diversity Matters Working Group</li>
+				<li>English first</li>
+				<li>Flutter</li>
+				<li>Git</li>
+				<li>GraphQL</li>
+				<li>HTML</li>
+				<li>iOS</li>
+				<li>Java</li>
+				<li>JavaScript</li>
+				<li>Knowledge sharing</li>
+				<li>Kotlin</li>
+				<li>Living Design Systems</li>
+				<li>Mentoring</li>
+				<li>Microfrontends</li>
+				<li>Microservices</li>
+				<li>Mobprogramming</li>
+				<li>MobX</li>
+				<li>Native Apps</li>
+				<li>NodeJS</li>
+				<li>Obj-C</li>
+				<li>Pairprogramming</li>
+				<li>People first</li>
+				<li>Personal Development</li>
+				<li>Quality Ansurance</li>
+				<li>React</li>
+				<li>Redux</li>
+				<li>Scrum</li>
+				<li>SEO</li>
+				<li>Serverless</li>
+				<li>SSR</li>
+				<li>Storybook</li>
+				<li>Storyblok</li>
+				<li>Swift</li>
+				<li>System Integration</li>
+				<li>Team Work</li>
+				<li>TypeScript</li>
+				<li>Unit testing</li>
+				<li>VueJS</li>
+				<li>Web APIs</li>
+				<li>Website Performance</li>
+			</ul>
+			<a class="buzzword__link" href="./">Read more about SinnerSchrader</a>
+		</div>
+	</section>
+	<section>
+		{% include section-header, title: "Join us", number: "03", type: "small" %}
+	</section>
+	<section class="grid">
+		<form class="career-landingpage__form form col-start-1-xs col-start-5 col-end-13">
 			<label class="form__group" for="full-name">
 				<span class="form__label">Full Name <span class="form__required">(required)</span></span>
 				
@@ -46,6 +111,21 @@ bodyClass: is-dark
 					e.g. email address or phone number
 				</span>
 			</label>
+
+
+			<label class="form__group" for="email">
+				<span class="form__label">Your email address <span class="form__required">(optional)</span></span>
+			
+				<span class="form__error-message is-hidden">
+					please add your email address or phone number.
+				</span>
+			
+				<input class="form__field" id="email" name="email" required type="email">
+			
+				<span class="form__subline">
+					to get a copy of this form
+				</span>
+			</label>
 			
 			<label class="form__group" for="profile">
 				<span class="form__label">Just drop us a link to one of your profiles <span class="form__required">(required)</span></span>
@@ -61,9 +141,12 @@ bodyClass: is-dark
 				</span>
 			</label>
 
-			<div aria-labelledby='legend-1' role='radiogroup' class="form__group form__radio-group">
+			<div aria-labelledby='whoever' role='radiogroup' class="form__group form__radio-group">
 				<span class="form__label">To whom do you wanna speak to? <span class="form__required">(required)</span></span>
-				
+				<label for="whoever" class="form__radiobox">
+					<input id="whoever" type="radio" name="answers" value="whoever" checked>
+					<span class="form__radiobox-label">Whoever</span>
+				</label>
 				<label for="recruiter" class="form__radiobox">
 					<input id="recruiter" required type="radio" name="answers" value="recruiter">
 					<span class="form__radiobox-label">Recruiter</span>
@@ -72,22 +155,32 @@ bodyClass: is-dark
 					<input id="developer" type="radio" name="answers" value="developer">
 					<span class="form__radiobox-label">Developer</span>
 				</label>
-
-				<label for="whoever" class="form__radiobox">
-					<input id="whoever" type="radio" name="answers" value="whoever">
-					<span class="form__radiobox-label">Whoever</span>
+				<span class="form__error-message is-hidden">
+					Please select one option.
+				</span>
+			</div>
+			
+			<div aria-labelledby='privacy' role='checkbox'>
+				<label for="privacy" class="form__checkbox">
+					<input id="privacy" class="form__checkbox-box" type="checkbox" name="privacy" value="yes">
+					<span class="form__checkbox-label">I have taken note of the privacy policy. I agree that my information and data will be collected and stored
+					electronically to answer my request.</span>
 				</label>
 				<span class="form__error-message is-hidden">
 					Please select one option.
 				</span>
 			</div>
 
-			
 			<button class='form__button' type="submit">Contact me</button>
-			
+			<p>We will! thank you for you interest.</p>
 		</form>
 	</section>
 
+	<section>
+		{% include section-header, title: "You can of course work remotely like most of us do these days. But just in case you ever want to see a colleague not
+		inside a screen, just drop by at one of our studios.", number: "04", type: "medium" %}
+		{% include locations %}
+	</section>
 </main>
 
 {% include footer, data: global %}

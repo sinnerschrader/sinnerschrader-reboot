@@ -4,6 +4,7 @@
 @import "./core/fonts";
 @import "./core/grid";
 @import "./core/variables";
+@import "./core/components-page";
 
 // includes
 @import "./includes/footer";
@@ -29,6 +30,7 @@
 @import "./includes/button-icon";
 @import "./includes//button";
 @import "./includes/filter-checkbox";
+@import "./includes/share-buttons";
 
 // External
 @import "node_modules/swiper/swiper";

@@ -3,6 +3,7 @@
 		&--raster {
 			row-gap: 0;
 			background: #000 url("./assets/meta-assets/background.png") no-repeat;
+			margin-bottom: -4em;
 
 			@include bp-xs {
 				background-image: none;
@@ -20,7 +21,7 @@
 
 	&__intro-text {
 		@include subheadline-200();
-		
+
 		margin: 0;
 	}
 

@@ -1,0 +1,18 @@
+    <h3 class="copy--title">What you can expect from us</h3>
+	<ul>
+      {% for item in data.jobDescription.expectationsList%}
+		<li>{{item.item}}</li>
+       {% endfor %} 
+	</ul>
+	<h3 class="copy--title">What you should bring with you</h3>
+	<ul>
+		{% for item in data.jobList.requirementsList.item %}
+		    <li>{{requirementsList.item}}</li>
+        {% endfor %} 
+	</ul>
+	<h3 class="copy--title">What we offer</h3>
+	<ul>     
+        {% for item in data.jobList.offerList %}
+		    <li>{{offerList.item}}</li>
+        {% endfor %}
+    </ul>

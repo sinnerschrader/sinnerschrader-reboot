@@ -1,0 +1,100 @@
+{
+	"first": {
+		"headline": {
+			"firstline": "Product Designer UI",
+			"secondline": "(f/m/d/-)"
+		}
+	},
+	"headline": {
+		"firstline": "Join our <span>creative</span> team",
+		"secondline": "in Hamburg"
+	},
+	"slider": {
+		"slides": [
+			{
+				"mobileSrc": "./assets/images/mobile/culture1.webp",
+				"tabletSrc": "./assets/images/tablet/culture1.webp",
+				"desktopSrc": "./assets/images/desktop/culture1.webp",
+				"fallbackSrc": "./assets/images/fallback/culture1.jpg",
+				"altText": "Person sitting at a desk in an office, a bonsai tree is seen in the foreground"
+			},
+			{
+				"mobileSrc": "./assets/images/mobile/culture2.webp",
+				"tabletSrc": "./assets/images/tablet/culture2.webp",
+				"desktopSrc": "./assets/images/desktop/culture2.webp",
+				"fallbackSrc": "./assets/images/fallback/culture2.jpg",
+				"altText": "Person swinging on an swing in an office with a floor in a geometric pattern"
+			},
+			{
+				"mobileSrc": "./assets/images/mobile/culture3.webp",
+				"tabletSrc": "./assets/images/tablet/culture3.webp",
+				"desktopSrc": "./assets/images/desktop/culture3.webp",
+				"fallbackSrc": "./assets/images/fallback/culture3.jpg",
+				"altText": "Person standing in a room wearing a motorcycle helmet"
+			}
+		]
+	},
+	"jobDescription": {
+		"expectationsList": [
+			{
+				"item": "Flexible Working Hours"
+			},
+			{
+				"item": "Opportunity to work remotely"
+			},
+			{
+				"item": "Health benefits (sports, massage etc.)"
+			},
+			{
+				"item": "Company bicycle"
+			}
+		],
+
+		"requirementsList": [
+			{
+				"item": "Public Transport (In Hambug)"
+			},
+			{
+				"item": "Employee discount program"
+			},
+			{
+				"item": "Christmas & New year off"
+			},
+			{
+				"item": "Pension plan"
+			}
+		],
+		"offerList": [
+			{
+				"item": "Accident insurance"
+			},
+			{
+				"item": "Workers Council"
+			},
+			{
+				"item": "Employer share purchase program"
+			},
+			{
+				"item": "Employee Referral Program"
+			}
+		]
+	},
+	"about": {
+		"text-teaser": {
+			"headline": "About us",
+			"text": "SinnerSchrader is one of the leading digital agencies in Europe with a focus on the design and development of digital products and services. More than 500 employees work on the digital transformation for companies such as ADAC, Airbus, Audi, Bosh,  comdirect bank, Deutsche Bahn, Deutsche Bank, Telefónica, Roche and VW. Since April 2017, SinnerSchrader is part of Accenture Interactive.",
+			"link": {
+				"text": "See cases",
+				"href": "#"
+			}
+		}
+	},
+	"text-teaser": {
+		"headline": "Our Culture",
+		"text": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.",
+		"link": {
+			"text": "Learn more",
+			"href": "#"
+		}
+	}
+}

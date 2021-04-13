@@ -19,6 +19,9 @@ body {
 	&.is-dark {
 		background-color: $color-primary--black;
 		color: $color-primary--white !important;
+		.headline-1 {
+			color: $color-primary--white !important;
+		}
 	}
 
 	/* stylelint-disable-next-line */

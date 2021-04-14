@@ -40,25 +40,25 @@
 
 		@include bp-mobile {
 			width: auto;
-			height: 52.6rem;
+			height: 55rem;
 		}
 	}
 
 	&__content {
-		@include responsive-spacing(left, 0, 60%, 70%, 80%);
+		@include responsive-spacing(left, 0, 50%, 70%, 80%);
+		@include responsive-spacing(width, 200%, 100%, 60%, 40%);
 
 		position: absolute;
 		display: flex;
 		flex-direction: row;
 		flex-wrap: nowrap;
-		right: 0;
 		top: $spacing--900;
 		bottom: -$spacing--700;
 		background: $color-primary--black;
 		color: $color-primary--white;
-		padding: $spacing--700;
+		overflow: hidden;
 
-		@include bp-mobile {
+		@include bp-xs {
 			position: relative;
 			top: 0;
 			left: 0;
@@ -74,33 +74,28 @@
 	}
 
 	&__content-inner {
-		width: 100%;
-		height: auto;
+		width: 50%;
+		padding: $spacing--700;
 		opacity: 1;
-		transition: opacity 150ms ease-in-out, height 0ms ease 140ms, width 0ms ease 140ms;
-		z-index: 1;
+		transition: opacity 500ms ease, transform 500ms ease;
+		transform: translateX(0);
 
 		&.is-hidden {
-			height: 1px;
-			width: 1px;
 			opacity: 0;
-			z-index: 0;
-			transition: opacity 150ms ease-in-out 150ms;
+			transform: translateX(-100%);
 		}
 	}
 
 	&__content-inner-hidden {
-		width: 1px;
-		height: 1px;
+		width: 50%;
+		padding: $spacing--700;
 		opacity: 0;
-		z-index: 0;
-		transition: opacity 150ms ease-in-out 150ms, height 0ms ease 140ms, width 0ms ease 140ms;
+		transform: translateX(0);
+		transition: opacity 500ms ease, transform 500ms ease;
 
 		&.is-active {
-			width: 100%;
-			height: auto;
 			opacity: 1;
-			z-index: 1;
+			transform: translateX(-100%);
 		}
 	}
 

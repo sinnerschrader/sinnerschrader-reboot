@@ -12,13 +12,14 @@
     "clean": "rimraf ./_site/",
     "11ty:build": "eleventy",
     "11ty:watch": "eleventy --serve",
-    "esbuild:build": "esbuild ./src/_includes/js/main.js --outfile=_site/bundle.js --bundle --minify",
-    "esbuild:watch": "esbuild ./src/_includes/js/main.js --outfile=_site/bundle.js --bundle --watch",
+    "esbuild:build": "node config/esbuild-build.js",
+    "esbuild:watch": "node config/esbuild-watch.js",
     "responsiveImages": "rimraf ./_site/assets/images/ && node ./config/sharp.js",
     "stylelint": "stylelint ./src/styles/**/*.scss",
     "a11y-check": "pa11y-ci"
   },
   "dependencies": {
+    "colorful-pixels": "^1.0.7",
     "lodash-es": "^4.17.21",
     "simple-parallax-js": "^5.6.2",
     "swiper": "^6.5.6"
@@ -29,6 +30,7 @@
     "chokidar": "^3.5.1",
     "cssnano": "^4.1.11",
     "esbuild": "^0.11.10",
+    "esbuild-plugin-glsl": "^1.0.3",
     "fibers": "^5.0.0",
     "fs-extra": "^9.1.0",
     "glob": "^7.1.6",

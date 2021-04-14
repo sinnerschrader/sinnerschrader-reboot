@@ -94,6 +94,29 @@
 		border-radius: 2rem;
 	}
 
+	&--apply {
+		max-width: 17rem;
+		display: block;
+		text-align: center;
+		text-transform: uppercase;
+		padding: $spacing--150 0;
+
+		@include bp-xs {
+			width: 100%;
+			max-width: none;
+		}
+
+		svg {
+			vertical-align: middle;
+		}
+
+		.is-dark & {
+			svg {
+				filter: invert(1);
+			}
+		}
+	}
+
 	// hover
 	&:hover {
 		cursor: pointer;

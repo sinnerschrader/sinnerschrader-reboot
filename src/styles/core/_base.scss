@@ -18,9 +18,11 @@ body {
 	/* stylelint-disable-next-line */
 	&.is-dark {
 		background-color: $color-primary--black;
-		color: $color-primary--white !important;
+		color: $color-primary--white;
+		/* stylelint-disable-next-line */
+		.job-details__openings,
 		.headline-1 {
-			color: $color-primary--white !important;
+			filter: invert(1);
 		}
 	}
 
@@ -86,6 +88,10 @@ ul {
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
+}
+
+address {
+	font-style: normal;
 }
 
 .section-header p {
@@ -178,8 +184,6 @@ ul {
 
 	&--address {
 		@include paragraph-100();
-
-		font-style: normal;
 	}
 }
 

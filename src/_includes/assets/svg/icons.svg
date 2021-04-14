@@ -18,5 +18,12 @@
       <path d="M2 4.5L6.93934 9.43934C7.52513 10.0251 8.47487 10.0251 9.06066 9.43934L14 4.5" stroke="white" stroke-width="1.5"/>
       <rect x="1.75" y="4.25" width="12.5" height="8.5" rx="1.25" stroke="white" stroke-width="1.5"/>
     </g>
+
+    <g id="arrow-left">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M10 3L6.06066 6.93934C5.47488 7.52512 5.47487 8.47487 6.06066 9.06066L10 13" stroke="black" stroke-width="1.5"/>
+      </svg>
+    </g>
+
   </defs>
 </svg>

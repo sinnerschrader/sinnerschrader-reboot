@@ -12,6 +12,13 @@
 	position: relative;
 	margin-bottom: $spacing--900;
 
+	@include bp-mobile {
+		&::before {
+			left: auto;
+			right: 0;
+		}
+	}
+
 	&::before {
 		content: "";
 		position: absolute;
@@ -25,13 +32,6 @@
 	.is-dark & {
 		&::before {
 			background-color: $color-primary--black;
-		}
-	}
-
-	@include bp-mobile {
-		&::before {
-			left: auto;
-			right: 0;
 		}
 	}
 

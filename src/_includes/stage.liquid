@@ -1,31 +1,33 @@
 <section>
     <div class="grid stage">
-        <div class="stage__title col-start-2 col-end-6
-            col-end-12-xs">
+        <div class="stage__title col-start-2 col-end-6 col-end-12-xs">
             <h1 class="stage__headline">
                 <div class="clip">
-                    <span class="headline-101 clip__text-small slide-in" data-js-item="slide-in" data-delay="0s">
-                    {{ data.stage.headline.topStart }}<span class="headline-202">{{ data.stage.headline.topEnd }}</span></span>
+                    <span class="headline-101 clip__text-small slide-in" data-delay="0s" data-js-item="slide-in">
+                        {{ data.stage.headline.topStart }}<span class="headline-202">{{ data.stage.headline.topEnd }}</span>
+                    </span>
                 </div>
-                <br>
+                <br/>
                 <div class="clip">
-                    <span class="slide-in" data-js-item="slide-in" data-delay="0.1s">
+                    <span class="slide-in" data-delay="0.1s" data-js-item="slide-in">
                         {{ data.stage.headline.bottom }}
                     </span>
                 </div>
             </h1>
         </div>
-        <div class="stage__video col-start-6 col-end-11 col-start-2-xs
-            col-end-12-xs">
-            <video class="stage__video__item" autoplay muted loop playsinline>
-				{% comment %} <source src="{{ data.stage.video.webm }}" type="video/webm" /> {% endcomment %}
-				<source src="{{ data.stage.video.mp4 }}" type="video/mp4" />
-			</video>
+        <div class="stage__video col-start-6 col-end-11 col-start-2-xs col-end-12-xs">
+            <video autoplay class="stage__video__item" loop muted playsinline>
+                {% comment %}
+				<source src="{{ data.stage.video.webm }}" type="video/webm" />
+				{% endcomment %}
+                <source src="{{ data.stage.video.mp4 }}" type="video/mp4"/>
+            </video>
             <!-- Below video tag shows first frame if prefers-reduced-motion is enabled. To be replaced with image -->
             <video class="stage__video__item stage__video--reduced-motion">
-				<source src="{{ data.stage.video.reducedMotionFrame }}" type="video/mp4" />
-			</video>
+                <source src="{{ data.stage.video.reducedMotionFrame }}" type="video/mp4"/>
+            </video>
         </div>
-        <div class="stage__overlap col-start-1 col-end-11"></div>
+        <div class="stage__overlap stage__overlap--bottom col-start-3 col-end-13 col-start-4-xs col-start-2-l"></div>
+        <div class="stage__overlap stage__overlap--left col-start-1 col-end-1"></div>
     </div>
 </section>

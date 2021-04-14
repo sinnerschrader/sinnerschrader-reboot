@@ -1,11 +1,11 @@
 @import "../core/variables";
 
 .stage {
-	margin: 0;
 	background: $color-primary--black;
 	color: $color-primary--white;
 	height: 90vh;
 	position: relative;
+	margin: 0;
 
 	&__headline {
 		@include bp-xs() {
@@ -55,25 +55,24 @@
 
 	&__overlap {
 		background-color: $color-primary--white;
-		bottom: -16rem;
-		height: 24rem;
 		position: absolute;
-		width: 100%;
 		z-index: 4;
 
-		@include bp-xs() {
-			bottom: -10rem;
-			height: 15rem;
+		&--bottom {
+			width: 100%;
+			height: $spacing--200;
+			bottom: 0;
 		}
 
-		@include bp-s() {
-			bottom: -10rem;
-			height: 16rem;
-		}
+		&--left {
+			width: $spacing--200;
+			height: 40%;
+			left: 0;
+			bottom: 0;
 
-		@include bp-m() {
-			bottom: -10rem;
-			height: 18rem;
+			@include bp-xs {
+				display: none;
+			}
 		}
 
 		.is-dark & {

@@ -21,6 +21,7 @@ body {
 		color: $color-primary--white !important;
 	}
 
+	/* stylelint-disable-next-line */
 	&.is-no-scroll {
 		overflow-y: hidden;
 	}

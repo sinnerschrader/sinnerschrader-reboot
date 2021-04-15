@@ -6,7 +6,7 @@
 
 	background-color: $color-primary--black;
 	color: $color-primary--white;
-	height: 90vh;
+	height: 100vh;
 	position: relative;
 	overflow: hidden;
 	margin: 0;
@@ -35,18 +35,38 @@
 		height: 100%;
 	}
 
-	&__title,
-	&__video {
+	&__gradient {
+		background: linear-gradient(180deg, $color-primary--black, $color-primary--white);
+		height: 9.5rem;
+		width: 100vw;
+		position: absolute;
+		top: 0;
+		mix-blend-mode: multiply;
+		opacity: 0.1;
+		z-index: 10;
+	}
+
+	&__title {
 		margin: auto;
 		position: relative;
 		width: 100%;
-		@include bp-xs() {
-			margin: 0;
+
+		&--with-video {
+			@include bp-xs() {
+				margin: 0;
+			}
 		}
 	}
 
 	&__video {
+		margin: auto;
+		position: relative;
+		width: 100%;
 		overflow: hidden;
+
+		@include bp-xs() {
+			margin: 0;
+		}
 
 		&__item {
 			width: 90%;
@@ -83,7 +103,7 @@
 
 		&--left {
 			width: $spacing--200;
-			height: 40%;
+			height: 50%;
 			left: 0;
 			bottom: 0;
 

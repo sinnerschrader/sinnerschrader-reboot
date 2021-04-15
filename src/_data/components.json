@@ -8,7 +8,8 @@
 		"button": {
 			"text": "OPTIONAL BTN"
 		},
-		"backgroundImage": { "image": "Berlin1.webp", "imageFallback": "Berlin1.jpg", "alt": "Berlin" }
+		"backgroundImage": { "image": "Berlin1.webp", "imageFallback": "Berlin1.jpg", "alt": "Berlin" },
+		"gradient": true
 	},
 	"text-teaser": {
 		"headline": "Headline",

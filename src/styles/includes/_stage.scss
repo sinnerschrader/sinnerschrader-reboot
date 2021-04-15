@@ -1,8 +1,6 @@
 @import "../core/variables";
 
 .stage {
-	@include grid-right();
-
 	background: $color-primary--black;
 	color: $color-primary--white;
 	height: 90vh;

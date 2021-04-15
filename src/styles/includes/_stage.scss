@@ -1,10 +1,14 @@
 @import "../core/variables";
+@import "../core/mixins";
 
 .stage {
-	background: $color-primary--black;
+	@include responsive-spacing(margin-bottom, $spacing--900, $spacing--900--tablet, $spacing--900--desktop, $spacing--900--desktop-xl);
+
+	background-color: $color-primary--black;
 	color: $color-primary--white;
 	height: 90vh;
 	position: relative;
+	overflow: hidden;
 	margin: 0;
 
 	&__headline {
@@ -16,6 +20,19 @@
 		.headline-202 {
 			@include font-serif-shared-large;
 		}
+	}
+
+	&__subheadline {
+		@include subheadline-100();
+
+		@include responsive-spacing(margin-bottom, $spacing--500, $spacing--500--tablet, $spacing--500--desktop, $spacing--500--desktop-xl);
+	}
+
+	&__background {
+		position: absolute;
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
 	}
 
 	&__title,

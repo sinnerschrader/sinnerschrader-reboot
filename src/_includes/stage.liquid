@@ -1,33 +1,54 @@
 <section>
-    <div class="grid stage">
-        <div class="stage__title col-start-2 col-end-6 col-end-12-xs">
-            <h1 class="stage__headline">
-                <div class="clip">
-                    <span class="headline-101 clip__text-small slide-in" data-delay="0s" data-js-item="slide-in">
-                        {{ data.stage.headline.topStart }}<span class="headline-202">{{ data.stage.headline.topEnd }}</span>
-                    </span>
-                </div>
-                <br/>
-                <div class="clip">
-                    <span class="slide-in" data-delay="0.1s" data-js-item="slide-in">
-                        {{ data.stage.headline.bottom }}
-                    </span>
-                </div>
-            </h1>
-        </div>
-        <div class="stage__video col-start-6 col-end-11 col-start-2-xs col-end-12-xs">
-            <video autoplay class="stage__video__item" loop muted playsinline>
-                {% comment %}
+	<div class="grid stage">
+		{% if data.stage.backgroundImage %}
+		<picture class="stage__background">
+			<source media="(max-width: 599px)" srcset="./assets/images/mobile/{{data.stage.backgroundImage.image}}" type="image/webp" />
+			<source media="(min-width: 600px)" srcset="./assets/images/tablet/{{data.stage.backgroundImage.image}}" type="image/webp" />
+			<source media="(min-width: 1200px)" srcset="./assets/images/desktop/{{data.stage.backgroundImage.image}}" type="image/webp" />
+			<img
+				class="stage__background"
+				alt="{{ data.stage.backgroundImage.alt }}"
+				src="./assets/images/fallback/{{ data.stage.backgroundImage.imageFallback }}"
+			/>
+		</picture>
+		{% endif %}
+		<div class="stage__title col-start-2 col-end-6 col-end-12-xs">
+			<h1 class="stage__headline">
+				<div class="clip">
+					<span class="headline-101 clip__text-small slide-in" data-delay="0s" data-js-item="slide-in">
+						{{ data.stage.headline.topStart }}<span class="headline-202">{{ data.stage.headline.topEnd }}</span>
+					</span>
+				</div>
+				<div class="clip">
+					<span class="slide-in" data-delay="0.1s" data-js-item="slide-in">
+						{{ data.stage.headline.top }}
+					</span>
+				</div>
+				<br />
+				<div class="clip">
+					<span class="slide-in" data-delay="0.1s" data-js-item="slide-in">
+						{{ data.stage.headline.bottom }}
+					</span>
+				</div>
+			</h1>
+			{% if data.stage.subheadline %}
+			<h2 class="stage__subheadline">{{ data.stage.subheadline }}</h2>
+			{% endif %} {% if data.stage.button %} {% assign buttonText = {{ data.stage.button.text }}%} {% include button, buttonText: buttonText
+			buttonOption: "primary" buttonSize: "large" jsReference:"media-stage-button"%} {% endif %}
+		</div>
+		<div class="stage__video col-start-6 col-end-11 col-start-2-xs col-end-12-xs">
+			<video autoplay class="stage__video__item" loop muted playsinline>
+				{% comment %}
 				<source src="{{ data.stage.video.webm }}" type="video/webm" />
 				{% endcomment %}
-                <source src="{{ data.stage.video.mp4 }}" type="video/mp4"/>
-            </video>
-            <!-- Below video tag shows first frame if prefers-reduced-motion is enabled. To be replaced with image -->
-            <video class="stage__video__item stage__video--reduced-motion">
-                <source src="{{ data.stage.video.reducedMotionFrame }}" type="video/mp4"/>
-            </video>
-        </div>
-        <div class="stage__overlap stage__overlap--bottom col-start-3 col-end-13 col-start-4-xs col-start-2-l"></div>
-        <div class="stage__overlap stage__overlap--left col-start-1 col-end-1"></div>
-    </div>
+				<source src="{{ data.stage.video.mp4 }}" type="video/mp4" />
+			</video>
+			<!-- Below video tag shows first frame if prefers-reduced-motion is enabled. To be replaced with image -->
+			<video class="stage__video__item stage__video--reduced-motion">
+				<source src="{{ data.stage.video.reducedMotionFrame }}" type="video/mp4" />
+			</video>
+		</div>
+		<div class="stage__overlap stage__overlap--bottom col-start-3 col-end-13 col-start-4-xs col-start-2-l"></div>
+		<div class="stage__overlap stage__overlap--left col-start-1 col-end-1"></div>
+	</div>
 </section>

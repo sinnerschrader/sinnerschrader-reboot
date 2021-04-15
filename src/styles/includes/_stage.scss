@@ -11,6 +11,11 @@
 		.headline-202 {
 			@include font-serif-shared-large;
 		}
+
+		@include bp-xs() {
+			margin-top: 10rem;
+			margin-bottom: 0;
+		}
 	}
 
 	&__title,

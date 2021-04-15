@@ -13,18 +13,12 @@ export class ImageTextTeaser {
 	}
 
 	bindEvents() {
-		console.log(this.defaultContent, this.hiddenContent, this.forwardBtn, this.backwardBtn);
-		this.forwardBtn.addEventListener("click", this.moveToHiddenContent.bind(this));
-		this.backwardBtn.addEventListener("click", this.moveToDefaultContent.bind(this));
+		this.forwardBtn.addEventListener("click", this.toggleHiddenContent.bind(this));
+		this.backwardBtn.addEventListener("click", this.toggleHiddenContent.bind(this));
 	}
 
-	moveToHiddenContent() {
-		this.hiddenContent.classList.add("is-active");
-		this.defaultContent.classList.add("is-hidden");
-	}
-
-	moveToDefaultContent() {
-		this.hiddenContent.classList.remove("is-active");
-		this.defaultContent.classList.remove("is-hidden");
+	toggleHiddenContent() {
+		this.hiddenContent.classList.toggle("is-active");
+		this.defaultContent.classList.toggle("is-hidden");
 	}
 }

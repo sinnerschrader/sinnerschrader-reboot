@@ -28,6 +28,18 @@
 
 		&.is-light {
 			.dot {
+				background-color: $color-primary--black;
+			}
+		}
+
+		&.is-text-dark {
+			.dot {
+				background-color: $color-primary--white;
+			}
+		}
+
+		&.is-text-light {
+			.dot {
 				background-color: $color-primary--white;
 			}
 		}
@@ -95,6 +107,42 @@
 
 	&.is-transparent {
 		background-color: transparent;
+		color: $color-primary--white;
+
+		.nav__list__link {
+			@include underline-animation($color-primary--white);
+
+			color: $color-primary--white;
+		}
+
+		.dot {
+			background-color: $color-primary--white;
+		}
+
+		.nav__logo--sinnerschrader {
+			color: $color-primary--white;
+		}
+	}
+
+	&.is-text-dark {
+		color: $color-primary--black;
+
+		.nav__list__link {
+			@include underline-animation($color-primary--black);
+
+			color: $color-primary--black;
+		}
+
+		.dot {
+			background-color: $color-primary--black;
+		}
+
+		.nav__logo--sinnerschrader {
+			color: $color-primary--black;
+		}
+	}
+
+	&.is-text-light {
 		color: $color-primary--white;
 
 		.nav__list__link {

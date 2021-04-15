@@ -20,6 +20,10 @@ body {
 		background-color: $color-primary--black;
 		color: $color-primary--white !important;
 	}
+
+	&.is-no-scroll {
+		overflow-y: hidden;
+	}
 }
 
 // Hide focus outline on mouse click

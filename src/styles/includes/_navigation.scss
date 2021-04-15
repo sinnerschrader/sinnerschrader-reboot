@@ -13,78 +13,8 @@
 	left: 0;
 	right: 0;
 	height: 9.5rem;
-	z-index: 6;
+	z-index: 11;
 	transition: transform 300ms ease-in-out, background-color 300ms ease-in-out;
-
-	&.is-mobile-active {
-		body {
-			overflow: hidden;
-		}
-
-		.nav__offset-panel {
-			left: 0;
-			overflow-y: auto;
-		}
-
-		&.is-light {
-			.dot {
-				background-color: $color-primary--black;
-			}
-		}
-
-		&.is-text-dark {
-			.dot {
-				background-color: $color-primary--white;
-			}
-		}
-
-		&.is-text-light {
-			.dot {
-				background-color: $color-primary--white;
-			}
-		}
-
-		.dot {
-			background-color: $color-primary--white;
-		}
-
-		.dot-1 {
-			top: -0.6rem;
-			left: 0.6rem;
-		}
-
-		.dot-2 {
-			top: 0.6rem;
-			right: -0.6rem;
-		}
-
-		.dot-3 {
-			bottom: 0.6rem;
-			left: -0.6rem;
-		}
-
-		.dot-4 {
-			bottom: -0.6rem;
-			right: 0.6rem;
-		}
-
-		.nav__logo--sinnerschrader {
-			color: $color-primary--white;
-		}
-
-		.nav__container {
-			position: relative;
-			background-color: $color-primary--black;
-			z-index: 10;
-			margin: 0;
-			padding: 0 2.4rem;
-			transition: background-color 300ms ease-in-out 300ms;
-		}
-
-		.nav__logo {
-			visibility: hidden;
-		}
-	}
 
 	&.is-light {
 		background-color: $color-primary--white;
@@ -170,6 +100,58 @@
 
 	&.is-top {
 		transform: translateY(0);
+	}
+
+	&.is-mobile-active {
+		body {
+			overflow: hidden;
+		}
+
+		.nav__offset-panel {
+			left: 0;
+			overflow-y: auto;
+		}
+
+		.dot {
+			background-color: $color-primary--white;
+		}
+
+		.dot-1 {
+			top: -0.6rem;
+			left: 0.6rem;
+		}
+
+		.dot-2 {
+			top: 0.6rem;
+			right: -0.6rem;
+		}
+
+		.dot-3 {
+			bottom: 0.6rem;
+			left: -0.6rem;
+		}
+
+		.dot-4 {
+			bottom: -0.6rem;
+			right: 0.6rem;
+		}
+
+		.nav__logo--sinnerschrader {
+			color: $color-primary--white;
+		}
+
+		.nav__container {
+			position: relative;
+			background-color: $color-primary--black;
+			z-index: 10;
+			margin: 0;
+			padding: 0 2.4rem;
+			transition: background-color 300ms ease-in-out 300ms;
+		}
+
+		.nav__logo {
+			visibility: hidden;
+		}
 	}
 
 	.is-dark & {

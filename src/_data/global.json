@@ -51,11 +51,6 @@
 				},
 				{
 					"baseUrl": "https://sinnerschrader.com",
-					"subUrl": "/news",
-					"linkText": "News"
-				},
-				{
-					"baseUrl": "https://sinnerschrader.com",
 					"subUrl": "/data-policy",
 					"linkText": "Data policy"
 				},
@@ -125,6 +120,11 @@
 		},
 		"linklist": {
 			"left": [
+				{
+					"href": "https://sinnerschrader.com/news.html",
+					"text": "News",
+					"rel": ""
+				},
 				{
 					"href": "mailto:info@sinnerschrader.com",
 					"text": "Contact",

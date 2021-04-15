@@ -8,6 +8,7 @@ import { SlideIn } from "./animate-slidein";
 import { Parallax } from "./parallax";
 import { AnchorNavigation } from "./anchor-navigation";
 import { CareerContact } from "./careerContact";
+import { Navigation } from "./navigation";
 
 (() => {
 	if (isModuleNeeded("locations")) {
@@ -44,6 +45,10 @@ import { CareerContact } from "./careerContact";
 
 	if (isModuleNeeded("career")) {
 		new CareerContact();
+	}
+
+	if (isModuleNeeded("navigation")) {
+		new Navigation();
 	}
 
 	new Parallax();

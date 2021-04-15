@@ -1,4 +1,10 @@
-<button id="{{ jsReference }}" class="button button--{{ buttonOption }} button--{{ buttonSize }}" {{ state }} >
+{% if mobileFullWidth == true %}
+    {% assign fullWidth = "button--mobile-full-width" %}
+{%else%}
+    {% assign fullWidth = "" %}
+{% endif %}
+
+<button id="{{ jsReference }}" class="button button--{{ buttonOption }} button--{{ buttonSize }} {{fullWidth}}" {{ state }} >
   {% if iconLeftID %}
     <svg class="button__icon button__icon--left">
       <use href="/assets/svg/icons.svg#{{ iconLeftID }}" />

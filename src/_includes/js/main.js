@@ -8,6 +8,7 @@ import { SlideIn } from "./animate-slidein";
 import { Parallax } from "./parallax";
 import { AnchorNavigation } from "./anchor-navigation";
 import { Navigation } from "./navigation";
+import { WebGLGrid } from "./webgl-grid";
 
 (() => {
 	if (isModuleNeeded("locations")) {
@@ -44,6 +45,10 @@ import { Navigation } from "./navigation";
 
 	if (isModuleNeeded("navigation")) {
 		new Navigation();
+	}
+
+	if (isModuleNeeded("webgl-grid")) {
+		new WebGLGrid();
 	}
 
 	new Parallax();

@@ -99,53 +99,53 @@ dataJsItem: bg-scroll-animation
 
     {% include section-header, title: "Button", number: "05" %}
     <section class="grid">
-        <div>
+        <div class="components-page__button-wrapper">
             <p>Primary</p>
-            {% include button, buttonText: "Large", buttonOption: "primary", buttonSize: "large", iconLeftID: "arrow-right" %}
+            {% include button, buttonText: "Large", buttonOption: "primary", buttonSize: "large", iconLeftID: "arrow-right" mobileFullWidth: true %}
             {% include button,
-			buttonText: "Small", buttonOption: "primary", buttonSize: "small" %}
+			buttonText: "Small", buttonOption: "primary", buttonSize: "small" mobileFullWidth: true%}
             {% include button, buttonText: "Disabled", buttonOption:
-			"primary", buttonSize: "small", iconRightID: "arrow-right", state: "disabled" %}
+			"primary", buttonSize: "small", iconRightID: "arrow-right", state: "disabled" mobileFullWidth: true%}
         </div>
-        <div>
+        <div class="components-page__button-wrapper">
             <p>Secondary</p>
-            {% include button, buttonText: "Large", buttonOption: "secondary", buttonSize: "large", iconRightID: "arrow-right" %}
+            {% include button, buttonText: "Large", buttonOption: "secondary", buttonSize: "large", iconRightID: "arrow-right" mobileFullWidth: true%}
             {% include
-			button, buttonText: "Small", buttonOption: "secondary", buttonSize: "small" %}
+			button, buttonText: "Small", buttonOption: "secondary", buttonSize: "small" mobileFullWidth: true%}
             {% include button, buttonText: "Disabled",
-			buttonOption: "secondary", buttonSize: "small", iconLeftID: "arrow-right", state: "disabled" %}
+			buttonOption: "secondary", buttonSize: "small", iconLeftID: "arrow-right", state: "disabled" mobileFullWidth: true%}
         </div>
-        <div>
+        <div class="components-page__button-wrapper">
             <p>Tertiary</p>
-            {% include button, buttonText: "Large", buttonOption: "tertiary", buttonSize: "large" %}
+            {% include button, buttonText: "Large", buttonOption: "tertiary", buttonSize: "large" mobileFullWidth: true%}
             {% include button, buttonText: "Disabled",
-			buttonOption: "tertiary", buttonSize: "large", state: "disabled" %}
+			buttonOption: "tertiary", buttonSize: "large", state: "disabled" mobileFullWidth: true%}
         </div>
     </section>
 
     {% include section-header, title: "Button (on dark)", number: "06" %}
     <section class="grid fade-bg-black">
-        <div>
+        <div class="components-page__button-wrapper">
             <p>Primary</p>
-            {% include button, buttonText: "Large", buttonOption: "primary", buttonSize: "large", iconLeftID: "arrow-right" %}
+            {% include button, buttonText: "Large", buttonOption: "primary", buttonSize: "large", iconLeftID: "arrow-right" mobileFullWidth: true%}
             {% include button,
-			buttonText: "Small", buttonOption: "primary", buttonSize: "small" %}
+			buttonText: "Small", buttonOption: "primary", buttonSize: "small" mobileFullWidth: true%}
             {% include button, buttonText: "Disabled", buttonOption:
-			"primary", buttonSize: "small", iconRightID: "arrow-right", state: "disabled" %}
+			"primary", buttonSize: "small", iconRightID: "arrow-right", state: "disabled"mobileFullWidth: true %}
         </div>
-        <div>
+        <div class="components-page__button-wrapper">
             <p>Secondary</p>
-            {% include button, buttonText: "Large", buttonOption: "secondary", buttonSize: "large", iconRightID: "arrow-right" %}
+            {% include button, buttonText: "Large", buttonOption: "secondary", buttonSize: "large", iconRightID: "arrow-right" mobileFullWidth: true%}
             {% include
-			button, buttonText: "Small", buttonOption: "secondary", buttonSize: "small" %}
+			button, buttonText: "Small", buttonOption: "secondary", buttonSize: "small" mobileFullWidth: true%}
             {% include button, buttonText: "Disabled",
-			buttonOption: "secondary", buttonSize: "small", iconLeftID: "arrow-right", state: "disabled" %}
+			buttonOption: "secondary", buttonSize: "small", iconLeftID: "arrow-right", state: "disabled" mobileFullWidth: true%}
         </div>
-        <div>
+        <div class="components-page__button-wrapper">
             <p>Tertiary</p>
-            {% include button, buttonText: "Large", buttonOption: "tertiary", buttonSize: "large" %}
+            {% include button, buttonText: "Large", buttonOption: "tertiary", buttonSize: "large" mobileFullWidth: true%}
             {% include button, buttonText: "Disabled",
-			buttonOption: "tertiary", buttonSize: "large", state: "disabled" %}
+			buttonOption: "tertiary", buttonSize: "large", state: "disabled" mobileFullWidth: true%}
         </div>
     </section>
 

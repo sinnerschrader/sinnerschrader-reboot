@@ -10,6 +10,7 @@ import { AnchorNavigation } from "./anchor-navigation";
 import { ImageTextTeaser } from "./image-text-teaser";
 import { Navigation } from "./navigation";
 import { FilterList, FloatObserver } from "./jobs";
+import { WebGLGrid } from "./webgl-grid";
 
 (() => {
 	if (isModuleNeeded("locations")) {
@@ -64,6 +65,10 @@ import { FilterList, FloatObserver } from "./jobs";
 			targetSelector: "#js-job-filter-bar",
 			targetClass: "is-floating",
 		});
+	}
+
+	if (isModuleNeeded("webgl-grid")) {
+		new WebGLGrid();
 	}
 
 	new Parallax();

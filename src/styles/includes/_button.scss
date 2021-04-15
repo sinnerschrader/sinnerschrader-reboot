@@ -8,6 +8,13 @@
 	display: inline-flex;
 	align-items: center;
 
+	&--mobile-full-width {
+		@include bp-xs() {
+			width: 100%;
+			justify-content: center;
+		}
+	}
+
 	&__icon {
 		fill: none;
 		width: 1.6rem;

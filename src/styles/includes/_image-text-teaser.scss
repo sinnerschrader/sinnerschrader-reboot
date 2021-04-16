@@ -95,7 +95,7 @@
 	}
 
 	&__content-inner {
-		width: 100%;
+		width: 50%;
 		padding: $spacing--700;
 		opacity: 1;
 		box-sizing: border-box;
@@ -110,12 +110,13 @@
 		}
 
 		@include bp-xs {
+			width: 100%;
 			padding: 0 $spacing--500 0 0;
 		}
 	}
 
 	&__content-inner-hidden {
-		width: 100%;
+		width: 50%;
 		padding: $spacing--700;
 		opacity: 0;
 		box-sizing: border-box;
@@ -130,6 +131,7 @@
 		}
 
 		@include bp-xs {
+			width: 100%;
 			padding: 0 $spacing--500 0 0;
 		}
 	}

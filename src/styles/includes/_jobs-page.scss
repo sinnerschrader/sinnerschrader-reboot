@@ -246,26 +246,41 @@ $filter-bar__height--desktop: 11.8rem;
 
 .job-list {
 	padding-top: $spacing--600;
+	margin-top: 0;
 
 	// A category holds subheadline for discipline
 	// and a list for the offerings
 	&__category {
 		border-bottom: 1px solid $color-primary--900;
 
+		&-title {
+			@include spacing-400(padding-top);
+			@include spacing-400(padding-bottom);
+		}
+
 		&-headline {
 			@include headline-200();
+			@include spacing-400(padding-top);
 
 			border-bottom: 1px solid $color-primary--600;
 			position: sticky;
 			top: 0;
-			margin-bottom: 0;
+			margin: 0;
 			background-color: $color-primary--white;
 			z-index: 0;
-			padding: $spacing--400 20rem $spacing--400 0;
 
 			@include bp-s-and-above {
 				top: $filter-bar__height--desktop + $spacing--400;
 				border: 0;
+			}
+
+			@include bp-xs {
+				@include spacing-600(padding-top);
+				@include spacing-400(padding-bottom);
+
+				&:first-child {
+					padding-top: 0;
+				}
 			}
 		}
 	}
@@ -277,12 +292,15 @@ $filter-bar__height--desktop: 11.8rem;
 
 	// LI
 	&__item {
+		@include spacing-400(padding-top);
+		@include spacing-400(padding-bottom);
+
 		border-bottom: 1px solid $color-primary--600;
 
 		// is-last gets added via JS
 		&.is-last,
 		&:last-of-type {
-			border: 0;
+			border-bottom: 0;
 		}
 
 		// Job Title
@@ -294,7 +312,7 @@ $filter-bar__height--desktop: 11.8rem;
 		&-location {
 			@include paragraph-200();
 
-			padding: 0.8rem 0;
+			padding-top: 0.8rem;
 		}
 	}
 
@@ -302,7 +320,6 @@ $filter-bar__height--desktop: 11.8rem;
 	&__anchor {
 		display: block;
 		color: $color-primary--black;
-		padding: $spacing--400 0;
 		transition: transform 0.2s linear;
 
 		&:hover {
@@ -337,7 +354,7 @@ $filter-bar__height--desktop: 11.8rem;
 		transition: transform 0.2s linear;
 		height: 100vh;
 		overflow: scroll;
-		z-index: 2;
+		z-index: 13;
 		top: 0;
 		background: $color-primary--black;
 		position: fixed;
@@ -354,6 +371,10 @@ $filter-bar__height--desktop: 11.8rem;
 
 		.job-filter-bar__confirm-group {
 			margin-top: 15rem;
+
+			.button--clear {
+				background-color: $color-primary--gray;
+			}
 		}
 	}
 }

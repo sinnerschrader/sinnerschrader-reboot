@@ -7,6 +7,7 @@ import { Offerings } from "./offerings";
 import { SlideIn } from "./animate-slidein";
 import { Parallax } from "./parallax";
 import { AnchorNavigation } from "./anchor-navigation";
+import { Navigation } from "./navigation";
 
 (() => {
 	if (isModuleNeeded("locations")) {
@@ -39,6 +40,10 @@ import { AnchorNavigation } from "./anchor-navigation";
 
 	if (isModuleNeeded("anchor-navigation")) {
 		new AnchorNavigation();
+	}
+
+	if (isModuleNeeded("navigation")) {
+		new Navigation();
 	}
 
 	new Parallax();

@@ -40,6 +40,16 @@
 	.headline-1 {
 		@include spacing-700(margin-top);
 
+		@include bp-xs {
+			br {
+				content: " ";
+			}
+
+			br::after {
+				content: " ";
+			}
+		}
+
 		span {
 			@include headline-202();
 		}

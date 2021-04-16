@@ -91,9 +91,9 @@
 
 		&--emoji {
 			@include paragraph-100();
+			@include spacing-400(padding-bottom);
 
 			display: flex;
-			padding-bottom: 4rem;
 
 			&:last-child {
 				padding-bottom: 0;

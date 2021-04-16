@@ -29,18 +29,22 @@
 			{
 				"list": [
 					{
+						"alt": "clock emoji",
 						"emoji": "/assets/emojis/working-hours.png",
 						"item": "Flexible Working Hours"
 					},
 					{
+						"alt": "island with palm tree emoji",
 						"emoji": "/assets/emojis/remote-work.png",
 						"item": "Opportunity to work remotely"
 					},
 					{
+						"alt": "woman meditating emoji",
 						"emoji": "/assets/emojis/health-benefits.png",
 						"item": "Health benefits (sports, massage etc.)"
 					},
 					{
+						"alt": "man riding bicycle emoji",
 						"emoji": "/assets/emojis/company-bicycle.png",
 						"item": "Company bicycle"
 					}
@@ -49,18 +53,22 @@
 			{
 				"list": [
 					{
+						"alt": "bus emoji",
 						"emoji": "/assets/emojis/public-transport.png",
 						"item": "Public Transport (In Hambug)"
 					},
 					{
+						"alt": "shopping bags emoji",
 						"emoji": "/assets/emojis/discount.png",
 						"item": "Employee discount program"
 					},
 					{
+						"alt": "woman dancing emoji",
 						"emoji": "/assets/emojis/holidays.png",
 						"item": "Christmas & New year off"
 					},
 					{
+						"alt": "emoji with glasses",
 						"emoji": "/assets/emojis/pension.png",
 						"item": "Pension plan"
 					}
@@ -69,18 +77,22 @@
 			{
 				"list": [
 					{
+						"alt": "ambulance emoji",
 						"emoji": "/assets/emojis/accident-insurance.png",
 						"item": "Accident insurance"
 					},
 					{
+						"alt": "raised hands emoji",
 						"emoji": "/assets/emojis/workers-council.png",
 						"item": "Workers Council"
 					},
 					{
+						"alt": "graph emoji",
 						"emoji": "/assets/emojis/shares.png",
 						"item": "Employer share purchase program"
 					},
 					{
+						"alt": "diamond emoji",
 						"emoji": "/assets/emojis/referral.png",
 						"item": "Employee Referral Program"
 					}

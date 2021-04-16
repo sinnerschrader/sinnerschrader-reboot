@@ -51,7 +51,7 @@ renderData: filterbar
 
                 <!-- Clear filters / Apply Filters -->
                 <div class="job-filter-bar__confirm-group col-12-xs col-start-1-xs col-4 col-start-9">
-                    <button class="button button--primary" id="js-clear-filter">Clear</button>
+                    <button class="button button--primary button--clear" id="js-clear-filter">Clear All</button>
                     <button class="button button--secondary" id="js-apply-filter">Apply</button>
                 </div>
             </div>
@@ -59,7 +59,11 @@ renderData: filterbar
 
         <!-- Filter Container Floating Bubble / Appears when filterbar is out of sight -->
         <div id="js-mobile-floater" class="mobile-floater visible-xs">
-            <button class="toggle-button js-toggle-filter-bar--mobile">F</button>
+            <button class="toggle-button js-toggle-filter-bar--mobile">
+                <svg class="button__icon">
+                    <use href="/assets/svg/icons.svg#filter" />
+                </svg>
+            </button>
         </div>
 
         <!-- Categories in the listing -->

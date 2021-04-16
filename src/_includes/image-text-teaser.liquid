@@ -15,15 +15,20 @@
 				<h3 class="image-text-teaser__headline">{{ data.image-text-teaser.headline }}</h3>
 				<p class="image-text-teaser__copy">{{ data.image-text-teaser.copy }}</p>
 				<button class="button button--primary button--small"
-				        data-js-atom="image-text-teaser-forward"
-				>{{ data.image-text-teaser.buttonText }}</button>
+				        data-js-atom="image-text-teaser-forward">
+					<span class="button__text">
+						{{ data.image-text-teaser.buttonText }}
+					</span>
+				</button>
 			</div>
 			<div class="image-text-teaser__content-inner-hidden" data-js-item="image-text-teaser-content-hidden">
 				<h3 class="image-text-teaser__headline">{{ data.image-text-teaser.sideContent.headline }}</h3>
 				<p class="image-text-teaser__copy">{{ data.image-text-teaser.sideContent.copy }}</p>
 				<button class="button button--primary button--small"
 				        data-js-atom="image-text-teaser-backward">
-					{{ data.image-text-teaser.sideContent.buttonText }}
+					<span class="button__text">
+						{{ data.image-text-teaser.sideContent.buttonText }}
+					</span>
 				</button>
 			</div>
 		{% else %}
@@ -31,7 +36,9 @@
 			<p class="image-text-teaser__copy">{{ data.image-text-teaser.copy }}</p>
 			<a class="button button--primary button--small"
 			   href="{{ data.image-text-teaser.linkHref }}">
-				{{ data.image-text-teaser.linkText }}
+				<span class="button__text">
+					{{ data.image-text-teaser.linkText }}
+				</span>
 			</a>
 		{% endif %}
 	</div>

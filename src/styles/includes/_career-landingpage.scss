@@ -3,6 +3,7 @@
 		&--raster {
 			row-gap: 0;
 			background: #000 url("./assets/meta-assets/background.png") no-repeat;
+			background-size: 100% auto;
 			margin-bottom: -4em;
 
 			@include bp-xs {
@@ -113,10 +114,13 @@
 
 		li {
 			display: inline-block;
-			padding: 0.25em 1em;
-			margin: 0 0.75em 0.75em 0;
-			background-color: $color-primary--gray;
-			border-radius: 1em;
+			padding-bottom: 8px;
+			line-height: 26px;
+
+			&::after {
+				content: "·";
+				padding: 0 8px;
+			}
 		}
 	}
 

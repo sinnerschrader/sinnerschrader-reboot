@@ -156,6 +156,7 @@
 
 	.is-dark & {
 		background-color: $color-primary--black;
+		color: $color-primary--white;
 
 		.nav__list__link {
 			@include underline-animation($color-primary--white);
@@ -180,11 +181,6 @@
 
 	&__container {
 		height: 100%;
-	}
-
-	.is-dark & {
-		background: $color-primary--black;
-		color: $color-primary--white;
 	}
 
 	&__logo {
@@ -245,14 +241,13 @@
 			display: inline-block;
 			text-decoration: none;
 			padding: 1rem 0;
+			text-transform: uppercase;
+			overflow-y: hidden;
+			vertical-align: text-top;
 
 			.is-dark & {
 				color: $color-primary--white;
 			}
-
-			text-transform: uppercase;
-			overflow-y: hidden;
-			vertical-align: text-top;
 		}
 	}
 

@@ -45,8 +45,8 @@ import { Navigation } from "./navigation";
 
 	if (isModuleNeeded("image-text-teaser-content")) {
 		new ImageTextTeaser();
-  }
-  
+	}
+
 	if (isModuleNeeded("navigation")) {
 		new Navigation();
 	}

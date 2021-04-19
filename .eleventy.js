@@ -53,6 +53,7 @@ module.exports = (eleventyConfig) => {
 		"./src/_includes/assets/fonts": "./assets/fonts",
 		"./src/_includes/assets/videos": "./assets/videos",
 		"./src/_includes/assets/svg": "./assets/svg",
+		"./src/_includes/assets/emojis": "./assets/emojis",
 		"./src/_includes/assets/meta-assets": "./assets/meta-assets",
 		"./src/_includes/data/*": "./data/",
 		"./config/netlify-cms-config.yml": "./admin/config.yml",

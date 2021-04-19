@@ -443,3 +443,34 @@ $filter-bar__height--desktop: 11.8rem;
 		}
 	}
 }
+
+//openings title
+
+.openings {
+	height: 60rem;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-image: url(assets/svg/openings.svg);
+	background-position-y: center;
+	@include spacing-900(margin-bottom);
+
+	.is-dark & {
+		filter: invert(1);
+	}
+
+	@include bp-xs {
+		height: 17rem;
+	}
+
+	@include bp-s {
+		height: 25rem;
+	}
+
+	@include bp-m {
+		height: 40rem;
+	}
+
+	@include bp-l {
+		height: 51rem;
+	}
+}

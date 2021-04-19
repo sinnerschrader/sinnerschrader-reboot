@@ -37,6 +37,19 @@ $filter-bar__height--desktop: 11.8rem;
 	overflow-x: initial;
 }
 
+.jobs__intro {
+	@include spacing-900(margin-top);
+	@include spacing-900(margin-bottom);
+
+	h1 {
+		color: $color-primary--black;
+
+		.is-dark & {
+			color: $color-primary--white;
+		}
+	}
+}
+
 .filter-list {
 	position: relative;
 }
@@ -281,6 +294,10 @@ $filter-bar__height--desktop: 11.8rem;
 	&__category {
 		border-bottom: 1px solid $color-primary--900;
 
+		.is-dark & {
+			border-color: $color-primary--white;
+		}
+
 		&-title {
 			@include spacing-400(padding-top);
 			@include spacing-400(padding-bottom);
@@ -294,7 +311,7 @@ $filter-bar__height--desktop: 11.8rem;
 			position: sticky;
 			top: 0;
 			margin: 0;
-			background-color: $color-primary--white;
+			//background-color: $color-primary--white;
 			z-index: 0;
 
 			@include bp-s-and-above {
@@ -309,6 +326,10 @@ $filter-bar__height--desktop: 11.8rem;
 				&:first-child {
 					padding-top: 0;
 				}
+			}
+
+			.is-dark & {
+				background-color: transparent;
 			}
 		}
 	}
@@ -329,6 +350,10 @@ $filter-bar__height--desktop: 11.8rem;
 		// Job Title
 		&-title {
 			@include headline-400();
+
+			.is-dark & {
+				color: $color-primary--white;
+			}
 		}
 
 		// Jobs Location
@@ -336,6 +361,10 @@ $filter-bar__height--desktop: 11.8rem;
 			@include paragraph-200();
 
 			padding-top: 0.8rem;
+
+			.is-dark & {
+				color: $color-primary--white;
+			}
 		}
 	}
 

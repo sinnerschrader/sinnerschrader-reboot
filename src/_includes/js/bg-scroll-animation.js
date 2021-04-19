@@ -22,6 +22,7 @@ class BackgroundScrollAnimation {
 
 	bindEvents() {
 		window.addEventListener("load", () => this.scrollListener());
+		console.log(this.animationStartElements);
 
 		this.viewPortDetection();
 	}
@@ -38,6 +39,7 @@ class BackgroundScrollAnimation {
 		let elementInViewport = [];
 
 		this.animationStartElements.forEach((el) => {
+			el.hasAttribute("data-no-offset-top") ? (this.animationOffsetTop = 0) : this.animationOffsetTop;
 			this.isInViewport(el) ? elementInViewport.push(true) : elementInViewport.push(false);
 		});
 

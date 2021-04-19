@@ -2,7 +2,7 @@ name: Manually deploy SLS Prod
 on:
   workflow_dispatch:
     branches:
-      - master
+      - feat/careerContactLandingpage
 
 jobs:
   deploy:

@@ -8,6 +8,7 @@ import { SlideIn } from "./animate-slidein";
 import { Parallax } from "./parallax";
 import { AnchorNavigation } from "./anchor-navigation";
 import { Navigation } from "./navigation";
+import { CopyToClipboard } from "./copy-to-clipboard";
 
 (() => {
 	if (isModuleNeeded("locations")) {
@@ -46,9 +47,17 @@ import { Navigation } from "./navigation";
 		new Navigation();
 	}
 
+	if (isIdFound("js-linkShareButton")) {
+		new CopyToClipboard();
+	}
+
 	new Parallax();
 })();
 
 function isModuleNeeded(moduleName) {
 	return document.querySelectorAll(`[data-js-item='${moduleName}']`).length !== 0;
+}
+
+function isIdFound(id) {
+	return document.querySelectorAll(`[id='${id}']`).length !== 0;
 }

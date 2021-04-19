@@ -15,6 +15,10 @@
 
 		text-transform: uppercase;
 
+		@include bp-xs {
+			padding-top: 7.2rem;
+		}
+
 		svg {
 			vertical-align: bottom;
 			padding-right: 8px;
@@ -23,7 +27,6 @@
 
 	&__description {
 		@include spacing-600(margin-top);
-
 		@include spacing-900(margin-bottom);
 
 		&__button {

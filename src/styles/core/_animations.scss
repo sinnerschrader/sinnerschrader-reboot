@@ -166,3 +166,14 @@
 		opacity: 0;
 	}
 }
+
+// CTA animation
+.button--small {
+	letter-spacing: initial;
+	transition: letter-spacing 0.3s ease-in-out, padding 0.3s ease-in-out;
+
+	&:hover {
+		padding: 1rem 1.7rem;
+		letter-spacing: 0.2rem;
+	}
+}

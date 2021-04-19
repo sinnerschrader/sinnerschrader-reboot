@@ -22,7 +22,6 @@ class BackgroundScrollAnimation {
 
 	bindEvents() {
 		window.addEventListener("load", () => this.scrollListener());
-		console.log(this.animationStartElements);
 
 		this.viewPortDetection();
 	}

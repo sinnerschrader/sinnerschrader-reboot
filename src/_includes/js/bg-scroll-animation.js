@@ -38,6 +38,7 @@ class BackgroundScrollAnimation {
 		let elementInViewport = [];
 
 		this.animationStartElements.forEach((el) => {
+			el.hasAttribute("data-no-offset-top") ? (this.animationOffsetTop = 0) : this.animationOffsetTop;
 			this.isInViewport(el) ? elementInViewport.push(true) : elementInViewport.push(false);
 		});
 

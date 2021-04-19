@@ -86,6 +86,7 @@ $filter-bar__height--desktop: 11.8rem;
 		@include bp-s-and-above {
 			max-height: $filter-bar__height--desktop;
 			padding-top: $spacing--400--desktop;
+			z-index: 12;
 		}
 
 		// This is toggle without animation for now.

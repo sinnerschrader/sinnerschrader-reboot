@@ -285,11 +285,6 @@ $filter-bar__height--desktop: 11.8rem;
 		}
 	}
 
-	// UL
-	&__list {
-		padding: $spacing--400 0;
-	}
-
 	// LI
 	&__item {
 		@include spacing-400(padding-top);

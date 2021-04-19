@@ -10,6 +10,7 @@ import { AnchorNavigation } from "./anchor-navigation";
 import { CareerContact } from "./careerContact";
 import { ImageTextTeaser } from "./image-text-teaser";
 import { Navigation } from "./navigation";
+import { CareerContact } from "./careerContact";
 
 (() => {
 	if (isModuleNeeded("locations")) {
@@ -55,6 +56,10 @@ import { Navigation } from "./navigation";
 
 	if (isModuleNeeded("navigation")) {
 		new Navigation();
+	}
+	
+	if (isModuleNeeded("career")) {
+		new CareerContact();
 	}
 
 	new Parallax();

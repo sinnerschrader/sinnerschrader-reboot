@@ -14,7 +14,6 @@ export class CareerContact {
 	}
 
 	sentform(event) {
-		console.log("aslo ich bin hier");
 		event.preventDefault();
 		const { name, contact, profile } = event.target;
 		const endpoint = "<https://b470bi0mli.execute-api.eu-central-1.amazonaws.com>";

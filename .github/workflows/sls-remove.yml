@@ -19,7 +19,7 @@ jobs:
 
     - run: npm ci
     - name: serverless remove
-      uses: serverless/github-action@main
+      uses: serverless/github-action@master
       with:
         args: remove --stage prod --verbose
       env:

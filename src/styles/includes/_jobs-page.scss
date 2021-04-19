@@ -52,6 +52,10 @@ $filter-bar__height--desktop: 11.8rem;
 		@include spacing-700(margin-bottom);
 	}
 
+	&--offering {
+		overflow-x: hidden;
+	}
+
 	.offering--info {
 		@include spacing-900(padding-bottom);
 		padding-top: 0;
@@ -462,6 +466,7 @@ $filter-bar__height--desktop: 11.8rem;
 
 	@include bp-xs {
 		height: 17rem;
+		filter: invert(1);
 	}
 
 	@include bp-s {
@@ -474,5 +479,11 @@ $filter-bar__height--desktop: 11.8rem;
 
 	@include bp-l {
 		height: 51rem;
+	}
+}
+
+@include bp-xs {
+	.offering--info {
+		overflow-x: hidden;
 	}
 }

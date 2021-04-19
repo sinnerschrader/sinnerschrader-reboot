@@ -20,6 +20,11 @@ body {
 		background-color: $color-primary--black;
 		color: $color-primary--white !important;
 	}
+
+	/* stylelint-disable-next-line */
+	&.is-no-scroll {
+		overflow-y: hidden;
+	}
 }
 
 // Hide focus outline on mouse click
@@ -133,10 +138,11 @@ ul {
 		word-break: break-all;
 		letter-spacing: inherit;
 		color: $color-primary--black;
-		border-bottom: 1px solid $color-secondary--yellow;
+		border-bottom: 1px solid $color-primary--black;
 
 		&:hover {
 			font-weight: bold;
+			border-bottom: 1px solid $color-secondary--yellow;
 		}
 	}
 

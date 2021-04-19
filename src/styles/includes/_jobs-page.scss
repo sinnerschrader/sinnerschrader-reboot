@@ -466,7 +466,6 @@ $filter-bar__height--desktop: 11.8rem;
 
 	@include bp-xs {
 		height: 17rem;
-		filter: invert(1);
 	}
 
 	@include bp-s {

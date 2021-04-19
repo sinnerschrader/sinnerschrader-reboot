@@ -35,6 +35,16 @@ $filter-bar__height--desktop: 11.8rem;
 // needed to make position: sticky; work
 .jobs-page {
 	overflow-x: initial;
+  
+  &--perks {
+		@include spacing-700(margin-top);
+		@include spacing-700(margin-bottom);
+	}
+  
+	.offering--info {
+		@include spacing-900(padding-bottom);
+		padding-top: 0;
+	}
 }
 
 .jobs__intro {
@@ -47,7 +57,6 @@ $filter-bar__height--desktop: 11.8rem;
 		.is-dark & {
 			color: $color-primary--white;
 		}
-	}
 }
 
 .filter-list {
@@ -297,7 +306,7 @@ $filter-bar__height--desktop: 11.8rem;
 		.is-dark & {
 			border-color: $color-primary--white;
 		}
-
+    
 		&-title {
 			@include spacing-400(padding-top);
 			@include spacing-400(padding-bottom);
@@ -311,7 +320,6 @@ $filter-bar__height--desktop: 11.8rem;
 			position: sticky;
 			top: 0;
 			margin: 0;
-			//background-color: $color-primary--white;
 			z-index: 0;
 
 			@include bp-s-and-above {
@@ -326,10 +334,6 @@ $filter-bar__height--desktop: 11.8rem;
 				&:first-child {
 					padding-top: 0;
 				}
-			}
-
-			.is-dark & {
-				background-color: transparent;
 			}
 		}
 	}
@@ -350,7 +354,7 @@ $filter-bar__height--desktop: 11.8rem;
 		// Job Title
 		&-title {
 			@include headline-400();
-
+      
 			.is-dark & {
 				color: $color-primary--white;
 			}
@@ -361,7 +365,7 @@ $filter-bar__height--desktop: 11.8rem;
 			@include paragraph-200();
 
 			padding-top: 0.8rem;
-
+      
 			.is-dark & {
 				color: $color-primary--white;
 			}

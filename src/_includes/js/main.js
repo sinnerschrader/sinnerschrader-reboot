@@ -7,6 +7,7 @@ import { Offerings } from "./offerings";
 import { SlideIn } from "./animate-slidein";
 import { Parallax } from "./parallax";
 import { AnchorNavigation } from "./anchor-navigation";
+import { ImageTextTeaser } from "./image-text-teaser";
 import { Navigation } from "./navigation";
 import { FilterList, FloatObserver } from "./jobs";
 
@@ -41,6 +42,10 @@ import { FilterList, FloatObserver } from "./jobs";
 
 	if (isModuleNeeded("anchor-navigation")) {
 		new AnchorNavigation();
+	}
+
+	if (isModuleNeeded("image-text-teaser-content")) {
+		new ImageTextTeaser();
 	}
 
 	if (isModuleNeeded("navigation")) {

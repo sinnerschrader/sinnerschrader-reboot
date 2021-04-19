@@ -16,7 +16,8 @@
 		text-transform: uppercase;
 
 		@include bp-xs {
-			padding-top: 7.2rem;
+			padding-top: 16.8rem;
+			margin-top: 0;
 		}
 
 		svg {

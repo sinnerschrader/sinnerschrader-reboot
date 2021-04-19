@@ -186,6 +186,10 @@ $filter-bar__height--desktop: 11.8rem;
 	&__toggle {
 		text-align: right;
 
+		@include bp-xs() {
+			display: flex;
+		}
+
 		// TODO: replace when icon button is implemented
 		.toggle-button {
 			@include icon-button();
@@ -250,6 +254,20 @@ $filter-bar__height--desktop: 11.8rem;
 			left: 4px;
 			top: 5px;
 			filter: invert(1);
+		}
+	}
+
+	.js-toggle-filter-bar--mobile {
+		position: relative;
+
+		svg {
+			position: absolute;
+			width: 16px;
+			height: 16px;
+			left: 50%;
+			top: 50%;
+			filter: invert(1);
+			transform: translate(-50%, -50%);
 		}
 	}
 }

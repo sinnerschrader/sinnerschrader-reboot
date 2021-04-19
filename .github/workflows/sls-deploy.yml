@@ -18,7 +18,7 @@ jobs:
 
     - run: npm ci
     - name: serverless deploy
-      uses: serverless/github-action@main
+      uses: SuprGames/serverless-github-action@v1.77
       with:
         args: deploy --stage prod --verbose
       env:

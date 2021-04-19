@@ -18,7 +18,7 @@ jobs:
 
     - run: npm ci
     - name: serverless deploy
-      uses: serverless/github-action@master
+      uses: serverless/github-action@main
       with:
         args: deploy --stage prod --verbose
       env:

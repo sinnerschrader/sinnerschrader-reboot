@@ -18,10 +18,9 @@ jobs:
 
     - run: npm ci
     - name: serverless deploy
-      uses: SuprGames/serverless-github-action@v1.77
+      uses: serverless/github-action@master
       with:
-        command: deploy
-        args: --stage prod --verbose
+        args: deploy --stage prod --verbose
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}

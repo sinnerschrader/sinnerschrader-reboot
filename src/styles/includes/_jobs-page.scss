@@ -31,22 +31,6 @@ $filter-bar__height--desktop: 11.8rem;
 	background-color: $color-primary--900;
 	color: $color-primary--white;
 }
-
-// needed to make position: sticky; work
-.jobs-page {
-	overflow-x: initial;
-  
-  &--perks {
-		@include spacing-700(margin-top);
-		@include spacing-700(margin-bottom);
-	}
-  
-	.offering--info {
-		@include spacing-900(padding-bottom);
-		padding-top: 0;
-	}
-}
-
 .jobs__intro {
 	@include spacing-900(margin-top);
 	@include spacing-900(margin-bottom);
@@ -57,390 +41,405 @@ $filter-bar__height--desktop: 11.8rem;
 		.is-dark & {
 			color: $color-primary--white;
 		}
+	}
 }
+// needed to make position: sticky; work
+.jobs-page {
+	overflow-x: initial;
 
-.filter-list {
-	position: relative;
-}
-
-.job-filter-bar {
-	@include paragraph-100();
-
-	overflow-x: hidden;
-	z-index: 1;
-	width: 100%;
-
-	// sticky scroll behaviour
-	position: sticky;
-	top: 0;
-	background-color: $color-primary--black;
-	color: $color-primary--white;
-	box-sizing: border-box;
-
-	// this is the height of the closed menu
-	max-height: $filter-bar__height--mobile;
-	overflow: hidden;
-
-	@include bp-xs {
-		position: initial;
+	&--perks {
+		@include spacing-700(margin-top);
+		@include spacing-700(margin-bottom);
 	}
 
-	@include bp-s-and-above {
-		max-height: $filter-bar__height--desktop;
-		padding-top: $spacing--400--desktop;
+	.offering--info {
+		@include spacing-900(padding-bottom);
+		padding-top: 0;
 	}
 
-	// This is toggle without animation for now.
-	// because animating height changes is not a good idea performance wise
-	// TODO: find an elegant solution for animation
-	&.is-open {
-		max-height: initial;
+	.filter-list {
+		position: relative;
 	}
 
-	// this is only for the mobile view
-	&__mobile-header {
-		@include interactive-100;
+	.job-filter-bar {
+		@include paragraph-100();
 
-		text-transform: uppercase;
-		margin: 0;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		padding: 0 $spacing--400;
-		height: $filter-bar__height--mobile;
+		overflow-x: hidden;
+		z-index: 1;
+		width: 100%;
 
-		@include bp-s-and-above {
-			display: none;
-		}
+		// sticky scroll behaviour
+		position: sticky;
+		top: 0;
+		background-color: $color-primary--black;
+		color: $color-primary--white;
+		box-sizing: border-box;
 
-		// reset p-tag styles
-		.job-filter-bar__mobile-legend {
-			@include interactive-100;
-		}
-
-		.mobile-active-filters {
-			@include active-filters();
-		}
-	}
-
-	// fieldset -> filter group
-	&__category {
-		padding-right: 1em;
-	}
-
-	// fieldset legend
-	&__category-legend {
-		font-size: 2.4rem;
-		margin-bottom: 4.6rem;
+		// this is the height of the closed menu
+		max-height: $filter-bar__height--mobile;
+		overflow: hidden;
 
 		@include bp-xs {
-			padding-top: 3.2rem;
+			position: initial;
 		}
 
-		// those are the labels showing which filters apply for each category
-		.active-filters {
-			@include active-filters();
-		}
-	}
-
-	// filter chip
-	&__filter-item {
-		line-height: initial;
-		background-color: $color-primary--900;
-
-		svg {
-			margin-left: 0;
-			filter: invert(1);
+		@include bp-s-and-above {
+			max-height: $filter-bar__height--desktop;
+			padding-top: $spacing--400--desktop;
 		}
 
-		&:hover {
+		// This is toggle without animation for now.
+		// because animating height changes is not a good idea performance wise
+		// TODO: find an elegant solution for animation
+		&.is-open {
+			max-height: initial;
+		}
+
+		// this is only for the mobile view
+		&__mobile-header {
+			@include interactive-100;
+
+			text-transform: uppercase;
+			margin: 0;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 0 $spacing--400;
+			height: $filter-bar__height--mobile;
+
+			@include bp-s-and-above {
+				display: none;
+			}
+
+			// reset p-tag styles
+			.job-filter-bar__mobile-legend {
+				@include interactive-100;
+			}
+
+			.mobile-active-filters {
+				@include active-filters();
+			}
+		}
+
+		// fieldset -> filter group
+		&__category {
+			padding-right: 1em;
+		}
+
+		// fieldset legend
+		&__category-legend {
+			font-size: 2.4rem;
+			margin-bottom: 4.6rem;
+
+			@include bp-xs {
+				padding-top: 3.2rem;
+			}
+
+			// those are the labels showing which filters apply for each category
+			.active-filters {
+				@include active-filters();
+			}
+		}
+
+		// filter chip
+		&__filter-item {
+			line-height: initial;
+			background-color: $color-primary--900;
+
+			svg {
+				margin-left: 0;
+				filter: invert(1);
+			}
+
+			&:hover {
+				svg {
+					filter: invert(0);
+				}
+
+				circle {
+					transition: transform 0.3s ease-in-out;
+					transform: scale(1);
+				}
+			}
+
+			.filter-checkbox__icon__animated-path {
+				@include default-animation(transform);
+
+				transform-origin: center;
+			}
+		}
+
+		// active filter state
+		input[type="checkbox"]:checked + &__filter-item {
+			background-color: $color-primary--white;
+			color: $color-primary--900;
+
 			svg {
 				filter: invert(0);
 			}
 
-			circle {
-				transition: transform 0.3s ease-in-out;
-				transform: scale(1);
+			&:hover {
+				svg {
+					filter: invert(1);
+				}
+
+				circle {
+					transition: transform 0.3s ease-in-out;
+					transform: scale(1);
+				}
+			}
+
+			.filter-checkbox__icon__animated-path {
+				@include default-animation(transform);
+
+				transform-origin: center;
+				transform: rotate(90deg);
 			}
 		}
 
-		.filter-checkbox__icon__animated-path {
-			@include default-animation(transform);
-
-			transform-origin: center;
-		}
-	}
-
-	// active filter state
-	input[type="checkbox"]:checked + &__filter-item {
-		background-color: $color-primary--white;
-		color: $color-primary--900;
-
-		svg {
-			filter: invert(0);
+		// focus visible: only applies on keyboard-focus
+		input[type="checkbox"]:focus-visible + &__filter-item {
+			outline: $color-secondary--blue auto 1px;
 		}
 
-		&:hover {
-			svg {
-				filter: invert(1);
-			}
-
-			circle {
-				transition: transform 0.3s ease-in-out;
-				transform: scale(1);
-			}
-		}
-
-		.filter-checkbox__icon__animated-path {
-			@include default-animation(transform);
-
-			transform-origin: center;
-			transform: rotate(90deg);
-		}
-	}
-
-	// focus visible: only applies on keyboard-focus
-	input[type="checkbox"]:focus-visible + &__filter-item {
-		outline: $color-secondary--blue auto 1px;
-	}
-
-	// Button for open close the filter section
-	&__toggle {
-		text-align: right;
-
-		@include bp-xs() {
-			display: flex;
-		}
-
-		// TODO: replace when icon button is implemented
-		.toggle-button {
-			@include icon-button();
-		}
-	}
-
-	// Buttons for dismiss / apply filters
-	&__confirm-group {
-		display: flex;
-		justify-content: space-between;
-
-		@include bp-s-and-above {
+		// Button for open close the filter section
+		&__toggle {
 			text-align: right;
 
-			.button:last-of-type {
-				margin-right: 0;
+			@include bp-xs() {
+				display: flex;
 			}
-		}
 
-		.button {
-			flex: 1;
-			justify-content: center;
-			height: fit-content;
-		}
-	}
-}
-
-// Filter Button that floats with scrolling
-@include bp-xs {
-	.mobile-floater {
-		display: block;
-		position: sticky;
-		top: 90vh;
-		text-align: right;
-		max-width: 100%;
-		overflow: hidden;
-		z-index: 100;
-
-		.toggle-button {
-			@include icon-button();
-
-			position: relative;
-			cursor: pointer;
-			transform: translateX(4rem);
-			transition: transform 0.4s ease-in;
-		}
-
-		.freeze-scroll & {
-			display: none;
-		}
-
-		.is-floating ~ & {
+			// TODO: replace when icon button is implemented
 			.toggle-button {
-				transform: translateX(-4rem);
+				@include icon-button();
 			}
 		}
 
-		svg {
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			left: 4px;
-			top: 5px;
-			filter: invert(1);
-		}
-	}
-
-	.js-toggle-filter-bar--mobile {
-		position: relative;
-
-		svg {
-			position: absolute;
-			width: 16px;
-			height: 16px;
-			left: 50%;
-			top: 50%;
-			filter: invert(1);
-			transform: translate(-50%, -50%);
-		}
-	}
-}
-
-.job-list {
-	padding-top: $spacing--600;
-	margin-top: 0;
-
-	// A category holds subheadline for discipline
-	// and a list for the offerings
-	&__category {
-		border-bottom: 1px solid $color-primary--900;
-
-		.is-dark & {
-			border-color: $color-primary--white;
-		}
-    
-		&-title {
-			@include spacing-400(padding-top);
-			@include spacing-400(padding-bottom);
-		}
-
-		&-headline {
-			@include headline-200();
-			@include spacing-400(padding-top);
-
-			border-bottom: 1px solid $color-primary--600;
-			position: sticky;
-			top: 0;
-			margin: 0;
-			z-index: 0;
+		// Buttons for dismiss / apply filters
+		&__confirm-group {
+			display: flex;
+			justify-content: space-between;
 
 			@include bp-s-and-above {
-				top: $filter-bar__height--desktop + $spacing--400;
-				border: 0;
+				text-align: right;
+
+				.button:last-of-type {
+					margin-right: 0;
+				}
 			}
 
-			@include bp-xs {
-				@include spacing-600(padding-top);
-				@include spacing-400(padding-bottom);
+			.button {
+				flex: 1;
+				justify-content: center;
+				height: fit-content;
+			}
+		}
+	}
 
-				&:first-child {
-					padding-top: 0;
+	// Filter Button that floats with scrolling
+	@include bp-xs {
+		.mobile-floater {
+			display: block;
+			position: sticky;
+			top: 90vh;
+			text-align: right;
+			max-width: 100%;
+			overflow: hidden;
+			z-index: 100;
+
+			.toggle-button {
+				@include icon-button();
+
+				position: relative;
+				cursor: pointer;
+				transform: translateX(4rem);
+				transition: transform 0.4s ease-in;
+			}
+
+			.freeze-scroll & {
+				display: none;
+			}
+
+			.is-floating ~ & {
+				.toggle-button {
+					transform: translateX(-4rem);
+				}
+			}
+
+			svg {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				left: 4px;
+				top: 5px;
+				filter: invert(1);
+			}
+		}
+
+		.js-toggle-filter-bar--mobile {
+			position: relative;
+
+			svg {
+				position: absolute;
+				width: 16px;
+				height: 16px;
+				left: 50%;
+				top: 50%;
+				filter: invert(1);
+				transform: translate(-50%, -50%);
+			}
+		}
+	}
+
+	.job-list {
+		padding-top: $spacing--600;
+		margin-top: 0;
+
+		// A category holds subheadline for discipline
+		// and a list for the offerings
+		&__category {
+			border-bottom: 1px solid $color-primary--900;
+
+			.is-dark & {
+				border-color: $color-primary--white;
+			}
+
+			&-title {
+				@include spacing-400(padding-top);
+				@include spacing-400(padding-bottom);
+			}
+
+			&-headline {
+				@include headline-200();
+				@include spacing-400(padding-top);
+
+				border-bottom: 1px solid $color-primary--600;
+				position: sticky;
+				top: 0;
+				margin: 0;
+				z-index: 0;
+
+				@include bp-s-and-above {
+					top: $filter-bar__height--desktop + $spacing--400;
+					border: 0;
+				}
+
+				@include bp-xs {
+					@include spacing-600(padding-top);
+					@include spacing-400(padding-bottom);
+
+					&:first-child {
+						padding-top: 0;
+					}
+				}
+			}
+		}
+
+		// LI
+		&__item {
+			@include spacing-400(padding-top);
+			@include spacing-400(padding-bottom);
+
+			border-bottom: 1px solid $color-primary--600;
+
+			// is-last gets added via JS
+			&.is-last,
+			&:last-of-type {
+				border-bottom: 0;
+			}
+
+			// Job Title
+			&-title {
+				@include headline-400();
+
+				.is-dark & {
+					color: $color-primary--white;
+				}
+			}
+
+			// Jobs Location
+			&-location {
+				@include paragraph-200();
+
+				padding-top: 0.8rem;
+
+				.is-dark & {
+					color: $color-primary--white;
+				}
+			}
+		}
+
+		// Styling for the link
+		&__anchor {
+			display: block;
+			color: $color-primary--black;
+			transition: transform 0.2s linear;
+
+			&:hover {
+				// TODO: actually this is guessed
+				transform: translateX($spacing--100);
+			}
+
+			// reset a tag styling
+			&:hover,
+			&:focus,
+			&:active,
+			&:visited {
+				color: $color-primary--black;
+			}
+		}
+
+		// hides list items and discipline categories
+		.hidden {
+			display: none;
+		}
+	}
+
+	// When the fullscreen filter menu is open we want to prevent scrolling in the background
+	.freeze-scroll {
+		height: 100vh;
+		overflow-y: hidden;
+	}
+
+	.job-filter-wrapper {
+		@include bp-xs {
+			transform: translateX(100%);
+			transition: transform 0.2s linear;
+			height: 100vh;
+			overflow: scroll;
+			z-index: 13;
+			top: 0;
+			background: $color-primary--black;
+			position: fixed;
+			margin: 0;
+			padding: 0 2.4rem;
+
+			.job-filter-bar__category {
+				padding-bottom: 3.2rem;
+
+				&:first-of-type {
+					border-bottom: 1px solid $color-primary--600;
+				}
+			}
+
+			.job-filter-bar__confirm-group {
+				margin-top: 15rem;
+
+				.button--clear {
+					background-color: $color-primary--gray;
 				}
 			}
 		}
 	}
 
-	// LI
-	&__item {
-		@include spacing-400(padding-top);
-		@include spacing-400(padding-bottom);
-
-		border-bottom: 1px solid $color-primary--600;
-
-		// is-last gets added via JS
-		&.is-last,
-		&:last-of-type {
-			border-bottom: 0;
+	.is-open .job-filter-wrapper {
+		@include bp-xs {
+			transform: translateX(0);
 		}
 
-		// Job Title
-		&-title {
-			@include headline-400();
-      
-			.is-dark & {
-				color: $color-primary--white;
-			}
+		.job-filter-bar__mobile-header {
+			padding: 0;
 		}
-
-		// Jobs Location
-		&-location {
-			@include paragraph-200();
-
-			padding-top: 0.8rem;
-      
-			.is-dark & {
-				color: $color-primary--white;
-			}
-		}
-	}
-
-	// Styling for the link
-	&__anchor {
-		display: block;
-		color: $color-primary--black;
-		transition: transform 0.2s linear;
-
-		&:hover {
-			// TODO: actually this is guessed
-			transform: translateX($spacing--100);
-		}
-
-		// reset a tag styling
-		&:hover,
-		&:focus,
-		&:active,
-		&:visited {
-			color: $color-primary--black;
-		}
-	}
-
-	// hides list items and discipline categories
-	.hidden {
-		display: none;
-	}
-}
-
-// When the fullscreen filter menu is open we want to prevent scrolling in the background
-.freeze-scroll {
-	height: 100vh;
-	overflow-y: hidden;
-}
-
-.job-filter-wrapper {
-	@include bp-xs {
-		transform: translateX(100%);
-		transition: transform 0.2s linear;
-		height: 100vh;
-		overflow: scroll;
-		z-index: 13;
-		top: 0;
-		background: $color-primary--black;
-		position: fixed;
-		margin: 0;
-		padding: 0 2.4rem;
-
-		.job-filter-bar__category {
-			padding-bottom: 3.2rem;
-
-			&:first-of-type {
-				border-bottom: 1px solid $color-primary--600;
-			}
-		}
-
-		.job-filter-bar__confirm-group {
-			margin-top: 15rem;
-
-			.button--clear {
-				background-color: $color-primary--gray;
-			}
-		}
-	}
-}
-
-.is-open .job-filter-wrapper {
-	@include bp-xs {
-		transform: translateX(0);
-	}
-
-	.job-filter-bar__mobile-header {
-		padding: 0;
 	}
 }

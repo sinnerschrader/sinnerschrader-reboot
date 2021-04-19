@@ -1,0 +1,13 @@
+	  <div class="offering--info grid" data-js-item="offerings">
+		  <div class="swiper-wrapper swiper-wrapper--emoji">
+			  {% for offering in data.offerings.offeringList %}
+			  <div class="swiper-slide offering__slide">
+				  <ul class="offering__list">
+					  {% for list in offering.list %}
+					    <li class="offering__item offering__item--emoji"><img class="offering__item__emoji" alt="{{ list.alt }}" src="{{ list.emoji }}"><span>{{ list.item }}</span></li>
+					  {% endfor %}
+				  </ul>
+			  </div>
+			  {% endfor %}
+		  </div>
+	  </div>

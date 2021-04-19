@@ -25,6 +25,6 @@ provider:
 
 functions:
   contactform:
-    handler: email.handler
+    handler: user_service/email.handler
     events:
       - httpApi: '*'

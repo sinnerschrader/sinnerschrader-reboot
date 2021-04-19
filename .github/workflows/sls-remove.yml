@@ -21,7 +21,8 @@ jobs:
     - name: serverless remove
       uses: serverless/github-action@main
       with:
-        args: remove --stage prod --verbose
+        command: remove
+        args: --stage prod --verbose
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}

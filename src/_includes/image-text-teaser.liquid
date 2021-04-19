@@ -1,0 +1,45 @@
+<div class="image-text-teaser" data-js-item="image-text-teaser">
+	<picture class="image-text-teaser__picture">
+		<source media="(max-width: 599px)"
+		        srcset="{{ data.image-text-teaser.image.mobileSrc }}" type="image/webp" />
+		<source media="(min-width: 600px) and (max-width: 1199px)"
+		        srcset="{{ data.image-text-teaser.image.tabletSrc }}" type="image/webp" />
+		<source media="(min-width: 1200px)"
+		        srcset="{{ data.image-text-teaser.image.desktopSrc }}" type="image/webp" />
+		<img loading="lazy" src="{{ data.image-text-teaser.image.fallbackSrc }}"
+		     alt="{{ data.image-text-teaser.image.altText }}"/>
+	</picture>
+	<div class="image-text-teaser__content">
+		{% if data.image-text-teaser.sideContent %}
+			<div class="image-text-teaser__content-inner" data-js-item="image-text-teaser-content">
+				<h3 class="image-text-teaser__headline">{{ data.image-text-teaser.headline }}</h3>
+				<p class="image-text-teaser__copy">{{ data.image-text-teaser.copy }}</p>
+				<button class="button button--primary button--small"
+				        data-js-atom="image-text-teaser-forward">
+					<span class="button__text">
+						{{ data.image-text-teaser.buttonText }}
+					</span>
+				</button>
+			</div>
+			<div class="image-text-teaser__content-inner-hidden" data-js-item="image-text-teaser-content-hidden">
+				<h3 class="image-text-teaser__headline">{{ data.image-text-teaser.sideContent.headline }}</h3>
+				<p class="image-text-teaser__copy">{{ data.image-text-teaser.sideContent.copy }}</p>
+				<button class="button button--primary button--small"
+				        data-js-atom="image-text-teaser-backward">
+					<span class="button__text">
+						{{ data.image-text-teaser.sideContent.buttonText }}
+					</span>
+				</button>
+			</div>
+		{% else %}
+			<h3 class="image-text-teaser__headline">{{ data.image-text-teaser.headline }}</h3>
+			<p class="image-text-teaser__copy">{{ data.image-text-teaser.copy }}</p>
+			<a class="button button--primary button--small"
+			   href="{{ data.image-text-teaser.linkHref }}">
+				<span class="button__text">
+					{{ data.image-text-teaser.linkText }}
+				</span>
+			</a>
+		{% endif %}
+	</div>
+</div>

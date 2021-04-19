@@ -9,16 +9,23 @@ dataJsItem: bg-scroll-animation
 {% include navigation, data: global %}
 
 <main>
-    <section>{% include section-header, title: "Text-Teaser", number: "01" %}
-        {% include text-teaser, data: components %}</section>
+	<section class="fade-bg-black">
+		{% include section-header, title: "Image-Text-Teaser", number: "01" %}
+		{% include image-text-teaser, data: components %}
+	</section>
+
+    <section>
+	    {% include section-header, title: "Text-Teaser", number: "02" %}
+        {% include text-teaser, data: components %}
+    </section>
 
     <section class="fade-bg-black">
-        {% include section-header, title: "Text-Teaser (on dark)", number: "02" %}
+        {% include section-header, title: "Text-Teaser (on dark)", number: "03" %}
         {% include text-teaser, data: components%}
     </section>
 
     <section>
-        {% include section-header, title: "Icon-Button", number: "03" %}
+        {% include section-header, title: "Icon-Button", number: "04" %}
         <div class="components-page__icon-button-wrapper">
             {% include button-notext, iconSrc:"/assets/svg/Chevron-down-L.svg" %}
             {% include button-notext,
@@ -58,7 +65,7 @@ dataJsItem: bg-scroll-animation
     </section>
 
     <section class="fade-bg-black">
-        {% include section-header, title: "Icon-Button(on dark)", number: "04" %}
+        {% include section-header, title: "Icon-Button(on dark)", number: "05" %}
         <div class="components-page__icon-button-wrapper">
             {% include button-notext, iconSrc:"/assets/svg/Chevron-down-L.svg" %}
             {% include button-notext,
@@ -97,7 +104,7 @@ dataJsItem: bg-scroll-animation
         </div>
     </section>
 
-    {% include section-header, title: "Button", number: "05" %}
+    {% include section-header, title: "Button", number: "06" %}
     <section class="grid">
         <div class="components-page__button-wrapper">
             <p>Primary</p>
@@ -123,7 +130,7 @@ dataJsItem: bg-scroll-animation
         </div>
     </section>
 
-    {% include section-header, title: "Button (on dark)", number: "06" %}
+    {% include section-header, title: "Button (on dark)", number: "07" %}
     <section class="grid fade-bg-black">
         <div class="components-page__button-wrapper">
             <p>Primary</p>
@@ -150,7 +157,7 @@ dataJsItem: bg-scroll-animation
     </section>
 
     <section>
-        {% include section-header, title: "Filter Checkbox", number: "07" %}
+        {% include section-header, title: "Filter Checkbox", number: "08" %}
         <div class="components-page__filter-checkbox-wrapper">
             {% include filter-checkbox, label:"LABEL", isReference:"checkbox1", name:"label" %}
             {% include filter-checkbox, label:"LABEL2",
@@ -159,7 +166,7 @@ dataJsItem: bg-scroll-animation
     </section>
 
     <section class="fade-bg-black">
-        {% include section-header, title: "Filter Checkbox(on dark)", number: "08" %}
+        {% include section-header, title: "Filter Checkbox(on dark)", number: "09" %}
         <div class="components-page__filter-checkbox-wrapper">
             {% include filter-checkbox, label:"LABEL3", isReference:"checkbox3", name:"label3" %}
             {% include filter-checkbox, label:"LABEL4",
@@ -168,7 +175,7 @@ dataJsItem: bg-scroll-animation
     </section>
 
     <section>
-        {% include section-header, title: "Share-buttons", number: "09" %}
+        {% include section-header, title: "Share-buttons", number: "10" %}
         <div class="components-page__share-buttons-wrapper">
             {% include share-buttons, title:"Share this job" link:true facebook:true twitter:true devTo:true xing:true linkedIn:true %}
         </div>

@@ -1,0 +1,54 @@
+<form data-js-item="career" name="WeAreHiring" class="career-landingpage__form form col-start-1-xs col-start-5 col-end-13">
+    <label class="form__group" for="name">
+        <span class="form__label">Full Name <span class="form__required">(required)</span></span>
+        <input class="form__field" id="name" name="name" required type="text">
+    </label>
+
+    <label class="form__group" for="contact">
+        <span class="form__label">How to reach you best? <span class="form__required">(required)</span></span>
+        <input class="form__field" id="contact" name="contact" required type="text">
+        <span class="form__subline">
+            e.g. email address or phone number
+        </span>
+    </label>
+
+    <label class="form__group" for="profile">
+        <span class="form__label">Just drop us a link to one of your profiles <span
+                class="form__required">(required)</span></span>
+        <input class="form__field" id="profile" name="profile" required type="url">
+        <span class="form__subline">
+            e.g. linkedIn, github, gitlab, Xing, ...
+        </span>
+    </label>
+
+    <div aria-labelledby='contact-person' role='radiogroup' class="form__group form__radio-group">
+        <span class="form__label">To whom do you wanna speak to? <span class="form__required">(required)</span></span>
+        <label for="whoever" class="form__radiobox">
+            <input id="whoever" type="radio" name="contact-person" value="Whoever" checked>
+            <span class="form__radiobox-label">Whoever</span>
+        </label>
+        <label for="recruiter" class="form__radiobox">
+            <input id="recruiter" required type="radio" name="contact-person" value="Recruiter">
+            <span class="form__radiobox-label">Recruiter</span>
+        </label>
+        <label for="developer" class="form__radiobox">
+            <input id="developer" type="radio" name="contact-person" value="Developer">
+            <span class="form__radiobox-label">Developer</span>
+        </label>
+    </div>
+
+    <div aria-labelledby='privacy' role='checkbox'>
+        <label for="privacy" class="form__checkbox">
+            <input id="privacy" class="form__checkbox-box" required type="checkbox" name="privacy" value="yes">
+            <span class="form__checkbox-label">
+                I have taken note of the privacy policy. I agree that my information and
+                data will be collected and stored electronically to answer my request.
+            </span>
+        </label>
+    </div>
+
+    <input class='form__button button button--large button--primary' aria-labelledby="submit" type="submit"
+        value="Contact me">
+
+    <p>We will! thank you for you interest.</p>
+</form>

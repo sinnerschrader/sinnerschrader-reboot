@@ -1,14 +1,18 @@
 @import "../core/variables";
 
 .stage {
-	@include grid-right();
-
+	margin: 0;
 	background: $color-primary--black;
 	color: $color-primary--white;
 	height: 90vh;
 	position: relative;
 
 	&__headline {
+		@include bp-xs() {
+			margin-top: 10rem;
+			margin-bottom: 0;
+		}
+
 		.headline-202 {
 			@include font-serif-shared-large;
 		}

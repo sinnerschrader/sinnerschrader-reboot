@@ -1,3 +1,4 @@
+// thanks to https://www.freecodecamp.org/news/how-to-receive-emails-via-your-sites-contact-us-form-with-aws-ses-lambda-api-gateway/
 const aws = require("aws-sdk");
 const ses = new aws.SES({ region: "eu-central-1" });
 exports.handler = async function(event) {

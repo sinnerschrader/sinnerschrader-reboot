@@ -35,6 +35,16 @@ $filter-bar__height--desktop: 11.8rem;
 // needed to make position: sticky; work
 .jobs-page {
 	overflow-x: initial;
+
+	&--perks {
+		@include spacing-700(margin-top);
+		@include spacing-700(margin-bottom);
+	}
+
+	.offering--info {
+		@include spacing-900(padding-bottom);
+		padding-top: 0;
+	}
 }
 
 .filter-list {

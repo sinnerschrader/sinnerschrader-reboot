@@ -8,6 +8,34 @@ renderData: filterbar
 {% include navigation, data: global %}
 
 <main class="jobs-page">
+	<section class="fade-bg-black">
+		{% include image-text-teaser, data: components %}
+	</section>
+    <section class="fade-bg-black">
+        {% include section-header, title: "Perks @ s2", number: "01" %}
+        <div class="grid">
+            <h3 class="jobs-page--perks">Perks <span class="headline-201">& Benefits</span></h3>
+        </div>
+        {% include offering-list-emoji, data: components %}
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <!-- Open / Close Filterbar MOBILE ONLY -->
     <section id="js-filter-list" class="filter-list">
         <form id="js-job-filter-bar" class="job-filter-bar" data-js-item="job-filter-list">

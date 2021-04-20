@@ -8,15 +8,15 @@ jobs:
     name: deploy
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Download Node
-      uses: actions/setup-node@v1
-      with:
-        node-version: "14.x"
-    - name: Install Serverless Framework
-      run: npm install -g serverless
-    - name: Serverless Authentication
-      run: sls config credentials --provider aws --key ${{secrets.AWS_ACCESS_KEY_DEV}} --secret ${{secrets.AWS_SECRET_ACCESS_KEY_DEV}}
-    - name: Deploy to AWS
-      run: serverless deploy --stage prod --verbose
-      working-directory: "./user_service"
+      - uses: actions/checkout@v2
+      - name: Download Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: "14.x"
+      - name: Install Serverless Framework
+        run: npm install -g serverless
+      - name: Serverless Authentication
+        run: sls config credentials --provider aws --key ${{ secrets.AWS_ACCESS_KEY_ID }} --secret ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      - name: Deploy to AWS
+        run: serverless deploy --stage prod --verbose
+        working-directory: "./user_service"

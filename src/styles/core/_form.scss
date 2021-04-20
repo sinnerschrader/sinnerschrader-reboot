@@ -151,4 +151,10 @@
 		display: inline-block;
 		padding: $spacing--100 $spacing--200;
 	}
+
+	&__thankyou {
+		&--hidden {
+			display: none;
+		}
+	}
 }

@@ -13,6 +13,14 @@ export class CareerContact {
 		window.addEventListener("submit", this.sentform.bind(this));
 	}
 
+	successfullySent() {
+		const forminput = document.querySelector(".form__input");
+		const thankyou = document.querySelector(".form__thankyou");
+
+		forminput.classList.add("form__thankyou--hidden");
+		thankyou.classList.remove("form__thankyou--hidden");
+	}
+
 	sentform(event) {
 		event.preventDefault();
 		const { name, contact, profile } = event.target;
@@ -32,6 +40,7 @@ export class CareerContact {
 		fetch(endpoint, requestOptions)
 			.then((response) => {
 				if (!response.ok) throw new Error("Error in fetch");
+				this.successfullySent();
 				return response.json();
 			})
 			.then((response) => {

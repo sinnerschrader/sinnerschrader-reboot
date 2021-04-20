@@ -10,7 +10,6 @@ import { AnchorNavigation } from "./anchor-navigation";
 import { CareerContact } from "./careerContact";
 import { ImageTextTeaser } from "./image-text-teaser";
 import { Navigation } from "./navigation";
-import { CareerContact } from "./careerContact";
 
 (() => {
 	if (isModuleNeeded("locations")) {
@@ -45,10 +44,9 @@ import { CareerContact } from "./careerContact";
 		new AnchorNavigation();
 	}
 
-
 	if (isModuleNeeded("career")) {
 		new CareerContact();
-  }
+	}
 
 	if (isModuleNeeded("image-text-teaser-content")) {
 		new ImageTextTeaser();
@@ -57,7 +55,7 @@ import { CareerContact } from "./careerContact";
 	if (isModuleNeeded("navigation")) {
 		new Navigation();
 	}
-	
+
 	if (isModuleNeeded("career")) {
 		new CareerContact();
 	}

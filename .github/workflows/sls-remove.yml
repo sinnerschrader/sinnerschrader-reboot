@@ -18,6 +18,7 @@ jobs:
 
     - run: npm ci
     - name: serverless remove
+      working-directory: ./user_service
       uses: serverless/github-action@master
       with:
         args: remove --stage prod --verbose

@@ -18,6 +18,7 @@ jobs:
 
     - run: npm ci
     - name: serverless deploy
+      working-directory: ./user_service
       uses: serverless/github-action@master
       with:
         args: deploy --stage prod --verbose

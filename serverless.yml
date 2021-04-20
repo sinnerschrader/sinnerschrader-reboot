@@ -25,7 +25,7 @@ package:
   exclude:
     - sinnerschrader-rebbot/**
   include:
-    - user_service/handler.js
+    - user_service/email.js
 
 functions:
   contactform:

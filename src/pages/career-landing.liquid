@@ -23,10 +23,9 @@ bodyClass: is-dark
 		{% include large-title, data: careerLandingpage %}
 	</section>
 	<section>
-		{% include section-header, title: "Our Mission", number: "02", type: "small" %}
+		{% include section-header, title: "What we are doing", number: "02", type: "small" %}
 	</section>
 	<section class="grid buzzword">
-		<h3 class="buzzword__headline col-start-1 col-end-13-s col-end-5">What we are doing and looking for</h3>
 		<div class="col-end-13 col-start-1-xs col-start-5">
 			<ul class="buzzword__list">
 				<li>A11y</li>
@@ -82,7 +81,7 @@ bodyClass: is-dark
 				<li>Web APIs</li>
 				<li>Website Performance</li>
 			</ul>
-			<a class="buzzword__link" href="./">Read more about SinnerSchrader</a>
+			<a class="buzzword__link" href="./">More about SinnerSchrader</a>
 		</div>
 	</section>
 	<section>
@@ -91,10 +90,15 @@ bodyClass: is-dark
 	<section class="grid">
 		{% include career-contact-form %}
 	</section>
+	<section class="grid career-landingpage__remote">
+		<p class="col-end-13 col-start-1-xs col-start-5">
+			You can of course work remotely like most of us do these days. But just in case you ever 
+			want to see a colleague not inside a screen, just drop by at one of our studios.
+		</p>
+	</section>
 
 	<section>
-		{% include section-header, title: "You can of course work remotely like most of us do these days. But just in case you ever want to see a colleague not
-		inside a screen, just drop by at one of our studios.", number: "04", type: "medium" %}
+		{% include section-header, title: "Here we are", number: "04", type: "medium" %}
 		{% include locations %}
 	</section>
 </main>

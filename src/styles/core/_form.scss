@@ -1,7 +1,13 @@
 .form {
 	@include paragraph-100();
+	@include spacing-800(margin-bottom);
 
 	position: relative;
+
+	&__radio-group,
+	&__group {
+		@include spacing-400(margin-bottom);
+	}
 
 	&__field {
 		font: inherit;
@@ -20,14 +26,15 @@
 
 	&__label {
 		@include headline-300();
+		@include spacing-200(margin-bottom);
 
 		display: block;
 		width: 100%;
+		cursor: pointer;
 	}
 
 	&__group {
 		display: block;
-		margin-bottom: $spacing--600;
 	}
 
 	&__checkbox {
@@ -117,11 +124,6 @@
 
 		label {
 			margin-right: $spacing--300;
-			margin-bottom: $spacing--400;
-		}
-
-		.form__label {
-			margin-bottom: $spacing--400;
 		}
 	}
 
@@ -129,31 +131,24 @@
 		@include paragraph-200();
 	}
 
-	&__error-message {
-		display: block;
-		color: $color-secondary--orange;
-
-		&.is-hidden {
-			display: none;
-		}
-	}
-
 	&__subline {
-		@include paragraph-200();
+		@include paragraph-100();
+		@include spacing-200(margin-bottom);
 
+		line-height: 234%;
 		display: inline-block;
-		margin-top: $spacing--100;
 		color: $color-secondary--gray;
 	}
 
 	&__button {
+		@include spacing-500(margin-top);
+
 		border-radius: $spacing--200;
 		border: 0;
 		background-color: $color-primary--white;
 		text-transform: uppercase;
 		width: auto;
 		display: inline-block;
-		margin-top: $spacing--500;
 		padding: $spacing--100 $spacing--200;
 	}
 }

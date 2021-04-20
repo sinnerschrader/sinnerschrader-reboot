@@ -26,6 +26,16 @@
 		margin: 0;
 	}
 
+	&__remote {
+		@include spacing-900(margin-bottom);
+
+		p {
+			@include subheadline-200();
+
+			margin: 0;
+		}
+	}
+
 	.large-title {
 		margin: 0 0 3rem;
 		position: relative;
@@ -79,18 +89,6 @@
 			}
 		}
 	}
-
-	.form__group {
-		@include responsive-spacing(margin-bottom, $spacing--600, 2.4rem, 2.4rem, 2.4rem);
-	}
-
-	.form__radio-group {
-		@include responsive-spacing(margin-bottom, 2.4rem, 3.2rem, 3.2rem, 3.2rem);
-	}
-
-	.form {
-		margin-bottom: 5em;
-	}
 }
 
 .grid .grid {
@@ -106,11 +104,10 @@
 
 	&__list {
 		@include paragraph-200();
+		@include spacing-400(margin-bottom);
 
 		display: flex;
 		flex-wrap: wrap;
-		margin-bottom: $spacing--400;
-		margin-right: -0.75em; // make list bigger, so the last element in a row fits
 
 		li {
 			display: inline-block;

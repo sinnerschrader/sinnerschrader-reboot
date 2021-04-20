@@ -1,17 +1,17 @@
 export class CareerContact {
-	constructor() {
-		this.container = document.querySelector(".career-landingpage");
-		if (!this.container) return;
-		this.intialize();
-	}
+    constructor() {
+        this.container = document.querySelector(".career-landingpage");
+        if (!this.container) return;
+        this.intialize();
+    }
 
-	intialize() {
-		this.bindEvents();
-	}
+    intialize() {
+        this.bindEvents();
+    }
 
-	bindEvents() {
-		window.addEventListener("submit", this.sentform.bind(this));
-	}
+    bindEvents() {
+        window.addEventListener("submit", this.sentform.bind(this));
+    }
 
 	successfullySent() {
 		const forminput = document.querySelector(".form__input");
@@ -34,10 +34,10 @@ export class CareerContact {
 			contactPerson: contactPerson.value,
 		});
 
-		const requestOptions = {
-			method: "POST",
-			body,
-		};
+        const requestOptions = {
+            method: "POST",
+            body,
+        };
 
 		fetch(endpoint, requestOptions)
 			.then((response) => {

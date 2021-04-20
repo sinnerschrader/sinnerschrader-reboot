@@ -63,7 +63,7 @@ class BackgroundScrollAnimation {
 		if (!el) return;
 
 		const { top, bottom } = el.getBoundingClientRect();
-		const vHeight = window.innerHeight || document.documentElement.clientHeight;
+		const vHeight = document.body.clientHeight;
 
 		return (top > 0 || bottom > 0) && top + this.animationOffsetTop < vHeight && bottom > this.animationOffsetBottom;
 	}

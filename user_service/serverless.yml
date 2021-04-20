@@ -4,8 +4,6 @@ provider:
   name: aws
   runtime: nodejs14.x
   region: eu-central-1
-  environment:
-    ENV: ${env:ENV}
   timeout: 120 # The default is 6 seconds. Note: API Gateway current maximum is 30 seconds
   logRetentionInDays: 14 # Set the default RetentionInDays for a CloudWatch LogGroup
   iamRoleStatements: #other permissions are given via IAM configuration

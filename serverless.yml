@@ -21,6 +21,12 @@ provider:
 #      allowedOrigins:
 #        - https://sinnerschrader.com
 
+package:
+  exclude:
+    - sinnerschrader-rebbot/**
+  include:
+    - user_service/handler.js
+
 functions:
   contactform:
     handler: user_service/email.handler

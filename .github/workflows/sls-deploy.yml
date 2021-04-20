@@ -1,27 +1,22 @@
-name: Manually deploy SLS Prod
+name: Manually deploy Resources to Prod
+
 on:
   workflow_dispatch:
 
 jobs:
-  deploy:
-    name: deploy Lambda + API
+  Deploy:
+    name: deploy
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [14.x]
     steps:
     - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
+    - name: Download Node
       uses: actions/setup-node@v1
       with:
-        node-version: ${{ matrix.node-version }}
-
-    - run: npm ci
-    - name: serverless deploy
-      working-directory: ./user_service
-      uses: serverless/github-action@master
-      with:
-        args: deploy --stage prod --verbose
-      env:
-        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        node-version: "14.x"
+    - name: Install Serverless Framework
+      run: npm install -g serverless
+    - name: Serverless Authentication
+      run: sls config credentials --provider aws --key ${{secrets.AWS_ACCESS_KEY_DEV}} --secret ${{secrets.AWS_SECRET_ACCESS_KEY_DEV}}
+    - name: Deploy to AWS
+      run: serverless deploy --stage prod --verbose
+      working-directory: "./user_service"

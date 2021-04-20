@@ -62,6 +62,11 @@
 			"id": "processing-facebook-fan-pages",
 			"text": "Data processing on our Facebook fan page",
 			"isActive": false
+		},
+		{
+			"id": "recruting-contact-form",
+			"text": "Recruiting contact form",
+			"isActive": false
 		}
 	]
 }

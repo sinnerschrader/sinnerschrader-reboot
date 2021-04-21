@@ -104,14 +104,14 @@
 		transition: opacity 500ms ease, transform 500ms ease;
 		transform: translateX(0);
 
-		&.is-hidden {
-			opacity: 0;
-			transform: translateX(-100%);
-		}
-
 		@include bp-xs {
 			width: 100%;
 			padding: 0 $spacing--500 0 0;
+		}
+
+		&.is-hidden {
+			opacity: 0;
+			transform: translateX(-100%);
 		}
 	}
 
@@ -125,14 +125,14 @@
 		transform: translateX(0);
 		transition: opacity 500ms ease, transform 500ms ease;
 
-		&.is-active {
-			opacity: 1;
-			transform: translateX(-100%);
-		}
-
 		@include bp-xs {
 			width: 100%;
 			padding: 0 $spacing--500 0 0;
+		}
+
+		&.is-active {
+			opacity: 1;
+			transform: translateX(-100%);
 		}
 	}
 
@@ -147,10 +147,6 @@
 	&__copy {
 		color: $color-primary--white;
 
-		.is-dark & {
-			color: $color-primary--black;
-		}
-
 		@include bp-xs {
 			margin-bottom: $spacing--500;
 
@@ -158,16 +154,15 @@
 				color: $color-primary--white;
 			}
 		}
+
+		.is-dark & {
+			color: $color-primary--black;
+		}
 	}
 
 	.button {
 		background-color: $color-primary--gray;
 		color: $color-primary--white;
-
-		.is-dark & {
-			background-color: $color-primary--beige;
-			color: $color-primary--black;
-		}
 
 		@include bp-xs {
 			width: 100%;
@@ -182,6 +177,11 @@
 				margin: 0 auto;
 				text-transform: uppercase;
 			}
+		}
+
+		.is-dark & {
+			background-color: $color-primary--beige;
+			color: $color-primary--black;
 		}
 	}
 }

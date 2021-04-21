@@ -14,9 +14,10 @@ exports.handler = async function (event) {
 			Body: {
 				Html: {
 					Charset: "UTF-8",
-					Data: `${senderName} <br/>
-					You can best reach me: ${contact}  <br/>
-					My profile: ${profileLink}  <br/>
+					Data: `New message from recuriting landingpage https://sinnerschrader.com/wearehiring.html<br/><br/>
+					My name: ${senderName} <br/>
+					You can reach me best: ${contact}  <br/>
+					Link to my profile: ${profileLink}  <br/>
 					I want to speak to: ${contactPerson} <br/>
 					Data Privacy: ${privacy} <br/>
 					`,
@@ -24,7 +25,7 @@ exports.handler = async function (event) {
 			},
 			Subject: {
 				Charset: "UTF-8",
-				Data: `Recruiting Landingpage: Message from ${senderName}`,
+				Data: `📮 Recruiting Landingpage: Message from ${senderName}`,
 			},
 		},
 		Source: "felicitas.kugland@sinnerschrader.com",

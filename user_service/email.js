@@ -4,11 +4,10 @@ const ses = new aws.SES({ region: "eu-central-1" });
 exports.handler = async function (event) {
 	console.log("EVENT: ", event);
 	// Extract the properties from the event body
-	const { senderEmail, contact, senderName, profileLink, privacy, contactPerson } = JSON.parse(event.body);
+	const { contact, senderName, profileLink, privacy, contactPerson } = JSON.parse(event.body);
 	const params = {
 		Destination: {
 			ToAddresses: ["felicitas.kugland@sinnerschrader.com"],
-			CcAddresses: [senderEmail],
 		},
 		// Interpolate the data in the strings to send
 		Message: {

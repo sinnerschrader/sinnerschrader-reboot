@@ -23,12 +23,11 @@ export class CareerContact {
 
 	sentform(event) {
 		event.preventDefault();
-		const { name, contact, email, profile, privacy, contactPerson } = event.target;
+		const { name, contact, profile, privacy, contactPerson } = event.target;
 		const endpoint = "https://xr9bha0zvh.execute-api.eu-central-1.amazonaws.com";
 		// We use JSON.stringify here so the data can be sent as a string via HTTP
 		const body = JSON.stringify({
 			senderName: name.value,
-			senderEmail: email.value,
 			contact: contact.value,
 			profileLink: profile.value,
 			privacy: privacy.value,
@@ -42,7 +41,7 @@ export class CareerContact {
 
 		fetch(endpoint, requestOptions)
 			.then((response) => {
-				if (!response.ok) throw new Error("Error in fetch");
+				if (!response.ok) throw new Error("Error in fetch ", response);
 				this.successfullySent();
 				return response.json();
 			})

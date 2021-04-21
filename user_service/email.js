@@ -3,7 +3,7 @@ const aws = require("aws-sdk");
 const ses = new aws.SES({ region: "eu-central-1" });
 exports.handler = async function (event) {
 	// Extract the properties from the event body
-	const { contact, senderName, profileLink, privacy, senderEmail, contactPerson } = JSON.parse(event.body);
+	const { phonenumber, senderName, profileLink, privacy, senderEmail, contactPerson } = JSON.parse(event.body);
 	const params = {
 		Destination: {
 			ToAddresses: ["jobs@sinnerschrader.com"],
@@ -16,7 +16,8 @@ exports.handler = async function (event) {
 					Charset: "UTF-8",
 					Data: `New message from recuriting landingpage https://sinnerschrader.com/wearehiring.html<br/><br/>
 					My name: ${senderName} <br/>
-					You can reach me best: ${contact}  <br/>
+					Email: ${senderEmail}  <br/>
+					Phone: ${phonenumber}  <br/>
 					Link to my profile: ${profileLink}  <br/>
 					I want to speak to: ${contactPerson} <br/>
 					Data Privacy: ${privacy} <br/>

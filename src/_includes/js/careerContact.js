@@ -16,8 +16,10 @@ export class CareerContact {
 	successfullySent() {
 		const forminput = document.querySelector(".form__input");
 		const thankyou = document.querySelector(".form__thankyou");
+		const remoteHint = document.querySelector(".career-landingpage__remote");
 
 		forminput.classList.add("form__thankyou--hidden");
+		remoteHint.classList.add("form__thankyou--hidden");
 		thankyou.classList.remove("form__thankyou--hidden");
 
 		document.querySelector(".join-us").scrollIntoView({
@@ -33,7 +35,7 @@ export class CareerContact {
 		const body = JSON.stringify({
 			senderName: name.value,
 			senderEmail: email.value,
-			contact: contact.value,
+			phonenumber: phonenumber.value,
 			profileLink: profile.value,
 			privacy: privacy.value,
 			contactPerson: contactPerson.value,

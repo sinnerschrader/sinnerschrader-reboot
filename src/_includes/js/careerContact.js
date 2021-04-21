@@ -1,17 +1,17 @@
 export class CareerContact {
-    constructor() {
-        this.container = document.querySelector(".career-landingpage");
-        if (!this.container) return;
-        this.intialize();
-    }
+	constructor() {
+		this.container = document.querySelector(".career-landingpage");
+		if (!this.container) return;
+		this.intialize();
+	}
 
-    intialize() {
-        this.bindEvents();
-    }
+	intialize() {
+		this.bindEvents();
+	}
 
-    bindEvents() {
-        window.addEventListener("submit", this.sentform.bind(this));
-    }
+	bindEvents() {
+		window.addEventListener("submit", this.sentform.bind(this));
+	}
 
 	successfullySent() {
 		const forminput = document.querySelector(".form__input");
@@ -23,21 +23,22 @@ export class CareerContact {
 
 	sentform(event) {
 		event.preventDefault();
-		const { name, contact, profile, privacy, contactPerson } = event.target;
+		const { name, contact, email, profile, privacy, contactPerson } = event.target;
 		const endpoint = "https://xr9bha0zvh.execute-api.eu-central-1.amazonaws.com";
 		// We use JSON.stringify here so the data can be sent as a string via HTTP
 		const body = JSON.stringify({
 			senderName: name.value,
-			senderEmail: contact.value,
+			senderEmail: email.value,
+			contactWay: contact.value,
 			profileLink: profile.value,
 			privacy: privacy.value,
 			contactPerson: contactPerson.value,
 		});
 
-        const requestOptions = {
-            method: "POST",
-            body,
-        };
+		const requestOptions = {
+			method: "POST",
+			body,
+		};
 
 		fetch(endpoint, requestOptions)
 			.then((response) => {

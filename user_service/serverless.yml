@@ -1,6 +1,5 @@
 service: serverless-contactform
 
-
 provider:
   name: aws
   runtime: nodejs14.x
@@ -10,16 +9,16 @@ provider:
   iamRoleStatements: #other permissions are given via IAM configuration
     - "Effect": "Allow"
       "Action":
-         - "iam:Get*"
-         - "iam:List*"
-         - "ses:SendEmail"
-         - "ses:SendRawEmail"
+        - "iam:Get*"
+        - "iam:List*"
+        - "ses:SendEmail"
+        - "ses:SendRawEmail"
       "Resource": "*"
   httpApi:
-    cors: true # remove true when enabling allowedOrigins
-# enable if everything works
-#      allowedOrigins:
-#        - https://sinnerschrader.com
+    cors:
+      allowedOrigins:
+        - https://sinnerschrader.com
+        - https://deploy-preview-260--sinnerschrader.netlify.app
 
 package:
   exclude:
@@ -31,4 +30,4 @@ functions:
   contactform:
     handler: user_service/email.handler
     events:
-      - httpApi: '*'
+      - httpApi: "*"

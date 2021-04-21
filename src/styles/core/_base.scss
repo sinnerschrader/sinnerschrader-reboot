@@ -39,6 +39,10 @@ h1 {
 
 	margin-bottom: 0;
 	color: $color-primary--black;
+
+	.is-dark & {
+		color: $color-primary--white;
+	}
 }
 
 h3 {

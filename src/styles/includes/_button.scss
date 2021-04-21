@@ -1,0 +1,35 @@
+.button {
+	@include interactive-100();
+
+	line-height: initial;
+	border: 0;
+
+	&--mobile-full-width {
+		@include bp-xs() {
+			width: 100%;
+			justify-content: center;
+		}
+	}
+
+	&--primary {
+		.is-dark & {
+			background-color: $color-primary--beige;
+			color: $color-primary--black;
+		}
+	}
+
+	&--large {
+		padding: $spacing--200 $spacing--500;
+		border-radius: 2.4rem;
+	}
+
+	// hover
+	&:hover {
+		cursor: pointer;
+	}
+
+	// state
+	&:disabled {
+		opacity: 0.5;
+	}
+}

@@ -1,0 +1,144 @@
+.career-landingpage {
+	.background {
+		&--raster {
+			row-gap: 0;
+			background: #000 url("./assets/meta-assets/background.png") no-repeat;
+			background-size: 100% auto;
+
+			@include bp-xs {
+				background-image: none;
+			}
+
+			@include bp-s {
+				margin-bottom: -4em;
+			}
+		}
+	}
+
+	a {
+		color: inherit;
+	}
+
+	&__intro {
+		@include spacing-600(margin-top);
+	}
+
+	&__intro-text {
+		@include subheadline-200();
+
+		margin: 0;
+	}
+
+	&__remote {
+		@include spacing-900(margin-bottom);
+
+		p {
+			@include subheadline-200();
+
+			margin: 0;
+		}
+	}
+
+	.large-title {
+		position: relative;
+		width: 100%;
+
+		@include bp-xs {
+			@include spacing-600(margin-top);
+			@include spacing-700(margin-bottom);
+
+			height: auto;
+		}
+
+		@include bp-s {
+			margin: 3rem 0;
+			height: 43rem;
+		}
+
+		@include bp-m {
+			height: 43rem;
+		}
+
+		@include bp-l {
+			height: 45rem;
+		}
+
+		&__text {
+			top: 30%;
+			font-family: $font-serif;
+			font-size: 15rem;
+			margin: 0;
+			position: absolute;
+			line-height: 70%;
+			left: -3rem;
+
+			@include bp-xs {
+				font-size: 16rem;
+				width: 130%;
+				word-break: break-all;
+				position: relative;
+				top: auto;
+				left: auto;
+				right: auto;
+				height: auto;
+				transform: translate(-10%, 0);
+			}
+
+			@include bp-s {
+				font-size: 20rem;
+			}
+
+			@include bp-m {
+				font-size: 30rem;
+			}
+
+			@include bp-l {
+				font-size: 36rem;
+			}
+
+			@include bp-xl {
+				font-size: 50rem;
+			}
+
+			&--ogg {
+				font-family: $font-serif-italic;
+			}
+		}
+	}
+}
+
+.grid .grid {
+	margin: 0;
+}
+
+.buzzword {
+	&__headline {
+		@include headline-200();
+
+		margin-top: 0;
+	}
+
+	&__list {
+		@include paragraph-200();
+		@include spacing-400(margin-bottom);
+
+		display: flex;
+		flex-wrap: wrap;
+
+		li {
+			display: inline-block;
+			padding-bottom: 8px;
+			line-height: 26px;
+
+			&::after {
+				content: "·";
+				padding: 0 8px;
+			}
+		}
+	}
+
+	&__link {
+		border-bottom: 2px solid $color-secondary--yellow;
+		text-transform: uppercase;
+	}
+}

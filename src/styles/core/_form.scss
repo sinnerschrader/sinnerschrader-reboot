@@ -1,0 +1,166 @@
+.form {
+	@include paragraph-100();
+	@include spacing-800(margin-bottom);
+
+	position: relative;
+
+	&__radio-group,
+	&__group {
+		@include spacing-600(margin-bottom);
+	}
+
+	&__field {
+		font: inherit;
+		display: block;
+		width: 100%;
+		box-shadow: none;
+		border: 0;
+		border-bottom: 1px solid $color-primary--black;
+		background-color: inherit;
+
+		.is-dark & {
+			color: $color-primary--white;
+			border-bottom: 1px solid $color-primary--white;
+		}
+	}
+
+	&__label {
+		@include headline-300();
+		@include spacing-200(margin-bottom);
+
+		display: block;
+		width: 100%;
+		cursor: pointer;
+	}
+
+	&__group {
+		display: block;
+	}
+
+	&__checkbox {
+		display: flex;
+		flex-wrap: wrap;
+
+		&-label {
+			display: inline-block;
+			padding-left: 3.4rem;
+			position: relative;
+
+			&::before {
+				content: "";
+				position: absolute;
+				top: 2px;
+				left: 0;
+				display: inline-block;
+				box-sizing: border-box;
+				width: 24px;
+				height: 24px;
+				margin-right: 1rem;
+				border: 1px solid $color-primary--white;
+				background-color: inherit;
+			}
+		}
+
+		input {
+			opacity: 0;
+			width: 0;
+			height: 0;
+
+			&:checked + .form__checkbox-label::after {
+				content: "";
+				background: $color-secondary--yellow;
+				position: absolute;
+				left: 5px;
+				top: 7px;
+				width: 14px;
+				height: 14px;
+			}
+		}
+	}
+
+	&__radiobox {
+		&-label {
+			display: inline-block;
+			padding-left: 3.4rem;
+			position: relative;
+
+			&::before {
+				content: "";
+				display: inline-block;
+				box-sizing: border-box;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 2.3rem;
+				height: 2.3rem;
+				border-radius: 50%;
+				border: 1px solid $color-primary--white;
+				background-color: inherit;
+			}
+		}
+
+		input {
+			opacity: 0;
+			width: 0;
+			height: 0;
+			margin: 0;
+
+			&:checked + .form__radiobox-label::before {
+				background: radial-gradient($color-secondary--yellow 40%, $color-primary--black 41%);
+			}
+		}
+	}
+
+	&__radio-group {
+		display: flex;
+		flex-wrap: wrap;
+
+		@include bp-xs {
+			flex-direction: column;
+		}
+		@include bp-s {
+			flex-direction: column;
+		}
+
+		.form__radiobox {
+			margin-right: $spacing--300;
+
+			@include bp-xs {
+				margin-bottom: $spacing--300;
+			}
+			@include bp-s {
+				margin-bottom: $spacing--300;
+			}
+		}
+	}
+
+	&__required {
+		@include paragraph-200();
+	}
+
+	&__subline {
+		@include paragraph-100();
+
+		line-height: 234%;
+		display: inline-block;
+		color: $color-secondary--gray;
+	}
+
+	&__button {
+		@include spacing-500(margin-top);
+
+		border-radius: $spacing--200;
+		border: 0;
+		background-color: $color-primary--white;
+		text-transform: uppercase;
+		width: auto;
+		display: inline-block;
+		padding: $spacing--100 $spacing--200;
+	}
+
+	&__thankyou {
+		&--hidden {
+			display: none;
+		}
+	}
+}

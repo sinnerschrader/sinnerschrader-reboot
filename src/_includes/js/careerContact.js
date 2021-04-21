@@ -29,7 +29,7 @@ export class CareerContact {
 		const body = JSON.stringify({
 			senderName: name.value,
 			senderEmail: email.value,
-			contactWay: contact.value,
+			contact: contact.value,
 			profileLink: profile.value,
 			privacy: privacy.value,
 			contactPerson: contactPerson.value,

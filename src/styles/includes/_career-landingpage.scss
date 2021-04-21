@@ -4,10 +4,13 @@
 			row-gap: 0;
 			background: #000 url("./assets/meta-assets/background.png") no-repeat;
 			background-size: 100% auto;
-			margin-bottom: -4em;
 
 			@include bp-xs {
 				background-image: none;
+			}
+
+			@include bp-s {
+				margin-bottom: -4em;
 			}
 		}
 	}
@@ -37,10 +40,15 @@
 	}
 
 	.large-title {
-		margin: 0 0 3rem;
 		position: relative;
 		width: 100%;
-		height: 24.4rem;
+
+		@include bp-xs {
+			@include spacing-600(margin-top);
+			@include spacing-700(margin-bottom);
+
+			height: auto;
+		}
 
 		@include bp-s {
 			margin: 3rem 0;
@@ -66,6 +74,14 @@
 
 			@include bp-xs {
 				font-size: 16rem;
+				width: 130%;
+				word-break: break-all;
+				position: relative;
+				top: auto;
+				left: auto;
+				right: auto;
+				height: auto;
+				transform: translate(-10%, 0);
 			}
 
 			@include bp-s {

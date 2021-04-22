@@ -85,21 +85,30 @@
 
 	// buttonSize
 	&--large {
-		padding: $spacing--200 $spacing--500;
+		@include button-animation();
+
+		padding: $spacing--200 0;
+		width: 14rem;
 		border-radius: 2.4rem;
 	}
 
 	&--small {
-		padding: $spacing--150 $spacing--400;
+		@include button-animation();
+
+		padding: $spacing--150 0;
+		width: 14rem;
 		border-radius: 2rem;
 	}
 
 	&--apply {
+		@include button-animation();
+
 		max-width: 17rem;
 		display: block;
 		text-align: center;
 		text-transform: uppercase;
 		padding: $spacing--150 0;
+		border-radius: 2rem;
 
 		@include bp-xs {
 			width: 100%;

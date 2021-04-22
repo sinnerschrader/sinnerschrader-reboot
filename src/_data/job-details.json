@@ -88,7 +88,7 @@
 	"about": {
 		"text-teaser": {
 			"headline": "About us",
-			"text": "SinnerSchrader is one of the leading digital agencies in Europe with a focus on the design and development of digital products and services. More than 500 employees work on the digital transformation for companies such as ADAC, Airbus, Audi, Bosh,  comdirect bank, Deutsche Bahn, Deutsche Bank, Telefónica, Roche and VW. Since April 2017, SinnerSchrader is part of Accenture Interactive.",
+			"text": "We’re a colorful community of creators, developers, coders, and dreamers that craft experiences for an open and optimistic world. We’re also among one of the fastest growing agency families in the world, creating digital experiences for global brands like Volkswagen, Audi, and Telefónica – and pioneering companies like holoride, unzer, and Bosch eBike.",
 			"link": {
 				"text": "See cases",
 				"href": "#"
@@ -97,7 +97,7 @@
 	},
 	"text-teaser": {
 		"headline": "Our Culture",
-		"text": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.",
+		"text": "Above all, we are an open community living in an inclusive culture of cultures. We welcome everyone that welcomes everyone. As a people brand, we also share a set of beliefs and basic principles that describe who we are and who we want to become.",
 		"link": {
 			"text": "Learn more",
 			"href": "#"
@@ -105,6 +105,6 @@
 	},
 	"apply": {
 		"mail": "jobs@sinnerschrader.com",
-		"buttonApply": "apply now"
+		"buttonApply": "Apply now"
 	}
 }

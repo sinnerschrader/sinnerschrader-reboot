@@ -22,7 +22,6 @@ $filter-bar__height--desktop: 11.8rem;
 
 @mixin icon-button {
 	border: 0;
-	display: inline-flex;
 	justify-content: center;
 	align-items: center;
 	width: 4rem;
@@ -31,6 +30,17 @@ $filter-bar__height--desktop: 11.8rem;
 	background-color: $color-primary--900;
 	color: $color-primary--white;
 }
+
+.toggle-button {
+	display: inline-flex;
+
+	&:hover {
+		@include default-animation(transform);
+
+		transform: scale(calc(1.2 / 1.4));
+	}
+}
+
 .jobs__intro {
 	@include spacing-900(margin-top);
 	@include spacing-900(margin-bottom);
@@ -85,6 +95,10 @@ $filter-bar__height--desktop: 11.8rem;
 
 		@include bp-xs {
 			position: initial;
+
+			&__toggle {
+				display: none;
+			}
 		}
 
 		@include bp-s-and-above {
@@ -291,7 +305,6 @@ $filter-bar__height--desktop: 11.8rem;
 				height: 16px;
 				left: 50%;
 				top: 50%;
-				filter: invert(1);
 				transform: translate(-50%, -50%);
 			}
 		}
@@ -447,6 +460,23 @@ $filter-bar__height--desktop: 11.8rem;
 		.job-filter-bar__mobile-header {
 			padding: 0;
 		}
+	}
+}
+
+.toggle-button--jobs {
+	transition: transform 0.25s ease-out;
+
+	.is-open & {
+		transform: rotate(180deg);
+		transition: transform 0.25s ease-out;
+	}
+
+	&:hover {
+		cursor: pointer;
+	}
+
+	@include bp-xs {
+		display: none;
 	}
 }
 

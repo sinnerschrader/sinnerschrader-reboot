@@ -69,7 +69,11 @@ renderData: filterbar
 
                     <!-- Open / Close Filterbar MOBILE ONLY -->
                     <div class="job-filter-bar__toggle">
-                        <button class="toggle-button js-toggle-filter-bar--mobile">x</button>
+                        <button class="toggle-button js-toggle-filter-bar--mobile">
+                            <svg class="button__icon">
+		                        <use href="/assets/svg/icons.svg#chevron-down-s"/>
+	                        </svg>
+                        </button>
                     </div>
                 </header>
 
@@ -80,7 +84,11 @@ renderData: filterbar
 
                 <!-- Open / Close Filterbar -->
                 <div class="job-filter-bar__toggle col-1 col-start-12 hidden-xs">
-                    <button id="js-toggle-filter-bar" class="toggle-button">+</button>
+                    <button id="js-toggle-filter-bar" class="toggle-button toggle-button--jobs">
+                            <svg class="button__icon">
+		                        <use href="/assets/svg/icons.svg#chevron-down-s"/>
+	                        </svg>
+                    </button>
                 </div>
 
                 <!-- Clear filters / Apply Filters -->

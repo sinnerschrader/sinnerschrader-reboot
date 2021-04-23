@@ -110,7 +110,7 @@
 }
 
 .swiper-wrapper--emoji {
-	justify-content: space-evenly;
+	justify-content: space-between;
 
 	@include bp-xs() {
 		justify-content: unset;

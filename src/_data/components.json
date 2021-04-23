@@ -9,10 +9,10 @@
 	},
 	"image-text-teaser": {
 		"image": {
-			"mobileSrc": "./assets/images/mobile/imgTextTeaser_test.webp",
-			"tabletSrc": "./assets/images/mobile/imgTextTeaser_test.webp",
-			"desktopSrc": "./assets/images/mobile/imgTextTeaser_test.webp",
-			"fallbackSrc": "./assets/images/fallback/imgTextTeaser_test.jpg",
+			"mobileSrc": "./assets/images/mobile/job-list-teaser-mobile.webp",
+			"tabletSrc": "./assets/images/tablet/job-list-teaser.webp",
+			"desktopSrc": "./assets/images/desktop/job-list-teaser.webp",
+			"fallbackSrc": "./assets/images/fallback/job-list-teaser.png",
 			"altText": "alt text"
 		},
 		"headline": "Headline",

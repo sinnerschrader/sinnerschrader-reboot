@@ -11,6 +11,12 @@
 	}
 }
 
+@mixin bp-s-and-above {
+	@media screen and (min-width: 600px) {
+		@content;
+	}
+}
+
 @mixin bp-m {
 	@media screen and (min-width: 900px) and (max-width: 1199px) {
 		@content;
@@ -206,6 +212,7 @@
 // Headline smaller sans serif
 @mixin headline-200 {
 	font-family: $font-sans-serif-regular;
+	font-weight: 400;
 
 	@include bp-xs {
 		font-size: 3.2rem;
@@ -279,7 +286,7 @@
 
 @mixin headline-400 {
 	font-family: $font-sans-serif-regular;
-
+	font-weight: 400;
 	@include bp-xs {
 		font-size: 1.8rem;
 		line-height: 2rem;

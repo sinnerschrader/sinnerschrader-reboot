@@ -62,10 +62,33 @@ class BackgroundScrollAnimation {
 	isInViewport(el) {
 		if (!el) return;
 
-		const { top, bottom } = el.getBoundingClientRect();
-		const vHeight = document.body.clientHeight;
+		let elHeight = el.offsetHeight;
+		let elWidth = el.offsetWidth;
+		let bounding = el.getBoundingClientRect();
+		let windowHeight;
+		let windowWidth;
 
-		return (top > 0 || bottom > 0) && top + this.animationOffsetTop < vHeight && bottom > this.animationOffsetBottom;
+		if (this.detectiOS()) {
+			windowHeight = document.documentElement.clientHeight;
+			windowWidth = document.documentElement.clientWidth;
+		} else {
+			windowHeight = window.innerHeight || document.documentElement.clientHeight;
+			windowWidth = window.innerWidth || document.documentElement.clientWidth;
+		}
+
+		return (
+			bounding.top >= -elHeight &&
+			bounding.left >= -elWidth &&
+			bounding.right <= windowWidth + elWidth &&
+			bounding.bottom <= windowHeight + elHeight
+		);
+	}
+
+	detectiOS() {
+		return (
+			["iPad Simulator", "iPhone Simulator", "iPod Simulator", "iPad", "iPhone", "iPod"].includes(navigator.platform) ||
+			(navigator.userAgent.includes("Mac") && "ontouchend" in document)
+		);
 	}
 }
 

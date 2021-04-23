@@ -63,9 +63,23 @@ class BackgroundScrollAnimation {
 		if (!el) return;
 
 		const { top, bottom } = el.getBoundingClientRect();
-		const vHeight = document.body.clientHeight;
+		let vHeight = null;
+
+		if (this.detectiOS()) {
+			vHeight = document.body.clientHeight;
+		} else {
+			vHeight = window.innerHeight;
+		}
 
 		return (top > 0 || bottom > 0) && top + this.animationOffsetTop < vHeight && bottom > this.animationOffsetBottom;
+	}
+
+	detectiOS() {
+		return (
+			["iPad Simulator", "iPhone Simulator", "iPod Simulator", "iPad", "iPhone", "iPod"].includes(navigator.platform) ||
+			// iPad on iOS 13 detection
+			(navigator.userAgent.includes("Mac") && "ontouchend" in document)
+		);
 	}
 }
 

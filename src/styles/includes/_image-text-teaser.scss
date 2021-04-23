@@ -47,15 +47,6 @@
 
 	img {
 		width: 100%;
-
-		@include bp-mobile {
-			width: auto;
-			height: 55rem;
-		}
-
-		@include bp-xs {
-			transform: translateX(-33%);
-		}
 	}
 
 	&__content {

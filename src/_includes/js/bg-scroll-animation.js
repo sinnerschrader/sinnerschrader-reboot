@@ -38,6 +38,7 @@ class BackgroundScrollAnimation {
 		let elementInViewport = [];
 
 		this.animationStartElements.forEach((el) => {
+			el.hasAttribute("data-no-offset-top") ? (this.animationOffsetTop = 0) : this.animationOffsetTop;
 			this.isInViewport(el) ? elementInViewport.push(true) : elementInViewport.push(false);
 		});
 
@@ -62,7 +63,7 @@ class BackgroundScrollAnimation {
 		if (!el) return;
 
 		const { top, bottom } = el.getBoundingClientRect();
-		const vHeight = window.innerHeight || document.documentElement.clientHeight;
+		const vHeight = document.body.clientHeight;
 
 		return (top > 0 || bottom > 0) && top + this.animationOffsetTop < vHeight && bottom > this.animationOffsetBottom;
 	}

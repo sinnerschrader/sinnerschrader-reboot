@@ -1,0 +1,20 @@
+<fieldset class="job-filter-bar__category col-12-xs col-5" data-category="{{ filter.key }}">
+    <legend class="job-filter-bar__category-legend">
+        {{ filter.legend }} <br>
+        <small id="js-active-filters--{{ filter.key }}" class="active-filters hidden-xs">All</small>
+    </legend>
+    {% for filterItem in filter.tags %}
+    <label>
+        <input class="sr-only" type="checkbox" name="{{ filter.key | downcase }}"
+            value="{{ filterItem.key | downcase}}">
+        <span class="job-filter-bar__filter-item button">
+           <svg class="filter-checkbox__icon" fill="none" height="20" viewbox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg">
+	            <circle cx="10" cy="10" fill="#181818" r="10"/>
+	            <path class="filter-checkbox__icon__animated-path" d="M10 5V15" stroke-width="1.5" stroke="white"/>
+	            <path d="M5 10L15 10" stroke-width="1.5" stroke="white"/>
+	        </svg>
+            {{ filterItem.label }}
+        </span>
+    </label>
+    {% endfor %}
+</fieldset>

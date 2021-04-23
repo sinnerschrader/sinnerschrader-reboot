@@ -346,7 +346,6 @@ $filter-bar__height--desktop: 11.8rem;
 				@include bp-xs {
 					@include spacing-600(padding-top);
 					@include spacing-400(padding-bottom);
-					background: $color-primary--white;
 
 					&:first-child {
 						padding-top: 0;

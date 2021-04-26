@@ -15,13 +15,13 @@ body {
 	overflow-x: hidden;
 	background-color: $color-primary--white;
 
-	/* stylelint-disable-next-line */
+	/* stylelint-disable-next-line selector-no-qualifying-type */
 	&.is-dark {
 		background-color: $color-primary--black;
 		color: $color-primary--white !important;
 	}
 
-	/* stylelint-disable-next-line */
+	/* stylelint-disable-next-line selector-no-qualifying-type */
 	&.is-no-scroll {
 		overflow-y: hidden;
 	}

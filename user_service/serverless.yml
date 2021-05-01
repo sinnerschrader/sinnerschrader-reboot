@@ -22,7 +22,7 @@ provider:
 
 package:
   exclude:
-    - sinnerschrader-rebbot/**
+    - sinnerschrader-reboot/**
   include:
     - user_service/email.js
 

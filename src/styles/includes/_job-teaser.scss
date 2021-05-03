@@ -1,6 +1,5 @@
 .job-teaser {
 	&__wrapper {
-		@include dotted-grid();
 		@include spacing-800(padding-top);
 		@include spacing-700(padding-bottom);
 
@@ -56,5 +55,11 @@
 				transform: scale(0.9);
 			}
 		}
+	}
+}
+
+.no-webgl {
+	.job-teaser__wrapper {
+		@include dotted-grid();
 	}
 }

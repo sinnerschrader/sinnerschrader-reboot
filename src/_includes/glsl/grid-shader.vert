@@ -7,6 +7,10 @@ varying float vNoise;
 uniform float time;
 uniform float cellSize;
 uniform vec2 resolution;
+uniform mat4 projectionMatrix;
+uniform mat4 viewMatrix;
+uniform vec2 pointer;
+uniform vec4 gridBoundingRect;
 
 // Classic Perlin 3D Noise 
 // by Stefan Gustavson
@@ -89,19 +93,44 @@ float cnoise(in vec3 P) {
   return 2.2 * n_xyz;
 }
 
-// Pixellate by Lea <3
-vec2 pixellate(in vec2 p, in vec2 r) {
-  return floor(p * 100. / r) * (r / 100.);
+mat4 matScale(vec4 s) {
+  return mat4(
+    vec4(s.x, 0.0, 0.0, 0.0),
+    vec4(0.0, s.y, 0.0, 0.0),
+    vec4(0.0, 0.0, s.z, 0.0),
+    vec4(0.0, 0.0, 0.0, 1.0)
+  );
 }
 
+mat4 matTranslate(vec4 t) {
+  return mat4(
+    vec4(1.0, 0.0, 0.0, 0.0),
+    vec4(0.0, 1.0, 0.0, 0.0),
+    vec4(0.0, 0.0, 1.0, 0.0),
+    vec4(t.x, t.y, t.z, 1.0)
+  );
+}
 
-void main() { 
-  gl_Position = position;
-  vPosition = position;
-  vUv = uv;
-  float zoomLevel = 50.;
+void main() {
+  // pointer distance
+  float minView = min(resolution.x, resolution.y);
+  vec2 p = (pointer / resolution - .5) * 2.;
   float aspect = resolution.x / resolution.y;
-  vec2 cell = vec2(cellSize * 2. * zoomLevel / resolution.x * aspect, cellSize * 2. * zoomLevel / resolution.y);
-  vec2 p1 = pixellate(position.xy, cell);
-  vNoise = cnoise(vec3(p1, time * .1));
+  float pDist = max(0., .5 - distance(p * vec2(aspect, 1.), position.xy * vec2(aspect, 1.)));
+
+  // we have to do some calculation from web coordinates to webgl coordinates (which has 0,0 in the center)
+  vec4 gridPosition = vec4(gridBoundingRect.x - resolution.x *.5, resolution.y * .5 - gridBoundingRect.y, 0., 1.);
+
+  vec2 gridSize = gridBoundingRect.zw; 
+
+  mat4 scaleMatrix = matScale(vec4(gridSize * .5, 1., 1.));
+  mat4 translateMatrix = matTranslate(gridPosition);
+  vec4 newPosition = vec4(position.xy, .0 , 1.);
+  newPosition.z = 4. * pDist;
+  
+  gl_Position = projectionMatrix * viewMatrix * translateMatrix * scaleMatrix * newPosition;
+  vPosition = newPosition;
+  vUv = uv;
+  
+  vNoise = cnoise(vec3(position.xy, time * .25));
 }

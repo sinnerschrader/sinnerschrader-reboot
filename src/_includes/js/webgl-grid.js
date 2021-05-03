@@ -1,16 +1,25 @@
-import { Renderer, Mesh, createPlaneGeometry, createShaderMaterial, Stopwatch, Color } from "colorful-pixels";
+import { Renderer, Mesh, createPlaneGeometry, createShaderMaterial, Stopwatch, Color, perspective, Camera } from "colorful-pixels";
 import { mediaQuery } from "./media-query";
 import vertexShader from "../glsl/grid-shader.vert";
 import fragmentShader from "../glsl/grid-shader.frag";
 
 export class WebGLGrid {
+	region = document.querySelector(".job-teaser__wrapper");
 	reduceMotion = mediaQuery("(prefers-reduced-motion: reduce)");
+	camera = new Camera();
+	clock = new Stopwatch();
 	pointer = { x: NaN, y: NaN };
 
 	constructor() {
-		const canvas = document.querySelector("canvas.webgl-grid");
+		this.canvas = document.querySelector("canvas.webgl-canvas");
+		const { canvas } = this;
 		if (!canvas) {
-			throw Error("WebGLGrid plugin: no canvas found.");
+			console.info("WebGLGrid plugin: no canvas found. Not invoking the magic");
+			return;
+		}
+		if (!this.region) {
+			console.info("WebGLGrid plugin: region not found. Not invoking the magic");
+			return;
 		}
 		const renderer = new Renderer(canvas);
 		if (!renderer.gl) {
@@ -18,37 +27,63 @@ export class WebGLGrid {
 			document.body.classList.add("no-webgl");
 			return;
 		}
-		const clock = new Stopwatch();
 		const plane = createPlaneGeometry(2, 2, 50, 50);
+
+		const { camera } = this;
+		camera.position.z = 20;
+		camera.update();
+
 		const material = createShaderMaterial(vertexShader, fragmentShader, {
 			time: 0,
 			dpr: this.getCurrentDPR(),
-			resolution: [800, 600],
+			resolution: [canvas.clientWidth, canvas.clientHeight],
 			bg: Color.fromHex("#ffffff"),
 			fg: Color.fromHex("#000000"),
+			projectionMatrix: this.calculatePerspective(),
+			gridBoundingRect: this.calculateGridBoundingRect(),
+			viewMatrix: camera.viewMatrix,
 			cellSize: 25,
 			edge: 0.1,
 			pointer: [-1000, -1000],
 		});
 		const mesh = new Mesh(plane, material);
 		if (!this.reduceMotion.matches) {
-			clock.start();
+			this.clock.start();
 		}
 
-		this.canvas = canvas;
-		this.clock = clock;
 		this.renderer = renderer;
 		this.mesh = mesh;
 		this.scene = [mesh];
 		this.material = material;
-		this.plane = plane;
 		this.dpr = this.getCurrentDPR();
 		this.onResize();
 		this.reduceMotion.addEventListener("change", this.onChangeReduceMotion, false);
 		window.addEventListener("resize", this.onResize, false);
-		canvas.addEventListener("pointermove", this.onPointerMove, false);
-		canvas.addEventListener("pointerleave", this.onPointerLeave, false);
+		window.addEventListener("pointermove", this.onPointerMove, false);
+		window.addEventListener("pointerleave", this.onPointerLeave, false);
+		window.addEventListener("scroll", this.onScroll, false);
 		this.frame = requestAnimationFrame(this.renderLoop);
+	}
+
+	/**
+	 * Calculates the midpoint of the grid region and dimensions of the region
+	 * @returns a vec4 containing the midpoint and the width/height
+	 */
+	calculateGridBoundingRect() {
+		const { region } = this;
+		const rect = region.getBoundingClientRect();
+		return [rect.x + rect.width / 2, rect.y + rect.height / 2, rect.width, rect.height];
+	}
+
+	/**
+	 * Calclulate perspective projection matrix
+	 * @returns a 4x4 matrix containing the perspective matrix
+	 */
+	calculatePerspective() {
+		const { canvas, camera } = this;
+		const fieldOfView = 2 * Math.atan(canvas.clientHeight / 2 / camera.position.z) * (180 / Math.PI);
+		const aspectRatio = canvas.clientWidth / canvas.clientHeight;
+		return perspective(fieldOfView, aspectRatio, 0.01, 100);
 	}
 
 	/**
@@ -79,11 +114,13 @@ export class WebGLGrid {
 	 * onResize event
 	 */
 	onResize = () => {
-		const { canvas, material } = this;
+		const { canvas, material, camera } = this;
 		this.dpr = this.getCurrentDPR();
 		this.renderer.setSize(canvas.clientWidth, canvas.clientHeight);
 		material.uniforms.resolution = [canvas.clientWidth, canvas.clientHeight];
 		material.uniforms.dpr = this.dpr;
+		material.uniforms.projectionMatrix = this.calculatePerspective();
+		material.uniforms.gridBoundingRect = this.calculateGridBoundingRect();
 	};
 
 	/**
@@ -124,5 +161,13 @@ export class WebGLGrid {
 		pointer.x = NaN;
 		pointer.y = NaN;
 		material.uniforms.pointer = [-1000, -1000];
+	};
+
+	/**
+	 * onScroll event
+	 */
+	onScroll = () => {
+		const { material } = this;
+		material.uniforms.gridBoundingRect = this.calculateGridBoundingRect();
 	};
 }

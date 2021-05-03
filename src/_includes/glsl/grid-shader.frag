@@ -54,23 +54,23 @@ float sdPillHorizontal(vec2 p, float l, float r) {
 }
 
 void main() {
-  vec2 p0 = gl_FragCoord.xy;
-  vec2 p1 = mod(p0, vec2(cellSize));
+  vec2 p0 = (vPosition.xy + 1.) * resolution / 2.;
+  vec2 p1 = mod(p0, cellSize);
   
   // pointer distance
   float minView = min(resolution.x, resolution.y);
   float pDist = 3. / minView * max(0., minView * .5 - distance(pointer, p0));
 
   // Calculating the border (don't draw squares that are cut off)
-  vec2 borderTL = step(0., p0);
+  vec2 borderTL = smoothstep(0.,1., p0);
   vec2 marginRight = mod(resolution, vec2(cellSize)) - 1.;
-  marginRight += (1. - step(0., marginRight)) * (cellSize - 1.);
-  vec2 borderBR = 1. - step(0., p0 - resolution + marginRight);
+  marginRight += (1. - smoothstep(0.,1., marginRight)) * (cellSize - 1.);
+  vec2 borderBR = 1. - smoothstep(0.,1., p0 - resolution + marginRight);
   float border = borderTL.x * borderTL.y * borderBR.x * borderBR.y;
   
   // choose a decent grid color and draw the grid
-  vec4 gridColor = mix(bg, fg, max(.1, .25 + .25 * vNoise - pDist));
-  vec2 grid = 1. - step(0., abs(p1) - 1.);
+  vec4 gridColor = mix(bg, fg, max(.1, .25 ));
+  vec2 grid = 1. - smoothstep(0., 2., abs(p1) - 1.);
   vec4 color = mix(bg, gridColor, min(1., grid.x + grid.y) * border);
   
   // choose a decent circle color, calculate the radius, draw the circle
@@ -93,20 +93,20 @@ void main() {
   color = mix(color, ringColor, (1. - smoothstep(0., 1., sdf)) * border * smoothstep(.85, .99, n));
 
   // another layer with a few hardcoded pills
-  float l = bigCellSize / 2. + sin(time * .1) * cellSize;
+  float l = bigCellSize / 2.;
   float r = bigCellSize / 2.;
   sdf = sdPillHorizontal(p0 - vec2(bigCellSize), l, r);
-  sdf = sub(sdf, sdPillHorizontal(p0 - vec2(bigCellSize), l, r - 4.));
+  sdf = sub(sdf, sdPillHorizontal(p0 - vec2(bigCellSize), l, r - 3.));
   vec4 pillColor = vec4(.2, .8, .3,1.);
   color = mix(color, pillColor, (1. - smoothstep(0., 1., sdf)) * border);
 
   
   sdf = sdPillVertical(p0 - (resolution - bigCellSize - marginRight - vec2(0, cellSize * 2.)), l, r);
-  sdf = sub(sdf, sdPillVertical(p0 - (resolution - bigCellSize - marginRight - vec2(0, cellSize * 2.)), l, r - 4.));
+  sdf = sub(sdf, sdPillVertical(p0 - (resolution - bigCellSize - marginRight - vec2(0, cellSize * 2.)), l, r - 3.));
   pillColor = vec4(.8, .2, .4,1.);
   color = mix(color, pillColor, (1. - smoothstep(0., 1., sdf)) * border);
 
+  // gl_FragColor = vec4(1.,0,0,1.);
 
-
-  gl_FragColor = color;
+  gl_FragColor = color; // mix(vec4(1.,0,0,1.), color, .5);
 }

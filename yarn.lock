@@ -4272,10 +4272,10 @@ postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.14, postcss@^7.0.17, postcss@^7.0.2
     source-map "^0.6.1"
     supports-color "^6.1.0"
 
-postcss@^8.2.10:
-  version "8.2.12"
-  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.2.12.tgz#81248a1a87e0f575cc594a99a08207fd1c4addc4"
-  integrity sha512-BJnGT5+0q2tzvs6oQfnY2NpEJ7rIXNfBnZtQOKCIsweeWXBXeDd5k31UgTdS3d/c02ouspufn37mTaHWkJyzMQ==
+postcss@^8.2.12:
+  version "8.2.13"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.2.13.tgz#dbe043e26e3c068e45113b1ed6375d2d37e2129f"
+  integrity sha512-FCE5xLH+hjbzRdpbRb1IMCvPv9yZx2QnDarBEYSN0N0HYk+TcXsEhwdFcFb+SRWOKzKGErhIEbBK2ogyLdTtfQ==
   dependencies:
     colorette "^1.2.2"
     nanoid "^3.1.22"
@@ -5458,10 +5458,10 @@ svgo@^1.0.0:
     unquote "~1.1.1"
     util.promisify "~1.0.0"
 
-swiper@^6.5.7:
-  version "6.5.8"
-  resolved "https://registry.yarnpkg.com/swiper/-/swiper-6.5.8.tgz#8a4f38145f99faa5d11b8d0306fc82e12801bcd5"
-  integrity sha512-SW8bNkJf8jCB4VdZsA1EZ3c87xshHS4f83YZVqT9ppkDKgspOfk9/I6dTtKGJFlsZpuE1S5X0LUAa7+QEaC0fQ==
+swiper@^6.5.9:
+  version "6.5.9"
+  resolved "https://registry.yarnpkg.com/swiper/-/swiper-6.5.9.tgz#ed6caa8bd9fd44d314944210551ce297d4fb09c7"
+  integrity sha512-zO3UCLVEiOXZontAQWBNpWFZGV3WaXwHSgvng0qIGLVMyxYGD6w78S7YkGAu/XBam1SBQNZzxqfFc/LDjNdq/A==
   dependencies:
     dom7 "^3.0.0"
     ssr-window "^3.0.0"

@@ -93,7 +93,7 @@ float cnoise(in vec3 P) {
   return 2.2 * n_xyz;
 }
 
-mat4 matScale(vec4 s) {
+mat4 matScale(vec3 s) {
   return mat4(
     vec4(s.x, 0.0, 0.0, 0.0),
     vec4(0.0, s.y, 0.0, 0.0),
@@ -102,7 +102,7 @@ mat4 matScale(vec4 s) {
   );
 }
 
-mat4 matTranslate(vec4 t) {
+mat4 matTranslate(vec3 t) {
   return mat4(
     vec4(1.0, 0.0, 0.0, 0.0),
     vec4(0.0, 1.0, 0.0, 0.0),
@@ -119,11 +119,10 @@ void main() {
   float pDist = max(0., .5 - distance(p * vec2(aspect, 1.), position.xy * vec2(aspect, 1.)));
 
   // we have to do some calculation from web coordinates to webgl coordinates (which has 0,0 in the center)
-  vec4 gridPosition = vec4(gridBoundingRect.x - resolution.x *.5, resolution.y * .5 - gridBoundingRect.y, 0., 1.);
+  vec3 gridPosition = vec3(gridBoundingRect.x - resolution.x *.5, resolution.y * .5 - gridBoundingRect.y, 0.);
+  vec3 gridSize = vec3(gridBoundingRect.zw * .5, 1);
 
-  vec2 gridSize = gridBoundingRect.zw; 
-
-  mat4 scaleMatrix = matScale(vec4(gridSize * .5, 1., 1.));
+  mat4 scaleMatrix = matScale(gridSize);
   mat4 translateMatrix = matTranslate(gridPosition);
   vec4 newPosition = vec4(position.xy, .0 , 1.);
   newPosition.z = 4. * pDist;

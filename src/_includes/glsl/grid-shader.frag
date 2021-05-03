@@ -10,6 +10,7 @@ uniform float edge;
 uniform vec2 pointer;
 uniform vec4 bg;
 uniform vec4 fg;
+uniform vec4 gridBoundingRect;
 uniform float dpr;
 
 #define PI 3.141592654
@@ -54,23 +55,24 @@ float sdPillHorizontal(vec2 p, float l, float r) {
 }
 
 void main() {
-  vec2 p0 = (vPosition.xy + 1.) * resolution / 2.;
+  vec2 size = gridBoundingRect.zw;
+  vec2 p0 = (vPosition.xy + 1.) * size / 2.;
   vec2 p1 = mod(p0, cellSize);
   
   // pointer distance
-  float minView = min(resolution.x, resolution.y);
+  float minView = min(size.x, size.y);
   float pDist = 3. / minView * max(0., minView * .5 - distance(pointer, p0));
 
   // Calculating the border (don't draw squares that are cut off)
   vec2 borderTL = smoothstep(0.,1., p0);
-  vec2 marginRight = mod(resolution, vec2(cellSize)) - 1.;
+  vec2 marginRight = mod(size, vec2(cellSize)) - 1.;
   marginRight += (1. - smoothstep(0.,1., marginRight)) * (cellSize - 1.);
-  vec2 borderBR = 1. - smoothstep(0.,1., p0 - resolution + marginRight);
+  vec2 borderBR = 1. - smoothstep(0.,1., p0 - size + marginRight);
   float border = borderTL.x * borderTL.y * borderBR.x * borderBR.y;
   
   // choose a decent grid color and draw the grid
   vec4 gridColor = mix(bg, fg, max(.1, .25 ));
-  vec2 grid = 1. - smoothstep(0., 2., abs(p1) - 1.);
+  vec2 grid = 1. - smoothstep(0.,1., abs(p1) - 1.);
   vec4 color = mix(bg, gridColor, min(1., grid.x + grid.y) * border);
   
   // choose a decent circle color, calculate the radius, draw the circle
@@ -101,8 +103,8 @@ void main() {
   color = mix(color, pillColor, (1. - smoothstep(0., 1., sdf)) * border);
 
   
-  sdf = sdPillVertical(p0 - (resolution - bigCellSize - marginRight - vec2(0, cellSize * 2.)), l, r);
-  sdf = sub(sdf, sdPillVertical(p0 - (resolution - bigCellSize - marginRight - vec2(0, cellSize * 2.)), l, r - 3.));
+  sdf = sdPillVertical(p0 - (size - bigCellSize - marginRight - vec2(0, cellSize * 2.)), l, r);
+  sdf = sub(sdf, sdPillVertical(p0 - (size - bigCellSize - marginRight - vec2(0, cellSize * 2.)), l, r - 3.));
   pillColor = vec4(.8, .2, .4,1.);
   color = mix(color, pillColor, (1. - smoothstep(0., 1., sdf)) * border);
 

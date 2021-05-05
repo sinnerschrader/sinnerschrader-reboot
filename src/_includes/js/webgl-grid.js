@@ -1,4 +1,4 @@
-import { Renderer, Mesh, createPlaneGeometry, createShaderMaterial, Stopwatch, Color, perspective, Camera } from "colorful-pixels";
+import { Renderer, Mesh, createPlaneGeometry, createShaderMaterial, Stopwatch, Color, perspective, Camera, Texture } from "colorful-pixels";
 import { mediaQuery } from "./media-query";
 import vertexShader from "../glsl/grid-shader.vert";
 import fragmentShader from "../glsl/grid-shader.frag";
@@ -27,7 +27,7 @@ export class WebGLGrid {
 			document.body.classList.add("no-webgl");
 			return;
 		}
-		const plane = createPlaneGeometry(2, 2, 50, 50);
+		const plane = createPlaneGeometry(1, 1, 50, 50);
 
 		const { camera } = this;
 		camera.position.z = 20;
@@ -50,6 +50,12 @@ export class WebGLGrid {
 		if (!this.reduceMotion.matches) {
 			this.clock.start();
 		}
+
+		Texture.fromImageUrl("https://placekitten.com/512/512").then((texture) => {
+			console.log(texture);
+			texture.upload(this.renderer.gl, 0);
+			material.uniforms.cat = texture;
+		});
 
 		this.renderer = renderer;
 		this.mesh = mesh;
@@ -114,7 +120,7 @@ export class WebGLGrid {
 	 * onResize event
 	 */
 	onResize = () => {
-		const { canvas, material, camera } = this;
+		const { canvas, material } = this;
 		this.dpr = this.getCurrentDPR();
 		this.renderer.setSize(canvas.clientWidth, canvas.clientHeight);
 		material.uniforms.resolution = [canvas.clientWidth, canvas.clientHeight];

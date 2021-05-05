@@ -56,7 +56,7 @@ float sdPillHorizontal(vec2 p, float l, float r) {
 
 void main() {
   vec2 size = gridBoundingRect.zw;
-  vec2 p0 = (vPosition.xy + 1.) * size / 2.;
+  vec2 p0 = vUv * size;
   vec2 p1 = mod(p0, cellSize);
   
   // pointer distance
@@ -64,22 +64,28 @@ void main() {
   float pDist = 3. / minView * max(0., minView * .5 - distance(pointer, p0));
 
   // Calculating the border (don't draw squares that are cut off)
-  vec2 borderTL = smoothstep(0.,1., p0);
-  vec2 marginRight = mod(size, vec2(cellSize)) - 1.;
-  marginRight += (1. - smoothstep(0.,1., marginRight)) * (cellSize - 1.);
-  vec2 borderBR = 1. - smoothstep(0.,1., p0 - size + marginRight);
+  vec2 borderTL = vec2(step(1., p0.x), step(0., p0.y));
+  vec2 marginBR = mod(size, vec2(cellSize)) - 1.;
+  marginBR += (1. - step(0., marginBR)) * (cellSize - 1.);
+  vec2 borderBR = 1. - step(0., p0 - size + marginBR);
   float border = borderTL.x * borderTL.y * borderBR.x * borderBR.y;
   
   // choose a decent grid color and draw the grid
-  vec4 gridColor = mix(bg, fg, max(.1, .25 ));
-  vec2 grid = 1. - smoothstep(0.,1., abs(p1) - 1.);
+  float noise = smoothstep(edge - .1, edge, vNoise);
+  vec4 transparentFg = mix(bg, fg,.25);
+  vec4 gridColor = mix(transparentFg, bg, noise);
+  vec2 grid = 1. - step(0., abs(p1) - 2.);   
   vec4 color = mix(bg, gridColor, min(1., grid.x + grid.y) * border);
   
   // choose a decent circle color, calculate the radius, draw the circle
-  float circleRadius = max(.01, pDist + 2. * smoothstep(edge - .1, edge, vNoise));
+  float circleRadius = noise;
   float intensity = max(.1, 1. - circleRadius * .25);
-  float sdf = sdCircle(p1 - cellSize * .5, circleRadius);  
-  color = mix(color, mix(bg, fg, intensity), (1. - smoothstep(0., 1., sdf)) * border);
+  float sdf = 999.;
+  if (circleRadius > 0.) {
+    sdf = sdCircle(p1 - cellSize * .5, circleRadius);  
+    color = mix(color, mix(bg, fg, intensity), (1. - smoothstep(0., 1., sdf)) * border);
+  }
+  
   
   // second layer with bigger and fewer circles
   float bigCellSize = cellSize * 3.;
@@ -103,12 +109,10 @@ void main() {
   color = mix(color, pillColor, (1. - smoothstep(0., 1., sdf)) * border);
 
   
-  sdf = sdPillVertical(p0 - (size - bigCellSize - marginRight - vec2(0, cellSize * 2.)), l, r);
-  sdf = sub(sdf, sdPillVertical(p0 - (size - bigCellSize - marginRight - vec2(0, cellSize * 2.)), l, r - 3.));
+  sdf = sdPillVertical(p0 - (size - bigCellSize - marginBR - vec2(0, cellSize * 2.)), l, r);
+  sdf = sub(sdf, sdPillVertical(p0 - (size - bigCellSize - marginBR - vec2(0, cellSize * 2.)), l, r - 3.));
   pillColor = vec4(.8, .2, .4,1.);
   color = mix(color, pillColor, (1. - smoothstep(0., 1., sdf)) * border);
 
-  // gl_FragColor = vec4(1.,0,0,1.);
-
-  gl_FragColor = color; // mix(vec4(1.,0,0,1.), color, .5);
+  gl_FragColor = color; 
 }

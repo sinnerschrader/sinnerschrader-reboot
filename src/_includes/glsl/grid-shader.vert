@@ -112,15 +112,14 @@ mat4 matTranslate(vec3 t) {
 }
 
 void main() {
-  // pointer distance
-  float minView = min(resolution.x, resolution.y);
-  vec2 p = (pointer / resolution - .5) * 2.;
-  float aspect = resolution.x / resolution.y;
-  float pDist = max(0., .5 - distance(p * vec2(aspect, 1.), position.xy * vec2(aspect, 1.)));
-
   // we have to do some calculation from web coordinates to webgl coordinates (which has 0,0 in the center)
   vec3 gridPosition = vec3(gridBoundingRect.x - resolution.x *.5, resolution.y * .5 - gridBoundingRect.y, 0.);
-  vec3 gridSize = vec3(gridBoundingRect.zw * .5, 1);
+  vec3 gridSize = vec3(gridBoundingRect.zw, 1);
+
+  // pointer distance
+  vec2 p = (pointer / resolution - .5) * 2.;
+  float gridAspect = gridSize.x / gridSize.y;
+  float pDist = max(0., .5 - distance(p * vec2(gridAspect, 1.), position.xy * vec2(gridAspect, 1.)));
 
   mat4 scaleMatrix = matScale(gridSize);
   mat4 translateMatrix = matTranslate(gridPosition);
@@ -131,5 +130,5 @@ void main() {
   vPosition = newPosition;
   vUv = uv;
   
-  vNoise = cnoise(vec3(position.xy, time * .25));
+  vNoise = cnoise(vec3(position.xy * 3., time * .1));
 }

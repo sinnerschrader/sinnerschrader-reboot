@@ -39,9 +39,11 @@ vec2 pixellate(vec2 p, float r) {
 // just a bunch of sin & cos to generate an interesting pattern
 float cheapNoise(vec3 stp) {
   vec3 p = vec3(stp.st * .0005, stp.p);
-  return .7 * sin(p.z + p.x * 20. + cos(p.y * 20. - p.z)) * 
-    cos(p.y * 10. + p.z + cos(p.y * 20. + p.z)) + 
-    .3 * sin(2. + p.x * 16. + p.z) * cos(2. + p.y*17. + p.z + cos(p.x * 20. + p.z));
+  return mix(
+    sin(p.z + p.x * 20. + cos(p.y * 20. - p.z)) * cos(p.y * 10. + p.z + cos(p.y * 20. + p.z)),
+    sin(2. + p.x * 16. + p.z) * cos(2. + p.y*17. + p.z + cos(p.x * 20. + p.z)), 
+    .46
+  );
 }
 
 // by Inigo Quilez https://youtu.be/PMltMdi1Wzg
@@ -95,31 +97,21 @@ void main() {
   
   
   // second layer with bigger and fewer circles
-  float bigCellSize = cellSize * 3.;
+  float bigCellSize = cellSize * 2.;
   vec2 p2 = mod(p0, vec2(bigCellSize));
   vec2 p3 = floor(p0 / bigCellSize) * bigCellSize;
-  float n = .5 + .5 * cheapNoise(vec3(p3 * 1000. , time * .125));
-  circleRadius = bigCellSize * n * .5;
-  float circleStrokeWidth = 2.5;
-  sdf = sdCircle(p2 - bigCellSize * .5, circleRadius);
+  float n = .5 + .5 * cheapNoise(vec3(p3 * 1000. , .12));
+  float circleStrokeWidth = 2.;
+  circleRadius = bigCellSize * .5 - circleStrokeWidth;
+  vec2 pCircleCenter = p2 - bigCellSize * .5;
+  float angle = atan(pCircleCenter.y, pCircleCenter.x);
+  float a = step(mod(time * (.3 + n * .7) + angle, 2. * PI), PI + step(.85, n) * PI * .5) * PI;
+  
+  sdf = sdCircle(pCircleCenter, circleRadius);
   sdf = sub(sdf, sdCircle(p2 - bigCellSize * .5, circleRadius - circleStrokeWidth));
-  vec4 ringColor = vec4(.5 + sin(p3.x), .5 + .5 * sin(p3.y + 1.), .5 + .5 * sin(p3.x + 2.), 1.);
   
-  color = mix(color, ringColor, (1. - smoothstep(0., 1., sdf)) * border * smoothstep(.85, .99, n));
-
-  // another layer with a few hardcoded pills
-  float l = bigCellSize / 2.;
-  float r = bigCellSize / 2.;
-  sdf = sdPillHorizontal(p0 - vec2(bigCellSize), l, r);
-  sdf = sub(sdf, sdPillHorizontal(p0 - vec2(bigCellSize), l, r - 3.));
-  vec4 pillColor = vec4(.2, .8, .3,1.);
-  color = mix(color, pillColor, (1. - smoothstep(0., 1., sdf)) * border);
-
-  
-  sdf = sdPillVertical(p0 - (size - bigCellSize - marginBR - vec2(0, cellSize * 2.)), l, r);
-  sdf = sub(sdf, sdPillVertical(p0 - (size - bigCellSize - marginBR - vec2(0, cellSize * 2.)), l, r - 3.));
-  pillColor = vec4(.8, .2, .4,1.);
-  color = mix(color, pillColor, (1. - smoothstep(0., 1., sdf)) * border);
+  vec4 ringColor = vec4(.5 + cos(p3.x + p3.y + a), .5 + .5 * sin(p3.y * p3.x + 1. + a), .5, 1.);
+  color = mix(color, ringColor, (1. - smoothstep(0., 1., sdf)) * border * step(.65, n) * (1. - noise));
 
   gl_FragColor = color; 
 }

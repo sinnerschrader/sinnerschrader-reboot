@@ -179,6 +179,5 @@ export class WebGLGrid {
 	onScroll = () => {
 		const { material } = this;
 		material.uniforms.gridBoundingRect = this.calculateGridBoundingRect();
-		material.uniforms.contentRegion = this.calculateContentRegion();
 	};
 }

@@ -11,6 +11,7 @@ uniform vec2 pointer;
 uniform vec4 bg;
 uniform vec4 fg;
 uniform vec4 gridBoundingRect;
+uniform vec4 contentRegion;
 uniform float dpr;
 
 #define PI 3.141592654
@@ -64,17 +65,23 @@ void main() {
   float pDist = 3. / minView * max(0., minView * .5 - distance(pointer, p0));
 
   // Calculating the border (don't draw squares that are cut off)
-  vec2 borderTL = vec2(step(1., p0.x), step(0., p0.y));
+  vec2 borderTL = vec2(step(0., p0.x), step(0., p0.y));
   vec2 marginBR = mod(size, vec2(cellSize)) - 1.;
   marginBR += (1. - step(0., marginBR)) * (cellSize - 1.);
   vec2 borderBR = 1. - step(0., p0 - size + marginBR);
   float border = borderTL.x * borderTL.y * borderBR.x * borderBR.y;
   
+  // Calculate the content region
+  float fadeWidth = 50.;
+  vec2 isInContentRegion = (1. - smoothstep(p0, p0 + fadeWidth, contentRegion.xy));
+  isInContentRegion *= (smoothstep(p0 - fadeWidth, p0, contentRegion.xy + contentRegion.zw));
+  border *= min(1., (1. - isInContentRegion.x) + (1. - isInContentRegion.y));
+
   // choose a decent grid color and draw the grid
   float noise = smoothstep(edge - .1, edge, vNoise);
   vec4 transparentFg = mix(bg, fg,.25);
   vec4 gridColor = mix(transparentFg, bg, noise);
-  vec2 grid = 1. - step(0., abs(p1) - 2.);   
+  vec2 grid = 1. - step(0., abs(p1) - 1.);   
   vec4 color = mix(bg, gridColor, min(1., grid.x + grid.y) * border);
   
   // choose a decent circle color, calculate the radius, draw the circle

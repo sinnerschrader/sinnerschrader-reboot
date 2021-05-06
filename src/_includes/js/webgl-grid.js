@@ -5,6 +5,7 @@ import fragmentShader from "../glsl/grid-shader.frag";
 
 export class WebGLGrid {
 	region = document.querySelector(".job-teaser__wrapper");
+	contentRegion = document.querySelector(".job-teaser__wrapper div");
 	reduceMotion = mediaQuery("(prefers-reduced-motion: reduce)");
 	camera = new Camera();
 	clock = new Stopwatch();
@@ -41,6 +42,7 @@ export class WebGLGrid {
 			fg: Color.fromHex("#000000"),
 			projectionMatrix: this.calculatePerspective(),
 			gridBoundingRect: this.calculateGridBoundingRect(),
+			contentRegion: this.calculateContentRegion(),
 			viewMatrix: camera.viewMatrix,
 			cellSize: 25,
 			edge: 0.1,
@@ -50,12 +52,6 @@ export class WebGLGrid {
 		if (!this.reduceMotion.matches) {
 			this.clock.start();
 		}
-
-		Texture.fromImageUrl("https://placekitten.com/512/512").then((texture) => {
-			console.log(texture);
-			texture.upload(this.renderer.gl, 0);
-			material.uniforms.cat = texture;
-		});
 
 		this.renderer = renderer;
 		this.mesh = mesh;
@@ -79,6 +75,13 @@ export class WebGLGrid {
 		const { region } = this;
 		const rect = region.getBoundingClientRect();
 		return [rect.x + rect.width / 2, rect.y + rect.height / 2, rect.width, rect.height];
+	}
+
+	calculateContentRegion() {
+		const { contentRegion, region } = this;
+		const outer = region.getBoundingClientRect();
+		const inner = contentRegion.getBoundingClientRect();
+		return [inner.x - outer.x, inner.y - outer.y, inner.width, inner.height];
 	}
 
 	/**
@@ -127,6 +130,7 @@ export class WebGLGrid {
 		material.uniforms.dpr = this.dpr;
 		material.uniforms.projectionMatrix = this.calculatePerspective();
 		material.uniforms.gridBoundingRect = this.calculateGridBoundingRect();
+		material.uniforms.contentRegion = this.calculateContentRegion();
 	};
 
 	/**
@@ -175,5 +179,6 @@ export class WebGLGrid {
 	onScroll = () => {
 		const { material } = this;
 		material.uniforms.gridBoundingRect = this.calculateGridBoundingRect();
+		material.uniforms.contentRegion = this.calculateContentRegion();
 	};
 }

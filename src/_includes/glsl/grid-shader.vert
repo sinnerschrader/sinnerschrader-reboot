@@ -119,12 +119,12 @@ void main() {
   // pointer distance
   vec2 p = (pointer / resolution - .5) * 2.;
   float gridAspect = gridSize.x / gridSize.y;
-  float pDist = max(0., .5 - distance(p * vec2(gridAspect, 1.), position.xy * vec2(gridAspect, 1.)));
+  float pDist = max(0., .25 - distance(p * vec2(gridAspect, 1.), position.xy * vec2(gridAspect, 1.)));
 
   mat4 scaleMatrix = matScale(gridSize);
   mat4 translateMatrix = matTranslate(gridPosition);
   vec4 newPosition = vec4(position.xy, .0 , 1.);
-  newPosition.z = 4. * pDist;
+  newPosition.z = 10. * pDist;
   
   gl_Position = projectionMatrix * viewMatrix * translateMatrix * scaleMatrix * newPosition;
   vPosition = newPosition;

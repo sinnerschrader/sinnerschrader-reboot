@@ -1,7 +1,7 @@
 {
 	"navigation": {
 		"ariaLabel": "Main navigation",
-		"ariaLabelMobileToggle": "Main navigation mobile toggle",
+		"ariaLabelMobileToggle": "Toggle main navigation",
 		"logo": {
 			"top": "SinnerSchrader",
 			"bottom": {

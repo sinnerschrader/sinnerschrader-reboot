@@ -15,12 +15,12 @@
 		"mail": "info@sinnerschrader.com"
 	},
 	"managmentBoardAG": {
-		"managersFirstLine": "Thomas Dyckhoff, Evalotta Kahlen Chairperson",
-		"managersSecondLine": "Supervisory Board: Frank Riemensperger"
+		"managersFirstLine": "Thomas Dyckhoff, Evalotta Kahlen",
+		"managersSecondLine": "Chairman of the Supervisory Board: Frank Riemensperger"
 	},
 	"courtOfRegistryAG": {
 		"courtFirstLine": "Amtsgericht Hamburg Registration Number – HRB 74455",
-		"courtSecondLine": "EU VAT ID: DE812894649"
+		"courtSecondLine": "DE812894649"
 	},
 	"managmentBoardDE": {
 		"managersFirstLine": "Dr. Axel Averdung (chairperson), Holger Blank, Kristina Bonitz,",
@@ -28,6 +28,6 @@
 	},
 	"courtOfRegistryDE": {
 		"courtFirstLine": "Amtsgericht Hamburg Registration Number – HRB 63663",
-		"courtSecondLine": "Sales Tax Identification Number: DE812160091"
+		"courtSecondLine": "DE812160091"
 	}
 }

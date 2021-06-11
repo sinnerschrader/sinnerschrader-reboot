@@ -104,7 +104,7 @@ $filter-bar__height--desktop: 11.8rem;
 		@include bp-s-and-above {
 			max-height: $filter-bar__height--desktop;
 			padding-top: $spacing--400--desktop;
-			z-index: 12;
+			z-index: 13;
 		}
 
 		// This is toggle without animation for now.
@@ -337,6 +337,7 @@ $filter-bar__height--desktop: 11.8rem;
 				top: 0;
 				margin: 0;
 				z-index: 0;
+				padding-right: 23rem;
 
 				@include bp-s-and-above {
 					top: $filter-bar__height--desktop + $spacing--400;
@@ -346,6 +347,13 @@ $filter-bar__height--desktop: 11.8rem;
 				@include bp-xs {
 					@include spacing-600(padding-top);
 					@include spacing-400(padding-bottom);
+
+					background: $color-primary--white;
+					z-index: 13;
+
+					.is-dark & {
+						background: transparent;
+					}
 
 					&:first-child {
 						padding-top: 0;
@@ -426,7 +434,7 @@ $filter-bar__height--desktop: 11.8rem;
 			transition: transform 0.2s linear;
 			height: 100vh;
 			overflow: scroll;
-			z-index: 13;
+			z-index: 14;
 			top: 0;
 			background: $color-primary--black;
 			position: fixed;

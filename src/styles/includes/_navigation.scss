@@ -305,6 +305,7 @@
 		top: 0;
 		bottom: 0;
 		height: 100vh;
+		height: calc(var(--vh, 1vh) * 100);
 		width: 100vw;
 		background: $color-primary--black;
 		color: $color-primary--white;

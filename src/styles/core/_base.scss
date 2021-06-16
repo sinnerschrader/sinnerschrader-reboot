@@ -1,6 +1,17 @@
 @import "variables";
 @import "mixins";
 
+:root {
+	--app-height: 100%;
+}
+
+body,
+html {
+	width: 100vw;
+	height: 100vh;
+	height: var(--app-height);
+}
+
 html {
 	font-size: 62.5%;
 	scroll-behavior: smooth;
@@ -25,7 +36,8 @@ body {
 
 	/* stylelint-disable-next-line selector-no-qualifying-type */
 	&.is-no-scroll {
-		overflow-y: hidden;
+		overflow: hidden;
+		height: 100vh;
 	}
 }
 

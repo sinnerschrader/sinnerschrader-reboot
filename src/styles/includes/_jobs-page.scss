@@ -429,12 +429,6 @@ $filter-bar__height--desktop: 11.8rem;
 		}
 	}
 
-	// When the fullscreen filter menu is open we want to prevent scrolling in the background
-	.freeze-scroll {
-		height: 100vh;
-		overflow-y: hidden;
-	}
-
 	.job-filter-wrapper {
 		@include bp-xs {
 			transform: translateX(100%);
@@ -475,6 +469,12 @@ $filter-bar__height--desktop: 11.8rem;
 			padding: 0;
 		}
 	}
+}
+
+// When the fullscreen filter menu is open we want to prevent scrolling in the background
+.freeze-scroll {
+	height: 100vh;
+	overflow: hidden;
 }
 
 .toggle-button--jobs {

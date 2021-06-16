@@ -159,32 +159,39 @@ $filter-bar__height--desktop: 11.8rem;
 				@include active-filters();
 			}
 		}
-
 		// filter chip
 		&__filter-item {
 			line-height: initial;
 			background-color: $color-primary--900;
-
+			color: $color-primary--white;
 			svg {
-				margin-left: 0;
 				filter: invert(1);
 			}
 
-			&:hover {
+			&.is-active {
+				background-color: $color-primary--white;
+				color: $color-primary--900;
 				svg {
 					filter: invert(0);
 				}
 
-				circle {
-					transition: transform 0.3s ease-in-out;
-					transform: scale(1);
+				&:hover {
+					svg {
+						filter: invert(1);
+					}
+
+					circle {
+						transition: transform 0.3s ease-in-out;
+						transform: scale(1);
+					}
 				}
-			}
 
-			.filter-checkbox__icon__animated-path {
-				@include default-animation(transform);
+				.filter-checkbox__icon__animated-path {
+					@include default-animation(transform);
 
-				transform-origin: center;
+					transform-origin: center;
+					transform: rotate(90deg);
+				}
 			}
 		}
 
@@ -349,7 +356,7 @@ $filter-bar__height--desktop: 11.8rem;
 					@include spacing-400(padding-bottom);
 
 					background: $color-primary--white;
-					z-index: 13;
+					z-index: 12;
 
 					.is-dark & {
 						background: transparent;

@@ -4,11 +4,13 @@
 html {
 	font-size: 62.5%;
 	scroll-behavior: smooth;
+	height: -webkit-fill-available;
 }
 
 body {
 	@include default-animation(background-color);
-
+	height: 100vh;
+	height: -webkit-fill-available;
 	font-size: $font-size--copy-1;
 	color: $color-primary--black;
 	margin: 0;

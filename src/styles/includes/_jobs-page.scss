@@ -433,7 +433,7 @@ $filter-bar__height--desktop: 11.8rem;
 		@include bp-xs {
 			transform: translateX(100%);
 			transition: transform 0.2s linear;
-			height: 100vh;
+			height: var(--app-height);
 			overflow: scroll;
 			z-index: 14;
 			top: 0;

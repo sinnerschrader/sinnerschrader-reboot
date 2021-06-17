@@ -111,7 +111,7 @@ export class FilterList {
 			this.updateListCategories();
 		});
 
-		// Mobile height calculation
+		// Mobile height calculation for flyout
 
 		const appHeight = () => {
 			const doc = document.documentElement;

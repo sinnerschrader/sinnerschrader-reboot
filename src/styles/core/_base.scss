@@ -37,7 +37,7 @@ body {
 	/* stylelint-disable-next-line selector-no-qualifying-type */
 	&.is-no-scroll {
 		overflow: hidden;
-		height: 100vh;
+		height: var(--app-height);
 	}
 }
 

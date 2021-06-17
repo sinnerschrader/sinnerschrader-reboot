@@ -2,7 +2,7 @@
 @import "../core/mixins";
 
 @mixin bp-navigation {
-	@media screen and (max-width: 810px) {
+	@media screen and (max-width: 599px) {
 		@content;
 	}
 }
@@ -304,7 +304,7 @@
 		left: 100vw;
 		top: 0;
 		bottom: 0;
-		height: var(--app-height);
+		height: var(--mobile-height);
 		width: 100vw;
 		background: $color-primary--black;
 		color: $color-primary--white;

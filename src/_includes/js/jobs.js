@@ -111,14 +111,18 @@ export class FilterList {
 			this.updateListCategories();
 		});
 
-		// Mobile height calculation for flyout
-
-		const appHeight = () => {
+		// Mobile height calculation for filter and navigation flyout
+		const mobileHeight = () => {
 			const doc = document.documentElement;
-			doc.style.setProperty("--app-height", `${window.innerHeight}px`);
+			doc.style.setProperty("--mobile-height", `${window.innerHeight}px`);
 		};
-		window.addEventListener("resize", appHeight);
-		appHeight();
+
+		const mobileViewport = window.matchMedia("(max-width: 768px)");
+
+		if (mobileViewport.matches) {
+			window.addEventListener("resize", mobileHeight);
+			mobileHeight();
+		}
 	}
 
 	// open close the filter bar

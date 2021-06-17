@@ -2,26 +2,27 @@
 @import "mixins";
 
 :root {
-	--app-height: 100%;
+	@include bp-xs {
+		--mobile-height: 100%;
+	}
 }
 
 body,
 html {
 	width: 100vw;
 	height: 100vh;
-	height: var(--app-height);
+	@include bp-xs {
+		height: var(--mobile-height);
+	}
 }
 
 html {
 	font-size: 62.5%;
 	scroll-behavior: smooth;
-	height: -webkit-fill-available;
 }
 
 body {
 	@include default-animation(background-color);
-	height: 100vh;
-	height: -webkit-fill-available;
 	font-size: $font-size--copy-1;
 	color: $color-primary--black;
 	margin: 0;
@@ -37,7 +38,7 @@ body {
 	/* stylelint-disable-next-line selector-no-qualifying-type */
 	&.is-no-scroll {
 		overflow: hidden;
-		height: var(--app-height);
+		height: var(--mobile-height);
 	}
 }
 

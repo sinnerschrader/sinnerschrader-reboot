@@ -193,33 +193,28 @@ $filter-bar__height--desktop: 11.8rem;
 					transform: rotate(90deg);
 				}
 			}
-		}
-
-		// active filter state
-		input[type="checkbox"]:checked + &__filter-item {
-			background-color: $color-primary--white;
-			color: $color-primary--900;
-
-			svg {
-				filter: invert(0);
-			}
-
-			&:hover {
+			.is-dark & {
 				svg {
-					filter: invert(1);
+					filter: invert(0);
+				}
+				&.is-active {
+					svg {
+						filter: invert(1);
+					}
+					&:hover {
+						svg {
+							filter: invert(0);
+						}
+					}
 				}
 
-				circle {
-					transition: transform 0.3s ease-in-out;
-					transform: scale(1);
+				.button--clear {
+					color: $color-primary--white;
 				}
-			}
-
-			.filter-checkbox__icon__animated-path {
-				@include default-animation(transform);
-
-				transform-origin: center;
-				transform: rotate(90deg);
+				.button--secondary {
+					background-color: $color-primary--white;
+					color: $color-primary--black;
+				}
 			}
 		}
 
@@ -433,7 +428,7 @@ $filter-bar__height--desktop: 11.8rem;
 		@include bp-xs {
 			transform: translateX(100%);
 			transition: transform 0.2s linear;
-			height: var(--app-height);
+			height: var(--mobile-height);
 			overflow: scroll;
 			z-index: 14;
 			top: 0;
@@ -455,6 +450,7 @@ $filter-bar__height--desktop: 11.8rem;
 
 				.button--clear {
 					background-color: $color-primary--gray;
+					color: $color-primary--white;
 				}
 			}
 		}

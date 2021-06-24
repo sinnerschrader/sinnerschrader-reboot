@@ -62,7 +62,8 @@ $filter-bar__height--desktop: 11.8rem;
 		@include spacing-700(margin-bottom);
 	}
 
-	&--offering {
+	&--offering,
+	&--teaser {
 		overflow-x: hidden;
 	}
 
@@ -92,6 +93,10 @@ $filter-bar__height--desktop: 11.8rem;
 		// this is the height of the closed menu
 		max-height: $filter-bar__height--mobile;
 		overflow: hidden;
+
+		@include bp-s {
+			position: initial;
+		}
 
 		@include bp-xs {
 			position: initial;

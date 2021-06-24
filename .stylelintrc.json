@@ -16,6 +16,7 @@
 		"order/properties-alphabetical-order": null,
 		"property-no-vendor-prefix": null,
 		"selector-max-id": null,
-		"no-descending-specificity": null
+		"no-descending-specificity": null,
+		"selector-max-compound-selectors": null
 	}
 }

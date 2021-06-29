@@ -28,7 +28,7 @@ Data Protection Officer
 Völckersstraße 38  
 22765 Hamburg  
 Germany  
-datenschutz-ag@sinnerschrader.com
+datenschutz@accenture.com
 
 ## Providing the Website
 
@@ -77,7 +77,7 @@ In case we process personal data of you, you are so called "affected" within the
   Without prejudice to any other administrative or judicial remedy, you have the right of appeal to a supervisory authority, in particular in the Member State where you reside, work or suspect of infringement, if you believe that the processing of personal data concerning you is contrary to the GDPR.  
   The supervisory authority to which the complaint has been lodged shall inform the complainant of the status and results of the complaint, including the possibility of a judicial remedy according to Art. 78 GDPR.
 
-In order to process your request (please mail: datenschutz-ag@sinnerschrader.com), we are obliged to check your identity carefully. Please understand that we reserve the right - depending on the criticality of the data - to request further information or proof of identity. This serves in particular to protect your personal data from unauthorized access by third parties. We would like to point out that we reserve the right not to process requests that are received inappropriately frequently or without corresponding proof of identity. We will inform you of this in writing (via E-Mail).
+In order to process your request (please mail: datenschutz@accenture.com), we are obliged to check your identity carefully. Please understand that we reserve the right - depending on the criticality of the data - to request further information or proof of identity. This serves in particular to protect your personal data from unauthorized access by third parties. We would like to point out that we reserve the right not to process requests that are received inappropriately frequently or without corresponding proof of identity. We will inform you of this in writing (via E-Mail).
 
 ## Children
 

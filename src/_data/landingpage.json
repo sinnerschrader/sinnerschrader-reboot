@@ -216,28 +216,8 @@
 				"altText": "ADAC logo"
 			},
 			{
-				"imgSrc": "/assets/svg/Telefonica.svg",
-				"altText": "Telefónica logo"
-			},
-			{
 				"imgSrc": "/assets/svg/Bosch.svg",
 				"altText": "Bosch logo"
-			},
-			{
-				"imgSrc": "/assets/svg/Roche.svg",
-				"altText": "Roche logo"
-			},
-			{
-				"imgSrc": "/assets/svg/Deutsche_Bank.svg",
-				"altText": "Deutsche Bank logo"
-			},
-			{
-				"imgSrc": "/assets/svg/Deutsche_Bahn.svg",
-				"altText": "Deutsche Bahn logo"
-			},
-			{
-				"imgSrc": "/assets/svg/Airbus.svg",
-				"altText": "Airbus logo"
 			}
 		]
 	},

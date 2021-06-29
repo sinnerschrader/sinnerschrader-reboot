@@ -15,9 +15,23 @@
 }
 
 .imprint-large-title {
-	@include bp-xs {
-		.large-title__text {
-			right: -30rem;
+	.large-title__text {
+		font-size: 16rem;
+		right: 7%;
+
+		@include bp-xs {
+			font-size: 5rem;
+			right: 5%;
+		}
+
+		@include bp-s {
+			font-size: 8rem;
+			right: 10%;
+		}
+
+		@include bp-m {
+			font-size: 12rem;
+			right: 9%;
 		}
 	}
 

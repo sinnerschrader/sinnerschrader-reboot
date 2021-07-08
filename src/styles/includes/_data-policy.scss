@@ -1,4 +1,5 @@
-.data-policy {
+.data-policy,
+.job-details__info {
 	@include responsive-spacing(margin-top, $spacing--700, $spacing--700--tablet, $spacing--700--desktop, $spacing--700--desktop-xl);
 
 	.anchor-navigation {

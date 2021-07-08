@@ -513,5 +513,6 @@ $filter-bar__height--desktop: 11.8rem;
 @include bp-xs {
 	.offering--info {
 		overflow-x: hidden;
+		margin-right: 0;
 	}
 }

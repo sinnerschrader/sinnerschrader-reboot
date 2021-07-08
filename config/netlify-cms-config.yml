@@ -1,7 +1,8 @@
 backend:
   name: github
   repo: sinnerschrader/sinnerschrader-reboot
-  branch: feat/hr-cms-demo
+  branch: grohj:feat/hr-cms-demo
+
 
 media_folder: "_includes/assets/images"
 

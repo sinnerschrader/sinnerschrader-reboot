@@ -45,12 +45,12 @@ export class FilterList {
 				if (evt.target.checked) {
 					// adds filter value
 					this.filters[filter].push(value);
-					evt.target.classList.add("is-active");
+					evt.target.parentElement.classList.add("is-active");
 				} else {
 					// removes filter value
 					const index = this.filters[filter].indexOf(value);
 					this.filters[filter].splice(index, 1);
-					evt.target.classList.remove("is-active");
+					evt.target.parentElement.classList.remove("is-active");
 				}
 
 				this.updateActiveFilterTags();
@@ -100,6 +100,7 @@ export class FilterList {
 			// reset inputs
 			this.controls.querySelectorAll('input[type="checkbox"]').forEach((input) => {
 				input.checked = false;
+				input.parentElement.classList.remove("is-active");
 			});
 
 			// update Labels
@@ -109,6 +110,19 @@ export class FilterList {
 			this.updateList();
 			this.updateListCategories();
 		});
+
+		// Mobile height calculation for filter and navigation flyout
+		const mobileHeight = () => {
+			const doc = document.documentElement;
+			doc.style.setProperty("--mobile-height", `${window.innerHeight}px`);
+		};
+
+		const mobileViewport = window.matchMedia("(max-width: 768px)");
+
+		if (mobileViewport.matches) {
+			window.addEventListener("resize", mobileHeight);
+			mobileHeight();
+		}
 	}
 
 	// open close the filter bar

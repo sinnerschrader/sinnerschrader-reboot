@@ -1,0 +1,96 @@
+.job-details {
+	overflow-x: initial;
+
+	@include bp-xs {
+		overflow: hidden;
+
+		.section-header__circle {
+			display: none;
+		}
+	}
+
+	&__openings {
+		@include interactive-100();
+		@include spacing-800(margin-top);
+
+		text-transform: uppercase;
+
+		@include bp-xs {
+			padding-top: 16.8rem;
+			margin-top: 0;
+		}
+
+		svg {
+			vertical-align: bottom;
+			padding-right: 8px;
+		}
+	}
+
+	&__description {
+		@include spacing-600(margin-top);
+		@include spacing-900(margin-bottom);
+
+		&__button {
+			@include bp-xs {
+				grid-row: 2;
+			}
+		}
+	}
+
+	.button {
+		text-transform: uppercase;
+	}
+
+	.headline-1 {
+		@include spacing-700(margin-top);
+
+		@include bp-xs {
+			br {
+				content: " ";
+			}
+
+			br::after {
+				content: " ";
+			}
+		}
+
+		span {
+			@include headline-202();
+		}
+	}
+
+	&__info {
+		@include spacing-700(margin-top);
+
+		.copy--title {
+			@include spacing-600(margin-top);
+
+			&:first-of-type {
+				margin-top: 0;
+			}
+		}
+	}
+
+	&__apply,
+	.text-teaser {
+		@include spacing-700(margin-top);
+
+		.copy--title {
+			margin-top: 0;
+		}
+	}
+
+	&__interest {
+		@include bp-xs {
+			display: none;
+		}
+
+		&--mobile {
+			display: none;
+
+			@include bp-xs {
+				display: block;
+			}
+		}
+	}
+}

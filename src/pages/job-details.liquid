@@ -1,0 +1,78 @@
+---
+title: SinnerSchrader
+layout: default.liquid
+permalink: job-details.html
+bodyClass: is-bg-scroll
+dataJsItem: bg-scroll-animation
+---
+<div class="fade-bg-black">
+{% include navigation, data: global %}
+</div>
+<main class="job-details">
+	<section class="fade-bg-black grid">
+		<a class="job-details__openings" href="#">
+			<svg class="button__icon">
+				<use href="/assets/svg/icons.svg#arrow-left" />
+			</svg>
+			All openings
+		</a>
+	</section>
+	<section class="fade-bg-black grid">{% include page-headline, data: job-details.first %}</section>
+	<section class="fade-bg-black job-details__description grid">
+		<div class="col-5 col-12-xs job-details__description__button">
+			<a href="#job-description" class="button button--secondary button--small">
+				<span class="button__text">see details</span>
+			</a>
+		</div>
+		<div class="col-7 col-12-xs">
+			<p class="text-teaser__text">As a hands-on designer, you are sometimes an idea generator, sometimes an aggregator in the intensive collaboration between Product Design, Product Strategy, Product Engineering and Product and Client Management. What is unfamiliar to you arouses your curiosity; you approach the familiar with self-critical distance.  You quickly find convincing solutions and are the leading creative force in winning new customers and deliver real added value for our existing customers with your work.</p>
+		</div>
+	</section>
+	<section class="fade-bg-black">
+		{% include section-header, title: "16.03.2021 &#183; Creative &#183; Hamburg", number: "01", spinningWheel: "spinning-wheel" %}
+	</section>
+	<section class="fade-bg-black grid">{% include page-headline, data: job-details %}</section>
+	<section>
+		{% include slider, data: job-details %}
+	</section>
+	<section id="job-description">
+		{% include section-header, title: "job details", number: "02" %}
+	</section>
+	<section class="job-details__info grid">
+		<div class="job-details__info__content col-7 col-8-m col-7-s col-12-xs">
+			{% include job-info, data: job-details %}
+		</div>
+		<div class="col-12-xs job-details__interest--mobile">
+			<h3 class="copy--title">Interested?</h3>
+			<p>Please send us your application documents (including a link to your online portfolio) exclusively by e-mail to jobs@sinnerschrader.com.</p>
+			<p>We look forward to hearing from you.</p>
+		</div>
+		<div class="col-start-10 col-end-13 col-start-9-s col-end-13-s col-start-1-xs col-end-13-xs">
+			{% include contact-person, data: components.contact %}
+		</div>
+	</section>
+	<section class="job-details__apply grid">
+		<div class="col-7 col-12-xs job-details__interest">
+			<h3 class="copy--title">Interested?</h3>
+			<p>Please send us your application documents (including a link to your online portfolio) exclusively by e-mail to jobs@sinnerschrader.com.</p>
+			<p>We look forward to hearing from you.</p>
+		</div>
+		<div class="col-start-10 col-end-13 col-start-11-s col-end-12-s col-start-1-xs col-end-13-xs">
+			{% include share-buttons, title:"Share this job" link:true facebook:true twitter:true devTo:true xing:true linkedIn:true %}
+		</div>
+	</section>
+	<section>{% include text-teaser, data: job-details.about %}</section>
+	<section>{% include text-teaser, data: job-details %}</section>
+	<section>
+	<div class="job-details__apply text-teaser grid">
+		<div class="col-5 col-12-xs">
+			<h3 class="copy--title">Sounds like you?</h3>
+		</div>
+			<div class="col-7 col-12-xs">
+				{% include button-apply, data: job-details %}
+			</div>
+		<div>
+	</section>
+</main>
+
+{% include footer, data: global %}

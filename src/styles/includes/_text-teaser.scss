@@ -1,9 +1,13 @@
 .text-teaser {
+	@include spacing-700(padding-top);
+
 	padding-bottom: $spacing--100;
+	border-top: 1px solid $color-primary--light-gray;
 
 	&__headline {
 		@include headline-300();
 
+		margin-top: 0;
 		color: $color-primary--black;
 
 		.is-dark & {
@@ -14,6 +18,7 @@
 	&__text {
 		@include subheadline-200();
 
+		margin-top: 0;
 		font-family: $font-sans-serif-light;
 		color: $color-primary--black;
 
@@ -28,7 +33,6 @@
 
 		text-transform: uppercase;
 		color: $color-primary--black;
-		margin-bottom: $spacing--800;
 
 		&::before {
 			position: absolute;

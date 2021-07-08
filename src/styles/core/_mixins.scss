@@ -399,3 +399,13 @@
 @mixin default-animation($property) {
 	transition: $property 300ms ease-in-out;
 }
+
+@mixin button-animation() {
+	transition: transform 0.3s ease-in-out, letter-spacing 0.3s ease-in-out;
+
+	&:hover {
+		transform: scale(0.95);
+		letter-spacing: 0.3rem;
+		transition: transform 0.3s ease-in-out, letter-spacing 0.3s ease-in-out;
+	}
+}

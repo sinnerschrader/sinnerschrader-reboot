@@ -25,7 +25,13 @@
 				</li>
 				{% endfor %}
 			</ul>
-			<button class="nav__mobile-toggle">
+			<button
+				class="nav__mobile-toggle"
+				aria-label="{{ data.navigation.ariaLabelMobileToggle }}"
+				aria-haspopup="menu"
+				aria-controls="mobile-navigation"
+				aria-expanded="false"
+			>
 				<div class="dot-wrapper">
 					<span class="dot dot-1"></span>
 					<span class="dot dot-2"></span>
@@ -37,7 +43,7 @@
 	</div>
 
 	<div class="nav__offset-panel">
-		<nav class="nav__offset-panel__wrapper grid" aria-label="{{ data.navigation.ariaLabel }}">
+		<nav id="mobile-navigation" role="menu" class="nav__offset-panel__wrapper grid" aria-label="{{ data.navigation.ariaLabel }}">
 			<ul class="nav__offset-panel__list">
 				<li class="nav__offset-panel__list-item">
 					<a rel="external nofollow"

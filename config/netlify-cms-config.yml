@@ -3,7 +3,8 @@ backend:
   repo: sinnerschrader/sinnerschrader-reboot
   branch: main
 
-media_folder: "_includes/assets/images"
+media_library:
+  name: "disabled"
 
 publish_mode: editorial_workflow
 
@@ -15,9 +16,37 @@ collections:
     delete: true
     slug: "{{title}}-{{location}}"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Location", name: "location", widget: "string" }
-      - { label: "Level", name: "level", widget: "string" }
-      - { label: "Description", name: "description", widget: "string" }
-      - { label: "Date", name: "date", widget: "date", default: "" }
-      - { label: "Job Body", name: "body", widget: "markdown" }
+      - label: "Title"
+        name: "title"
+        widget: "string"
+
+      - label: "City"
+        name: "location"
+        widget: "select"
+        options:
+          - { label: "Hamburg", value: "hamburg" }
+          - { label: "Munich", value: "munich" }
+          - { label: "Frankfurt", value: "frankfurt" }
+          - { label: "Berlin", value: "berlin" }
+          - { label: "Prague", value: "prague" }
+          - { label: "Zurich", value: "zurich" }
+
+      - label: "Discipline"
+        name: "discipline"
+        widget: "select"
+        options:
+          - { label: "Tech", value: "tech" }
+          - { label: "Creative", value: "creative" }
+          - { label: "Strategy", value: "strategy" }
+          - { label: "Account Management", value: "account management" }
+          - { label: "Corporate Functions", value: "corporate functions" }
+
+      - label: "Contact"
+        name: "contact"
+        widget: "select"
+        options:
+          - { label: "Vicky", value: "vicky" }
+
+      - { label: "Description", name: "description", widget: "markdown" }
+
+      - { label: "Details", name: "details", widget: "markdown" }

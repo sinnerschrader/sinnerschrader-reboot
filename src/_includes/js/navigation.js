@@ -42,6 +42,9 @@ class Navigation {
 	toggleMobilePanel() {
 		document.body.classList.toggle(this.bodyOverlayClass);
 		this.navigationContainer.classList.toggle(this.mobileActiveClass);
+
+		const isMobileMenueExpandend = this.navigationContainer.classList.contains("is-mobile-active");
+		this.mobileToggleBtn.setAttribute("aria-expanded", isMobileMenueExpandend);
 	}
 
 	detectScroll() {

@@ -3,6 +3,14 @@
 		"ariaLabel": "Main navigation",
 		"ariaLabelMobileToggle": "Toggle main navigation",
 		"logoSrc": "/assets/svg/sinnerschrader-header-logo.svg",
+		"logo": {
+			"top": "SinnerSchrader",
+			"bottom": {
+				"start": "Part of ",
+				"middle": "Accenture",
+				"end": " Interactive"
+			}
+		},
 		"links": [
 			{
 				"baseUrl": "",

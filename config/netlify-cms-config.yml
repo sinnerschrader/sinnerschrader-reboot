@@ -49,6 +49,21 @@ collections:
         options:
           - { label: "Vicky", value: "vicky" }
 
-      - { label: "Description", name: "description", widget: "markdown" }
+      - label: "Description"
+        name: "description"
+        widget: "string"
 
-      - { label: "Details", name: "details", widget: "markdown" }
+      - label: "Expectations"
+        name: "expectations"
+        widget: "list"
+        field: { label: "expectation", name: "expectation", widget: "string" }
+
+      - label: "Requirements"
+        name: "requirements"
+        widget: "list"
+        field: { label: "requirement", name: "requirement", widget: "string" }
+
+      - label: "Offers"
+        name: "offers"
+        widget: "list"
+        field: { label: "offer", name: "offer", widget: "string" }

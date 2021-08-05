@@ -90,6 +90,10 @@
 		}
 	}
 
+	#mobile-navigation {
+		display: none;
+	}
+
 	&.is-mobile-nav-hidden {
 		transform: translateY(-10rem);
 	}
@@ -97,6 +101,10 @@
 	&.is-mobile-active {
 		body {
 			overflow: hidden;
+		}
+
+		#mobile-navigation {
+			display: block;
 		}
 
 		.nav__offset-panel {

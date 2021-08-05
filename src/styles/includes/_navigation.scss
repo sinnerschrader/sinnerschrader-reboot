@@ -263,6 +263,11 @@
 
 			&:focus {
 				outline: none;
+
+				.dot-wrapper {
+					outline: 0.3rem solid $color-secondary--yellow;
+					outline-offset: 0.5rem;
+				}
 			}
 		}
 

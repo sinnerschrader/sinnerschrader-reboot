@@ -90,16 +90,8 @@
 		}
 	}
 
-	&.is-animate-out {
+	&.is-mobile-nav-hidden {
 		transform: translateY(-10rem);
-	}
-
-	&.is-animate-in {
-		transform: translateY(0);
-	}
-
-	&.is-top {
-		transform: translateY(0);
 	}
 
 	&.is-mobile-active {

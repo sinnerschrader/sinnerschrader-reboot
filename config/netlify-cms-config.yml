@@ -53,17 +53,24 @@ collections:
         name: "description"
         widget: "string"
 
-      - label: "Expectations"
+      - label: "What you can expect from us"
         name: "expectations"
+        label_singular: "expectation"
         widget: "list"
         field: { label: "expectation", name: "expectation", widget: "string" }
+        collapsed: false
 
-      - label: "Requirements"
+      - label: "What you should bring with you"
         name: "requirements"
+        label_singular: "requirement"
         widget: "list"
         field: { label: "requirement", name: "requirement", widget: "string" }
+        collapsed: false
 
-      - label: "Offers"
+      - label: "What we offer"
         name: "offers"
+        label_singular: "offer"
         widget: "list"
         field: { label: "offer", name: "offer", widget: "string" }
+        collapsed: false
+        default: ["Accident insurance", "Workers Council", "Employer share purchase program", "Employee Referral Program"]

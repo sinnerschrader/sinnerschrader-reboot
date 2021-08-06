@@ -1,13 +1,15 @@
 ---
 title: SinnerSchrader
 layout: default.liquid
-permalink: job-details.html
+pagination:
+  data: collections.jobs
+  size: 1
+  alias: job
+permalink: "jobs/{{ job.data.title | slug }}-{{ job.data.location | slug }}.html"
 bodyClass: is-bg-scroll
 dataJsItem: bg-scroll-animation
 ---
-<div class="fade-bg-black">
-{% include navigation, data: global %}
-</div>
+<div class="fade-bg-black">{% include navigation, data: global %}</div>
 <main class="job-details">
 	<section class="fade-bg-black grid">
 		<a class="job-details__openings" href="#">

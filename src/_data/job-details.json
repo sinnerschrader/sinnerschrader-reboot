@@ -1,18 +1,4 @@
 {
-	"first": {
-		"headline": {
-			"firstline": "Product Designer UI",
-			"secondline": "(f/m/d/-)"
-		}
-	},
-	"headline": {
-		"firstline": "Join our <span>creative</span> team ",
-		"secondline": " in Hamburg"
-	},
-	"jobIntro": {
-		"link": "details",
-		"text": "As a hands-on designer, you are sometimes an idea generator, sometimes an aggregator in the intensive collaboration between Product Design, Product Strategy, Product Engineering and Product and Client Management. What is unfamiliar to you arouses your curiosity; you approach the familiar with self-critical distance.  You quickly find convincing solutions and are the leading creative force in winning new customers and deliver real added value for our existing customers with your work."
-	},
 	"slider": {
 		"slides": [
 			{
@@ -40,50 +26,8 @@
 	},
 	"jobDescription": {
 		"titleExpectations": "What you can expect from us",
-		"expectationsList": [
-			{
-				"item": "Design of digital applications as well as in the creation of consistent design systems."
-			},
-			{
-				"item": "Design of digital applications as well as in the creation of consistent design systems."
-			},
-			{
-				"item": "Design of digital applications as well as in the creation of consistent design systems."
-			},
-			{
-				"item": "Design of digital applications as well as in the creation of consistent design systems."
-			}
-		],
 		"titleRequirements": "What you should bring with you",
-		"requirementsList": [
-			{
-				"item": "A strong portfolio of case studies and completed work"
-			},
-			{
-				"item": "A strong portfolio of case studies and completed work"
-			},
-			{
-				"item": "A strong portfolio of case studies and completed workf"
-			},
-			{
-				"item": "A strong portfolio of case studies and completed work"
-			}
-		],
-		"titleOffer": "What we offer",
-		"offerList": [
-			{
-				"item": "Accident insurance"
-			},
-			{
-				"item": "Workers Council"
-			},
-			{
-				"item": "Employer share purchase program"
-			},
-			{
-				"item": "Employee Referral Program"
-			}
-		]
+		"titleOffer": "What we offer"
 	},
 	"about": {
 		"text-teaser": {

@@ -19,7 +19,7 @@ dataJsItem: bg-scroll-animation
 			All openings
 		</a>
 	</section>
-	<section class="fade-bg-black grid">{% include page-headline, data: job-details.first %}</section>
+	<section class="fade-bg-black grid">{% include page-headline, firstline: job.data.title, secondline: '(f/m/d/-)' %}</section>
 	<section class="fade-bg-black job-details__description grid">
 		<div class="col-5 col-12-xs job-details__description__button">
 			<a href="#job-description" class="button button--secondary button--small">
@@ -27,13 +27,16 @@ dataJsItem: bg-scroll-animation
 			</a>
 		</div>
 		<div class="col-7 col-12-xs">
-			<p class="text-teaser__text">As a hands-on designer, you are sometimes an idea generator, sometimes an aggregator in the intensive collaboration between Product Design, Product Strategy, Product Engineering and Product and Client Management. What is unfamiliar to you arouses your curiosity; you approach the familiar with self-critical distance.  You quickly find convincing solutions and are the leading creative force in winning new customers and deliver real added value for our existing customers with your work.</p>
+			<p class="text-teaser__text">{{ job.data.description }}</p>
 		</div>
 	</section>
 	<section class="fade-bg-black">
-		{% include section-header, title: "16.03.2021 &#183; Creative &#183; Hamburg", number: "01", spinningWheel: "spinning-wheel" %}
+		{% capture title %}{{ job.data.date | date: "%d.%m.%Y" }} &#183; {{ job.data.discipline }} &#183; {{ job.data.location }}{% endcapture %}
+		{% include section-header, title: title, spinningWheel: "spinning-wheel" %}
 	</section>
-	<section class="fade-bg-black grid">{% include page-headline, data: job-details %}</section>
+	{% capture firstline %}Join our <span>{{ job.data.discipline }}</span> team {% endcapture %}
+	{% capture secondline %}in {{ job.data.location | capitalize }}{% endcapture %}
+	<section class="fade-bg-black grid">{% include page-headline, firstline: firstline, secondline: secondline %}</section>
 	<section>
 		{% include slider, data: job-details %}
 	</section>

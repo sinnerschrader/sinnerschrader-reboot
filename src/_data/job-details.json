@@ -16,24 +16,24 @@
 	"slider": {
 		"slides": [
 			{
-				"mobileSrc": "./assets/images/mobile/culture1.webp",
-				"tabletSrc": "./assets/images/tablet/culture1.webp",
-				"desktopSrc": "./assets/images/desktop/culture1.webp",
-				"fallbackSrc": "./assets/images/fallback/culture1.jpg",
+				"mobileSrc": "/assets/images/mobile/culture1.webp",
+				"tabletSrc": "/assets/images/tablet/culture1.webp",
+				"desktopSrc": "/assets/images/desktop/culture1.webp",
+				"fallbackSrc": "/assets/images/fallback/culture1.jpg",
 				"altText": "Person sitting at a desk in an office, a bonsai tree is seen in the foreground"
 			},
 			{
-				"mobileSrc": "./assets/images/mobile/culture2.webp",
-				"tabletSrc": "./assets/images/tablet/culture2.webp",
-				"desktopSrc": "./assets/images/desktop/culture2.webp",
-				"fallbackSrc": "./assets/images/fallback/culture2.jpg",
+				"mobileSrc": "/assets/images/mobile/culture2.webp",
+				"tabletSrc": "/assets/images/tablet/culture2.webp",
+				"desktopSrc": "/assets/images/desktop/culture2.webp",
+				"fallbackSrc": "/assets/images/fallback/culture2.jpg",
 				"altText": "Person swinging on an swing in an office with a floor in a geometric pattern"
 			},
 			{
-				"mobileSrc": "./assets/images/mobile/culture3.webp",
-				"tabletSrc": "./assets/images/tablet/culture3.webp",
-				"desktopSrc": "./assets/images/desktop/culture3.webp",
-				"fallbackSrc": "./assets/images/fallback/culture3.jpg",
+				"mobileSrc": "/assets/images/mobile/culture3.webp",
+				"tabletSrc": "/assets/images/tablet/culture3.webp",
+				"desktopSrc": "/assets/images/desktop/culture3.webp",
+				"fallbackSrc": "/assets/images/fallback/culture3.jpg",
 				"altText": "Person standing in a room wearing a motorcycle helmet"
 			}
 		]

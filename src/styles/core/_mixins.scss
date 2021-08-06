@@ -305,6 +305,28 @@
 	}
 }
 
+@mixin subheadline-100 {
+	font-family: $font-sans-serif-light;
+	font-weight: 300;
+
+	@include bp-xs {
+		font-size: 2.4rem;
+		line-height: 3.84rem;
+	}
+	@include bp-tablet {
+		font-size: 3.2rem;
+		line-height: 5.12rem;
+	}
+	@include bp-l {
+		font-size: 3.2rem;
+		line-height: 5.12rem;
+	}
+	@include bp-xl {
+		font-size: 4.8rem;
+		line-height: 7.68rem;
+	}
+}
+
 @mixin subheadline-200 {
 	font-family: $font-sans-serif-light;
 

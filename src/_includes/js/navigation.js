@@ -5,11 +5,9 @@ class Navigation {
 	topPositionColorLight = false;
 	bodyOverlayClass = "is-no-scroll";
 	mobileActiveClass = "is-mobile-active";
-	topClass = "is-top";
 	transparentClass = "is-transparent";
 	lightBackgroundClass = "is-light";
-	animateInClass = "is-animate-in";
-	animateOutClass = "is-animate-out";
+	mobileNavHiddenClass = "is-mobile-nav-hidden";
 	lastScrollTop = 0;
 
 	constructor() {
@@ -59,21 +57,17 @@ class Navigation {
 
 	animateInOut(scrollPosition) {
 		if (scrollPosition > this.lastScrollTop) {
-			this.navigationContainer.classList.remove(this.animateInClass);
-			this.navigationContainer.classList.add(this.animateOutClass);
+			this.navigationContainer.classList.add(this.mobileNavHiddenClass);
 		} else {
-			this.navigationContainer.classList.remove(this.animateOutClass);
-			this.navigationContainer.classList.add(this.animateInClass);
+			this.navigationContainer.classList.remove(this.mobileNavHiddenClass);
 		}
 	}
 
 	detectPageTop(scrollPosition) {
 		if (scrollPosition <= 0) {
-			this.navigationContainer.classList.add(this.topClass);
 			this.topPositionColorDark ? this.navigationContainer.classList.add("is-text-dark") : "";
 			this.topPositionColorLight ? this.navigationContainer.classList.add("is-text-light") : "";
 		} else {
-			this.navigationContainer.classList.remove(this.topClass);
 			this.topPositionColorDark ? this.navigationContainer.classList.remove("is-text-dark") : "";
 			this.topPositionColorLight ? this.navigationContainer.classList.remove("is-text-light") : "";
 		}

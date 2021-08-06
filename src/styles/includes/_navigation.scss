@@ -90,21 +90,21 @@
 		}
 	}
 
-	&.is-animate-out {
+	#mobile-navigation {
+		display: none;
+	}
+
+	&.is-mobile-nav-hidden {
 		transform: translateY(-10rem);
-	}
-
-	&.is-animate-in {
-		transform: translateY(0);
-	}
-
-	&.is-top {
-		transform: translateY(0);
 	}
 
 	&.is-mobile-active {
 		body {
 			overflow: hidden;
+		}
+
+		#mobile-navigation {
+			display: block;
 		}
 
 		.nav__offset-panel {
@@ -263,6 +263,11 @@
 
 			&:focus {
 				outline: none;
+
+				.dot-wrapper {
+					outline: 0.3rem solid $color-secondary--yellow;
+					outline-offset: 0.5rem;
+				}
 			}
 		}
 

@@ -22,7 +22,7 @@ html {
 }
 
 body {
-	@include default-animation(background-color);
+	@include bg-and-color-animation();
 
 	font-size: $font-size--copy-1;
 	color: $color-primary--black;
@@ -32,6 +32,8 @@ body {
 
 	/* stylelint-disable-next-line selector-no-qualifying-type */
 	&.is-dark {
+		@include bg-and-color-animation();
+
 		background-color: $color-primary--black;
 		color: $color-primary--white;
 		/* stylelint-disable-next-line */
@@ -159,6 +161,7 @@ address {
 .copy {
 	&--gray {
 		color: $color-primary--gray;
+		transition: color $transition-main ease-in-out;
 	}
 
 	&--mail {

@@ -30,8 +30,8 @@
 
 		img {
 			width: 100%;
-			-webkit-transform-style: preserve-3d;
-			-webkit-backface-visibility: hidden;
+			transform-style: preserve-3d;
+			backface-visibility: hidden;
 		}
 
 		.swiper-slide {
@@ -44,7 +44,7 @@
 	}
 
 	.swiper-wrapper {
-		-webkit-transform-style: preserve-3d;
-		-webkit-backface-visibility: hidden;
+		transform-style: preserve-3d;
+		backface-visibility: hidden;
 	}
 }

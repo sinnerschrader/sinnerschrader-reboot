@@ -1,10 +1,10 @@
 {
 	"image-text-teaser": {
 		"image": {
-			"mobileSrc": "./assets/images/mobile/job-list-teaser-mobile.webp",
-			"tabletSrc": "./assets/images/tablet/job-list-teaser.webp",
-			"desktopSrc": "./assets/images/desktop/job-list-teaser.webp",
-			"fallbackSrc": "./assets/images/fallback/job-list-teaser.png",
+			"mobileSrc": "./assets/images/mobile/audi-main.webp",
+			"tabletSrc": "./assets/images/tablet/audi-main.webp",
+			"desktopSrc": "./assets/images/desktop/audi-main.webp",
+			"fallbackSrc": "./assets/images/fallback/audi-main.png",
 			"altText": "alt text"
 		},
 		"headline": "Audi",

@@ -94,16 +94,16 @@
 		right: 100%;
 		transition: opacity 500ms ease, transform 500ms ease;
 		transform: translateX(0);
+		overflow-y: auto;
 
 		&.is-hidden {
 			opacity: 0;
 			transform: translateX(-100%);
 		}
 
-		/* stylelint-disable-next-line order/order */
 		@include bp-xs {
+			padding: $spacing--700 $spacing--500;
 			width: 100%;
-			padding: 0 $spacing--500 0 0;
 		}
 	}
 

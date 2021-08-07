@@ -5,3 +5,4 @@ _site/
 src/_includes/css/main.css
 .idea
 .vscode
+cypress/videos

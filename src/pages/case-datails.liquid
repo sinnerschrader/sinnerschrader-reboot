@@ -1,17 +1,16 @@
 ---
 title: SinnerSchrader
-layout: default
-permalink: cases.html
+layout: default.liquid
+permalink: case-details.html
 bodyClass: is-bg-scroll
 dataJsItem: bg-scroll-animation
-renderData: filterbar
 ---
 
 {% include navigation, data: global %}
 
 
 <main class="cases-page">
-    <section class="fade-bg-black cases-page__intro" data-no-offset-top>
+    <section class="fade-bg-black jobs__intro" data-no-offset-top>
         <div class="grid">
 	        <h1 class="headline-203 col-5 col-12-xs">
 		        lorem ipsum<br>
@@ -40,6 +39,4 @@ renderData: filterbar
 
 </main>
 
-<div class="fade-bg-black">
-    {% include footer, data: global %}
-</div>
+{% include footer, data: global %}

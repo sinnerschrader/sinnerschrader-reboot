@@ -11,34 +11,45 @@ renderData: filterbar
 
 
 <main class="cases-page">
-    <section class="fade-bg-black jobs__intro" data-no-offset-top>
-        <div class="grid">
-	        <h1 class="headline-201 col-5 col-12-xs">
-		        Lets build something <br>
-		        that <span class="headline-202">lasts</span>
-	        </h1>
-        </div>
-        <div class="grid">
-	        <p class="col-start-9 col-start-1-xs text-teaser__text">
-		        Whether we love to strategise, design or code, we all speak one common language – a language of passion,
-		        empathy and challenge. Simply because we want to build products that matter. For now. For later.
-		        With no alpha leaders and no beta teams.
-	        </p>
-        </div>
-    </section>
+	<section class="fade-bg-black jobs__intro" data-no-offset-top>
+		<div class="grid">
+			<h1 class="headline-201 col-5 col-12-xs">
+				Lets build something <br>
+				that <span class="headline-202">lasts</span>
+			</h1>
+		</div>
+		<div class="grid">
+			<p class="col-start-9 col-start-1-xs text-teaser__text">
+				Whether we love to strategise, design or code, we all speak one common language – a language of passion,
+				empathy and challenge. Simply because we want to build products that matter. For now. For later.
+				With no alpha leaders and no beta teams.
+			</p>
+		</div>
+	</section>
 	<section class="fade-bg-black cases-page--teaser">
 		{% include image-text-teaser, data: cases %}
 	</section>
-    <!-- Open / Close Filterbar MOBILE ONLY -->
-    <section id="js-filter-list" class="filter-list">
-        <section>
-            {% include section-header, title: "Here we are", number: "06", type: "medium" %}
-            {% include locations %}
-        </section>
-    </section>
+	<section>
+		{% render section-header, title: "Cases", number: "06", type: "medium" %}
+		<div class="gallery-container">
+			<picture>
+				<source media="(max-width: 599px)" srcset="./assets/images/mobile/audi-main.webp" type="image/webp">
+				<source media="(min-width: 600px)" srcset="./assets/images/tablet/audi-main.webp" type="image/webp">
+				<source media="(min-width: 1200px)" srcset="./assets/images/desktop/audi-main.webp" type="image/webp">
+				<img src="./assets/images/fallback/audi-main.webp"
+					alt="Small image of the audi-main SinnerSchrader office">
+			</picture>
+			<picture>
+				<source media="(max-width: 599px)" srcset="./assets/images/mobile/vw-car.webp" type="image/webp">
+				<source media="(min-width: 600px)" srcset="./assets/images/tablet/vw-car.webp" type="image/webp">
+				<source media="(min-width: 1200px)" srcset="./assets/images/desktop/vw-car.webp" type="image/webp">
+				<img src="./assets/images/fallback/vw-car.webp" alt="Large image of the vw-car SinnerSchrader office">
+			</picture>
+		</div>
+	</section>
 
 
-    <section>
+	<section>
 		{% include section-header, title: "Hey There", number: "05", type: "large" %}
 		{% include job-teaser, data: landingpage %}
 	</section>

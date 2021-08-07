@@ -235,6 +235,24 @@
 		"button": {
 			"href": "https://sinnerschrader.jobs",
 			"text": "Join us"
+		},
+		"images": {
+			"logoPart1": {
+				"src": "/assets/svg/logo-part.svg",
+				"alt": ""
+			},
+			"logoPart2": {
+				"src": "/assets/svg/logo-part2.svg",
+				"alt": ""
+			},
+			"element1": {
+				"src": "/assets/svg/element1.svg",
+				"alt": ""
+			},
+			"element2": {
+				"src": "/assets/svg/element2.svg",
+				"alt": ""
+			}
 		}
 	}
 }

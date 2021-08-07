@@ -11,6 +11,7 @@ import { CareerContact } from "./careerContact";
 import { ImageTextTeaser } from "./image-text-teaser";
 import { Navigation } from "./navigation";
 import { FilterList, FloatObserver } from "./jobs";
+import { JobTeaser } from "./job-teaser";
 
 (() => {
 	if (isModuleNeeded("locations")) {
@@ -56,6 +57,8 @@ import { FilterList, FloatObserver } from "./jobs";
 	if (isModuleNeeded("navigation")) {
 		new Navigation();
 	}
+
+	new JobTeaser();
 
 	if (isModuleNeeded("job-filter-list")) {
 		const filterList = new FilterList({

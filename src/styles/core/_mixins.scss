@@ -263,6 +263,13 @@
 	font-family: $font-serif-italic;
 }
 
+// Headline smaller regular
+@mixin headline-203 {
+	@include font-serif-shared-small();
+
+	font-family: $font-sans-serif-regular;
+}
+
 @mixin headline-300 {
 	font-family: $font-sans-serif-regular;
 

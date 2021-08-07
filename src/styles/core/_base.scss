@@ -156,6 +156,11 @@ address {
 	@include headline-202();
 }
 
+// Font Ogg regular - smaller
+.headline-203 {
+	@include headline-203();
+}
+
 .copy {
 	&--gray {
 		color: $color-primary--gray;

@@ -1,0 +1,24 @@
+{
+	"client": "Audi",
+	"headline": {
+		"title": "e-tron GT",
+		"subtitle": "quattro"
+	},
+	"images": {
+		"main": {
+			"mobileSrc": "./assets/images/mobile/vw-car.webp",
+			"tabletSrc": "./assets/images/tablet/vw-car.webp",
+			"desktopSrc": "./assets/images/desktop/vw-car.webp",
+			"fallbackSrc": "./assets/images/fallback/vw-car.png",
+			"altText": "alt text"
+		},
+		"preview": {
+			"mobileSrc": "./assets/images/mobile/vw-preview.webp",
+			"tabletSrc": "./assets/images/tablet/vw-preview.webp",
+			"desktopSrc": "./assets/images/desktop/vw-preview.webp",
+			"fallbackSrc": "./assets/images/fallback/vw-preview.png",
+			"altText": "alt text"
+		}
+	},
+	"description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias."
+}

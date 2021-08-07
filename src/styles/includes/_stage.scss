@@ -91,6 +91,8 @@
 	}
 
 	&__overlap {
+		@include bg-and-color-animation();
+
 		background-color: $color-primary--white;
 		position: absolute;
 		z-index: 4;

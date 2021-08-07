@@ -16,7 +16,9 @@
     "esbuild:watch": "esbuild ./src/_includes/js/main.js --outfile=_site/bundle.js --bundle --watch",
     "responsiveImages": "rimraf ./_site/assets/images/ && node ./config/sharp.js",
     "stylelint": "stylelint ./src/styles/**/*.scss",
-    "a11y-check": "pa11y-ci"
+    "a11y-check": "pa11y-ci",
+    "cypress:open": "cypress open",
+    "cypress": "cypress run --browser chrome --headless"
   },
   "dependencies": {
     "lodash-es": "^4.17.21",
@@ -29,6 +31,7 @@
     "autoprefixer": "^10.3.1",
     "chokidar": "^3.5.2",
     "cssnano": "^5.0.7",
+    "cypress": "^8.2.0",
     "esbuild": "^0.12.17",
     "fibers": "^5.0.0",
     "fs-extra": "^10.0.0",

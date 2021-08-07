@@ -46,8 +46,8 @@
 			"miscTitle": "Misc",
 			"miscLinks": [
 				{
-					"baseUrl": "",
-					"subUrl": "/contact",
+					"baseUrl": "mailto:info@sinnerschrader.com",
+					"subUrl": "",
 					"linkText": "Contact"
 				},
 				{
@@ -61,8 +61,8 @@
 					"linkText": "Imprint"
 				},
 				{
-					"baseUrl": "",
-					"subUrl": "/improve",
+					"baseUrl": "https://github.com/sinnerschrader/sinnerschrader-reboot",
+					"subUrl": "",
 					"linkText": "Improve this site"
 				}
 			],

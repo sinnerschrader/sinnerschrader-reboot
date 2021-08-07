@@ -11,6 +11,8 @@
 	margin-top: $spacing--200;
 
 	&__circle {
+		@include filter-animation();
+
 		position: absolute;
 		left: 50%;
 		top: 50%;
@@ -37,10 +39,12 @@
 	&__title,
 	&__number {
 		@include code-100();
+		@include bg-and-color-animation();
 
 		font-weight: initial;
 		margin: 0;
 		z-index: 10;
+		color: $color-primary--black;
 
 		.is-dark & {
 			color: $color-primary--white;

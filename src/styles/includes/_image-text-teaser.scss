@@ -135,6 +135,18 @@
 		@include bp-xs {
 			margin: $spacing--500 0 $spacing--400;
 		}
+
+		&--secondary {
+			margin: 0;
+		}
+	}
+
+	&__sub-headline {
+		margin-top: 0;
+
+		@include bp-xs {
+			margin: $spacing--500 0 $spacing--400;
+		}
 	}
 
 	&__copy {

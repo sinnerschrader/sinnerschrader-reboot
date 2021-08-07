@@ -1,7 +1,7 @@
 ---
 title: SinnerSchrader
 layout: default
-permalink: cases-overview.html
+permalink: cases.html
 bodyClass: is-bg-scroll
 dataJsItem: bg-scroll-animation
 renderData: filterbar
@@ -10,7 +10,7 @@ renderData: filterbar
 {% include navigation, data: global %}
 
 
-<main class="cases-overview-page">
+<main class="cases-page">
     <section class="fade-bg-black jobs__intro" data-no-offset-top>
         <div class="grid">
 	        <h1 class="headline-201 col-5 col-12-xs">
@@ -26,8 +26,8 @@ renderData: filterbar
 	        </p>
         </div>
     </section>
-	<section class="fade-bg-black jobs-page--teaser">
-		{% include image-text-teaser, data: components %}
+	<section class="fade-bg-black cases-page--teaser">
+		{% include image-text-teaser, data: cases %}
 	</section>
     <!-- Open / Close Filterbar MOBILE ONLY -->
     <section id="js-filter-list" class="filter-list">

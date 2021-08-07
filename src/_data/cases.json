@@ -1,0 +1,16 @@
+{
+	"image-text-teaser": {
+		"image": {
+			"mobileSrc": "./assets/images/mobile/job-list-teaser-mobile.webp",
+			"tabletSrc": "./assets/images/tablet/job-list-teaser.webp",
+			"desktopSrc": "./assets/images/desktop/job-list-teaser.webp",
+			"fallbackSrc": "./assets/images/fallback/job-list-teaser.png",
+			"altText": "alt text"
+		},
+		"headline": "Audi",
+		"subheadline": "e-tron GT<br> quattro",
+		"copy": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias.",
+		"buttonText": "Explore case",
+		"sideContent": {}
+	}
+}

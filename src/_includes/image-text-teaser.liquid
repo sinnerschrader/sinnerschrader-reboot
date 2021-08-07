@@ -12,7 +12,12 @@
 	<div class="image-text-teaser__content">
 		{% if data.image-text-teaser.sideContent %}
 			<div class="image-text-teaser__content-inner" data-js-item="image-text-teaser-content">
-				<h3 class="image-text-teaser__headline">{{ data.image-text-teaser.headline }}</h3>
+				{% if data.image-text-teaser.subheadline %}
+					<h3 class="image-text-teaser__headline--secondary headline-201">{{ data.image-text-teaser.headline }}</h3>
+					<h3 class="image-text-teaser__sub-headline">{{ data.image-text-teaser.subheadline }}</h3>
+				{% else %}
+					<h3 class="image-text-teaser__headline">{{ data.image-text-teaser.headline }}</h3>
+				{% endif %}
 				<p class="image-text-teaser__copy">{{ data.image-text-teaser.copy }}</p>
 				<button class="button button--primary button--small"
 				        data-js-atom="image-text-teaser-forward">

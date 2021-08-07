@@ -14,44 +14,53 @@
 	right: 0;
 	height: 9.5rem;
 	z-index: 13;
-	transition: transform 300ms ease-in-out, background-color 300ms ease-in-out;
+	transition: transform $transition-main ease-in-out, background-color $transition-main ease-in-out;
+	background-color: $color-primary--white;
+	color: $color-primary--black;
 
-	&.is-light {
-		background-color: $color-primary--white;
-		color: $color-primary--black;
+	&__list {
+		align-items: stretch;
+		display: flex;
+		justify-content: flex-end;
+		line-height: 9.5rem;
+		margin: auto 0;
+		padding-left: 0;
 
-		.nav__list__link {
+		@include bp-navigation() {
+			display: none;
+		}
+
+		&__item {
+			list-style-type: none;
+
+			& + & {
+				@include spacing-300(margin-left);
+			}
+		}
+
+		&__link {
 			@include underline-animation($color-primary--black);
 
 			color: $color-primary--black;
-		}
+			display: inline-block;
+			text-decoration: none;
+			padding: 1rem 0;
+			text-transform: uppercase;
+			overflow-y: hidden;
+			vertical-align: text-top;
 
-		.dot {
-			background-color: $color-primary--black;
-		}
-
-		.nav__logo--sinnerschrader {
-			color: $color-primary--black;
+			.is-dark & {
+				color: $color-primary--white;
+			}
 		}
 	}
 
-	&.is-transparent {
-		background-color: transparent;
-		color: $color-primary--white;
+	.dot {
+		background-color: $color-primary--black;
+	}
 
-		.nav__list__link {
-			@include underline-animation($color-primary--white);
-
-			color: $color-primary--white;
-		}
-
-		.dot {
-			background-color: $color-primary--white;
-		}
-
-		.nav__logo--sinnerschrader {
-			color: $color-primary--white;
-		}
+	.nav__logo--sinnerschrader {
+		color: $color-primary--black;
 	}
 
 	&.is-text-dark {
@@ -154,8 +163,10 @@
 		}
 	}
 
-	.is-dark & {
-		background-color: $color-primary--black;
+	.is-dark &,
+	&.is-transparent {
+		background-color: transparent;
+		color: $color-primary--white;
 
 		.nav__list__link {
 			@include underline-animation($color-primary--white);
@@ -170,6 +181,10 @@
 		.nav__logo--sinnerschrader {
 			color: $color-primary--white;
 		}
+	}
+
+	.is-dark & {
+		background-color: $color-primary--black;
 	}
 
 	&__wrapper {
@@ -210,43 +225,6 @@
 
 		&--accenture-bold {
 			font-family: $font-sans-serif-semibold;
-		}
-	}
-
-	&__list {
-		align-items: stretch;
-		display: flex;
-		justify-content: flex-end;
-		line-height: 9.5rem;
-		margin: auto 0;
-		padding-left: 0;
-
-		@include bp-navigation() {
-			display: none;
-		}
-
-		&__item {
-			list-style-type: none;
-
-			& + & {
-				@include spacing-300(margin-left);
-			}
-		}
-
-		&__link {
-			@include underline-animation($color-primary--black);
-
-			color: $color-primary--black;
-			display: inline-block;
-			text-decoration: none;
-			padding: 1rem 0;
-			text-transform: uppercase;
-			overflow-y: hidden;
-			vertical-align: text-top;
-
-			.is-dark & {
-				color: $color-primary--white;
-			}
 		}
 	}
 

@@ -1,0 +1,33 @@
+@import "../core/variables";
+@import "../core/mixins";
+
+.teaser-image-container {
+	.teaser-image {
+		position: relative;
+		margin-bottom: $spacing--200;
+
+		picture > img {
+			display: block;
+			width: 100%;
+		}
+
+		//TODO: Move it to REM
+		.teaser-link {
+			position: absolute;
+			bottom: $spacing--200;
+			right: $spacing--200;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 40px;
+			height: 40px;
+			background-color: $color-primary--gray;
+			border-radius: 50%;
+
+			svg {
+				width: 16px;
+				height: 16px;
+			}
+		}
+	}
+}

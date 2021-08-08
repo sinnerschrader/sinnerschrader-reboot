@@ -1,0 +1,19 @@
+<div class="teaser-image-container">
+	<div class="teaser-image">
+		<picture>
+			<source media="(max-width: 599px)" srcset="./assets/images/mobile/vw-car.webp" type="image/webp" />
+			<source media="(min-width: 600px)" srcset="./assets/images/tablet/vw-car.webp" type="image/webp" />
+			<source media="(min-width: 1200px)" srcset="./assets/images/desktop/vw-car.webp" type="image/webp" />
+			<img alt="Small image of the audi-main SinnerSchrader office" src="./assets/images/fallback/vw-car.webp" />
+		</picture>
+		{% unless data.image-text-teaser.href == empty %}
+		<a class="teaser-link">
+			<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M18 26L26.5858 17.4142C27.3668 16.6332 27.3668 15.3668 26.5858 14.5858L18 6" stroke="#fff" stroke-width="2" />
+				<path d="M4 16L27 16" stroke="#fff" stroke-width="2" />
+			</svg>
+		</a>
+		{% endunless %}
+	</div>
+	<p><b>Title</b> subtitle</p>
+</div>

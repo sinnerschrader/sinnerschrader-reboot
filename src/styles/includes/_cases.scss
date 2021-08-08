@@ -1,7 +1,30 @@
 @import "../core/variables";
 @import "../core/mixins";
 
-.gallery-container {
+.teaser-container {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	row-gap: $spacing--600;
+
+	.navigation {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		@include bp-s-and-above {
+			grid-column: span 3 / auto;
+		}
+	}
+
+	//TODO: Could be done over type
+	.teaser-image-container:nth-child(2) {
+		@include bp-s-and-above {
+			grid-column: span 5 / auto;
+		}
+	}
+
+	.teaser-image-container:nth-child(3) {
+		@include bp-s-and-above {
+			grid-column: span 4 / auto;
+		}
+	}
 }

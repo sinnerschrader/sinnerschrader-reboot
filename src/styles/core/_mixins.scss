@@ -434,3 +434,13 @@
 		transition: transform 0.3s ease-in-out, letter-spacing 0.3s ease-in-out;
 	}
 }
+
+@function calculateRem($size) {
+	$remSize: $size / 16px;
+	@return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+	font-size: $size;
+	font-size: calculateRem($size);
+}

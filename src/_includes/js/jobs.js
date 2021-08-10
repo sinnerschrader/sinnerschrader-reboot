@@ -128,6 +128,16 @@ export class FilterList {
 	// open close the filter bar
 	toggleFilterBarOpen() {
 		this.controls.classList.toggle("is-open");
+
+		if (this.controls.classList.contains("is-open")) {
+			this.controls.querySelectorAll("input").forEach((input) => input.removeAttribute("tabindex"));
+			this.controls.querySelector("#js-clear-filter").removeAttribute("tabindex");
+			this.controls.querySelector("#js-apply-filter").removeAttribute("tabindex");
+		} else {
+			this.controls.querySelectorAll("input").forEach((input) => input.setAttribute("tabindex", -1));
+			this.controls.querySelector("#js-apply-filter").setAttribute("tabindex", -1);
+			this.controls.querySelector("#js-clear-filter").setAttribute("tabindex", -1);
+		}
 	}
 
 	// Loops through HTML Categories in the filter section and creates an filter object

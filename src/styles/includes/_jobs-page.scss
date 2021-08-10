@@ -202,6 +202,7 @@ $filter-bar-height--desktop: 11.8rem;
 
 		// fieldset -> filter group
 		&__category {
+			grid-row-start: 1;
 			padding-right: 1em;
 		}
 
@@ -227,6 +228,11 @@ $filter-bar-height--desktop: 11.8rem;
 
 			svg {
 				filter: invert(1);
+			}
+
+			&:focus-within {
+				outline: 0.3rem solid $color-secondary--yellow;
+				outline-offset: 0.5rem;
 			}
 
 			&.is-active {

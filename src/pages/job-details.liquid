@@ -38,7 +38,21 @@ dataJsItem: bg-scroll-animation
 	{% capture secondline %}in {{ job.data.location | capitalize }}{% endcapture %}
 	<section class="fade-bg-black grid">{% include page-headline, firstline: firstline, secondline: secondline %}</section>
 	<section>
-		{% include slider, data: job-details %}
+		{%if job.data.discipline == "account management" %}
+			{% include slider, slides: job-details.slider.slides.accountManagement %}
+		{% endif %}
+		{%if job.data.discipline == "corporate functions" %}
+			{% include slider, slides: job-details.slider.slides.corporateFunctions %}
+		{% endif %}
+		{%if job.data.discipline == "creative" %}
+			{% include slider, slides: job-details.slider.slides.creative %}
+		{% endif %}
+		{%if job.data.discipline == "strategy" %}
+			{% include slider, slides: job-details.slider.slides.strategy %}
+		{% endif %}
+		{%if job.data.discipline == "tech" %}
+			{% include slider, slides: job-details.slider.slides.tech %}
+		{% endif %}
 	</section>
 	<section id="job-description">
 		{% include section-header, title: "job details", number: "02" %}

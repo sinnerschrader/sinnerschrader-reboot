@@ -1,28 +1,73 @@
 {
 	"slider": {
-		"slides": [
-			{
-				"mobileSrc": "/assets/images/mobile/culture1.webp",
-				"tabletSrc": "/assets/images/tablet/culture1.webp",
-				"desktopSrc": "/assets/images/desktop/culture1.webp",
-				"fallbackSrc": "/assets/images/fallback/culture1.jpg",
-				"altText": "Person sitting at a desk in an office, a bonsai tree is seen in the foreground"
-			},
-			{
-				"mobileSrc": "/assets/images/mobile/culture2.webp",
-				"tabletSrc": "/assets/images/tablet/culture2.webp",
-				"desktopSrc": "/assets/images/desktop/culture2.webp",
-				"fallbackSrc": "/assets/images/fallback/culture2.jpg",
-				"altText": "Person swinging on an swing in an office with a floor in a geometric pattern"
-			},
-			{
-				"mobileSrc": "/assets/images/mobile/culture3.webp",
-				"tabletSrc": "/assets/images/tablet/culture3.webp",
-				"desktopSrc": "/assets/images/desktop/culture3.webp",
-				"fallbackSrc": "/assets/images/fallback/culture3.jpg",
-				"altText": "Person standing in a room wearing a motorcycle helmet"
-			}
-		]
+		"slides": {
+			"accountManagement": [
+				{
+					"mobileSrc": "/assets/images/mobile/account_management.webp",
+					"tabletSrc": "/assets/images/tablet/account_management.webp",
+					"desktopSrc": "/assets/images/desktop/account_management.webp",
+					"fallbackSrc": "/assets/images/fallback/account_management.webp",
+					"altText": "TODO: account_management.webp"
+				}
+			],
+			"corporateFunctions": [
+				{
+					"mobileSrc": "/assets/images/mobile/corporate_functions1.webp",
+					"tabletSrc": "/assets/images/tablet/corporate_functions1.webp",
+					"desktopSrc": "/assets/images/desktop/corporate_functions1.webp",
+					"fallbackSrc": "/assets/images/fallback/corporate_functions1.webp",
+					"altText": "TODO: corporate_functions1.webp"
+				},
+				{
+					"mobileSrc": "/assets/images/mobile/corporate_functions2.webp",
+					"tabletSrc": "/assets/images/tablet/corporate_functions2.webp",
+					"desktopSrc": "/assets/images/desktop/corporate_functions2.webp",
+					"fallbackSrc": "/assets/images/fallback/corporate_functions2.webp",
+					"altText": "TODO: corporate_functions2.webp"
+				},
+				{
+					"mobileSrc": "/assets/images/mobile/corporate_functions3.webp",
+					"tabletSrc": "/assets/images/tablet/corporate_functions3.webp",
+					"desktopSrc": "/assets/images/desktop/corporate_functions3.webp",
+					"fallbackSrc": "/assets/images/fallback/corporate_functions3.webp",
+					"altText": "TODO: corporate_functions3.webp"
+				}
+			],
+			"creative": [
+				{
+					"mobileSrc": "/assets/images/mobile/creative.webp",
+					"tabletSrc": "/assets/images/tablet/creative.webp",
+					"desktopSrc": "/assets/images/desktop/creative.webp",
+					"fallbackSrc": "/assets/images/fallback/creative.webp",
+					"altText": "TODO: creative.webp"
+				}
+			],
+			"strategy": [
+				{
+					"mobileSrc": "/assets/images/mobile/strategy.webp",
+					"tabletSrc": "/assets/images/tablet/strategy.webp",
+					"desktopSrc": "/assets/images/desktop/strategy.webp",
+					"fallbackSrc": "/assets/images/fallback/strategy.webp",
+					"altText": "TODO: strategy.webp"
+				}
+			],
+			"tech": [
+				{
+					"mobileSrc": "/assets/images/mobile/tech1.webp",
+					"tabletSrc": "/assets/images/tablet/tech1.webp",
+					"desktopSrc": "/assets/images/desktop/tech1.webp",
+					"fallbackSrc": "/assets/images/fallback/tech1.webp",
+					"altText": "TODO: tech1.webp"
+				},
+				{
+					"mobileSrc": "/assets/images/mobile/tech2.webp",
+					"tabletSrc": "/assets/images/tablet/tech2.webp",
+					"desktopSrc": "/assets/images/desktop/tech2.webp",
+					"fallbackSrc": "/assets/images/fallback/tech2.webp",
+					"altText": "TODO: tech2.webp"
+				}
+			]
+		}
 	},
 	"jobDescription": {
 		"titleExpectations": "What you can expect from us",

@@ -1,89 +1,33 @@
 {
-	"first": {
-		"headline": {
-			"firstline": "Product Designer UI",
-			"secondline": "(f/m/d/-)"
-		}
-	},
-	"headline": {
-		"firstline": "Join our <span>creative</span> team ",
-		"secondline": " in Hamburg"
-	},
-	"jobIntro": {
-		"link": "details",
-		"text": "As a hands-on designer, you are sometimes an idea generator, sometimes an aggregator in the intensive collaboration between Product Design, Product Strategy, Product Engineering and Product and Client Management. What is unfamiliar to you arouses your curiosity; you approach the familiar with self-critical distance.  You quickly find convincing solutions and are the leading creative force in winning new customers and deliver real added value for our existing customers with your work."
-	},
 	"slider": {
 		"slides": [
 			{
-				"mobileSrc": "./assets/images/mobile/culture1.webp",
-				"tabletSrc": "./assets/images/tablet/culture1.webp",
-				"desktopSrc": "./assets/images/desktop/culture1.webp",
-				"fallbackSrc": "./assets/images/fallback/culture1.jpg",
+				"mobileSrc": "/assets/images/mobile/culture1.webp",
+				"tabletSrc": "/assets/images/tablet/culture1.webp",
+				"desktopSrc": "/assets/images/desktop/culture1.webp",
+				"fallbackSrc": "/assets/images/fallback/culture1.jpg",
 				"altText": "Person sitting at a desk in an office, a bonsai tree is seen in the foreground"
 			},
 			{
-				"mobileSrc": "./assets/images/mobile/culture2.webp",
-				"tabletSrc": "./assets/images/tablet/culture2.webp",
-				"desktopSrc": "./assets/images/desktop/culture2.webp",
-				"fallbackSrc": "./assets/images/fallback/culture2.jpg",
+				"mobileSrc": "/assets/images/mobile/culture2.webp",
+				"tabletSrc": "/assets/images/tablet/culture2.webp",
+				"desktopSrc": "/assets/images/desktop/culture2.webp",
+				"fallbackSrc": "/assets/images/fallback/culture2.jpg",
 				"altText": "Person swinging on an swing in an office with a floor in a geometric pattern"
 			},
 			{
-				"mobileSrc": "./assets/images/mobile/culture3.webp",
-				"tabletSrc": "./assets/images/tablet/culture3.webp",
-				"desktopSrc": "./assets/images/desktop/culture3.webp",
-				"fallbackSrc": "./assets/images/fallback/culture3.jpg",
+				"mobileSrc": "/assets/images/mobile/culture3.webp",
+				"tabletSrc": "/assets/images/tablet/culture3.webp",
+				"desktopSrc": "/assets/images/desktop/culture3.webp",
+				"fallbackSrc": "/assets/images/fallback/culture3.jpg",
 				"altText": "Person standing in a room wearing a motorcycle helmet"
 			}
 		]
 	},
 	"jobDescription": {
 		"titleExpectations": "What you can expect from us",
-		"expectationsList": [
-			{
-				"item": "Design of digital applications as well as in the creation of consistent design systems."
-			},
-			{
-				"item": "Design of digital applications as well as in the creation of consistent design systems."
-			},
-			{
-				"item": "Design of digital applications as well as in the creation of consistent design systems."
-			},
-			{
-				"item": "Design of digital applications as well as in the creation of consistent design systems."
-			}
-		],
 		"titleRequirements": "What you should bring with you",
-		"requirementsList": [
-			{
-				"item": "A strong portfolio of case studies and completed work"
-			},
-			{
-				"item": "A strong portfolio of case studies and completed work"
-			},
-			{
-				"item": "A strong portfolio of case studies and completed workf"
-			},
-			{
-				"item": "A strong portfolio of case studies and completed work"
-			}
-		],
-		"titleOffer": "What we offer",
-		"offerList": [
-			{
-				"item": "Accident insurance"
-			},
-			{
-				"item": "Workers Council"
-			},
-			{
-				"item": "Employer share purchase program"
-			},
-			{
-				"item": "Employee Referral Program"
-			}
-		]
+		"titleOffer": "What we offer"
 	},
 	"about": {
 		"text-teaser": {

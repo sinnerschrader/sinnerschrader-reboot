@@ -44,7 +44,13 @@ renderData: filterbar
 				</p>
 				<!-- Open / Close Filterbar MOBILE ONLY -->
 				<div class="job-filter-bar__toggle">
-					<button class="toggle-button js-toggle-filter-bar--mobile">
+					<button
+						class="toggle-button js-toggle-filter-bar--mobile"
+						aria-label="{{ careers.filter.ariaLabelFilterToggle }}"
+						aria-haspopup="true"
+						aria-controls="js-job-filter-bar"
+						aria-expanded="false"
+					>
 						<svg class="button__icon">
 							<use href="/assets/svg/icons.svg#chevron-down-s" />
 						</svg>
@@ -62,7 +68,14 @@ renderData: filterbar
 
 					<!-- Open / Close Filterbar MOBILE ONLY -->
 					<div class="job-filter-bar__toggle">
-						<button class="toggle-button js-toggle-filter-bar--mobile">
+						<button
+							class="toggle-button js-toggle-filter-bar--mobile"
+							aria-label="{{ careers.filter.ariaLabelFilterToggle }}"
+							aria-haspopup="true"
+							aria-controls="js-job-filter-bar"
+							aria-expanded="false"
+							tabindex="-1"
+						>
 							<svg class="button__icon">
 								<use href="/assets/svg/icons.svg#chevron-down-s" />
 							</svg>
@@ -72,7 +85,14 @@ renderData: filterbar
 
 				<!-- Open / Close Filterbar -->
 				<div class="job-filter-bar__toggle col-1 col-start-12 hidden-xs">
-					<button id="js-toggle-filter-bar" class="toggle-button toggle-button--jobs">
+					<button
+						id="js-toggle-filter-bar"
+						class="toggle-button toggle-button--jobs"
+						aria-label="{{ careers.filter.ariaLabelFilterToggle }}"
+						aria-haspopup="true"
+						aria-controls="js-job-filter-bar"
+						aria-expanded="false"
+					>
 						<svg class="button__icon">
 							<use href="/assets/svg/icons.svg#chevron-down-s" />
 						</svg>
@@ -92,7 +112,14 @@ renderData: filterbar
 
 		<!-- Filter Container Floating Bubble / Appears when filterbar is out of sight -->
 		<div id="js-mobile-floater" class="mobile-floater visible-xs">
-			<button class="toggle-button js-toggle-filter-bar--mobile">
+			<button
+				class="toggle-button js-toggle-filter-bar--mobile"
+				aria-label="{{ careers.filter.ariaLabelFilterToggle }}"
+				aria-haspopup="true"
+				aria-controls="js-job-filter-bar"
+				aria-expanded="false"
+				tabindex="-1"
+			>
 				<svg class="button__icon">
 					<use href="/assets/svg/icons.svg#filter" />
 				</svg>

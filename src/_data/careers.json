@@ -12,5 +12,8 @@
 		},
 		"buttonText": "Apply now",
 		"buttonIconUrl": "/assets/meta-assets/favicon.png"
+	},
+	"filter": {
+		"ariaLabelFilterToggle": "Toggle filter selection"
 	}
 }

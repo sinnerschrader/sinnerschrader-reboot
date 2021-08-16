@@ -453,7 +453,10 @@ $filter-bar-height--desktop: 11.8rem;
 			}
 
 			.job-filter-bar__confirm-group {
-				margin-top: 15rem;
+				position: sticky;
+				bottom: 0;
+				padding-top: 2rem;
+				background-color: $color-primary--black;
 
 				.button--clear {
 					background-color: $color-primary--gray;

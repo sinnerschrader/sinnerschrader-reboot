@@ -13,6 +13,7 @@
 		@include interactive-100();
 		@include spacing-800(margin-top);
 
+		width: fit-content;
 		text-transform: uppercase;
 
 		@include bp-xs {

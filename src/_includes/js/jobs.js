@@ -128,6 +128,28 @@ export class FilterList {
 	// open close the filter bar
 	toggleFilterBarOpen() {
 		this.controls.classList.toggle("is-open");
+
+		if (this.controls.classList.contains("is-open")) {
+			this.controls.querySelectorAll("input").forEach((input) => input.removeAttribute("tabindex"));
+			this.controls.querySelector("#js-clear-filter").removeAttribute("tabindex");
+			this.controls.querySelector("#js-apply-filter").removeAttribute("tabindex");
+
+			this.controls.querySelectorAll("[aria-expanded]").forEach((button) => button.setAttribute("aria-expanded", true));
+
+			this.controls.querySelector("#js-job-filter-bar .job-filter-wrapper button.js-toggle-filter-bar--mobile").removeAttribute("tabindex");
+			this.controls.querySelector("#js-job-filter-bar header button.js-toggle-filter-bar--mobile").setAttribute("tabindex", -1);
+		} else {
+			this.controls.querySelectorAll("input").forEach((input) => input.setAttribute("tabindex", -1));
+			this.controls.querySelector("#js-apply-filter").setAttribute("tabindex", -1);
+			this.controls.querySelector("#js-clear-filter").setAttribute("tabindex", -1);
+
+			this.controls.querySelectorAll("[aria-expanded]").forEach((button) => button.setAttribute("aria-expanded", false));
+
+			this.controls
+				.querySelector("#js-job-filter-bar .job-filter-wrapper button.js-toggle-filter-bar--mobile")
+				.setAttribute("tabindex", -1);
+			this.controls.querySelector("#js-job-filter-bar header button.js-toggle-filter-bar--mobile").removeAttribute("tabindex");
+		}
 	}
 
 	// Loops through HTML Categories in the filter section and creates an filter object

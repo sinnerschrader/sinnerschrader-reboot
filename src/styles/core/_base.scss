@@ -37,7 +37,7 @@ body {
 		background-color: $color-primary--black;
 		color: $color-primary--white;
 		/* stylelint-disable-next-line */
-		.job-details__openings {
+		.job-details__openings > *:not(a) {
 			filter: invert(1);
 		}
 	}

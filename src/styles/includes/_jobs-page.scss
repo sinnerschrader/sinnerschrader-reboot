@@ -210,6 +210,10 @@ $filter-bar-height--desktop: 11.8rem;
 		// fieldset -> filter group
 		&__category {
 			padding-right: 1em;
+
+			@include bp-s-and-above {
+				grid-row-start: 1;
+			}
 		}
 
 		// fieldset legend
@@ -234,6 +238,11 @@ $filter-bar-height--desktop: 11.8rem;
 
 			svg {
 				filter: invert(1);
+			}
+
+			&:focus-within {
+				outline: 0.3rem solid $color-secondary--yellow;
+				outline-offset: 0.5rem;
 			}
 
 			&.is-active {

@@ -17,6 +17,7 @@ class Navigation {
 		this.navigationContainer = document.querySelector(".nav");
 		if (!this.navigationContainer) return;
 
+		this.jobFilterBar = document.querySelector("#js-job-filter-bar");
 		this.mobileToggleBtn = this.navigationContainer.querySelector(".nav__mobile-toggle");
 		this.textColorModifier = this.navigationContainer.getAttribute("data-js-option");
 
@@ -57,8 +58,10 @@ class Navigation {
 	animateInOut(scrollPosition) {
 		if (scrollPosition > this.lastScrollTop) {
 			this.navigationContainer.classList.add(this.mobileNavHiddenClass);
+			this.jobFilterBar.classList.add(this.mobileNavHiddenClass);
 		} else {
 			this.navigationContainer.classList.remove(this.mobileNavHiddenClass);
+			this.jobFilterBar.classList.remove(this.mobileNavHiddenClass);
 		}
 	}
 

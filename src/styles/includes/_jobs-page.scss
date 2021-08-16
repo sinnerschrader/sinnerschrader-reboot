@@ -140,7 +140,8 @@ $filter-bar-height--desktop: 11.8rem;
 
 		// sticky scroll behaviour
 		position: sticky;
-		top: 0;
+		// height of main navigation, which is visible when scrolling up
+		top: 9.5rem;
 		background-color: $color-primary--black;
 		color: $color-primary--white;
 		box-sizing: border-box;
@@ -148,6 +149,7 @@ $filter-bar-height--desktop: 11.8rem;
 		// this is the height of the closed menu
 		max-height: $filter-bar-height--mobile;
 		overflow: hidden;
+		transition: top 0.7s ease-in-out;
 
 		@include bp-s {
 			position: initial;
@@ -165,6 +167,11 @@ $filter-bar-height--desktop: 11.8rem;
 			max-height: $filter-bar-height--desktop;
 			padding-top: $spacing--400--desktop;
 			z-index: 13;
+		}
+
+		// position at top of screen when main navigation is not visible
+		&.is-mobile-nav-hidden {
+			top: 0;
 		}
 
 		// This is toggle without animation for now.

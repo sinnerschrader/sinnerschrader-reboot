@@ -25,7 +25,7 @@ dataJsItem: bg-scroll-animation
 
 	<section>
 		{% include section-header, title: "Culture", number: "03", type: "medium", spinningWheel: "spinning-wheel" %}
-		{% include slider, data: landingpage %}
+		{% include slider, data: landingpage, slides: landingpage.slider.slides %}
 	</section>
 
 	<section class="fade-bg-black">
@@ -46,5 +46,3 @@ dataJsItem: bg-scroll-animation
 </main>
 
 {% include footer, data: global %}
-
-

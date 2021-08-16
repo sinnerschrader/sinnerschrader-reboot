@@ -31,7 +31,7 @@ dataJsItem: bg-scroll-animation
 		</div>
 	</section>
 	<section class="fade-bg-black">
-		{% capture title %}{{ job.data.date | date: "%d.%m.%Y" }} &#183; {{ job.data.discipline }} &#183; {{ job.data.location }}{% endcapture %}
+		{% capture title %}{{ job.date | date: "%d.%m.%Y" }} &#183; {{ job.data.discipline }} &#183; {{ job.data.location }}{% endcapture %}
 		{% include section-header, title: title, spinningWheel: "spinning-wheel" %}
 	</section>
 	{% capture firstline %}Join our <span>{{ job.data.discipline }}</span> team {% endcapture %}

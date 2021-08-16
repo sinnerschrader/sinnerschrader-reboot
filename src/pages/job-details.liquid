@@ -38,21 +38,37 @@ dataJsItem: bg-scroll-animation
 	{% capture secondline %}in {{ job.data.location | capitalize }}{% endcapture %}
 	<section class="fade-bg-black grid">{% include page-headline, firstline: firstline, secondline: secondline %}</section>
 	<section>
-		{%if job.data.discipline == "account management" %}
-			{% include slider, slides: job-details.slider.slides.accountManagement %}
-		{% endif %}
-		{%if job.data.discipline == "corporate functions" %}
-			{% include slider, slides: job-details.slider.slides.corporateFunctions %}
-		{% endif %}
-		{%if job.data.discipline == "creative" %}
-			{% include slider, slides: job-details.slider.slides.creative %}
-		{% endif %}
-		{%if job.data.discipline == "strategy" %}
-			{% include slider, slides: job-details.slider.slides.strategy %}
-		{% endif %}
-		{%if job.data.discipline == "tech" %}
-			{% include slider, slides: job-details.slider.slides.tech %}
-		{% endif %}
+		{% case job.data.location %}
+			{% when "berlin" %}
+				{% assign locationSlides = job-details.slider.slides.berlin %}
+			{% when "frankfurt" %}
+				{% assign locationSlides = job-details.slider.slides.frankfurt %}
+			{% when "hamburg" %}
+				{% assign locationSlides = job-details.slider.slides.hamburg %}
+			{% when "munich" %}
+				{% assign locationSlides = job-details.slider.slides.munich %}
+			{% when "prague" %}
+				{% assign locationSlides = job-details.slider.slides.prague %}
+			{% when "zurich" %}
+				{% assign locationSlides = job-details.slider.slides.zurich %}
+		{% endcase %}
+		
+		{% case job.data.discipline %}
+			{% when "account management" %}
+				{% assign disciplineSlides = job-details.slider.slides.accountManagement %}
+			{% when "corporate functions" %}
+				{% assign disciplineSlides = job-details.slider.slides.corporateFunctions %}
+			{% when "creative" %}
+				{% assign disciplineSlides = job-details.slider.slides.creative %}
+			{% when "strategy" %}
+				{% assign disciplineSlides = job-details.slider.slides.strategy %}
+			{% when "tech" %}
+				{% assign disciplineSlides = job-details.slider.slides.tech %}
+		{% endcase %}
+
+		{% assign slides = locationSlides | concat: disciplineSlides %}
+
+		{% include slider, slides: slides %}
 	</section>
 	<section id="job-description">
 		{% include section-header, title: "job details", number: "02" %}

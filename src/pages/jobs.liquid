@@ -112,18 +112,18 @@ renderData: filterbar
 
 		<!-- Filter Container Floating Bubble / Appears when filterbar is out of sight -->
 		<div id="js-mobile-floater" class="mobile-floater visible-xs">
-			<button
-				class="toggle-button js-toggle-filter-bar--mobile"
-				aria-label="{{ careers.filter.ariaLabelFilterToggle }}"
-				aria-haspopup="true"
-				aria-controls="js-job-filter-bar"
-				aria-expanded="false"
-				tabindex="-1"
-			>
-				<svg class="button__icon">
-					<use href="/assets/svg/icons.svg#filter" />
-				</svg>
-			</button>
+            <div class="toggle-button js-toggle-filter-bar--mobile">
+                <button
+                    class="button-notext"
+                    aria-label="{{ careers.filter.ariaLabelFilterToggle }}"
+                    aria-haspopup="true"
+                    aria-controls="js-job-filter-bar"
+                    aria-expanded="false"
+                    tabindex="-1"
+                >
+                    <img class="button-icon" src="/assets/svg/Filter-L.svg">
+                </button>
+            </div>
 		</div>
 
 		<!-- Categories in the listing -->

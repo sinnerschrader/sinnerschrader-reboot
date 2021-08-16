@@ -65,48 +65,18 @@ $filter-bar-height--desktop: 11.8rem;
 			top: 90vh;
 			text-align: right;
 			max-width: 100%;
-			overflow: hidden;
+			overflow: visible;
 			z-index: 100;
 
 			.toggle-button {
-				@include icon-button();
-
 				position: relative;
 				cursor: pointer;
-				transform: translateX(4rem);
+				transform: translateX(100%);
 				transition: transform 0.4s ease-in;
 			}
 
 			.freeze-scroll & {
 				display: none;
-			}
-
-			.is-floating ~ & {
-				.toggle-button {
-					transform: translateX(-4rem);
-				}
-			}
-
-			svg {
-				position: absolute;
-				width: 100%;
-				height: 100%;
-				left: 4px;
-				top: 5px;
-				filter: invert(1);
-			}
-		}
-
-		.js-toggle-filter-bar--mobile {
-			position: relative;
-
-			svg {
-				position: absolute;
-				width: 16px;
-				height: 16px;
-				left: 50%;
-				top: 50%;
-				transform: translate(-50%, -50%);
 			}
 		}
 	}
@@ -179,6 +149,12 @@ $filter-bar-height--desktop: 11.8rem;
 		// TODO: find an elegant solution for animation
 		&.is-open {
 			max-height: initial;
+		}
+
+		&.is-floating ~ .mobile-floater {
+			.toggle-button {
+				transform: translateX(-50%);
+			}
 		}
 
 		// this is only for the mobile view

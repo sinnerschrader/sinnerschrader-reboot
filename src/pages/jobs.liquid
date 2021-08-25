@@ -133,12 +133,12 @@ renderData: filterbar
 			strategyJobs = collections.jobs | groupByDiscipline: 'strategy' %}
 
 			<!-- Render their dedicated lists -->
-			{% include job-filter-list-category, discipline: 'Account Management', jobs: managementJobs %} {% include job-filter-list-category,
+			{% include job-filter-list-category, discipline: 'Account Manage&shy;ment', jobs: managementJobs %} {% include job-filter-list-category,
 			discipline: 'Creative', jobs: creativeJobs %} {% include job-filter-list-category, discipline: 'Strategy', jobs: strategyJobs %} {%
 			include job-filter-list-category, discipline: 'Tech', jobs: techJobs %}
 		</section>
-		<section>{% include section-header, title: "Here we are", number: "06", type: "medium" %} {% include locations %}</section>
 	</section>
+    <section>{% include section-header, title: "Here we are", number: "06", type: "medium" %} {% include locations %}</section>
 </main>
 
 {% include footer, data: global %}

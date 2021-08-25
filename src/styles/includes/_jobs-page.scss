@@ -312,8 +312,11 @@ $filter-bar-height--desktop: 11.8rem;
 	}
 
 	.job-list {
-		padding-top: $spacing--600;
 		margin-top: 0;
+
+		@include bp-s-and-above {
+			padding-top: $spacing--600;
+		}
 
 		// A category holds subheadline for discipline
 		// and a list for the offerings
@@ -338,7 +341,6 @@ $filter-bar-height--desktop: 11.8rem;
 				top: 0;
 				margin: 0;
 				z-index: 0;
-				padding-right: 23rem;
 
 				@include bp-s-and-above {
 					top: $filter-bar-height--desktop + $spacing--400;

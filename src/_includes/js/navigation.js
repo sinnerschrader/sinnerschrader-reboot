@@ -51,6 +51,7 @@ class Navigation {
 		this.animateInOut(scrollTop);
 		this.detectPageTop(scrollTop);
 		this.toggleTransparentClass(scrollTop);
+		this.toggleMobileFilterBasedOnJobListScrollPosition();
 
 		this.lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
 	}
@@ -84,6 +85,16 @@ class Navigation {
 			this.navigationContainer.classList.remove(this.transparentClass);
 			this.topPositionColorDark ? this.navigationContainer.classList.remove("is-text-dark") : "";
 			this.topPositionColorLight ? this.navigationContainer.classList.remove("is-text-light") : "";
+		}
+	}
+
+	toggleMobileFilterBasedOnJobListScrollPosition() {
+		const filterHeader = document.getElementById("js-job-filter-bar");
+
+		if (filterHeader.getBoundingClientRect().bottom < 0) {
+			filterHeader.classList.add("is-floating");
+		} else {
+			filterHeader.classList.remove("is-floating");
 		}
 	}
 }

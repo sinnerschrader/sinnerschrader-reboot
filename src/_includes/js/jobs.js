@@ -245,33 +245,3 @@ export class FilterList {
 			});
 	}
 }
-
-export class FloatObserver {
-	objective;
-	target;
-	targetClass = "";
-	observer;
-
-	constructor(props) {
-		this.objective = document.querySelector(props.objectiveSelector);
-		this.target = document.querySelector(props.targetSelector);
-		this.targetClass = props.targetClass;
-
-		if (this.objective === null || this.target === null) {
-			console.warn("No DOM elements found!");
-			return;
-		}
-
-		this.bindListeners();
-	}
-	bindListeners() {
-		this.observer = new IntersectionObserver((changes) => {
-			if (changes[0].isIntersecting) {
-				this.target.classList.remove(this.targetClass);
-			} else {
-				this.target.classList.add(this.targetClass);
-			}
-		});
-		this.observer.observe(this.objective);
-	}
-}

@@ -66,7 +66,7 @@ $filter-bar-height--desktop: 11.8rem;
 			text-align: right;
 			max-width: 100%;
 			overflow: hidden;
-			z-index: 100;
+			z-index: 12;
 
 			.toggle-button {
 				position: relative;
@@ -352,7 +352,7 @@ $filter-bar-height--desktop: 11.8rem;
 					@include spacing-400(padding-bottom);
 
 					background: $color-primary--white;
-					z-index: 12;
+					z-index: 11;
 
 					.is-dark & {
 						background: transparent;

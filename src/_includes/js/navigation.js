@@ -58,10 +58,10 @@ class Navigation {
 	animateInOut(scrollPosition) {
 		if (scrollPosition > this.lastScrollTop) {
 			this.navigationContainer.classList.add(this.mobileNavHiddenClass);
-			this.jobFilterBar.classList.add(this.mobileNavHiddenClass);
+			this.jobFilterBar?.classList.add(this.mobileNavHiddenClass);
 		} else {
 			this.navigationContainer.classList.remove(this.mobileNavHiddenClass);
-			this.jobFilterBar.classList.remove(this.mobileNavHiddenClass);
+			this.jobFilterBar?.classList.remove(this.mobileNavHiddenClass);
 		}
 	}
 

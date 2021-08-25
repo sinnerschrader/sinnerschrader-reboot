@@ -112,18 +112,16 @@ renderData: filterbar
 
 		<!-- Filter Container Floating Bubble / Appears when filterbar is out of sight -->
 		<div id="js-mobile-floater" class="mobile-floater visible-xs">
-			<button
-				class="toggle-button js-toggle-filter-bar--mobile"
-				aria-label="{{ careers.filter.ariaLabelFilterToggle }}"
-				aria-haspopup="true"
-				aria-controls="js-job-filter-bar"
-				aria-expanded="false"
-				tabindex="-1"
-			>
-				<svg class="button__icon">
-					<use href="/assets/svg/icons.svg#filter" />
-				</svg>
-			</button>
+                <button
+                    class="button-notext toggle-button js-toggle-filter-bar--mobile"
+                    aria-label="{{ careers.filter.ariaLabelFilterToggle }}"
+                    aria-haspopup="true"
+                    aria-controls="js-job-filter-bar"
+                    aria-expanded="false"
+                    tabindex="-1"
+                >
+                    <img class="button-icon" src="/assets/svg/Filter-L.svg">
+                </button>
 		</div>
 
 		<!-- Categories in the listing -->
@@ -134,12 +132,12 @@ renderData: filterbar
 			strategyJobs = collections.jobs | groupByDiscipline: 'strategy' %}
 
 			<!-- Render their dedicated lists -->
-			{% include job-filter-list-category, discipline: 'Account Management', jobs: managementJobs %} {% include job-filter-list-category,
+			{% include job-filter-list-category, discipline: 'Account Manage&shy;ment', jobs: managementJobs %} {% include job-filter-list-category,
 			discipline: 'Creative', jobs: creativeJobs %} {% include job-filter-list-category, discipline: 'Strategy', jobs: strategyJobs %} {%
 			include job-filter-list-category, discipline: 'Tech', jobs: techJobs %}
 		</section>
-		<section>{% include section-header, title: "Here we are", number: "06", type: "medium" %} {% include locations %}</section>
 	</section>
+    <section>{% include section-header, title: "Here we are", number: "06", type: "medium" %} {% include locations %}</section>
 </main>
 
 {% include footer, data: global %}

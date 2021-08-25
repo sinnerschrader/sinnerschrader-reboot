@@ -1,16 +1,16 @@
-import { Slider } from "./slider.js";
-import { Locations } from "./locations";
-import { BackgroundScrollAnimation } from "./bg-scroll-animation";
-import { Video } from "./video.js";
-import { OfferingHeader } from "./offering-header";
-import { Offerings } from "./offerings";
-import { SlideIn } from "./animate-slidein";
-import { Parallax } from "./parallax";
 import { AnchorNavigation } from "./anchor-navigation";
+import { SlideIn } from "./animate-slidein";
+import { BackgroundScrollAnimation } from "./bg-scroll-animation";
 import { CareerContact } from "./careerContact";
 import { ImageTextTeaser } from "./image-text-teaser";
+import { FilterList } from "./jobs";
+import { Locations } from "./locations";
 import { Navigation } from "./navigation";
-import { FilterList, FloatObserver } from "./jobs";
+import { OfferingHeader } from "./offering-header";
+import { Offerings } from "./offerings";
+import { Parallax } from "./parallax";
+import { Slider } from "./slider.js";
+import { Video } from "./video.js";
 
 (() => {
 	if (isModuleNeeded("locations")) {
@@ -62,12 +62,6 @@ import { FilterList, FloatObserver } from "./jobs";
 			parentSelector: "#js-filter-list",
 			controlsSelector: "#js-job-filter-bar",
 			listSelector: "#js-job-listing",
-		});
-
-		const floatObserver = new FloatObserver({
-			objectiveSelector: "#js-mobile-filter-header",
-			targetSelector: "#js-job-filter-bar",
-			targetClass: "is-floating",
 		});
 	}
 

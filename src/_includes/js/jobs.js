@@ -1,3 +1,5 @@
+import { throttle } from "lodash-es";
+
 export class FilterList {
 	// Reference to parent element
 	parent;
@@ -31,6 +33,7 @@ export class FilterList {
 		// apply Eventlisteners
 		this.bindListeners();
 		this.createFilters();
+		this.detectScrollPositionOfFilterBar();
 	}
 
 	// UI Events
@@ -122,6 +125,24 @@ export class FilterList {
 		if (mobileViewport.matches) {
 			window.addEventListener("resize", mobileHeight);
 			mobileHeight();
+		}
+	}
+
+	// Detect scroll position of filter bar for mobile floater button appearence
+	detectScrollPositionOfFilterBar() {
+		this.toggleMobileFilterBasedOnJobListScrollPosition();
+
+		window.addEventListener("scroll", throttle(this.toggleMobileFilterBasedOnJobListScrollPosition.bind(this), 50));
+	}
+
+	// Toggle floating class to filter bar
+	toggleMobileFilterBasedOnJobListScrollPosition() {
+		const filterHeader = document.getElementById("js-job-filter-bar");
+
+		if (filterHeader.getBoundingClientRect().bottom < 0) {
+			filterHeader.classList.add("is-floating");
+		} else {
+			filterHeader.classList.remove("is-floating");
 		}
 	}
 
@@ -243,35 +264,5 @@ export class FilterList {
 			.forEach((item, index, self) => {
 				item.classList.add(this.hiddenClass);
 			});
-	}
-}
-
-export class FloatObserver {
-	objective;
-	target;
-	targetClass = "";
-	observer;
-
-	constructor(props) {
-		this.objective = document.querySelector(props.objectiveSelector);
-		this.target = document.querySelector(props.targetSelector);
-		this.targetClass = props.targetClass;
-
-		if (this.objective === null || this.target === null) {
-			console.warn("No DOM elements found!");
-			return;
-		}
-
-		this.bindListeners();
-	}
-	bindListeners() {
-		this.observer = new IntersectionObserver((changes) => {
-			if (changes[0].isIntersecting) {
-				this.target.classList.remove(this.targetClass);
-			} else {
-				this.target.classList.add(this.targetClass);
-			}
-		});
-		this.observer.observe(this.objective);
 	}
 }

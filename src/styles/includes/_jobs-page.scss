@@ -438,6 +438,8 @@ $filter-bar-height--desktop: 11.8rem;
 			position: fixed;
 			margin: 0;
 			padding: 0 2.4rem;
+			display: flex;
+			flex-direction: column;
 
 			.job-filter-bar__category {
 				padding-bottom: 3.2rem;
@@ -450,6 +452,7 @@ $filter-bar-height--desktop: 11.8rem;
 			.job-filter-bar__confirm-group {
 				position: sticky;
 				bottom: 0;
+				margin-top: auto;
 				padding-top: 2rem;
 				background-color: $color-primary--black;
 

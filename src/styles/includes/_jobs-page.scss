@@ -351,12 +351,13 @@ $filter-bar-height--desktop: 11.8rem;
 				@include bp-xs {
 					@include spacing-600(padding-top);
 					@include spacing-400(padding-bottom);
+					@include default-animation(background-color);
 
-					background: $color-primary--white;
+					background-color: $color-primary--white;
 					z-index: 11;
 
 					.is-dark & {
-						background: transparent;
+						background-color: $color-primary--black;
 					}
 
 					&:first-child {

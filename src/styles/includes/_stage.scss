@@ -6,7 +6,7 @@
 
 	background-color: $color-primary--black;
 	color: $color-primary--white;
-	height: calc(100vh - 9.5rem);
+	min-height: calc(100vh - 9.5rem);
 	position: relative;
 	overflow: hidden;
 	margin: 0;

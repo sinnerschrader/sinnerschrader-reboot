@@ -1,5 +1,13 @@
 <h1 class="headline-1">
-  {{ data.headline.firstline }}
-  <br>
-  {{ data.headline.secondline }}
+	{% if data.headline.firstline %}
+	{{ data.headline.firstline }}
+	{% else %}
+	{{ firstline }}
+	{% endif %}
+	<br />
+	{% if data.headline.secondline %}
+	{{ data.headline.secondline }}
+	{% else %}
+	{{ secondline }}
+	{% endif %}
 </h1>

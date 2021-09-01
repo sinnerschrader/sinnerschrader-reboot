@@ -28,16 +28,13 @@
 				right: -1rem;
 				height: 1rem;
 				filter: invert(0);
-				background: url("./assets/underline.svg");
+				background: url("./assets/svg/underline.svg");
 				background-repeat: no-repeat;
 				background-position: 100%;
 			}
 
-			.is-dark & {
-				/* stylelint-disable-next-line */
-				&::after {
-					filter: invert(1);
-				}
+			.is-dark &::after {
+				filter: invert(1);
 			}
 		}
 	}

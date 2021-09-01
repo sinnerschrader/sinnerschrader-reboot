@@ -3,10 +3,6 @@
 	cursor: pointer;
 	width: fit-content;
 
-	&:focus {
-		outline: none;
-	}
-
 	& + & {
 		@include spacing-100(margin-top);
 	}

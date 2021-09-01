@@ -1,0 +1,42 @@
+@import "../core/variables";
+@import "../core/mixins";
+
+.button-icon {
+	@include default-animation(transform);
+
+	height: $spacing--500;
+	width: $spacing--500;
+	filter: invert(1);
+
+	.is-dark & {
+		filter: invert(0);
+	}
+
+	.button-notext:hover & {
+		@include default-animation(transform);
+
+		transform: scale(calc(1.2 / 1.4));
+		// The parent element is scaled to 1.4 but the child should only be scaled to 1.2
+	}
+
+	&--small {
+		height: $spacing--200;
+		width: $spacing--200;
+	}
+
+	&--secondary {
+		filter: invert(0);
+
+		.is-dark & {
+			filter: invert(1);
+		}
+	}
+
+	&--tertiary {
+		filter: invert(0);
+
+		.is-dark & {
+			filter: invert(1);
+		}
+	}
+}

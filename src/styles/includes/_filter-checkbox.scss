@@ -1,0 +1,117 @@
+@import "../core/variables";
+@import "../core/mixins";
+
+.filter-checkbox {
+	border-radius: 10rem;
+	background-color: $color-primary--beige;
+	display: flex;
+	height: 3.6rem;
+	cursor: pointer;
+
+	.is-dark & {
+		background-color: $color-primary--gray;
+	}
+
+	&__input {
+		appearance: none;
+		position: absolute;
+		border: 0;
+	}
+
+	&__text {
+		margin-right: $spacing--200;
+		font-size: $font-size--copy-2;
+		font-family: $font-sans-serif-semibold;
+		line-height: $line-height--copy-2;
+		letter-spacing: $latter-spacing--label;
+		align-self: center;
+
+		.is-dark & {
+			color: $color-primary--white;
+		}
+	}
+
+	&__icon {
+		margin: 0 $spacing--100;
+		align-self: center;
+
+		@media (hover: hover) {
+			.filter-checkbox:hover & {
+				filter: invert(1);
+			}
+		}
+
+		circle {
+			fill: $color-primary--white;
+			transform-origin: center;
+			transform: scale(0);
+
+			.is-dark & {
+				fill: $color-primary--black;
+			}
+		}
+
+		path {
+			stroke: $color-primary--black;
+
+			.is-dark & {
+				stroke: $color-primary--white;
+			}
+		}
+
+		&__animated-path {
+			@include default-animation(transform);
+
+			transform-origin: center;
+		}
+	}
+}
+
+.filter-checkbox__input:checked + .filter-checkbox {
+	background-color: $color-primary--black;
+
+	.is-dark & {
+		background-color: $color-primary--white;
+	}
+
+	.filter-checkbox__text {
+		filter: invert(1);
+	}
+
+	.filter-checkbox__icon {
+		filter: invert(1);
+	}
+
+	.filter-checkbox__icon__animated-path {
+		@include default-animation(transform);
+
+		transform-origin: center;
+		transform: rotate(90deg);
+	}
+}
+
+@media (hover: hover) {
+	.filter-checkbox__input:checked + .filter-checkbox:hover {
+		.filter-checkbox__icon {
+			filter: invert(0);
+		}
+	}
+
+	.filter-checkbox:hover > .filter-checkbox__icon {
+		circle {
+			@include default-animation(transform);
+
+			transform: scale(1);
+		}
+	}
+}
+
+.filter-checkbox__input:focus + .filter-checkbox {
+	outline-offset: 1px;
+	outline: Highlight auto 1px;
+	outline: -webkit-focus-ring-color auto 1px;
+}
+
+.filter-checkbox__input:not(:focus-visible) + .filter-checkbox {
+	outline: none;
+}

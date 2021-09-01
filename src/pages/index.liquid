@@ -4,7 +4,7 @@ layout: default.liquid
 permalink: index.html
 homepage: true
 renderData: landingpage
-bodyClass: is-bg-scroll
+bodyClass: is-bg-scroll is-dark
 dataJsItem: bg-scroll-animation
 ---
 
@@ -18,17 +18,17 @@ dataJsItem: bg-scroll-animation
 		{% include overlap, data: landingpage %}
 	</section>
 
-	<section>
+	<section class="fade-bg-black">
 		{% include section-header, title: "Our Offer", number: "02" %}
 		{% include offering, data: landingpage %}
 	</section>
 
 	<section>
 		{% include section-header, title: "Culture", number: "03", type: "medium", spinningWheel: "spinning-wheel" %}
-		{% include slider, data: landingpage %}
+		{% include slider, data: landingpage, slides: landingpage.slider.slides %}
 	</section>
 
-	<section>
+	<section class="fade-bg-black">
 		{% include section-header, title: "Work", number: "04", type: "small" %}
 		{% include work, data: landingpage %}
 	</section>
@@ -46,5 +46,3 @@ dataJsItem: bg-scroll-animation
 </main>
 
 {% include footer, data: global %}
-
-

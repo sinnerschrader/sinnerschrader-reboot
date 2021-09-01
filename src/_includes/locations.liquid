@@ -17,7 +17,6 @@
 	{% for location in locations %}
 		<div id="{{location.id}}"
 		     role="tabpanel"
-		     tabindex="0"
 		     {% if location.initialActive %}
 		     aria-expanded="true"
 		     {% else %}

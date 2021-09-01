@@ -53,7 +53,7 @@
 	}
 
 	&__line-container {
-		@include default-animation(background-color);
+		@include bg-and-color-animation();
 
 		background-color: $color-primary--white;
 		height: 55%;

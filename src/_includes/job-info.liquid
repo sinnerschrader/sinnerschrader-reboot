@@ -1,0 +1,18 @@
+<h3 class="copy--title">{{ data.jobDescription.titleExpectations }}</h3>
+<ul>
+	{% for item in expectations %}
+	<li>{{ item }}</li>
+	{% endfor %}
+</ul>
+<h3 class="copy--title">{{ data.jobDescription.titleRequirements }}</h3>
+<ul>
+	{% for item in requirements %}
+	<li>{{ item }}</li>
+	{% endfor %}
+</ul>
+<h3 class="copy--title">{{ data.jobDescription.titleOffer }}</h3>
+<ul>
+	{% for item in offers %}
+	<li>{{ item }}</li>
+	{% endfor %}
+</ul>

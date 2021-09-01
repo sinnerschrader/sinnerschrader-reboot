@@ -33,6 +33,10 @@
 	&.is-visible {
 		display: block;
 	}
+
+	&:focus {
+		outline: none;
+	}
 }
 
 .video-media-control {
@@ -49,10 +53,6 @@
 	width: 10rem;
 	color: $color-primary--black;
 	cursor: pointer;
-
-	&:focus {
-		outline: none;
-	}
 
 	&.is-hidden {
 		display: none;

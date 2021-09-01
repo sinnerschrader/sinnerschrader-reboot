@@ -1,13 +1,16 @@
-import { Slider } from "./slider.js";
-import { Locations } from "./locations";
+import { AnchorNavigation } from "./anchor-navigation";
+import { SlideIn } from "./animate-slidein";
 import { BackgroundScrollAnimation } from "./bg-scroll-animation";
-import { Video } from "./video.js";
+import { CareerContact } from "./careerContact";
+import { ImageTextTeaser } from "./image-text-teaser";
+import { FilterList } from "./jobs";
+import { Locations } from "./locations";
+import { Navigation } from "./navigation";
 import { OfferingHeader } from "./offering-header";
 import { Offerings } from "./offerings";
-import { SlideIn } from "./animate-slidein";
 import { Parallax } from "./parallax";
-import { AnchorNavigation } from "./anchor-navigation";
-import { CareerContact } from "./careerContact";
+import { Slider } from "./slider.js";
+import { Video } from "./video.js";
 
 (() => {
 	if (isModuleNeeded("locations")) {
@@ -44,6 +47,22 @@ import { CareerContact } from "./careerContact";
 
 	if (isModuleNeeded("career")) {
 		new CareerContact();
+	}
+
+	if (isModuleNeeded("image-text-teaser-content")) {
+		new ImageTextTeaser();
+	}
+
+	if (isModuleNeeded("navigation")) {
+		new Navigation();
+	}
+
+	if (isModuleNeeded("job-filter-list")) {
+		const filterList = new FilterList({
+			parentSelector: "#js-filter-list",
+			controlsSelector: "#js-job-filter-bar",
+			listSelector: "#js-job-listing",
+		});
 	}
 
 	new Parallax();

@@ -1,0 +1,51 @@
+@import "../core/variables";
+@import "../core/mixins";
+
+.button-notext {
+	@include default-animation(transform);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	border: 0;
+	height: $spacing--600;
+	width: $spacing--600;
+	background-color: $color-primary--black;
+	cursor: pointer;
+
+	&:not(:focus-visible) {
+		outline: none;
+	}
+
+	.is-dark & {
+		background-color: $color-primary--beige;
+	}
+
+	&:hover {
+		@include default-animation(transform);
+
+		transform: scale(1.4);
+	}
+
+	&--small {
+		height: $spacing--400--desktop;
+		width: $spacing--400--desktop;
+	}
+
+	&--secondary {
+		background-color: $color-primary--beige;
+
+		.is-dark & {
+			background-color: $color-primary--gray;
+		}
+	}
+
+	&--tertiary {
+		background-color: transparent;
+
+		.is-dark & {
+			background-color: transparent;
+		}
+	}
+}

@@ -42,20 +42,7 @@
 			  </span>
 		  </h3>
 	  </div>
+		{% include offering-list, data: data.offerings %}
 
-	  <div class="offering--info grid" data-js-item="offerings">
-		  <div class="swiper-wrapper">
-			  {% for offering in data.offerings.offeringList %}
-			  <div class="swiper-slide offering__slide">
-				  <h4 class="offering__title">{{ offering.title }}</h4>
-				  <ul class="offering__list">
-					  {% for item in offering.list %}
-					    <li class="offering__item">{{ item.item }}</li>
-					  {% endfor %}
-				  </ul>
-			  </div>
-			  {% endfor %}
-		  </div>
-	  </div>
   </div>
 </div>

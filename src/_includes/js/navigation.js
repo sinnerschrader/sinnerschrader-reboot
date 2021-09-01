@@ -76,14 +76,16 @@ class Navigation {
 	}
 
 	toggleTransparentClass(scrollPosition) {
-		if (scrollPosition <= 150) {
-			this.navigationContainer.classList.add(this.transparentClass);
-			this.topPositionColorDark ? this.navigationContainer.classList.add("is-text-dark") : "";
-			this.topPositionColorLight ? this.navigationContainer.classList.add("is-text-light") : "";
-		} else {
-			this.navigationContainer.classList.remove(this.transparentClass);
-			this.topPositionColorDark ? this.navigationContainer.classList.remove("is-text-dark") : "";
-			this.topPositionColorLight ? this.navigationContainer.classList.remove("is-text-light") : "";
+		if (this.lastScrollTop >= scrollPosition) {
+			if (scrollPosition <= 0) {
+				this.navigationContainer.classList.add(this.transparentClass);
+				this.topPositionColorDark ? this.navigationContainer.classList.add("is-text-dark") : "";
+				this.topPositionColorLight ? this.navigationContainer.classList.add("is-text-light") : "";
+			} else {
+				this.navigationContainer.classList.remove(this.transparentClass);
+				this.topPositionColorDark ? this.navigationContainer.classList.remove("is-text-dark") : "";
+				this.topPositionColorLight ? this.navigationContainer.classList.remove("is-text-light") : "";
+			}
 		}
 	}
 }

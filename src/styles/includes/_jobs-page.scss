@@ -33,6 +33,7 @@ $filter-bar-height--desktop: 11.8rem;
 
 .toggle-button {
 	display: inline-flex;
+	cursor: pointer;
 
 	&:hover {
 		@include default-animation(transform);
@@ -313,6 +314,7 @@ $filter-bar-height--desktop: 11.8rem;
 
 	.job-list {
 		margin-top: 0;
+		padding-bottom: 6rem;
 
 		@include bp-s-and-above {
 			padding-top: $spacing--600;
@@ -350,12 +352,13 @@ $filter-bar-height--desktop: 11.8rem;
 				@include bp-xs {
 					@include spacing-600(padding-top);
 					@include spacing-400(padding-bottom);
+					@include default-animation(background-color);
 
-					background: $color-primary--white;
+					background-color: $color-primary--white;
 					z-index: 11;
 
 					.is-dark & {
-						background: transparent;
+						background-color: $color-primary--black;
 					}
 
 					&:first-child {
@@ -437,6 +440,8 @@ $filter-bar-height--desktop: 11.8rem;
 			position: fixed;
 			margin: 0;
 			padding: 0 2.4rem;
+			display: flex;
+			flex-direction: column;
 
 			.job-filter-bar__category {
 				padding-bottom: 3.2rem;
@@ -449,6 +454,7 @@ $filter-bar-height--desktop: 11.8rem;
 			.job-filter-bar__confirm-group {
 				position: sticky;
 				bottom: 0;
+				margin-top: auto;
 				padding-top: 2rem;
 				background-color: $color-primary--black;
 
@@ -466,7 +472,11 @@ $filter-bar-height--desktop: 11.8rem;
 		}
 
 		.job-filter-bar__mobile-header {
+			background-color: $color-primary--black;
 			padding: 0;
+			position: sticky;
+			top: 0;
+			z-index: 1;
 		}
 	}
 }

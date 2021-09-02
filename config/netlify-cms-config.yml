@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: sinnerschrader/sinnerschrader-reboot
-  branch: main
+  branch: development # TODO: change to main before go-live once all new job postings have been added
   base_url: https://k741x3mcij.execute-api.eu-central-1.amazonaws.com
   auth_endpoint: /prod/auth
 
@@ -51,7 +51,7 @@ collections:
 
       - label: "Description"
         name: "description"
-        widget: "string"
+        widget: "text"
 
       - label: "What you can expect from us"
         name: "expectations"

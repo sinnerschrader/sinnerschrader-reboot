@@ -8,6 +8,9 @@ backend:
 media_library:
   name: "disabled"
 
+editor:
+  preview: false
+
 publish_mode: editorial_workflow
 
 collections:

@@ -9,7 +9,7 @@
 	"secondPage": {
 		"profileExample": "e.g. github, gitlab, linkedIn, Xing, portfolio",
 		"dataCollector": "yeah, go screen my skills!",
-		"copy": "We're keeping your personal details secure and don't share it with 3rd parties of course. Find out more in our <b>privacy policy</b>.",
+		"copy": "We're keeping your personal details secure and don't share it with 3rd parties of course. Find out more in our",
 		"buttonText": "Send profile"
 	}
 }

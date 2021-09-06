@@ -140,16 +140,12 @@
 		transform: rotate(180deg);
 		padding: $spacing--100 0;
 		width: fit-content;
-		border: none;
-		background-color: $color-primary--black;
+		border: 0;
 		margin-bottom: 2rem;
+		background-color: transparent;
 
 		&:hover {
 			transform: rotate(180deg) scale(0.95);
-		}
-
-		.is-dark & {
-			background-color: $color-primary--white;
 		}
 
 		/* stylelint-disable-next-line order/order */
@@ -162,14 +158,6 @@
 			width: 3rem;
 			@include bp-s-and-lower {
 				filter: invert(1);
-			}
-		}
-
-		/* stylelint-disable-next-line order/order */
-		@include bp-s-and-lower {
-			.is-dark & {
-				background-color: $color-primary--gray;
-				color: $color-primary--white;
 			}
 		}
 	}

@@ -89,6 +89,8 @@
 
 	&__copy {
 		color: $color-primary--white;
+		margin-top: 0;
+		margin-bottom: 4rem;
 
 		.is-dark & {
 			color: $color-primary--black;
@@ -103,14 +105,17 @@
 	}
 
 	&__profileInput {
+		color: $color-primary--black;
 		border: transparent;
 		border-bottom: 2px solid $color-primary--black;
 		width: 100%;
 		font-size: 1.8rem;
 
+		/* stylelint-disable-next-line order/order */
 		@include bp-s-and-lower {
 			background-color: $color-primary--black;
 			border-bottom: 2px solid $color-primary--white;
+			color: $color-primary--white;
 		}
 	}
 
@@ -126,6 +131,7 @@
 
 	&__dataText {
 		padding-left: 2rem;
+		margin: 2rem 0;
 	}
 
 	&__forwardButton {

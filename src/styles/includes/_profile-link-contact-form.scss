@@ -88,9 +88,30 @@
 	}
 
 	&__copy {
+		@include paragraph-100();
+
 		color: $color-primary--white;
 		margin-top: 0;
 		margin-bottom: 4rem;
+
+		&--small {
+			@include paragraph-200();
+
+			color: $color-primary--white;
+			margin-top: 0;
+			margin-bottom: 4rem;
+
+			.is-dark & {
+				color: $color-primary--black;
+			}
+
+			/* stylelint-disable-next-line order/order */
+			@include bp-s-and-lower {
+				.is-dark & {
+					color: $color-primary--white;
+				}
+			}
+		}
 
 		.is-dark & {
 			color: $color-primary--black;
@@ -105,6 +126,8 @@
 	}
 
 	&__profileInput {
+		@include paragraph-100();
+
 		color: $color-primary--black;
 		border: transparent;
 		border-bottom: 2px solid $color-primary--black;
@@ -119,10 +142,6 @@
 		}
 	}
 
-	&__profileExampleText {
-		opacity: 0.5;
-	}
-
 	&__dataCollector {
 		display: flex;
 		flex-direction: row;
@@ -130,6 +149,8 @@
 	}
 
 	&__dataText {
+		@include paragraph-100();
+
 		padding-left: 2rem;
 		margin: 2rem 0;
 	}

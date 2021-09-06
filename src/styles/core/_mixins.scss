@@ -429,7 +429,15 @@
 }
 
 @mixin default-animation($property) {
-	transition: $property 300ms ease-in-out;
+	transition: $property $transition-main ease-in-out;
+}
+
+@mixin bg-and-color-animation() {
+	transition: background-color $transition-main ease-in-out, color $transition-main ease-in-out;
+}
+
+@mixin filter-animation() {
+	transition: filter $transition-main ease-in-out;
 }
 
 @mixin button-animation() {

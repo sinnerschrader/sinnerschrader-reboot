@@ -6,10 +6,11 @@
 
 	background-color: $color-primary--black;
 	color: $color-primary--white;
-	height: 100vh;
+	min-height: calc(100vh - 9.5rem);
 	position: relative;
 	overflow: hidden;
 	margin: 0;
+	padding-top: 9.5rem;
 
 	&__headline {
 		@include bp-xs() {
@@ -91,6 +92,8 @@
 	}
 
 	&__overlap {
+		@include bg-and-color-animation();
+
 		background-color: $color-primary--white;
 		position: absolute;
 		z-index: 4;

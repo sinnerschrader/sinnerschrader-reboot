@@ -6,7 +6,6 @@ class Navigation {
 	bodyOverlayClass = "is-no-scroll";
 	mobileActiveClass = "is-mobile-active";
 	transparentClass = "is-transparent";
-	lightBackgroundClass = "is-light";
 	mobileNavHiddenClass = "is-mobile-nav-hidden";
 	lastScrollTop = 0;
 
@@ -18,6 +17,7 @@ class Navigation {
 		this.navigationContainer = document.querySelector(".nav");
 		if (!this.navigationContainer) return;
 
+		this.jobFilterBar = document.querySelector("#js-job-filter-bar");
 		this.mobileToggleBtn = this.navigationContainer.querySelector(".nav__mobile-toggle");
 		this.textColorModifier = this.navigationContainer.getAttribute("data-js-option");
 
@@ -41,8 +41,8 @@ class Navigation {
 		document.body.classList.toggle(this.bodyOverlayClass);
 		this.navigationContainer.classList.toggle(this.mobileActiveClass);
 
-		const isMobileMenueExpandend = this.navigationContainer.classList.contains("is-mobile-active");
-		this.mobileToggleBtn.setAttribute("aria-expanded", isMobileMenueExpandend);
+		const isMobileMenuExpandend = this.navigationContainer.classList.contains("is-mobile-active");
+		this.mobileToggleBtn.setAttribute("aria-expanded", isMobileMenuExpandend);
 	}
 
 	detectScroll() {
@@ -58,8 +58,10 @@ class Navigation {
 	animateInOut(scrollPosition) {
 		if (scrollPosition > this.lastScrollTop) {
 			this.navigationContainer.classList.add(this.mobileNavHiddenClass);
+			this.jobFilterBar?.classList.add(this.mobileNavHiddenClass);
 		} else {
 			this.navigationContainer.classList.remove(this.mobileNavHiddenClass);
+			this.jobFilterBar?.classList.remove(this.mobileNavHiddenClass);
 		}
 	}
 
@@ -74,16 +76,16 @@ class Navigation {
 	}
 
 	toggleTransparentClass(scrollPosition) {
-		if (scrollPosition <= 150) {
-			this.navigationContainer.classList.remove(this.lightBackgroundClass);
-			this.navigationContainer.classList.add(this.transparentClass);
-			this.topPositionColorDark ? this.navigationContainer.classList.add("is-text-dark") : "";
-			this.topPositionColorLight ? this.navigationContainer.classList.add("is-text-light") : "";
-		} else {
-			this.navigationContainer.classList.remove(this.transparentClass);
-			this.navigationContainer.classList.add(this.lightBackgroundClass);
-			this.topPositionColorDark ? this.navigationContainer.classList.remove("is-text-dark") : "";
-			this.topPositionColorLight ? this.navigationContainer.classList.remove("is-text-light") : "";
+		if (this.lastScrollTop >= scrollPosition) {
+			if (scrollPosition <= 0) {
+				this.navigationContainer.classList.add(this.transparentClass);
+				this.topPositionColorDark ? this.navigationContainer.classList.add("is-text-dark") : "";
+				this.topPositionColorLight ? this.navigationContainer.classList.add("is-text-light") : "";
+			} else {
+				this.navigationContainer.classList.remove(this.transparentClass);
+				this.topPositionColorDark ? this.navigationContainer.classList.remove("is-text-dark") : "";
+				this.topPositionColorLight ? this.navigationContainer.classList.remove("is-text-light") : "";
+			}
 		}
 	}
 }

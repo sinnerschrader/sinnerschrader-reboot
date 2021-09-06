@@ -20,5 +20,17 @@ export class ImageTextTeaser {
 	toggleHiddenContent() {
 		this.hiddenContent.classList.toggle("is-active");
 		this.defaultContent.classList.toggle("is-hidden");
+
+		if (this.hiddenContent.classList.contains("is-active")) {
+			this.hiddenContent.getElementsByTagName("button")[0].removeAttribute("tabindex");
+		} else {
+			this.hiddenContent.getElementsByTagName("button")[0].setAttribute("tabindex", -1);
+		}
+
+		if (this.defaultContent.classList.contains("is-hidden")) {
+			this.defaultContent.getElementsByTagName("button")[0].setAttribute("tabindex", -1);
+		} else {
+			this.defaultContent.getElementsByTagName("button")[0].removeAttribute("tabindex");
+		}
 	}
 }

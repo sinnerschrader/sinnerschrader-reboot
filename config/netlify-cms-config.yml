@@ -1,12 +1,15 @@
 backend:
   name: github
   repo: sinnerschrader/sinnerschrader-reboot
-  branch: main
+  branch: development # TODO: change to main before go-live once all new job postings have been added
   base_url: https://k741x3mcij.execute-api.eu-central-1.amazonaws.com
   auth_endpoint: /prod/auth
 
 media_library:
   name: "disabled"
+
+editor:
+  preview: false
 
 publish_mode: editorial_workflow
 
@@ -49,6 +52,28 @@ collections:
         options:
           - { label: "Vicky", value: "vicky" }
 
-      - { label: "Description", name: "description", widget: "markdown" }
+      - label: "Description"
+        name: "description"
+        widget: "text"
 
-      - { label: "Details", name: "details", widget: "markdown" }
+      - label: "What you can expect from us"
+        name: "expectations"
+        label_singular: "expectation"
+        widget: "list"
+        field: { label: "expectation", name: "expectation", widget: "string" }
+        collapsed: false
+
+      - label: "What you should bring with you"
+        name: "requirements"
+        label_singular: "requirement"
+        widget: "list"
+        field: { label: "requirement", name: "requirement", widget: "string" }
+        collapsed: false
+
+      - label: "What we offer"
+        name: "offers"
+        label_singular: "offer"
+        widget: "list"
+        field: { label: "offer", name: "offer", widget: "string" }
+        collapsed: false
+        default: ["Accident insurance", "Workers Council", "Employer share purchase program", "Employee Referral Program"]

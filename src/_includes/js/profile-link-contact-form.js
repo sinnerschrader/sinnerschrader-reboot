@@ -1,13 +1,14 @@
-export class ImageTextTeaser {
+export class ProfileLinkContactForm {
 	constructor() {
-		this.container = document.querySelector(".image-text-teaser");
+		this.container = document.querySelector(".profile-link-contact-form");
 
 		if (!this.container) return;
+		console.log("whatever");
 
-		this.defaultContent = this.container.querySelector('[data-js-item="image-text-teaser-content"]');
-		this.hiddenContent = this.container.querySelector('[data-js-item="image-text-teaser-content-hidden"]');
-		this.forwardBtn = this.defaultContent.querySelector('[data-js-atom="image-text-teaser-forward"]');
-		this.backwardBtn = this.hiddenContent.querySelector('[data-js-atom="image-text-teaser-backward"]');
+		this.defaultContent = this.container.querySelector('[data-js-item="profile-link-contact-form-content"]');
+		this.hiddenContent = this.container.querySelector('[data-js-item="profile-link-contact-form-content-hidden"]');
+		this.forwardBtn = this.defaultContent.querySelector('[data-js-atom="profile-link-contact-form-forward"]');
+		this.backwardBtn = this.hiddenContent.querySelector('[data-js-atom="profile-link-contact-form-backward"]');
 
 		this.bindEvents();
 	}

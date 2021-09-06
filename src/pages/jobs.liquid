@@ -24,7 +24,11 @@ renderData: filterbar
 			</p>
 		</div>
 	</section>
-	<section class="fade-bg-black jobs-page--teaser">{% include image-text-teaser, data: components %}</section>
+	<section class="fade-bg-black jobs-page--teaser">
+		{% capture imageTeaserContent %}
+		{% include profile-link-contact-form, data: profileLinkContactForm %}
+		{% endcapture %}
+		{% include image-teaser, data: components, children: imageTeaserContent %}</section>
 	<section class="fade-bg-black jobs-page--offering">
 		{% include section-header, title: "Perks @ s2", number: "01" %}
 		<div class="grid">

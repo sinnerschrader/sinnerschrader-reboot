@@ -1,0 +1,51 @@
+@import "./button";
+
+@mixin bp-mobile {
+	@media screen and (max-width: 899px) {
+		@content;
+	}
+}
+
+.image-teaser {
+	@include responsive-spacing(margin-left, $spacing--400, $spacing--700, $spacing--800, $spacing--900);
+
+	position: relative;
+	margin-bottom: $spacing--900;
+
+	@include bp-mobile {
+		&::before {
+			left: auto;
+			right: 0;
+		}
+	}
+
+	@include bp-xs {
+		overflow-x: hidden;
+	}
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: $spacing--200;
+		width: 50%;
+		background-color: $color-primary--white;
+		z-index: 2;
+
+		@include bp-xs {
+			left: auto;
+			right: 0;
+		}
+	}
+
+	.is-dark & {
+		&::before {
+			background-color: $color-primary--black;
+		}
+	}
+
+	img {
+		width: 100%;
+	}
+}

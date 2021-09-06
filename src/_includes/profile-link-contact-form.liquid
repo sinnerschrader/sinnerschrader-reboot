@@ -1,0 +1,30 @@
+<div class="profile-link-contact-form">
+    <div class="profile-link-contact-form__content-inner" data-js-item="profile-link-contact-form-content">
+        <h3 class="profile-link-contact-form__headline">{{ data.firstPage.headline }}
+            <span class="headline-201">{{ data.firstPage.headlineFancy }}</span><span
+                class="headline-202">{{ data.firstPage.headlineFancy2 }}</span>
+        </h3>
+        <p class="profile-link-contact-form__copy">{{ data.firstPage.copy }}</p>
+        <button class="button button--primary profile-link-contact-form__forwardButton" data-js-atom="profile-link-contact-form-forward">
+            <span class="button__text">
+                {{ data.firstPage.buttonText }}
+            </span>
+        </button>
+    </div>
+    <div class="profile-link-contact-form__content-inner-hidden" data-js-item="profile-link-contact-form-content-hidden">
+        <button class="button--primary profile-link-contact-form__backwardButton" data-js-atom="profile-link-contact-form-backward">
+            <img src="/assets/svg/Arrow-L.svg" alt="" class="button__icon profile-link-contact-form__backwardButton--svg">
+        </button>
+        <input type="text" class="profile-link-contact-form__profileInput" placeholder="{{data.secondPage.profileExample}}">
+        <div class="profile-link-contact-form__dataCollector">
+            <input type="checkbox" ></input>
+            <p class="profile-link-contact-form__copy profile-link-contact-form__dataText">{{ data.secondPage.dataCollector }}</p>
+        </div>
+        <p class="profile-link-contact-form__copy">{{ data.secondPage.copy }}</p>
+        <button class="button button--primary button--small" data-js-atom="profile-link-contact-form-backward">
+            <span class="button__text">
+                {{ data.secondPage.buttonText }}
+            </span>
+        </button>
+    </div>
+</div>

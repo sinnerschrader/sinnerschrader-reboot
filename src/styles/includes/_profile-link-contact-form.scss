@@ -1,81 +1,53 @@
 .profile-link-contact-form {
-	@include responsive-spacing(left, 0, 50%, 70%, 80%);
-	@include responsive-spacing(width, 200%, 100%, 60%, 40%);
-
-	position: absolute;
+	position: relative;
 	display: flex;
 	flex-direction: row;
-	flex-wrap: nowrap;
-	top: $spacing--900;
-	bottom: -$spacing--700;
-	background: $color-primary--black;
-	color: $color-primary--white;
+	height: 100%;
 	overflow: hidden;
 
-	@include bp-s-and-lower {
+	@include bp-xs {
 		position: relative;
 		top: 0;
 		left: 0;
 		bottom: 0;
-		margin-top: -19.2rem;
-		margin-right: 7.7rem;
 		width: auto;
-		margin-bottom: 12rem;
 	}
 
 	.is-dark & {
 		background: $color-primary--white;
 		color: $color-primary--black;
 
-		@include bp-s-and-lower {
+		@include bp-xs {
 			background: $color-primary--black;
 			color: $color-primary--white;
 		}
 	}
 
-	&__content-inner {
-		width: 50%;
-		padding: $spacing--700;
-		opacity: 1;
-		box-sizing: border-box;
+	&__first-page {
+		display: flex;
+		flex-direction: column;
 		flex-shrink: 0;
-		right: 100%;
+		width: 100%;
+		box-sizing: border-box;
 		transition: opacity 500ms ease, transform 500ms ease;
-		transform: translateX(0);
+		transform: translateX(-100%);
 
-		&.is-hidden {
-			opacity: 0;
-			transform: translateX(-100%);
-		}
-
-		/* stylelint-disable-next-line order/order */
-		@include bp-s-and-lower {
-			width: 100%;
-			padding: 0 $spacing--500 0 0;
+		&.active-state {
+			transform: translateX(0);
 		}
 	}
 
-	&__content-inner-hidden {
-		width: 50%;
-		padding: $spacing--700;
-		opacity: 0;
-		box-sizing: border-box;
-		flex-shrink: 0;
-		right: 100%;
-		transform: translateX(0);
-		transition: opacity 500ms ease, transform 500ms ease;
+	&__second-page {
 		display: flex;
 		flex-direction: column;
+		flex-shrink: 0;
+		width: 100%;
+		box-sizing: border-box;
+		transform: translateX(0);
+		transition: opacity 500ms ease, transform 500ms ease;
 
-		&.is-active {
-			opacity: 1;
+		&.active-state {
 			transform: translateX(-100%);
-		}
-
-		/* stylelint-disable-next-line order/order */
-		@include bp-s-and-lower {
-			width: 100%;
-			padding: 0 $spacing--500 0 0;
 		}
 	}
 

@@ -1,4 +1,4 @@
-<div class="image-teaser" data-js-item="image-teaser">
+<div class="image-teaser">
 	<picture class="image-teaser__picture">
 		<source media="(max-width: 599px)"
 		        srcset="{{ data.image-teaser.image.mobileSrc }}" type="image/webp" />
@@ -9,7 +9,7 @@
 		<img loading="lazy" src="{{ data.image-teaser.image.fallbackSrc }}"
 		     alt="{{ data.image-teaser.image.altText }}"/>
 	</picture>
-	<div>
+	<div class="content-box">
 		{{ children }}
 	</div>
 </div>

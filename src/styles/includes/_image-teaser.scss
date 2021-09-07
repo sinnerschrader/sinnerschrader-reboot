@@ -6,6 +6,25 @@
 	}
 }
 
+.content-box {
+	position: absolute;
+	height: 90%;
+	width: 40%;
+	right: 0;
+	bottom: -$spacing--700;
+	background-color: $color-primary--white;
+	color: $color-primary--black;
+
+	/* stylelint-disable-next-line order/order */
+	@include bp-xs {
+		height: 40%;
+		width: 70%;
+		left: 0;
+		background-color: $color-primary--black;
+		color: $color-primary--white;
+	}
+}
+
 .image-teaser {
 	@include responsive-spacing(margin-left, $spacing--400, $spacing--700, $spacing--800, $spacing--900);
 

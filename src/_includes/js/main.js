@@ -4,7 +4,7 @@ import { BackgroundScrollAnimation } from "./bg-scroll-animation";
 import { CareerContact } from "./careerContact";
 import { ImageTextTeaser } from "./image-text-teaser";
 import { FilterList } from "./jobs";
-import { Locations } from "./locations";
+import { InteractiveList } from "./interactiveList";
 import { Navigation } from "./navigation";
 import { OfferingHeader } from "./offering-header";
 import { Offerings } from "./offerings";
@@ -14,7 +14,11 @@ import { Video } from "./video.js";
 
 (() => {
 	if (isModuleNeeded("locations")) {
-		new Locations();
+		new InteractiveList(".locations");
+	}
+
+	if (isModuleNeeded("works")) {
+		new InteractiveList(".works");
 	}
 
 	if (isModuleNeeded("slider")) {

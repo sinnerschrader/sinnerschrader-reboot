@@ -1,0 +1,144 @@
+[
+	{
+		"id": "all",
+		"name": "All",
+		"initialActive": false
+	},
+	{
+		"id": "automotive",
+		"name": "Automotive",
+		"initialActive": true,
+		"worksList": [
+			{
+				"company": "Ambulance",
+				"name": "Redesign lorem Ipsum",
+				"imageFallback": "ambulance.png",
+				"link": "/cases.html"
+			},
+			{
+				"company": "Audi",
+				"name": "Redesign lorem Ipsum",
+				"imageFallback": "audi-main.png",
+				"link": "/cases.html"
+			},
+			{
+				"company": "Ambulance",
+				"name": "Redesign lorem Ipsum",
+				"imageFallback": "ambulance.png",
+				"link": "/cases.html"
+			},
+			{
+				"company": "Unzer",
+				"name": "Redesign lorem Ipsum",
+				"imageFallback": "unzer-logo.png",
+				"link": "/cases.html"
+			}
+		]
+	},
+	{
+		"id": "fintech",
+		"name": "Fintech",
+		"initialActive": false,
+		"worksList": [
+			{
+				"company": "Bicycle",
+				"name": "Redesign lorem Ipsum",
+				"imageFallback": "bicycle.png",
+				"link": "/cases.html"
+			}
+		]
+	},
+	{
+		"id": "commerce",
+		"name": "Commerce",
+		"initialActive": false,
+		"worksList": [
+			{
+				"company": "Ambulance",
+				"name": "Redesign lorem Ipsum",
+				"imageFallback": "ambulance.png",
+				"link": "/cases.html"
+			},
+			{
+				"company": "Unzer",
+				"name": "Redesign lorem Ipsum",
+				"imageFallback": "unzer-logo.png",
+				"link": "/cases.html"
+			},
+			{
+				"company": "VW",
+				"name": "Redesign lorem Ipsum",
+				"imageFallback": "vw-car.png",
+				"link": "/cases.html"
+			},
+			{
+				"company": "VW",
+				"name": "Redesign lorem Ipsum",
+				"imageFallback": "vw-phone.png",
+				"link": "/cases.html"
+			}
+		]
+	},
+	{
+		"id": "social",
+		"name": "Social",
+		"initialActive": false,
+		"worksList": [
+			{
+				"company": "Audi",
+				"name": "Redesign lorem Ipsum",
+				"imageFallback": "audi-main.png",
+				"link": "/cases.html"
+			},
+			{
+				"company": "Holoride",
+				"name": "Redesign lorem Ipsum",
+				"imageFallback": "holoride.png",
+				"link": "/cases.html"
+			},
+			{
+				"company": "VW",
+				"name": "Redesign lorem Ipsum",
+				"imageFallback": "vw-phone.png",
+				"link": "/cases.html"
+			}
+		]
+	},
+	{
+		"id": "item06",
+		"name": "Item 06",
+		"initialActive": false,
+		"worksList": [
+			{
+				"company": "Ambulance",
+				"name": "Redesign lorem Ipsum",
+				"imageFallback": "ambulance.png",
+				"link": "/cases.html"
+			},
+			{
+				"company": "Audi",
+				"name": "Redesign lorem Ipsum",
+				"imageFallback": "audi-main.png",
+				"link": "/cases.html"
+			},
+			{
+				"company": "Bicycle",
+				"name": "Redesign lorem Ipsum",
+				"imageFallback": "bicycle.png",
+				"link": "/cases.html"
+			},
+			{
+				"company": "Holoride",
+				"name": "Redesign lorem Ipsum",
+				"imageFallback": "holoride.png",
+				"link": "/cases.html"
+			},
+			{
+				"company": "VW",
+				"name": "Redesign lorem Ipsum",
+				"imageFallback": "vw-phone.png",
+				"link": "/cases.html"
+			}
+		]
+	}
+]

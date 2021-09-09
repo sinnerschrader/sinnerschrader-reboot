@@ -13,27 +13,27 @@
 		"links": [
 			{
 				"baseUrl": "",
-				"subUrl": "/beliefs",
+				"subUrl": "/beliefs.html",
 				"linkText": "Beliefs"
 			},
 			{
 				"baseUrl": "",
-				"subUrl": "/offering",
+				"subUrl": "/offering.html",
 				"linkText": "Offering"
 			},
 			{
 				"baseUrl": "",
-				"subUrl": "/cases",
+				"subUrl": "/cases.html",
 				"linkText": "Cases"
 			},
 			{
 				"baseUrl": "",
-				"subUrl": "/culture",
+				"subUrl": "/culture.html",
 				"linkText": "Culture"
 			},
 			{
 				"baseUrl": "",
-				"subUrl": "/jobs",
+				"subUrl": "/jobs.html",
 				"linkText": "Careers"
 			}
 		],

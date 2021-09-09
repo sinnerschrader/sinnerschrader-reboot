@@ -1,6 +1,6 @@
-export class Locations {
-	constructor() {
-		this.container = document.querySelector(".locations");
+export class InteractiveList {
+	constructor(selector) {
+		this.container = document.querySelector(selector);
 
 		if (!this.container) return;
 
@@ -15,18 +15,18 @@ export class Locations {
 		for (let tab of this.tabs) {
 			tab.addEventListener("click", (e) => {
 				e.preventDefault();
-				this.selectLocationHandler(tab.getAttribute("aria-controls"));
+				this.selectItemHandler(tab.getAttribute("aria-controls"));
 			});
 			tab.addEventListener("keyup", (e) => {
 				e.preventDefault();
 				if (e.code === "Enter") {
-					this.selectLocationHandler(tab.getAttribute("aria-controls"), e);
+					this.selectItemHandler(tab.getAttribute("aria-controls"), e);
 				}
 			});
 		}
 	}
 
-	selectLocationHandler(id, e) {
+	selectItemHandler(id, e) {
 		this.setActiveControlTab(id);
 		this.setActivePanel(id, e);
 	}

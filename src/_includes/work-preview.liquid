@@ -1,0 +1,10 @@
+<div class="works__content-picture">
+    <img class="preview" src="./assets/images/fallback/{{data.imageFallback}}"
+        alt="{{data.name}}">
+    <div>
+        <a href="{{data.link}}">
+            {% include button-notext, size: "small", iconSrc:"/assets/svg/Arrow-S.svg" %}
+        </a>
+        <p><span>{{data.company}}</span> {{data.name}}</p>
+    </div>
+</div>

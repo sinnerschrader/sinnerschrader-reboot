@@ -2,19 +2,6 @@
 .cases-page {
 	overflow-x: initial;
 
-	&__intro {
-		@include spacing-900(margin-top);
-		@include spacing-900(margin-bottom);
-
-		h1 {
-			color: $color-primary--black;
-
-			.is-dark & {
-				color: $color-primary--white;
-			}
-		}
-	}
-
 	// Filter Button that floats with scrolling
 	@include bp-xs {
 		.mobile-floater {
@@ -65,6 +52,19 @@
 				left: 50%;
 				top: 50%;
 				transform: translate(-50%, -50%);
+			}
+		}
+	}
+
+	&__intro {
+		@include spacing-900(margin-top);
+		@include spacing-900(margin-bottom);
+
+		h1 {
+			color: $color-primary--black;
+
+			.is-dark & {
+				color: $color-primary--white;
 			}
 		}
 	}

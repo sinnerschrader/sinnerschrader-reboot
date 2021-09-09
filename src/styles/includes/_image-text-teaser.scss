@@ -96,14 +96,14 @@
 		transform: translateX(0);
 		overflow-y: auto;
 
-		&.is-hidden {
-			opacity: 0;
-			transform: translateX(-100%);
-		}
-
 		@include bp-xs {
 			padding: $spacing--700 $spacing--500;
 			width: 100%;
+		}
+
+		&.is-hidden {
+			opacity: 0;
+			transform: translateX(-100%);
 		}
 	}
 

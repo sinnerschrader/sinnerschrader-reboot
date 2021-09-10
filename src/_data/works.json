@@ -13,25 +13,25 @@
 				"company": "Ambulance",
 				"name": "Redesign lorem Ipsum",
 				"imageFallback": "ambulance.png",
-				"link": "/cases.html"
+				"link": "/case-details.html"
 			},
 			{
 				"company": "Audi",
 				"name": "Redesign lorem Ipsum",
 				"imageFallback": "audi-main.png",
-				"link": "/cases.html"
+				"link": "/case-details.html"
 			},
 			{
 				"company": "Ambulance",
 				"name": "Redesign lorem Ipsum",
 				"imageFallback": "ambulance.png",
-				"link": "/cases.html"
+				"link": "/case-details.html"
 			},
 			{
 				"company": "Unzer",
 				"name": "Redesign lorem Ipsum",
 				"imageFallback": "unzer-logo.png",
-				"link": "/cases.html"
+				"link": "/case-details.html"
 			}
 		]
 	},
@@ -44,7 +44,7 @@
 				"company": "Bicycle",
 				"name": "Redesign lorem Ipsum",
 				"imageFallback": "bicycle.png",
-				"link": "/cases.html"
+				"link": "/case-details.html"
 			}
 		]
 	},
@@ -57,25 +57,25 @@
 				"company": "Ambulance",
 				"name": "Redesign lorem Ipsum",
 				"imageFallback": "ambulance.png",
-				"link": "/cases.html"
+				"link": "/case-details.html"
 			},
 			{
 				"company": "Unzer",
 				"name": "Redesign lorem Ipsum",
 				"imageFallback": "unzer-logo.png",
-				"link": "/cases.html"
+				"link": "/case-details.html"
 			},
 			{
 				"company": "VW",
 				"name": "Redesign lorem Ipsum",
 				"imageFallback": "vw-car.png",
-				"link": "/cases.html"
+				"link": "/case-details.html"
 			},
 			{
 				"company": "VW",
 				"name": "Redesign lorem Ipsum",
 				"imageFallback": "vw-phone.png",
-				"link": "/cases.html"
+				"link": "/case-details.html"
 			}
 		]
 	},
@@ -88,19 +88,19 @@
 				"company": "Audi",
 				"name": "Redesign lorem Ipsum",
 				"imageFallback": "audi-main.png",
-				"link": "/cases.html"
+				"link": "/case-details.html"
 			},
 			{
 				"company": "Holoride",
 				"name": "Redesign lorem Ipsum",
 				"imageFallback": "holoride.png",
-				"link": "/cases.html"
+				"link": "/case-details.html"
 			},
 			{
 				"company": "VW",
 				"name": "Redesign lorem Ipsum",
 				"imageFallback": "vw-phone.png",
-				"link": "/cases.html"
+				"link": "/case-details.html"
 			}
 		]
 	},
@@ -113,31 +113,31 @@
 				"company": "Ambulance",
 				"name": "Redesign lorem Ipsum",
 				"imageFallback": "ambulance.png",
-				"link": "/cases.html"
+				"link": "/case-details.html"
 			},
 			{
 				"company": "Audi",
 				"name": "Redesign lorem Ipsum",
 				"imageFallback": "audi-main.png",
-				"link": "/cases.html"
+				"link": "/case-details.html"
 			},
 			{
 				"company": "Bicycle",
 				"name": "Redesign lorem Ipsum",
 				"imageFallback": "bicycle.png",
-				"link": "/cases.html"
+				"link": "/case-details.html"
 			},
 			{
 				"company": "Holoride",
 				"name": "Redesign lorem Ipsum",
 				"imageFallback": "holoride.png",
-				"link": "/cases.html"
+				"link": "/case-details.html"
 			},
 			{
 				"company": "VW",
 				"name": "Redesign lorem Ipsum",
 				"imageFallback": "vw-phone.png",
-				"link": "/cases.html"
+				"link": "/case-details.html"
 			}
 		]
 	}

@@ -139,6 +139,7 @@
 
 				&::before {
 					margin: -20vw 0 8vw;
+					margin-top: 45vw;
 				}
 			}
 
@@ -151,13 +152,18 @@
 				line-height: 0;
 				display: block;
 				margin: -15vw 0 8vw;
+
+				@include bp-xs() {
+					font-size: 30vw;
+					margin: -20vw 0 10vw;
+				}
 			}
 		}
 
 		p {
 			text-overflow: ellipsis;
 			overflow: hidden;
-			margin: 2rem 0;
+			margin: 1rem 0;
 
 			span {
 				font-family: $font-sans-serif-semibold;

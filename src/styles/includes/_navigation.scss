@@ -59,8 +59,8 @@
 		background-color: $color-primary--black;
 	}
 
-	.nav__logo--sinnerschrader {
-		color: $color-primary--black;
+	.nav__logo--sinnerschrader svg {
+		fill: $color-primary--black;
 	}
 
 	&.is-text-dark {
@@ -76,8 +76,8 @@
 			background-color: $color-primary--black;
 		}
 
-		.nav__logo--sinnerschrader {
-			color: $color-primary--black;
+		.nav__logo--sinnerschrader svg {
+			fill: $color-primary--black;
 		}
 	}
 
@@ -94,8 +94,8 @@
 			background-color: $color-primary--white;
 		}
 
-		.nav__logo--sinnerschrader {
-			color: $color-primary--white;
+		.nav__logo--sinnerschrader svg {
+			fill: $color-primary--white;
 		}
 	}
 
@@ -145,8 +145,8 @@
 			right: 0.6rem;
 		}
 
-		.nav__logo--sinnerschrader {
-			color: $color-primary--white;
+		.nav__logo--sinnerschrader svg {
+			fill: $color-primary--white;
 		}
 
 		.nav__container {
@@ -178,8 +178,8 @@
 			background-color: $color-primary--white;
 		}
 
-		.nav__logo--sinnerschrader {
-			color: $color-primary--white;
+		.nav__logo--sinnerschrader svg {
+			fill: $color-primary--white;
 		}
 	}
 

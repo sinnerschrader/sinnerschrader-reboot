@@ -1,0 +1,30 @@
+---
+title: SinnerSchrader
+layout: default.liquid
+permalink: case-details.html
+bodyClass: is-bg-scroll
+dataJsItem: bg-scroll-animation
+---
+
+{% include navigation, data: global %}
+
+<main class="case-details-page">
+	<section class="fade-bg-black cases-page--teaser">
+		{% include image-teaser, data: case %}
+	</section>
+
+    <section>
+		{% include section-header, title: "Abstract", number: "01", type: "large" %}
+	</section>
+
+    <section>
+		{% include section-header, title: "Hey There", number: "0x", type: "large" %}
+		{% include job-teaser, data: landingpage %}
+	</section>
+
+    <section>
+		{% include next-case, data: case %}
+	</section>
+</main>
+
+{% include footer, data: global %}

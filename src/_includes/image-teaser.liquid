@@ -1,0 +1,25 @@
+<div class="image-teaser" data-js-item="image-teaser">
+	<picture class="image-teaser__picture">
+		<source media="(max-width: 599px)"
+		        srcset="{{ data.image-teaser.image.mobileSrc }}" type="image/webp" />
+		<source media="(min-width: 600px) and (max-width: 1199px)"
+		        srcset="{{ data.image-teaser.image.tabletSrc }}" type="image/webp" />
+		<source media="(min-width: 1200px)"
+		        srcset="{{ data.image-teaser.image.desktopSrc }}" type="image/webp" />
+		<img loading="lazy" src="{{ data.image-teaser.image.fallbackSrc }}"
+		     alt="{{ data.image-teaser.image.altText }}"/>
+	</picture>
+	{% if data.image-teaser.content %}
+		<div class="image-teaser__content">
+			{% if data.image-teaser.content.firstLine %}
+				<h3 class="image-teaser__headline first-line">{{ data.image-teaser.content.firstLine }}</h3>
+			{% endif %}
+			{% if data.image-teaser.content.firstLine %}
+				<h3 class="image-teaser__headline second-line">{{ data.image-teaser.content.secondLine }}</h3>
+			{% endif %}
+			{% if data.image-teaser.content.firstLine %}
+				<h3 class="image-teaser__headline third-line">{{ data.image-teaser.content.thirdLine }}</h3>
+			{% endif %}
+		</div>
+	{% endif %}
+</div>

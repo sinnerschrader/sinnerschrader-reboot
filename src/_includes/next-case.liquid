@@ -1,0 +1,23 @@
+<div class="next-case" data-js-item="next-case">
+	<picture class="next-case__picture">
+		<source media="(max-width: 599px)"
+		        srcset="{{ data.next-case.image.mobileSrc }}" type="image/webp" />
+		<source media="(min-width: 600px) and (max-width: 1199px)"
+		        srcset="{{ data.next-case.image.tabletSrc }}" type="image/webp" />
+		<source media="(min-width: 1200px)"
+		        srcset="{{ data.next-case.image.desktopSrc }}" type="image/webp" />
+		<img loading="lazy" src="{{ data.next-case.image.fallbackSrc }}"
+		     alt="{{ data.next-case.image.altText }}"/>
+	</picture>
+    <div class="next-case__content">
+        <h3 class="next-case__headline">{{ data.next-case.name }}</h3>
+        <a href="{{data.next-case.link}}">
+            <button class="button button--primary button--small"
+                    data-js-atom="image-text-teaser-forward">
+                <span class="button__text">
+                    next case
+                </span>
+            </button>
+        </a>
+    </div>
+</div>

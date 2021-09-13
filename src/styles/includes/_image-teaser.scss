@@ -1,0 +1,94 @@
+@mixin bp-mobile {
+	@media screen and (max-width: 899px) {
+		@content;
+	}
+}
+
+.image-teaser {
+	position: relative;
+	margin-bottom: $spacing--900;
+
+	@include bp-mobile {
+		&::before {
+			left: auto;
+			right: 0;
+		}
+	}
+
+	@include bp-xs {
+		overflow-x: hidden;
+	}
+
+	&::before {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: $spacing--200;
+		height: 50%;
+		background-color: $color-primary--white;
+		z-index: 2;
+
+		@include bp-xs {
+			width: 0;
+		}
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		height: $spacing--200;
+		width: calc(100% - 120px);
+		background-color: $color-primary--white;
+		z-index: 2;
+	}
+
+	.is-dark & {
+		&::before,
+		&::after {
+			background-color: $color-primary--black;
+			transition: background-color $transition-main ease-in-out, color $transition-main ease-in-out;
+		}
+	}
+
+	img {
+		width: 100%;
+	}
+
+	&__content {
+		position: absolute;
+		left: 8vw;
+		top: 18vw;
+
+		@include bp-xs {
+			text-align: center;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		h3 {
+			line-height: 1rem;
+			font-family: $font-serif;
+
+			&.first-line {
+				font-family: $font-sans-serif-light;
+			}
+
+			@include bp-xs {
+				font-size: 5rem;
+			}
+			@include bp-tablet {
+				font-size: 5rem;
+			}
+			@include bp-l {
+				font-size: 8rem;
+			}
+			@include bp-xl {
+				font-size: 10rem;
+			}
+		}
+	}
+}

@@ -1,0 +1,26 @@
+{
+	"image-teaser": {
+		"image": {
+			"mobileSrc": "./assets/images/mobile/audi-teaser-mobile.webp",
+			"tabletSrc": "./assets/images/tablet/audi-teaser.webp",
+			"desktopSrc": "./assets/images/desktop/audi-teaser.webp",
+			"fallbackSrc": "./assets/images/fallback/audi-teaser.png",
+			"altText": "Audi"
+		},
+		"content": {
+			"firstLine": "Audi",
+			"secondLine": "e-tron",
+			"thirdLine": "GT"
+		}
+	},
+	"next-case": {
+		"name": "Volkswagen",
+		"link": "/case-details-vw.html",
+		"image": {
+			"mobileSrc": "./assets/images/mobile/vw-next-case-mobile.webp",
+			"tabletSrc": "./assets/images/tablet/vw-next-case.webp",
+			"desktopSrc": "./assets/images/desktop/vw-next-case.webp",
+			"fallbackSrc": "./assets/images/fallback/vw-next-case.png"
+		}
+	}
+}

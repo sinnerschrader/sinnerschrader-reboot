@@ -5,32 +5,27 @@
 	height: 100%;
 	overflow: hidden;
 
-	@include bp-xs {
-		position: relative;
-		top: 0;
-		left: 0;
-		bottom: 0;
-		width: auto;
-	}
-
 	.is-dark & {
 		background: $color-primary--white;
 		color: $color-primary--black;
 
-		@include bp-xs {
+		@include bp-s-and-lower {
 			background: $color-primary--black;
 			color: $color-primary--white;
 		}
 	}
 
 	&__first-page {
-		display: flex;
-		flex-direction: column;
+		box-sizing: border-box;
 		flex-shrink: 0;
 		width: 100%;
-		box-sizing: border-box;
+		padding: $spacing--600;
 		transition: opacity 500ms ease, transform 500ms ease;
 		transform: translateX(-100%);
+
+		@include bp-s-and-lower {
+			padding: $spacing--600 $spacing--600 0 0;
+		}
 
 		&.active-state {
 			transform: translateX(0);
@@ -38,13 +33,16 @@
 	}
 
 	&__second-page {
-		display: flex;
-		flex-direction: column;
+		box-sizing: border-box;
 		flex-shrink: 0;
 		width: 100%;
-		box-sizing: border-box;
+		padding: $spacing--600;
 		transform: translateX(0);
 		transition: opacity 500ms ease, transform 500ms ease;
+
+		@include bp-s-and-lower {
+			padding: $spacing--500 $spacing--500 0 0;
+		}
 
 		&.active-state {
 			transform: translateX(-100%);
@@ -52,38 +50,26 @@
 	}
 
 	&__headline {
-		margin-top: 0;
+		@include headline-200();
 
-		@include bp-s-and-lower {
-			margin: $spacing--500 0 $spacing--400;
+		margin-top: 0;
+		margin-bottom: $spacing--400;
+
+		&--serif {
+			@include headline-201;
+		}
+
+		&--serif-italic {
+			@include headline-202;
 		}
 	}
 
 	&__copy {
-		@include paragraph-100();
+		@include paragraph-200();
 
-		color: $color-primary--white;
 		margin-top: 0;
-		margin-bottom: 4rem;
-
-		&--small {
-			@include paragraph-200();
-
-			color: $color-primary--white;
-			margin-top: 0;
-			margin-bottom: 4rem;
-
-			.is-dark & {
-				color: $color-primary--black;
-			}
-
-			/* stylelint-disable-next-line order/order */
-			@include bp-s-and-lower {
-				.is-dark & {
-					color: $color-primary--white;
-				}
-			}
-		}
+		margin-bottom: $spacing--500;
+		color: $color-primary--white;
 
 		.is-dark & {
 			color: $color-primary--black;
@@ -91,6 +77,8 @@
 
 		/* stylelint-disable-next-line order/order */
 		@include bp-s-and-lower {
+			color: $color-primary--black;
+
 			.is-dark & {
 				color: $color-primary--white;
 			}
@@ -104,7 +92,6 @@
 		border: transparent;
 		border-bottom: 2px solid $color-primary--black;
 		width: 100%;
-		font-size: 1.8rem;
 
 		/* stylelint-disable-next-line order/order */
 		@include bp-s-and-lower {
@@ -121,7 +108,7 @@
 	}
 
 	&__dataText {
-		@include paragraph-100();
+		@include paragraph-200();
 
 		padding-left: 2rem;
 		margin: 2rem 0;
@@ -133,14 +120,17 @@
 		padding: $spacing--200 0;
 		width: 20rem;
 		border-radius: 2.4rem;
+
+		@include bp-s-and-lower {
+			background-color: $color-primary--gray;
+			color: $color-primary--white;
+		}
 	}
 
 	&__backwardButton {
 		transform: rotate(180deg);
 		padding: $spacing--100 0;
-		width: fit-content;
 		border: 0;
-		margin-bottom: 2rem;
 		background-color: transparent;
 
 		&:hover {
@@ -149,40 +139,14 @@
 
 		/* stylelint-disable-next-line order/order */
 		@include bp-s-and-lower {
-			margin: 2rem 0;
+			padding: 0;
+			margin-bottom: 1rem;
 		}
 
 		&--svg {
 			height: 3rem;
-			width: 3rem;
 			@include bp-s-and-lower {
 				filter: invert(1);
-			}
-		}
-	}
-
-	.button {
-		background-color: $color-primary--gray;
-		color: $color-primary--white;
-
-		.is-dark & {
-			background-color: $color-primary--beige;
-			color: $color-primary--black;
-		}
-
-		/* stylelint-disable-next-line order/order */
-		@include bp-s-and-lower {
-			width: 100%;
-			text-align: center;
-
-			.is-dark & {
-				background-color: $color-primary--gray;
-				color: $color-primary--white;
-			}
-
-			&__text {
-				margin: 0 auto;
-				text-transform: uppercase;
 			}
 		}
 	}

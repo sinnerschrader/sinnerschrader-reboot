@@ -22,7 +22,7 @@
 	"image-teaser": {
 		"image": {
 			"mobileSrc": "./assets/images/mobile/job-list-teaser-mobile.webp",
-			"tabletSrc": "./assets/images/tablet/job-list-teaser.webp",
+			"tabletSrc": "./assets/images/tablet/job-list-teaser-tablet.webp",
 			"desktopSrc": "./assets/images/desktop/job-list-teaser.webp",
 			"fallbackSrc": "./assets/images/fallback/job-list-teaser.png",
 			"altText": "alt text"

@@ -73,10 +73,6 @@
 			line-height: 1rem;
 			font-family: $font-serif;
 
-			&.first-line {
-				font-family: $font-sans-serif-light;
-			}
-
 			@include bp-xs {
 				font-size: 5rem;
 			}
@@ -89,6 +85,10 @@
 			@include bp-xl {
 				font-size: 10rem;
 			}
+		}
+
+		.image-teaser__first-line {
+			font-family: $font-sans-serif-light;
 		}
 	}
 }

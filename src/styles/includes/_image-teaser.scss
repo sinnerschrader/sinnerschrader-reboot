@@ -1,14 +1,8 @@
 @import "./button";
 
-@mixin bp-mobile {
-	@media screen and (max-width: 899px) {
-		@content;
-	}
-}
-
 .content-box {
 	position: absolute;
-	height: 90%;
+	height: fit-content;
 	width: 40%;
 	right: 0;
 	bottom: -$spacing--700;
@@ -16,8 +10,7 @@
 	color: $color-primary--black;
 
 	/* stylelint-disable-next-line order/order */
-	@include bp-xs {
-		height: 40%;
+	@include bp-s-and-lower {
 		width: 70%;
 		left: 0;
 		background-color: $color-primary--black;
@@ -31,15 +24,15 @@
 	position: relative;
 	margin-bottom: $spacing--900;
 
-	@include bp-mobile {
+	@include bp-s-and-lower {
 		&::before {
 			left: auto;
 			right: 0;
 		}
 	}
 
-	@include bp-xs {
-		overflow-x: hidden;
+	@include bp-s-and-lower {
+		overflow: inherit;
 	}
 
 	&::before {
@@ -52,7 +45,7 @@
 		background-color: $color-primary--white;
 		z-index: 2;
 
-		@include bp-xs {
+		@include bp-s-and-lower {
 			left: auto;
 			right: 0;
 		}

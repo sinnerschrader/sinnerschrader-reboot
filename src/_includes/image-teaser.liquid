@@ -1,0 +1,15 @@
+<div class="image-teaser">
+	<picture class="image-teaser__picture">
+		<source media="(max-width: 599px)"
+		        srcset="{{ data.image-teaser.image.mobileSrc }}" type="image/webp" />
+		<source media="(min-width: 600px) and (max-width: 899px)"
+		        srcset="{{ data.image-teaser.image.tabletSrc }}" type="image/webp" />
+		<source media="(min-width: 900px)"
+		        srcset="{{ data.image-teaser.image.desktopSrc }}" type="image/webp" />
+		<img loading="lazy" src="{{ data.image-teaser.image.fallbackSrc }}"
+		     alt="{{ data.image-teaser.image.altText }}"/>
+	</picture>
+	<div class="content-box">
+		{{ content }}
+	</div>
+</div>

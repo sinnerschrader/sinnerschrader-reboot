@@ -111,7 +111,7 @@
 		@include paragraph-200();
 
 		padding-left: 2rem;
-		margin: 2rem 0;
+		margin: $spacing--200 0;
 	}
 
 	&__forwardButton {
@@ -132,6 +132,7 @@
 		padding: $spacing--100 0;
 		border: 0;
 		background-color: transparent;
+		margin-bottom: $spacing--400;
 
 		&:hover {
 			transform: rotate(180deg) scale(0.95);
@@ -140,7 +141,6 @@
 		/* stylelint-disable-next-line order/order */
 		@include bp-s-and-lower {
 			padding: 0;
-			margin-bottom: 1rem;
 		}
 
 		&--svg {

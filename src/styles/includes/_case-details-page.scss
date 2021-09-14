@@ -1,3 +1,35 @@
 .case-details-page {
 	overflow-x: initial;
+
+	.slider {
+		h3 {
+			grid-column-end: span 5;
+			margin-top: 0;
+
+			@include bp-xs() {
+				display: block;
+				margin-left: 12;
+			}
+		}
+
+		p {
+			grid-column-end: span 7;
+
+			@include bp-xs() {
+				grid-column-end: span 12;
+			}
+		}
+
+		.swiper-slide {
+			margin-top: 6vw;
+
+			p {
+				margin: 1rem 0;
+
+				span {
+					font-family: $font-sans-serif-semibold;
+				}
+			}
+		}
+	}
 }

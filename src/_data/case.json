@@ -22,5 +22,55 @@
 			"desktopSrc": "./assets/images/desktop/vw-next-case.webp",
 			"fallbackSrc": "./assets/images/fallback/vw-next-case.png"
 		}
+	},
+	"slider": {
+		"title": "Start with trust",
+		"text": "To deliver in time, we built on the trust we gained in 5 years of teamwork. Together with Audi, we then trained new ways of collaboration to increase pace and proof Vorsprung. We created a dedicated Agile Release Train consisting of five agile, cross-functional teams, delivering digital premium to Audi’s 19 key markets.",
+		"slides": [
+			{
+				"mobileSrc": "./assets/images/mobile/international-mobile.webp",
+				"tabletSrc": "./assets/images/tablet/international.webp",
+				"desktopSrc": "./assets/images/desktop/international.webp",
+				"fallbackSrc": "./assets/images/fallback/international.jpg",
+				"altText": "Person sitting at a desk in an office, a bonsai tree is seen in the foreground",
+				"info": {
+					"title": "International",
+					"text": "We united talents from BER, HAM, FRA, Canada & USA"
+				}
+			},
+			{
+				"mobileSrc": "./assets/images/mobile/remote.webp",
+				"tabletSrc": "./assets/images/tablet/remote.webp",
+				"desktopSrc": "./assets/images/desktop/remote.webp",
+				"fallbackSrc": "./assets/images/fallback/remote.jpg",
+				"altText": "Person sitting at a desk in an office, a bonsai tree is seen in the foreground",
+				"info": {
+					"title": "Remote first",
+					"text": "Most of the team has never met in person"
+				}
+			},
+			{
+				"mobileSrc": "./assets/images/mobile/agile.webp",
+				"tabletSrc": "./assets/images/tablet/agile.webp",
+				"desktopSrc": "./assets/images/desktop/agile.webp",
+				"fallbackSrc": "./assets/images/fallback/agile.jpg",
+				"altText": "Person sitting at a desk in an office, a bonsai tree is seen in the foreground",
+				"info": {
+					"title": "Agile",
+					"text": "Integrated software development processes dramatically increased productivity"
+				}
+			},
+			{
+				"mobileSrc": "./assets/images/mobile/agile.webp",
+				"tabletSrc": "./assets/images/tablet/agile.webp",
+				"desktopSrc": "./assets/images/desktop/agile.webp",
+				"fallbackSrc": "./assets/images/fallback/agile.jpg",
+				"altText": "Person sitting at a desk in an office, a bonsai tree is seen in the foreground",
+				"info": {
+					"title": "Autonomous",
+					"text": "Responsibility and true product responsibility led to on-time delivery"
+				}
+			}
+		]
 	}
 }

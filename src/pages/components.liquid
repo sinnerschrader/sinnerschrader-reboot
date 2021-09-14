@@ -12,16 +12,21 @@ dataJsItem: bg-scroll-animation
 	{% include stage, data: components %}
     
     <section class="fade-bg-black">
-		{% include section-header, title: "Image-Text-Teaser", number: "01" %}
-		{% include image-text-teaser, data: components %}
+		{% include section-header, title: "Image-Teaser", number: "01" %}
+        {% capture exampleContent %}
+            <h1 style="color: inherit;">Hello World</h1>
+            <p style="color: inherit;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <button>Use me</button>
+        {% endcapture %}
+		{% include image-teaser, data: components, content: exampleContent %}
 	</section>
     <section>
     	{% include section-header, title: "Text-Teaser (on dark)", number: "02" %}
 		{% include text-teaser, data: components %}
     </section>
 	<section>
-	{% include section-header, title: "Jobs offering List", number: "03" %}
-	{% include offering-list-emoji, data: components %}
+        {% include section-header, title: "Jobs offering List", number: "03" %}
+        {% include offering-list-emoji, data: components %}
 	</section>
 
     <section>

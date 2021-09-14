@@ -17,14 +17,13 @@ export class ProfileLinkContactForm {
 	}
 
 	togglePages() {
+		this.firstPage.classList.toggle("active");
+		this.secondPage.classList.toggle("active");
+
 		if (this.firstPage.classList.contains("active")) {
-			this.firstPage.classList.remove("active");
-			this.secondPage.classList.add("active");
 			this.firstPage.getElementsByTagName("button")[0].setAttribute("tabindex", -1);
 			this.secondPage.getElementsByTagName("button")[0].removeAttribute("tabindex");
 		} else if (this.secondPage.classList.contains("active")) {
-			this.secondPage.classList.remove("active");
-			this.firstPage.classList.add("active");
 			this.secondPage.getElementsByTagName("button")[0].setAttribute("tabindex", -1);
 			this.firstPage.getElementsByTagName("button")[0].removeAttribute("tabindex");
 		}

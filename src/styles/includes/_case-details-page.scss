@@ -1,6 +1,59 @@
 .case-details-page {
 	overflow-x: initial;
 
+	.abstract-container {
+		&__agenda {
+			margin-top: 5rem;
+
+			p {
+				@include code-100();
+
+				line-height: 0;
+			}
+		}
+
+		&__description {
+			@include spacing-800(margin-bottom);
+
+			h4 {
+				@include headline-300();
+			}
+
+			&:last-child {
+				@include spacing-900(margin-bottom);
+			}
+		}
+
+		button {
+			margin: 3rem 0 10rem;
+		}
+	}
+
+	.bg-text {
+		content: "craft";
+		font-family: $font-serif;
+		font-size: 23.5vw;
+		margin: 20vw -2vw;
+		line-height: 1vw;
+
+		@include bp-xs() {
+			display: none;
+		}
+	}
+
+	.bg-text-small {
+		display: none;
+
+		@include bp-xs() {
+			display: block;
+			content: "craft";
+			font-family: $font-serif;
+			font-size: 53vw;
+			line-height: 40vw;
+			margin: 30vw -13vw;
+		}
+	}
+
 	.slider {
 		h3 {
 			grid-column-end: span 5;

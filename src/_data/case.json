@@ -13,14 +13,40 @@
 			"thirdLine": "GT"
 		}
 	},
-	"next-case": {
-		"name": "Volkswagen",
-		"link": "/case-details-vw.html",
-		"image": {
-			"mobileSrc": "./assets/images/mobile/vw-next-case-mobile.webp",
-			"tabletSrc": "./assets/images/tablet/vw-next-case.webp",
-			"desktopSrc": "./assets/images/desktop/vw-next-case.webp",
-			"fallbackSrc": "./assets/images/fallback/vw-next-case.png"
+	"abstract": {
+		"title": "Next level brand experience",
+		"link": "/abstract.html",
+		"agenda": ["strategy", "design / ux", "implementation", "collaboration model", "rollout"],
+		"descriptions": [
+			{
+				"title": "Challenge",
+				"text": "Create a digital experience that surprises and engages the user with a highly emotional Audi milestone product while building up the foundations of the brand’s future marketing ecosystem and its global cross-agency collaboration model."
+			},
+			{
+				"title": "Outcomes",
+				"text": "We built a flawless, next level premium User Journey with a distinctive e-commerce focus, set up a high-performance software delivery pipeline for faster and scalable ways of collaboration and brought in a company-wide software architecture approach with Micro Frontend Technology, enabling developers to work at pace."
+			}
+		],
+		"work": {
+			"previewVideo": {
+				"webmSrc": "/assets/videos/work-video-loop.webm",
+				"mp4Src": "/assets/videos/work-video-loop.mp4"
+			},
+			"caseVideo": {
+				"mobile": {
+					"webmSrc": "/assets/videos/s2-cases-mobile.webm",
+					"mp4Src": "/assets/videos/s2-cases-mobile.mp4"
+				},
+				"webmSrc": "/assets/videos/s2-cases.webm",
+				"mp4Src": "/assets/videos/s2-cases.mp4"
+			},
+			"reducedMotion": {
+				"webmSrc": "/assets/videos/work-video-loop.webm#t=2",
+				"mp4Src": "/assets/videos/work-video-loop.mp4#t=2"
+			},
+			"customVideoButton": {
+				"text": "Play Reel"
+			}
 		}
 	},
 	"slider": {
@@ -72,5 +98,15 @@
 				}
 			}
 		]
+	},
+	"next-case": {
+		"name": "Volkswagen",
+		"link": "/case-details-vw.html",
+		"image": {
+			"mobileSrc": "./assets/images/mobile/vw-next-case-mobile.webp",
+			"tabletSrc": "./assets/images/tablet/vw-next-case.webp",
+			"desktopSrc": "./assets/images/desktop/vw-next-case.webp",
+			"fallbackSrc": "./assets/images/fallback/vw-next-case.png"
+		}
 	}
 }

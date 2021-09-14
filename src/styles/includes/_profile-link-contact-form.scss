@@ -27,7 +27,7 @@
 			padding: $spacing--600 $spacing--600 0 0;
 		}
 
-		&.active-state {
+		&.active {
 			transform: translateX(0);
 		}
 	}
@@ -44,7 +44,7 @@
 			padding: $spacing--500 $spacing--500 0 0;
 		}
 
-		&.active-state {
+		&.active {
 			transform: translateX(-100%);
 		}
 	}

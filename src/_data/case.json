@@ -49,6 +49,88 @@
 			}
 		}
 	},
+	"about": {
+		"title": "More than beautiful",
+		"descriptions": [
+			"As the global digital lead agency, we strategize and expand Audi's ecosystem for digital business. We are working towards a connected digital journey that grows relevance and e-commerce along all user phases. We call it: oneAudi. Underneath the captivating experience of the e-tron GT, the foundations of this vision become tangible: making interactions more personal to guide customers more direct to preferred choices, pushing traffic and conversion on all of Audi’s digital platforms and connecting them into a fascinating experience design layer.",
+			"We head for a flawless, connected digital User Journey for personalized e-commerce offers, delivered by a high-performance software delivery pipeline."
+		],
+		"slides": [
+			{
+				"mobileSrc": "./assets/images/mobile/gt-mobile.webp",
+				"tabletSrc": "./assets/images/tablet/gt.webp",
+				"desktopSrc": "./assets/images/desktop/gt.webp",
+				"fallbackSrc": "./assets/images/fallback/gt.jpg",
+				"altText": "GT",
+				"info": {
+					"title": "Calm visuality",
+					"text": "With beauty details"
+				}
+			},
+			{
+				"mobileSrc": "./assets/images/mobile/gt-mobile.webp",
+				"tabletSrc": "./assets/images/tablet/gt.webp",
+				"desktopSrc": "./assets/images/desktop/gt.webp",
+				"fallbackSrc": "./assets/images/fallback/gt.jpg",
+				"altText": "GT",
+				"info": {
+					"title": "Calm visuality",
+					"text": "With beauty details"
+				}
+			},
+			{
+				"mobileSrc": "./assets/images/mobile/gt-mobile.webp",
+				"tabletSrc": "./assets/images/tablet/gt.webp",
+				"desktopSrc": "./assets/images/desktop/gt.webp",
+				"fallbackSrc": "./assets/images/fallback/gt.jpg",
+				"altText": "GT",
+				"info": {
+					"title": "Calm visuality",
+					"text": "With beauty details"
+				}
+			},
+			{
+				"mobileSrc": "./assets/images/mobile/gt-mobile.webp",
+				"tabletSrc": "./assets/images/tablet/gt.webp",
+				"desktopSrc": "./assets/images/desktop/gt.webp",
+				"fallbackSrc": "./assets/images/fallback/gt.jpg",
+				"altText": "GT",
+				"info": {
+					"title": "Calm visuality",
+					"text": "With beauty details"
+				}
+			}
+		],
+		"quote": {
+			"text": ["To unlock the beauty,", "simplicity is the key."],
+			"author": {
+				"name": "Alberto Zanotto",
+				"position": "Lead UI Designer"
+			},
+			"image": {
+				"imgSrc": "/assets/svg/double-quote.svg",
+				"altText": "Double quote"
+			}
+		}
+	},
+	"content": {
+		"title": "Immediately personal: the customizer",
+		"descriptions": [
+			"Reflecting individual intends quickly and making e-commerce offers useable without difficulty – this is our understanding of welcoming users the premium way. The new vehicle customizer is a perfect example: As a central point of contact, users can customize the Audi e-tron GT with just a few clicks. Then they are guided directly the the test drive at the dealer – or to immediately available vehicles from the inventory.",
+			"Rethinking product configuration: from complexity with buildability conflicts to a 5-click experience"
+		],
+		"teaserDescription": {
+			"name": "Individualization",
+			"text": "in no time for accelerated user data aggregation"
+		},
+		"image": {
+			"mobileSrc": "./assets/images/mobile/audi-constructor-mobile.webp",
+			"tabletSrc": "./assets/images/tablet/audi-constructor.webp",
+			"desktopSrc": "./assets/images/desktop/audi-constructor.webp",
+			"fallbackSrc": "./assets/images/fallback/audi-constructor.png",
+			"altText": "Audi"
+		}
+	},
 	"slider": {
 		"title": "Start with trust",
 		"text": "To deliver in time, we built on the trust we gained in 5 years of teamwork. Together with Audi, we then trained new ways of collaboration to increase pace and proof Vorsprung. We created a dedicated Agile Release Train consisting of five agile, cross-functional teams, delivering digital premium to Audi’s 19 key markets.",

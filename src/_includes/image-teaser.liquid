@@ -1,19 +1,19 @@
 <div class="image-teaser">
 	<picture class="image-teaser__picture">
 		<source media="(max-width: 599px)"
-		        srcset="{{ data.image-teaser.image.mobileSrc }}" type="image/webp" />
+		        srcset="{{ data.image.mobileSrc }}" type="image/webp" />
 		<source media="(min-width: 600px) and (max-width: 899px)"
-		        srcset="{{ data.image-teaser.image.tabletSrc }}" type="image/webp" />
+		        srcset="{{ data.image.tabletSrc }}" type="image/webp" />
 		<source media="(min-width: 900px)"
-		        srcset="{{ data.image-teaser.image.desktopSrc }}" type="image/webp" />
-		<img loading="lazy" src="{{ data.image-teaser.image.fallbackSrc }}"
-		     alt="{{ data.image-teaser.image.altText }}"/>
+		        srcset="{{ data.image.desktopSrc }}" type="image/webp" />
+		<img loading="lazy" src="{{ data.image.fallbackSrc }}"
+		     alt="{{ data.image.altText }}"/>
 	</picture>
 	{% if content.firstLine %}
 		<div class="image-teaser__content">
-			<h3 class="image-teaser__first-line">{{ data.image-teaser.content.firstLine }}</h3>
-			<h3 class="image-teaser__second-line">{{ data.image-teaser.content.secondLine }}</h3>
-			<h3 class="image-teaser__third-line">{{ data.image-teaser.content.thirdLine }}</h3>
+			<h3 class="image-teaser__content__first-line">{{ data.content.firstLine }}</h3>
+			<h3 class="image-teaser__content__second-line">{{ data.content.secondLine }}</h3>
+			<h3 class="image-teaser__content__third-line">{{ data.content.thirdLine }}</h3>
 		</div>
 	{% elsif content %}
 		<div class="content-box">

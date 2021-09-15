@@ -9,49 +9,81 @@ dataJsItem: bg-scroll-animation
 {% include navigation, data: global %}
 
 <main class="case-details-page">
-	<section class="fade-bg-black cases-page--teaser">
-		{% include image-teaser, data: case, content: case.image-teaser.content %}
+	<section>
+		{% include image-teaser, data: case.image-teaser, content: case.image-teaser.content %}
 	</section>
 
     <section>
 		{% include section-header, title: "Abstract", number: "01", type: "large" %}
-		<div class="abstract-container grid">
-			<div class="col-4-xl col-5-l col-6-m col-8-s col-9-xs">
-				<h3>{{ case.abstract.title }}</h3>
-			</div>
-			<div class="grid">
-				<div class="col-6 col-12-xs">
-					<div class="abstract-container__agenda">
-						{% for agendaItem in case.abstract.agenda %}
-							<p>{{ agendaItem }}</p>
+		<div class="abstract-container--wrapper">
+			<div class="abstract-container grid">
+				<div class="col-4-xl col-5-l col-6-m col-8-s col-9-xs">
+					<h3>{{ case.abstract.title }}</h3>
+				</div>
+				<div class="grid">
+					<div class="col-6 col-12-xs">
+						<div class="abstract-container__agenda">
+							{% for agendaItem in case.abstract.agenda %}
+								<p>{{ agendaItem }}</p>
+							{% endfor %}
+						</div>
+						<a href="{{case.abstract.link}}">
+							<button class="button button--primary button--small"
+									data-js-atom="image-text-teaser-forward">
+								<span class="button__text">
+									view online
+								</span>
+							</button>
+						</a>
+					</div>
+					<div class="col-6 col-12-xs">
+						{% for description in case.abstract.descriptions %}
+							<div class="abstract-container__description">
+								<h4>{{ description.title }}</h4>
+								<p>{{ description.text }}</p>
+							</div>
 						{% endfor %}
 					</div>
-					<a href="{{case.abstract.link}}">
-						<button class="button button--primary button--small"
-								data-js-atom="image-text-teaser-forward">
-							<span class="button__text">
-								view online
-							</span>
-						</button>
-					</a>
-				</div>
-				<div class="col-6 col-12-xs">
-					{% for description in case.abstract.descriptions %}
-						<div class="abstract-container__description">
-							<h4>{{ description.title }}</h4>
-							<p>{{ description.text }}</p>
-						</div>
-					{% endfor %}
 				</div>
 			</div>
+			{% include work, data: case.abstract %}
 		</div>
-		{% include work, data: case.abstract %}
+	</section>
+
+    <section class="fade-bg-black">
 		<p class="bg-text">immersion</p>
 		<p class="bg-text-small">imme<br/>rsion</p>
 	</section>
 
-    <section>
+    <section class="fade-bg-black">
 		{% include section-header, title: "About", number: "02", type: "large" %}
+		<div class="about">
+			<div class="slider slider-large" data-js-item="slider">
+				<div class="grid about__descriprion">
+					<h4>{{ case.about.title }}</h4>
+					<p>
+					{% for description in case.about.descriptions %}
+						{{ description }}<br/><br/>
+					{% endfor %}
+					</p>
+				</div>
+				{% include swiper-container, slides: case.about.slides %}
+				<div class="about__quote">
+					{% for text in case.about.quote.text %}
+						<p class="about__quote__speach">
+							{% if forloop.first %}
+								<img alt="{{ case.about.quote.image.altText }}" src="{{ case.about.quote.image.imgSrc }}"/>
+							{% endif %}
+							{{ text }}
+						</p>
+					{% endfor %}
+					<p class="about__quote__author">
+						<span>&#11834; {{ case.about.quote.author.name }}</span>, 
+						{{ case.about.quote.author.position }}
+					</p>
+				</div>
+			</div>
+		</div>
 	</section>
 
     <section>
@@ -60,9 +92,28 @@ dataJsItem: bg-scroll-animation
 
     <section>
 		{% include section-header, title: "Content", number: "04", type: "large" %}
+		<div class="content-container--wrapper">
+			<div class="content-container">
+				<div class="grid content-container__descriprion">
+					<h4>{{ case.content.title }}</h4>
+					<p>
+					{% for description in case.content.descriptions %}
+						{{ description }}<br/><br/>
+					{% endfor %}
+					</p>
+				</div>
+				<div class="content-container__media">
+					{% include image-teaser, data: case.content %}
+					<p class="teaser-description">
+						<span>{{ case.content.teaserDescription.name }}</span> 
+						{{ case.content.teaserDescription.text }}
+					</p>
+				</div>
+			</div>
+		</div>
 	</section>
 
-    <section>
+    <section class="fade-bg-black">
 		{% include section-header, title: "Technology", number: "05", type: "large" %}
 	</section>
 
@@ -70,7 +121,7 @@ dataJsItem: bg-scroll-animation
 		{% include section-header, title: "Work mode", number: "06", type: "large" %}
 		<div class="slider" data-js-item="slider">
 			<div class="grid">
-				<h3>{{ case.slider.title }}</h3>
+				<h4>{{ case.slider.title }}</h4>
 				<p>{{ case.slider.text }}</p>
 			</div>
 			{% include swiper-container, slides: case.slider.slides %}

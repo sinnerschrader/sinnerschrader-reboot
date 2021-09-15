@@ -1,6 +1,10 @@
 .case-details-page {
 	overflow-x: initial;
 
+	h4 {
+		@include headline-300();
+	}
+
 	.image-teaser {
 		position: relative;
 		margin-left: 0;
@@ -27,6 +31,7 @@
 			height: 50%;
 			background-color: $color-primary--white;
 			z-index: 2;
+			transition: background-color $transition-main ease-in-out, color $transition-main ease-in-out;
 
 			@include bp-xs {
 				width: 0;
@@ -42,6 +47,7 @@
 			width: calc(100% - 120px);
 			background-color: $color-primary--white;
 			z-index: 2;
+			transition: background-color $transition-main ease-in-out, color $transition-main ease-in-out;
 
 			@include bp-xs {
 				width: 0;
@@ -72,13 +78,11 @@
 				transform: translate(-50%, -50%);
 			}
 
-			h3 {
+			&__first-line,
+			&__second-line,
+			&__third-line {
 				line-height: 1rem;
 				font-family: $font-serif;
-
-				&.first-line {
-					font-family: $font-sans-serif-light;
-				}
 
 				@include bp-xs {
 					font-size: 5rem;
@@ -93,10 +97,29 @@
 					font-size: 10rem;
 				}
 			}
+
+			&__first-line {
+				font-family: $font-sans-serif-light;
+			}
 		}
 	}
 
 	.abstract-container {
+		&--wrapper {
+			@include spacing-500(padding-top);
+
+			position: relative;
+
+			&::after {
+				@include dotted-grid();
+
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				filter: invert(0);
+			}
+		}
+
 		&__agenda {
 			margin-top: 5rem;
 
@@ -109,10 +132,6 @@
 
 		&__description {
 			@include spacing-800(margin-bottom);
-
-			h4 {
-				@include headline-300();
-			}
 
 			&:last-child {
 				@include spacing-900(margin-bottom);
@@ -149,8 +168,126 @@
 		}
 	}
 
+	.about {
+		&__description {
+			@include spacing-800(margin-bottom);
+		}
+
+		&__quote {
+			@include spacing-900(margin);
+			@include spacing-400(margin-right);
+
+			@include bp-xs {
+				@include spacing-400(margin-left);
+				@include spacing-400(margin-right);
+			}
+
+			&__speach {
+				@include headline-300();
+
+				font-family: $font-sans-serif-light;
+
+				img {
+					@include bp-xs {
+						margin: 0 3vw 0 0;
+					}
+					@include bp-tablet {
+						margin: 0 3vw 0 -3vw;
+					}
+					@include bp-l {
+						margin: 0 2.5vw 0 3.5vw;
+					}
+					@include bp-xl {
+						margin: 0 5vw 0 -1vw;
+					}
+				}
+			}
+
+			&__author {
+				@include spacing-500(margin-top);
+
+				margin: 1rem 0;
+
+				span {
+					font-family: $font-sans-serif-semibold;
+				}
+			}
+		}
+	}
+
+	.content-container {
+		&--wrapper {
+			@include spacing-500(padding-top);
+
+			position: relative;
+
+			&::after {
+				@include dotted-grid();
+
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				filter: invert(0);
+				z-index: -1;
+			}
+		}
+
+		h4 {
+			grid-column-end: span 5;
+			margin-top: 0;
+
+			@include bp-xs() {
+				display: block;
+				margin-left: 12;
+			}
+		}
+
+		p {
+			grid-column-end: span 7;
+
+			@include bp-xs() {
+				grid-column-end: span 12;
+			}
+		}
+
+		&__media {
+			@include bp-xs {
+				margin-left: 2.4rem;
+			}
+			@include bp-s {
+				margin-left: 6.4rem;
+			}
+			@include bp-m {
+				margin-left: 6.4rem;
+			}
+			@include bp-l {
+				margin-left: 9.6rem;
+			}
+			@include bp-xl {
+				margin-left: 9.6rem;
+			}
+
+			.image-teaser {
+				margin-bottom: 0;
+
+				&::before,
+				&::after {
+					content: none;
+				}
+			}
+
+			.teaser-description {
+				@include spacing-800(padding-bottom);
+
+				span {
+					font-family: $font-sans-serif-semibold;
+				}
+			}
+		}
+	}
+
 	.slider {
-		h3 {
+		h4 {
 			grid-column-end: span 5;
 			margin-top: 0;
 

@@ -43,6 +43,10 @@
 		}
 	}
 
+	&.slider-large .swiper-container .swiper-slide {
+		width: 85vw;
+	}
+
 	.swiper-wrapper {
 		transform-style: preserve-3d;
 		backface-visibility: hidden;

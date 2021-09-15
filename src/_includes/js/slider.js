@@ -2,7 +2,6 @@ import Swiper from "swiper";
 
 class Slider {
 	constructor() {
-		this.swiper = {};
 		this.sliderOptions = {
 			direction: "horizontal",
 			slidesPerView: "auto",
@@ -35,7 +34,11 @@ class Slider {
 	}
 
 	mountSlider(options) {
-		this.swiper = new Swiper(".swiper-container", options);
+		const swiperContainerList = document.getElementsByClassName("swiper-container");
+
+		Object.keys(swiperContainerList).forEach((key) => {
+			new Swiper(swiperContainerList[key], options);
+		});
 	}
 }
 

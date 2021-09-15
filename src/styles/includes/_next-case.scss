@@ -2,7 +2,7 @@
 	position: relative;
 	margin-bottom: $spacing--900;
 
-	@include bp-mobile {
+	@include bp-xs {
 		&::before {
 			left: auto;
 			right: 0;

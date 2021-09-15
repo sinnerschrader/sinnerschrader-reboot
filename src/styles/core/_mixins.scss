@@ -11,6 +11,12 @@
 	}
 }
 
+@mixin bp-s-and-lower {
+	@media screen and (max-width: 899px) {
+		@content;
+	}
+}
+
 @mixin bp-s-and-above {
 	@media screen and (min-width: 600px) {
 		@content;

@@ -131,6 +131,71 @@
 			"altText": "Audi"
 		}
 	},
+	"technology": {
+		"info": {
+			"description": [
+				{
+					"title": "Performance, ready to accelerate",
+					"text": "Micro Frontend Technology – the new technological and conceptional environment underneath the Audi e-tron online experience made it possible to redefine the company's standards regarding authoring experience, accessibility, and the overall mobile experience."
+				},
+				{
+					"title": "Setting the pace: from 1 deployment in 3 weeks to 160 deployments in 24 hrs",
+					"text": "What delivers an extensive, yet fast user experience on the one hand, also enables developers to deploy faster than ever – as proven with close to 160 deployments on launch day alone. The concept also allows for simultaneous worldwide contribution, our x-functional, x-agency agile team for Audi was working across countries and continents."
+				}
+			]
+		},
+		"images": [
+			{
+				"mobileSrc": "./assets/images/mobile/tech-1-mobile.webp",
+				"tabletSrc": "./assets/images/tablet/tech-1.webp",
+				"desktopSrc": "./assets/images/desktop/tech-1.webp",
+				"fallbackSrc": "./assets/images/fallback/tech-1.jpg",
+				"altText": "Inside auto"
+			},
+			{
+				"mobileSrc": "./assets/images/mobile/tech-2-mobile.webp",
+				"tabletSrc": "./assets/images/tablet/tech-2.webp",
+				"desktopSrc": "./assets/images/desktop/tech-2.webp",
+				"fallbackSrc": "./assets/images/fallback/tech-2.jpg",
+				"altText": "Auto"
+			}
+		],
+		"quote": {
+			"text": [
+				"When it comes to navigating",
+				"the connected world around us, there are no",
+				"shortcuts to the multifaceted challenges",
+				"companies face. With curious minds and an",
+				"ethos for knowledge sharing, we don't just",
+				"handle complexity, we give it a big hug."
+			],
+			"author": {
+				"name": "Sven Schuhwirth",
+				"position": "Head of  Digital Experience / Business, Audi AG"
+			},
+			"image": {
+				"imgSrc": "/assets/svg/double-quote.svg",
+				"altText": "Double quote"
+			}
+		},
+		"statistics": [
+			{
+				"amount": "130",
+				"metric": "per day",
+				"description": "Deployments"
+			},
+			{
+				"amount": "2x",
+				"metric": "factor",
+				"description": "Clickrate improvement"
+			},
+			{
+				"amount": "30",
+				"metric": "mio",
+				"description": "Served requests per day"
+			}
+		]
+	},
 	"slider": {
 		"title": "Start with trust",
 		"text": "To deliver in time, we built on the trust we gained in 5 years of teamwork. Together with Audi, we then trained new ways of collaboration to increase pace and proof Vorsprung. We created a dedicated Agile Release Train consisting of five agile, cross-functional teams, delivering digital premium to Audi’s 19 key markets.",

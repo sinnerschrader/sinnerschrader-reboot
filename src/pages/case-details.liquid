@@ -68,20 +68,7 @@ dataJsItem: bg-scroll-animation
 					</p>
 				</div>
 				{% include swiper-container, slides: case.about.slides %}
-				<div class="about__quote">
-					{% for text in case.about.quote.text %}
-						<p class="about__quote__speach">
-							{% if forloop.first %}
-								<img alt="{{ case.about.quote.image.altText }}" src="{{ case.about.quote.image.imgSrc }}"/>
-							{% endif %}
-							{{ text }}
-						</p>
-					{% endfor %}
-					<p class="about__quote__author">
-						<span>&#11834; {{ case.about.quote.author.name }}</span>, 
-						{{ case.about.quote.author.position }}
-					</p>
-				</div>
+				{% include quote, data: case.about.quote %}
 			</div>
 		</div>
 	</section>
@@ -115,6 +102,58 @@ dataJsItem: bg-scroll-animation
 
     <section class="fade-bg-black">
 		{% include section-header, title: "Technology", number: "05", type: "large" %}
+			<div class="technology">
+				<div class="technology__overview grid">
+					<div class="overview-container col-5 col-12-xs">
+						<div class="technology__description">
+							<h3>{{ case.technology.info.description[0].title }}</h3>
+							<p>{{ case.technology.info.description[1].text }}</p>
+						</div>
+						<div class="technology__media-content">
+							<picture class="technology__picture">
+								<source media="(max-width: 599px)"
+										srcset="{{ case.technology.images[1].mobileSrc }}" type="image/webp" />
+								<source media="(min-width: 600px) and (max-width: 899px)"
+										srcset="{{ case.technology.images[1].tabletSrc }}" type="image/webp" />
+								<source media="(min-width: 900px)"
+										srcset="{{ case.technology.images[1].desktopSrc }}" type="image/webp" />
+								<img loading="lazy" src="{{ case.technology.images[1].fallbackSrc }}"
+									alt="{{ case.technology.images[1].altText }}"/>
+							</picture>
+						</div>
+					</div>
+					<div class="overview-container col-7 col-12-xs">
+						<div class="technology__media-content">
+							<picture class="technology__picture">
+								<source media="(max-width: 599px)"
+										srcset="{{ case.technology.images[0].mobileSrc }}" type="image/webp" />
+								<source media="(min-width: 600px) and (max-width: 899px)"
+										srcset="{{ case.technology.images[0].tabletSrc }}" type="image/webp" />
+								<source media="(min-width: 900px)"
+										srcset="{{ case.technology.images[0].desktopSrc }}" type="image/webp" />
+								<img loading="lazy" src="{{ case.technology.images[0].fallbackSrc }}"
+									alt="{{ case.technology.images[0].altText }}"/>
+							</picture>
+						</div>
+						<div class="technology__description">
+							<h3>{{ case.technology.info.description[1].title }}</h3>
+							<p>{{ case.technology.info.description[1].text }}</p>
+						</div>
+					</div>
+				</div>
+				{% include quote, data: case.technology.quote %}
+				<div picture class="technology__statistics grid">
+					{% for statistic in case.technology.statistics %}
+						<div class="technology__statistics-item col-4 col-12-xs">
+							<div class="technology__statistics__data">
+								<div class="technology__statistics__data amount">{{ statistic.amount }}</div>
+								<div class="technology__statistics__data metric">{{ statistic.metric }}</div>
+							</div>
+							<div class="technology__statistics__description">{{ statistic.description }}</div>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
 	</section>
 
     <section>

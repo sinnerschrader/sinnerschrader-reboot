@@ -121,7 +121,14 @@
 		}
 
 		&__agenda {
-			margin-top: 5rem;
+			margin-block-start: 3em;
+
+			@include bp-l {
+				margin-block-start: 3.33em;
+			}
+			@include bp-xl {
+				margin-block-start: 4.33em;
+			}
 
 			p {
 				@include code-100();
@@ -171,47 +178,6 @@
 	.about {
 		&__description {
 			@include spacing-800(margin-bottom);
-		}
-
-		&__quote {
-			@include spacing-900(margin);
-			@include spacing-400(margin-right);
-
-			@include bp-xs {
-				@include spacing-400(margin-left);
-				@include spacing-400(margin-right);
-			}
-
-			&__speach {
-				@include headline-300();
-
-				font-family: $font-sans-serif-light;
-
-				img {
-					@include bp-xs {
-						margin: 0 3vw 0 0;
-					}
-					@include bp-tablet {
-						margin: 0 3vw 0 -3vw;
-					}
-					@include bp-l {
-						margin: 0 2.5vw 0 3.5vw;
-					}
-					@include bp-xl {
-						margin: 0 5vw 0 -1vw;
-					}
-				}
-			}
-
-			&__author {
-				@include spacing-500(margin-top);
-
-				margin: 1rem 0;
-
-				span {
-					font-family: $font-sans-serif-semibold;
-				}
-			}
 		}
 	}
 
@@ -281,6 +247,116 @@
 
 				span {
 					font-family: $font-sans-serif-semibold;
+				}
+			}
+		}
+	}
+
+	.technology {
+		&__overview {
+			grid-gap: $spacing--600;
+
+			@include bp-xs {
+				margin: 0;
+			}
+
+			h3 {
+				margin-top: 0;
+
+				@include bp-xs {
+					margin-top: revert;
+				}
+			}
+
+			img {
+				max-width: 100%;
+				max-height: 100%;
+
+				@include bp-xs {
+					width: 100%;
+				}
+			}
+
+			.overview-container:nth-child(1) .technology__media-content {
+				@include bp-xs {
+					margin: 0 0 10vw 2.4rem;
+				}
+			}
+
+			.overview-container:nth-child(2) .technology__media-content {
+				@include bp-xs {
+					margin: 0 2.4rem 10vw 0;
+				}
+			}
+		}
+
+		&__description {
+			@include bp-xs {
+				margin: 0 2.4rem 10vw;
+			}
+		}
+
+		&__statistics {
+			grid-gap: 0;
+
+			&__data {
+				border-right: 1px solid $color-primary--white;
+
+				@include bp-xs() {
+					border-right-style: none;
+				}
+
+				.amount {
+					font-family: $font-serif;
+
+					@include bp-xs {
+						font-size: 6rem;
+					}
+					@include bp-s {
+						font-size: 7.8rem;
+					}
+					@include bp-m {
+						font-size: 8.6rem;
+					}
+					@include bp-l {
+						font-size: 10.4rem;
+					}
+					@include bp-xl {
+						font-size: 10.4rem;
+					}
+				}
+
+				.metric {
+					font-family: $font-code;
+					font-size: 1rem;
+					padding-bottom: 5rem;
+
+					@include bp-xs {
+						padding-bottom: 0;
+					}
+				}
+			}
+
+			&-item {
+				text-align: center;
+
+				&:last-child .technology__statistics__data {
+					border-right-style: none;
+				}
+			}
+
+			&__description {
+				font-family: $font-sans-serif-semibold;
+				font-size: 1.8rem;
+				padding: 3rem 0;
+				text-overflow: ellipsis;
+				overflow: auto;
+				white-space: nowrap;
+				border-top: 1px solid $color-primary--white;
+				border-bottom: 1px solid $color-primary--white;
+
+				@include bp-xs() {
+					border-top-style: none;
 				}
 			}
 		}

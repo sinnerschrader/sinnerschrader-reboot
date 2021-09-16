@@ -163,10 +163,6 @@
 		}
 	}
 
-	.is-dark & {
-		background-color: $color-primary--black;
-	}
-
 	.is-dark &,
 	&.is-transparent {
 		background-color: transparent;
@@ -185,6 +181,10 @@
 		.nav__logo--sinnerschrader {
 			color: $color-primary--white;
 		}
+	}
+
+	.is-dark & {
+		background-color: $color-primary--black;
 	}
 
 	&__wrapper {

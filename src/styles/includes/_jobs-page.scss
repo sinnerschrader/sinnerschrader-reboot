@@ -20,28 +20,6 @@ $filter-bar-height--desktop: 11.8rem;
 	letter-spacing: 0.15rem;
 }
 
-@mixin icon-button {
-	border: 0;
-	justify-content: center;
-	align-items: center;
-	width: 4rem;
-	height: 4rem;
-	border-radius: 50%;
-	background-color: $color-primary--900;
-	color: $color-primary--white;
-}
-
-.toggle-button {
-	display: inline-flex;
-	cursor: pointer;
-
-	&:hover {
-		@include default-animation(transform);
-
-		transform: scale(calc(1.2 / 1.4));
-	}
-}
-
 .jobs__intro {
 	@include spacing-900(margin-top);
 	@include spacing-900(margin-bottom);
@@ -74,6 +52,8 @@ $filter-bar-height--desktop: 11.8rem;
 				cursor: pointer;
 				transform: translateX(100%);
 				transition: transform 0.4s ease-in;
+				height: 5rem;
+				width: 5rem;
 			}
 
 			.freeze-scroll & {
@@ -100,6 +80,27 @@ $filter-bar-height--desktop: 11.8rem;
 
 	.filter-list {
 		position: relative;
+	}
+
+	.toggle-button {
+		border: 0;
+		justify-content: center;
+		align-items: center;
+		width: 4rem;
+		height: 4rem;
+		border-radius: 50%;
+		background-color: $color-primary--900;
+		color: $color-primary--white;
+
+		&:hover {
+			@include default-animation(transform);
+
+			transform: scale(calc(1.2 / 1.4));
+		}
+
+		img {
+			filter: invert(1);
+		}
 	}
 
 	.job-filter-bar {
@@ -182,6 +183,12 @@ $filter-bar-height--desktop: 11.8rem;
 			.mobile-active-filters {
 				@include active-filters();
 			}
+		}
+
+		&__mobile-close-button {
+			height: $spacing--200;
+			width: $spacing--200;
+			filter: invert(1);
 		}
 
 		// fieldset -> filter group
@@ -280,14 +287,11 @@ $filter-bar-height--desktop: 11.8rem;
 		// Button for open close the filter section
 		&__toggle {
 			text-align: right;
+			display: inline-flex;
+			cursor: pointer;
 
 			@include bp-xs() {
 				display: flex;
-			}
-
-			// TODO: replace when icon button is implemented
-			.toggle-button {
-				@include icon-button();
 			}
 		}
 

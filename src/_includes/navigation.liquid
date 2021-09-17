@@ -1,25 +1,22 @@
 <header class="nav" data-js-item="navigation" data-js-option="{{ colorModifier }}">
 	<div class="nav__container grid">
 		<div class="nav__logo col-2">
-			<a class="nav__logo--sinnerschrader" href="/" >
+			<a class="nav__logo--sinnerschrader" href="/">
 				{{ data.navigation.logo.top }}
 			</a>
 			<p class="nav__logo--accenture">
 				{{ data.navigation.logo.bottom.start }}
 				<span class="nav__logo--accenture-bold">
-					{{ data.navigation.logo.bottom.middle}}
+					{{ data.navigation.logo.bottom.middle }}
 				</span>
-				{{ data.navigation.logo.bottom.end}}
+				{{ data.navigation.logo.bottom.end }}
 			</p>
 		</div>
 		<nav class="nav__wrapper col-10" aria-label="{{ data.navigation.ariaLabel }}">
 			<ul class="nav__list">
 				{% for item in data.navigation.links %}
 				<li class="nav__list__item">
-					<a class="nav__list__link"
-					   rel="external nofollow"
-					   href="{{item.subUrl}}"
-					>
+					<a class="nav__list__link" rel="external nofollow" href="{{ item.baseUrl }}{{ item.subUrl }}">
 						{{ item.linkText }}
 					</a>
 				</li>
@@ -46,17 +43,21 @@
 		<nav id="mobile-navigation" role="menu" class="nav__offset-panel__wrapper grid" aria-label="{{ data.navigation.ariaLabel }}">
 			<ul class="nav__offset-panel__list">
 				<li class="nav__offset-panel__list-item">
-					<a rel="external nofollow"
-					   class="nav__offset-panel__list-link {% if page.url == '/' %}is-active{% endif %}"
-					   href="{{ data.navigation.mobilePanel.homeLink.baseUrl}}{{ data.navigation.mobilePanel.homeLink.subUrl}}">
+					<a
+						rel="external nofollow"
+						class="nav__offset-panel__list-link {% if page.url == '/' %}is-active{% endif %}"
+						href="{{ data.navigation.mobilePanel.homeLink.baseUrl }}{{ data.navigation.mobilePanel.homeLink.subUrl }}"
+					>
 						{{ data.navigation.mobilePanel.homeLink.linkText }}
 					</a>
 				</li>
 				{% for item in data.navigation.links %}
 				<li class="nav__offset-panel__list-item">
-					<a rel="external nofollow"
-					   class="nav__offset-panel__list-link {% if page.url == item.subUrl %}is-active{% endif %}"
-					   href="{{item.baseUrl}}{{item.subUrl}}">
+					<a
+						rel="external nofollow"
+						class="nav__offset-panel__list-link {% if page.url == item.subUrl %}is-active{% endif %}"
+						href="{{ item.baseUrl }}{{ item.subUrl }}"
+					>
 						{{ item.linkText }}
 					</a>
 				</li>
@@ -64,15 +65,13 @@
 			</ul>
 			<div class="nav__offset-panel__bottom-container">
 				<div class="nav__offset-panel__bottom-wrapper">
-	            <span class="nav__offset-panel__bottom-headline">
-		            {{ data.navigation.mobilePanel.miscTitle }}
-	            </span>
+					<span class="nav__offset-panel__bottom-headline">
+						{{ data.navigation.mobilePanel.miscTitle }}
+					</span>
 					<ul class="nav__offset-panel__bottom-list">
 						{% for item in data.navigation.mobilePanel.miscLinks %}
 						<li class="nav__offset-panel__bottom-item">
-							<a class="nav__offset-panel__bottom-link"
-							   rel="external nofollow"
-							   href="{{item.baseUrl}}{{item.subUrl}}">
+							<a class="nav__offset-panel__bottom-link" rel="external nofollow" href="{{ item.baseUrl }}{{ item.subUrl }}">
 								{{ item.linkText }}
 							</a>
 						</li>
@@ -80,15 +79,13 @@
 					</ul>
 				</div>
 				<div class="nav__offset-panel__bottom-wrapper">
-		        <span class="nav__offset-panel__bottom-headline">
-			        {{ data.navigation.mobilePanel.socialTitle }}
-		        </span>
+					<span class="nav__offset-panel__bottom-headline">
+						{{ data.navigation.mobilePanel.socialTitle }}
+					</span>
 					<ul class="nav__offset-panel__bottom-list">
 						{% for item in data.navigation.mobilePanel.socialLinks %}
 						<li class="nav__offset-panel__bottom-item">
-							<a class="nav__offset-panel__bottom-link"
-							   rel="external nofollow"
-							   href="{{item.baseUrl}}{{item.subUrl}}">
+							<a class="nav__offset-panel__bottom-link" rel="external nofollow" href="{{ item.baseUrl }}{{ item.subUrl }}">
 								{{ item.linkText }}
 							</a>
 						</li>

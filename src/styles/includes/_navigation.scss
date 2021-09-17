@@ -241,7 +241,9 @@
 
 			&:focus {
 				outline: none;
+			}
 
+			&:focus-visible {
 				.dot-wrapper {
 					outline: 0.3rem solid $color-secondary--yellow;
 					outline-offset: 0.5rem;
@@ -309,35 +311,39 @@
 			text-align: right;
 		}
 
-		&__list-item {
-			margin-bottom: $spacing--400;
-		}
+		&__list {
+			@include spacing-700(margin-bottom);
 
-		&__list-link {
-			position: relative;
-			font-family: $font-sans-serif-regular;
-			font-size: 3.2rem;
-			color: $color-primary--white;
-
-			&::after {
-				position: absolute;
-				display: none;
-				content: "";
-				right: -1.7rem;
-				top: 50%;
-				width: 4px;
-				height: 4px;
-				background-color: $color-secondary--purple;
-				border-radius: 50%;
-				transform: translateY(-50%);
+			&-item {
+				margin-bottom: $spacing--400;
 			}
 
-			&.is-active {
-				font-size: 3.5rem;
-				font-family: $font-serif;
+			&-link {
+				position: relative;
+				font-family: $font-sans-serif-regular;
+				font-size: 3.2rem;
+				color: $color-primary--white;
 
 				&::after {
-					display: block;
+					position: absolute;
+					display: none;
+					content: "";
+					right: -1.7rem;
+					top: 50%;
+					width: 4px;
+					height: 4px;
+					background-color: $color-secondary--purple;
+					border-radius: 50%;
+					transform: translateY(-50%);
+				}
+
+				&.is-active {
+					font-size: 3.5rem;
+					font-family: $font-serif;
+
+					&::after {
+						display: block;
+					}
 				}
 			}
 		}

@@ -43,6 +43,20 @@
 		}
 	}
 
+	&__alternate-slides {
+		.swiper-slide:nth-child(even) {
+			width: 22vw;
+
+			@include bp-xs {
+				width: 70vw;
+			}
+		}
+	}
+
+	&.slider-large .swiper-container .swiper-slide {
+		width: 85vw;
+	}
+
 	.swiper-wrapper {
 		transform-style: preserve-3d;
 		backface-visibility: hidden;

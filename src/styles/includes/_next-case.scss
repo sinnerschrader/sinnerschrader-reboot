@@ -1,0 +1,45 @@
+.next-case {
+	position: relative;
+	margin-bottom: $spacing--900;
+
+	@include bp-xs {
+		&::before {
+			left: auto;
+			right: 0;
+		}
+	}
+
+	@include bp-xs {
+		overflow-x: hidden;
+	}
+
+	img {
+		width: 100%;
+	}
+
+	&__content {
+		position: absolute;
+		text-align: center;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+		h3 {
+			font-family: $font-serif;
+			color: $color-primary--white;
+
+			@include bp-xs {
+				font-size: 6rem;
+			}
+			@include bp-tablet {
+				font-size: 8rem;
+			}
+			@include bp-l {
+				font-size: 9rem;
+			}
+			@include bp-xl {
+				font-size: 12rem;
+			}
+		}
+	}
+}

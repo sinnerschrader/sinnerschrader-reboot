@@ -6,27 +6,7 @@
 		"links": [
 			{
 				"baseUrl": "",
-				"subUrl": "/beliefs",
-				"linkText": "Beliefs"
-			},
-			{
-				"baseUrl": "",
-				"subUrl": "/offering",
-				"linkText": "Offering"
-			},
-			{
-				"baseUrl": "",
-				"subUrl": "/cases",
-				"linkText": "Cases"
-			},
-			{
-				"baseUrl": "",
-				"subUrl": "/culture",
-				"linkText": "Culture"
-			},
-			{
-				"baseUrl": "",
-				"subUrl": "/jobs",
+				"subUrl": "/jobs.html",
 				"linkText": "Careers"
 			}
 		],
@@ -42,6 +22,11 @@
 					"baseUrl": "mailto:info@sinnerschrader.com",
 					"subUrl": "",
 					"linkText": "Contact"
+				},
+				{
+					"baseUrl": "https://sinnerschrader.news/",
+					"subUrl": "en",
+					"linkText": "News"
 				},
 				{
 					"baseUrl": "",
@@ -115,9 +100,9 @@
 		"linklist": {
 			"left": [
 				{
-					"href": "/news",
+					"href": "https://sinnerschrader.news/en",
 					"text": "News",
-					"rel": ""
+					"rel": "external nofollow"
 				},
 				{
 					"href": "mailto:info@sinnerschrader.com",

@@ -59,7 +59,7 @@
 		background-color: $color-primary--black;
 	}
 
-	.nav__logo--sinnerschrader svg {
+	svg {
 		fill: $color-primary--black;
 	}
 
@@ -76,7 +76,7 @@
 			background-color: $color-primary--black;
 		}
 
-		.nav__logo--sinnerschrader svg {
+		svg {
 			fill: $color-primary--black;
 		}
 	}
@@ -94,7 +94,7 @@
 			background-color: $color-primary--white;
 		}
 
-		.nav__logo--sinnerschrader svg {
+		svg {
 			fill: $color-primary--white;
 		}
 	}
@@ -145,7 +145,7 @@
 			right: 0.6rem;
 		}
 
-		.nav__logo--sinnerschrader svg {
+		svg {
 			fill: $color-primary--white;
 		}
 
@@ -178,7 +178,7 @@
 			background-color: $color-primary--white;
 		}
 
-		.nav__logo--sinnerschrader svg {
+		svg {
 			fill: $color-primary--white;
 		}
 	}
@@ -212,19 +212,6 @@
 			.is-dark & {
 				color: $color-primary--white;
 			}
-		}
-
-		&--accenture {
-			font-family: $font-sans-serif-light;
-			font-size: 0.8rem;
-			margin: 0;
-			text-transform: none;
-			position: absolute;
-			min-width: 200px;
-		}
-
-		&--accenture-bold {
-			font-family: $font-sans-serif-semibold;
 		}
 	}
 

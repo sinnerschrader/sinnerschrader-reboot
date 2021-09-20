@@ -62,10 +62,11 @@ import { Video } from "./video.js";
 	}
 
 	if (isModuleNeeded("job-filter-list")) {
-		const filterList = new FilterList({
+		new FilterList({
 			parentSelector: "#js-filter-list",
 			controlsSelector: "#js-job-filter-bar",
 			listSelector: "#js-job-listing",
+			liveUpdate: true,
 		});
 	}
 

@@ -57,10 +57,10 @@ export class FilterList {
 				}
 
 				this.updateActiveFilterTags();
-				this.updateListCategories();
 
 				if (this.liveUpdate) {
 					this.updateList();
+					this.updateListCategories();
 				}
 			});
 		});
@@ -261,7 +261,7 @@ export class FilterList {
 				return excluded;
 			})
 			// applies hidden class for all excluded ones
-			.forEach((item, index, self) => {
+			.forEach((item) => {
 				item.classList.add(this.hiddenClass);
 			});
 	}

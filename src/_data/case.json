@@ -113,6 +113,73 @@
 			}
 		}
 	},
+	"design": {
+		"title": "Enliving product beauty",
+		"descriptions": [
+			"For Audi's top shelf electric product, we introduced a light and reduced digital premium design,  working consistently across all brand platforms. Less, but more personalized content gives room for a calm visuality, for white space and beauty details. The pages have a more stringent focus, and high-end CGI processes support the idea to take asset quality to a new level."
+		],
+		"discriptionedSlides": {
+			"title": "Magnetic modules",
+			"text": "Feature App Content Modules as the new standard are triggering continuous exploration, engagement and transaction along the Audi fascination pages.",
+			"slides": [
+				{
+					"mobileSrc": "./assets/images/mobile/sunset.webp",
+					"tabletSrc": "./assets/images/tablet/sunset.webp",
+					"desktopSrc": "./assets/images/desktop/sunset.webp",
+					"fallbackSrc": "./assets/images/fallback/sunset.jpg",
+					"altText": "Person sitting at a desk in an office, a bonsai tree is seen in the foreground",
+					"info": {
+						"title": "Editorial content",
+						"text": "to embed matching lifestyle elements."
+					}
+				},
+				{
+					"mobileSrc": "./assets/images/mobile/phone.webp",
+					"tabletSrc": "./assets/images/tablet/phone.webp",
+					"desktopSrc": "./assets/images/desktop/phone.webp",
+					"fallbackSrc": "./assets/images/fallback/phone.jpg",
+					"altText": "Person sitting at a desk in an office, a bonsai tree is seen in the foreground",
+					"info": {
+						"title": "Customized & comprehensive",
+						"text": "individual model comparison"
+					}
+				}
+			]
+		},
+		"image": {
+			"name": "Immersive presentation",
+			"text": "to draw users into product stories ",
+			"mobileSrc": "./assets/images/mobile/circle-mobile.webp",
+			"tabletSrc": "./assets/images/tablet/circle.webp",
+			"desktopSrc": "./assets/images/desktop/circle.webp",
+			"fallbackSrc": "./assets/images/fallback/circle.png",
+			"altText": "Audi"
+		},
+		"slides": [
+			{
+				"mobileSrc": "./assets/images/mobile/phone.webp",
+				"tabletSrc": "./assets/images/tablet/phone.webp",
+				"desktopSrc": "./assets/images/desktop/phone.webp",
+				"fallbackSrc": "./assets/images/fallback/phone.jpg",
+				"altText": "Person sitting at a desk in an office, a bonsai tree is seen in the foreground",
+				"info": {
+					"title": "Editorial content",
+					"text": "to embed matching lifestyle elements."
+				}
+			},
+			{
+				"mobileSrc": "./assets/images/mobile/constructor.webp",
+				"tabletSrc": "./assets/images/tablet/constructor.webp",
+				"desktopSrc": "./assets/images/desktop/constructor.webp",
+				"fallbackSrc": "./assets/images/fallback/constructor.jpg",
+				"altText": "Person sitting at a desk in an office, a bonsai tree is seen in the foreground",
+				"info": {
+					"title": "Customized & comprehensive",
+					"text": "individual model comparison"
+				}
+			}
+		]
+	},
 	"content": {
 		"title": "Immediately personal: the customizer",
 		"descriptions": [

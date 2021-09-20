@@ -20,17 +20,6 @@ $filter-bar-height--desktop: 11.8rem;
 	letter-spacing: 0.15rem;
 }
 
-@mixin icon-button {
-	border: 0;
-	justify-content: center;
-	align-items: center;
-	width: 4rem;
-	height: 4rem;
-	border-radius: 50%;
-	background-color: $color-primary--900;
-	color: $color-primary--white;
-}
-
 .toggle-button {
 	display: inline-flex;
 	cursor: pointer;
@@ -283,11 +272,6 @@ $filter-bar-height--desktop: 11.8rem;
 
 			@include bp-xs() {
 				display: flex;
-			}
-
-			// TODO: replace when icon button is implemented
-			.toggle-button {
-				@include icon-button();
 			}
 		}
 

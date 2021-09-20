@@ -3,6 +3,23 @@
 
 	h4 {
 		@include headline-300();
+
+		grid-column-end: span 5;
+		margin-top: 0;
+
+		@include bp-xs() {
+			display: block;
+			margin-left: 12;
+			grid-column-end: span 12;
+		}
+	}
+
+	.teaser-description {
+		@include spacing-800(padding-bottom);
+
+		span {
+			font-family: $font-sans-serif-semibold;
+		}
 	}
 
 	.image-teaser {
@@ -121,14 +138,7 @@
 		}
 
 		&__agenda {
-			margin-block-start: 3em;
-
-			@include bp-l {
-				margin-block-start: 3.33em;
-			}
-			@include bp-xl {
-				margin-block-start: 4.33em;
-			}
+			margin-block-start: 0.5em;
 
 			p {
 				@include code-100();
@@ -181,6 +191,59 @@
 		}
 	}
 
+	.design {
+		&__description {
+			@include spacing-800(margin-bottom);
+		}
+
+		p {
+			grid-column-end: span 7;
+
+			@include bp-xs() {
+				grid-column-end: span 12;
+			}
+		}
+
+		.slider-containter {
+			&__left {
+				@include bp-xs() {
+					grid-auto-flow: dense;
+				}
+
+				.description {
+					@include bp-xs() {
+						grid-row: 1;
+					}
+				}
+			}
+		}
+
+		.swiper-container {
+			margin-left: 0;
+		}
+
+		.description {
+			margin-top: 6vw;
+
+			span {
+				font-family: $font-sans-serif-semibold;
+			}
+
+			p {
+				margin-top: 3rem;
+			}
+		}
+
+		.image-teaser {
+			margin-bottom: 0;
+
+			&::before,
+			&::after {
+				content: none;
+			}
+		}
+	}
+
 	.content-container {
 		&--wrapper {
 			@include spacing-500(padding-top);
@@ -195,16 +258,6 @@
 				bottom: 0;
 				filter: invert(0);
 				z-index: -1;
-			}
-		}
-
-		h4 {
-			grid-column-end: span 5;
-			margin-top: 0;
-
-			@include bp-xs() {
-				display: block;
-				margin-left: 12;
 			}
 		}
 
@@ -241,14 +294,6 @@
 					content: none;
 				}
 			}
-
-			.teaser-description {
-				@include spacing-800(padding-bottom);
-
-				span {
-					font-family: $font-sans-serif-semibold;
-				}
-			}
 		}
 	}
 
@@ -283,9 +328,15 @@
 				}
 			}
 
-			.overview-container:nth-child(2) .technology__media-content {
-				@include bp-xs {
-					margin: 0 2.4rem 10vw 0;
+			.overview-container:nth-child(2) {
+				h3 {
+					margin-top: revert;
+				}
+
+				.technology__media-content {
+					@include bp-xs {
+						margin: 0 2.4rem 10vw 0;
+					}
 				}
 			}
 		}
@@ -363,16 +414,6 @@
 	}
 
 	.slider {
-		h4 {
-			grid-column-end: span 5;
-			margin-top: 0;
-
-			@include bp-xs() {
-				display: block;
-				margin-left: 12;
-			}
-		}
-
 		p {
 			grid-column-end: span 7;
 

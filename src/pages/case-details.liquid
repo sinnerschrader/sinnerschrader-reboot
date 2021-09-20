@@ -75,6 +75,37 @@ dataJsItem: bg-scroll-animation
 
     <section>
 		{% include section-header, title: "Design / UX", number: "03", type: "large" %}
+		<div class="design">
+			<div class="grid design__descriprion">
+				<h4>{{ case.design.title }}</h4>
+				<p>
+				{% for description in case.design.descriptions %}
+					{{ description }}<br/><br/>
+				{% endfor %}
+				</p>
+				<div class="grid slider-containter__left">
+					<div class="slider slider__alternate-slides col-8 col-12-xs" data-js-item="slider">
+						{% include swiper-container, slides: case.design.discriptionedSlides.slides %}
+					</div>
+					<div class="description col-4 col-12-xs">
+						<span>{{ case.design.discriptionedSlides.title }}</span>
+						<p>{{ case.design.discriptionedSlides.text }}</p>
+					</div>
+				</div>
+				<div class="design__media col-8 col-12-xs">
+					{% include image-teaser, data: case.design %}
+					<p class="teaser-description">
+						<span>{{ case.design.image.name }}</span> 
+						{{ case.design.image.text }}
+					</p>
+				</div>
+			</div>
+			<div class="slider slider__alternate-slides" data-js-item="slider">
+				<div class="grid">
+					{% include swiper-container, slides: case.design.slides %}
+				</div>
+			</div>
+		</div>
 	</section>
 
     <section>

@@ -14,8 +14,6 @@
 			z-index: 100;
 
 			.toggle-button {
-				@include icon-button();
-
 				position: relative;
 				cursor: pointer;
 				transform: translateX(4rem);

@@ -1,0 +1,63 @@
+@import "./button";
+
+.content-box {
+	position: absolute;
+	height: auto;
+	width: 40%;
+	right: 0;
+	bottom: -$spacing--700;
+	background-color: $color-primary--white;
+	color: $color-primary--black;
+
+	/* stylelint-disable-next-line order/order */
+	@include bp-s-and-lower {
+		width: 70%;
+		left: 0;
+		background-color: $color-primary--black;
+		color: $color-primary--white;
+	}
+}
+
+.image-teaser {
+	@include responsive-spacing(margin-left, $spacing--400, $spacing--700, $spacing--800, $spacing--900);
+
+	position: relative;
+	margin-bottom: $spacing--900;
+
+	@include bp-s-and-lower {
+		&::before {
+			left: auto;
+			right: 0;
+		}
+	}
+
+	@include bp-s-and-lower {
+		overflow: inherit;
+	}
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: $spacing--200;
+		width: 50%;
+		background-color: $color-primary--white;
+		z-index: 2;
+
+		@include bp-s-and-lower {
+			left: auto;
+			right: 0;
+		}
+	}
+
+	.is-dark & {
+		&::before {
+			background-color: $color-primary--black;
+		}
+	}
+
+	img {
+		width: 100%;
+	}
+}

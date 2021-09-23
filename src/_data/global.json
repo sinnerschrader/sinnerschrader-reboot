@@ -12,91 +12,76 @@
 		},
 		"links": [
 			{
-				"baseUrl": "https://sinnerschrader.com",
-				"subUrl": "/beliefs",
-				"linkText": "Beliefs"
-			},
-			{
-				"baseUrl": "https://sinnerschrader.com",
-				"subUrl": "/offering",
-				"linkText": "Offering"
-			},
-			{
-				"baseUrl": "https://sinnerschrader.com",
-				"subUrl": "/cases",
-				"linkText": "Cases"
-			},
-			{
-				"baseUrl": "https://sinnerschrader.com",
-				"subUrl": "/culture",
-				"linkText": "Culture"
-			},
-			{
-				"baseUrl": "https://sinnerschrader.com",
-				"subUrl": "/jobs",
+				"baseUrl": "",
+				"subUrl": "/jobs.html",
 				"linkText": "Careers"
 			}
 		],
 		"mobilePanel": {
 			"homeLink": {
-				"baseUrl": "https://sinnerschrader.com",
+				"baseUrl": "",
 				"subUrl": "/",
 				"linkText": "Home"
 			},
 			"miscTitle": "Misc",
 			"miscLinks": [
 				{
-					"baseUrl": "https://sinnerschrader.com",
-					"subUrl": "/contact",
+					"baseUrl": "mailto:info@sinnerschrader.com",
+					"subUrl": "",
 					"linkText": "Contact"
 				},
 				{
-					"baseUrl": "https://sinnerschrader.com",
+					"baseUrl": "https://sinnerschrader.news/",
+					"subUrl": "en",
+					"linkText": "News"
+				},
+				{
+					"baseUrl": "",
 					"subUrl": "/data-policy",
 					"linkText": "Data policy"
 				},
 				{
-					"baseUrl": "https://sinnerschrader.com",
+					"baseUrl": "",
 					"subUrl": "/imprint",
 					"linkText": "Imprint"
 				},
 				{
-					"baseUrl": "https://sinnerschrader.com",
-					"subUrl": "/improve",
+					"baseUrl": "https://github.com/sinnerschrader/sinnerschrader-reboot",
+					"subUrl": "",
 					"linkText": "Improve this site"
 				}
 			],
 			"socialTitle": "Social",
 			"socialLinks": [
 				{
-					"baseUrl": "https://sinnerschrader.com",
+					"baseUrl": "https://medium.com/still-day-one",
 					"subUrl": "",
 					"linkText": "Medium"
 				},
 				{
-					"baseUrl": "https://sinnerschrader.com",
+					"baseUrl": "https://twitter.com/sinnerschrader",
 					"subUrl": "",
 					"linkText": "Twitter"
 				},
 				{
-					"baseUrl": "https://sinnerschrader.com",
+					"baseUrl": "https://www.facebook.com/SinnerSchrader",
 					"subUrl": "",
 					"linkText": "Facebook"
 				},
 				{
-					"baseUrl": "https://sinnerschrader.com",
+					"baseUrl": "https://www.linkedin.com/company/sinnerschrader/",
 					"subUrl": "",
 					"linkText": "LinkedIn"
 				},
 				{
-					"baseUrl": "https://sinnerschrader.com",
+					"baseUrl": "https://dev.to/s2engineers",
 					"subUrl": "",
 					"linkText": "Dev.to"
 				},
 				{
-					"baseUrl": "https://sinnerschrader.com",
+					"baseUrl": "https://github.com/sinnerschrader",
 					"subUrl": "",
-					"linkText": "Github"
+					"linkText": "GitHub"
 				}
 			]
 		}
@@ -122,9 +107,9 @@
 		"linklist": {
 			"left": [
 				{
-					"href": "https://sinnerschrader.com/news.html",
+					"href": "https://sinnerschrader.news/en",
 					"text": "News",
-					"rel": ""
+					"rel": "external nofollow"
 				},
 				{
 					"href": "mailto:info@sinnerschrader.com",
@@ -132,12 +117,12 @@
 					"rel": ""
 				},
 				{
-					"href": "https://github.com/sinnerschrader/sinnerschrader-reboot/blob/main/pages/data-policy.md",
+					"href": "/data-policy",
 					"text": "Data Policy",
 					"rel": "external nofollow"
 				},
 				{
-					"href": "https://github.com/sinnerschrader/sinnerschrader-reboot/blob/main/pages/imprint.md",
+					"href": "/imprint",
 					"text": "Imprint",
 					"rel": "external nofollow"
 				},

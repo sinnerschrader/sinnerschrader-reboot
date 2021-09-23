@@ -20,27 +20,6 @@ $filter-bar-height--desktop: 11.8rem;
 	letter-spacing: 0.15rem;
 }
 
-@mixin icon-button {
-	border: 0;
-	justify-content: center;
-	align-items: center;
-	width: 4rem;
-	height: 4rem;
-	border-radius: 50%;
-	background-color: $color-primary--900;
-	color: $color-primary--white;
-}
-
-.toggle-button {
-	display: inline-flex;
-
-	&:hover {
-		@include default-animation(transform);
-
-		transform: scale(calc(1.2 / 1.4));
-	}
-}
-
 .jobs__intro {
 	@include spacing-900(margin-top);
 	@include spacing-900(margin-bottom);
@@ -66,47 +45,19 @@ $filter-bar-height--desktop: 11.8rem;
 			text-align: right;
 			max-width: 100%;
 			overflow: hidden;
-			z-index: 100;
+			z-index: 12;
 
 			.toggle-button {
-				@include icon-button();
-
 				position: relative;
 				cursor: pointer;
-				transform: translateX(4rem);
+				transform: translateX(100%);
 				transition: transform 0.4s ease-in;
+				height: 5rem;
+				width: 5rem;
 			}
 
 			.freeze-scroll & {
 				display: none;
-			}
-
-			.is-floating ~ & {
-				.toggle-button {
-					transform: translateX(-4rem);
-				}
-			}
-
-			svg {
-				position: absolute;
-				width: 100%;
-				height: 100%;
-				left: 4px;
-				top: 5px;
-				filter: invert(1);
-			}
-		}
-
-		.js-toggle-filter-bar--mobile {
-			position: relative;
-
-			svg {
-				position: absolute;
-				width: 16px;
-				height: 16px;
-				left: 50%;
-				top: 50%;
-				transform: translate(-50%, -50%);
 			}
 		}
 	}
@@ -131,6 +82,27 @@ $filter-bar-height--desktop: 11.8rem;
 		position: relative;
 	}
 
+	.toggle-button {
+		border: 0;
+		justify-content: center;
+		align-items: center;
+		width: 4rem;
+		height: 4rem;
+		border-radius: 50%;
+		background-color: $color-primary--900;
+		color: $color-primary--white;
+
+		&:hover {
+			@include default-animation(transform);
+
+			transform: scale(calc(1.2 / 1.4));
+		}
+
+		img {
+			filter: invert(1);
+		}
+	}
+
 	.job-filter-bar {
 		@include paragraph-100();
 
@@ -140,7 +112,8 @@ $filter-bar-height--desktop: 11.8rem;
 
 		// sticky scroll behaviour
 		position: sticky;
-		top: 0;
+		// height of main navigation, which is visible when scrolling up
+		top: 9.5rem;
 		background-color: $color-primary--black;
 		color: $color-primary--white;
 		box-sizing: border-box;
@@ -148,6 +121,7 @@ $filter-bar-height--desktop: 11.8rem;
 		// this is the height of the closed menu
 		max-height: $filter-bar-height--mobile;
 		overflow: hidden;
+		transition: top 0.7s ease-in-out;
 
 		@include bp-s {
 			position: initial;
@@ -167,11 +141,22 @@ $filter-bar-height--desktop: 11.8rem;
 			z-index: 13;
 		}
 
+		// position at top of screen when main navigation is not visible
+		&.is-mobile-nav-hidden {
+			top: 0;
+		}
+
 		// This is toggle without animation for now.
 		// because animating height changes is not a good idea performance wise
 		// TODO: find an elegant solution for animation
 		&.is-open {
 			max-height: initial;
+		}
+
+		&.is-floating ~ .mobile-floater {
+			.toggle-button {
+				transform: translateX(-50%);
+			}
 		}
 
 		// this is only for the mobile view
@@ -200,9 +185,19 @@ $filter-bar-height--desktop: 11.8rem;
 			}
 		}
 
+		&__mobile-close-button {
+			height: $spacing--200;
+			width: $spacing--200;
+			filter: invert(1);
+		}
+
 		// fieldset -> filter group
 		&__category {
 			padding-right: 1em;
+
+			@include bp-s-and-above {
+				grid-row-start: 1;
+			}
 		}
 
 		// fieldset legend
@@ -227,6 +222,11 @@ $filter-bar-height--desktop: 11.8rem;
 
 			svg {
 				filter: invert(1);
+			}
+
+			&:focus-within {
+				outline: 0.3rem solid $color-secondary--yellow;
+				outline-offset: 0.5rem;
 			}
 
 			&.is-active {
@@ -287,14 +287,11 @@ $filter-bar-height--desktop: 11.8rem;
 		// Button for open close the filter section
 		&__toggle {
 			text-align: right;
+			display: inline-flex;
+			cursor: pointer;
 
 			@include bp-xs() {
 				display: flex;
-			}
-
-			// TODO: replace when icon button is implemented
-			.toggle-button {
-				@include icon-button();
 			}
 		}
 
@@ -320,8 +317,12 @@ $filter-bar-height--desktop: 11.8rem;
 	}
 
 	.job-list {
-		padding-top: $spacing--600;
 		margin-top: 0;
+		padding-bottom: 6rem;
+
+		@include bp-s-and-above {
+			padding-top: $spacing--600;
+		}
 
 		// A category holds subheadline for discipline
 		// and a list for the offerings
@@ -346,7 +347,6 @@ $filter-bar-height--desktop: 11.8rem;
 				top: 0;
 				margin: 0;
 				z-index: 0;
-				padding-right: 23rem;
 
 				@include bp-s-and-above {
 					top: $filter-bar-height--desktop + $spacing--400;
@@ -356,12 +356,13 @@ $filter-bar-height--desktop: 11.8rem;
 				@include bp-xs {
 					@include spacing-600(padding-top);
 					@include spacing-400(padding-bottom);
+					@include default-animation(background-color);
 
-					background: $color-primary--white;
-					z-index: 12;
+					background-color: $color-primary--white;
+					z-index: 11;
 
 					.is-dark & {
-						background: transparent;
+						background-color: $color-primary--black;
 					}
 
 					&:first-child {
@@ -443,6 +444,8 @@ $filter-bar-height--desktop: 11.8rem;
 			position: fixed;
 			margin: 0;
 			padding: 0 2.4rem;
+			display: flex;
+			flex-direction: column;
 
 			.job-filter-bar__category {
 				padding-bottom: 3.2rem;
@@ -453,7 +456,11 @@ $filter-bar-height--desktop: 11.8rem;
 			}
 
 			.job-filter-bar__confirm-group {
-				margin-top: 15rem;
+				position: sticky;
+				bottom: 0;
+				margin-top: auto;
+				padding-top: 2rem;
+				background-color: $color-primary--black;
 
 				.button--clear {
 					background-color: $color-primary--gray;
@@ -469,7 +476,11 @@ $filter-bar-height--desktop: 11.8rem;
 		}
 
 		.job-filter-bar__mobile-header {
+			background-color: $color-primary--black;
 			padding: 0;
+			position: sticky;
+			top: 0;
+			z-index: 1;
 		}
 	}
 }

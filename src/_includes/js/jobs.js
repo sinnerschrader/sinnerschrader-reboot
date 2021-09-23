@@ -1,3 +1,5 @@
+import { throttle } from "lodash-es";
+
 export class FilterList {
 	// Reference to parent element
 	parent;
@@ -31,6 +33,7 @@ export class FilterList {
 		// apply Eventlisteners
 		this.bindListeners();
 		this.createFilters();
+		this.detectScrollPositionOfFilterBar();
 	}
 
 	// UI Events
@@ -54,10 +57,10 @@ export class FilterList {
 				}
 
 				this.updateActiveFilterTags();
-				this.updateListCategories();
 
 				if (this.liveUpdate) {
 					this.updateList();
+					this.updateListCategories();
 				}
 			});
 		});
@@ -125,9 +128,49 @@ export class FilterList {
 		}
 	}
 
+	// Detect scroll position of filter bar for mobile floater button appearence
+	detectScrollPositionOfFilterBar() {
+		this.toggleMobileFilterBasedOnJobListScrollPosition();
+
+		window.addEventListener("scroll", throttle(this.toggleMobileFilterBasedOnJobListScrollPosition.bind(this), 50));
+	}
+
+	// Toggle floating class to filter bar
+	toggleMobileFilterBasedOnJobListScrollPosition() {
+		const filterHeader = document.getElementById("js-job-filter-bar");
+
+		if (filterHeader.getBoundingClientRect().bottom < 0) {
+			filterHeader.classList.add("is-floating");
+		} else {
+			filterHeader.classList.remove("is-floating");
+		}
+	}
+
 	// open close the filter bar
 	toggleFilterBarOpen() {
 		this.controls.classList.toggle("is-open");
+
+		if (this.controls.classList.contains("is-open")) {
+			this.controls.querySelectorAll("input").forEach((input) => input.removeAttribute("tabindex"));
+			this.controls.querySelector("#js-clear-filter").removeAttribute("tabindex");
+			this.controls.querySelector("#js-apply-filter").removeAttribute("tabindex");
+
+			this.controls.querySelectorAll("[aria-expanded]").forEach((button) => button.setAttribute("aria-expanded", true));
+
+			this.controls.querySelector("#js-job-filter-bar .job-filter-wrapper button.js-toggle-filter-bar--mobile").removeAttribute("tabindex");
+			this.controls.querySelector("#js-job-filter-bar header button.js-toggle-filter-bar--mobile").setAttribute("tabindex", -1);
+		} else {
+			this.controls.querySelectorAll("input").forEach((input) => input.setAttribute("tabindex", -1));
+			this.controls.querySelector("#js-apply-filter").setAttribute("tabindex", -1);
+			this.controls.querySelector("#js-clear-filter").setAttribute("tabindex", -1);
+
+			this.controls.querySelectorAll("[aria-expanded]").forEach((button) => button.setAttribute("aria-expanded", false));
+
+			this.controls
+				.querySelector("#js-job-filter-bar .job-filter-wrapper button.js-toggle-filter-bar--mobile")
+				.setAttribute("tabindex", -1);
+			this.controls.querySelector("#js-job-filter-bar header button.js-toggle-filter-bar--mobile").removeAttribute("tabindex");
+		}
 	}
 
 	// Loops through HTML Categories in the filter section and creates an filter object
@@ -218,38 +261,8 @@ export class FilterList {
 				return excluded;
 			})
 			// applies hidden class for all excluded ones
-			.forEach((item, index, self) => {
+			.forEach((item) => {
 				item.classList.add(this.hiddenClass);
 			});
-	}
-}
-
-export class FloatObserver {
-	objective;
-	target;
-	targetClass = "";
-	observer;
-
-	constructor(props) {
-		this.objective = document.querySelector(props.objectiveSelector);
-		this.target = document.querySelector(props.targetSelector);
-		this.targetClass = props.targetClass;
-
-		if (this.objective === null || this.target === null) {
-			console.warn("No DOM elements found!");
-			return;
-		}
-
-		this.bindListeners();
-	}
-	bindListeners() {
-		this.observer = new IntersectionObserver((changes) => {
-			if (changes[0].isIntersecting) {
-				this.target.classList.remove(this.targetClass);
-			} else {
-				this.target.classList.add(this.targetClass);
-			}
-		});
-		this.observer.observe(this.objective);
 	}
 }

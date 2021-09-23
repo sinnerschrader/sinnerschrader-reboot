@@ -7,10 +7,14 @@ class BackgroundScrollAnimation {
 
 	showAnimations = window.matchMedia("(prefers-reduced-motion: no-preference)");
 
+	isIOS = false;
+
 	constructor() {
 		if (document.body.classList.contains("is-bg-scroll")) {
 			this.init();
 		}
+
+		this.isIOS = this.detectiOS();
 	}
 
 	init() {
@@ -31,7 +35,7 @@ class BackgroundScrollAnimation {
 
 		if (!this.circleElement) return;
 
-		document.addEventListener("scroll", this.rotateCircle.bind(this));
+		document.addEventListener("scroll", throttle(this.rotateCircle.bind(this), 10));
 	}
 
 	viewPortDetection() {
@@ -54,7 +58,7 @@ class BackgroundScrollAnimation {
 	}
 
 	rotateCircle() {
-		if (this.showAnimations.matches) {
+		if (this.showAnimations.matches && this.isInViewport(this.circleElement)) {
 			this.circleElement.style.transform = `rotate(${window.pageYOffset / 4}deg)`;
 		}
 	}
@@ -68,7 +72,7 @@ class BackgroundScrollAnimation {
 		let windowHeight;
 		let windowWidth;
 
-		if (this.detectiOS()) {
+		if (this.isIOS) {
 			windowHeight = document.documentElement.clientHeight;
 			windowWidth = document.documentElement.clientWidth;
 		} else {

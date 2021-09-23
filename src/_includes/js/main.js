@@ -8,6 +8,7 @@ import { Navigation } from "./navigation";
 import { OfferingHeader } from "./offering-header";
 import { Offerings } from "./offerings";
 import { Parallax } from "./parallax";
+import { JobTeaser } from "./job-teaser";
 import { ProfileLinkContactForm } from "./profile-link-contact-form";
 import { Slider } from "./slider.js";
 import { Video } from "./video.js";
@@ -56,6 +57,8 @@ import { Video } from "./video.js";
 	if (isModuleNeeded("navigation")) {
 		new Navigation();
 	}
+
+	new JobTeaser();
 
 	if (isModuleNeeded("job-filter-list")) {
 		new FilterList({

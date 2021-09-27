@@ -58,14 +58,15 @@ class BackgroundScrollAnimation {
 	}
 
 	rotateCircle() {
-		if (this.showAnimations.matches && this.isInViewport(this.circleElement)) {
+		if (this.showAnimations.matches && this.isInViewport(this.circleElement, true)) {
 			this.circleElement.style.transform = `rotate(${window.pageYOffset / 4}deg)`;
 		}
 	}
 
-	isInViewport(el) {
+	isInViewport(el, isCircle = false) {
 		if (!el) return;
 
+		let offsetBetweenCircleAndContainer = isCircle ? (el.height / 2) * Math.sqrt(2) - el.height / 2 : 0;
 		let elHeight = el.offsetHeight;
 		let elWidth = el.offsetWidth;
 		let bounding = el.getBoundingClientRect();
@@ -81,10 +82,10 @@ class BackgroundScrollAnimation {
 		}
 
 		return (
-			bounding.top >= -elHeight &&
-			bounding.left >= -elWidth &&
-			bounding.right <= windowWidth + elWidth &&
-			bounding.bottom <= windowHeight + elHeight
+			bounding.top >= -el.height - offsetBetweenCircleAndContainer &&
+			bounding.left >= -el.width - offsetBetweenCircleAndContainer &&
+			bounding.right <= windowWidth + elWidth - offsetBetweenCircleAndContainer &&
+			bounding.bottom <= windowHeight + elHeight + offsetBetweenCircleAndContainer
 		);
 	}
 

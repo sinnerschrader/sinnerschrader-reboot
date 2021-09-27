@@ -44,40 +44,120 @@
 
 	&__illustrations {
 		position: relative;
-		padding: 200px 0;
 		display: flex;
+
+		@include bp-xs {
+			float: right;
+			top: -30px;
+		}
+
+		@include bp-s {
+			float: right;
+			top: -30px;
+		}
+	}
+
+	&__illustration0 {
+		position: absolute;
+
+		@include bp-xs {
+			bottom: 0;
+			left: 10px;
+		}
+
+		@include bp-s {
+			bottom: 10px;
+			left: 140px;
+		}
+
+		@include bp-m {
+			bottom: -50px;
+			left: 200px;
+		}
+
+		@include bp-l {
+			left: 300px;
+			bottom: -80px;
+		}
+
+		@include bp-xl {
+			left: 300px;
+			bottom: -70px;
+		}
 	}
 
 	&__illustration1 {
 		position: relative;
-		transform: translateY(-115px);
-		transition: transform $transition-main ease-in-out;
 
-		.position1 {
-			transform: translateY(0);
+		@include bp-xs {
+			width: 100px;
+		}
+
+		@include bp-s {
+			width: 100px;
+		}
+
+		@include bp-m {
+			width: 200px;
 		}
 	}
 
 	&__illustration2 {
 		position: relative;
 		top: 100px;
-		transform: translateY(100px);
+		right: -20px;
 
-		.position1 {
-			transform: translateY(0);
+		@include bp-xs {
+			top: 80px;
+			width: 100px;
+		}
+
+		@include bp-s {
+			top: 80px;
+			width: 100px;
+		}
+
+		@include bp-m {
+			width: 200px;
+			top: 150px;
+		}
+
+		@include bp-l {
+			top: 180px;
+		}
+
+		@include bp-xl {
+			top: 180px;
 		}
 	}
 
 	&__illustration3 {
 		position: absolute;
 		right: 0;
-		top: 0;
-	}
+		bottom: 30px;
 
-	&__illustration4 {
-		position: absolute;
-		left: 0;
-		bottom: 0;
+		@include bp-xs {
+			display: none;
+		}
+
+		@include bp-s {
+			display: none;
+		}
+
+		@include bp-m {
+			right: -75px;
+			top: 0;
+		}
+
+		@include bp-l {
+			right: -50px;
+			bottom: -150px;
+		}
+
+		@include bp-xl {
+			right: 0;
+			bottom: -150px;
+		}
 	}
 
 	@media (prefers-reduced-motion: no-preference) {
@@ -89,6 +169,32 @@
 			.text-scale {
 				transform: scale(0.9);
 			}
+		}
+	}
+
+	.switch {
+		height: 5.5rem;
+		margin-bottom: -1.3rem;
+
+		@include bp-xs {
+			height: 3.9rem;
+		}
+
+		@include bp-s {
+			height: 4.6rem;
+		}
+
+		@include bp-m {
+			height: 4.5rem;
+		}
+
+		@include bp-xl {
+			height: 7.8rem;
+			margin-bottom: -2rem;
+		}
+
+		.switch-item {
+			border-bottom: 1px solid $color-secondary--yellow;
 		}
 	}
 }

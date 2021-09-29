@@ -199,20 +199,8 @@
 
 	&__logo {
 		position: relative;
-		margin: 4.7rem 0 0;
+		margin: 4.3rem 0 0;
 		text-transform: uppercase;
-
-		&--sinnerschrader {
-			@include interactive-100();
-
-			color: $color-primary--black;
-			margin: 0;
-			position: relative;
-
-			.is-dark & {
-				color: $color-primary--white;
-			}
-		}
 	}
 
 	&__mobile-toggle {

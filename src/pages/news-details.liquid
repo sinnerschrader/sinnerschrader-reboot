@@ -1,0 +1,32 @@
+---
+title: SinnerSchrader
+layout: default.liquid
+pagination:
+  data: collections.news
+  size: 1
+  alias: article
+permalink: "news/{{ article.data.title | slug }}.html"
+bodyClass: is-bg-scroll
+dataJsItem: bg-scroll-animation
+---
+{% include navigation, data: global %}
+
+<main class="news-details-page">
+	<section class="fade-bg-black">
+        {{ article.date }}
+        {{ article.data.title }}
+        {{ article.data.plainHeadlineText }}
+        {{ article.data.italicHeadlineText }}
+        {{ article.data.image }}
+        {{ article.data.altText }}
+        <p>{{ article.data.introText }}</p>
+        <p>{{ article.data.articleText }}</p>
+	</section>
+
+	<section>
+		{% include section-header, title: "Here we are", number: "06", type: "medium" %}
+		{% include locations %}
+	</section>
+</main>
+
+{% include footer, data: global %}

@@ -219,4 +219,19 @@
 			}
 		}
 	}
+
+	&__bg-text {
+		p {
+			font-family: $font-serif;
+			font-size: 17.7vw;
+			line-height: 0;
+			display: block;
+			white-space: nowrap;
+			margin-left: -2.5vw;
+
+			span {
+				font-family: $font-serif-italic;
+			}
+		}
+	}
 }

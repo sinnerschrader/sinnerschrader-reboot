@@ -7,189 +7,26 @@
 	{
 		"id": "automotive",
 		"name": "Automotive",
-		"initialActive": true,
-		"worksList": [
-			{
-				"company": "Ambulance",
-				"name": "Redesign lorem Ipsum",
-				"mobileSrc": "./assets/images/mobile/ambulance.webp",
-				"tabletSrc": "./assets/images/tablet/ambulance.webp",
-				"desktopSrc": "./assets/images/desktop/ambulance.webp",
-				"imageFallback": "ambulance.png",
-				"link": "/case-details.html"
-			},
-			{
-				"company": "Audi",
-				"name": "Redesign lorem Ipsum",
-				"mobileSrc": "./assets/images/mobile/audi-main.webp",
-				"tabletSrc": "./assets/images/tablet/audi-main.webp",
-				"desktopSrc": "./assets/images/desktop/audi-main.webp",
-				"imageFallback": "audi-main.png",
-				"link": "/case-details.html"
-			},
-			{
-				"company": "Ambulance",
-				"name": "Redesign lorem Ipsum",
-				"mobileSrc": "./assets/images/mobile/ambulance.webp",
-				"tabletSrc": "./assets/images/tablet/ambulance.webp",
-				"desktopSrc": "./assets/images/desktop/ambulance.webp",
-				"imageFallback": "ambulance.png",
-				"link": "/case-details.html"
-			},
-			{
-				"company": "Unzer",
-				"name": "Redesign lorem Ipsum",
-				"mobileSrc": "./assets/images/mobile/unzer-logo.webp",
-				"tabletSrc": "./assets/images/tablet/unzer-logo.webp",
-				"desktopSrc": "./assets/images/desktop/unzer-logo.webp",
-				"imageFallback": "unzer-logo.png",
-				"link": "/case-details.html"
-			}
-		]
+		"initialActive": true
 	},
 	{
 		"id": "fintech",
 		"name": "Fintech",
-		"initialActive": false,
-		"worksList": [
-			{
-				"company": "Bicycle",
-				"name": "Redesign lorem Ipsum",
-				"mobileSrc": "./assets/images/mobile/bicycle.webp",
-				"tabletSrc": "./assets/images/tablet/bicycle.webp",
-				"desktopSrc": "./assets/images/desktop/bicycle.webp",
-				"imageFallback": "bicycle.png",
-				"link": "/case-details.html"
-			}
-		]
+		"initialActive": false
 	},
 	{
 		"id": "commerce",
 		"name": "Commerce",
-		"initialActive": false,
-		"worksList": [
-			{
-				"company": "Ambulance",
-				"name": "Redesign lorem Ipsum",
-				"mobileSrc": "./assets/images/mobile/ambulance.webp",
-				"tabletSrc": "./assets/images/tablet/ambulance.webp",
-				"desktopSrc": "./assets/images/desktop/ambulance.webp",
-				"imageFallback": "ambulance.png",
-				"link": "/case-details.html"
-			},
-			{
-				"company": "Unzer",
-				"name": "Redesign lorem Ipsum",
-				"mobileSrc": "./assets/images/mobile/unzer-logo.webp",
-				"tabletSrc": "./assets/images/tablet/unzer-logo.webp",
-				"desktopSrc": "./assets/images/desktop/unzer-logo.webp",
-				"imageFallback": "unzer-logo.png",
-				"link": "/case-details.html"
-			},
-			{
-				"company": "VW",
-				"name": "Redesign lorem Ipsum",
-				"mobileSrc": "./assets/images/mobile/vw-car.webp",
-				"tabletSrc": "./assets/images/tablet/vw-car.webp",
-				"desktopSrc": "./assets/images/desktop/vw-car.webp",
-				"imageFallback": "vw-car.png",
-				"link": "/case-details.html"
-			},
-			{
-				"company": "VW",
-				"name": "Redesign lorem Ipsum",
-				"mobileSrc": "./assets/images/mobile/vw-phone.webp",
-				"tabletSrc": "./assets/images/tablet/vw-phone.webp",
-				"desktopSrc": "./assets/images/desktop/vw-phone.webp",
-				"imageFallback": "vw-phone.png",
-				"link": "/case-details.html"
-			}
-		]
+		"initialActive": false
 	},
 	{
 		"id": "social",
 		"name": "Social",
-		"initialActive": false,
-		"worksList": [
-			{
-				"company": "Audi",
-				"name": "Redesign lorem Ipsum",
-				"mobileSrc": "./assets/images/mobile/audi-main.webp",
-				"tabletSrc": "./assets/images/tablet/audi-main.webp",
-				"desktopSrc": "./assets/images/desktop/audi-main.webp",
-				"imageFallback": "audi-main.png",
-				"link": "/case-details.html"
-			},
-			{
-				"company": "Holoride",
-				"name": "Redesign lorem Ipsum",
-				"mobileSrc": "./assets/images/mobile/holoride.webp",
-				"tabletSrc": "./assets/images/tablet/holoride.webp",
-				"desktopSrc": "./assets/images/desktop/holoride.webp",
-				"imageFallback": "holoride.png",
-				"link": "/case-details.html"
-			},
-			{
-				"company": "VW",
-				"name": "Redesign lorem Ipsum",
-				"mobileSrc": "./assets/images/mobile/vw-phone.webp",
-				"tabletSrc": "./assets/images/tablet/vw-phone.webp",
-				"desktopSrc": "./assets/images/desktop/vw-phone.webp",
-				"imageFallback": "vw-phone.png",
-				"link": "/case-details.html"
-			}
-		]
+		"initialActive": false
 	},
 	{
 		"id": "item06",
 		"name": "Item 06",
-		"initialActive": false,
-		"worksList": [
-			{
-				"company": "Ambulance",
-				"name": "Redesign lorem Ipsum",
-				"mobileSrc": "./assets/images/mobile/ambulance.webp",
-				"tabletSrc": "./assets/images/tablet/ambulance.webp",
-				"desktopSrc": "./assets/images/desktop/ambulance.webp",
-				"imageFallback": "ambulance.png",
-				"link": "/case-details.html"
-			},
-			{
-				"company": "Audi",
-				"name": "Redesign lorem Ipsum",
-				"mobileSrc": "./assets/images/mobile/audi-main.webp",
-				"tabletSrc": "./assets/images/tablet/audi-main.webp",
-				"desktopSrc": "./assets/images/desktop/audi-main.webp",
-				"imageFallback": "audi-main.png",
-				"link": "/case-details.html"
-			},
-			{
-				"company": "Bicycle",
-				"name": "Redesign lorem Ipsum",
-				"mobileSrc": "./assets/images/mobile/bicycle.webp",
-				"tabletSrc": "./assets/images/tablet/bicycle.webp",
-				"desktopSrc": "./assets/images/desktop/bicycle.webp",
-				"imageFallback": "bicycle.png",
-				"link": "/case-details.html"
-			},
-			{
-				"company": "Holoride",
-				"name": "Redesign lorem Ipsum",
-				"mobileSrc": "./assets/images/mobile/holoride.webp",
-				"tabletSrc": "./assets/images/tablet/holoride.webp",
-				"desktopSrc": "./assets/images/desktop/holoride.webp",
-				"imageFallback": "holoride.png",
-				"link": "/case-details.html"
-			},
-			{
-				"company": "VW",
-				"name": "Redesign lorem Ipsum",
-				"mobileSrc": "./assets/images/mobile/vw-phone.webp",
-				"tabletSrc": "./assets/images/tablet/vw-phone.webp",
-				"desktopSrc": "./assets/images/desktop/vw-phone.webp",
-				"imageFallback": "vw-phone.png",
-				"link": "/case-details.html"
-			}
-		]
+		"initialActive": false
 	}
 ]

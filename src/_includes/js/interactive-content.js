@@ -1,12 +1,13 @@
-export class ProfileLinkContactForm {
-	constructor() {
-		this.container = document.querySelector(".profile-link-contact-form");
+export class InteractiveContent {
+	constructor(selector) {
+		this.container = document.querySelector(`.${selector}`);
+		console.log(this.container);
 		if (!this.container) return;
 
-		this.firstPage = this.container.querySelector('[data-js-item="profile-link-contact-form-content"]');
-		this.secondPage = this.container.querySelector('[data-js-item="profile-link-contact-form-content-hidden"]');
-		this.forwardBtn = this.firstPage.querySelector('[data-js-atom="profile-link-contact-form-forward"]');
-		this.backwardBtn = this.secondPage.querySelector('[data-js-atom="profile-link-contact-form-backward"]');
+		this.firstPage = this.container.querySelector(`[data-js-item="${selector}-content"]`);
+		this.secondPage = this.container.querySelector(`[data-js-item="${selector}-content-hidden"]`);
+		this.forwardBtn = this.firstPage.querySelector(`[data-js-atom="${selector}-forward"]`);
+		this.backwardBtn = this.secondPage.querySelector(`[data-js-atom="${selector}-backward"]`);
 
 		this.bindEvents();
 	}

@@ -1,6 +1,20 @@
 .case-details-page {
 	overflow-x: initial;
 
+	// stage component font styles overrides (corresponding to "Case details" page design)
+	.stage {
+		&__title {
+			@include bp-xs {
+				grid-column-end: span 12;
+				text-align: center;
+			}
+		}
+
+		&__headline .clip:nth-last-of-type(-n + 2) {
+			font-family: $font-serif;
+		}
+	}
+
 	h4 {
 		@include headline-300();
 
@@ -93,30 +107,6 @@
 				top: 50%;
 				left: 50%;
 				transform: translate(-50%, -50%);
-			}
-
-			&__first-line,
-			&__second-line,
-			&__third-line {
-				line-height: 1rem;
-				font-family: $font-serif;
-
-				@include bp-xs {
-					font-size: 5rem;
-				}
-				@include bp-tablet {
-					font-size: 5rem;
-				}
-				@include bp-l {
-					font-size: 8rem;
-				}
-				@include bp-xl {
-					font-size: 10rem;
-				}
-			}
-
-			&__first-line {
-				font-family: $font-sans-serif-light;
 			}
 		}
 	}
@@ -431,6 +421,53 @@
 				span {
 					font-family: $font-sans-serif-semibold;
 				}
+			}
+		}
+	}
+
+	.quote {
+		@include spacing-900(margin);
+		@include spacing-400(margin-right);
+
+		@include bp-xs {
+			@include spacing-400(margin-left);
+			@include spacing-400(margin-right);
+		}
+
+		&__speach {
+			@include headline-300();
+
+			max-width: 70vw;
+			margin-bottom: 0;
+			font-family: $font-sans-serif-light;
+
+			@include bp-xs {
+				max-width: 100%;
+			}
+
+			img {
+				@include bp-xs {
+					margin: 0 3vw 0 0;
+				}
+				@include bp-tablet {
+					margin: 0 3vw 0 -3vw;
+				}
+				@include bp-l {
+					margin: 0 2.5vw 0 3.5vw;
+				}
+				@include bp-xl {
+					margin: 0 5vw 0 -1vw;
+				}
+			}
+		}
+
+		&__author {
+			@include spacing-500(margin-top);
+
+			margin: 1rem 0;
+
+			span {
+				font-family: $font-sans-serif-semibold;
 			}
 		}
 	}

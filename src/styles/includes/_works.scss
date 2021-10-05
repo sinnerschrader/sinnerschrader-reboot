@@ -236,6 +236,14 @@
 
 			.works__content-picture {
 				opacity: 1;
+
+				a:hover {
+					.button-notext {
+						@include default-animation(transform);
+
+						transform: scale(calc(1.4));
+					}
+				}
 			}
 		}
 	}

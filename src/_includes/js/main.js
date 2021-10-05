@@ -3,22 +3,22 @@ import { SlideIn } from "./animate-slidein";
 import { BackgroundScrollAnimation } from "./bg-scroll-animation";
 import { CareerContact } from "./careerContact";
 import { FilterList } from "./jobs";
-import { InteractiveList } from "./interactiveList";
+import { TabGroup } from "./tab-group";
 import { Navigation } from "./navigation";
 import { OfferingHeader } from "./offering-header";
 import { Offerings } from "./offerings";
 import { Parallax } from "./parallax";
-import { ProfileLinkContactForm } from "./profile-link-contact-form";
+import { InteractiveContent } from "./interactive-content";
 import { Slider } from "./slider.js";
 import { Video } from "./video.js";
 
 (() => {
 	if (isModuleNeeded("locations")) {
-		new InteractiveList(".locations");
+		new TabGroup(".locations");
 	}
 
 	if (isModuleNeeded("works")) {
-		new InteractiveList(".works");
+		new TabGroup(".works");
 	}
 
 	if (isModuleNeeded("slider")) {
@@ -54,7 +54,7 @@ import { Video } from "./video.js";
 	}
 
 	if (isModuleNeeded("profile-link-contact-form-content")) {
-		new ProfileLinkContactForm();
+		new InteractiveContent("profile-link-contact-form");
 	}
 
 	if (isModuleNeeded("navigation")) {

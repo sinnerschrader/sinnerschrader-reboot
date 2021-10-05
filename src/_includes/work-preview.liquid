@@ -1,16 +1,16 @@
 <div class="works__content-picture">
-    <source media="(max-width: 599px)"
-            srcset="{{ data.mobileSrc }}" type="image/webp" />
-    <source media="(min-width: 600px) and (max-width: 1199px)"
-            srcset="{{ data.tabletSrc }}" type="image/webp" />
-    <source media="(min-width: 1200px)"
-            srcset="{{ data.desktopSrc }}" type="image/webp" />
-    <img class="preview" src="./assets/images/fallback/{{data.imageFallback}}"
-        alt="{{data.name}}">
-    <div>
-        <a href="{{data.link}}">
+    <a href="/case/{{ data.title | slug }}.html">
+        <source media="(max-width: 599px)"
+                srcset="{{ data.previewInfo.mobileSrc }}" type="image/webp" />
+        <source media="(min-width: 600px) and (max-width: 1199px)"
+                srcset="{{ data.previewInfo.tabletSrc }}" type="image/webp" />
+        <source media="(min-width: 1200px)"
+                srcset="{{ data.previewInfo.desktopSrc }}" type="image/webp" />
+        <img class="preview" src="/assets/images/fallback/{{data.previewInfo.imageFallback}}"
+            alt="{{data.previewInfo.name}}">
+        <div>
             {% include button-notext, size: "small", iconSrc:"/assets/svg/Arrow-S.svg" %}
-        </a>
-        <p><span>{{data.company}}</span> {{data.name}}</p>
-    </div>
+            <p><span>{{data.previewInfo.company}}</span> {{data.previewInfo.name}}</p>
+        </div>
+    </a>
 </div>

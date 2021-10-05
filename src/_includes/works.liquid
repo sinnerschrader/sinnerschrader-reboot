@@ -9,11 +9,7 @@
 			<li role="tab"
 				aria-controls="{{work.id}}"
 				tabindex="0"
-				{% if work.initialActive %}
-				aria-selected="true"
-				{% else %}
-				aria-selected="false"
-				{% endif %}
+				aria-selected="{{work.initialActive}}"
 				class="tab-list tab-list--underline">
 				{{work.name}}
 			</li>
@@ -25,23 +21,16 @@
 		{% for work in works %}
 		<div id="{{work.id}}"
 			role="tabpanel"
-			{% if work.initialActive %}
-			aria-expanded="true"
-			{% else %}
-			aria-expanded="false"
-			{% endif %}
+			aria-expanded="{{work.initialActive}}"
 			class="works__panel">
-				{% if work.worksList %}
-					{% for item in work.worksList %}
-						{% include work-preview, data: item %}
-					{% endfor %}
+				{% if work.id == 'all' %}
+					{% assign filteredCases = collections.cases %}
 				{% else %}
-					{% for item in allWorksList %}
-						{% if item %}
-							{% for case in item %}
-								{% include work-preview, data: case %}
-							{% endfor %}
-						{% endif %}
+					{% assign filteredCases = collections.cases | groupByDiscipline: work.id %}
+				{% endif %}
+				{% if filteredCases %}
+					{% for item in filteredCases %}
+						{% include work-preview, data: item.data %}
 					{% endfor %}
 				{% endif %}
 			</div>

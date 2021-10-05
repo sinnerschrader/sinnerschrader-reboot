@@ -1,4 +1,4 @@
-export class InteractiveList {
+export class TabGroup {
 	constructor(selector) {
 		this.container = document.querySelector(selector);
 

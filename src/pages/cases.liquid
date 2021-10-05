@@ -21,7 +21,10 @@ renderData: filterbar
         </div>
     </section>
 	<section class="fade-bg-black cases-page--teaser">
-		{% include image-text-teaser, data: cases %}
+		{% capture imageTeaserContent %}
+		{% include teaser-interactive-container, data: collections.cases[0].data %}
+		{% endcapture %}
+        {% include image-teaser, data: collections.cases[0].data.info.image-teaser, content: imageTeaserContent %}
 	</section>
     <!-- Open / Close Filterbar MOBILE ONLY -->
     <section id="js-filter-list" class="filter-list">

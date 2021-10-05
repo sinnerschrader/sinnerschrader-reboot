@@ -1,17 +1,34 @@
-{
+---
+title: Ambulance
+discipline: 'social'
+disciplineName: 'Social'
+previewInfo: {
+	"company": "Ambulance",
+	"name": "Redesign lorem Ipsum",
+	"mobileSrc": "./assets/images/mobile/ambulance.webp",
+	"tabletSrc": "./assets/images/tablet/ambulance.webp",
+	"desktopSrc": "./assets/images/desktop/ambulance.webp",
+	"imageFallback": "ambulance.png"
+}
+info: {
+	"stage": {
+		"headline": {
+			"top": "Audi",
+			"middle": "e-tron",
+			"bottom": "GT"
+		},
+		"backgroundImage": { "image": "audi-teaser.webp", "imageFallback": "audi-teaser.jpg", "alt": "Audi" },
+		"gradient": true
+	},
 	"image-teaser": {
 		"image": {
-			"mobileSrc": "./assets/images/mobile/audi-teaser-mobile.webp",
-			"tabletSrc": "./assets/images/tablet/audi-teaser.webp",
-			"desktopSrc": "./assets/images/desktop/audi-teaser.webp",
-			"fallbackSrc": "./assets/images/fallback/audi-teaser.png",
+			"mobileSrc": "/assets/images/mobile/audi-teaser-mobile.webp",
+			"tabletSrc": "/assets/images/tablet/audi-teaser.webp",
+			"desktopSrc": "/assets/images/desktop/audi-teaser.webp",
+			"fallbackSrc": "/assets/images/fallback/audi-teaser.png",
 			"altText": "Audi"
 		},
-		"content": {
-			"firstLine": "Audi",
-			"secondLine": "e-tron",
-			"thirdLine": "GT"
-		}
+		"link": "/"
 	},
 	"abstract": {
 		"title": "Next level brand experience",
@@ -57,10 +74,10 @@
 		],
 		"slides": [
 			{
-				"mobileSrc": "./assets/images/mobile/gt-mobile.webp",
-				"tabletSrc": "./assets/images/tablet/gt.webp",
-				"desktopSrc": "./assets/images/desktop/gt.webp",
-				"fallbackSrc": "./assets/images/fallback/gt.jpg",
+				"mobileSrc": "/assets/images/mobile/gt-mobile.webp",
+				"tabletSrc": "/assets/images/tablet/gt.webp",
+				"desktopSrc": "/assets/images/desktop/gt.webp",
+				"fallbackSrc": "/assets/images/fallback/gt.jpg",
 				"altText": "GT",
 				"info": {
 					"title": "Calm visuality",
@@ -68,10 +85,10 @@
 				}
 			},
 			{
-				"mobileSrc": "./assets/images/mobile/gt-mobile.webp",
-				"tabletSrc": "./assets/images/tablet/gt.webp",
-				"desktopSrc": "./assets/images/desktop/gt.webp",
-				"fallbackSrc": "./assets/images/fallback/gt.jpg",
+				"mobileSrc": "/assets/images/mobile/gt-mobile.webp",
+				"tabletSrc": "/assets/images/tablet/gt.webp",
+				"desktopSrc": "/assets/images/desktop/gt.webp",
+				"fallbackSrc": "/assets/images/fallback/gt.jpg",
 				"altText": "GT",
 				"info": {
 					"title": "Calm visuality",
@@ -79,10 +96,10 @@
 				}
 			},
 			{
-				"mobileSrc": "./assets/images/mobile/gt-mobile.webp",
-				"tabletSrc": "./assets/images/tablet/gt.webp",
-				"desktopSrc": "./assets/images/desktop/gt.webp",
-				"fallbackSrc": "./assets/images/fallback/gt.jpg",
+				"mobileSrc": "/assets/images/mobile/gt-mobile.webp",
+				"tabletSrc": "/assets/images/tablet/gt.webp",
+				"desktopSrc": "/assets/images/desktop/gt.webp",
+				"fallbackSrc": "/assets/images/fallback/gt.jpg",
 				"altText": "GT",
 				"info": {
 					"title": "Calm visuality",
@@ -90,10 +107,10 @@
 				}
 			},
 			{
-				"mobileSrc": "./assets/images/mobile/gt-mobile.webp",
-				"tabletSrc": "./assets/images/tablet/gt.webp",
-				"desktopSrc": "./assets/images/desktop/gt.webp",
-				"fallbackSrc": "./assets/images/fallback/gt.jpg",
+				"mobileSrc": "/assets/images/mobile/gt-mobile.webp",
+				"tabletSrc": "/assets/images/tablet/gt.webp",
+				"desktopSrc": "/assets/images/desktop/gt.webp",
+				"fallbackSrc": "/assets/images/fallback/gt.jpg",
 				"altText": "GT",
 				"info": {
 					"title": "Calm visuality",
@@ -102,14 +119,10 @@
 			}
 		],
 		"quote": {
-			"text": ["To unlock the beauty,", "simplicity is the key."],
+			"text": "To unlock the beauty<br />simplicity is the key",
 			"author": {
 				"name": "Alberto Zanotto",
 				"position": "Lead UI Designer"
-			},
-			"image": {
-				"imgSrc": "/assets/svg/double-quote.svg",
-				"altText": "Double quote"
 			}
 		}
 	},
@@ -123,10 +136,10 @@
 			"text": "Feature App Content Modules as the new standard are triggering continuous exploration, engagement and transaction along the Audi fascination pages.",
 			"slides": [
 				{
-					"mobileSrc": "./assets/images/mobile/sunset.webp",
-					"tabletSrc": "./assets/images/tablet/sunset.webp",
-					"desktopSrc": "./assets/images/desktop/sunset.webp",
-					"fallbackSrc": "./assets/images/fallback/sunset.jpg",
+					"mobileSrc": "/assets/images/mobile/sunset.webp",
+					"tabletSrc": "/assets/images/tablet/sunset.webp",
+					"desktopSrc": "/assets/images/desktop/sunset.webp",
+					"fallbackSrc": "/assets/images/fallback/sunset.jpg",
 					"altText": "Person sitting at a desk in an office, a bonsai tree is seen in the foreground",
 					"info": {
 						"title": "Editorial content",
@@ -134,10 +147,10 @@
 					}
 				},
 				{
-					"mobileSrc": "./assets/images/mobile/phone.webp",
-					"tabletSrc": "./assets/images/tablet/phone.webp",
-					"desktopSrc": "./assets/images/desktop/phone.webp",
-					"fallbackSrc": "./assets/images/fallback/phone.jpg",
+					"mobileSrc": "/assets/images/mobile/phone.webp",
+					"tabletSrc": "/assets/images/tablet/phone.webp",
+					"desktopSrc": "/assets/images/desktop/phone.webp",
+					"fallbackSrc": "/assets/images/fallback/phone.jpg",
 					"altText": "Person sitting at a desk in an office, a bonsai tree is seen in the foreground",
 					"info": {
 						"title": "Customized & comprehensive",
@@ -149,18 +162,18 @@
 		"image": {
 			"name": "Immersive presentation",
 			"text": "to draw users into product stories ",
-			"mobileSrc": "./assets/images/mobile/circle-mobile.webp",
-			"tabletSrc": "./assets/images/tablet/circle.webp",
-			"desktopSrc": "./assets/images/desktop/circle.webp",
-			"fallbackSrc": "./assets/images/fallback/circle.png",
+			"mobileSrc": "/assets/images/mobile/circle-mobile.webp",
+			"tabletSrc": "/assets/images/tablet/circle.webp",
+			"desktopSrc": "/assets/images/desktop/circle.webp",
+			"fallbackSrc": "/assets/images/fallback/circle.png",
 			"altText": "Audi"
 		},
 		"slides": [
 			{
-				"mobileSrc": "./assets/images/mobile/phone.webp",
-				"tabletSrc": "./assets/images/tablet/phone.webp",
-				"desktopSrc": "./assets/images/desktop/phone.webp",
-				"fallbackSrc": "./assets/images/fallback/phone.jpg",
+				"mobileSrc": "/assets/images/mobile/phone.webp",
+				"tabletSrc": "/assets/images/tablet/phone.webp",
+				"desktopSrc": "/assets/images/desktop/phone.webp",
+				"fallbackSrc": "/assets/images/fallback/phone.jpg",
 				"altText": "Person sitting at a desk in an office, a bonsai tree is seen in the foreground",
 				"info": {
 					"title": "Editorial content",
@@ -168,10 +181,10 @@
 				}
 			},
 			{
-				"mobileSrc": "./assets/images/mobile/constructor.webp",
-				"tabletSrc": "./assets/images/tablet/constructor.webp",
-				"desktopSrc": "./assets/images/desktop/constructor.webp",
-				"fallbackSrc": "./assets/images/fallback/constructor.jpg",
+				"mobileSrc": "/assets/images/mobile/constructor.webp",
+				"tabletSrc": "/assets/images/tablet/constructor.webp",
+				"desktopSrc": "/assets/images/desktop/constructor.webp",
+				"fallbackSrc": "/assets/images/fallback/constructor.jpg",
 				"altText": "Person sitting at a desk in an office, a bonsai tree is seen in the foreground",
 				"info": {
 					"title": "Customized & comprehensive",
@@ -191,58 +204,45 @@
 			"text": "in no time for accelerated user data aggregation"
 		},
 		"image": {
-			"mobileSrc": "./assets/images/mobile/audi-constructor-mobile.webp",
-			"tabletSrc": "./assets/images/tablet/audi-constructor.webp",
-			"desktopSrc": "./assets/images/desktop/audi-constructor.webp",
-			"fallbackSrc": "./assets/images/fallback/audi-constructor.png",
+			"mobileSrc": "/assets/images/mobile/audi-constructor-mobile.webp",
+			"tabletSrc": "/assets/images/tablet/audi-constructor.webp",
+			"desktopSrc": "/assets/images/desktop/audi-constructor.webp",
+			"fallbackSrc": "/assets/images/fallback/audi-constructor.png",
 			"altText": "Audi"
 		}
 	},
 	"technology": {
 		"info": {
-			"description": [
-				{
-					"title": "Performance, ready to accelerate",
-					"text": "Micro Frontend Technology – the new technological and conceptional environment underneath the Audi e-tron online experience made it possible to redefine the company's standards regarding authoring experience, accessibility, and the overall mobile experience."
-				},
-				{
-					"title": "Setting the pace: from 1 deployment in 3 weeks to 160 deployments in 24 hrs",
-					"text": "What delivers an extensive, yet fast user experience on the one hand, also enables developers to deploy faster than ever – as proven with close to 160 deployments on launch day alone. The concept also allows for simultaneous worldwide contribution, our x-functional, x-agency agile team for Audi was working across countries and continents."
-				}
-			]
+			"leftSection": {
+				"title": "Performance, ready to accelerate",
+				"text": "Micro Frontend Technology – the new technological and conceptional environment underneath the Audi e-tron online experience made it possible to redefine the company's standards regarding authoring experience, accessibility, and the overall mobile experience."
+			},
+			"rightSection": {
+				"title": "Setting the pace: from 1 deployment in 3 weeks to 160 deployments in 24 hrs",
+				"text": "What delivers an extensive, yet fast user experience on the one hand, also enables developers to deploy faster than ever – as proven with close to 160 deployments on launch day alone. The concept also allows for simultaneous worldwide contribution, our x-functional, x-agency agile team for Audi was working across countries and continents."
+			}
 		},
 		"images": [
 			{
-				"mobileSrc": "./assets/images/mobile/tech-1-mobile.webp",
-				"tabletSrc": "./assets/images/tablet/tech-1.webp",
-				"desktopSrc": "./assets/images/desktop/tech-1.webp",
-				"fallbackSrc": "./assets/images/fallback/tech-1.jpg",
+				"mobileSrc": "/assets/images/mobile/tech-1-mobile.webp",
+				"tabletSrc": "/assets/images/tablet/tech-1.webp",
+				"desktopSrc": "/assets/images/desktop/tech-1.webp",
+				"fallbackSrc": "/assets/images/fallback/tech-1.jpg",
 				"altText": "Inside auto"
 			},
 			{
-				"mobileSrc": "./assets/images/mobile/tech-2-mobile.webp",
-				"tabletSrc": "./assets/images/tablet/tech-2.webp",
-				"desktopSrc": "./assets/images/desktop/tech-2.webp",
-				"fallbackSrc": "./assets/images/fallback/tech-2.jpg",
+				"mobileSrc": "/assets/images/mobile/tech-2-mobile.webp",
+				"tabletSrc": "/assets/images/tablet/tech-2.webp",
+				"desktopSrc": "/assets/images/desktop/tech-2.webp",
+				"fallbackSrc": "/assets/images/fallback/tech-2.jpg",
 				"altText": "Auto"
 			}
 		],
 		"quote": {
-			"text": [
-				"When it comes to navigating",
-				"the connected world around us, there are no",
-				"shortcuts to the multifaceted challenges",
-				"companies face. With curious minds and an",
-				"ethos for knowledge sharing, we don't just",
-				"handle complexity, we give it a big hug."
-			],
+			"text": "When it comes to navigating<br />the connected world around us, there are no shortcuts to the multifaceted challenges companies face. With curious minds and an ethos for knowledge sharing, we don't just handle complexity, we give it a big hug.",
 			"author": {
 				"name": "Sven Schuhwirth",
 				"position": "Head of  Digital Experience / Business, Audi AG"
-			},
-			"image": {
-				"imgSrc": "/assets/svg/double-quote.svg",
-				"altText": "Double quote"
 			}
 		},
 		"statistics": [
@@ -268,10 +268,10 @@
 		"text": "To deliver in time, we built on the trust we gained in 5 years of teamwork. Together with Audi, we then trained new ways of collaboration to increase pace and proof Vorsprung. We created a dedicated Agile Release Train consisting of five agile, cross-functional teams, delivering digital premium to Audi’s 19 key markets.",
 		"slides": [
 			{
-				"mobileSrc": "./assets/images/mobile/international-mobile.webp",
-				"tabletSrc": "./assets/images/tablet/international.webp",
-				"desktopSrc": "./assets/images/desktop/international.webp",
-				"fallbackSrc": "./assets/images/fallback/international.jpg",
+				"mobileSrc": "/assets/images/mobile/international-mobile.webp",
+				"tabletSrc": "/assets/images/tablet/international.webp",
+				"desktopSrc": "/assets/images/desktop/international.webp",
+				"fallbackSrc": "/assets/images/fallback/international.jpg",
 				"altText": "Person sitting at a desk in an office, a bonsai tree is seen in the foreground",
 				"info": {
 					"title": "International",
@@ -279,10 +279,10 @@
 				}
 			},
 			{
-				"mobileSrc": "./assets/images/mobile/remote.webp",
-				"tabletSrc": "./assets/images/tablet/remote.webp",
-				"desktopSrc": "./assets/images/desktop/remote.webp",
-				"fallbackSrc": "./assets/images/fallback/remote.jpg",
+				"mobileSrc": "/assets/images/mobile/remote.webp",
+				"tabletSrc": "/assets/images/tablet/remote.webp",
+				"desktopSrc": "/assets/images/desktop/remote.webp",
+				"fallbackSrc": "/assets/images/fallback/remote.jpg",
 				"altText": "Person sitting at a desk in an office, a bonsai tree is seen in the foreground",
 				"info": {
 					"title": "Remote first",
@@ -290,10 +290,10 @@
 				}
 			},
 			{
-				"mobileSrc": "./assets/images/mobile/agile.webp",
-				"tabletSrc": "./assets/images/tablet/agile.webp",
-				"desktopSrc": "./assets/images/desktop/agile.webp",
-				"fallbackSrc": "./assets/images/fallback/agile.jpg",
+				"mobileSrc": "/assets/images/mobile/agile.webp",
+				"tabletSrc": "/assets/images/tablet/agile.webp",
+				"desktopSrc": "/assets/images/desktop/agile.webp",
+				"fallbackSrc": "/assets/images/fallback/agile.jpg",
 				"altText": "Person sitting at a desk in an office, a bonsai tree is seen in the foreground",
 				"info": {
 					"title": "Agile",
@@ -301,10 +301,10 @@
 				}
 			},
 			{
-				"mobileSrc": "./assets/images/mobile/agile.webp",
-				"tabletSrc": "./assets/images/tablet/agile.webp",
-				"desktopSrc": "./assets/images/desktop/agile.webp",
-				"fallbackSrc": "./assets/images/fallback/agile.jpg",
+				"mobileSrc": "/assets/images/mobile/agile.webp",
+				"tabletSrc": "/assets/images/tablet/agile.webp",
+				"desktopSrc": "/assets/images/desktop/agile.webp",
+				"fallbackSrc": "/assets/images/fallback/agile.jpg",
 				"altText": "Person sitting at a desk in an office, a bonsai tree is seen in the foreground",
 				"info": {
 					"title": "Autonomous",
@@ -317,10 +317,11 @@
 		"name": "Volkswagen",
 		"link": "/case-details-vw.html",
 		"image": {
-			"mobileSrc": "./assets/images/mobile/vw-next-case-mobile.webp",
-			"tabletSrc": "./assets/images/tablet/vw-next-case.webp",
-			"desktopSrc": "./assets/images/desktop/vw-next-case.webp",
-			"fallbackSrc": "./assets/images/fallback/vw-next-case.png"
+			"mobileSrc": "/assets/images/mobile/vw-next-case-mobile.webp",
+			"tabletSrc": "/assets/images/tablet/vw-next-case.webp",
+			"desktopSrc": "/assets/images/desktop/vw-next-case.webp",
+			"fallbackSrc": "/assets/images/fallback/vw-next-case.png"
 		}
 	}
 }
+---

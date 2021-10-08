@@ -1,7 +1,12 @@
 ---
 title: SinnerSchrader
 layout: default
-permalink: news.html
+permalink: "news{% if pagination.pageNumber > 0 %}/page{{ pagination.pageNumber + 1}}{% endif %}.html"
+pagination:
+  data: collections.news
+  size: 3
+  reverse: true
+  alias: news
 bodyClass: is-bg-scroll
 dataJsItem: bg-scroll-animation
 ---
@@ -50,7 +55,65 @@ dataJsItem: bg-scroll-animation
         </div>
 	</section>
 
-	<section class="news-page__list">
+	<section class="news-page__list" id="news-list">
+
+        {% for article in news %}
+            <div style="background-color:red">
+                <a class="continue-reading" href="/news/{{ article.data.title | slug }}.html">
+                    <img height="100px" width="100px" alt="{{ article.data.altText }}" class="banner-image"
+                        loading="lazy" src="{{ article.data.image }}">
+                    {{ article.date }}
+                    {{ article.data.title }}
+                </a>
+            </div>
+        {% endfor %}
+
+        {% if pagination.href.previous %}
+            <a style="background-color:green" href="{{pagination.href.previous}}#news-list">Previous Page</a>
+        {% endif %}
+        {% if pagination.href.next %}
+            <a style="background-color:green" href="{{pagination.href.next}}#news-list">Next Page</a>
+        {% endif %}
+
+        {% if pagination.pageNumber %}
+            {{pagination.pageNumber}}
+            ===========<br />
+            pagination.hrefs ->>>><br />
+            {% for page in pagination.hrefs %}
+                pagination.href: {{page}}<br />
+            {% endfor %}
+            ===========<br />
+        {% endif %}
+
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+
+        <div class="news-slider" data-js-item="news-slider">
+            <div class="swiper-wrapper">
+                {% assign newsPerSlide = 3 %}
+                {% assign amountOfSlides = newsByDate.length | divided_by: newsPerSlide | ceil %}
+                {% for i in (1..amountOfSlides) %}
+                    {% assign edge = i | times: newsPerSlide | minus: newsPerSlide %}
+                    <div class="swiper-slide">
+                        {% for article in newsByDate limit: newsPerSlide offset: edge %}
+                            <div style="background-color:red">
+                                <a class="continue-reading" href="/news/{{ article.data.title | slug }}.html">
+                                    <img height="100px" width="100px" alt="{{ article.data.altText }}" class="banner-image"
+                                        loading="lazy" src="{{ article.data.image }}">
+                                    {{ article.date }}
+                                    {{ article.data.title }}
+                                </a>
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
 
 	</section>
 

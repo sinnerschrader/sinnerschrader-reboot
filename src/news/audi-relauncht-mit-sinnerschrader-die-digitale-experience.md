@@ -2,7 +2,7 @@
 title: Audi relauncht mit SinnerSchrader die digitale Experience
 plainHeadlineText: Audi relauncht mit SinnerSchrader die digitale
 italicHeadlineText: Experience
-image: ./assets/images/fallback/job-list-teaser.png
+image: /assets/images/fallback/job-list-teaser.png
 altText: Audi auto
 introText: "Nächster Schritt zur konsequenten Verbesserung der digitalen Experience erfüllt Premium-Anspruch an Design, Personalisierung und e-Commerce. Damit definiert Audi einen neuen Standard für das Nutzererlebnis<br />
 Kollaborativer Aufbau einer globalen Software Delivery Pipeline zwischen SinnerSchrader und Audi mit agilem Remote First Set-up"

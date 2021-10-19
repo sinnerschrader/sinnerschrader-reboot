@@ -1,5 +1,5 @@
 ---
-title: Audi relauncht mit SinnerSchrader die digitale Experience testText
+title: Audi relauncht mit SinnerSchrader die digitale Experience
 plainHeadlineText: Audi relauncht mit SinnerSchrader die digitale
 italicHeadlineText: Experience
 image: /assets/images/fallback/job-list-teaser.png

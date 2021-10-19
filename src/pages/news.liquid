@@ -57,30 +57,6 @@ dataJsItem: bg-scroll-animation
 
 	<section class="news-page__list" id="news-list">
 
-        <div class="field">
-            <label for="searchField">Search</label>
-            <input type="search" placeholder="Search..." id="searchField" />
-        </div>
-        <div id="searchResults"></div>
-        <div id="noResultsFound" style="display: none">
-            <p>No results found.</p>
-        </div>
-        <div id="pagination"></div>
-
-        <script
-            type="text/javascript"
-            src="https://cdnjs.cloudflare.com/ajax/libs/elasticlunr/0.9.6/elasticlunr.min.js">
-        </script>
-
-        {% include search-and-pagination-handler %}
-
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-
         {% for article in news %}
             <div style="background-color:red">
                 <a class="continue-reading" href="/news/{{ article.data.title | slug }}.html">

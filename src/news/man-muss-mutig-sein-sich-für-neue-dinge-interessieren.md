@@ -1,5 +1,5 @@
 ---
-title: Man muss mutig sein, sich für neue Dinge interessieren
+title: Man muss mutig sein, sich für neue Dinge interessieren testText
 plainHeadlineText: Man muss mutig sein, sich für neue Dinge
 italicHeadlineText: interessieren
 image: /assets/images/fallback/job-list-teaser.png

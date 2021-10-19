@@ -1,0 +1,150 @@
+<script>
+    (function (window, document) {
+        "use strict";
+
+        const newsPerPage = 1;
+
+        const slugify = (text) => {
+            text = text.toString().toLowerCase().trim();
+
+            const sets = [
+                {to: 'a', from: '[ÀÁÂÃÄÅÆĀĂĄẠẢẤẦẨẪẬẮẰẲẴẶἀ]'},
+                {to: 'c', from: '[ÇĆĈČ]'},
+                {to: 'd', from: '[ÐĎĐÞ]'},
+                {to: 'e', from: '[ÈÉÊËĒĔĖĘĚẸẺẼẾỀỂỄỆ]'},
+                {to: 'g', from: '[ĜĞĢǴ]'},
+                {to: 'h', from: '[ĤḦ]'},
+                {to: 'i', from: '[ÌÍÎÏĨĪĮİỈỊ]'},
+                {to: 'j', from: '[Ĵ]'},
+                {to: 'ij', from: '[Ĳ]'},
+                {to: 'k', from: '[Ķ]'},
+                {to: 'l', from: '[ĹĻĽŁ]'},
+                {to: 'm', from: '[Ḿ]'},
+                {to: 'n', from: '[ÑŃŅŇ]'},
+                {to: 'o', from: '[ÒÓÔÕÖØŌŎŐỌỎỐỒỔỖỘỚỜỞỠỢǪǬƠ]'},
+                {to: 'oe', from: '[Œ]'},
+                {to: 'p', from: '[ṕ]'},
+                {to: 'r', from: '[ŔŖŘ]'},
+                {to: 's', from: '[ßŚŜŞŠȘ]'},
+                {to: 't', from: '[ŢŤ]'},
+                {to: 'u', from: '[ÙÚÛÜŨŪŬŮŰŲỤỦỨỪỬỮỰƯ]'},
+                {to: 'w', from: '[ẂŴẀẄ]'},
+                {to: 'x', from: '[ẍ]'},
+                {to: 'y', from: '[ÝŶŸỲỴỶỸ]'},
+                {to: 'z', from: '[ŹŻŽ]'},
+                {to: '-', from: '[·/_,:;\']'}
+            ];
+
+            sets.forEach(set => {
+                text = text.replace(new RegExp(set.from,'gi'), set.to)
+            });
+
+            return text
+                .replace(/\s+/g, '-')    // Replace spaces with -
+                .replace(/[^-a-zа-я\u0370-\u03ff\u1f00-\u1fff]+/g, '') // Remove all non-word chars
+                .replace(/--+/g, '-')    // Replace multiple - with single -
+                .replace(/^-+/, '')      // Trim - from start of text
+                .replace(/-+$/, '')      // Trim - from end of text
+        }
+
+        // Pagination
+        const addPagination = (newsAmount) => {
+            const paginationEl = document.getElementById("pagination");
+
+            const pagesAmount = Math.ceil(newsAmount / newsPerPage);
+
+            console.log(newsAmount)
+            console.log(pagesAmount)
+
+            paginationEl.innerHTML = "";
+
+            for (let i = 1; i < pagesAmount + 1; i++) {
+                console.log(i)
+
+                const div = document.createElement("div");
+                div.innerHTML = `<a style="color:green" href=#page=${i}>${i}</a>`;
+                paginationEl.appendChild(div);
+            }
+        }
+
+        // Search
+        let searchIndex = null;
+
+        const search = (e) => {
+            const results = (e && e.target.value.length)
+                ? searchIndex.search(e.target.value, {
+                    fields: {
+                        title: {boost: 1},
+                    },
+                    bool: "OR",
+                    expand: true,
+                })
+                : Object.keys(rawData.documentStore.docs).map((key) => ({ doc: rawData.documentStore.docs[key] }));
+
+            const paginationEl = document.getElementById("pagination");
+
+            const resEl = document.getElementById("searchResults");
+            const noResultsEl = document.getElementById("noResultsFound");
+
+            resEl.innerHTML = "";
+
+            console.log(results)
+
+            if (results.length) {
+                noResultsEl.style.display = "none";
+                results.map((r) => {
+                    const div = document.createElement("div");
+                    const url = slugify(r.doc.title);
+                    div.innerHTML = `<div style="background-color:red"><a class="continue-reading" href="/news/${ url }.html"><img height="100px" width="100px" alt="${ r.doc.altText }" class="banner-image"loading="lazy" src="${ r.doc.image }">${ r.doc.date }${ r.doc.title }</a></div>`;
+                    resEl.appendChild(div);
+                });
+
+                addPagination(results.length);
+            } else {
+                noResultsEl.style.display = "block";
+                paginationEl.innerHTML = "";
+            }
+        };
+
+        // Pagination
+        let rawData = null;
+
+        const hashHandler = (e) => {
+            var hash = window.location.hash.substr(1);
+
+            var result = hash.split('&').reduce(function (res, item) {
+                var parts = item.split('=');
+                res[parts[0]] = parts[1];
+                return res;
+            }, {});
+
+            console.log(
+                result.page
+                    ? rawData.documentStore.docs[Object.keys(rawData.documentStore.docs)[result.page]].title
+                    : "wrong hash param"
+            );
+        };
+
+        fetch("/search-index.json").then((response) =>
+            response.json().then((rawIndex) => {
+                // http://elasticlunr.com/docs/index.html
+                elasticlunr.clearStopWords();
+
+                console.log(rawIndex)
+                rawData = rawIndex;
+                searchIndex = elasticlunr.Index.load(rawIndex);
+                
+                window.addEventListener('hashchange', hashHandler, false);
+                document.getElementById("searchField").addEventListener("keypress", (e) => {
+                    if (e.key === 'Enter') {
+                        window.location.hash = 'page=1';
+                        search(e);
+                    }
+                });
+
+                hashHandler();
+                search();
+            })
+        );
+    })(window, document);
+</script>

@@ -1,5 +1,5 @@
 ---
-title: SinnerSchrader eröffnet Dependance von Swipe in der Schweiz
+title: SinnerSchrader eröffnet Dependance von Swipe in der Schweiz testText
 plainHeadlineText: SinnerSchrader eröffnet Dependance von Swipe in der
 italicHeadlineText: Schweiz
 image: /assets/images/fallback/job-list-teaser.png

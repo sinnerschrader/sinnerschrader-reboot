@@ -7,6 +7,7 @@ const { join } = require("path");
 const { default: postcss } = require("postcss");
 
 const processSassFiles = require("./config/process-sass");
+const searchFilter = require("./src/filters/searchFilter");
 
 module.exports = (eleventyConfig) => {
 	if (process.argv.includes("--serve")) {
@@ -64,6 +65,11 @@ module.exports = (eleventyConfig) => {
 		"./config/netlify-cms-config.yml": "./admin/config.yml",
 		"./node_modules/netlify-cms/dist/netlify-cms.js": "./netlify-cms.js",
 		"./src/_includes/js/jobs.js": "jobs.js",
+	});
+
+	eleventyConfig.addFilter("search", searchFilter);
+	eleventyConfig.addCollection("news", (collection) => {
+		return [...collection.getFilteredByGlob("./src/news/**/*.md")];
 	});
 
 	return {

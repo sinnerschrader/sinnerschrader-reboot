@@ -7,7 +7,6 @@ import { Locations } from "./locations";
 import { Navigation } from "./navigation";
 import { OfferingHeader } from "./offering-header";
 import { Offerings } from "./offerings";
-import { NewsSlider } from "./news-slider";
 import { Parallax } from "./parallax";
 import { ProfileLinkContactForm } from "./profile-link-contact-form";
 import { Slider } from "./slider.js";
@@ -36,10 +35,6 @@ import { Video } from "./video.js";
 
 	if (isModuleNeeded("offerings")) {
 		new Offerings();
-	}
-
-	if (isModuleNeeded("news-slider")) {
-		new NewsSlider();
 	}
 
 	if (isModuleNeeded("slide-in")) {

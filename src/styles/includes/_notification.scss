@@ -1,0 +1,57 @@
+@import "../core/variables";
+@import "../core/mixins";
+
+.notification {
+	position: relative;
+
+	&__box {
+		@include spacing-300(top);
+
+		background-color: $color-primary--light-gray;
+		display: flex;
+		flex-direction: row;
+		position: absolute;
+		right: 0;
+		transform: translateX(100%);
+		transition-duration: 0.25s;
+
+		.is-dark & {
+			background-color: $color-primary--gray;
+		}
+	}
+
+	&__text-with-icon {
+		@include paragraph-100();
+		@include spacing-500(padding-right);
+		@include spacing-300(padding-left);
+
+		margin: 0;
+		padding-top: $spacing--200;
+		padding-bottom: $spacing--200;
+	}
+
+	&__text-only {
+		@include paragraph-100();
+		@include spacing-300(padding-left);
+		@include spacing-300(padding-right);
+
+		margin: 0;
+		padding-top: $spacing--200;
+		padding-bottom: $spacing--200;
+	}
+
+	&__icon {
+		padding-right: $spacing--100;
+
+		.is-dark & {
+			filter: invert(1);
+		}
+	}
+
+	&.active {
+		.notification__box {
+			transform: translateX(-10px);
+			transition-duration: 0.25s;
+		}
+	}
+}

@@ -1,6 +1,6 @@
 <div class="notification" id="{{ notificationId }}">
 	<div>
 		<p>{{ text }}</p>
-		<img src="/assets/svg/Close-L.svg" alt="Close Notification" {% if !userClosable %} class="hidden" {% endif %} />
+		<img src="/assets/svg/Close-L.svg" alt="Close Notification" {% if userClosable != true %} class="hidden" {% endif %} />
 	</div>
 </div>

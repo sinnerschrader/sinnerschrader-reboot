@@ -26,4 +26,11 @@
 			min-height: 20rem;
 		}
 	}
+
+	&__notification-wrapper {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		margin: 5rem 0;
+	}
 }

@@ -4,7 +4,7 @@
 .notification {
 	position: relative;
 
-	&__box {
+	div {
 		@include spacing-300(top);
 
 		background-color: $color-primary--light-gray;
@@ -20,17 +20,7 @@
 		}
 	}
 
-	&__text-with-icon {
-		@include paragraph-100();
-		@include spacing-500(padding-right);
-		@include spacing-300(padding-left);
-
-		margin: 0;
-		padding-top: $spacing--200;
-		padding-bottom: $spacing--200;
-	}
-
-	&__text-only {
+	p {
 		@include paragraph-100();
 		@include spacing-300(padding-left);
 		@include spacing-300(padding-right);
@@ -38,14 +28,19 @@
 		margin: 0;
 		padding-top: $spacing--200;
 		padding-bottom: $spacing--200;
+		white-space: nowrap;
 	}
 
-	&__icon {
+	img {
 		padding-right: $spacing--100;
 
 		.is-dark & {
 			filter: invert(1);
 		}
+	}
+
+	div p + img {
+		color: red;
 	}
 
 	&.active {

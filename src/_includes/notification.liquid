@@ -1,12 +1,12 @@
 <div class="notification" id="{{ notificationId }}">
-	{% if icon == true %}
-	<div class="notification__box">
-		<p class="notification__text-with-icon">{{ text }}</p>
-		<img class="notification__icon" src="/assets/svg/Close-L.svg" alt="Close Notification" />
+	{% if userClosable == true %}
+	<div>
+		<p>{{ text }}</p>
+		<img src="/assets/svg/Close-L.svg" alt="Close Notification" />
 	</div>
 	{% else %}
-	<div class="notification__box">
-		<p class="notification__text-only">{{ text }}</p>
+	<div>
+		<p>{{ text }}</p>
 	</div>
 	{%endif%}
 </div>

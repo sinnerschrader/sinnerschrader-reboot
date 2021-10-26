@@ -1,7 +1,9 @@
 export class Notification {
 	constructor(notificationId) {
+		this.timeout = undefined;
 		this.notificationId = notificationId;
 		this.notificationElement = document.getElementById(this.notificationId);
+
 		this.notificationElement.querySelector(".notification__icon").addEventListener("click", () => {
 			this.hide();
 		});
@@ -9,10 +11,12 @@ export class Notification {
 
 	show() {
 		this.notificationElement.classList.add("active");
-		if (this.timeoutId !== undefined) {
-			clearTimeout(this.timeoutId);
+
+		if (this.timeout !== undefined) {
+			clearTimeout(this.timeout);
 		}
-		this.timeoutId = setTimeout(() => {
+
+		this.timeout = setTimeout(() => {
 			this.hide();
 		}, 3000);
 	}

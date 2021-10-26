@@ -1,0 +1,58 @@
+@import "../core/variables";
+@import "../core/mixins";
+
+.notification {
+	position: relative;
+
+	div {
+		@include spacing-300(top);
+
+		background-color: $color-primary--light-gray;
+		display: flex;
+		flex-direction: row;
+		position: absolute;
+		right: 0;
+		transform: translateX(100%);
+		transition-duration: 0.25s;
+
+		.is-dark & {
+			background-color: $color-primary--gray;
+		}
+	}
+
+	p {
+		@include paragraph-100();
+		@include spacing-300(padding-left);
+
+		margin: 0;
+		padding-top: $spacing--200;
+		padding-bottom: $spacing--200;
+		white-space: nowrap;
+	}
+
+	img {
+		@include spacing-500(padding-left);
+
+		padding-right: $spacing--100;
+
+		&.hidden {
+			/* stylelint-disable selector-no-qualifying-type */
+			// Disabled due to stylelint bug (see https://github.com/stylelint/stylelint/issues/5020)
+			@include spacing-300(padding-left);
+
+			width: 0;
+			/* stylelint-enable selector-no-qualifying-type */
+		}
+
+		.is-dark & {
+			filter: invert(1);
+		}
+	}
+
+	&.active {
+		div {
+			transform: translateX(-10px);
+			transition-duration: 0.25s;
+		}
+	}
+}

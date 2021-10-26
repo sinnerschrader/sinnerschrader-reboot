@@ -31,17 +31,16 @@
 	}
 
 	img {
-		@include spacing-300(padding-left);
-		width: 0;
+		@include spacing-500(padding-left);
+		padding-right: $spacing--100;
 
 		.is-dark & {
 			filter: invert(1);
 		}
 
-		&.visible {
-			@include spacing-500(padding-left);
-			padding-right: $spacing--100;
-			width: auto;
+		&.hidden {
+			@include spacing-300(padding-left);
+			width: 0;
 		}
 	}
 

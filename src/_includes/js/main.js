@@ -2,7 +2,7 @@ import { AnchorNavigation } from "./anchor-navigation";
 import { SlideIn } from "./animate-slidein";
 import { BackgroundScrollAnimation } from "./bg-scroll-animation";
 import { CareerContact } from "./careerContact";
-import { FilterList } from "./jobs";
+import { FilterList } from "./filter-list";
 import { Locations } from "./locations";
 import { Navigation } from "./navigation";
 import { OfferingHeader } from "./offering-header";
@@ -57,12 +57,22 @@ import { Video } from "./video.js";
 		new Navigation();
 	}
 
-	if (isModuleNeeded("job-filter-list")) {
+	if (isModuleNeeded("filter-jobs-list")) {
 		new FilterList({
 			parentSelector: "#js-filter-list",
-			controlsSelector: "#js-job-filter-bar",
-			listSelector: "#js-job-listing",
+			controlsSelector: "#js-filter-bar",
+			listSelector: "#js-listing",
 			liveUpdate: true,
+		});
+	}
+
+	if (isModuleNeeded("filter-news-list")) {
+		new FilterList({
+			parentSelector: "#js-filter-list",
+			controlsSelector: "#js-filter-bar",
+			listSelector: "#js-listing",
+			liveUpdate: true,
+			visibilityLimit: 9,
 		});
 	}
 

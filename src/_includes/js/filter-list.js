@@ -5,7 +5,7 @@ export class FilterList {
 	parent;
 	// Filter inputs container
 	controls;
-	// the job list
+	// the items list
 	list;
 	// filter Object gets filled depending on content
 	filters = {};
@@ -25,6 +25,8 @@ export class FilterList {
 		// settings
 		this.liveUpdate = props.liveUpdate ? props.liveUpdate : this.liveUpdate;
 
+		this.visibilityLimit = props.visibilityLimit;
+
 		if (this.parent === null || this.controls === null || this.list === null) {
 			console.warn("No DOM elements found");
 			return;
@@ -34,6 +36,7 @@ export class FilterList {
 		this.bindListeners();
 		this.createFilters();
 		this.detectScrollPositionOfFilterBar();
+		this.updateList();
 	}
 
 	// UI Events
@@ -130,14 +133,14 @@ export class FilterList {
 
 	// Detect scroll position of filter bar for mobile floater button appearence
 	detectScrollPositionOfFilterBar() {
-		this.toggleMobileFilterBasedOnJobListScrollPosition();
+		this.toggleMobileFilterBasedOnItemListScrollPosition();
 
-		window.addEventListener("scroll", throttle(this.toggleMobileFilterBasedOnJobListScrollPosition.bind(this), 50));
+		window.addEventListener("scroll", throttle(this.toggleMobileFilterBasedOnItemListScrollPosition.bind(this), 50));
 	}
 
 	// Toggle floating class to filter bar
-	toggleMobileFilterBasedOnJobListScrollPosition() {
-		const filterHeader = document.getElementById("js-job-filter-bar");
+	toggleMobileFilterBasedOnItemListScrollPosition() {
+		const filterHeader = document.getElementById("js-filter-bar");
 
 		if (filterHeader.getBoundingClientRect().bottom < 0) {
 			filterHeader.classList.add("is-floating");
@@ -157,8 +160,8 @@ export class FilterList {
 
 			this.controls.querySelectorAll("[aria-expanded]").forEach((button) => button.setAttribute("aria-expanded", true));
 
-			this.controls.querySelector("#js-job-filter-bar .job-filter-wrapper button.js-toggle-filter-bar--mobile").removeAttribute("tabindex");
-			this.controls.querySelector("#js-job-filter-bar header button.js-toggle-filter-bar--mobile").setAttribute("tabindex", -1);
+			this.controls.querySelector("#js-filter-bar .filter-wrapper button.js-toggle-filter-bar--mobile").removeAttribute("tabindex");
+			this.controls.querySelector("#js-filter-bar header button.js-toggle-filter-bar--mobile").setAttribute("tabindex", -1);
 		} else {
 			this.controls.querySelectorAll("input").forEach((input) => input.setAttribute("tabindex", -1));
 			this.controls.querySelector("#js-apply-filter").setAttribute("tabindex", -1);
@@ -166,17 +169,15 @@ export class FilterList {
 
 			this.controls.querySelectorAll("[aria-expanded]").forEach((button) => button.setAttribute("aria-expanded", false));
 
-			this.controls
-				.querySelector("#js-job-filter-bar .job-filter-wrapper button.js-toggle-filter-bar--mobile")
-				.setAttribute("tabindex", -1);
-			this.controls.querySelector("#js-job-filter-bar header button.js-toggle-filter-bar--mobile").removeAttribute("tabindex");
+			this.controls.querySelector("#js-filter-bar .filter-wrapper button.js-toggle-filter-bar--mobile").setAttribute("tabindex", -1);
+			this.controls.querySelector("#js-filter-bar header button.js-toggle-filter-bar--mobile").removeAttribute("tabindex");
 		}
 	}
 
 	// Loops through HTML Categories in the filter section and creates an filter object
 	createFilters() {
 		if (!this.controls) return;
-		this.controls.querySelectorAll(".job-filter-bar__category").forEach((item) => {
+		this.controls.querySelectorAll(".filter-bar__category").forEach((item) => {
 			const category = item.dataset.category;
 			if (category) {
 				this.filters[category] = [];
@@ -190,8 +191,16 @@ export class FilterList {
 	}
 
 	// reset all items
+	setAllInactive() {
+		this.list.querySelectorAll(".list__item").forEach((item) => {
+			item.classList.add(this.hiddenClass);
+			item.classList.add("is-last");
+		});
+	}
+
+	// reset all items
 	setAllActive() {
-		this.list.querySelectorAll("li").forEach((item) => {
+		this.list.querySelectorAll(".list__item").forEach((item) => {
 			item.classList.remove(this.hiddenClass);
 			item.classList.remove("is-last");
 		});
@@ -215,11 +224,11 @@ export class FilterList {
 
 	// Update Categories
 	updateListCategories() {
-		const categories = this.list.querySelectorAll(".job-list__category");
+		const categories = this.list.querySelectorAll(".list__category");
 
 		// Hiding and Showing discipline categories
 		categories.forEach((categoryElement) => {
-			const itemsInCategory = Array.from(categoryElement.querySelectorAll("li"));
+			const itemsInCategory = Array.from(categoryElement.querySelectorAll(".list__item"));
 
 			// filter out hidden elements ...
 			const remainingElements = itemsInCategory.filter((item) => {
@@ -240,13 +249,10 @@ export class FilterList {
 		});
 	}
 
-	// Update Job list
+	// Update list
 	updateList() {
-		// first reset all
-		this.setAllActive();
-
 		// Filter items and add hidden class
-		Array.from(this.list.querySelectorAll("li"))
+		const itemsToSetActive = Array.from(this.list.querySelectorAll(".list__item"))
 			// by discipline
 			.filter((item) => {
 				const discipline = item.dataset.discipline;
@@ -254,15 +260,25 @@ export class FilterList {
 				const location = item.dataset.location;
 				const excluded =
 					// discipline doesn't match and discipline section is active
-					(!this.filters["discipline"].includes(discipline) && this.isFilterActive("discipline")) ||
+					(this.filters["discipline"].includes(discipline) && this.isFilterActive("discipline")) ||
 					// location doesn't match and location section is active
-					(!this.filters["location"].includes(location) && this.isFilterActive("location"));
+					(this.filters["location"].includes(location) && this.isFilterActive("location"));
 				// all excluded ones are treated with an extra class
 				return excluded;
-			})
-			// applies hidden class for all excluded ones
-			.forEach((item) => {
-				item.classList.add(this.hiddenClass);
 			});
+
+		if (itemsToSetActive.length || this.visibilityLimit) {
+			const limit = this.visibilityLimit || itemsToSetActive.length;
+			const itemsToShow = itemsToSetActive.length ? itemsToSetActive : Array.from(this.list.querySelectorAll(".list__item"));
+			// first reset all
+			this.setAllInactive();
+
+			for (let i = 0; i < limit; i++) {
+				itemsToShow[i] && itemsToShow[i].classList.remove(this.hiddenClass);
+			}
+		} else {
+			// first reset all
+			this.setAllActive();
+		}
 	}
 }

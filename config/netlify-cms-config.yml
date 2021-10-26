@@ -36,6 +36,16 @@ collections:
         widget: "string"
         required: true
 
+      - label: "Location"
+        name: "location"
+        widget: "string"
+        required: true
+
+      - label: "Discipline"
+        name: "discipline"
+        widget: "string"
+        required: true
+
       - label: "Image"
         name: "image"
         widget: "file"

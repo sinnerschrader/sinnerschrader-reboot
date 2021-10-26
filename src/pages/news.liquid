@@ -20,7 +20,7 @@ dataJsItem: bg-scroll-animation
         <div class="banner">
             <img alt="{{ newsByDate[0].data.altText }}" class="banner-image"
                 loading="lazy" src="{{ newsByDate[0].data.image }}">
-            <a class="continue-reading" href="/news/{{ newsByDate[0].data.title | slug }}.html">
+            <a class="continue-reading" href="/news/{{ newsByDate[0].data.title | slug }}-{{ newsByDate[0].data.location | slug }}.html">
                 continue reading
                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M18 26L26.5858 17.4142C27.3668 16.6332 27.3668 15.3668 26.5858 14.5858L18 6"
@@ -32,8 +32,8 @@ dataJsItem: bg-scroll-animation
         <span class="popular-news-subheader">popular news</span>
         <div class="popular-news">
             {% for article in newsByDate limit: 3 offset: 1 %}
-                <div class="co11l-4 news-item">
-                    <a href="/news/{{ article.data.title | slug }}.html">
+                <div class="news-item">
+                    <a href="/news/{{ article.data.title | slug }}-{{ article.data.location | slug }}.html">
                         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M18 26L26.5858 17.4142C27.3668 16.6332 27.3668 15.3668 26.5858 14.5858L18 6"
                                 stroke="#fff" stroke-width="2"/>
@@ -50,9 +50,34 @@ dataJsItem: bg-scroll-animation
         </div>
 	</section>
 
-	<section class="news-page__list">
+    <section id="js-filter-list" class="filter-list">
+        <div class="grid">
+			<h2 class="headline-101">News</h3>
+		</div>
+        {% include filter-container, filterListClass: "filter-news-list" %}
+    </section>
+    <!-- Categories in the listing -->
+    <section id="js-listing" class="list">
+        <div class="grid">
+            <!-- Filter out items for each discipline -->
+            {% assign creativeItems = newsByDate | groupByDiscipline: 'creative' %} {% assign techItems = newsByDate |
+            groupByDiscipline: 'tech' %} {% assign managementItems = newsByDate | groupByDiscipline: 'Account Management' %} {% assign
+            strategyItems = newsByDate | groupByDiscipline: 'strategy' %}
 
-	</section>
+            <!-- Render their dedicated lists -->
+            {% include filter-list-category-block-view, entityName: "news", discipline: 'Account Manage&shy;ment', items: managementItems %} {% include filter-list-category-block-view, entityName: "news",
+            discipline: 'Creative', items: creativeItems %} {% include filter-list-category-block-view, entityName: "news", discipline: 'Strategy', items: strategyItems %} {%
+            include filter-list-category-block-view, entityName: "news", discipline: 'Tech', items: techItems %}
+
+            <a href="/news/archive">
+                <button class="button button--primary button--small">
+                    <span class="button__text">
+                        archive
+                    </span>
+                </button>
+            </a>
+		</div>
+    </section>
 
 	<section class="news-page__bg-text">
         <p>funny <span>insider</span></p>

@@ -234,4 +234,31 @@
 			}
 		}
 	}
+
+	.list {
+		&__item {
+			padding-right: 10vw;
+			border-bottom: 0;
+		}
+
+		&__image-wrapper {
+			position: relative;
+			overflow: hidden;
+			margin-bottom: 2vw;
+
+			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+			}
+		}
+
+		&__image-wrapper::before {
+			content: "";
+			display: block;
+			width: 100%;
+			padding-top: 100%;
+		}
+	}
 }

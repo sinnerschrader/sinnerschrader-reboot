@@ -1,0 +1,405 @@
+.filter-list {
+	position: relative;
+}
+
+.toggle-button {
+	border: 0;
+	justify-content: center;
+	align-items: center;
+	width: 4rem;
+	height: 4rem;
+	border-radius: 50%;
+	background-color: $color-primary--900;
+	color: $color-primary--white;
+
+	&:hover {
+		@include default-animation(transform);
+
+		transform: scale(calc(1.2 / 1.4));
+	}
+
+	img {
+		filter: invert(1);
+	}
+}
+
+.filter-bar {
+	@include paragraph-100();
+
+	overflow-x: hidden;
+	z-index: 1;
+	width: 100%;
+
+	// sticky scroll behaviour
+	position: sticky;
+	// height of main navigation, which is visible when scrolling up
+	top: 9.5rem;
+	background-color: $color-primary--black;
+	color: $color-primary--white;
+	box-sizing: border-box;
+
+	// this is the height of the closed menu
+	max-height: $filter-bar-height--mobile;
+	overflow: hidden;
+	transition: top 0.7s ease-in-out;
+
+	@include bp-s {
+		position: initial;
+	}
+
+	@include bp-xs {
+		position: initial;
+
+		&__toggle {
+			display: none;
+		}
+	}
+
+	@include bp-s-and-above {
+		max-height: $filter-bar-height--desktop;
+		padding-top: $spacing--400--desktop;
+		z-index: 13;
+	}
+
+	// position at top of screen when main navigation is not visible
+	&.is-mobile-nav-hidden {
+		top: 0;
+	}
+
+	// This is toggle without animation for now.
+	// because animating height changes is not a good idea performance wise
+	// TODO: find an elegant solution for animation
+	&.is-open {
+		max-height: initial;
+	}
+
+	&.is-floating ~ .mobile-floater {
+		.toggle-button {
+			transform: translateX(-50%);
+		}
+	}
+
+	// this is only for the mobile view
+	&__mobile-header {
+		@include interactive-100;
+
+		text-transform: uppercase;
+		margin: 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 $spacing--400;
+		height: $filter-bar-height--mobile;
+
+		@include bp-s-and-above {
+			display: none;
+		}
+
+		// reset p-tag styles
+		.filter-bar__mobile-legend {
+			@include interactive-100;
+		}
+
+		.mobile-active-filters {
+			@include active-filters();
+		}
+	}
+
+	&__mobile-close-button {
+		height: $spacing--200;
+		width: $spacing--200;
+		filter: invert(1);
+	}
+
+	// fieldset -> filter group
+	&__category {
+		padding-right: 1em;
+
+		@include bp-s-and-above {
+			grid-row-start: 1;
+		}
+	}
+
+	// fieldset legend
+	&__category-legend {
+		font-size: 2.4rem;
+		margin-bottom: 4.6rem;
+
+		@include bp-xs {
+			padding-top: 3.2rem;
+		}
+
+		// those are the labels showing which filters apply for each category
+		.active-filters {
+			@include active-filters();
+		}
+	}
+	// filter chip
+	&__filter-item {
+		line-height: initial;
+		background-color: $color-primary--900;
+		color: $color-primary--white;
+
+		svg {
+			filter: invert(1);
+		}
+
+		&:focus-within {
+			outline: 0.3rem solid $color-secondary--yellow;
+			outline-offset: 0.5rem;
+		}
+
+		&.is-active {
+			background-color: $color-primary--white;
+			color: $color-primary--900;
+
+			svg {
+				filter: invert(0);
+			}
+
+			&:hover {
+				svg {
+					filter: invert(1);
+				}
+
+				circle {
+					transition: transform 0.3s ease-in-out;
+					transform: scale(1);
+				}
+			}
+
+			.filter-checkbox__icon__animated-path {
+				@include default-animation(transform);
+
+				transform-origin: center;
+				transform: rotate(90deg);
+			}
+		}
+
+		.is-dark & {
+			svg {
+				filter: invert(0);
+			}
+
+			&.is-active {
+				svg {
+					filter: invert(1);
+				}
+
+				&:hover {
+					svg {
+						filter: invert(0);
+					}
+				}
+			}
+
+			.button--clear {
+				color: $color-primary--white;
+			}
+
+			.button--secondary {
+				background-color: $color-primary--white;
+				color: $color-primary--black;
+			}
+		}
+	}
+
+	// Button for open close the filter section
+	&__toggle {
+		text-align: right;
+		display: inline-flex;
+		cursor: pointer;
+
+		@include bp-xs() {
+			display: flex;
+		}
+	}
+
+	// Buttons for dismiss / apply filters
+	&__confirm-group {
+		display: flex;
+		justify-content: space-between;
+
+		@include bp-s-and-above {
+			text-align: right;
+
+			.button:last-of-type {
+				margin-right: 0;
+			}
+		}
+
+		.button {
+			flex: 1;
+			justify-content: center;
+			height: fit-content;
+		}
+	}
+}
+
+.list {
+	margin-top: 0;
+	padding-bottom: 6rem;
+
+	@include bp-s-and-above {
+		padding-top: $spacing--600;
+	}
+
+	// A category holds subheadline for discipline
+	// and a list for the offerings
+	&__category {
+		border-bottom: 1px solid $color-primary--900;
+
+		.is-dark & {
+			border-color: $color-primary--white;
+		}
+
+		&-title {
+			@include spacing-400(padding-top);
+			@include spacing-400(padding-bottom);
+		}
+
+		&-headline {
+			@include headline-200();
+			@include spacing-400(padding-top);
+
+			border-bottom: 1px solid $color-primary--600;
+			position: sticky;
+			top: 0;
+			margin: 0;
+			z-index: 0;
+
+			@include bp-s-and-above {
+				top: $filter-bar-height--desktop + $spacing--400;
+				border: 0;
+			}
+
+			@include bp-xs {
+				@include spacing-600(padding-top);
+				@include spacing-400(padding-bottom);
+				@include default-animation(background-color);
+
+				background-color: $color-primary--white;
+				z-index: 11;
+
+				.is-dark & {
+					background-color: $color-primary--black;
+				}
+
+				&:first-child {
+					padding-top: 0;
+				}
+			}
+		}
+	}
+
+	// LI
+	&__item {
+		@include spacing-400(padding-top);
+		@include spacing-400(padding-bottom);
+
+		border-bottom: 1px solid $color-primary--600;
+
+		// is-last gets added via JS
+		&.is-last,
+		&:last-of-type {
+			border-bottom: 0;
+		}
+
+		// Item Title
+		&-title {
+			@include headline-400();
+
+			.is-dark & {
+				color: $color-primary--white;
+			}
+		}
+
+		// items Location
+		&-location {
+			@include paragraph-200();
+
+			padding-top: 0.8rem;
+
+			.is-dark & {
+				color: $color-primary--white;
+			}
+		}
+	}
+
+	// Styling for the link
+	&__anchor {
+		display: block;
+		color: $color-primary--black;
+		transition: transform 0.2s linear;
+
+		&:hover {
+			// TODO: actually this is guessed
+			transform: translateX($spacing--100);
+		}
+
+		// reset a tag styling
+		&:hover,
+		&:focus,
+		&:active,
+		&:visited {
+			color: $color-primary--black;
+		}
+	}
+
+	// hides list items and discipline categories
+	.hidden {
+		display: none;
+	}
+}
+
+.filter-wrapper {
+	@include bp-xs {
+		transform: translateX(100%);
+		transition: transform 0.2s linear;
+		height: var(--mobile-height);
+		overflow: scroll;
+		z-index: 14;
+		top: 0;
+		background: $color-primary--black;
+		position: fixed;
+		margin: 0;
+		padding: 0 2.4rem;
+		display: flex;
+		flex-direction: column;
+
+		.filter-bar__category {
+			padding-bottom: 3.2rem;
+
+			&:first-of-type {
+				border-bottom: 1px solid $color-primary--600;
+			}
+		}
+
+		.filter-bar__confirm-group {
+			position: sticky;
+			bottom: 0;
+			margin-top: auto;
+			padding-top: 2rem;
+			background-color: $color-primary--black;
+
+			.button--clear {
+				background-color: $color-primary--gray;
+				color: $color-primary--white;
+			}
+		}
+	}
+}
+
+.is-open .filter-wrapper {
+	@include bp-xs {
+		transform: translateX(0);
+	}
+
+	.filter-bar__mobile-header {
+		background-color: $color-primary--black;
+		padding: 0;
+		position: sticky;
+		top: 0;
+		z-index: 1;
+	}
+}

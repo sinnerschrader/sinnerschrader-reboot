@@ -2,7 +2,9 @@
 title: Entwicklung einer ganzheitlichen Brand Experience für den Markenrelaunch von Unzer
 plainHeadlineText: Entwicklung einer ganzheitlichen Brand Experience für den Markenrelaunch
 italicHeadlineText: von Unzer
-image: ./assets/images/fallback/job-list-teaser.png
+location: berlin
+discipline: tech
+image: /assets/images/fallback/job-list-teaser.png
 altText: Audi auto
 introText: "Nächster Schritt zur konsequenten Verbesserung der digitalen Experience erfüllt Premium-Anspruch an Design, Personalisierung und e-Commerce. Damit definiert Audi einen neuen Standard für das Nutzererlebnis<br />
 Kollaborativer Aufbau einer globalen Software Delivery Pipeline zwischen SinnerSchrader und Audi mit agilem Remote First Set-up"

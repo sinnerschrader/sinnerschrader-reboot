@@ -32,15 +32,20 @@
 
 	img {
 		@include spacing-500(padding-left);
+
 		padding-right: $spacing--100;
+
+		&.hidden {
+			// Disabled due to stylelint bug (see https://github.com/stylelint/stylelint/issues/5020)
+			/* stylelint-disable selector-no-qualifying-type */
+			@include spacing-300(padding-left);
+
+			width: 0;
+			/* stylelint-enable selector-no-qualifying-type */
+		}
 
 		.is-dark & {
 			filter: invert(1);
-		}
-
-		&.hidden {
-			@include spacing-300(padding-left);
-			width: 0;
 		}
 	}
 

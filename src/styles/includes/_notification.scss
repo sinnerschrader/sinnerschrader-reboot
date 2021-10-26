@@ -36,8 +36,8 @@
 		padding-right: $spacing--100;
 
 		&.hidden {
-			// Disabled due to stylelint bug (see https://github.com/stylelint/stylelint/issues/5020)
 			/* stylelint-disable selector-no-qualifying-type */
+			// Disabled due to stylelint bug (see https://github.com/stylelint/stylelint/issues/5020)
 			@include spacing-300(padding-left);
 
 			width: 0;

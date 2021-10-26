@@ -23,7 +23,6 @@
 	p {
 		@include paragraph-100();
 		@include spacing-300(padding-left);
-		@include spacing-300(padding-right);
 
 		margin: 0;
 		padding-top: $spacing--200;
@@ -32,19 +31,22 @@
 	}
 
 	img {
-		padding-right: $spacing--100;
+		@include spacing-300(padding-left);
+		width: 0;
 
 		.is-dark & {
 			filter: invert(1);
 		}
-	}
 
-	div p + img {
-		color: red;
+		&.visible {
+			@include spacing-500(padding-left);
+			padding-right: $spacing--100;
+			width: auto;
+		}
 	}
 
 	&.active {
-		.notification__box {
+		div {
 			transform: translateX(-10px);
 			transition-duration: 0.25s;
 		}

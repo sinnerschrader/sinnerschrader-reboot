@@ -8,8 +8,8 @@ const CONTACT_TYPES = {
 	ONLY_HANDLE: "only_handle",
 };
 
-const TARGET_EMAIL = "jiri.groh@sinnerschrader.com";
-const SOURCE_EMAIL = "jiri.groh@sinnerschrader.com";
+const TARGET_EMAIL = process.env.TARGET_EMAIL;
+const SOURCE_EMAIL = process.env.SOURCE_EMAIL;
 
 const handleFullContact = (event) => {
 	const { phonenumber, senderName, profileLink, privacy, senderEmail, contactPerson } = event.payload;
@@ -44,7 +44,7 @@ const handleFullContact = (event) => {
 	return ses.sendEmail(params).promise();
 };
 
-const handleHandleContact = async (data) => {
+const handleProfileLinkContact = async (data) => {
 	const { handle } = data.payload;
 
 	const params = {
@@ -64,11 +64,11 @@ const handleHandleContact = async (data) => {
 			},
 		},
 		Source: SOURCE_EMAIL,
-		SourceArn: "arn:aws:ses:eu-central-1:547134263911:identity/jiri.groh@sinnerschrader.com",
+		SourceArn: process.env.SOURCE_EMAIL_ARN,
 	};
 
 	try {
-		const response = await ses.sendEmail(params).promise();
+		await ses.sendEmail(params).promise();
 		return { statusCode: 200, body: JSON.stringify({ success: true, message: "OK" }) };
 	} catch (e) {
 		return { statusCode: 500, body: JSON.stringify({ success: false, message: "Something went wrong." }) };
@@ -112,6 +112,6 @@ exports.handler = async (event) => {
 	if (type === CONTACT_TYPES.FULL) return handleFullContact(body);
 
 	if (type === CONTACT_TYPES.ONLY_HANDLE) {
-		return await handleHandleContact(body);
+		return await handleProfileLinkContact(body);
 	}
 };

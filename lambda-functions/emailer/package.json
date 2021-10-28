@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "Triggers AWS SES service to deliver emails to the HR department",
   "main": "emailer.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "Jiri Groh <jiri.groh@accenture.com>",
   "license": "ISC",
   "dependencies": {

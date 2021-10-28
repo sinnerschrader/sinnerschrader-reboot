@@ -36,7 +36,6 @@ export class ProfileLinkContactForm {
 	emailFailed() {}
 
 	async sendHandleEmail() {
-		console.log(this.input.value, this.checkbox.checked, this.captchaResponse);
 		const data = { payload: { handle: this.input.value }, type: "only_handle", captcha: this.captchaResponse };
 		fetch("https://k741x3mcij.execute-api.eu-central-1.amazonaws.com/prod/emailer", {
 			body: JSON.stringify(data),

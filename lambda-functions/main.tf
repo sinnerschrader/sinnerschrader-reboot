@@ -32,6 +32,9 @@ variable "secrets" {
     OAUTH_CLIENT_ID = string,
     OAUTH_CLIENT_SECRET = string,
     HCAPTCHA_SECRET = string,
+    JOBS_TARGET_EMAIL = string,
+    JOBS_SOURCE_EMAIL = string,
+    JOBS_SOURCE_EMAIL_ARN = string
   })
   sensitive = true
 }
@@ -174,7 +177,10 @@ resource "aws_lambda_function" "emailer" {
 
   environment {
     variables = {
-      HCAPTCHA_SECRET = data.aws_ssm_parameter.HCAPTCHA_SECRET.value
+      HCAPTCHA_SECRET = data.aws_ssm_parameter.HCAPTCHA_SECRET.value,
+      SOURCE_EMAIL = var.secrets.JOBS_SOURCE_EMAIL
+      TARGET_EMAIL = var.secrets.JOBS_TARGET_EMAIL
+      SOURCE_EMAIL_ARN = var.secrets.JOBS_SOURCE_EMAIL_ARN
     }
   }
 

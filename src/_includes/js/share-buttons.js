@@ -11,6 +11,6 @@ export class ShareButtons {
 	copyCurrentWindowLocationToClipboard() {
 		const copyLink = window.location.origin + window.location.pathname;
 
-		navigator.clipboard.writeText(copyLink).then(this.linkSavedNotification.show());
+		navigator.clipboard.writeText(copyLink).then(() => this.linkSavedNotification.show());
 	}
 }

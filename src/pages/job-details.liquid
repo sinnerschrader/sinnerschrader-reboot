@@ -83,7 +83,7 @@ dataJsItem: bg-scroll-animation
 			<p>We look forward to hearing from you.</p>
 		</div>
 		<div class="col-start-10 col-end-13 col-start-9-s col-end-13-s col-start-1-xs col-end-13-xs">
-			{% include contact-person, data: components.contact %}
+			{% include contact-person, data: components.contact workdayLink: job.data.workdayLink %}
 		</div>
 	</section>
 	<section class="job-details__apply grid">
@@ -104,7 +104,7 @@ dataJsItem: bg-scroll-animation
 			<h3 class="copy--title">Sounds like you?</h3>
 		</div>
 			<div class="col-7 col-12-xs">
-				{% include button-apply, data: job-details %}
+				{% include button-apply, data: job-details workdayLink: job.data.workdayLink %}
 			</div>
 		<div>
 	</section>

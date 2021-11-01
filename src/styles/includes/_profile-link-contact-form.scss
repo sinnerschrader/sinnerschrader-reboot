@@ -150,4 +150,28 @@
 			}
 		}
 	}
+
+	&__sendProfileButton {
+		@include button-animation();
+
+		padding: $spacing--200 0;
+		margin-top: 2rem;
+		width: 20rem;
+		border-radius: 2.4rem;
+
+		@include bp-s-and-lower {
+			background-color: $color-primary--gray;
+			color: $color-primary--white;
+		}
+
+		&:disabled {
+			color: $color-primary--light-gray;
+
+			&:hover {
+				transform: none;
+				transition: none;
+				letter-spacing: none;
+			}
+		}
+	}
 }

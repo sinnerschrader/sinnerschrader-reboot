@@ -4,7 +4,7 @@ export class Notification {
 		this.notificationId = notificationId;
 		this.notificationElement = document.getElementById(this.notificationId);
 
-		this.notificationElement.querySelector(".notification__icon").addEventListener("click", () => {
+		this.notificationElement.querySelector("img").addEventListener("click", () => {
 			this.hide();
 		});
 	}

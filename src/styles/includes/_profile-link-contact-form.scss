@@ -47,6 +47,36 @@
 		&.active {
 			transform: translateX(-100%);
 		}
+
+		.form {
+			&__group {
+				@include spacing-200(margin-bottom);
+			}
+
+			&__subline {
+				@include paragraph-200();
+			}
+
+			&__checkbox {
+				align-items: center;
+			}
+
+			@include bp-m-and-above {
+				&__field {
+					.is-dark & {
+						border-bottom: 1px solid $color-primary--black;
+					}
+				}
+
+				&__checkbox {
+					input {
+						.is-dark & {
+							border-color: $color-primary--black;
+						}
+					}
+				}
+			}
+		}
 	}
 
 	&__headline {
@@ -133,6 +163,7 @@
 		border: 0;
 		background-color: transparent;
 		margin-bottom: $spacing--400;
+		cursor: pointer;
 
 		&:hover {
 			transform: rotate(180deg) scale(0.95);

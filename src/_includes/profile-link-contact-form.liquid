@@ -16,18 +16,18 @@
 		<button class="profile-link-contact-form__backwardButton" data-js-atom="profile-link-contact-form-backward">
 			<img src="/assets/svg/Arrow-L.svg" alt="" class="profile-link-contact-form__backwardButton--svg" />
 		</button>
-		<form>
-			<input
-				type="url"
-				name="profileLink"
-				class="profile-link-contact-form__profileInput"
-				placeholder="e.g. github, gitlab, linkedIn, Xing, portfolio"
-				required
-			/>
-			<div class="profile-link-contact-form__dataCollector">
-				<input type="checkbox" required />
-				<p class="profile-link-contact-form__copy profile-link-contact-form__dataText">yeah, go screen my skills!</p>
-			</div>
+		<form class="form">
+			<label for="profileLink" class="form__group">
+				<span class="form__label">Your Profile Link <span class="form__required">(required)</span></span>
+				<input type="url" id="profileLink" class="form__field" required />
+				<span class="form__subline"> e.g. github, gitlab, linkedIn, Xing, portfolio </span>
+			</label>
+
+			<label for="privacy" class="form__group form__checkbox">
+				<input type="checkbox" id="privacy" required />
+				<span> yeah, go screen my skills </span>
+			</label>
+
 			<p class="profile-link-contact-form__copy">
 				We're keeping your personal details secure and don't share it with 3rd parties of course. Find out more in our
 				<a href="./data-policy.html" class="profile-link-contact-form__copy"><b>privacy policy</b>.</a>

@@ -1,6 +1,5 @@
 .form {
 	@include paragraph-100();
-	@include spacing-800(margin-bottom);
 
 	position: relative;
 
@@ -40,7 +39,6 @@
 	&__checkbox {
 		display: flex;
 		flex-direction: row;
-		margin-bottom: $spacing--300;
 		gap: 1rem;
 
 		input {

@@ -1,0 +1,44 @@
+---
+title: SinnerSchrader
+layout: default
+permalink: "archive/page{{ pagination.pageNumber | plus: 1}}.html"
+pagination:
+  data: collections.news
+  size: 3
+  reverse: true
+  alias: news
+bodyClass: is-bg-scroll
+dataJsItem: bg-scroll-animation
+---
+
+{% for article in news %}
+    <div style="background-color:red">
+        <a class="continue-reading" href="/news/{{ article.data.title | slug }}.html">
+            <img height="100px" width="100px" alt="{{ article.data.altText }}" class="banner-image"
+                loading="lazy" src="{{ article.data.image }}">
+            {{ article.date }}
+            {{ article.data.title }}
+        </a>
+    </div>
+{% endfor %}
+
+{% assign preLastPage = pagination.pages.length | minus: 1 %}
+
+<nav class="pagination">
+  <ol>
+    {% if pagination.pageNumber > 0 %}
+      <li><a href="{{pagination.href.first}}">First</a></li>
+    {% endif %}
+    {% if pagination.href.previous %}
+      <li><a href="{{pagination.href.previous}}">Prev</a></li>
+    {% endif %}
+    {% if pagination.href.next %}
+      <li><a href="{{pagination.href.next}}">Next</a></li>
+    {% endif %}
+    {% if pagination.pageNumber < preLastPage %}
+      <li><a href="{{pagination.href.last}}">Last</a></li>
+    {% endif %}
+  </ol>
+</nav>
+
+{{ pagination.pageNumber | plus: 1}} of {{ pagination.pages.length }}

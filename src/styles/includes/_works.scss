@@ -135,7 +135,7 @@
 			margin-top: 25vw;
 
 			@include bp-xs() {
-				margin-top: 40vw;
+				margin-top: 70vw;
 
 				&::before {
 					margin: -20vw 0 8vw;
@@ -154,8 +154,8 @@
 				margin: -15vw 0 8vw;
 
 				@include bp-xs() {
-					font-size: 30vw;
-					margin: -20vw 0 10vw;
+					font-size: 50vw;
+					margin: -32vw 0 10vw;
 				}
 			}
 		}

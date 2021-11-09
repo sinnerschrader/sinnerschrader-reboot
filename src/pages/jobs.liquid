@@ -25,10 +25,9 @@ renderData: filterbar
 		</div>
 	</section>
 	<section class="fade-bg-black">
-		{% capture imageTeaserContent %}
-		{% include profile-link-contact-form %}
-		{% endcapture %}
-		{% include image-teaser, data: careers.image-teaser, content: imageTeaserContent %}</section>
+		{% capture imageTeaserContent %} {% include profile-link-contact-form %} {% endcapture %} {% include image-teaser, data: careers,
+		content: imageTeaserContent %}
+	</section>
 	<section class="fade-bg-black jobs-page--offering">
 		{% include section-header, title: "Perks @ s2", number: "01" %}
 		<div class="grid">
@@ -55,7 +54,7 @@ renderData: filterbar
 						aria-controls="js-job-filter-bar"
 						aria-expanded="false"
 					>
-						<img src="/assets/svg/Chevron-down-S.svg"/> 
+						<img src="/assets/svg/Chevron-down-S.svg" />
 					</button>
 				</div>
 			</header>
@@ -78,7 +77,7 @@ renderData: filterbar
 							aria-expanded="false"
 							tabindex="-1"
 						>
-							<img src="/assets/svg/Close-S.svg"/>
+							<img src="/assets/svg/Close-S.svg" />
 						</button>
 					</div>
 				</header>
@@ -93,7 +92,7 @@ renderData: filterbar
 						aria-controls="js-job-filter-bar"
 						aria-expanded="false"
 					>
-						<img src="/assets/svg/Chevron-down-S.svg"/>
+						<img src="/assets/svg/Chevron-down-S.svg" />
 					</button>
 				</div>
 
@@ -110,16 +109,16 @@ renderData: filterbar
 
 		<!-- Filter Container Floating Bubble / Appears when filterbar is out of sight -->
 		<div id="js-mobile-floater" class="mobile-floater visible-xs">
-                <button
-                    class="toggle-button js-toggle-filter-bar--mobile"
-                    aria-label="{{ careers.filter.ariaLabelFilterToggle }}"
-                    aria-haspopup="true"
-                    aria-controls="js-job-filter-bar"
-                    aria-expanded="false"
-                    tabindex="-1"
-                >
-                    <img src="/assets/svg/Filter-L.svg"/>
-                </button>
+			<button
+				class="toggle-button js-toggle-filter-bar--mobile"
+				aria-label="{{ careers.filter.ariaLabelFilterToggle }}"
+				aria-haspopup="true"
+				aria-controls="js-job-filter-bar"
+				aria-expanded="false"
+				tabindex="-1"
+			>
+				<img src="/assets/svg/Filter-L.svg" />
+			</button>
 		</div>
 
 		<!-- Categories in the listing -->
@@ -130,12 +129,20 @@ renderData: filterbar
 			strategyJobs = collections.jobs | groupByDiscipline: 'strategy' %}
 
 			<!-- Render their dedicated lists -->
-			{% include job-filter-list-category, discipline: 'Account Manage&shy;ment', jobs: managementJobs %} {% include job-filter-list-category,
-			discipline: 'Creative', jobs: creativeJobs %} {% include job-filter-list-category, discipline: 'Strategy', jobs: strategyJobs %} {%
-			include job-filter-list-category, discipline: 'Tech', jobs: techJobs %}
+			{% include job-filter-list-category, discipline: 'Account Manage&shy;ment', jobs: managementJobs %} {% include
+			job-filter-list-category, discipline: 'Creative', jobs: creativeJobs %} {% include job-filter-list-category, discipline: 'Strategy',
+			jobs: strategyJobs %} {% include job-filter-list-category, discipline: 'Tech', jobs: techJobs %}
+			<div class="grid">
+				<h1 class="job-list__empty-state col-12-xs col-7 hidden">
+					No open vacancies.<br />
+					We hired all possible people, but might happen the we forgot about you!
+					<br />
+					Let's stay in touch.
+				</h1>
+			</div>
 		</section>
 	</section>
-    <section>{% include section-header, title: "Here we are", number: "06", type: "medium" %} {% include locations %}</section>
+	<section>{% include section-header, title: "Here we are", number: "06", type: "medium" %} {% include locations %}</section>
 </main>
 
 {% include footer, data: global %}

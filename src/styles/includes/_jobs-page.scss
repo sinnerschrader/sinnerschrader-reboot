@@ -426,6 +426,16 @@ $filter-bar-height--desktop: 11.8rem;
 			}
 		}
 
+		&__empty-state {
+			@include headline-200();
+
+			color: $color-primary--black;
+
+			.is-dark & {
+				color: $color-primary--white;
+			}
+		}
+
 		// hides list items and discipline categories
 		.hidden {
 			display: none;

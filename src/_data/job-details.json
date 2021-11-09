@@ -190,6 +190,7 @@
 	},
 	"apply": {
 		"mail": "jobs@sinnerschrader.com",
-		"buttonApply": "Apply now"
+		"buttonApplyMail": "Apply now",
+		"buttonApplyWorkday": "Apply via Workday"
 	}
 }

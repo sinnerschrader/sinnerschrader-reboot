@@ -60,7 +60,6 @@ export class FilterList {
 
 				if (this.liveUpdate) {
 					this.updateList();
-					this.updateListCategories();
 				}
 			});
 		});
@@ -85,7 +84,6 @@ export class FilterList {
 		this.controls.querySelector("#js-apply-filter").addEventListener("click", (evt) => {
 			evt.preventDefault();
 			this.updateList();
-			this.updateListCategories();
 			this.toggleFilterBarOpen();
 			if (document.body.classList.contains("freeze-scroll")) {
 				document.body.classList.remove("freeze-scroll");
@@ -111,7 +109,6 @@ export class FilterList {
 
 			// update List
 			this.updateList();
-			this.updateListCategories();
 		});
 
 		// Mobile height calculation for filter and navigation flyout
@@ -213,6 +210,35 @@ export class FilterList {
 		});
 	}
 
+	// Update Job list
+	updateList() {
+		// first reset all
+		this.setAllActive();
+
+		// Filter items and add hidden class
+		Array.from(this.list.querySelectorAll("li"))
+			// by discipline
+			.filter((item) => {
+				const discipline = item.dataset.discipline;
+				// const level = item.dataset.level;
+				const location = item.dataset.location;
+				const excluded =
+					// discipline doesn't match and discipline section is active
+					(!this.filters["discipline"].includes(discipline) && this.isFilterActive("discipline")) ||
+					// location doesn't match and location section is active
+					(!this.filters["location"].includes(location) && this.isFilterActive("location"));
+				// all excluded ones are treated with an extra class
+				return excluded;
+			})
+			// applies hidden class for all excluded ones
+			.forEach((item) => {
+				item.classList.add(this.hiddenClass);
+			});
+
+		this.updateListCategories();
+		this.updateEmptyState();
+	}
+
 	// Update Categories
 	updateListCategories() {
 		const categories = this.list.querySelectorAll(".job-list__category");
@@ -240,29 +266,19 @@ export class FilterList {
 		});
 	}
 
-	// Update Job list
-	updateList() {
-		// first reset all
-		this.setAllActive();
+	// Set empty state if there are no resultes for active filters
+	updateEmptyState() {
+		const emptyStateMessage = this.list.querySelector(".job-list__empty-state");
+		const listItems = Array.from(this.list.querySelectorAll("li"));
 
-		// Filter items and add hidden class
-		Array.from(this.list.querySelectorAll("li"))
-			// by discipline
-			.filter((item) => {
-				const discipline = item.dataset.discipline;
-				// const level = item.dataset.level;
-				const location = item.dataset.location;
-				const excluded =
-					// discipline doesn't match and discipline section is active
-					(!this.filters["discipline"].includes(discipline) && this.isFilterActive("discipline")) ||
-					// location doesn't match and location section is active
-					(!this.filters["location"].includes(location) && this.isFilterActive("location"));
-				// all excluded ones are treated with an extra class
-				return excluded;
-			})
-			// applies hidden class for all excluded ones
-			.forEach((item) => {
-				item.classList.add(this.hiddenClass);
-			});
+		// Check if there are list items that are active
+		const activeItems = listItems.filter((item) => !item.classList.contains(this.hiddenClass));
+
+		// Set or remove hidden style
+		if (activeItems.length == 0) {
+			emptyStateMessage.classList.remove(this.hiddenClass);
+		} else {
+			emptyStateMessage.classList.add(this.hiddenClass);
+		}
 	}
 }

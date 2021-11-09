@@ -9,6 +9,7 @@ import { OfferingHeader } from "./offering-header";
 import { Offerings } from "./offerings";
 import { Parallax } from "./parallax";
 import { InteractiveContent } from "./interactive-content";
+import { ShareButtons } from "./share-buttons";
 import { Slider } from "./slider.js";
 import { Video } from "./video.js";
 
@@ -68,6 +69,10 @@ import { Video } from "./video.js";
 			listSelector: "#js-job-listing",
 			liveUpdate: true,
 		});
+	}
+
+	if (isModuleNeeded("share-buttons")) {
+		new ShareButtons();
 	}
 
 	new Parallax();

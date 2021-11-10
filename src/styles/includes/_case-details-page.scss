@@ -481,6 +481,9 @@
 
 		&__author {
 			@include spacing-500(margin-top);
+			@include bp-xs {
+				font-size: 16px;
+			}
 
 			margin: 1rem 0;
 			margin-left: 34px;

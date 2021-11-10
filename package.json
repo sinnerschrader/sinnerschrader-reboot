@@ -31,7 +31,7 @@
     "esbuild": "^0.13.13",
     "fibers": "^5.0.0",
     "fs-extra": "^10.0.0",
-    "glob": "^7.1.7",
+    "glob": "^7.2.0",
     "html-minifier": "^4.0.0",
     "husky": "^7.0.4",
     "lint-staged": "^11.2.6",

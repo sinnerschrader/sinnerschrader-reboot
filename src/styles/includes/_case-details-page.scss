@@ -369,7 +369,7 @@
 					font-family: $font-serif;
 
 					@include bp-xs {
-						font-size: 6rem;
+						font-size: 64px;
 					}
 					@include bp-s {
 						font-size: 7.8rem;
@@ -483,6 +483,8 @@
 			@include spacing-500(margin-top);
 
 			margin: 1rem 0;
+			margin-left: 34px;
+			text-indent: -32px;
 
 			span {
 				font-family: $font-sans-serif-semibold;

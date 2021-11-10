@@ -369,7 +369,7 @@
 					font-family: $font-serif;
 
 					@include bp-xs {
-						font-size: 64px;
+						font-size: 60px;
 					}
 					@include bp-s {
 						font-size: 7.8rem;
@@ -406,7 +406,7 @@
 
 			&__description {
 				font-family: $font-sans-serif-semibold;
-				font-size: 1.8rem;
+				font-size: 18px;
 				padding: 3rem 0;
 				text-overflow: ellipsis;
 				overflow: auto;
@@ -483,6 +483,7 @@
 			@include spacing-500(margin-top);
 
 			margin: 1rem 0;
+			font-size: 18px;
 			margin-left: 34px;
 			text-indent: -32px;
 

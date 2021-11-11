@@ -9,7 +9,7 @@
         <img class="preview" src="/assets/images/fallback/{{data.previewInfo.imageFallback}}"
             alt="{{data.previewInfo.name}}">
         <div>
-            {% include button-notext, size: "small", iconSrc:"/assets/svg/Arrow-S.svg" %}
+            {% include button-notext, size: "small", iconSrc:"/assets/svg/Arrow-S.svg", aria: data.previewInfo.name %}
             <p><span>{{data.previewInfo.company}}</span> {{data.previewInfo.name}}</p>
         </div>
     </a>

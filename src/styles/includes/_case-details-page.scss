@@ -389,6 +389,7 @@
 					font-family: $font-code;
 					font-size: 1rem;
 					padding-bottom: 5rem;
+					text-transform: uppercase;
 
 					@include bp-xs {
 						padding-bottom: 0;
@@ -457,10 +458,18 @@
 
 			max-width: 70vw;
 			margin-bottom: 0;
+			text-indent: 248px;
 			font-family: $font-sans-serif-light;
 
 			@include bp-xs {
 				max-width: 100%;
+				text-indent: 0;
+			}
+			@include bp-s {
+				text-indent: 160px;
+			}
+			@include bp-m {
+				text-indent: 200px;
 			}
 
 			img {

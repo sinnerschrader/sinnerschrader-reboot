@@ -239,7 +239,7 @@ info: {
 			}
 		],
 		"quote": {
-			"text": "When it comes to navigating<br />the connected world around us, there are no shortcuts to the multifaceted challenges companies face. With curious minds and an ethos for knowledge sharing, we don't just handle complexity, we give it a big hug.",
+			"text": "When it comes to navigating the connected world around us, there are no shortcuts to the multifaceted challenges companies face. With curious minds and an ethos for knowledge sharing, we don't just handle complexity, we give it a big hug.",
 			"author": {
 				"name": "Sven Schuhwirth",
 				"position": "Head of  Digital Experience / Business, Audi AG"

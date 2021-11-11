@@ -2,12 +2,12 @@
 	{
 		"id": "all",
 		"name": "All",
-		"initialActive": false
+		"initialActive": true
 	},
 	{
 		"id": "automotive",
 		"name": "Automotive",
-		"initialActive": true
+		"initialActive": false
 	},
 	{
 		"id": "fintech",

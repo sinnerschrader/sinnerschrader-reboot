@@ -42,7 +42,7 @@
     "prettier": "^2.4.1",
     "rimraf": "^3.0.2",
     "sass": "^1.43.4",
-    "sharp": "^0.29.0",
+    "sharp": "^0.29.3",
     "stylelint": "^13.13.1",
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-sass-guidelines": "^8.0.0",

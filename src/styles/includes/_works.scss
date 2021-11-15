@@ -129,6 +129,10 @@
 
 		&:only-child {
 			height: 30vw;
+
+			@include bp-xs() {
+				height: 130vw;
+			}
 		}
 
 		&:nth-child(3) {

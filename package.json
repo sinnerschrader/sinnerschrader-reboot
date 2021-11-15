@@ -27,7 +27,7 @@
     "@11ty/eleventy": "^0.12.1",
     "autoprefixer": "^10.4.0",
     "chokidar": "^3.5.2",
-    "cssnano": "^5.0.8",
+    "cssnano": "^5.0.10",
     "esbuild": "^0.13.13",
     "fibers": "^5.0.0",
     "fs-extra": "^10.0.0",

@@ -150,6 +150,11 @@
 		}
 	}
 
+	.abstract-text {
+		position: relative;
+		overflow: hidden;
+	}
+
 	.bg-text {
 		content: "craft";
 		font-family: $font-serif;
@@ -330,6 +335,12 @@
 				}
 			}
 
+			.overview-container {
+				@include bp-xs {
+					width: 100vw;
+				}
+			}
+
 			.overview-container:nth-child(1) .technology__media-content {
 				@include bp-xs {
 					margin: 0 0 10vw 2.4rem;
@@ -458,7 +469,7 @@
 
 			max-width: 70vw;
 			margin-bottom: 0;
-			text-indent: 248px;
+			text-indent: -40px;
 			font-family: $font-sans-serif-light;
 
 			@include bp-xs {
@@ -466,10 +477,10 @@
 				text-indent: 0;
 			}
 			@include bp-s {
-				text-indent: 160px;
+				text-indent: 0;
 			}
 			@include bp-m {
-				text-indent: 200px;
+				text-indent: 100px;
 			}
 
 			img {

@@ -1,7 +1,7 @@
 export class SlideIn {
-	titles = document.querySelectorAll(".slide-in");
-	hideAnimations = window.matchMedia("(prefers-reduced-motion: reduce)");
 	constructor() {
+		this.titles = document.querySelectorAll(".slide-in");
+		this.hideAnimations = window.matchMedia("(prefers-reduced-motion: reduce)");
 		if (!this.titles.length) return;
 
 		this.init();

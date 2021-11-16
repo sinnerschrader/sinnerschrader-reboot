@@ -1,7 +1,6 @@
 export class AnchorNavigation {
-	activeClass = "is-active";
-
 	constructor() {
+		this.activeClass = "is-active";
 		this.container = document.querySelector(".anchor-navigation");
 
 		if (!this.container) return;

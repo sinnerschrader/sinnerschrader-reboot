@@ -70,8 +70,13 @@
 				columns: 2;
 				margin: 10vw 0 10vw 4vw;
 
-				li:first-child {
-					color: $color-secondary--purple;
+				li {
+					&:focus {
+						outline: none;
+					}
+					&:first-child {
+						color: $color-secondary--purple;
+					}
 				}
 			}
 		}

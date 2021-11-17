@@ -53,8 +53,9 @@
 		@include spacing-100(margin-top);
 
 		display: flex;
-		justify-content: space-around;
-		width: 17rem;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		gap: 1.5rem;
 	}
 
 	&__link {
@@ -63,9 +64,5 @@
 		.is-dark & {
 			color: $color-primary--white;
 		}
-	}
-
-	&__link-social {
-		border-bottom: 0.1rem solid $color-secondary--yellow;
 	}
 }

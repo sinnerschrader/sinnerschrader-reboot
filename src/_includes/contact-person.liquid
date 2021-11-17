@@ -5,16 +5,12 @@
 		<div>
 			<p class="contact__person-data">{{ data.details.name }}</p>
 			<p class="contact__person-data">{{ data.details.title }}</p>
-			<address>
-				<a class="contact__link" href="tel:{{ data.details.phone }}">{{ data.details.phone }}</a>
-				<div class="contact__link-container">
-					<a class="text-teaser__link" href="mailto:{{ data.details.mail }}">Mail</a>
-					<span class="contact__link-separator"></span>
-					<a class="text-teaser__link" href="{{ data.details.linkedIn }}">LinkedIn</a>
-					<span class="contact__link-separator"></span>
-					<a class="text-teaser__link" href="{{ data.details.xing }}">Xing</a>
-				</div>
-			</address>
+			<a class="contact__link" href="tel:{{ data.details.phone }}">{{ data.details.phone }}</a>
+			<div class="contact__link-container">
+				<a class="text-teaser__link" href="mailto:{{ data.details.mail }}">Mail</a>
+				<a class="text-teaser__link" href="{{ data.details.linkedIn }}">LinkedIn</a>
+				<a class="text-teaser__link" href="{{ data.details.xing }}">Xing</a>
+			</div>
 		</div>
 	</div>
 	{% include button-apply, data: job-details workdayLink: workdayLink %}

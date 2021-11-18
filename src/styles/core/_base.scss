@@ -23,6 +23,7 @@ html {
 
 body {
 	@include default-animation(background-color);
+
 	font-size: $font-size--copy-1;
 	color: $color-primary--black;
 	margin: 0;

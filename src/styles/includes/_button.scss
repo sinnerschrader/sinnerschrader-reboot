@@ -83,13 +83,6 @@
 		}
 	}
 
-	&--mobile-full-width {
-		@include bp-xs() {
-			width: 100%;
-			justify-content: center;
-		}
-	}
-
 	// buttonSize
 	&--large {
 		@include button-animation();

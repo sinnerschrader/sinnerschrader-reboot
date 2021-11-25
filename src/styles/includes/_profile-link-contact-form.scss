@@ -49,6 +49,15 @@
 		}
 
 		.form {
+			@include bp-m-and-above {
+				&__field {
+					.is-dark & {
+						/* is dark is active, but element is placed on white background */
+						border-bottom: 1px solid $color-primary--black;
+					}
+				}
+			}
+
 			&__group {
 				@include spacing-200(margin-bottom);
 			}
@@ -59,18 +68,11 @@
 
 			&__checkbox {
 				align-items: center;
-			}
 
-			@include bp-m-and-above {
-				&__field {
-					.is-dark & {
-						border-bottom: 1px solid $color-primary--black;
-					}
-				}
-
-				&__checkbox {
+				@include bp-m-and-above {
 					input {
 						.is-dark & {
+							/* is dark is active, but element is placed on white background */
 							border-color: $color-primary--black;
 						}
 					}

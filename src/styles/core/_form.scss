@@ -64,7 +64,7 @@
 					border: 1px solid $color-primary--white;
 				}
 
-				&:before {
+				&::before {
 					content: "";
 					background: $color-secondary--yellow;
 					position: absolute;

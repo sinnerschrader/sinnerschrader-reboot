@@ -237,20 +237,20 @@
 			"text": "Join us"
 		},
 		"images": {
-			"logoPart1": {
-				"src": "/assets/svg/logo-part.svg",
+			"logoLeftHalf": {
+				"src": "/assets/svg/logoLeftHalf.svg",
 				"alt": ""
 			},
-			"logoPart2": {
-				"src": "/assets/svg/logo-part2.svg",
+			"logoRightHalf": {
+				"src": "/assets/svg/logoRightHalf.svg",
 				"alt": ""
 			},
-			"element1": {
-				"src": "/assets/svg/element1.svg",
+			"ovalShape": {
+				"src": "/assets/svg/ovalShape.svg",
 				"alt": ""
 			},
-			"element2": {
-				"src": "/assets/svg/element2.svg",
+			"circleShape": {
+				"src": "/assets/svg/circleShape.svg",
 				"alt": ""
 			}
 		}

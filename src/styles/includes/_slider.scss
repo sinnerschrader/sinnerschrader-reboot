@@ -3,14 +3,10 @@
 
 	position: relative;
 
-	@include bp-xs {
+	@include bp-s-and-above {
 		&__alternate-slides {
 			.swiper-slide:nth-child(even) {
 				width: 22vw;
-
-				@include bp-xs {
-					width: 70vw;
-				}
 			}
 		}
 

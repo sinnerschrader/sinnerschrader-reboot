@@ -3,6 +3,7 @@ export class ProfileLinkContactForm {
 		this.container = document.querySelector(".profile-link-contact-form");
 		if (!this.container) return;
 
+		this.layout = document.querySelector(".profile-link-contact-form__layout");
 		this.firstPage = this.container.querySelector('[data-js-item="profile-link-contact-form-content"]');
 		this.secondPage = this.container.querySelector('[data-js-item="profile-link-contact-form-content-hidden"]');
 		this.forwardBtn = this.firstPage.querySelector('[data-js-atom="profile-link-contact-form-forward"]');
@@ -11,6 +12,7 @@ export class ProfileLinkContactForm {
 		this.form = this.secondPage.querySelector("form");
 
 		this.bindEvents();
+		this.resizeLayout();
 	}
 
 	bindEvents() {
@@ -21,6 +23,8 @@ export class ProfileLinkContactForm {
 			"expired-callback": this.onCaptchaExpired.bind(this),
 		});
 
+		window.addEventListener("resize", this.resizeLayout.bind(this));
+
 		this.forwardBtn.addEventListener("click", this.togglePages.bind(this));
 		this.backwardBtn.addEventListener("click", this.togglePages.bind(this));
 
@@ -28,6 +32,16 @@ export class ProfileLinkContactForm {
 			event.preventDefault();
 			this.sendProfileLinkEmail();
 		});
+	}
+
+	resizeLayout() {
+		const firstPageWidth = this.firstPage.clientWidth;
+		const secondPageWidth = this.secondPage.clientWidth;
+
+		const width = Math.max(firstPageWidth, secondPageWidth);
+
+		this.container.style.width = width + "px";
+		this.layout.style.width = width * 2 + "px";
 	}
 
 	onCaptchaSuccess(response) {

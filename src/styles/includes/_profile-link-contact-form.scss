@@ -1,9 +1,11 @@
 .profile-link-contact-form {
-	position: relative;
-	display: flex;
-	flex-direction: row;
-	height: 100%;
 	overflow: hidden;
+
+	&__layout {
+		display: grid;
+		grid-auto-columns: minmax(0, 1fr);
+		grid-auto-flow: column;
+	}
 
 	.is-dark & {
 		background: $color-primary--white;
@@ -17,11 +19,11 @@
 
 	&__first-page {
 		box-sizing: border-box;
-		flex-shrink: 0;
-		width: 100%;
+		width: fit-content;
+		min-width: min-content;
 		padding: $spacing--600;
-		transition: opacity 500ms ease, transform 500ms ease;
 		transform: translateX(-100%);
+		transition: opacity 500ms ease, transform 500ms ease;
 
 		@include bp-s-and-lower {
 			padding: $spacing--600 $spacing--600 0 0;
@@ -34,10 +36,9 @@
 
 	&__second-page {
 		box-sizing: border-box;
-		flex-shrink: 0;
-		width: 100%;
+		width: fit-content;
+		min-width: min-content;
 		padding: $spacing--600;
-		transform: translateX(0);
 		transition: opacity 500ms ease, transform 500ms ease;
 
 		@include bp-s-and-lower {

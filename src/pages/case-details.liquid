@@ -65,7 +65,40 @@ dataJsItem: bg-scroll-animation
     <section class="fade-bg-black">
 		{% include section-header, title: "About", number: "02", type: "large" %}
 		<div class="about">
+			<div class="slider slider-large" data-js-item="slider">
+				<div class="grid about__descriprion">
+					<h4>{{ case.data.info.about.title }}</h4>
+					<p>
+					{% for description in case.data.info.about.descriptions %}
+						{{ description }}<br/><br/>
+					{% endfor %}
+					</p>
+				</div>
+				{% include swiper-container, slides: case.data.info.about.slides %}
+				<div class="quote">
+					<p class="quote__speach">
+						<svg width="80" height="50" viewBox="0 0 80 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M23.8298 0.0314174C12.6444 3.63492 0 12.2833 0 29.0997C0 41.5918 8.02432 50 19.2097 50C28.4498 50 34.0426 43.7539 34.0426 36.5469C34.0426 29.5801 29.4225 25.9766 20.4255 24.0548C12.8875 22.6134 7.53799 21.4122 7.53799 16.1271C7.53799 9.64075 16.535 4.11538 24.5593 1.47281C25.5319 0.992354 25.0456 -0.208827 23.8298 0.0314174ZM69.7872 0.0314174C58.6018 3.63492 45.9574 11.5626 45.9574 28.379C45.9574 40.8711 53.9818 50 65.1672 50C74.4073 50 80 43.7539 80 36.5469C80 29.5801 75.3799 25.9766 66.383 24.0548C58.845 22.6134 53.4954 21.4122 53.4954 16.1271C53.4954 9.64075 62.4924 4.11538 70.5167 1.47281C71.4894 0.992354 71.003 -0.208827 69.7872 0.0314174Z" fill="white"/>
+						</svg>
+						{{ case.data.info.about.quote.text }}
+					</p>
+					<p class="quote__author">
+						<span>&#8212; {{ case.data.info.about.quote.author.name }}</span>, 
+						{{ case.data.info.about.quote.author.position }}
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
 
+    <section>
+		<div class="slider" data-js-item="slider">
+			{% include swiper-container, slides: case.data.info.design.discriptionedSlides.slides %}
+		</div>
+	</section>
+    <section>
+		<div class="slider" data-js-item="slider">
+			{% include swiper-container, slides: case.data.info.design.slides %}
 		</div>
 	</section>
 
@@ -80,7 +113,9 @@ dataJsItem: bg-scroll-animation
 				{% endfor %}
 				</p>
 				<div class="grid slider-containter__left">
-
+					<div class="slider slider__alternate-slides col-8 col-12-xs" data-js-item="slider">
+						{% include swiper-container, slides: case.data.info.design.discriptionedSlides.slides %}
+					</div>
 					<div class="description col-4 col-12-xs">
 						<span>{{ case.data.info.design.discriptionedSlides.title }}</span>
 						<p>{{ case.data.info.design.discriptionedSlides.text }}</p>
@@ -94,7 +129,11 @@ dataJsItem: bg-scroll-animation
 					</p>
 				</div>
 			</div>
-
+			<div class="slider slider__alternate-slides" data-js-item="slider">
+				<div class="grid">
+					{% include swiper-container, slides: case.data.info.design.slides %}
+				</div>
+			</div>
 		</div>
 	</section>
 

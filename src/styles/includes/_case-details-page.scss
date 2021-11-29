@@ -185,23 +185,23 @@
 			@include spacing-800(margin-bottom);
 		}
 
-		.swiper-container {
-			@include bp-xs {
-				width: calc(100vw - 2.4rem);
-			}
-			@include bp-s {
-				width: calc(100vw - 6.4rem);
-			}
-			@include bp-m {
-				width: calc(100vw - 6.4rem);
-			}
-			@include bp-l {
-				width: calc(100vw - 9.6rem);
-			}
-			@include bp-xl {
-				width: calc(100vw - 9.6rem);
-			}
-		}
+		// .swiper-container {
+		// 	@include bp-xs {
+		// 		width: calc(100vw - 2.4rem);
+		// 	}
+		// 	@include bp-s {
+		// 		width: calc(100vw - 6.4rem);
+		// 	}
+		// 	@include bp-m {
+		// 		width: calc(100vw - 6.4rem);
+		// 	}
+		// 	@include bp-l {
+		// 		width: calc(100vw - 9.6rem);
+		// 	}
+		// 	@include bp-xl {
+		// 		width: calc(100vw - 9.6rem);
+		// 	}
+		// }
 	}
 
 	.design {
@@ -217,23 +217,23 @@
 			}
 		}
 
-		.slider-containter {
-			&__left {
-				@include bp-xs() {
-					grid-auto-flow: dense;
-				}
+		// .slider-containter {
+		// 	&__left {
+		// 		@include bp-xs() {
+		// 			grid-auto-flow: dense;
+		// 		}
 
-				.description {
-					@include bp-xs() {
-						grid-row: 1;
-					}
-				}
-			}
-		}
+		// 		.description {
+		// 			@include bp-xs() {
+		// 				grid-row: 1;
+		// 			}
+		// 		}
+		// 	}
+		// }
 
-		.swiper-container {
-			margin-left: 0;
-		}
+		// .swiper-container {
+		// 	margin-left: 0;
+		// }
 
 		.description {
 			margin-top: 6vw;
@@ -433,27 +433,27 @@
 		}
 	}
 
-	.slider {
-		p {
-			grid-column-end: span 7;
+	// .slider {
+	// 	p {
+	// 		grid-column-end: span 7;
 
-			@include bp-xs() {
-				grid-column-end: span 12;
-			}
-		}
+	// 		@include bp-xs() {
+	// 			grid-column-end: span 12;
+	// 		}
+	// 	}
 
-		.swiper-slide {
-			margin-top: 6vw;
+	// 	.swiper-slide {
+	// 		margin-top: 6vw;
 
-			p {
-				margin: 1rem 0;
+	// 		p {
+	// 			margin: 1rem 0;
 
-				span {
-					font-family: $font-sans-serif-semibold;
-				}
-			}
-		}
-	}
+	// 			span {
+	// 				font-family: $font-sans-serif-semibold;
+	// 			}
+	// 		}
+	// 	}
+	// }
 
 	.quote {
 		@include spacing-900(margin);

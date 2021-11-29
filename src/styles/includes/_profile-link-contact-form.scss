@@ -148,12 +148,7 @@
 	}
 
 	&__forwardButton {
-		@include button-animation();
-
-		padding: $spacing--200 0;
 		width: 20rem;
-		border-radius: 2.4rem;
-
 		@include bp-s-and-lower {
 			background-color: $color-primary--gray;
 			color: $color-primary--white;
@@ -186,11 +181,9 @@
 	}
 
 	&__sendProfileButton {
-		@include button-animation();
-
-		padding: $spacing--200 0;
-		margin-top: 2rem;
 		width: 20rem;
+		padding: $spacing--200;
+		margin-top: 2rem;
 		border-radius: 2.4rem;
 
 		@include bp-s-and-lower {
@@ -198,14 +191,13 @@
 			color: $color-primary--white;
 		}
 
+		&:enabled {
+			@include button-animation();
+		}
+
 		&:disabled {
 			color: $color-primary--light-gray;
-
-			&:hover {
-				transform: none;
-				transition: none;
-				letter-spacing: none;
-			}
+			cursor: initial;
 		}
 	}
 }

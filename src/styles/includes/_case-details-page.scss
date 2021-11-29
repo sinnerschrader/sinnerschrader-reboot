@@ -185,23 +185,23 @@
 			@include spacing-800(margin-bottom);
 		}
 
-		// .swiper-container {
-		// 	@include bp-xs {
-		// 		width: calc(100vw - 2.4rem);
-		// 	}
-		// 	@include bp-s {
-		// 		width: calc(100vw - 6.4rem);
-		// 	}
-		// 	@include bp-m {
-		// 		width: calc(100vw - 6.4rem);
-		// 	}
-		// 	@include bp-l {
-		// 		width: calc(100vw - 9.6rem);
-		// 	}
-		// 	@include bp-xl {
-		// 		width: calc(100vw - 9.6rem);
-		// 	}
-		// }
+		.swiper-container {
+			@include bp-xs {
+				width: calc(100vw - 2.4rem);
+			}
+			@include bp-s {
+				width: calc(100vw - 6.4rem);
+			}
+			@include bp-m {
+				width: calc(100vw - 6.4rem);
+			}
+			@include bp-l {
+				width: calc(100vw - 9.6rem);
+			}
+			@include bp-xl {
+				width: calc(100vw - 9.6rem);
+			}
+		}
 	}
 
 	.design {
@@ -217,19 +217,19 @@
 			}
 		}
 
-		// .slider-containter {
-		// 	&__left {
-		// 		@include bp-xs() {
-		// 			grid-auto-flow: dense;
-		// 		}
+		.slider-containter {
+			&__left {
+				@include bp-xs() {
+					grid-auto-flow: dense;
+				}
 
-		// 		.description {
-		// 			@include bp-xs() {
-		// 				grid-row: 1;
-		// 			}
-		// 		}
-		// 	}
-		// }
+				.description {
+					@include bp-xs() {
+						grid-row: 1;
+					}
+				}
+			}
+		}
 
 		// .swiper-container {
 		// 	margin-left: 0;

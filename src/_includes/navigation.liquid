@@ -1,16 +1,9 @@
 <header class="nav" data-js-item="navigation" data-js-option="{{ colorModifier }}">
 	<div class="nav__container grid">
 		<div class="nav__logo col-2">
-			<a class="nav__logo--sinnerschrader" href="/">
-				{{ data.navigation.logo.top }}
+			<a href="/" >
+				{% include sinnerschrader-header-logo %}
 			</a>
-			<p class="nav__logo--accenture">
-				{{ data.navigation.logo.bottom.start }}
-				<span class="nav__logo--accenture-bold">
-					{{ data.navigation.logo.bottom.middle }}
-				</span>
-				{{ data.navigation.logo.bottom.end }}
-			</p>
 		</div>
 		<nav class="nav__wrapper col-10" aria-label="{{ data.navigation.ariaLabel }}">
 			<ul class="nav__list">
@@ -95,4 +88,5 @@
 			</div>
 		</nav>
 	</div>
+	{% include notification, notificationId: "link-saved-notification" text: "Link saved" userClosable: true %}
 </header>

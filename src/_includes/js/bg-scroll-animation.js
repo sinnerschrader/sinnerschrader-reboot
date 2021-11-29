@@ -67,8 +67,10 @@ class BackgroundScrollAnimation {
 		if (!el) return;
 
 		let offsetBetweenCircleAndContainer = isCircle ? (el.height / 2) * Math.sqrt(2) - el.height / 2 : 0;
-		let elHeight = el.offsetHeight;
-		let elWidth = el.offsetWidth;
+		let elOffsetHeight = el.offsetHeight;
+		let elOffsetWidth = el.offsetWidth;
+		const elHeight = el.height || 0;
+		const elWidth = el.width || 0;
 		let bounding = el.getBoundingClientRect();
 		let windowHeight;
 		let windowWidth;
@@ -82,10 +84,10 @@ class BackgroundScrollAnimation {
 		}
 
 		return (
-			bounding.top >= -el.height - offsetBetweenCircleAndContainer &&
-			bounding.left >= -el.width - offsetBetweenCircleAndContainer &&
-			bounding.right <= windowWidth + elWidth - offsetBetweenCircleAndContainer &&
-			bounding.bottom <= windowHeight + elHeight + offsetBetweenCircleAndContainer
+			bounding.top >= -elHeight - offsetBetweenCircleAndContainer &&
+			bounding.left >= -elWidth - offsetBetweenCircleAndContainer &&
+			bounding.right <= windowWidth + elOffsetWidth - offsetBetweenCircleAndContainer &&
+			bounding.bottom <= windowHeight + elOffsetHeight + offsetBetweenCircleAndContainer
 		);
 	}
 

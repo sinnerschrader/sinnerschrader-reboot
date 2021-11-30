@@ -1,9 +1,11 @@
 .profile-link-contact-form {
-	position: relative;
-	display: flex;
-	flex-direction: row;
-	height: 100%;
 	overflow: hidden;
+
+	&__layout {
+		display: grid;
+		grid-auto-columns: minmax(0, 1fr);
+		grid-auto-flow: column;
+	}
 
 	.is-dark & {
 		background: $color-primary--white;
@@ -17,11 +19,11 @@
 
 	&__first-page {
 		box-sizing: border-box;
-		flex-shrink: 0;
-		width: 100%;
+		width: fit-content;
+		min-width: min-content;
 		padding: $spacing--600;
-		transition: opacity 500ms ease, transform 500ms ease;
 		transform: translateX(-100%);
+		transition: opacity 500ms ease, transform 500ms ease;
 
 		@include bp-s-and-lower {
 			padding: $spacing--600 $spacing--600 0 0;
@@ -34,10 +36,9 @@
 
 	&__second-page {
 		box-sizing: border-box;
-		flex-shrink: 0;
-		width: 100%;
+		width: fit-content;
+		min-width: min-content;
 		padding: $spacing--600;
-		transform: translateX(0);
 		transition: opacity 500ms ease, transform 500ms ease;
 
 		@include bp-s-and-lower {
@@ -46,6 +47,38 @@
 
 		&.active {
 			transform: translateX(-100%);
+		}
+
+		.form {
+			@include bp-m-and-above {
+				&__field {
+					.is-dark & {
+						/* is dark is active, but element is placed on white background */
+						border-bottom: 1px solid $color-primary--black;
+					}
+				}
+			}
+
+			&__group {
+				@include spacing-200(margin-bottom);
+			}
+
+			&__subline {
+				@include paragraph-200();
+			}
+
+			&__checkbox {
+				align-items: center;
+
+				@include bp-m-and-above {
+					input {
+						.is-dark & {
+							/* is dark is active, but element is placed on white background */
+							border-color: $color-primary--black;
+						}
+					}
+				}
+			}
 		}
 	}
 
@@ -115,12 +148,7 @@
 	}
 
 	&__forwardButton {
-		@include button-animation();
-
-		padding: $spacing--200 0;
 		width: 20rem;
-		border-radius: 2.4rem;
-
 		@include bp-s-and-lower {
 			background-color: $color-primary--gray;
 			color: $color-primary--white;
@@ -133,6 +161,7 @@
 		border: 0;
 		background-color: transparent;
 		margin-bottom: $spacing--400;
+		cursor: pointer;
 
 		&:hover {
 			transform: rotate(180deg) scale(0.95);
@@ -148,6 +177,27 @@
 			@include bp-s-and-lower {
 				filter: invert(1);
 			}
+		}
+	}
+
+	&__sendProfileButton {
+		width: 20rem;
+		padding: $spacing--200;
+		margin-top: 2rem;
+		border-radius: 2.4rem;
+
+		@include bp-s-and-lower {
+			background-color: $color-primary--gray;
+			color: $color-primary--white;
+		}
+
+		&:enabled {
+			@include button-animation();
+		}
+
+		&:disabled {
+			color: $color-primary--light-gray;
+			cursor: initial;
 		}
 	}
 }

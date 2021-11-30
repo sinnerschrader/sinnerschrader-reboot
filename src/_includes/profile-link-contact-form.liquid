@@ -1,30 +1,43 @@
 <div class="profile-link-contact-form">
-    <div class="profile-link-contact-form__first-page active" data-js-item="profile-link-contact-form-content">
-        <h3 class="profile-link-contact-form__headline">Get on the talent
-            <span class="profile-link-contact-form__headline--serif">rad</span><span class="profile-link-contact-form__headline--serif-italic">ar</span>
-        </h3>
-        <p class="profile-link-contact-form__copy">You think you might be a good fit for SinnerSchrader? <br>Just drop us a link to one of your profiles - if it's a match,
-        we'll reach out to you.</p>
-        <button class="button profile-link-contact-form__forwardButton" data-js-atom="profile-link-contact-form-forward">
-            <span class="button__text">
-            Leave your profile
-            </span>
-        </button>
-    </div>
-    <div class="profile-link-contact-form__second-page" data-js-item="profile-link-contact-form-content-hidden">
-        <button class="profile-link-contact-form__backwardButton" data-js-atom="profile-link-contact-form-backward">
-            <img src="/assets/svg/Arrow-L.svg" alt="" class="profile-link-contact-form__backwardButton--svg">
-        </button>
-        <input type="text" class="profile-link-contact-form__profileInput" placeholder="e.g. github, gitlab, linkedIn, Xing, portfolio">
-        <div class="profile-link-contact-form__dataCollector">
-            <input type="checkbox" ></input>
-            <p class="profile-link-contact-form__copy profile-link-contact-form__dataText">yeah, go screen my skills!</p>
-        </div>
-        <p class="profile-link-contact-form__copy">We're keeping your personal details secure and don't share it with 3rd parties of course. Find out more in our <a href="./data-policy.html" class="profile-link-contact-form__copy"><b>privacy policy</b>.</a></p>
-        <button class="button button--small profile-link-contact-form__forwardButton" data-js-atom="profile-link-contact-form-backward">
-            <span class="button__text">
-                Send profile
-            </span>
-        </button>
-    </div>
+	<div class="profile-link-contact-form__layout">
+		<div class="profile-link-contact-form__first-page active" data-js-item="profile-link-contact-form-content">
+			<h3 class="profile-link-contact-form__headline">
+				Get on the talent <span class="profile-link-contact-form__headline--serif">rad</span
+				><span class="profile-link-contact-form__headline--serif-italic">ar</span>
+			</h3>
+			<p class="profile-link-contact-form__copy">
+				You think you might be a good fit for SinnerSchrader? <br />Just drop us a link to one of your profiles - if it's a match, we'll
+				reach out to you.
+			</p>
+			<button class="button button--large profile-link-contact-form__forwardButton" data-js-atom="profile-link-contact-form-forward">
+				<span class="button__text"> Leave your profile </span>
+			</button>
+		</div>
+		<div class="profile-link-contact-form__second-page" data-js-item="profile-link-contact-form-content-hidden">
+			<button class="profile-link-contact-form__backwardButton" data-js-atom="profile-link-contact-form-backward">
+				<img src="/assets/svg/Arrow-L.svg" alt="" class="profile-link-contact-form__backwardButton--svg" />
+			</button>
+			<form class="form">
+				<label for="profileLink" class="form__group">
+					<span class="form__label">Your Profile Link <span class="form__required">(required)</span></span>
+					<input type="url" id="profileLink" class="form__field" required />
+					<span class="form__subline"> e.g. github, gitlab, linkedIn, Xing, portfolio </span>
+				</label>
+
+				<label for="privacy" class="form__group form__checkbox">
+					<input type="checkbox" id="privacy" required />
+					<span> yeah, go screen my skills </span>
+				</label>
+
+				<p class="profile-link-contact-form__copy">
+					We're keeping your personal details secure and don't share it with 3rd parties of course. Find out more in our
+					<a href="./data-policy.html" class="profile-link-contact-form__copy"><b>privacy policy</b>.</a>
+				</p>
+				<div class="active" data-js-atom="profile-link-contact-form-captcha-container"></div>
+				<button class="button profile-link-contact-form__sendProfileButton" type="submit" disabled>
+					<span class="button__text"> Send profile </span>
+				</button>
+			</form>
+		</div>
+	</div>
 </div>

@@ -1,4 +1,8 @@
 customHeaders:
+  - pattern: '/assets/*'
+    headers:
+      - key: 'Cache-Control'
+        value: 's-maxage=86400'
   - pattern: "/*"
     headers:
       - key: "X-Made-With"

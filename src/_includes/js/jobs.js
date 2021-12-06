@@ -31,8 +31,9 @@ export class FilterList {
 		}
 
 		// apply Eventlisteners
-		this.bindListeners();
 		this.createFilters();
+		this.setInitialFiltersFromQueryParams();
+		this.bindListeners();
 		this.detectScrollPositionOfFilterBar();
 	}
 
@@ -45,15 +46,18 @@ export class FilterList {
 				const filter = evt.target.getAttribute("name");
 				// filter value
 				const value = evt.target.getAttribute("value");
+
 				if (evt.target.checked) {
 					// adds filter value
 					this.filters[filter].push(value);
 					evt.target.parentElement.classList.add("is-active");
+					this.addFilterToQueryParam(filter, value);
 				} else {
 					// removes filter value
 					const index = this.filters[filter].indexOf(value);
 					this.filters[filter].splice(index, 1);
 					evt.target.parentElement.classList.remove("is-active");
+					this.removeFilterFromQueryParam(filter, value);
 				}
 
 				this.updateActiveFilterTags();
@@ -123,6 +127,40 @@ export class FilterList {
 			window.addEventListener("resize", mobileHeight);
 			mobileHeight();
 		}
+	}
+
+	setInitialFiltersFromQueryParams() {
+		const jobFiltersFromUrlParams = this.getJobFiltersFromURLParams();
+
+		this.controls.querySelectorAll('input[type="checkbox"]').forEach((checkbox) => {
+			const filter = checkbox.getAttribute("name");
+			const value = checkbox.getAttribute("value");
+
+			if (jobFiltersFromUrlParams[filter].includes(value)) {
+				checkbox.checked = true;
+				checkbox.parentElement.classList.add("is-active");
+				this.filters[filter].push(value);
+			}
+		});
+
+		this.updateActiveFilterTags();
+		this.updateList();
+	}
+
+	removeFilterFromQueryParam(filter, value) {
+		const jobFiltersFromUrlParams = this.getJobFiltersFromURLParams();
+
+		jobFiltersFromUrlParams[filter] = jobFiltersFromUrlParams[filter].filter((filterItem) => filterItem !== value);
+
+		this.setURLParamsForJobFilter(jobFiltersFromUrlParams);
+	}
+
+	addFilterToQueryParam(filter, value) {
+		const jobFiltersFromUrlParams = this.getJobFiltersFromURLParams();
+
+		jobFiltersFromUrlParams[filter] = [...jobFiltersFromUrlParams[filter], value];
+
+		this.setURLParamsForJobFilter(jobFiltersFromUrlParams);
 	}
 
 	// Detect scroll position of filter bar for mobile floater button appearence
@@ -280,5 +318,47 @@ export class FilterList {
 		} else {
 			emptyStateMessage.classList.add(this.hiddenClass);
 		}
+	}
+
+	getJobFiltersFromURLParams() {
+		const url = new URL(window.location.href);
+		const params = new URLSearchParams(url.search);
+
+		const disciplineParam = params.get("discipline");
+		const locationParam = params.get("location");
+
+		const discipline = disciplineParam ? disciplineParam.split(",") : [];
+		const location = locationParam ? locationParam.split(",") : [];
+
+		return { discipline, location };
+	}
+
+	setURLParamsForJobFilter(newFilters) {
+		const url = new URL(window.location.href);
+		const { discipline, location } = newFilters;
+
+		if (discipline.length) {
+			url.searchParams.set("discipline", discipline.join(","));
+		} else {
+			url.searchParams.delete("discipline");
+		}
+
+		if (location.length) {
+			url.searchParams.set("location", location.join(","));
+		} else {
+			url.searchParams.delete("location");
+		}
+
+		history.pushState({}, "", url);
+	}
+
+	resetURLParams() {
+		let url = new URL(window.location.href);
+		let params = new URLSearchParams(url.search);
+
+		url.searchParams.delete(params);
+		history.pushState({}, "", url);
+
+		console.log(params);
 	}
 }

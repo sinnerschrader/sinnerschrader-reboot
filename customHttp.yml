@@ -1,5 +1,5 @@
 customHeaders:
-  - pattern: '/assets/*'
+  - pattern: 'assets/**'
     headers:
       - key: 'Cache-Control'
         value: 's-maxage=86400'

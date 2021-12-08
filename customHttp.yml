@@ -2,7 +2,7 @@ customHeaders:
   - pattern: '/assets/**'
     headers:
       - key: 'Cache-Control'
-        value: 's-maxage=86400'
+        value: 'public, max-age=86400, s-maxage=86400'
   - pattern: "/*"
     headers:
       - key: "X-Made-With"

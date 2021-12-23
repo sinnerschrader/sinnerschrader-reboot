@@ -12,18 +12,54 @@ dataJsItem: bg-scroll-animation
 {% include navigation, data: global %}
 
 <main class="news-details-page">
-	<section class="fade-bg-black">
-        {{ article.date }}
-        {{ article.data.title }}
-        {{ article.data.plainHeadlineText }}
-        {{ article.data.italicHeadlineText }}
-        {{ article.data.image }}
-        {{ article.data.altText }}
-        <p>{{ article.data.introText }}</p>
-        <p>{{ article.data.articleText }}</p>
+    {% assign newsByDate = collections.news | date | reverse %}
+
+	<section class="fade-bg-black news-details-page__title">
+		<div class="image-teaser">
+			<picture class="image-teaser__picture">
+				<img loading="lazy" src="{{ article.data.image }}"
+					alt="{{ article.data.altText }}"/>
+			</picture>
+			<div class="content-box">
+				<div class="title">
+					<h3>{{ article.data.title }}</h3>
+				</div>
+			</div>
+		</div>
 	</section>
 
-	<section>
+	<section class="news-details-page__article">
+		<div class="grid">
+			<div class="col-5 col-12-xs introText">
+				<p>{{ article.data.introText }}</p>
+			</div>
+			<div class="col-7 col-12-xs articleText">
+				<p>{{ article.data.articleText }}</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="news-details-page__popular-news grid">
+        <div class="popular-news ">
+		{% for article in newsByDate limit: 3 %}
+			<div class="news-item">
+				<div class="square-container">
+  					<div class="square">
+    					<div class="content">
+							<img alt="{{ article.data.altText }}" class="banner-image"
+								loading="lazy" src="{{ article.data.image }}">
+    					</div>
+  					</div>
+				</div>
+				<a href="/news/{{ article.data.title | slug }}.html">
+					<p>{{ article.data.title }}</p>
+				</a>
+			</div>
+		{% endfor %}
+		</div>
+	</section>
+
+	<section class="fade-bg-black">
 		{% include section-header, title: "Here we are", number: "06", type: "medium" %}
 		{% include locations %}
 	</section>

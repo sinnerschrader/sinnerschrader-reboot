@@ -45,23 +45,19 @@ dataJsItem: bg-scroll-animation
 		</div>
 	</section>
 
-	<section class="news-details-page__popular-news grid">
-        <div class="popular-news ">
-		{% for article in newsByDate limit: 3 %}
-			<div class="news-item">
-				<div class="square-container">
-  					<div class="square">
-    					<div class="content">
-							<img alt="{{ article.data.altText }}" class="banner-image"
+	<section class="list">
+        <div class="grid">
+			{% for article in newsByDate limit: 3 %}
+				<div class="list__item col-4 col-6-s col-6-xs">
+					<a class="list__anchor" href="/news/{{ article.data.title | slug }}-{{ article.data.location | slug }}.html">
+						<div class="list__image-wrapper">
+							<img alt="{{ article.data.title }}" class="news-item-image"
 								loading="lazy" src="{{ article.data.image }}">
-    					</div>
-  					</div>
+						</div>
+						<div class="list__item-title">{{ article.data.title }}</div>
+					</a>
 				</div>
-				<a href="/news/{{ article.data.title | slug }}.html">
-					<p>{{ article.data.title }}</p>
-				</a>
-			</div>
-		{% endfor %}
+			{% endfor %}
 		</div>
 	</section>
 

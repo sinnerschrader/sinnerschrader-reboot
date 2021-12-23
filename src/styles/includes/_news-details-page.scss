@@ -41,7 +41,7 @@
 	}
 
 	&__article {
-		margin-bottom: 20rem;
+		margin-bottom: 10rem;
 
 		.introText {
 			p {
@@ -68,82 +68,52 @@
 		}
 	}
 
-	&__popular-news {
-		.popular-news {
-			grid-column-gap: 20px;
-			display: grid;
-			grid-template-columns: 1fr 1fr 1fr;
-			position: relative;
-			z-index: 4;
+	.list {
+		&__item {
+			padding-right: 10vw;
+			border-bottom: 0;
 
 			@include bp-s-and-lower {
-				grid-template-columns: 1fr 1fr;
-			}
-
-			.news-item {
-				@include default-animation(transform);
-
-				position: relative;
-				transform: scale(1);
-
-				@include bp-s-and-lower {
-					&:last-of-type {
-						display: none;
-					}
-				}
-
-				.square-container {
-					display: flex;
-					flex-wrap: wrap;
-				}
-
-				.square {
-					position: relative;
-					flex-basis: 100%;
-					margin: 5px;
-					border: 1px solid;
-					box-sizing: border-box;
-				}
-
-				.square::before {
-					content: "";
-					display: block;
-					padding-top: 100%;
-				}
-
-				.square .content {
-					position: absolute;
-					top: 0;
-					left: 0;
-					height: 100%;
-					width: 100%;
-					overflow: hidden;
-					display: flex;
-					justify-content: center;
-					align-items: center;
-				}
-
-				&:hover {
-					transform: scale(1.1);
-				}
-
-				img {
-					height: 100%;
-				}
-
-				p {
-					margin: 0;
-					padding-right: 32px;
-
-					@include bp-l {
-						@include subheadline-200();
-					}
-
-					@include bp-xl {
-						@include subheadline-200();
-					}
+				&:last-of-type {
+					display: none;
 				}
 			}
+
+			&-title {
+				font-family: $font-sans-serif-light;
+				@include bp-xs {
+					font-size: 1.8rem;
+				}
+				@include bp-tablet {
+					font-size: 2.4rem;
+				}
+				@include bp-l {
+					font-size: 2.4rem;
+				}
+				@include bp-xl {
+					font-size: 3.2rem;
+				}
+			}
+		}
+
+		&__image-wrapper {
+			position: relative;
+			overflow: hidden;
+			margin-bottom: 2vw;
+
+			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+			}
+		}
+
+		&__image-wrapper::before {
+			content: "";
+			display: block;
+			width: 100%;
+			padding-top: 100%;
 		}
 	}
 

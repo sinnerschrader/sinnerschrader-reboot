@@ -9,6 +9,7 @@ import { OfferingHeader } from "./offering-header";
 import { Offerings } from "./offerings";
 import { Parallax } from "./parallax";
 import { ProfileLinkContactForm } from "./profile-link-contact-form";
+import { ShareButtons } from "./share-buttons";
 import { Slider } from "./slider.js";
 import { Video } from "./video.js";
 
@@ -57,11 +58,11 @@ import { Video } from "./video.js";
 		new Navigation();
 	}
 
-	if (isModuleNeeded("filter-jobs-list")) {
+	if (isModuleNeeded("job-filter-list")) {
 		new FilterList({
 			parentSelector: "#js-filter-list",
-			controlsSelector: "#js-filter-bar",
-			listSelector: "#js-listing",
+			controlsSelector: "#js-job-filter-bar",
+			listSelector: "#js-job-listing",
 			liveUpdate: true,
 		});
 	}
@@ -74,6 +75,10 @@ import { Video } from "./video.js";
 			liveUpdate: true,
 			visibilityLimit: 9,
 		});
+	}
+
+	if (isModuleNeeded("share-buttons")) {
+		new ShareButtons();
 	}
 
 	new Parallax();

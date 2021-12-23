@@ -5,7 +5,7 @@ pagination:
   data: collections.news
   size: 1
   alias: article
-permalink: "news/{{ article.data.title | slug }}.html"
+permalink: "news/{{ article.data.title | slug }}-{{ article.data.location | slug }}.html"
 bodyClass: is-bg-scroll
 dataJsItem: bg-scroll-animation
 ---
@@ -25,6 +25,12 @@ dataJsItem: bg-scroll-animation
 					<h3>{{ article.data.title }}</h3>
 				</div>
 			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="grid">
+			{% include share-buttons, derection:"row" title:"" link:true facebook:true twitter:true devTo:true xing:true linkedIn:true %}
 		</div>
 	</section>
 

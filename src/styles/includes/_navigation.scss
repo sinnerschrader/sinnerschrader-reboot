@@ -59,8 +59,8 @@
 		background-color: $color-primary--black;
 	}
 
-	.nav__logo--sinnerschrader {
-		color: $color-primary--black;
+	svg {
+		fill: $color-primary--black;
 	}
 
 	&.is-text-dark {
@@ -76,8 +76,8 @@
 			background-color: $color-primary--black;
 		}
 
-		.nav__logo--sinnerschrader {
-			color: $color-primary--black;
+		svg {
+			fill: $color-primary--black;
 		}
 	}
 
@@ -94,8 +94,8 @@
 			background-color: $color-primary--white;
 		}
 
-		.nav__logo--sinnerschrader {
-			color: $color-primary--white;
+		svg {
+			fill: $color-primary--white;
 		}
 	}
 
@@ -145,8 +145,8 @@
 			right: 0.6rem;
 		}
 
-		.nav__logo--sinnerschrader {
-			color: $color-primary--white;
+		svg {
+			fill: $color-primary--white;
 		}
 
 		.nav__container {
@@ -178,8 +178,8 @@
 			background-color: $color-primary--white;
 		}
 
-		.nav__logo--sinnerschrader {
-			color: $color-primary--white;
+		svg {
+			fill: $color-primary--white;
 		}
 	}
 
@@ -199,33 +199,8 @@
 
 	&__logo {
 		position: relative;
-		margin: auto 0;
+		margin: 4.3rem 0 0;
 		text-transform: uppercase;
-
-		&--sinnerschrader {
-			@include interactive-100();
-
-			color: $color-primary--black;
-			margin: 0;
-			position: relative;
-
-			.is-dark & {
-				color: $color-primary--white;
-			}
-		}
-
-		&--accenture {
-			font-family: $font-sans-serif-light;
-			font-size: 0.8rem;
-			margin: 0;
-			text-transform: none;
-			position: absolute;
-			min-width: 200px;
-		}
-
-		&--accenture-bold {
-			font-family: $font-sans-serif-semibold;
-		}
 	}
 
 	&__mobile-toggle {

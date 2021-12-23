@@ -104,6 +104,10 @@ collections:
         options:
           - { label: "Vicky", value: "vicky" }
 
+      - label: "Workday URL"
+        name: "workdayLink"
+        widget: "string"
+
       - label: "Description"
         name: "description"
         widget: "text"

@@ -25,10 +25,9 @@ renderData: filterbar
 		</div>
 	</section>
 	<section class="fade-bg-black">
-		{% capture imageTeaserContent %}
-		{% include profile-link-contact-form %}
-		{% endcapture %}
-		{% include image-teaser, data: careers, content: imageTeaserContent %}</section>
+		{% capture imageTeaserContent %} {% include profile-link-contact-form %} {% endcapture %} {% include image-teaser, data: careers,
+		content: imageTeaserContent %}
+	</section>
 	<section class="fade-bg-black jobs-page--offering">
 		{% include section-header, title: "Perks @ s2", number: "01" %}
 		<div class="grid">
@@ -37,21 +36,113 @@ renderData: filterbar
 		{% include offering-list-emoji, data: components %}
 	</section>
 	<div class="openings"></div>
-	<section id="js-filter-list" class="filter-list">{% include filter-container, filterListClass: "filter-jobs-list" %}</section>
-    <!-- Categories in the listing -->
-    <section id="js-listing" class="list">
-        <!-- Filter out items for each discipline -->
-        {% assign creativeItems = collections.jobs | groupByDiscipline: 'creative' %} {% assign techItems = collections.jobs |
-        groupByDiscipline: 'tech' %} {% assign managementItems = collections.jobs | groupByDiscipline: 'Account Management' %} {% assign
-        strategyItems = collections.jobs | groupByDiscipline: 'strategy' %}
+	<!-- Open / Close Filterbar MOBILE ONLY -->
+	<section id="js-filter-list" class="filter-list">
+		<form id="js-job-filter-bar" class="job-filter-bar" data-js-item="job-filter-list">
+			<!-- Mobile Filter Bar Floating– -->
+			<header id="js-mobile-filter-header" class="job-filter-bar__mobile-header job-filter-bar__mobile-header--floatable">
+				<p class="job-filter-bar__mobile-legend">
+					Filter <br />
+					<small class="mobile-active-filters">All</small>
+				</p>
+				<!-- Open / Close Filterbar MOBILE ONLY -->
+				<div class="job-filter-bar__toggle">
+					<button
+						class="toggle-button js-toggle-filter-bar--mobile"
+						aria-label="{{ careers.filter.ariaLabelFilterToggle }}"
+						aria-haspopup="true"
+						aria-controls="js-job-filter-bar"
+						aria-expanded="false"
+					>
+						<img src="/assets/svg/Chevron-down-S.svg" />
+					</button>
+				</div>
+			</header>
 
-        <!-- Render their dedicated lists -->
-        {% include filter-list-category, entityName: "jobs", discipline: 'Account Manage&shy;ment', items: managementItems %} {% include filter-list-category, entityName: "jobs",
-        discipline: 'Creative', items: creativeItems %} {% include filter-list-category, entityName: "jobs", discipline: 'Strategy', items: strategyItems %} {%
-        include filter-list-category, entityName: "jobs", discipline: 'Tech', items: techItems %}
-    </section>
+			<div class="grid job-filter-wrapper">
+				<!-- This is the mobile header in the Flyout -->
+				<header class="job-filter-bar__mobile-header">
+					<p class="job-filter-bar__mobile-legend">
+						Filter <br />
+						<small class="mobile-active-filters">All</small>
+					</p>
 
-    <section>{% include section-header, title: "Here we are", number: "06", type: "medium" %} {% include locations %}</section>
+					<!-- Open / Close Filterbar MOBILE ONLY -->
+					<div class="job-filter-bar__toggle">
+						<button
+							class="toggle-button js-toggle-filter-bar--mobile"
+							aria-label="{{ careers.filter.ariaLabelFilterToggle }}"
+							aria-haspopup="true"
+							aria-controls="js-job-filter-bar"
+							aria-expanded="false"
+							tabindex="-1"
+						>
+							<img src="/assets/svg/Close-S.svg" />
+						</button>
+					</div>
+				</header>
+
+				<!-- Open / Close Filterbar -->
+				<div class="job-filter-bar__toggle col-1 col-start-12 hidden-xs">
+					<button
+						id="js-toggle-filter-bar"
+						class="toggle-button toggle-button--jobs"
+						aria-label="{{ careers.filter.ariaLabelFilterToggle }}"
+						aria-haspopup="true"
+						aria-controls="js-job-filter-bar"
+						aria-expanded="false"
+					>
+						<img src="/assets/svg/Chevron-down-S.svg" />
+					</button>
+				</div>
+
+				<!-- Builds the Filtergroups in the Filterbar -->
+				{% for filter in filterbar.filters %} {% include job-filter-group, filter: filter %} {% endfor %}
+
+				<!-- Clear filters / Apply Filters -->
+				<div class="job-filter-bar__confirm-group col-12-xs col-start-1-xs col-6-s col-start-8-s col-4 col-start-9">
+					<button class="button button--clear" id="js-clear-filter" tabindex="-1">Clear All</button>
+					<button class="button button--apply" id="js-apply-filter" tabindex="-1">Apply</button>
+				</div>
+			</div>
+		</form>
+
+		<!-- Filter Container Floating Bubble / Appears when filterbar is out of sight -->
+		<div id="js-mobile-floater" class="mobile-floater visible-xs">
+			<button
+				class="toggle-button js-toggle-filter-bar--mobile"
+				aria-label="{{ careers.filter.ariaLabelFilterToggle }}"
+				aria-haspopup="true"
+				aria-controls="js-job-filter-bar"
+				aria-expanded="false"
+				tabindex="-1"
+			>
+				<img src="/assets/svg/Filter-L.svg" />
+			</button>
+		</div>
+
+		<!-- Categories in the listing -->
+		<section id="js-job-listing" class="job-list">
+			<!-- Filter out jobs for each discipline -->
+			{% assign creativeJobs = collections.jobs | groupByDiscipline: 'creative' %} {% assign techJobs = collections.jobs |
+			groupByDiscipline: 'tech' %} {% assign managementJobs = collections.jobs | groupByDiscipline: 'Account Management' %} {% assign
+			strategyJobs = collections.jobs | groupByDiscipline: 'strategy' %}
+
+			<!-- Render their dedicated lists -->
+			{% include job-filter-list-category, discipline: 'Account Manage&shy;ment', jobs: managementJobs %} {% include
+			job-filter-list-category, discipline: 'Creative', jobs: creativeJobs %} {% include job-filter-list-category, discipline: 'Strategy',
+			jobs: strategyJobs %} {% include job-filter-list-category, discipline: 'Tech', jobs: techJobs %}
+			<div class="grid">
+				<h1 class="job-list__empty-state col-12-xs col-7 hidden">
+					No open vacancies.<br />
+					We hired all possible people, but might happen the we forgot about you!
+					<br />
+					Let's stay in touch.
+				</h1>
+			</div>
+		</section>
+	</section>
+	<section>{% include section-header, title: "Here we are", number: "06", type: "medium" %} {% include locations %}</section>
 </main>
 
 {% include footer, data: global %}

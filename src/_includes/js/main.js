@@ -8,7 +8,7 @@ import { Navigation } from "./navigation";
 import { OfferingHeader } from "./offering-header";
 import { Offerings } from "./offerings";
 import { Parallax } from "./parallax";
-import { InteractiveContent } from "./interactive-content";
+import { ProfileLinkContactForm } from "./profile-link-contact-form";
 import { ShareButtons } from "./share-buttons";
 import { Slider } from "./slider.js";
 import { Video } from "./video.js";
@@ -55,7 +55,7 @@ import { Video } from "./video.js";
 	}
 
 	if (isModuleNeeded("profile-link-contact-form-content")) {
-		new InteractiveContent("profile-link-contact-form");
+		new ProfileLinkContactForm();
 	}
 
 	if (isModuleNeeded("navigation")) {

@@ -24,7 +24,7 @@ renderData: filterbar
 		{% capture imageTeaserContent %}
 		{% include teaser-interactive-container, data: collections.cases[0].data %}
 		{% endcapture %}
-        {% include image-teaser, data: collections.cases[0].data.info.image-teaser, content: imageTeaserContent %}
+        {% include image-teaser, data: collections.cases[0].data.info, content: imageTeaserContent %}
 	</section>
     <!-- Open / Close Filterbar MOBILE ONLY -->
     <section id="js-filter-list" class="filter-list">

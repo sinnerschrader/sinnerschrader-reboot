@@ -70,6 +70,16 @@
 				margin-top: 0;
 			}
 		}
+
+		&__aside {
+			position: sticky;
+			top: 0;
+			padding-top: 32px;
+
+			> a {
+				margin-top: 32px;
+			}
+		}
 	}
 
 	&__apply,

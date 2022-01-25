@@ -27,7 +27,7 @@ module.exports = (eleventyConfig) => {
 	eleventyConfig.setTemplateFormats(["md", "liquid", "njk"]);
 
 	eleventyConfig.addLiquidFilter("groupByDiscipline", function (items, discipline) {
-		return items.filter((it) => it.data.discipline.toLowerCase() === discipline.toLowerCase());
+		return items.filter((it) => it.data.industry.toLowerCase() === discipline.toLowerCase());
 	});
 
 	eleventyConfig.addTransform("async-transform-name", async (content, outputPath) => {

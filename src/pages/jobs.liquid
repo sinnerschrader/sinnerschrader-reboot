@@ -124,14 +124,28 @@ renderData: filterbar
 		<!-- Categories in the listing -->
 		<section id="js-job-listing" class="job-list">
 			<!-- Filter out jobs for each discipline -->
-			{% assign creativeJobs = collections.jobs | groupByDiscipline: 'creative' %} {% assign techJobs = collections.jobs |
-			groupByDiscipline: 'tech' %} {% assign managementJobs = collections.jobs | groupByDiscipline: 'Account Management' %} {% assign
-			strategyJobs = collections.jobs | groupByDiscipline: 'strategy' %}
+			{% assign creativeJobs = collections.jobs | groupByDiscipline: 'design' %}
+			{% assign portfolioDeliveryManagementJobs = collections.jobs | groupByDiscipline: 'portfolio & delivery management' %}
+			{% assign humanResourcesJobs = collections.jobs | groupByDiscipline: 'human resources' %}
+  			{% assign managementConsultingJobs = collections.jobs | groupByDiscipline: 'management consulting' %}
+  			{% assign analyticsAndInsightsJobs = collections.jobs | groupByDiscipline: 'analytics and insights' %}
+  			{% assign productServiceOfferingDevelopmentJobs = collections.jobs | groupByDiscipline: 'product service & offering development' %}
+  			{% assign workplaceManagementServiceSolutionsJobs = collections.jobs | groupByDiscipline: 'workplace management & service solutions' %}
+  			{% assign performanceRiskQualityJobs = collections.jobs | groupByDiscipline: 'performance risk & quality' %}
+  			{% assign softwareEngineeringJobs = collections.jobs | groupByDiscipline: 'software engineering' %}
 
 			<!-- Render their dedicated lists -->
-			{% include job-filter-list-category, discipline: 'Account Manage&shy;ment', jobs: managementJobs %} {% include
-			job-filter-list-category, discipline: 'Creative', jobs: creativeJobs %} {% include job-filter-list-category, discipline: 'Strategy',
-			jobs: strategyJobs %} {% include job-filter-list-category, discipline: 'Tech', jobs: techJobs %}
+			{% include job-filter-list-category, discipline: 'Design', jobs: creativeJobs %}
+			{% include job-filter-list-category, discipline: 'Portfolio & Delivery Management', jobs: portfolioDeliveryManagementJobs %}
+			{% include job-filter-list-category, discipline: 'Human Resources', jobs: humanResourcesJobs %}
+			{% include job-filter-list-category, discipline: 'Management Consulting', jobs: managementConsultingJobs %}
+			{% include job-filter-list-category, discipline: 'Analytics and Insights', jobs: analyticsAndInsightsJobs %}
+			{% include job-filter-list-category, discipline: 'Product Service & Offering Development', jobs: productServiceOfferingDevelopmentJobs %}
+			{% include job-filter-list-category, discipline: 'Workplace Management & Service Solutions', jobs: workplaceManagementServiceSolutionsJobs %}
+			{% include job-filter-list-category, discipline: 'Performance Risk & Quality', jobs: performanceRiskQualityJobs %}
+			{% include job-filter-list-category, discipline: 'Software Engineering', jobs: softwareEngineeringJobs %}
+
+
 			<div class="grid">
 				<h1 class="job-list__empty-state col-12-xs col-7 hidden">
 					No open vacancies.<br />

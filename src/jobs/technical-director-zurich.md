@@ -3,7 +3,7 @@ title: Technical Director
 location: zurich
 discipline: tech
 contact: vicky
-workdayLink: /
+workdayLink: ""
 description: >-
   SinnerSchrader Swipe is a studio for mobile product management, design and
   software engineering with offices in Hamburg, Berlin and Zurich. We develop

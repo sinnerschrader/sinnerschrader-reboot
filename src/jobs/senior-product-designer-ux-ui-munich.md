@@ -27,7 +27,7 @@ expectations:
   - "Implementation of UX/UI solutions: creation of information architecture,
     use cases, wireframes, layouts and prototypes"
   - Regular analysis and optimization of digital products and processes
-  - Functional responsibility and leadership of product designers (juniors and
+  - Technical responsibility and leadership of product designers (juniors and
     intermediates)
   - Facilitation of workshops and presentations
 requirements:

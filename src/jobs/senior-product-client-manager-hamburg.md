@@ -34,7 +34,7 @@ requirements:
   - Strong communication skills and team orientation
   - Structured, efficient way of working with a high degree of solution
     orientation
-  - Practical experience with agile methods is an advantage
+  - Practical experience with agile methods
   - Business fluent in German and English
 offers:
   - Exciting and innovative projects for well-known companies

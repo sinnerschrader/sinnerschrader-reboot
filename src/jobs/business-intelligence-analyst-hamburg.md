@@ -40,6 +40,7 @@ requirements:
   - Ideally, you have already accompanied the introduction of an ERP system
   - Service orientation, flexibility and team spirit
   - Hands on mentality
+  - Business fluent in German and/or English
 offers:
   - Exciting and innovative projects for well-known companies
   - Varied tasks and space for personal responsibility

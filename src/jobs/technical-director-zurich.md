@@ -1,6 +1,6 @@
 ---
 title: Technical Director
-location: zurich
+location: hamburg
 discipline: tech
 contact: vicky
 workdayLink: ""

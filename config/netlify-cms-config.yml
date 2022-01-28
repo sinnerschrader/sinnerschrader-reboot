@@ -54,6 +54,7 @@ collections:
 
       - label: "Workday URL"
         name: "workdayLink"
+        required: false
         widget: "string"
 
       - label: "Description"

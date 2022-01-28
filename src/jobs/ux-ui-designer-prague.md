@@ -25,7 +25,7 @@ description: >-
   ✅ Endless opportunities to grow and get responsibility if you see that potential in you!
 
 
-  Sounds interesting? Then keep reading if you are an experienced Product Owner or Project Manager who “just wants work on interesting projects with no alpha leaders and no beta teams”.
+  Sounds interesting? Then keep reading if you are an experienced Designer who “just wants to do cool things”! (quote from our Studio Lead Petr, the most funny lead you will ever work with ;))
 
 
   About us? 🚀

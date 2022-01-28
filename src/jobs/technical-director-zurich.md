@@ -1,5 +1,5 @@
 ---
-title: Technical Director
+title: Technical Director (Mobile)
 location: hamburg
 discipline: tech
 contact: vicky

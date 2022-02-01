@@ -5,7 +5,7 @@ discipline: tech
 contact: vicky
 description: >-
   SinnerSchrader is one of Europe's leading digital agencies focusing on the
-  design and development of digital products and services. More than 600
+  design and development of digital products and services. More than 500
   employees work on the digital transformation for companies such as Audi,
   comdirect bank, ERGO, Telefónica, Unitymedia and VW. SinnerSchrader was
   founded in 1996, has been listed on the stock exchange since 1999 and has

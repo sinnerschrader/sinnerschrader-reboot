@@ -1,37 +1,36 @@
 ---
-title: Director Product Design UX / UI
-location: frankfurt
-discipline: creative
+title: Product Owner
+location: zurich
+discipline: account management
 contact: vicky
-workdayLink: https://www.accenture.com/de-de/careers/jobdetails?id=R00028361_de&title=Director+Product+Design+UX%2fUI+(f%2fm%2fd%2f-)+%7c+SinnerSchrader
+workdayLink: ""
 description: >-
-  SinnerSchrader is one of the leading design and technology agencies in Europe
-  with a focus on the design and development of digital products and services.
-  More than 500 employees work on the digital transformation for companies such
-  as Audi, comdirect bank, ERGO, Telefónica, TUI, Unitymedia and VW.
-  SinnerSchrader was founded in 1996, has been listed on the stock exchange
-  since 1999 and has studios in Hamburg, Berlin, Frankfurt am Main, Munich,
-  Zurich and Prague. Since April 2017, SinnerSchrader is part of Accenture
-  Interactive.
+  SinnerSchrader Swipe is a studio for mobile product management, design and
+  software engineering with offices in Hamburg, Berlin and Zurich. We develop
+  digital products – radically user-centered services focusing on mobile
+  touchpoints. Our core competencies are experience design, strategy and mobile
+  engineering for iOS and Android. Our portfolio includes companies in sectors
+  such as mobility, automotive, lifestyle and telecom. Some of our better known
+  clients are Audi, Europa Park, Motel One, VW and Telefónica.
 
 
-  We are currently looking for a Director Product Design UX / UI (f/m/d/-) at our Frankfurt office.
+  We are currently looking for a Product Owner (f/m/d/-) for our Zurich office.
 expectations:
-  - Leadership and further development of the Product Design team
-  - Consulting and strategic development of our clients
-  - Conception of complex transactional websites, applications and services
-  - Conducting internal and external workshops
-  - Preparation and implementation of pitches
-  - "Client responsibility "
+  - Identification and recording of stakeholder and customer requirements as
+    well as concrete solution development together with the team
+  - Content and operational management of a cross-functional development team
+  - Active management of the product backlog and prioritization according to the
+    requirements of all stakeholders and customers
+  - Execution of sprint plannings, reviews and backlog refinements
 requirements:
-  - Solid experience in user-centered design, user experience design, interface
-    and interaction design
-  - Many years of professional experience in the development of digital services
-    and products
-  - Very broad brand, content and online know-how
-  - Experience with design thinking methods and agile working methods
-  - Strong presentation skills
-  - Business fluent in German and/or English
+  - Practical experience as a product owner in a digital environment
+  - Familiarity with agile mindset & methods
+  - Strong conceptual and analytical skills as well as a structured, proactive
+    way of working
+  - Experience with project control and requirements management tools (e.g.
+    JIRA, Confluence)
+  - Experience in working with internationally operating groups
+  - "Business fluent in English "
 offers:
   - Exciting and innovative projects for well-known companies
   - Varied tasks and space for personal responsibility

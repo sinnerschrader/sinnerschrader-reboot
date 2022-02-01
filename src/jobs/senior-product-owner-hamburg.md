@@ -15,7 +15,7 @@ description: >-
   Interactive.
 
 
-  We are currently looking for a (Senior) Product Owner (f/m/x/-) for our Hamburg office.
+  We are currently looking for a (Senior) Product Owner (f/m/d/-) for our Hamburg office.
 expectations:
   - Content management of the website relaunch of one of our automotive clients
   - Further development of existing requirements (user stories) and addition of

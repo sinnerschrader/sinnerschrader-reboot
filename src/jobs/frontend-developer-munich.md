@@ -13,7 +13,7 @@ description: >-
   SinnerSchrader has been part of Accenture Interactive since April 2017.
 
 
-  We are currently recruiting for a Frontend Developer (f/m/d/-) for our Munich office.
+  We are currently looking for a Frontend Developer (f/m/d/-) for our Munich office.
 expectations:
   - Within the project team, you will be responsible for frontend development
   - You will be responsible for infrastructure and support for frontend

@@ -61,7 +61,7 @@ requirements:
     with regard to agile working methods
   - A high level of initiative and very good communication skills
   - Very good communication in English and Czech (German is an advantage :)
-    Jawohl! :)
+    Jawohl!)
   - You don't mind travelling on monthly basis (up to once for 2 days every 3
     weeks or so)
 offers:

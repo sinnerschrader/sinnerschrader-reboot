@@ -1,7 +1,7 @@
 ---
 title: Product Designer UI
 location: munich
-discipline: tech
+discipline: creative
 contact: vicky
 workdayLink: https://www.accenture.com/de-de/careers/jobdetails?id=R00058214_de&title=Product+Designer+UI+(f%2fm%2fd%2f-)+%7c+SinnerSchrader
 description: >-

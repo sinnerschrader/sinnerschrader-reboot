@@ -3,6 +3,7 @@ title: Frontend Developer
 location: munich
 discipline: tech
 contact: vicky
+workdayLink: https://www.accenture.com/de-de/careers/jobdetails?id=R00059992_de&title=Frontend+Developer+(f%2fm%2fd%2f-)+%7c+SinnerSchrader+-+Munich
 description: >-
   SinnerSchrader is one of Europe's leading digital agencies focusing on the
   design and development of digital products and services. More than 500

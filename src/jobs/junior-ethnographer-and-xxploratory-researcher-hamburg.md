@@ -1,5 +1,5 @@
 ---
-title: "(Junior) Ethnographer and Xxploratory Researcher "
+title: "(Junior) Ethnographer and Exploratory Researcher "
 location: hamburg
 discipline: strategy
 contact: vicky

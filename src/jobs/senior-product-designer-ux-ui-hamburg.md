@@ -1,5 +1,5 @@
 ---
-title: "Senior Product Designer UX/UI "
+title: "Senior Product Designer UX / UI "
 location: hamburg
 discipline: creative
 contact: vicky

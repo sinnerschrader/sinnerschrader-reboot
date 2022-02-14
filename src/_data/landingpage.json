@@ -133,42 +133,42 @@
 				"tabletSrc": "./assets/images/tablet/culture1.webp",
 				"desktopSrc": "./assets/images/desktop/culture1.webp",
 				"fallbackSrc": "./assets/images/fallback/culture1.jpg",
-				"altText": "Person sitting at a desk in an office, a bonsai tree is seen in the foreground"
+				"altText": "Person with chairs"
 			},
 			{
 				"mobileSrc": "./assets/images/mobile/culture2.webp",
 				"tabletSrc": "./assets/images/tablet/culture2.webp",
 				"desktopSrc": "./assets/images/desktop/culture2.webp",
 				"fallbackSrc": "./assets/images/fallback/culture2.jpg",
-				"altText": "Person swinging on an swing in an office with a floor in a geometric pattern"
+				"altText": "Balancing person"
 			},
 			{
 				"mobileSrc": "./assets/images/mobile/culture3.webp",
 				"tabletSrc": "./assets/images/tablet/culture3.webp",
 				"desktopSrc": "./assets/images/desktop/culture3.webp",
 				"fallbackSrc": "./assets/images/fallback/culture3.jpg",
-				"altText": "Person standing in a room wearing a motorcycle helmet"
+				"altText": "Dog in the office"
 			},
 			{
 				"mobileSrc": "./assets/images/mobile/culture4.webp",
 				"tabletSrc": "./assets/images/tablet/culture4.webp",
 				"desktopSrc": "./assets/images/desktop/culture4.webp",
 				"fallbackSrc": "./assets/images/fallback/culture4.jpg",
-				"altText": "Dog of the breed french bulldog sitting in an office hallway"
+				"altText": "Juggling"
 			},
 			{
 				"mobileSrc": "./assets/images/mobile/culture5.webp",
 				"tabletSrc": "./assets/images/tablet/culture5.webp",
 				"desktopSrc": "./assets/images/desktop/culture5.webp",
 				"fallbackSrc": "./assets/images/fallback/culture5.jpg",
-				"altText": "Person sitting on an orange moped in front of an orange wall"
+				"altText": "Mic picture"
 			},
 			{
 				"mobileSrc": "./assets/images/mobile/culture6.webp",
 				"tabletSrc": "./assets/images/tablet/culture6.webp",
 				"desktopSrc": "./assets/images/desktop/culture6.webp",
 				"fallbackSrc": "./assets/images/fallback/culture6.jpg",
-				"altText": "Person wearing a VR headset"
+				"altText": "Yoga activity"
 			}
 		]
 	},

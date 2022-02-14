@@ -2,23 +2,28 @@
 title: SinnerSchrader
 layout: default.liquid
 pagination:
-  data: collections.news
+  data: collections.newsDe
   size: 1
   alias: article
-permalink: "news/{{ article.data.title | slug }}-{{ article.data.location | slug }}.html"
+permalink: "newsDe/{{ article.data.title | slug }}.html"
 bodyClass: is-bg-scroll
 dataJsItem: bg-scroll-animation
 ---
 {% include navigation, data: global %}
 
 <main class="news-details-page">
-    {% assign newsByDate = collections.news | date | reverse %}
+    {% assign newsByDate = collections.newsDe | date | reverse %}
 
 	<section class="fade-bg-black news-details-page__title">
 		<div class="image-teaser">
 			<picture class="image-teaser__picture">
-				<img loading="lazy" src="{{ article.data.image }}"
-					alt="{{ article.data.altText }}"/>
+				{% if newsByDate[0].data.plainHeadlineText %}
+					<img loading="lazy" src="{{ article.data.image }}"
+						alt="{{ article.data.altText }}"/>
+				{% else %}
+					<img loading="lazy" src="{{ article.data.image }}"
+						alt="{{ article.data.title }}"/>
+				{% endif %}
 			</picture>
 			<div class="content-box">
 				<div class="title">
@@ -36,12 +41,18 @@ dataJsItem: bg-scroll-animation
 
 	<section class="news-details-page__article">
 		<div class="grid">
-			<div class="col-5 col-12-xs introText">
-				<p>{{ article.data.introText }}</p>
-			</div>
-			<div class="col-7 col-12-xs articleText">
-				<p>{{ article.data.articleText }}</p>
-			</div>
+			{% if article.data.plainHeadlineText %}
+				<div class="col-5 col-12-xs introText">
+					<p>{{ article.data.introText }}</p>
+				</div>
+				<div class="col-7 col-12-xs articleText">
+					<p>{{ article.data.articleText }}</p>
+				</div>
+            {% else %}
+				<div class="col-12 col-12-xs articleText">
+					<p>{{ article.data.content }}</p>
+				</div>
+            {% endif %}
 		</div>
 	</section>
 
@@ -49,7 +60,7 @@ dataJsItem: bg-scroll-animation
         <div class="grid">
 			{% for article in newsByDate limit: 3 %}
 				<div class="list__item col-4 col-6-s col-6-xs">
-					<a class="list__anchor" href="/news/{{ article.data.title | slug }}-{{ article.data.location | slug }}.html">
+					<a class="list__anchor" href="{{ article.data.title | slug }}.html">
 						<div class="list__image-wrapper">
 							<img alt="{{ article.data.title }}" class="news-item-image"
 								loading="lazy" src="{{ article.data.image }}">

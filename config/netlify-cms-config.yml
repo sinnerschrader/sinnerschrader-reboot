@@ -14,9 +14,61 @@ editor:
 publish_mode: editorial_workflow
 
 collections:
-  - label: "News"
-    name: "news"
-    folder: "src/news"
+  - label: "NewsDe"
+    name: "newsDe"
+    folder: "src/newsDe"
+    create: true
+    delete: true
+    slug: "{{title}}"
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+        required: true
+
+      - label: "Plain headline text"
+        name: "plainHeadlineText"
+        widget: "string"
+        required: true
+
+      - label: "Italic headline text"
+        name: "italicHeadlineText"
+        widget: "string"
+        required: true
+
+      - label: "Location"
+        name: "location"
+        widget: "string"
+        required: true
+
+      - label: "Discipline"
+        name: "discipline"
+        widget: "string"
+        required: true
+
+      - label: "Image"
+        name: "image"
+        widget: "file"
+        required: true
+
+      - label: "Alt image text"
+        name: "altText"
+        widget: "string"
+        required: true
+
+      - label: "Article intro text"
+        name: "introText"
+        widget: "text"
+        required: true
+
+      - label: "Article text"
+        name: "articleText"
+        widget: "text"
+        required: true
+
+  - label: "NewsEn"
+    name: "newsEn"
+    folder: "src/newsEn"
     create: true
     delete: true
     slug: "{{title}}"

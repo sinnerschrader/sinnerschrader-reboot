@@ -13,7 +13,7 @@ import { ShareButtons } from "./share-buttons";
 import { Slider } from "./slider.js";
 import { Video } from "./video.js";
 
-(() => {
+window.addEventListener("load", () => {
 	if (isModuleNeeded("locations")) {
 		new Locations();
 	}
@@ -82,7 +82,7 @@ import { Video } from "./video.js";
 	}
 
 	new Parallax();
-})();
+});
 
 function isModuleNeeded(moduleName) {
 	return document.querySelectorAll(`[data-js-item='${moduleName}']`).length !== 0;

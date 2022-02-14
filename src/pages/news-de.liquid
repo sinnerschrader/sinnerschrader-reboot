@@ -1,26 +1,32 @@
 ---
 title: SinnerSchrader
 layout: default
-permalink: news.html
+permalink: news-de.html
 bodyClass: is-bg-scroll
 dataJsItem: bg-scroll-animation
 ---
 {% include navigation, data: global %}
 
 <main class="news-page">
-    {% assign newsByDate = collections.news | date | reverse %}
+    {% assign newsByDate = collections.newsDe | date | reverse %}
 	<section class="fade-bg-black news-page__intro grid">
         <div class="title">
             <div class="new-label">new</div>
-            <h1>
-                {{ newsByDate[0].data.plainHeadlineText }}
-                <span class="headline-102"> {{ newsByDate[0].data.italicHeadlineText }}</span>
-            </h1>
+            {% if newsByDate[0].data.plainHeadlineText %}
+                <h1>
+                    {{ newsByDate[0].data.plainHeadlineText }}
+                    <span class="headline-102"> {{ newsByDate[0].data.italicHeadlineText }}</span>
+                </h1>
+            {% else %}
+                <h1>
+                    {{ newsByDate[0].data.title }}
+                </h1>
+            {% endif %}
         </div>
         <div class="banner">
-            <img alt="{{ newsByDate[0].data.altText }}" class="banner-image"
+            <img alt="{{ newsByDate[0].data.title }}" class="banner-image"
                 loading="lazy" src="{{ newsByDate[0].data.image }}">
-            <a class="continue-reading" href="/news/{{ newsByDate[0].data.title | slug }}-{{ newsByDate[0].data.location | slug }}.html">
+            <a class="continue-reading" href="newsDe/{{ newsByDate[0].data.title | slug }}.html">
                 continue reading
                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M18 26L26.5858 17.4142C27.3668 16.6332 27.3668 15.3668 26.5858 14.5858L18 6"
@@ -33,7 +39,7 @@ dataJsItem: bg-scroll-animation
         <div class="popular-news">
             {% for article in newsByDate limit: 3 offset: 1 %}
                 <div class="news-item">
-                    <a href="/news/{{ article.data.title | slug }}-{{ article.data.location | slug }}.html">
+                    <a href="newsDe/{{ article.data.title | slug }}.html">
                         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M18 26L26.5858 17.4142C27.3668 16.6332 27.3668 15.3668 26.5858 14.5858L18 6"
                                 stroke="#fff" stroke-width="2"/>
@@ -54,7 +60,8 @@ dataJsItem: bg-scroll-animation
         <div class="grid">
 			<h2 class="headline-101">News</h3>
 		</div>
-        {% include filter-container, filterListClass: "filter-news-list" %}
+        {% comment %} TODO: IMPROVE (hidden) AFTER TAGGING {% endcomment %}
+        {% include filter-container, filterListClass: "filter-news-list", additionalClass: "hidden" %}
     </section>
     <!-- Categories in the listing -->
     <section id="js-listing" class="list">
@@ -65,11 +72,11 @@ dataJsItem: bg-scroll-animation
             strategyItems = newsByDate | groupByDiscipline: 'strategy' %}
 
             <!-- Render their dedicated lists -->
-            {% include filter-list-category-block-view, entityName: "news", discipline: 'Account Manage&shy;ment', items: managementItems %} {% include filter-list-category-block-view, entityName: "news",
-            discipline: 'Creative', items: creativeItems %} {% include filter-list-category-block-view, entityName: "news", discipline: 'Strategy', items: strategyItems %} {%
-            include filter-list-category-block-view, entityName: "news", discipline: 'Tech', items: techItems %}
+            {% include filter-list-category-block-view, entityName: "newsDe", discipline: 'Account Manage&shy;ment', items: managementItems %} {% include filter-list-category-block-view, entityName: "newsDe",
+            discipline: 'Creative', items: creativeItems %} {% include filter-list-category-block-view, entityName: "newsDe", discipline: 'Strategy', items: strategyItems %} {%
+            include filter-list-category-block-view, entityName: "newsDe", discipline: 'Tech', items: techItems %}
 
-            <a href="/archive/page1.html">
+            <a href="/de/archive/page1.html">
                 <button class="button button--primary button--small">
                     <span class="button__text">
                         archive

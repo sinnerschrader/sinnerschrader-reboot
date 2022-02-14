@@ -1,9 +1,9 @@
 ---
 title: SinnerSchrader
 layout: default
-permalink: "archive/page{{ pagination.pageNumber | plus: 1}}.html"
+permalink: "de/archive/page{{ pagination.pageNumber | plus: 1}}.html"
 pagination:
-  data: collections.news
+  data: collections.newsDe
   size: 9
   reverse: true
   alias: news
@@ -26,7 +26,7 @@ dataJsItem: bg-scroll-animation
         <div class="grid">
 			{% for article in news %}
 				<div class="list__item col-4 col-6-s col-6-xs">
-					<a class="list__anchor" href="/news/{{ article.data.title | slug }}-{{ article.data.location | slug }}.html">
+					<a class="list__anchor" href="/newsDe/{{ article.data.title | slug }}.html">
 						<div class="list__image-wrapper">
 							<img alt="{{ article.data.title }}" class="news-item-image"
 								loading="lazy" src="{{ article.data.image }}">

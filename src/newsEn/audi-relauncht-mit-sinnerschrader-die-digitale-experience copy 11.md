@@ -1,8 +1,8 @@
 ---
-title: SinnerSchrader eröffnet Dependance von Swipe in der Schweiz
-plainHeadlineText: SinnerSchrader eröffnet Dependance von Swipe in der
-italicHeadlineText: Schweiz
-location: prague
+title: Audi relaunchcct mit SinnerSchrader die digitale Experience
+plainHeadlineText: Audi relauncht mit SinnerSchrader die digitale
+italicHeadlineText: Experience
+location: frankfurt
 discipline: tech
 image: /assets/images/fallback/job-list-teaser.png
 altText: Audi auto

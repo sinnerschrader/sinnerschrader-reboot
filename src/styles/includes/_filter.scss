@@ -23,6 +23,10 @@
 	}
 }
 
+.hidden {
+	display: none;
+}
+
 .filter-bar {
 	@include paragraph-100();
 

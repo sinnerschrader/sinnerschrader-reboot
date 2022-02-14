@@ -59,6 +59,7 @@ collections:
 
       - label: "Workday URL"
         name: "workdayLink"
+        required: false
         widget: "string"
 
       - label: "Description"
@@ -85,4 +86,11 @@ collections:
         widget: "list"
         field: { label: "offer", name: "offer", widget: "string" }
         collapsed: false
-        default: ["Accident insurance", "Workers Council", "Employer share purchase program", "Employee Referral Program"]
+        default:
+          [
+            "Exciting and innovative projects for well-known companies",
+            "Varied tasks and space for personal responsibility",
+            "Professional and personal development",
+            "A pleasant working atmosphere and short decision-making processes",
+            "Great benefits (Accident insurance, Workers Council, Employer share purchase program, Employee Referral Program, and more)",
+          ]

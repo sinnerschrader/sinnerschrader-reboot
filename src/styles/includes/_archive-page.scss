@@ -21,15 +21,19 @@
 				font-family: $font-sans-serif-light;
 				@include bp-xs {
 					font-size: 1.8rem;
+					line-height: 1.6rem;
 				}
 				@include bp-tablet {
 					font-size: 2.4rem;
+					line-height: 2.2rem;
 				}
 				@include bp-l {
 					font-size: 2.4rem;
+					line-height: 2.2rem;
 				}
 				@include bp-xl {
 					font-size: 3.2rem;
+					line-height: 3.1rem;
 				}
 			}
 		}

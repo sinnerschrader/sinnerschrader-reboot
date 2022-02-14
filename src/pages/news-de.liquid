@@ -58,7 +58,13 @@ dataJsItem: bg-scroll-animation
 
     <section id="js-filter-list" class="filter-list">
         <div class="grid">
-			<h2 class="headline-101">News</h3>
+			<h2 class="headline-101">
+                News
+                <a class="language-switcher" href="/news-en.html">
+                    <span>EN</span>
+                    <span class="current">DE</span>
+                </a>
+            </h2>
 		</div>
         {% comment %} TODO: IMPROVE (hidden) AFTER TAGGING {% endcomment %}
         {% include filter-container, filterListClass: "filter-news-list", additionalClass: "hidden" %}

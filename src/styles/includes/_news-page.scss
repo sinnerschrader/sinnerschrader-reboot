@@ -16,7 +16,7 @@
 
 		.title {
 			position: absolute;
-			width: 50%;
+			width: 40%;
 			margin-top: 22rem;
 			z-index: 6;
 			overflow-x: initial;
@@ -53,7 +53,7 @@
 		}
 
 		.banner {
-			grid-column-start: 5;
+			grid-column-start: 3;
 			grid-column-end: 13;
 			overflow: hidden;
 			display: flex;
@@ -239,6 +239,32 @@
 		&__item {
 			padding-right: 10vw;
 			border-bottom: 0;
+
+			@include bp-s-and-lower {
+				&:last-of-type {
+					display: none;
+				}
+			}
+
+			&-title {
+				font-family: $font-sans-serif-light;
+				@include bp-xs {
+					font-size: 1.8rem;
+					line-height: 1.6rem;
+				}
+				@include bp-tablet {
+					font-size: 2.4rem;
+					line-height: 2.2rem;
+				}
+				@include bp-l {
+					font-size: 2.4rem;
+					line-height: 2.2rem;
+				}
+				@include bp-xl {
+					font-size: 3.2rem;
+					line-height: 3.1rem;
+				}
+			}
 		}
 
 		&__image-wrapper {
@@ -259,6 +285,52 @@
 			display: block;
 			width: 100%;
 			padding-top: 100%;
+		}
+	}
+
+	h2 {
+		font-weight: 300;
+	}
+
+	.language-switcher {
+		display: block;
+		background-color: $color-secondary--green;
+		position: absolute;
+		padding: 7px 6px;
+		line-height: 1.4rem;
+		border-radius: 14px;
+		color: $color-primary--white;
+
+		@include bp-xs {
+			right: 2.4rem;
+			bottom: 6rem;
+		}
+
+		@include bp-s {
+			right: 6.4rem;
+			bottom: 7rem;
+		}
+
+		@include bp-m {
+			right: 9.6rem;
+			bottom: 7rem;
+		}
+
+		@include bp-l {
+			right: 9.6rem;
+			bottom: 8rem;
+		}
+
+		@include bp-xl {
+			right: 12.8rem;
+			bottom: 8rem;
+		}
+
+		.current {
+			color: $color-primary--black;
+			background-color: $color-primary--white;
+			padding: 2px 5px;
+			border-radius: 10px;
 		}
 	}
 }

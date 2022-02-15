@@ -5,7 +5,7 @@ pagination:
   data: collections.newsDe
   size: 1
   alias: article
-permalink: "newsDe/{{ article.data.title | slug }}.html"
+permalink: "newsDe/{{ article.data.title | slug }}-{{ article.data.date | slug }}.html"
 bodyClass: is-bg-scroll
 dataJsItem: bg-scroll-animation
 ---
@@ -17,7 +17,7 @@ dataJsItem: bg-scroll-animation
 	<section class="fade-bg-black news-details-page__title">
 		<div class="image-teaser">
 			<picture class="image-teaser__picture">
-				{% if newsByDate[0].data.plainHeadlineText %}
+				{% if article.data.plainHeadlineText %}
 					<img loading="lazy" src="{{ article.data.image }}"
 						alt="{{ article.data.altText }}"/>
 				{% else %}
@@ -60,7 +60,7 @@ dataJsItem: bg-scroll-animation
         <div class="grid">
 			{% for article in newsByDate limit: 3 %}
 				<div class="list__item col-4 col-6-s col-6-xs">
-					<a class="list__anchor" href="{{ article.data.title | slug }}.html">
+					<a class="list__anchor" href="{{ article.data.title | slug }}-{{ article.data.date | slug }}.html">
 						<div class="list__image-wrapper">
 							<img alt="{{ article.data.title }}" class="news-item-image"
 								loading="lazy" src="{{ article.data.image }}">

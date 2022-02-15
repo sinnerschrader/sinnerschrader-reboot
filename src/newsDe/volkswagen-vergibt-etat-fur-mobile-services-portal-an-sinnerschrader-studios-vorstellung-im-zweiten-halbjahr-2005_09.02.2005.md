@@ -1,0 +1,6 @@
+---
+image: ""
+date: "2005-02-09"
+title: Volkswagen vergibt Etat für Mobile Services Portal an SinnerSchrader Studios / Vorstellung im zweiten Halbjahr 2005
+content: <div class="newsbody"><p><strong>Die SinnerSchrader Studios, Hamburg haben den Auftrag für die neue Generation des Mobile Service Portals von Volkswagen erhalten. Der Automobilhersteller wird damit die Positionierung seiner webbasierten mobilen Dienste schärfen. Volkswagen Mobile Services versteht sich als lebenslanger Partner für innovative und moderne Mobilität.</strong></p><p>Volkswagen knüpft damit an den bisherigen Erfolg in diesem Segment an. Volkswagen Mobile Services unterstützen seit 2001 ihre Nutzer mit hochwertigen Diensten, die bereits jetzt zu 35 Prozent von Fahrern anderer Marken nachgefragt werden.</p><p>Die SinnerSchrader Studios, Kreativagentur für digitale Markenführung, konnten sich in einer mehrstufigen Wettbewerbspräsentation gegen namhafte Mitbewerber durchsetzen. Erste Ergebnisse der Zusammenarbeit wollen Volkswagen und SinnerSchrader Studios im zweiten Halbjahr 2005 präsentieren.</p><p><a class="news-backlink" href="/de/"><svg class="svg-ico svg-ico--arrow-left"><use xlink&#58;href="#arrow-down"></use></svg>Zurück zur Presse Übersicht</a></p></div>
+---

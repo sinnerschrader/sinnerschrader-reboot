@@ -1,0 +1,6 @@
+---
+image: ""
+date: "2010-07-09"
+title: Kristina Böcker verstärkt SinnerSchrader im Zukunftsbereich Web Analytics
+content: <div class="newsbody"><p><strong>Seit Juni 2010 verstärkt Kristina Böcker (31) als Consultant das Team Web Analytics bei SinnerSchrader. Web Analytics ist ein innovativer Kernbereich der Interaktivagentur. Der Fokus liegt auf Analysen des Konsumentenverhaltens in Onlineshops und auf Empfehlungen zur Website-Optimierung.</strong></p><p>Die studierte Betriebswirtin bringt langjährige Erfahrung als Unternehmensberaterin bei der Otto Group Consulting mit. Bei SinnerSchrader wird sie deshalb vor allem für Kunden aus den Bereichen Versandhandel und Fashion arbeiten. Beratungsgeschäftsführer Laurent Burdin ist glücklich über die Verstärkung&#58; „Kristina Böcker kennt nicht nur die Bedürfnisse der Konsumenten, sondern bringt auch wichtige Kenntnisse über die Handelsbranche mit.“ Das Team Web Analytics bei SinnerSchrader besteht aus fünf Consultants und arbeitet eng mit der strategischen Planung zusammen.</p><p>Bildmaterial unter <a href="http&#58;//www.sinnerschrader.com/">http&#58;//www.sinnerschrader.com/</a>.</p><p><a class="news-backlink" href="/de/"><svg class="svg-ico svg-ico--arrow-left"><use xlink&#58;href="#arrow-down"></use></svg>Zurück zur Presse Übersicht</a></p></div>
+---

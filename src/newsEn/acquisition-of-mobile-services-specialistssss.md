@@ -1,5 +1,5 @@
 ---
-title: Acquisition of Mobile Services Specialistssss
+title: ENAcquisition of Mobile Services Specialistssss
 image: https://sinnerschrader.news/media/filer_public_thumbnails/filer_public/8b/86/8b86d023-2c9c-479f-9b5b-aea682af6826/varfoldersdjk8pxf42x64d8fxslz8jcc8fc0000gnttmpjcabkk__480x288_q85_crop_subsampling-2_upscale.png
 date: 2022-01-01
 content: "Hamburg, März 2021. Audi geht den Weg der Digitalisierung konsequent. Der neueste Schritt ist der Wandel des digitalen Markenauftritts. Zum Launch des Audi e-tron GT werden in der digitalen Experience die Ideen sichtbar, die das Unternehmen in Zukunft noch stärker prägen werden. Die neue Website hat ein reduziertes Design, das schnell Orientierung bietet und die Fahrzeugkonfiguration verbessert. Der Relaunch des Online-Erlebnisses ist das Ergebnis einer engen Zusammenarbeit zwischen SinnerSchrader und Audi und reicht von der Strategie über das Design bis zur Umsetzung.<br />

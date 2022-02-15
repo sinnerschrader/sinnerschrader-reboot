@@ -1,5 +1,5 @@
 ---
-title: Entwicklung einer ganzheitlichen Brand Experience für den Markenrelaunch von Unzer
+title: DEEntwicklung einer ganzheitlichen Brand Experience für den Markenrelaunch von Unzer
 plainHeadlineText: Entwicklung einer ganzheitlichen Brand Experience für den Markenrelaunch
 italicHeadlineText: von Unzer
 location: berlin

@@ -1,5 +1,5 @@
 ---
-title: Audi relaunchct mit SinnerSchrader die digitale Experience
+title: DEAudi relaunchct mit SinnerSchrader die digitale Experience
 plainHeadlineText: Audi relauncht mit SinnerSchrader die digitale
 italicHeadlineText: Experience
 location: frankfurt

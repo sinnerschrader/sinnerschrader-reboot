@@ -1,5 +1,5 @@
 ---
-title: Man muss mutig sein, sich für neue Dinge interessieren
+title: DEMan muss mutig sein, sich für neue Dinge interessieren
 plainHeadlineText: Man muss mutig sein, sich für neue Dinge
 italicHeadlineText: interessieren
 location: berlin

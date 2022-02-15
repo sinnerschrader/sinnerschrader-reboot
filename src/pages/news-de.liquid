@@ -72,15 +72,29 @@ dataJsItem: bg-scroll-animation
     <!-- Categories in the listing -->
     <section id="js-listing" class="list">
         <div class="grid">
+            {% comment %} TODO: IMPROVE AFTER TAGGING {% endcomment %}
             <!-- Filter out items for each discipline -->
-            {% assign creativeItems = newsByDate | groupByDiscipline: 'creative' %} {% assign techItems = newsByDate |
+            {% comment %} {% assign creativeItems = newsByDate | groupByDiscipline: 'creative' %} {% assign techItems = newsByDate |
             groupByDiscipline: 'tech' %} {% assign managementItems = newsByDate | groupByDiscipline: 'Account Management' %} {% assign
-            strategyItems = newsByDate | groupByDiscipline: 'strategy' %}
+            strategyItems = newsByDate | groupByDiscipline: 'strategy' %} {% endcomment %}
 
+            {% comment %} TODO: IMPROVE AFTER TAGGING {% endcomment %}
             <!-- Render their dedicated lists -->
-            {% include filter-list-category-block-view, entityName: "newsDe", discipline: 'Account Manage&shy;ment', items: managementItems %} {% include filter-list-category-block-view, entityName: "newsDe",
+            {% comment %} {% include filter-list-category-block-view, entityName: "newsDe", discipline: 'Account Manage&shy;ment', items: managementItems %} {% include filter-list-category-block-view, entityName: "newsDe",
             discipline: 'Creative', items: creativeItems %} {% include filter-list-category-block-view, entityName: "newsDe", discipline: 'Strategy', items: strategyItems %} {%
-            include filter-list-category-block-view, entityName: "newsDe", discipline: 'Tech', items: techItems %}
+            include filter-list-category-block-view, entityName: "newsDe", discipline: 'Tech', items: techItems %} {% endcomment %}
+
+            {% for article in newsByDate limit: 9 offset: 4 %}
+				<div class="list__item col-4 col-6-s col-6-xs">
+					<a class="list__anchor" href="/newsDe/{{ article.data.title | slug }}-{{ article.data.date | slug }}.html">
+						<div class="list__image-wrapper">
+							<img alt="{{ article.data.title }}" class="news-item-image"
+								loading="lazy" src="{{ article.data.image }}">
+						</div>
+						<div class="list__item-title">{{ article.data.title }}</div>
+					</a>
+				</div>
+			{% endfor %}
 
             <a href="/de/archive/page1.html">
                 <button class="button button--primary button--small">

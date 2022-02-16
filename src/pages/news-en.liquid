@@ -24,8 +24,14 @@ dataJsItem: bg-scroll-animation
             {% endif %}
         </div>
         <div class="banner">
-            <img alt="{{ newsByDate[0].data.title }}" class="banner-image"
-                loading="lazy" src="{{ newsByDate[0].data.image }}">
+            {% if article.data.image.length > 0 %}
+                <img alt="{{ newsByDate[0].data.title }}" class="news-item-image"
+                    loading="lazy" src="{{ newsByDate[0].data.image }}">
+            {% else %}
+                {% comment %} TODO: UPDATE DEFAULT IMAGE {% endcomment %}
+                <img alt="{{ newsByDate[0].data.title }}" class="news-item-image"
+                    loading="lazy" src="/assets/images/fallback/culture1.jpg">
+            {% endif %}
             <a class="continue-reading" href="newsEn/{{ newsByDate[0].data.title | slug }}-{{ newsByDate[0].data.date | slug }}.html">
                 continue reading
                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -88,8 +94,14 @@ dataJsItem: bg-scroll-animation
 				<div class="list__item col-4 col-6-s col-6-xs">
 					<a class="list__anchor" href="/newsEn/{{ article.data.title | slug }}-{{ article.data.date | slug }}.html">
 						<div class="list__image-wrapper">
-							<img alt="{{ article.data.title }}" class="news-item-image"
-								loading="lazy" src="{{ article.data.image }}">
+							{% if article.data.image.length > 0 %}
+								<img alt="{{ article.data.title }}" class="news-item-image"
+									loading="lazy" src="{{ article.data.image }}">
+							{% else %}
+								{% comment %} TODO: UPDATE DEFAULT IMAGE {% endcomment %}
+								<img alt="{{ article.data.title }}" class="news-item-image"
+									loading="lazy" src="/assets/images/fallback/culture1.jpg">
+							{% endif %}
 						</div>
 						<div class="list__item-title">{{ article.data.title }}</div>
 					</a>

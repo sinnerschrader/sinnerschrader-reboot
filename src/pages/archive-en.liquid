@@ -28,8 +28,14 @@ dataJsItem: bg-scroll-animation
 				<div class="list__item col-4 col-6-s col-6-xs">
 					<a class="list__anchor" href="/newsEn/{{ article.data.title | slug }}-{{ article.data.date | slug }}.html">
 						<div class="list__image-wrapper">
-							<img alt="{{ article.data.title }}" class="news-item-image"
-								loading="lazy" src="{{ article.data.image }}">
+							{% if article.data.image.length > 0 %}
+								<img alt="{{ article.data.title }}" class="news-item-image"
+									loading="lazy" src="{{ article.data.image }}">
+							{% else %}
+								{% comment %} TODO: UPDATE DEFAULT IMAGE {% endcomment %}
+								<img alt="{{ article.data.title }}" class="news-item-image"
+									loading="lazy" src="/assets/images/fallback/culture1.jpg">
+							{% endif %}
 						</div>
 						<div class="list__item-title">{{ article.data.title }}</div>
 					</a>

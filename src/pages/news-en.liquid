@@ -28,7 +28,7 @@ dataJsItem: bg-scroll-animation
                 <img alt="{{ newsByDate[0].data.title }}" class="banner-image"
                     loading="lazy" src="{{ newsByDate[0].data.image }}">
             {% else %}
-                {% comment %} TODO: UPDATE DEFAULT IMAGE {% endcomment %}
+                {% comment %} TODO: [NEWS] UPDATE DEFAULT IMAGE {% endcomment %}
                 <img alt="{{ newsByDate[0].data.title }}" class="banner-image"
                     loading="lazy" src="/assets/images/fallback/culture1.jpg">
             {% endif %}
@@ -72,19 +72,19 @@ dataJsItem: bg-scroll-animation
                 </a>
             </h2>
 		</div>
-        {% comment %} TODO: IMPROVE (hidden) AFTER TAGGING {% endcomment %}
+        {% comment %} TODO: [NEWS] IMPROVE (hidden) AFTER TAGGING {% endcomment %}
         {% include filter-container, filterListClass: "filter-news-list", additionalClass: "hidden" %}
     </section>
     <!-- Categories in the listing -->
     <section id="js-listing" class="list">
         <div class="grid">
-            {% comment %} TODO: IMPROVE AFTER TAGGING {% endcomment %}
+            {% comment %} TODO: [NEWS] IMPROVE AFTER TAGGING {% endcomment %}
             <!-- Filter out items for each discipline -->
             {% comment %} {% assign creativeItems = newsByDate | groupByDiscipline: 'creative' %} {% assign techItems = newsByDate |
             groupByDiscipline: 'tech' %} {% assign managementItems = newsByDate | groupByDiscipline: 'Account Management' %} {% assign
             strategyItems = newsByDate | groupByDiscipline: 'strategy' %} {% endcomment %}
 
-            {% comment %} TODO: IMPROVE AFTER TAGGING {% endcomment %}
+            {% comment %} TODO: [NEWS] IMPROVE AFTER TAGGING {% endcomment %}
             <!-- Render their dedicated lists -->
             {% comment %} {% include filter-list-category-block-view, entityName: "newsDe", discipline: 'Account Manage&shy;ment', items: managementItems %} {% include filter-list-category-block-view, entityName: "newsDe",
             discipline: 'Creative', items: creativeItems %} {% include filter-list-category-block-view, entityName: "newsDe", discipline: 'Strategy', items: strategyItems %} {%

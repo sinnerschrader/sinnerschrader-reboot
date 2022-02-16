@@ -56,6 +56,11 @@ collections:
         widget: "string"
         required: true
 
+      - label: "Date (YYYY-MM-DD fromat)"
+        name: "date"
+        widget: "string"
+        required: true
+
       - label: "Article intro text"
         name: "introText"
         widget: "text"
@@ -105,6 +110,11 @@ collections:
 
       - label: "Alt image text"
         name: "altText"
+        widget: "string"
+        required: true
+
+      - label: "Date (YYYY-MM-DD fromat)"
+        name: "date"
         widget: "string"
         required: true
 

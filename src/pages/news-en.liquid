@@ -24,12 +24,12 @@ dataJsItem: bg-scroll-animation
             {% endif %}
         </div>
         <div class="banner">
-            {% if article.data.image.length > 0 %}
-                <img alt="{{ newsByDate[0].data.title }}" class="news-item-image"
+            {% if newsByDate[0].data.image.length > 0 %}
+                <img alt="{{ newsByDate[0].data.title }}" class="banner-image"
                     loading="lazy" src="{{ newsByDate[0].data.image }}">
             {% else %}
                 {% comment %} TODO: UPDATE DEFAULT IMAGE {% endcomment %}
-                <img alt="{{ newsByDate[0].data.title }}" class="news-item-image"
+                <img alt="{{ newsByDate[0].data.title }}" class="banner-image"
                     loading="lazy" src="/assets/images/fallback/culture1.jpg">
             {% endif %}
             <a class="continue-reading" href="newsEn/{{ newsByDate[0].data.title | slug }}-{{ newsByDate[0].data.date | slug }}.html">

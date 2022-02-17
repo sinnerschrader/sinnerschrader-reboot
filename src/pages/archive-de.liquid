@@ -49,16 +49,16 @@ dataJsItem: bg-scroll-animation
 
 		<div class="pagination">
 			{% if pagination.pageNumber > 0 %}
-				<a href="{{pagination.href.first}}">First</a>
+				<a href="{{pagination.href.first}}"><p>First</p></a>
 			{% endif %}
 			{% if pagination.href.previous %}
-				<a href="{{pagination.href.previous}}">Back</a>
+				<a href="{{pagination.href.previous}}"><p>Back</p></a>
 			{% endif %}
 			{% if pagination.href.next %}
-				<a href="{{pagination.href.next}}">Next</a>
+				<a href="{{pagination.href.next}}"><p>Next</p></a>
 			{% endif %}
 			{% if pagination.pageNumber < preLastPage %}
-				<a href="{{pagination.href.last}}">Last</a>
+				<a href="{{pagination.href.last}}"><p>Last</p></a>
 			{% endif %}
 		</div>
 		<p>Page {{ pagination.pageNumber | plus: 1}} of {{ pagination.pages.length }}</p>

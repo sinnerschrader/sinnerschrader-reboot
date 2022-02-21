@@ -17,7 +17,7 @@ description: >-
   We are currently looking for a Senior Strategist (f/m/x/-) for our Frankfurt office.
 
 
-  We are looking for strategists who want to transform the digital transformation. Strategists who shape and revolutionise the digital platforms of tomorrow on the basis of sound methods, professional know-how and creative flair. You look radically through the eyes of the user and develop beneficial and innovative solutions that make our everyday lives easier and, above all, better. Therefore, service and experience design are just as much your playing field as the classic strategy repertoire. You have a keen sense for brands and their business challenges in the digital age. And you have outstanding communicative and methodical skills and an analytical and inspiring mind.
+  We’re looking for strategists who want to unlock potential for experiences that matter.  Strategists who design and revolutionize the digital platforms of tomorrow on the basis of sound methods, professional know-how and creative intuition. You are the kind of person who looks radically through the eyes of the user and develops beneficial and innovative solutions that make everyday life simpler and – above all – better. You are therefore equally at ease with service and experience design as you are with the standard strategy repertoire. You have a keen sense of brands and their business challenges in the digital age. You also have excellent communication and methodical skills in addition to an analytical and inspiring mind.
 expectations:
   - You will be part of an international team of strategists with different
     backgrounds, from sociologists to pure product strategists, from cultural

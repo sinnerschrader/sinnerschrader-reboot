@@ -8,6 +8,7 @@
 	grid-template-columns: auto min-content;
 	grid-template-rows: $spacing--900 auto minmax($spacing--900, auto);
 	margin-bottom: $spacing--900;
+	max-width: 1800px;
 
 	@include bp-s-and-lower {
 		grid-template-rows: 35rem auto minmax(12rem, auto);
@@ -21,6 +22,12 @@
 
 	@include bp-s-and-lower {
 		overflow: inherit;
+	}
+
+	@include bp-xl {
+		margin-left: auto;
+		margin-right: auto;
+		grid-template-columns: auto min-content $spacing--900;
 	}
 
 	&::before {
@@ -66,6 +73,10 @@
 			grid-column: 1 / 2;
 			background-color: $color-primary--black;
 			color: $color-primary--white;
+		}
+
+		@include bp-xl {
+			grid-column: 2 / 4;
 		}
 	}
 }

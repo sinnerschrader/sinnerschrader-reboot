@@ -24,7 +24,7 @@
     "swiper": "^7.3.1"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^0.12.1",
+    "@11ty/eleventy": "^1.0.0",
     "autoprefixer": "^10.4.0",
     "chokidar": "^3.5.2",
     "cssnano": "^5.0.12",

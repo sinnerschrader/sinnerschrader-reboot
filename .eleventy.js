@@ -18,6 +18,11 @@ module.exports = (eleventyConfig) => {
 	}
 	processSassFiles("./src/styles/index.scss", "./src/_includes/css/main.css");
 
+	eleventyConfig.setLiquidOptions({
+		dynamicPartials: false,
+		strictFilters: false,
+	});
+
 	eleventyConfig.setTemplateFormats(["liquid", "njk"]);
 
 	eleventyConfig.addTransform("async-transform-name", async (content, outputPath) => {

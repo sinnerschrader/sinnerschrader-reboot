@@ -57,6 +57,29 @@
 			grid-row: 2/3;
 		}
 	}
+
+	&__disclaimer {
+		display: flex;
+		flex-direction: column;
+		gap: $spacing--100;
+		margin-top: $spacing--700;
+		color: $color-primary--light-gray;
+		font-size: 1.4rem;
+
+		p {
+			margin: 0;
+			font-size: inherit;
+		}
+
+		a {
+			color: inherit;
+			font-size: inherit;
+			line-height: 160%;
+			font-family: $font-sans-serif-light;
+			text-decoration: underline;
+			text-underline-offset: 3px;
+		}
+	}
 }
 
 .accenture-brand {

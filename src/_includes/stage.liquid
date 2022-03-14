@@ -37,7 +37,7 @@
                 <h2 class="stage__subheadline">{{ data.stage.subheadline }}</h2>
             {% endif %}
             {% if data.stage.button %}
-                {% assign buttonText = {{ data.stage.button.text }}%}
+                {% assign buttonText = data.stage.button.text %}
                 {% include button, buttonText: buttonText
 			buttonOption: "primary" buttonSize: "large" jsReference:"media-stage-button"%}
             {% endif %}

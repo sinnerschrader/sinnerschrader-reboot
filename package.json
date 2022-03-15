@@ -13,7 +13,7 @@
     "11ty:build": "eleventy",
     "11ty:watch": "eleventy --serve",
     "esbuild:build": "esbuild ./src/_includes/js/main.js --outfile=_site/bundle.js --bundle --minify",
-    "esbuild:watch": "esbuild ./src/_includes/js/main.js --outfile=_site/bundle.js --bundle --watch",
+    "esbuild:watch": "esbuild ./src/_includes/js/main.js --sourcemap --outfile=_site/bundle.js --bundle --watch",
     "responsiveImages": "rimraf ./_site/assets/images/ && node ./config/sharp.js",
     "stylelint": "stylelint ./src/styles/**/*.scss",
     "a11y-check": "pa11y-ci"

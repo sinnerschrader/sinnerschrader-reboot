@@ -4,7 +4,8 @@
       <div class="accenture-brand__item col-start-11 col-end-13
                           col-start-9-s col-end-11-s
                           col-start-5-xs col-end-12-xs">
-        <img alt="{{ data.footer.topline.altText }}"
+        <img loading="lazy"
+             alt="{{ data.footer.topline.altText }}"
              class="accenture-brand__logo"
              src="{{ data.footer.topline.imgSrc }}">
       </div>
@@ -12,7 +13,9 @@
   </div>
   <div class="grid footer__wrapper">
     <a class="footer__s2-link col-start-1 col-end-6" href="{{ data.footer.logo.href }}">
-      <img alt="{{ data.footer.logo.altText }}" src="{{ data.footer.logo.imgSrc }}"/>
+      <img loading="lazy"
+           alt="{{ data.footer.logo.altText }}"
+           src="{{ data.footer.logo.imgSrc }}"/>
     </a>
     <span class="footer__s2-conference-links col-start-1 col-end-12">
         {{ data.footer.leftSideContent.toplineCopy }}

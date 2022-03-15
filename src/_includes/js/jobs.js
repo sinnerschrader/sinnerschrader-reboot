@@ -113,6 +113,9 @@ export class FilterList {
 
 			// update List
 			this.updateList();
+
+			// reset url params
+			this.resetURLParams();
 		});
 
 		// Mobile height calculation for filter and navigation flyout
@@ -259,12 +262,13 @@ export class FilterList {
 			.filter((item) => {
 				const discipline = item.dataset.discipline;
 				// const level = item.dataset.level;
-				const location = item.dataset.location;
+				const office = item.dataset.office;
 				const excluded =
 					// discipline doesn't match and discipline section is active
 					(!this.filters["discipline"].includes(discipline) && this.isFilterActive("discipline")) ||
-					// location doesn't match and location section is active
-					(!this.filters["location"].includes(location) && this.isFilterActive("location"));
+					// office doesn't match and office section is active
+					(!this.filters["office"].includes(office) && this.isFilterActive("office"));
+
 				// all excluded ones are treated with an extra class
 				return excluded;
 			})
@@ -325,17 +329,17 @@ export class FilterList {
 		const params = new URLSearchParams(url.search);
 
 		const disciplineParam = params.get("discipline");
-		const locationParam = params.get("location");
+		const officeParam = params.get("office");
 
 		const discipline = disciplineParam ? disciplineParam.split(",") : [];
-		const location = locationParam ? locationParam.split(",") : [];
+		const office = officeParam ? officeParam.split(",") : [];
 
-		return { discipline, location };
+		return { discipline, office };
 	}
 
 	setURLParamsForJobFilter(newFilters) {
 		const url = new URL(window.location.href);
-		const { discipline, location } = newFilters;
+		const { discipline, office } = newFilters;
 
 		if (discipline.length) {
 			url.searchParams.set("discipline", discipline.join(","));
@@ -343,13 +347,13 @@ export class FilterList {
 			url.searchParams.delete("discipline");
 		}
 
-		if (location.length) {
-			url.searchParams.set("location", location.join(","));
+		if (office.length) {
+			url.searchParams.set("office", office.join(","));
 		} else {
-			url.searchParams.delete("location");
+			url.searchParams.delete("office");
 		}
 
-		history.pushState({}, "", url);
+		history.replaceState({}, "", url);
 	}
 
 	resetURLParams() {
@@ -357,8 +361,6 @@ export class FilterList {
 		let params = new URLSearchParams(url.search);
 
 		url.searchParams.delete(params);
-		history.pushState({}, "", url);
-
-		console.log(params);
+		history.replaceState({}, "", url);
 	}
 }

@@ -358,9 +358,10 @@ export class FilterList {
 
 	resetURLParams() {
 		let url = new URL(window.location.href);
-		let params = new URLSearchParams(url.search);
 
-		url.searchParams.delete(params);
+		url.searchParams.delete("discipline");
+		url.searchParams.delete("office");
+
 		history.replaceState({}, "", url);
 	}
 }

@@ -15,12 +15,12 @@
 		"leftImage": {
 			"webpSrc": "/assets/images/desktop/born_from_digital_1.webp",
 			"fallbackSrc": "/assets/images/fallback/born_from_digital_1.jpg",
-			"altText": "Person holding a glass infront of half of the face"
+			"altText": "Person standing behind multiple screens in a straight row"
 		},
 		"rightImage": {
 			"webpSrc": "/assets/images/desktop/born_from_digital_2.webp",
 			"fallbackSrc": "/assets/images/fallback/born_from_digital_2.jpg",
-			"altText": "Look down an office hallway where two people are talking"
+			"altText": "Blurred image of a person sitting down on a couch while another person is approaching"
 		},
 		"overlapCircleSrc": "/assets/svg/circle-overlap.svg",
 		"headline": {
@@ -133,42 +133,42 @@
 				"tabletSrc": "./assets/images/tablet/culture1.webp",
 				"desktopSrc": "./assets/images/desktop/culture1.webp",
 				"fallbackSrc": "./assets/images/fallback/culture1.jpg",
-				"altText": "Person with chairs"
+				"altText": "Person trying to stack round couch stools in different colors"
 			},
 			{
 				"mobileSrc": "./assets/images/mobile/culture2.webp",
 				"tabletSrc": "./assets/images/tablet/culture2.webp",
 				"desktopSrc": "./assets/images/desktop/culture2.webp",
 				"fallbackSrc": "./assets/images/fallback/culture2.jpg",
-				"altText": "Balancing person"
+				"altText": "Smiling person standing on a balance board in front of lounge furniture"
 			},
 			{
 				"mobileSrc": "./assets/images/mobile/culture3.webp",
 				"tabletSrc": "./assets/images/tablet/culture3.webp",
 				"desktopSrc": "./assets/images/desktop/culture3.webp",
 				"fallbackSrc": "./assets/images/fallback/culture3.jpg",
-				"altText": "Dog in the office"
+				"altText": "Dog curiously looking to the right while waggling their tail"
 			},
 			{
 				"mobileSrc": "./assets/images/mobile/culture4.webp",
 				"tabletSrc": "./assets/images/tablet/culture4.webp",
 				"desktopSrc": "./assets/images/desktop/culture4.webp",
 				"fallbackSrc": "./assets/images/fallback/culture4.jpg",
-				"altText": "Juggling"
+				"altText": "Person in a hoodie juggling with three colored balls"
 			},
 			{
 				"mobileSrc": "./assets/images/mobile/culture5.webp",
 				"tabletSrc": "./assets/images/tablet/culture5.webp",
 				"desktopSrc": "./assets/images/desktop/culture5.webp",
 				"fallbackSrc": "./assets/images/fallback/culture5.jpg",
-				"altText": "Mic picture"
+				"altText": "Studio microphone with pop filter on a microphone stand"
 			},
 			{
 				"mobileSrc": "./assets/images/mobile/culture6.webp",
 				"tabletSrc": "./assets/images/tablet/culture6.webp",
 				"desktopSrc": "./assets/images/desktop/culture6.webp",
 				"fallbackSrc": "./assets/images/fallback/culture6.jpg",
-				"altText": "Yoga activity"
+				"altText": "Person with blonde hair, wearing a black sports outfit doing a yoga tree pose with eyes closed"
 			}
 		]
 	},

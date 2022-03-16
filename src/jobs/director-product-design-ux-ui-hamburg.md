@@ -1,5 +1,5 @@
 ---
-title: Director Product Design UX / UI
+title: Director Product Design UX/UI
 location: hamburg
 discipline: creative
 contact: vicky
@@ -15,7 +15,7 @@ description: >-
   Interactive.
 
 
-  We are currently looking for a Director Product Design UX / UI (f/m/d/-) at our Hamburg office.
+  We are currently looking for a Director Product Design UX/UI (f/m/d/-) at our Hamburg office.
 expectations:
   - Leadership and further development of the Product Design team
   - Consulting and strategic development of our clients

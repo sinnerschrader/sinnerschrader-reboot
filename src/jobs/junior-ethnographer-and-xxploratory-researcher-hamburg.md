@@ -13,6 +13,9 @@ description: >-
   has been part of Accenture Interactive since April 2017.
 
 
+  We are currently looking for a (Junior) Ethnographer and Exploratory Researcher at our Hamburg office.
+
+
   We’re looking for Social Science based qualitative researcher with focus on Ethnography who wants to develop human insights and inform strategic problem solving in businesses. A researcher who can do both, applying well grounded social science research methods and is able to translate the outcomes into human insights. You’re the kind, of person who is curious and kind with a professional background in humanities in combination with economics or vice versa. That’s why Ethnography and Business Anthropology are not unknown to you but rather your focus and passion, in addition to the ability of strategic thinking. You have a strong understanding of social science based theories and philosophy and know how to use them in the business context of the digital age. You have qualitative methodical skills, a talent for conducting professional and empathetic research and you think both analytically and creatively.
 expectations:
   - You’ll join an international team with strategists, designers and

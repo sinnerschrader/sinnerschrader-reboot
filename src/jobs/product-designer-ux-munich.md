@@ -15,9 +15,6 @@ description: >-
 
 
   We are currently looking for a Product Designer UX (f/m/d/-) at our Munich office.
-
-
-  As a hands-on UX Designer, you can be a source of ideas or an aggregator in the intensive cooperation between Product Design, Product Strategy, Product Engineering and Product and Client Management. If something is new to you, you are curious. If something is familiar, you show self-critical distance. Your excellent sense of conception and product design drives you to tirelessly search for the best solution. Empathy, user-centered thinking and a high understanding of quality characterize you. You quickly find convincing solutions and are a leading creative force in the acquisition of new clients and deliver real added value for our existing clients with your work.
 expectations:
   - Planning and design of the user experience for our clients' digital products
   - Development of user-centered digital solutions

@@ -1,19 +1,19 @@
 ---
-title: Senior Web Analyst
-location: munich
+title: (Junior) Web Analyst
+location: hamburg
 discipline: strategy
 contact: vicky
 description: >-
-  SinnerSchrader is one of the leading design and technology agencies in Europe
-  with a focus on the design and development of digital products and services.
-  More than 500 employees work on the digital transformation for companies such
-  as ADAC, Audi, Bosch, comdirect bank and VW. SinnerSchrader was founded in
-  1996, has been listed on the stock exchange since 1999 and has studios in
-  Hamburg, Berlin, Frankfurt am Main, Munich, Zurich and Prague. SinnerSchrader
-  has been part of Accenture Interactive since April 2017.
+  SinnerSchrader is one of Europe's leading digital agencies focusing on the
+  design and development of digital products and services. More than 500
+  employees work on the digital transformation for companies such as Audi,
+  comdirect bank, ERGO, Telefónica, Unitymedia and VW. SinnerSchrader was
+  founded in 1996, has been listed on the stock exchange since 1999 and has
+  offices in Hamburg, Berlin, Frankfurt am Main, Munich and Prague.
+  SinnerSchrader has been part of Accenture Interactive since April 2017.
 
 
-  We are currently looking for a Senior Web Analyst (f/m/d/-) at our Munich office.
+  We are currently looking for a (Junior) Web Analyst at our Hamburg office.
 
 
   Are you passionate about demanding analytical tasks, are you able to work with different business models and do you want to sustainably improve digital platforms of the various markets and industries for users and business? In Team Data, we help our clients to better understand and address interactive consumers by supporting strategic and operational measures with data and analysis. Our projects include all activities from tool selection and design through deep-dive analyses and recommendations for action up to monitoring tests and personalisation measures.
@@ -21,8 +21,8 @@ expectations:
   - As part of a team, you will supervise end-to-end analytic projects from
     requirements workshops through conception and implementation to evaluations
     and optimisation proposals
-  - You take care of data quality and extend existing implementations in
-    TagManagers or in cooperation with developers
+  - You take care of tracking and testing implementations in web frontends
+    either by contributing own JavaScript code or in cooperation with developers
   - You support our clients with analyses in Adobe or Google Analytics and help
     with the further development of the data and tool landscape
   - You prepare insights in dashboards and presentations, manage to convey even

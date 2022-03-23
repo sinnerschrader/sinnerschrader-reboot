@@ -5,12 +5,13 @@ discipline: account management
 contact: vicky
 workdayLink: https://www.accenture.com/de-de/careers/jobdetails?id=R00028389_de&title=(Senior)+Business+Analyst+(f%2fm%2fd%2f-)+%7c+SinnerSchrader
 description: >-
-  SinnerSchrader is one of the leading digital agencies in Europe with a focus
-  on the design and development of digital products and services. More than 500
-  employees work on the digital transformation for companies such as Allianz,
-  Audi, Bosch, comdirect Bank and VW. SinnerSchrader was founded in 1996 and has
-  studios in Hamburg, Berlin, Frankfurt am Main, Munich, Zurich and Prague.
-  Since April 2017, SinnerSchrader is part of Accenture Interactive.
+  SinnerSchrader is one of the leading design and technology agencies in Europe
+  with a focus on the design and development of digital products and services.
+  More than 500 employees work on the digital transformation for companies such
+  as ADAC, Audi, Bosch, comdirect bank and VW. SinnerSchrader was founded in
+  1996, has been listed on the stock exchange since 1999 and has studios in
+  Hamburg, Berlin, Frankfurt am Main, Munich, Zurich and Prague. SinnerSchrader
+  has been part of Accenture Interactive since April 2017.
 
 
   We are currently looking for a (Senior) Business Analyst (f/m/x/-) for our Hamburg office. 

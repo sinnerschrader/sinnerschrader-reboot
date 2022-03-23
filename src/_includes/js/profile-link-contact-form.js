@@ -6,6 +6,8 @@ export class ProfileLinkContactForm {
 		this.layout = document.querySelector(".profile-link-contact-form__layout");
 		this.firstPage = this.container.querySelector('[data-js-item="profile-link-contact-form-content"]');
 		this.secondPage = this.container.querySelector('[data-js-item="profile-link-contact-form-content-hidden"]');
+		this.profileInputPage = this.container.querySelector('[data-js-item="profile-link-contact-form-send-profile"]');
+		this.successPage = this.container.querySelector('[data-js-item="profile-link-contact-form-success-page"]');
 		this.forwardBtn = this.firstPage.querySelector('[data-js-atom="profile-link-contact-form-forward"]');
 		this.backwardBtn = this.secondPage.querySelector('[data-js-atom="profile-link-contact-form-backward"]');
 		this.captchaContainer = this.secondPage.querySelector('[data-js-atom="profile-link-contact-form-captcha-container"]');
@@ -56,6 +58,7 @@ export class ProfileLinkContactForm {
 
 	emailSent() {
 		hcaptcha.reset(this.captchaWidgetId);
+		this.showSuccessPage();
 	}
 
 	emailFailed() {}
@@ -95,5 +98,10 @@ export class ProfileLinkContactForm {
 			this.secondPage.getElementsByTagName("button")[0].setAttribute("tabindex", -1);
 			this.firstPage.getElementsByTagName("button")[0].removeAttribute("tabindex");
 		}
+	}
+
+	showSuccessPage() {
+		this.profileInputPage.classList.add("hidden");
+		this.successPage.classList.remove("hidden");
 	}
 }

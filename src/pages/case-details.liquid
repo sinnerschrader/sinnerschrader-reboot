@@ -1,0 +1,240 @@
+---
+title: SinnerSchrader
+layout: default.liquid
+pagination:
+  data: collections.cases
+  size: 1
+  alias: case
+permalink: "case/{{ case.data.title | slug }}.html"
+bodyClass: is-bg-scroll
+dataJsItem: bg-scroll-animation
+---
+
+{% include navigation, data: global %}
+
+<main class="case-details-page">
+	<section>
+		{% include stage, data: case.data.info %}
+	</section>
+
+    <section>
+		{% include section-header, title: "Abstract", number: "01", type: "large" %}
+		<div class="abstract-container--wrapper">
+			<div class="abstract-container grid">
+				<div class="col-4-xl col-5-l col-6-m col-8-s col-9-xs">
+					<h3>{{ case.data.info.abstract.title }}</h3>
+				</div>
+				<div class="grid">
+					<div class="col-6 col-12-xs">
+						<div class="abstract-container__agenda">
+							{% for agendaItem in case.data.info.abstract.agenda %}
+								<p>{{ agendaItem }}</p>
+							{% endfor %}
+						</div>
+						<a href="{{case.data.info.abstract.link}}">
+							<button class="button button--primary button--small">
+								<span class="button__text">
+									view online
+								</span>
+							</button>
+						</a>
+					</div>
+					<div class="col-6 col-12-xs">
+						{% for description in case.data.info.abstract.descriptions %}
+							<div class="abstract-container__description">
+								<h4>{{ description.title }}</h4>
+								<p>{{ description.text }}</p>
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+			{% include work, data: case.data.info.abstract %}
+		</div>
+	</section>
+
+	{% for case in collections.cases %}
+		{{case.data.info.data.info}}
+	{% endfor %}
+
+    <section class="abstract-text" class="fade-bg-black">
+		<p class="bg-text">immersion</p>
+		<p class="bg-text-small">imme<br/>rsion</p>
+	</section>
+
+    <section class="fade-bg-black">
+		{% include section-header, title: "About", number: "02", type: "large" %}
+		<div class="about">
+			<div class="slider slider-large" data-js-item="slider">
+				<div class="grid about__descriprion">
+					<h4>{{ case.data.info.about.title }}</h4>
+					<p>
+					{% for description in case.data.info.about.descriptions %}
+						{{ description }}<br/><br/>
+					{% endfor %}
+					</p>
+				</div>
+				{% include swiper-container, slides: case.data.info.about.slides %}
+				<div class="quote">
+					<p class="quote__speach">
+						<svg width="80" height="50" viewBox="0 0 80 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M23.8298 0.0314174C12.6444 3.63492 0 12.2833 0 29.0997C0 41.5918 8.02432 50 19.2097 50C28.4498 50 34.0426 43.7539 34.0426 36.5469C34.0426 29.5801 29.4225 25.9766 20.4255 24.0548C12.8875 22.6134 7.53799 21.4122 7.53799 16.1271C7.53799 9.64075 16.535 4.11538 24.5593 1.47281C25.5319 0.992354 25.0456 -0.208827 23.8298 0.0314174ZM69.7872 0.0314174C58.6018 3.63492 45.9574 11.5626 45.9574 28.379C45.9574 40.8711 53.9818 50 65.1672 50C74.4073 50 80 43.7539 80 36.5469C80 29.5801 75.3799 25.9766 66.383 24.0548C58.845 22.6134 53.4954 21.4122 53.4954 16.1271C53.4954 9.64075 62.4924 4.11538 70.5167 1.47281C71.4894 0.992354 71.003 -0.208827 69.7872 0.0314174Z" fill="white"/>
+						</svg>
+						{{ case.data.info.about.quote.text }}
+					</p>
+					<p class="quote__author">
+						<span>&#8212; {{ case.data.info.about.quote.author.name }}</span>, 
+						{{ case.data.info.about.quote.author.position }}
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+    <section>
+		{% include section-header, title: "Design / UX", number: "03", type: "large" %}
+		<div class="design">
+			<div class="grid design__descriprion">
+				<h4>{{ case.data.info.design.title }}</h4>
+				<p>
+				{% for description in case.data.info.design.descriptions %}
+					{{ description }}<br/><br/>
+				{% endfor %}
+				</p>
+				<div class="grid slider-containter__left">
+					<div class="slider slider__alternate-slides col-8 col-12-xs" data-js-item="slider">
+						{% include swiper-container, slides: case.data.info.design.discriptionedSlides.slides %}
+					</div>
+					<div class="description col-4 col-12-xs">
+						<span>{{ case.data.info.design.discriptionedSlides.title }}</span>
+						<p>{{ case.data.info.design.discriptionedSlides.text }}</p>
+					</div>
+				</div>
+				<div class="design__media col-8 col-12-xs">
+					{% include image-teaser, data: case.data.info.design %}
+					<p class="teaser-description">
+						<span>{{ case.data.info.design.image.name }}</span> 
+						{{ case.data.info.design.image.text }}
+					</p>
+				</div>
+			</div>
+			<div class="slider slider__alternate-slides" data-js-item="slider">
+				<div class="grid">
+					{% include swiper-container, slides: case.data.info.design.slides %}
+				</div>
+			</div>
+		</div>
+	</section>
+
+    <section>
+		{% include section-header, title: "Content", number: "04", type: "large" %}
+		<div class="content-container--wrapper">
+			<div class="content-container">
+				<div class="grid content-container__descriprion">
+					<h4>{{ case.data.info.content.title }}</h4>
+					<p>
+					{% for description in case.data.info.content.descriptions %}
+						{{ description }}<br/><br/>
+					{% endfor %}
+					</p>
+				</div>
+				<div class="content-container__media">
+					{% include image-teaser, data: case.data.info.content %}
+					<p class="teaser-description">
+						<span>{{ case.data.info.content.teaserDescription.name }}</span> 
+						{{ case.data.info.content.teaserDescription.text }}
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+    <section class="fade-bg-black">
+		{% include section-header, title: "Technology", number: "05", type: "large" %}
+			<div class="technology">
+				<div class="technology__overview grid">
+					<div class="overview-container col-5 col-12-xs">
+						<div class="technology__description">
+							<h3>{{ case.data.info.technology.info.leftSection.title }}</h3>
+							<p>{{ case.data.info.technology.info.leftSection.text }}</p>
+						</div>
+						<div class="technology__media-content">
+							<picture class="technology__picture">
+								<source media="(max-width: 599px)"
+										srcset="{{ case.data.info.technology.images[1].mobileSrc }}" type="image/webp" />
+								<source media="(min-width: 600px) and (max-width: 899px)"
+										srcset="{{ case.data.info.technology.images[1].tabletSrc }}" type="image/webp" />
+								<source media="(min-width: 900px)"
+										srcset="{{ case.data.info.technology.images[1].desktopSrc }}" type="image/webp" />
+								<img loading="lazy" src="{{ case.data.info.technology.images[1].fallbackSrc }}"
+									alt="{{ case.data.info.technology.images[1].altText }}"/>
+							</picture>
+						</div>
+					</div>
+					<div class="overview-container col-7 col-12-xs">
+						<div class="technology__media-content">
+							<picture class="technology__picture">
+								<source media="(max-width: 599px)"
+										srcset="{{ case.data.info.technology.images[0].mobileSrc }}" type="image/webp" />
+								<source media="(min-width: 600px) and (max-width: 899px)"
+										srcset="{{ case.data.info.technology.images[0].tabletSrc }}" type="image/webp" />
+								<source media="(min-width: 900px)"
+										srcset="{{ case.data.info.technology.images[0].desktopSrc }}" type="image/webp" />
+								<img loading="lazy" src="{{ case.data.info.technology.images[0].fallbackSrc }}"
+									alt="{{ case.data.info.technology.images[0].altText }}"/>
+							</picture>
+						</div>
+						<div class="technology__description">
+							<h3>{{ case.data.info.technology.info.rightSection.title }}</h3>
+							<p>{{ case.data.info.technology.info.rightSection.text }}</p>
+						</div>
+					</div>
+				</div>
+				<div class="quote">
+					<p class="quote__speach">
+						<svg width="80" height="50" viewBox="0 0 80 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M23.8298 0.0314174C12.6444 3.63492 0 12.2833 0 29.0997C0 41.5918 8.02432 50 19.2097 50C28.4498 50 34.0426 43.7539 34.0426 36.5469C34.0426 29.5801 29.4225 25.9766 20.4255 24.0548C12.8875 22.6134 7.53799 21.4122 7.53799 16.1271C7.53799 9.64075 16.535 4.11538 24.5593 1.47281C25.5319 0.992354 25.0456 -0.208827 23.8298 0.0314174ZM69.7872 0.0314174C58.6018 3.63492 45.9574 11.5626 45.9574 28.379C45.9574 40.8711 53.9818 50 65.1672 50C74.4073 50 80 43.7539 80 36.5469C80 29.5801 75.3799 25.9766 66.383 24.0548C58.845 22.6134 53.4954 21.4122 53.4954 16.1271C53.4954 9.64075 62.4924 4.11538 70.5167 1.47281C71.4894 0.992354 71.003 -0.208827 69.7872 0.0314174Z" fill="white"/>
+						</svg>
+						{{ case.data.info.technology.quote.text }}
+					</p>
+					<p class="quote__author">
+						<span>&#8212; {{ case.data.info.technology.quote.author.name }}</span>, 
+						{{ case.data.info.technology.quote.author.position }}
+					</p>
+				</div>
+				<div picture class="technology__statistics grid">
+					{% for statistic in case.data.info.technology.statistics %}
+						<div class="technology__statistics-item col-4 col-12-xs">
+							<div class="technology__statistics__data">
+								<div class="technology__statistics__data amount">{{ statistic.amount }}</div>
+								<div class="technology__statistics__data metric">{{ statistic.metric }}</div>
+							</div>
+							<div class="technology__statistics__description">{{ statistic.description }}</div>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+	</section>
+
+    <section>
+		{% include section-header, title: "Work mode", number: "06", type: "large" %}
+		<div class="slider" data-js-item="slider">
+			<div class="grid">
+				<h4>{{ case.data.info.slider.title }}</h4>
+				<p>{{ case.data.info.slider.text }}</p>
+			</div>
+			{% include swiper-container, slides: case.data.info.slider.slides %}
+		</div>
+	</section>
+
+    <section>
+		{% include section-header, title: "Hey There", number: "0x", type: "large" %}
+		{% include job-teaser, data: landingpage %}
+	</section>
+
+    <section>
+		{% include next-case, data: case %}
+	</section>
+</main>
+
+{% include footer, data: global %}

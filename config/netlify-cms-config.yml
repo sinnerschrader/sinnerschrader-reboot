@@ -14,6 +14,11 @@ editor:
 publish_mode: editorial_workflow
 
 collections:
+  - label: "Case"
+    name: "case"
+    folder: "src/cases"
+    slug: "{{title}}"
+
   - label: "Job"
     name: "job"
     folder: "src/jobs"

@@ -3,7 +3,7 @@ import { SlideIn } from "./animate-slidein";
 import { BackgroundScrollAnimation } from "./bg-scroll-animation";
 import { CareerContact } from "./careerContact";
 import { FilterList } from "./jobs";
-import { Locations } from "./locations";
+import { TabGroup } from "./tab-group";
 import { Navigation } from "./navigation";
 import { OfferingHeader } from "./offering-header";
 import { Offerings } from "./offerings";
@@ -15,7 +15,11 @@ import { Video } from "./video.js";
 
 (() => {
 	if (isModuleNeeded("locations")) {
-		new Locations();
+		new TabGroup(".locations");
+	}
+
+	if (isModuleNeeded("works")) {
+		new TabGroup(".works");
 	}
 
 	if (isModuleNeeded("slider")) {

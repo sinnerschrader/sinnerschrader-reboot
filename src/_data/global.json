@@ -6,6 +6,11 @@
 		"links": [
 			{
 				"baseUrl": "",
+				"subUrl": "/cases.html",
+				"linkText": "Cases"
+			},
+			{
+				"baseUrl": "",
 				"subUrl": "/jobs.html",
 				"linkText": "Careers"
 			}

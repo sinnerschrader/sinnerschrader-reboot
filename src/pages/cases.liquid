@@ -1,0 +1,46 @@
+---
+title: SinnerSchrader
+layout: default
+permalink: cases.html
+bodyClass: is-bg-scroll
+dataJsItem: bg-scroll-animation
+renderData: filterbar
+---
+
+{% include navigation, data: global %}
+
+<main class="cases-page">
+    <section class="fade-bg-black cases-page__intro" data-no-offset-top>
+        <div class="grid">
+	        <h1 class="headline-203 col-5 col-12-xs">
+		        lorem ipsum<br>
+		        <span class="headline-201">our work</span>
+	        </h1>
+        </div>
+        <div class="grid">
+        </div>
+    </section>
+	<section class="fade-bg-black cases-page--teaser">
+		{% capture imageTeaserContent %}
+		{% include teaser-interactive-container, data: collections.cases[0].data %}
+		{% endcapture %}
+        {% include image-teaser, data: collections.cases[0].data.info, content: imageTeaserContent %}
+	</section>
+    <!-- Open / Close Filterbar MOBILE ONLY -->
+    <section id="js-filter-list" class="filter-list">
+        <section class="filter-list__cases">
+            {% include section-header, title: "Cases", number: "01", type: "medium" %}
+            {% include works %}
+        </section>
+    </section>
+
+    <section>
+		{% include section-header, title: "Hey There", number: "02", type: "large" %}
+		{% include job-teaser, data: landingpage %}
+	</section>
+
+</main>
+
+<div class="fade-bg-black">
+    {% include footer, data: global %}
+</div>

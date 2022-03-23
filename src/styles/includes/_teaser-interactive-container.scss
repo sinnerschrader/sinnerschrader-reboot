@@ -1,0 +1,77 @@
+.teaser-interactive-container {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	height: 100%;
+	overflow: hidden;
+
+	.is-dark & {
+		background: $color-primary--white;
+		color: $color-primary--black;
+
+		@include bp-s-and-lower {
+			background: $color-primary--black;
+			color: $color-primary--white;
+		}
+	}
+
+	&__first-page {
+		box-sizing: border-box;
+		flex-shrink: 0;
+		width: 100%;
+		padding: $spacing--600;
+
+		@include bp-s-and-lower {
+			padding: $spacing--600 $spacing--600 0 0;
+		}
+	}
+
+	&__headline {
+		@include headline-200();
+
+		margin-top: 0;
+		margin-bottom: $spacing--400;
+
+		&--serif {
+			@include headline-201;
+		}
+
+		&--serif-italic {
+			@include headline-202;
+		}
+	}
+
+	&__text {
+		@include paragraph-200();
+
+		margin-top: 0;
+		margin-bottom: $spacing--500;
+		color: $color-primary--white;
+
+		.is-dark & {
+			color: $color-primary--black;
+		}
+
+		/* stylelint-disable-next-line order/order */
+		@include bp-s-and-lower {
+			color: $color-primary--black;
+
+			.is-dark & {
+				color: $color-primary--white;
+			}
+		}
+	}
+
+	&__button {
+		@include button-animation();
+
+		padding: $spacing--200 0;
+		width: 20rem;
+		border-radius: 2.4rem;
+
+		@include bp-s-and-lower {
+			background-color: $color-primary--gray;
+			color: $color-primary--white;
+		}
+	}
+}

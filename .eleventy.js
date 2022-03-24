@@ -23,7 +23,6 @@ module.exports = (eleventyConfig) => {
 		strictFilters: false,
 	});
 
-	eleventyConfig.setTemplateFormats(["liquid", "njk"]);
 	eleventyConfig.setTemplateFormats(["md", "liquid", "njk"]);
 
 	eleventyConfig.addLiquidFilter("groupByDiscipline", function (items, discipline) {

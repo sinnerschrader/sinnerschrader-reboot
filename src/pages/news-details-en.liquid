@@ -1,0 +1,93 @@
+---
+title: SinnerSchrader
+layout: default.liquid
+pagination:
+  data: collections.newsEn
+  size: 1
+  alias: article
+permalink: "newsEn/{{ article.data.title | slug }}-{{ article.data.date | slug }}.html"
+bodyClass: is-bg-scroll
+dataJsItem: bg-scroll-animation
+---
+{% include navigation, data: global %}
+
+<main class="news-details-page">
+    {% assign newsByDate = collections.newsEn | date | reverse %}
+
+	<section class="fade-bg-black news-details-page__title">
+		<div class="image-teaser">
+			<picture class="image-teaser__picture">
+				{% if article.data.plainHeadlineText %}
+					<img loading="lazy" src="{{ article.data.image }}"
+						alt="{{ article.data.altText }}"/>
+				{% else %}
+					{% if article.data.image.length > 0 %}
+						<img alt="{{ article.data.title }}" class="news-item-image"
+							loading="lazy" src="{{ article.data.image }}">
+					{% else %}
+						{% comment %} TODO: [NEWS] UPDATE DEFAULT IMAGE {% endcomment %}
+						<img alt="{{ article.data.title }}" class="news-item-image"
+							loading="lazy" src="/assets/images/fallback/culture1.jpg">
+					{% endif %}
+				{% endif %}
+			</picture>
+			<div class="content-box">
+				<div class="title">
+					<h3>{{ article.data.title }}</h3>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="grid">
+			{% include share-buttons, derection:"row" title:"" link:true facebook:true twitter:true devTo:true xing:true linkedIn:true %}
+		</div>
+	</section>
+
+	<section class="news-details-page__article">
+		<div class="grid">
+			{% if article.data.plainHeadlineText %}
+				<div class="col-5 col-12-xs introText">
+					<p>{{ article.data.introText }}</p>
+				</div>
+				<div class="col-7 col-12-xs articleText">
+					<p>{{ article.data.articleText }}</p>
+				</div>
+            {% else %}
+				<div class="col-12 col-12-xs articleText">
+					<p>{{ article.data.content }}</p>
+				</div>
+            {% endif %}
+		</div>
+	</section>
+
+	<section class="list">
+        <div class="grid">
+			{% for article in newsByDate limit: 3 %}
+				<div class="list__item col-4 col-6-s col-6-xs">
+					<a class="list__anchor" href="{{ article.data.title | slug }}-{{ article.data.date | slug }}.html">
+						<div class="list__image-wrapper">
+							{% if article.data.image.length > 0 %}
+								<img alt="{{ article.data.title }}" class="news-item-image"
+									loading="lazy" src="{{ article.data.image }}">
+							{% else %}
+								{% comment %} TODO: [NEWS] UPDATE DEFAULT IMAGE {% endcomment %}
+								<img alt="{{ article.data.title }}" class="news-item-image"
+									loading="lazy" src="/assets/images/fallback/culture1.jpg">
+							{% endif %}
+						</div>
+						<div class="list__item-title">{{ article.data.title }}</div>
+					</a>
+				</div>
+			{% endfor %}
+		</div>
+	</section>
+
+	<section class="fade-bg-black">
+		{% include section-header, title: "Here we are", number: "06", type: "medium" %}
+		{% include locations %}
+	</section>
+</main>
+
+{% include footer, data: global %}

@@ -1,0 +1,6 @@
+---
+image: https://sinnerschrader.news/media/filer_public_thumbnails/filer_public/82/c4/82c470fb-feb2-477b-9882-ca0862dcaa7a/varfoldersdjk8pxf42x64d8fxslz8jcc8fc0000gnttmpwhlefo__480x288_q85_crop_subsampling-2_upscale.png
+date: "2010-07-12"
+title: Relaunch für Berliner Bank
+content: <div class="newsbody"><p>SinnerSchrader hat Konzept und Design für die neue Website der Berliner Bank entwickelt und technisch umgesetzt. Mit dem Relaunch geht auch erstmals eine mobile Version online.</p><p>Neues Design, intuitive Navigation und eine schnellere Hinführung zum umfangreichen Produkt- und Serviceangebot sind einige der wesentlichen Veränderungen auf <a href="http&#58;//www.berlinerbank.de/">www.berliner-bank.de</a>. „Dank der intuitiven Benutzerführung gelangt der Konsument direkt zu den für ihn relevanten Themen und erfährt schnell mehr über Produkt- und Angebotsdetails“, verspricht Dirk Hibbeler, Director SinnerSchrader Frankfurt.</p><p>Mit der mobilen Website können die Kunden jetzt auch unterwegs einfach ihre Bankgeschäfte mit dem Smartphone erledigen und den Kundenservice direkt kontaktieren. Die Berliner Bank ist eine Niederlassung der Deutsche Bank Privat- und Geschäftskunden AG. Die Deutsche Bank gehört bereits seit 1998 zu den Kunden von SinnerSchrader.</p></div>
+---

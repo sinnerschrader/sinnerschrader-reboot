@@ -1,0 +1,6 @@
+---
+image: https://sinnerschrader.news/media/filer_public_thumbnails/filer_public/2e/b7/2eb74d4f-22fb-4421-b516-2f8b3c94e857/pm-becks-720x450.png__480x288_q85_crop_subsampling-2_upscale.jpg
+date: "2015-10-07"
+title: SinnerSchrader überarbeitet Digitalauftritt von Beck’s
+content: <div class="newsbody"><p>Grundlegend erneuert und mit klarem mobilen Fokus - so präsentiert sich Beck’s ab sofort im Netz. Die im responsive Design gestaltete www.becks.de richtet sich insbesondere an die Nutzer von Smartphones und Tablets. Sie machen inzwischen die Mehrheit aller Besucher aus, die mit der Marke der Brauerei-Gruppe Anheuser-Busch InBev digital interagieren.</p><p>Auf <a href="http&#58;//www.becks.de/">www.becks.de</a> erhalten Interessierte alle Informationen zu den verschiedenen Biersorten, der Unternehmensgeschichte sowie zu allen großen, markenrelevanten Themen wie z.B. Musikfestivals. Die Seite dient zudem als Plattform, auf der Inhalte der verschiedenen Marken noch einmal gebündelt erlebbar werden. </p><p>Die übersichtliche Onepager-Struktur ermöglicht den Nutzern die schnelle Navigation und schafft immer neue Berührungspunkte mit der Marke. SinnerSchrader betreut Beck’s seit zwei Jahren. Der Aufgabenbereich umfasst neben dem digitalen Markenauftritt von Beck’s, die Betreuung aller Online-Kanäle und die digitale Aktivierung von Markenkampagnen. </p></div>
+---

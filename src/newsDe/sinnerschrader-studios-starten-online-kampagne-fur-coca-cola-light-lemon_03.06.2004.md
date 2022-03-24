@@ -1,0 +1,6 @@
+---
+image: ""
+date: "2004-06-03"
+title: SinnerSchrader Studios starten Online-Kampagne für Coca-Cola light Lemon
+content: <div class="newsbody"><p><strong>Die neu gegründeten SinnerSchrader Studios betreuen die Marke Coca-Cola light Lemon mit einer Promotion-Kampagne im Online-Kanal. Ziel der Kampagne auf www.coke-light.de ist die Positionierung des innovativen Produkts in einer hedonistisch orientierten Lebenswelt.</strong></p><p>Im Mittelpunkt der Kampagne "Folge Deinem Geschmack" stehen drei interaktive Spiele. Hochwertiges Design, das sich am Illustrationsstil von Zeitgeistmagazinen orientiert, und elegant programmierte Flash-Technologie sorgen dafür, dass dem Besucher ein zeitgemäßes Produkt- und Markenerlebnis vermittelt wird.</p><p>Neben attraktiven Gewinnen –jede Woche winken 10.000 Euro und weitere Fashion Items –werden die relevanten Zielgruppen über ihre avancierte Internetaffinität und ihr ausgeprägtes Markenbewusstsein angesprochen. Spielfreude, Lust an Design und Genuss von Coke light Lemon finden sich in einer Welt zusammen. Über die Online-Präsentation wird das Produkt lebendig und verbindet sich mit einem identifizierbaren Lebensgefühl.</p><p><a href="http&#58;//coke-light.de">coke-light.de</a></p><a href="http&#58;//coke-light.de"></a><p><a href="http&#58;//coke-light.de"></a></p></div>
+---

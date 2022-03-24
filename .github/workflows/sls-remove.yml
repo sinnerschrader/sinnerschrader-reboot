@@ -8,16 +8,15 @@ jobs:
     name: remove
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - name: Download Node
-      uses: actions/setup-node@v3
-      with:
-        node-version: "14.x"
-    - name: Install Serverless Framework
-      run: npm install -g serverless
-    - name: Serverless Authentication
-      run: sls config credentials --provider aws --key ${{ secrets.AWS_ACCESS_KEY_ID }} --secret ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-    - name: Remove all AWS Resources
-      run: serverless remove --stage prod --verbose
-      working-directory: "./user_service"
-
+      - uses: actions/checkout@v3
+      - name: Download Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: "14.x"
+      - name: Install Serverless Framework
+        run: npm install -g serverless
+      - name: Serverless Authentication
+        run: sls config credentials --provider aws --key ${{ secrets.AWS_ACCESS_KEY_ID }} --secret ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      - name: Remove all AWS Resources
+        run: serverless remove --stage prod --verbose
+        working-directory: "./user_service"

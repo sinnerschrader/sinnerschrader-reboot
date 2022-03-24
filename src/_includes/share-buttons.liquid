@@ -1,8 +1,8 @@
-<div class="share-buttons"  data-js-item="share-buttons">
+<div class="share-buttons" data-js-item="share-buttons">
     <div class="share-buttons__text">
         {{title}}
     </div>
-    <div class="share-buttons__button-grid">
+    <div class="share-buttons__button-grid {{derection}}">
         {% if link == true %}
         {% include button-notext, iconSrc:"/assets/svg/Link-S.svg" option:"secondary" size:"small" aria:"copy link to share" isReference:"linkShareButton" alt:"Link Icon"%}
         {%endif%}

@@ -1,0 +1,131 @@
+---
+title: SinnerSchrader
+layout: default
+permalink: news-de.html
+bodyClass: is-bg-scroll
+dataJsItem: bg-scroll-animation
+---
+{% include navigation, data: global %}
+
+<main class="news-page">
+    {% assign newsByDate = collections.newsDe | date | reverse %}
+	<section class="fade-bg-black news-page__intro grid">
+        <div class="title">
+            <div class="new-label">new</div>
+            {% if newsByDate[0].data.plainHeadlineText %}
+                <h1>
+                    {{ newsByDate[0].data.plainHeadlineText }}
+                    <span class="headline-102"> {{ newsByDate[0].data.italicHeadlineText }}</span>
+                </h1>
+            {% else %}
+                <h1>
+                    {{ newsByDate[0].data.title }}
+                </h1>
+            {% endif %}
+        </div>
+        <div class="banner">
+            {% if newsByDate[0].data.image.length > 0 %}
+                <img alt="{{ newsByDate[0].data.title }}" class="banner-image"
+                    loading="lazy" src="{{ newsByDate[0].data.image }}">
+            {% else %}
+                {% comment %} TODO: [NEWS] UPDATE DEFAULT IMAGE {% endcomment %}
+                <img alt="{{ newsByDate[0].data.title }}" class="banner-image"
+                    loading="lazy" src="/assets/images/fallback/culture1.jpg">
+            {% endif %}
+            <a class="continue-reading" href="newsDe/{{ newsByDate[0].data.title | slug }}-{{ newsByDate[0].data.date | slug }}.html">
+                continue reading
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 26L26.5858 17.4142C27.3668 16.6332 27.3668 15.3668 26.5858 14.5858L18 6"
+                        stroke="#fff" stroke-width="2"/>
+                    <path d="M4 16L27 16" stroke="#fff" stroke-width="2"/>
+                </svg>
+            </a>
+        </div>
+        <span class="popular-news-subheader">popular news</span>
+        <div class="popular-news">
+            {% for article in newsByDate limit: 3 offset: 1 %}
+                <div class="news-item">
+                    <a href="newsDe/{{ article.data.title | slug }}-{{ article.data.date | slug }}.html">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18 26L26.5858 17.4142C27.3668 16.6332 27.3668 15.3668 26.5858 14.5858L18 6"
+                                stroke="#fff" stroke-width="2"/>
+                            <path d="M4 16L27 16" stroke="#fff" stroke-width="2"/>
+                        </svg>
+                        <p>{{ article.data.title }}</p>
+                    </a>
+                </div>
+            {% endfor %}
+            <img alt="Ellipse element" class="news-ellipse-element"
+                src="/assets/svg/news-ellipse-element.svg" />
+            <img alt="Circle element" class="news-circle-element"
+                src="/assets/svg/news-circle-element.svg" />
+        </div>
+	</section>
+
+    <section id="js-filter-list" class="filter-list">
+        <div class="grid">
+			<h2 class="headline-101">
+                News
+                <a class="language-switcher" href="/news-en.html">
+                    <span>EN</span>
+                    <span class="current">DE</span>
+                </a>
+            </h2>
+		</div>
+        {% comment %} TODO: [NEWS] IMPROVE (hidden) AFTER TAGGING {% endcomment %}
+        {% include filter-container, filterListClass: "filter-news-list", additionalClass: "hidden" %}
+    </section>
+    <!-- Categories in the listing -->
+    <section id="js-listing" class="list">
+        <div class="grid">
+            {% comment %} TODO: [NEWS] IMPROVE AFTER TAGGING {% endcomment %}
+            <!-- Filter out items for each discipline -->
+            {% comment %} {% assign creativeItems = newsByDate | groupByDiscipline: 'creative' %} {% assign techItems = newsByDate |
+            groupByDiscipline: 'tech' %} {% assign managementItems = newsByDate | groupByDiscipline: 'Account Management' %} {% assign
+            strategyItems = newsByDate | groupByDiscipline: 'strategy' %} {% endcomment %}
+
+            {% comment %} TODO: [NEWS] IMPROVE AFTER TAGGING {% endcomment %}
+            <!-- Render their dedicated lists -->
+            {% comment %} {% include filter-list-category-block-view, entityName: "newsDe", discipline: 'Account Manage&shy;ment', items: managementItems %} {% include filter-list-category-block-view, entityName: "newsDe",
+            discipline: 'Creative', items: creativeItems %} {% include filter-list-category-block-view, entityName: "newsDe", discipline: 'Strategy', items: strategyItems %} {%
+            include filter-list-category-block-view, entityName: "newsDe", discipline: 'Tech', items: techItems %} {% endcomment %}
+
+            {% for article in newsByDate limit: 9 offset: 4 %}
+				<div class="list__item col-4 col-6-s col-6-xs">
+					<a class="list__anchor" href="/newsDe/{{ article.data.title | slug }}-{{ article.data.date | slug }}.html">
+						<div class="list__image-wrapper">
+							{% if article.data.image.length > 0 %}
+								<img alt="{{ article.data.title }}" class="news-item-image"
+									loading="lazy" src="{{ article.data.image }}">
+							{% else %}
+								{% comment %} TODO: [NEWS] UPDATE DEFAULT IMAGE {% endcomment %}
+								<img alt="{{ article.data.title }}" class="news-item-image"
+									loading="lazy" src="/assets/images/fallback/culture1.jpg">
+							{% endif %}
+						</div>
+						<div class="list__item-title">{{ article.data.title }}</div>
+					</a>
+				</div>
+			{% endfor %}
+
+            <a href="/de/archive/page1.html">
+                <button class="button button--primary button--small">
+                    <span class="button__text">
+                        archive
+                    </span>
+                </button>
+            </a>
+		</div>
+    </section>
+
+	<section class="news-page__bg-text">
+        <p>funny <span>insider</span></p>
+	</section>
+
+	<section>
+		{% include section-header, title: "Here we are", number: "06", type: "medium" %}
+		{% include locations %}
+	</section>
+</main>
+
+{% include footer, data: global %}

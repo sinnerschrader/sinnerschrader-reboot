@@ -1,0 +1,6 @@
+---
+image: https://sinnerschrader.news/media/filer_public_thumbnails/filer_public/5e/fc/5efc124a-37a7-4da8-8494-10bcb97752be/varfoldersdjk8pxf42x64d8fxslz8jcc8fc0000gnttmpbjyrpd__480x288_q85_crop_subsampling-2_upscale.png
+date: "2012-05-11"
+title: Nail for Digital Kicker
+content: <div class="newsbody"><p>The Art Directors Club for Germany (ADC) has awarded the country’s top creativity prize. Among the winners&#58; the <a href="http&#58;//digitalfoosball.com">Digital Kicker</a> by SinnerSchrader, a project which received a bronze nail in the “Spatial Digital Media Formats” category.</p><p>More about the Digital Kicker at <a href="http&#58;//digitalfoosball.com">http&#58;//digitalfoosball.com</a></p><address><img alt="" class="alignnone size-full wp-image-768" height="484" src="http&#58;//www.sinnerschrader.com/files/2012/05/414519_10150815796653589_737073588_9842065_1129820179_o.jpeg" width="648"/></address><p><img alt="" class="alignnone size-full wp-image-763" height="430" src="http&#58;//www.sinnerschrader.com/files/2012/05/DSC_0176-648.png" width="648"/></p></div>
+---

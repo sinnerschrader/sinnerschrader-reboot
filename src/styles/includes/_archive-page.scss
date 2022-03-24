@@ -1,0 +1,61 @@
+.archive-page {
+	&__intro {
+		@include spacing-900(margin-top);
+		@include spacing-900(margin-bottom);
+
+		h1 {
+			color: $color-primary--black;
+
+			.is-dark & {
+				color: $color-primary--white;
+			}
+		}
+	}
+
+	.list {
+		&__item {
+			padding-right: 10vw;
+			border-bottom: 0;
+
+			&-title {
+				font-family: $font-sans-serif-light;
+
+				@include bp-l {
+					@include subheadline-200();
+				}
+
+				@include bp-xl {
+					@include subheadline-200();
+				}
+			}
+		}
+
+		&__image-wrapper {
+			position: relative;
+			overflow: hidden;
+			margin-bottom: 2vw;
+
+			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+			}
+		}
+
+		&__image-wrapper::before {
+			content: "";
+			display: block;
+			width: 100%;
+			padding-top: 100%;
+		}
+	}
+
+	&__pagination {
+		a > p {
+			margin-right: 2em;
+			text-transform: uppercase;
+			display: inline;
+		}
+	}
+}

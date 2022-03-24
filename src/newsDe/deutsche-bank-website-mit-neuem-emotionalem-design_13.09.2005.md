@@ -1,0 +1,6 @@
+---
+image: ""
+date: "2005-09-13"
+title: Deutsche Bank Website mit neuem, emotionalem Design
+content: <div class="newsbody"><p><strong>Seit heute präsentiert sich das Privat- und Geschäftskundenportal der Deutschen Bank im neuen, attraktiven und modernen Design. Bei der Umsetzung arbeitete die Bank mit den SinnerSchrader Studios Frankfurt zusammen. SinnerSchrader betreut seit 1999 die Online-Aktivitäten für das Privatkundengeschäft der Deutschen Bank.</strong></p><p>Ziel des Relaunches war es, das Selbstverständnis der Bank "Leistung durch Leidenschaft" internetgerecht zu interpretieren und die Usability den aktuellen Nutzungsgewohnheiten anzupassen. Im Ergebnis zeigt sich die aktuelle Website-Generation so wertig und großzügig wie nie zuvor. Verantwortlich hierfür ist ein neues, vollflächiges Format von 1024 x 768 Pixeln, eine freundlichere Farbgebung sowie eine emotionalere Bilderwelt.</p><p>Die Navigation wurde nochmals vereinfacht, die Service-Elemente der Website weiter fokussiert. Alle persönlichen Banking-Funktionen sind jetzt bereits auf der Einstiegsseite schnell anwählbar. Eine klare und präzise Sprache sowie die fünfspaltige Struktur sorgen jederzeit für eine hervorragende Orientierung.</p></div>
+---

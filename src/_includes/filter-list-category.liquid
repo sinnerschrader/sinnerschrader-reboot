@@ -1,0 +1,22 @@
+<div class="list__category grid" id="js-list-category__{{ discipline | | downcase }}">
+	<div class="col-12-xs col-6-s col-5 hidden-xs list__category-title">
+		<h2 class="list__category-headline col-12-xs col-6-s col-5">{{ discipline }}</h2>
+	</div>
+
+	<h2 class="list__category-headline col-12-xs col-5 visible-xs">{{ discipline }}</h2>
+
+	<div class="col-12-xs col-6-s col-7">
+		<ul class="list__list">
+			{% for item in items %}
+			<li class="list__item" data-location="{{ item.data.location | downcase }}" data-discipline="{{ item.data.discipline | downcase }}">
+				<a class="list__anchor" href="/{{ entityName }}/{{ item.data.title | slug }}-{{ item.data.location | slug }}.html">
+					<div class="list__item-title">{{ item.data.title }} (f/m/d/-)</div>
+					<div class="list__item-location">
+						{{ item.data.location }}
+					</div>
+				</a>
+			</li>
+			{% endfor %}
+		</ul>
+	</div>
+</div>

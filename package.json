@@ -5,6 +5,7 @@
   "description": "SinnerSchrader website reboot",
   "main": "index.js",
   "scripts": {
+    "preinstall": "npx only-allow npm",
     "postinstall": "husky install",
     "start": "npm run dev",
     "dev": "run-p clean watch:html watch:js build:responsiveImages",

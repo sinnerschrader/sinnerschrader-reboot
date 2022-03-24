@@ -1,10 +1,12 @@
 <div class="job-teaser">
 	<div class="grid job-teaser__wrapper">
-		<div class="col-start-4 col-end-10 col-start-3-s col-end-11-s col-start-1-xs
+		<div class="col-start-1 col-end-7 col-start-3-s col-end-11-s col-start-1-xs
 			col-end-13-xs">
 			<h3 class="job-teaser__header">
-				{{ data.jobTeaser.headline.first }}
-				<span class="job-teaser__sketch">
+				<span>
+					{{ data.jobTeaser.headline.first }}
+				</span>
+				<span>
 					{{ data.jobTeaser.headline.second }}
 				</span>
 				<span class="switch">
@@ -15,7 +17,7 @@
 						{{ data.jobTeaser.headline.fourth }}
 					</span>
 				</span>
-				<br/>
+				<br />
 				{{ data.jobTeaser.headline.fifth }}
 				<span class="switch">
 					<span class="headline-201 switch-item">
@@ -29,10 +31,22 @@
 			<p class="job-teaser__text copy--gray">
 				{{ data.jobTeaser.copy }}
 			</p>
-			<a class="job-teaser__link" rel="external nofollow"
-				href="{{ data.jobTeaser.button.href }}">
+			<a class="job-teaser__link" rel="external nofollow" href="{{ data.jobTeaser.button.href }}">
 				<span class="text-scale">{{ data.jobTeaser.button.text }}</span>
 			</a>
+			<img alt="{{ data.jobTeaser.images.circleShape.alt }}" class="job-teaser__illustration0"
+				src="{{ data.jobTeaser.images.circleShape.src }}" />
+		</div>
+		<div class="col-start-7 col-end-12 col-start-3-s col-end-11-s col-start-1-xs
+			col-end-13-xs">
+			<div class="job-teaser__illustrations">
+				<img alt="{{ data.jobTeaser.images.logoLeftHalf.alt }}" class="job-teaser__illustration1"
+					src="{{ data.jobTeaser.images.logoLeftHalf.src }}" />
+				<img alt="{{ data.jobTeaser.images.logoRightHalf.alt }}" class="job-teaser__illustration2"
+					src="{{ data.jobTeaser.images.logoRightHalf.src }}" />
+				<img alt="{{ data.jobTeaser.images.ovalShape.alt }}" class="job-teaser__illustration3"
+					src="{{ data.jobTeaser.images.ovalShape.src }}" />
+			</div>
 		</div>
 	</div>
 </div>

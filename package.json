@@ -6,17 +6,17 @@
   "main": "index.js",
   "scripts": {
     "postinstall": "husky install",
-    "start": "npm run start:dev",
-    "start:dev": "run-p clean 11ty:watch esbuild:watch responsiveImages",
-    "build": "run-s clean esbuild:build 11ty:build responsiveImages",
-    "clean": "rimraf ./_site/",
-    "11ty:build": "eleventy",
-    "11ty:watch": "eleventy --serve",
-    "esbuild:build": "esbuild ./src/_includes/js/main.js --outfile=_site/bundle.js --bundle --minify",
-    "esbuild:watch": "esbuild ./src/_includes/js/main.js --sourcemap --outfile=_site/bundle.js --bundle --watch",
-    "responsiveImages": "rimraf ./_site/assets/images/ && node ./config/sharp.js",
-    "stylelint": "stylelint ./src/styles/**/*.scss",
-    "a11y-check": "pa11y-ci"
+    "start": "npm run dev",
+    "dev": "run-p clean watch:html watch:js build:responsiveImages",
+    "build": "run-s clean build:js build:html build:responsiveImages",
+    "build:html": "eleventy",
+    "build:js": "esbuild ./src/_includes/js/main.js --outfile=_site/bundle.js --bundle --minify",
+    "build:responsiveImages": "rimraf ./_site/assets/images/ && node ./config/sharp.js",
+    "watch:html": "eleventy --serve",
+    "watch:js": "esbuild ./src/_includes/js/main.js --sourcemap --outfile=_site/bundle.js --bundle --watch",
+    "lint:stylelint": "stylelint ./src/styles/**/*.scss",
+    "lint:a11y-check": "pa11y-ci",
+    "clean": "rimraf ./_site/"
   },
   "dependencies": {
     "lodash-es": "^4.17.21",

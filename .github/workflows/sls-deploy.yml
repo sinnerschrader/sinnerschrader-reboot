@@ -8,9 +8,9 @@ jobs:
     name: deploy
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2.4.0
+      - uses: actions/checkout@v3
       - name: Download Node
-        uses: actions/setup-node@v2.4.1
+        uses: actions/setup-node@v3
         with:
           node-version: "14.x"
       - name: Install Serverless Framework

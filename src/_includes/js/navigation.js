@@ -33,7 +33,7 @@ class Navigation {
 	bindEvents() {
 		this.detectScroll();
 
-		window.addEventListener("scroll", throttle(this.detectScroll.bind(this), 200));
+		window.addEventListener("scroll", throttle(this.detectScroll.bind(this), 50));
 		this.mobileToggleBtn.addEventListener("click", this.toggleMobilePanel.bind(this));
 	}
 

@@ -5,15 +5,16 @@ discipline: strategy
 contact: vicky
 workdayLink: https://www.accenture.com/de-de/careers/jobdetails?id=R00056027_de&title=Senior+%2f+Director+Content+Strategy+(w%2fm%2fx%2f-)+%7c+SinnerSchrader
 description: >-
-  SinnerSchrader is one of the leading digital agencies in Europe with a focus
-  on the design and development of digital products and services. More than 500
-  employees work on the digital transformation for companies such as Allianz,
-  Audi, Bosch, comdirect Bank and VW. SinnerSchrader was founded in 1996 and has
-  studios in Hamburg, Berlin, Frankfurt am Main, Munich, Zurich and Prague.
-  Since April 2017, SinnerSchrader has been part of Accenture Interactive.
+  SinnerSchrader is one of the leading design and technology agencies in Europe
+  with a focus on the design and development of digital products and services.
+  More than 500 employees work on the digital transformation for companies such
+  as ADAC, Audi, Bosch, comdirect bank and VW. SinnerSchrader was founded in
+  1996, has been listed on the stock exchange since 1999 and has studios in
+  Hamburg, Berlin, Frankfurt am Main, Munich, Zurich and Prague. SinnerSchrader
+  has been part of Accenture Interactive since April 2017.
 
 
-  We are currently looking for a Senior / Director Content Strategy (f/m/d/-) our new unit KORELATION.
+  We are currently looking for a Senior / Director Content Strategy (f/m/d/-) for our new unit KORELATION.
 
 
   KORELATION starts with around 40 colleagues from SinnerSchrader and Kolle Rebbe in the Speicherstadt and combines editorial with creative work processes. Content strategists, marketing and social media experts, journalists and creatives work together with data analysts according to the newsroom principle. The basis is a data-informed editorial process with a focus on overarching performance indicators. The aim is to enable clients to respond to changing user needs in real time.

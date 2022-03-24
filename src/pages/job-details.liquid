@@ -93,7 +93,7 @@ dataJsItem: bg-scroll-animation
 			<p>We look forward to hearing from you.</p>
 		</div>
 		<div class="col-start-10 col-end-13 col-start-11-s col-end-12-s col-start-1-xs col-end-13-xs">
-			{% include share-buttons, derection:"double-rows" title:"Share this job" link:true facebook:true twitter:true devTo:true xing:true linkedIn:true %}
+			{% include share-buttons, title:"Share this job" link:true facebook:true twitter:true devTo:true xing:true linkedIn:true %}
 		</div>
 	</section>
 	<section>{% include text-teaser, data: job-details.about %}</section>
@@ -110,4 +110,4 @@ dataJsItem: bg-scroll-animation
 	</section>
 </main>
 
-{% include footer, data: global %}
+{% include footer, data: global hasAccentureDisclaimer: true %}

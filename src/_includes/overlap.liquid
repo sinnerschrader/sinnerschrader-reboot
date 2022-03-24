@@ -5,9 +5,11 @@
 			<picture class="overlap__img--right">
 				<source srcset="{{ data.overlap.rightImage.webpSrc }}"
 				        type="image/webp" />
-				<img src="{{ data.overlap.rightImage.fallbackSrc }}"
+				<img loading="lazy"
+					 src="{{ data.overlap.rightImage.fallbackSrc }}"
 				     alt="{{ data.overlap.rightImage.altText }}"
-				     class="parallax-slow" />
+				     class="parallax-slow"
+				/>
 			</picture>
 			<div class="overlap__line-container">
 				<div class="overlap__line"></div>
@@ -19,11 +21,17 @@
 				<picture class="overlap__img--left">
 					<source srcset="{{ data.overlap.leftImage.webpSrc }}"
 					        type="image/webp" />
-					<img src="{{ data.overlap.leftImage.fallbackSrc }}"
+					<img loading="lazy"
+						 src="{{ data.overlap.leftImage.fallbackSrc }}"
 					     alt="{{ data.overlap.leftImage.altText }}"
-					     class="parallax-medium"/>
+					     class="parallax-medium"
+					/>
 				</picture>
-				<img class="overlap__circle" src="{{ data.overlap.overlapCircleSrc }}" alt="" />
+				<img loading="lazy"
+					 class="overlap__circle"
+					 src="{{ data.overlap.overlapCircleSrc }}"
+					 alt=""
+				/>
 			</div>
 		</div>
 		<article class="overlap__item overlap__txt col-start-9 col-end-12

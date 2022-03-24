@@ -31,8 +31,9 @@ export class FilterList {
 		}
 
 		// apply Eventlisteners
-		this.bindListeners();
 		this.createFilters();
+		this.setInitialFiltersFromQueryParams();
+		this.bindListeners();
 		this.detectScrollPositionOfFilterBar();
 	}
 
@@ -49,11 +50,13 @@ export class FilterList {
 					// adds filter value
 					this.filters[filter].push(value);
 					evt.target.parentElement.classList.add("is-active");
+					this.addFilterToQueryParam(filter, value);
 				} else {
 					// removes filter value
 					const index = this.filters[filter].indexOf(value);
 					this.filters[filter].splice(index, 1);
 					evt.target.parentElement.classList.remove("is-active");
+					this.removeFilterFromQueryParam(filter, value);
 				}
 
 				this.updateActiveFilterTags();
@@ -109,6 +112,9 @@ export class FilterList {
 
 			// update List
 			this.updateList();
+
+			// reset url params
+			this.resetURLParams();
 		});
 
 		// Mobile height calculation for filter and navigation flyout
@@ -123,6 +129,40 @@ export class FilterList {
 			window.addEventListener("resize", mobileHeight);
 			mobileHeight();
 		}
+	}
+
+	setInitialFiltersFromQueryParams() {
+		const jobFiltersFromUrlParams = this.getJobFiltersFromURLParams();
+
+		this.controls.querySelectorAll('input[type="checkbox"]').forEach((checkbox) => {
+			const filter = checkbox.getAttribute("name");
+			const value = checkbox.getAttribute("value");
+
+			if (jobFiltersFromUrlParams[filter].includes(value)) {
+				checkbox.checked = true;
+				checkbox.parentElement.classList.add("is-active");
+				this.filters[filter].push(value);
+			}
+		});
+
+		this.updateActiveFilterTags();
+		this.updateList();
+	}
+
+	removeFilterFromQueryParam(filter, value) {
+		const jobFiltersFromUrlParams = this.getJobFiltersFromURLParams();
+
+		jobFiltersFromUrlParams[filter] = jobFiltersFromUrlParams[filter].filter((filterItem) => filterItem !== value);
+
+		this.setURLParamsForJobFilter(jobFiltersFromUrlParams);
+	}
+
+	addFilterToQueryParam(filter, value) {
+		const jobFiltersFromUrlParams = this.getJobFiltersFromURLParams();
+
+		jobFiltersFromUrlParams[filter] = [...jobFiltersFromUrlParams[filter], value];
+
+		this.setURLParamsForJobFilter(jobFiltersFromUrlParams);
 	}
 
 	// Detect scroll position of filter bar for mobile floater button appearence
@@ -221,12 +261,13 @@ export class FilterList {
 			.filter((item) => {
 				const discipline = item.dataset.discipline;
 				// const level = item.dataset.level;
-				const location = item.dataset.location;
+				const office = item.dataset.office;
 				const excluded =
 					// discipline doesn't match and discipline section is active
 					(!this.filters["discipline"].includes(discipline) && this.isFilterActive("discipline")) ||
-					// location doesn't match and location section is active
-					(!this.filters["location"].includes(location) && this.isFilterActive("location"));
+					// office doesn't match and office section is active
+					(!this.filters["office"].includes(office) && this.isFilterActive("office"));
+
 				// all excluded ones are treated with an extra class
 				return excluded;
 			})
@@ -280,5 +321,46 @@ export class FilterList {
 		} else {
 			emptyStateMessage.classList.add(this.hiddenClass);
 		}
+	}
+
+	getJobFiltersFromURLParams() {
+		const url = new URL(window.location.href);
+		const params = new URLSearchParams(url.search);
+
+		const disciplineParam = params.get("discipline");
+		const officeParam = params.get("office");
+
+		const discipline = disciplineParam ? disciplineParam.split(",") : [];
+		const office = officeParam ? officeParam.split(",") : [];
+
+		return { discipline, office };
+	}
+
+	setURLParamsForJobFilter(newFilters) {
+		const url = new URL(window.location.href);
+		const { discipline, office } = newFilters;
+
+		if (discipline.length) {
+			url.searchParams.set("discipline", discipline.join(","));
+		} else {
+			url.searchParams.delete("discipline");
+		}
+
+		if (office.length) {
+			url.searchParams.set("office", office.join(","));
+		} else {
+			url.searchParams.delete("office");
+		}
+
+		history.replaceState({}, "", url);
+	}
+
+	resetURLParams() {
+		let url = new URL(window.location.href);
+
+		url.searchParams.delete("discipline");
+		url.searchParams.delete("office");
+
+		history.replaceState({}, "", url);
 	}
 }

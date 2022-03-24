@@ -24,18 +24,20 @@
 		     {% endif %}
 		     class="locations__panel">
 				<picture class="locations__content-picture is-small">
-					<source media="(max-width: 599px)" srcset="/assets/images/mobile/{{location.imageSmall}}" type="image/webp">
-					<source media="(min-width: 600px)" srcset="/assets/images/tablet/{{location.imageSmall}}" type="image/webp">
-					<source media="(min-width: 1200px)" srcset="/assets/images/desktop/{{location.imageSmall}}" type="image/webp">
-					<img src="/assets/images/fallback/{{location.imageFallbackSmall}}"
-					     alt="Small image of the {{location.name}} SinnerSchrader office">
+					<source media="(max-width: 599px)" srcset="./assets/images/mobile/{{location.imageSmall}}" type="image/webp">
+					<source media="(min-width: 600px)" srcset="./assets/images/tablet/{{location.imageSmall}}" type="image/webp">
+					<source media="(min-width: 1200px)" srcset="./assets/images/desktop/{{location.imageSmall}}" type="image/webp">
+					<img loading="lazy"
+						 src="./assets/images/fallback/{{location.imageFallbackSmall}}"
+					     alt="Small image of the {{location.name}} SinnerSchrader office" />
 				</picture>
 				<picture class="locations__content-picture is-large image-delay">
-					<source media="(max-width: 599px)" srcset="/assets/images/mobile/{{location.imageLarge}}" type="image/webp">
-					<source media="(min-width: 600px)" srcset="/assets/images/tablet/{{location.imageLarge}}" type="image/webp">
-					<source media="(min-width: 1200px)" srcset="/assets/images/desktop/{{location.imageLarge}}" type="image/webp">
-					<img src="/assets/images/fallback/{{location.imageFallbackLarge}}"
-					     alt="Large image of the {{location.name}} SinnerSchrader office">
+					<source media="(max-width: 599px)" srcset="./assets/images/mobile/{{location.imageLarge}}" type="image/webp">
+					<source media="(min-width: 600px)" srcset="./assets/images/tablet/{{location.imageLarge}}" type="image/webp">
+					<source media="(min-width: 1200px)" srcset="./assets/images/desktop/{{location.imageLarge}}" type="image/webp">
+					<img loading="lazy"
+						 src="./assets/images/fallback/{{location.imageFallbackLarge}}"
+					     alt="Large image of the {{location.name}} SinnerSchrader office" />
 				</picture>
 				<div class="locations__content-studio-wrapper">
 					{% for studio in location.studios %}

@@ -14,4 +14,4 @@ jobs:
       - run: |
           npm ci
           npm run build
-          npm run a11y-check
+          npm run lint:a11y-check

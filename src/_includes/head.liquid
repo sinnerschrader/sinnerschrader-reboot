@@ -1,5 +1,5 @@
 <head>
-	<link rel="stylesheet" type="text/css" href="/index.css" />
+	<link rel="stylesheet" type="text/css" href="/styles.css" />
 	<link rel="preload" href="/assets/fonts/Ogg-RegularItalic.woff2" as="font" type="font/woff2" crossorigin />
 	<link rel="preload" href="/assets/fonts/Ogg-Regular.woff2" as="font" type="font/woff2" crossorigin />
 	<link rel="preload" href="/assets/fonts/RobotoMono-Regular.ttf" as="font" type="font/ttf" crossorigin />
@@ -7,9 +7,7 @@
 	<link rel="preload" href="/assets/fonts/SuisseIntl-SemiBold-WebM.woff2" as="font" type="font/woff2" crossorigin />
 	<link rel="preload" href="/assets/fonts/SuisseIntl-Light-WebM.woff2" as="font" type="font/woff2" crossorigin />
 	<link rel="preconnect" href="https://sinnerschrader.jobs" crossorigin />
-	{% comment %} {% include tracking-head %} {% endcomment %}
-	
-	{% if page.url == '/jobs.html' or page.url == '/jobs' %}
+	{% comment %} {% include tracking-head %} {% endcomment %} {% if page.url == '/jobs.html' or page.url == '/jobs' %}
 	<script src="https://js.hcaptcha.com/1/api.js"></script>
 	{% endif %}
 

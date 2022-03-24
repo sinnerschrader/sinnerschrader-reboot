@@ -203,12 +203,14 @@ info: {
 			"name": "Individualization",
 			"text": "in no time for accelerated user data aggregation"
 		},
-		"image": {
-			"mobileSrc": "/assets/images/mobile/audi-constructor-mobile.webp",
-			"tabletSrc": "/assets/images/tablet/audi-constructor.webp",
-			"desktopSrc": "/assets/images/desktop/audi-constructor.webp",
-			"fallbackSrc": "/assets/images/fallback/audi-constructor.png",
-			"altText": "Audi"
+		"image-teaser": {
+			"image": {
+				"mobileSrc": "/assets/images/mobile/audi-constructor-mobile.webp",
+				"tabletSrc": "/assets/images/tablet/audi-constructor.webp",
+				"desktopSrc": "/assets/images/desktop/audi-constructor.webp",
+				"fallbackSrc": "/assets/images/fallback/audi-constructor.png",
+				"altText": "Audi"
+			}
 		}
 	},
 	"technology": {

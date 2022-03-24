@@ -222,6 +222,9 @@
 				@include bp-xs() {
 					grid-auto-flow: dense;
 				}
+				.slider {
+					overflow: hidden;
+				}
 
 				.description {
 					@include bp-xs() {

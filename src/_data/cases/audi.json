@@ -6,10 +6,10 @@
 	},
 	"images": {
 		"main": {
-			"mobileSrc": "./assets/images/mobile/audi-main.webp",
-			"tabletSrc": "./assets/images/tablet/audi-main.webp",
-			"desktopSrc": "./assets/images/desktop/audi-main.webp",
-			"fallbackSrc": "./assets/images/fallback/audi-main.png",
+			"mobileSrc": "/assets/images/mobile/audi-main.webp",
+			"tabletSrc": "/assets/images/tablet/audi-main.webp",
+			"desktopSrc": "/assets/images/desktop/audi-main.webp",
+			"fallbackSrc": "/assets/images/fallback/audi-main.png",
 			"altText": "alt text"
 		}
 	},

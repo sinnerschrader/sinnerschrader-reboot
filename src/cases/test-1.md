@@ -5,9 +5,9 @@ disciplineName: 'Fintech'
 previewInfo: {
 	"company": "VW",
 	"name": "Redesign lorem Ipsum",
-	"mobileSrc": "./assets/images/mobile/vw-phone.webp",
-	"tabletSrc": "./assets/images/tablet/vw-phone.webp",
-	"desktopSrc": "./assets/images/desktop/vw-phone.webp",
+	"mobileSrc": "/assets/images/mobile/vw-phone.webp",
+	"tabletSrc": "/assets/images/tablet/vw-phone.webp",
+	"desktopSrc": "/assets/images/desktop/vw-phone.webp",
 	"imageFallback": "vw-phone.png"
 }
 info: {

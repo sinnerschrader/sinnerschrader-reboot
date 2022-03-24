@@ -5,9 +5,9 @@ disciplineName: 'Social'
 previewInfo: {
 	"company": "Ambulance",
 	"name": "Redesign lorem Ipsum",
-	"mobileSrc": "./assets/images/mobile/ambulance.webp",
-	"tabletSrc": "./assets/images/tablet/ambulance.webp",
-	"desktopSrc": "./assets/images/desktop/ambulance.webp",
+	"mobileSrc": "/assets/images/mobile/ambulance.webp",
+	"tabletSrc": "/assets/images/tablet/ambulance.webp",
+	"desktopSrc": "/assets/images/desktop/ambulance.webp",
 	"imageFallback": "ambulance.png"
 }
 info: {

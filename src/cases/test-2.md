@@ -5,9 +5,9 @@ disciplineName: 'Fintech'
 previewInfo: {
 	"company": "Holoride",
 	"name": "Redesign lorem Ipsum",
-	"mobileSrc": "./assets/images/mobile/holoride.webp",
-	"tabletSrc": "./assets/images/tablet/holoride.webp",
-	"desktopSrc": "./assets/images/desktop/holoride.webp",
+	"mobileSrc": "/assets/images/mobile/holoride.webp",
+	"tabletSrc": "/assets/images/tablet/holoride.webp",
+	"desktopSrc": "/assets/images/desktop/holoride.webp",
 	"imageFallback": "holoride.png",
 }
 info: {

@@ -5,9 +5,9 @@ disciplineName: 'Social'
 previewInfo: {
 	"company": "Bicycle",
 	"name": "Redesign lorem Ipsum",
-	"mobileSrc": "./assets/images/mobile/bicycle.webp",
-	"tabletSrc": "./assets/images/tablet/bicycle.webp",
-	"desktopSrc": "./assets/images/desktop/bicycle.webp",
+	"mobileSrc": "/assets/images/mobile/bicycle.webp",
+	"tabletSrc": "/assets/images/tablet/bicycle.webp",
+	"desktopSrc": "/assets/images/desktop/bicycle.webp",
 	"imageFallback": "bicycle.png"
 }
 info: {

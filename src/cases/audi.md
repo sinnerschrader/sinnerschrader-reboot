@@ -5,9 +5,9 @@ disciplineName: 'Automotive'
 previewInfo: {
 	"company": "Audi",
 	"name": "Redesign lorem Ipsum",
-	"mobileSrc": "./assets/images/mobile/audi-main.webp",
-	"tabletSrc": "./assets/images/tablet/audi-main.webp",
-	"desktopSrc": "./assets/images/desktop/audi-main.webp",
+	"mobileSrc": "/assets/images/mobile/audi-main.webp",
+	"tabletSrc": "/assets/images/tablet/audi-main.webp",
+	"desktopSrc": "/assets/images/desktop/audi-main.webp",
 	"imageFallback": "audi-main.png"
 }
 info: {

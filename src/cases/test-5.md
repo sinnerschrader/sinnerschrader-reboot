@@ -5,9 +5,9 @@ disciplineName: 'Social'
 previewInfo: {
 	"company": "Unzer",
 	"name": "Redesign lorem Ipsum",
-	"mobileSrc": "./assets/images/mobile/unzer-logo.webp",
-	"tabletSrc": "./assets/images/tablet/unzer-logo.webp",
-	"desktopSrc": "./assets/images/desktop/unzer-logo.webp",
+	"mobileSrc": "/assets/images/mobile/unzer-logo.webp",
+	"tabletSrc": "/assets/images/tablet/unzer-logo.webp",
+	"desktopSrc": "/assets/images/desktop/unzer-logo.webp",
 	"imageFallback": "unzer-logo.png"
 }
 info: {

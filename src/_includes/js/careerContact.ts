@@ -1,19 +1,26 @@
 export class CareerContact {
-	constructor() {
+	private endpoint = "https://7ric1lpsg1.execute-api.eu-central-1.amazonaws.com";
+	private container: HTMLElement;
+
+	public constructor() {
 		this.container = document.querySelector(".career-landingpage");
-		if (!this.container) return;
+
+		if (!this.container) {
+			return;
+		}
+
 		this.intialize();
 	}
 
-	intialize() {
+	private intialize() {
 		this.bindEvents();
 	}
 
-	bindEvents() {
-		window.addEventListener("submit", this.sentform.bind(this));
+	private bindEvents() {
+		window.addEventListener("submit", this.submitForm.bind(this));
 	}
 
-	successfullySent() {
+	private successfullySent() {
 		const forminput = document.querySelector(".form__input");
 		const thankyou = document.querySelector(".form__thankyou");
 		const remoteHint = document.querySelector(".career-landingpage__remote");
@@ -27,11 +34,11 @@ export class CareerContact {
 		});
 	}
 
-	sentform(event) {
+	private submitForm(event) {
 		event.preventDefault();
-		const { name, contact, profile, privacy, email, contactPerson } = event.target;
-		const endpoint = "https://7ric1lpsg1.execute-api.eu-central-1.amazonaws.com";
-		// We use JSON.stringify here so the data can be sent as a string via HTTP
+
+		const { name, profile, phonenumber, privacy, email, contactPerson } = event.target;
+
 		const body = JSON.stringify({
 			senderName: name.value,
 			senderEmail: email.value,
@@ -46,10 +53,14 @@ export class CareerContact {
 			body,
 		};
 
-		fetch(endpoint, requestOptions)
+		fetch(this.endpoint, requestOptions)
 			.then((response) => {
-				if (!response.ok) throw new Error("Error in fetch ", response);
+				if (!response.ok) {
+					throw new Error(`Error in fetch: ${response}`);
+				}
+
 				this.successfullySent();
+
 				return response.json();
 			})
 			.then((response) => {

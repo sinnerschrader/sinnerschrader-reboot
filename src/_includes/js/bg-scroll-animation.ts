@@ -1,40 +1,42 @@
 import { throttle } from "lodash-es";
 
 class BackgroundScrollAnimation {
-	animationStartElements = [];
-	animationOffsetTop = 300;
-	animationOffsetBottom = 500;
+	private animationStartElements: NodeListOf<HTMLElement>;
+	private animationOffsetTop = 300;
+	private animationOffsetBottom = 500;
+	private circleElement: HTMLElement;
+	private showAnimations = window.matchMedia("(prefers-reduced-motion: no-preference)");
 
-	showAnimations = window.matchMedia("(prefers-reduced-motion: no-preference)");
-
-	constructor() {
+	public constructor() {
 		if (document.body.classList.contains("is-bg-scroll")) {
 			this.init();
 		}
 	}
 
-	init() {
+	private init() {
 		this.animationStartElements = document.querySelectorAll(".fade-bg-black");
 		this.circleElement = document.querySelector(".section-header__circle > img");
 
 		this.bindEvents();
 	}
 
-	bindEvents() {
+	private bindEvents() {
 		window.addEventListener("load", () => this.scrollListener());
 
 		this.viewPortDetection();
 	}
 
-	scrollListener() {
+	private scrollListener() {
 		document.addEventListener("scroll", throttle(this.viewPortDetection.bind(this), 200));
 
-		if (!this.circleElement) return;
+		if (!this.circleElement) {
+			return;
+		}
 
 		document.addEventListener("scroll", this.rotateCircle.bind(this));
 	}
 
-	viewPortDetection() {
+	private viewPortDetection() {
 		let elementInViewport = [];
 
 		this.animationStartElements.forEach((el) => {
@@ -45,7 +47,7 @@ class BackgroundScrollAnimation {
 		elementInViewport.indexOf(true) !== -1 ? this.toggleBackground("dark") : this.toggleBackground("light");
 	}
 
-	toggleBackground(mode) {
+	private toggleBackground(mode) {
 		if (mode === "dark") {
 			document.body.classList.add("is-dark");
 		} else {
@@ -53,13 +55,13 @@ class BackgroundScrollAnimation {
 		}
 	}
 
-	rotateCircle() {
+	private rotateCircle() {
 		if (this.showAnimations.matches) {
 			this.circleElement.style.transform = `rotate(${window.pageYOffset / 4}deg)`;
 		}
 	}
 
-	isInViewport(el) {
+	private isInViewport(el) {
 		if (!el) return;
 
 		let elHeight = el.offsetHeight;
@@ -84,7 +86,7 @@ class BackgroundScrollAnimation {
 		);
 	}
 
-	detectiOS() {
+	private detectiOS() {
 		return (
 			["iPad Simulator", "iPhone Simulator", "iPod Simulator", "iPad", "iPhone", "iPod"].includes(navigator.platform) ||
 			(navigator.userAgent.includes("Mac") && "ontouchend" in document)

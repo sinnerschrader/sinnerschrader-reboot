@@ -1,21 +1,29 @@
 import throttle from "lodash-es/throttle";
 
 class Navigation {
-	topPositionColorDark = false;
-	topPositionColorLight = false;
-	bodyOverlayClass = "is-no-scroll";
-	mobileActiveClass = "is-mobile-active";
-	transparentClass = "is-transparent";
-	mobileNavHiddenClass = "is-mobile-nav-hidden";
-	lastScrollTop = 0;
+	private topPositionColorDark = false;
+	private topPositionColorLight = false;
+	private bodyOverlayClass = "is-no-scroll";
+	private mobileActiveClass = "is-mobile-active";
+	private transparentClass = "is-transparent";
+	private mobileNavHiddenClass = "is-mobile-nav-hidden";
+	private lastScrollTop = 0;
 
-	constructor() {
+	private navigationContainer: HTMLElement;
+	private jobFilterBar: HTMLElement;
+	private mobileToggleBtn: HTMLElement;
+	private textColorModifier: string;
+
+	public constructor() {
 		this.init();
 	}
 
-	init() {
+	private init() {
 		this.navigationContainer = document.querySelector(".nav");
-		if (!this.navigationContainer) return;
+
+		if (!this.navigationContainer) {
+			return;
+		}
 
 		this.jobFilterBar = document.querySelector("#js-job-filter-bar");
 		this.mobileToggleBtn = this.navigationContainer.querySelector(".nav__mobile-toggle");
@@ -30,22 +38,23 @@ class Navigation {
 		this.bindEvents();
 	}
 
-	bindEvents() {
+	private bindEvents() {
 		this.detectScroll();
 
 		window.addEventListener("scroll", throttle(this.detectScroll.bind(this), 50));
+
 		this.mobileToggleBtn.addEventListener("click", this.toggleMobilePanel.bind(this));
 	}
 
-	toggleMobilePanel() {
+	private toggleMobilePanel() {
 		document.body.classList.toggle(this.bodyOverlayClass);
 		this.navigationContainer.classList.toggle(this.mobileActiveClass);
 
 		const isMobileMenuExpandend = this.navigationContainer.classList.contains("is-mobile-active");
-		this.mobileToggleBtn.setAttribute("aria-expanded", isMobileMenuExpandend);
+		this.mobileToggleBtn.setAttribute("aria-expanded", isMobileMenuExpandend ? "true" : "false");
 	}
 
-	detectScroll() {
+	private detectScroll() {
 		let scrollTop = window.pageYOffset;
 
 		this.animateInOut(scrollTop);
@@ -55,7 +64,7 @@ class Navigation {
 		this.lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
 	}
 
-	animateInOut(scrollPosition) {
+	private animateInOut(scrollPosition) {
 		if (scrollPosition > this.lastScrollTop) {
 			this.navigationContainer.classList.add(this.mobileNavHiddenClass);
 			this.jobFilterBar?.classList.add(this.mobileNavHiddenClass);
@@ -65,7 +74,7 @@ class Navigation {
 		}
 	}
 
-	detectPageTop(scrollPosition) {
+	private detectPageTop(scrollPosition) {
 		if (scrollPosition <= 0) {
 			this.topPositionColorDark ? this.navigationContainer.classList.add("is-text-dark") : "";
 			this.topPositionColorLight ? this.navigationContainer.classList.add("is-text-light") : "";
@@ -75,7 +84,7 @@ class Navigation {
 		}
 	}
 
-	toggleTransparentClass(scrollPosition) {
+	private toggleTransparentClass(scrollPosition) {
 		if (this.lastScrollTop >= scrollPosition) {
 			if (scrollPosition <= 0) {
 				this.navigationContainer.classList.add(this.transparentClass);

@@ -12,7 +12,7 @@
     "build": "run-s tools:clean build:css build:js build:html tools:responsiveImages",
     "build:html": "eleventy",
     "build:css": "sass ./src/styles/index.scss _site/styles.css && npm run tools:postcss",
-    "build:js": "esbuild ./src/_includes/js/main.js --outfile=_site/bundle.js --bundle --minify",
+    "build:js": "esbuild ./src/_includes/js/main.ts --outfile=_site/bundle.js --bundle --minify",
     "watch:html": "eleventy --serve",
     "watch:css": "sass --watch ./src/styles/index.scss _site/styles.css",
     "watch:js": "esbuild ./src/_includes/js/main.js --sourcemap --outfile=_site/bundle.js --bundle --watch",

@@ -1,0 +1,39 @@
+<div class="works grid" data-js-item="works">
+	<div class="works__list-wrapper">
+		<div class="works__list-title">
+			<span>Selected</span>
+			<p>Works</p>
+		</div>
+		<ul>
+			{% for work in works %}
+			<li role="tab"
+				aria-controls="{{work.id}}"
+				tabindex="0"
+				aria-selected="{{work.initialActive}}"
+				class="tab-list tab-list--underline">
+				{{work.name}}
+			</li>
+			{% endfor %}
+		</ul>
+	</div>
+	<div class="works__content-wrapper">
+		{% assign allWorksList = works | map: 'worksList' %}
+		{% for work in works %}
+		<div id="{{work.id}}"
+			role="tabpanel"
+			aria-expanded="{{work.initialActive}}"
+			class="works__panel">
+				{% if work.id == 'all' %}
+					{% assign filteredCases = collections.cases %}
+				{% else %}
+					{% assign filteredCases = collections.cases | groupByDiscipline: work.id %}
+				{% endif %}
+				{% if filteredCases %}
+					{% for item in filteredCases %}
+						{% include work-preview, data: item.data %}
+					{% endfor %}
+				{% endif %}
+			</div>
+		{% endfor %}
+	</div>
+</div>

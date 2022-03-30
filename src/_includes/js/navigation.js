@@ -1,15 +1,15 @@
 import throttle from "lodash-es/throttle";
 
 class Navigation {
-	topPositionColorDark = false;
-	topPositionColorLight = false;
-	bodyOverlayClass = "is-no-scroll";
-	mobileActiveClass = "is-mobile-active";
-	transparentClass = "is-transparent";
-	mobileNavHiddenClass = "is-mobile-nav-hidden";
-	lastScrollTop = 0;
-
 	constructor() {
+		this.topPositionColorDark = false;
+		this.topPositionColorLight = false;
+		this.bodyOverlayClass = "is-no-scroll";
+		this.mobileActiveClass = "is-mobile-active";
+		this.transparentClass = "is-transparent";
+		this.mobileNavHiddenClass = "is-mobile-nav-hidden";
+		this.lastScrollTop = 0;
+
 		this.init();
 	}
 

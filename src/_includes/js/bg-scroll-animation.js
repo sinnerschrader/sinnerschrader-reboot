@@ -1,13 +1,13 @@
 import { throttle } from "lodash-es";
 
 class BackgroundScrollAnimation {
-	animationStartElements = [];
-	animationOffsetTop = 300;
-	animationOffsetBottom = 500;
-
-	showAnimations = window.matchMedia("(prefers-reduced-motion: no-preference)");
-
 	constructor() {
+		this.animationStartElements = [];
+		this.animationOffsetTop = 300;
+		this.animationOffsetBottom = 500;
+
+		this.showAnimations = window.matchMedia("(prefers-reduced-motion: no-preference)");
+
 		if (document.body.classList.contains("is-bg-scroll")) {
 			this.init();
 		}

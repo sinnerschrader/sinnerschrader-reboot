@@ -1,0 +1,17 @@
+{
+	"client": "Audi",
+	"headline": {
+		"title": "e-tron GT",
+		"subtitle": "quattro"
+	},
+	"images": {
+		"main": {
+			"mobileSrc": "/assets/images/mobile/audi-main.webp",
+			"tabletSrc": "/assets/images/tablet/audi-main.webp",
+			"desktopSrc": "/assets/images/desktop/audi-main.webp",
+			"fallbackSrc": "/assets/images/fallback/audi-main.png",
+			"altText": "alt text"
+		}
+	},
+	"description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias."
+}

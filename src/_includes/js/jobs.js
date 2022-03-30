@@ -1,20 +1,6 @@
 import { throttle } from "lodash-es";
 
 export class FilterList {
-	// Reference to parent element
-	parent;
-	// Filter inputs container
-	controls;
-	// the job list
-	list;
-	// filter Object gets filled depending on content
-	filters = {};
-	// live update list
-	liveUpdate = false;
-
-	// CSS constants
-	hiddenClass = "hidden";
-
 	constructor(props) {
 		// parent container
 		this.parent = document.querySelector(props.parentSelector);
@@ -24,6 +10,9 @@ export class FilterList {
 		this.list = document.querySelector(props.listSelector);
 		// settings
 		this.liveUpdate = props.liveUpdate ? props.liveUpdate : this.liveUpdate;
+
+		this.filters = {};
+		this.hiddenClass = "hidden";
 
 		if (this.parent === null || this.controls === null || this.list === null) {
 			console.warn("No DOM elements found");
@@ -46,7 +35,6 @@ export class FilterList {
 				const filter = evt.target.getAttribute("name");
 				// filter value
 				const value = evt.target.getAttribute("value");
-
 				if (evt.target.checked) {
 					// adds filter value
 					this.filters[filter].push(value);

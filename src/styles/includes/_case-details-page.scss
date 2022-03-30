@@ -1,0 +1,523 @@
+.case-details-page {
+	overflow-x: initial;
+
+	// stage component font styles overrides (corresponding to "Case details" page design)
+	.stage {
+		&__title {
+			@include bp-xs {
+				grid-column-end: span 12;
+				text-align: center;
+			}
+		}
+
+		&__headline .clip:nth-last-of-type(-n + 2) {
+			font-family: $font-serif;
+		}
+	}
+
+	h4 {
+		@include headline-300();
+
+		grid-column-end: span 5;
+		margin-top: 0;
+
+		@include bp-xs() {
+			display: block;
+			margin-left: 12;
+			grid-column-end: span 12;
+		}
+	}
+
+	.teaser-description {
+		@include spacing-800(padding-bottom);
+
+		span {
+			font-family: $font-sans-serif-semibold;
+		}
+	}
+
+	.image-teaser {
+		position: relative;
+		margin-left: 0;
+		margin-bottom: $spacing--900;
+
+		@include bp-xs {
+			&::before {
+				left: auto;
+				right: 0;
+			}
+		}
+
+		@include bp-xs {
+			overflow-x: hidden;
+			margin: 0;
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 0;
+			width: $spacing--200;
+			height: 50%;
+			background-color: $color-primary--white;
+			z-index: 2;
+			transition: background-color $transition-main ease-in-out, color $transition-main ease-in-out;
+
+			@include bp-xs {
+				width: 0;
+			}
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			height: $spacing--200;
+			width: calc(100% - 120px);
+			background-color: $color-primary--white;
+			z-index: 2;
+			transition: background-color $transition-main ease-in-out, color $transition-main ease-in-out;
+
+			@include bp-xs {
+				width: 0;
+			}
+		}
+
+		.is-dark & {
+			&::before,
+			&::after {
+				background-color: $color-primary--black;
+				transition: background-color $transition-main ease-in-out, color $transition-main ease-in-out;
+			}
+		}
+
+		img {
+			width: 100%;
+		}
+
+		&__content {
+			position: absolute;
+			left: 8vw;
+			top: 18vw;
+
+			@include bp-xs {
+				text-align: center;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+		}
+	}
+
+	.abstract-container {
+		&--wrapper {
+			@include spacing-500(padding-top);
+
+			position: relative;
+
+			&::after {
+				@include dotted-grid();
+
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				filter: invert(0);
+			}
+		}
+
+		&__agenda {
+			margin-block-start: 0.5em;
+
+			p {
+				@include code-100();
+
+				line-height: 0;
+			}
+		}
+
+		&__description {
+			@include spacing-800(margin-bottom);
+
+			&:last-child {
+				@include spacing-900(margin-bottom);
+			}
+		}
+
+		button {
+			margin: 3rem 0 10rem;
+		}
+	}
+
+	.abstract-text {
+		position: relative;
+		overflow: hidden;
+	}
+
+	.bg-text {
+		content: "craft";
+		font-family: $font-serif;
+		font-size: 23.5vw;
+		margin: 20vw -2vw;
+		line-height: 1vw;
+
+		@include bp-xs() {
+			display: none;
+		}
+	}
+
+	.bg-text-small {
+		display: none;
+
+		@include bp-xs() {
+			display: block;
+			content: "craft";
+			font-family: $font-serif;
+			font-size: 53vw;
+			line-height: 40vw;
+			margin: 30vw -13vw;
+		}
+	}
+
+	.about {
+		&__description {
+			@include spacing-800(margin-bottom);
+		}
+
+		.swiper-container {
+			@include bp-xs {
+				width: calc(100vw - 2.4rem);
+			}
+			@include bp-s {
+				width: calc(100vw - 6.4rem);
+			}
+			@include bp-m {
+				width: calc(100vw - 6.4rem);
+			}
+			@include bp-l {
+				width: calc(100vw - 9.6rem);
+			}
+			@include bp-xl {
+				width: calc(100vw - 9.6rem);
+			}
+		}
+	}
+
+	.design {
+		&__description {
+			@include spacing-800(margin-bottom);
+		}
+
+		p {
+			grid-column-end: span 7;
+
+			@include bp-xs() {
+				grid-column-end: span 12;
+			}
+		}
+
+		.slider-containter {
+			&__left {
+				@include bp-xs() {
+					grid-auto-flow: dense;
+				}
+
+				.slider {
+					overflow: hidden;
+				}
+
+				.description {
+					@include bp-xs() {
+						grid-row: 1;
+					}
+				}
+			}
+		}
+
+		.swiper-container {
+			margin-left: 0;
+		}
+
+		.description {
+			margin-top: 6vw;
+
+			span {
+				font-family: $font-sans-serif-semibold;
+			}
+
+			p {
+				margin-top: 3rem;
+			}
+		}
+
+		.image-teaser {
+			margin-bottom: 0;
+
+			&::before,
+			&::after {
+				content: none;
+			}
+		}
+	}
+
+	.content-container {
+		&--wrapper {
+			@include spacing-500(padding-top);
+
+			position: relative;
+
+			&::after {
+				@include dotted-grid();
+
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				filter: invert(0);
+				z-index: -1;
+			}
+		}
+
+		p {
+			grid-column-end: span 7;
+
+			@include bp-xs() {
+				grid-column-end: span 12;
+			}
+		}
+
+		&__media {
+			@include bp-xs {
+				margin-left: 2.4rem;
+			}
+			@include bp-s {
+				margin-left: 6.4rem;
+			}
+			@include bp-m {
+				margin-left: 6.4rem;
+			}
+			@include bp-l {
+				margin-left: 9.6rem;
+			}
+			@include bp-xl {
+				margin-left: 9.6rem;
+			}
+
+			.image-teaser {
+				margin-bottom: 0;
+
+				&::before,
+				&::after {
+					content: none;
+				}
+			}
+		}
+	}
+
+	.technology {
+		&__overview {
+			grid-gap: $spacing--600;
+
+			@include bp-xs {
+				margin: 0;
+			}
+
+			h3 {
+				margin-top: 0;
+
+				@include bp-xs {
+					margin-top: revert;
+				}
+			}
+
+			img {
+				max-width: 100%;
+				max-height: 100%;
+
+				@include bp-xs {
+					width: 100%;
+				}
+			}
+
+			.overview-container {
+				@include bp-xs {
+					width: 100vw;
+				}
+			}
+
+			.overview-container:nth-child(1) .technology__media-content {
+				@include bp-xs {
+					margin: 0 0 10vw 2.4rem;
+				}
+			}
+
+			.overview-container:nth-child(2) {
+				h3 {
+					margin-top: revert;
+				}
+
+				.technology__media-content {
+					@include bp-xs {
+						margin: 0 2.4rem 10vw 0;
+					}
+				}
+			}
+		}
+
+		&__description {
+			@include bp-xs {
+				margin: 0 2.4rem 10vw;
+			}
+		}
+
+		&__statistics {
+			grid-gap: 0;
+
+			&__data {
+				border-right: 1px solid $color-primary--white;
+
+				@include bp-xs() {
+					border-right-style: none;
+				}
+
+				.amount {
+					font-family: $font-serif;
+
+					@include bp-xs {
+						font-size: 60px;
+					}
+					@include bp-s {
+						font-size: 7.8rem;
+					}
+					@include bp-m {
+						font-size: 8.6rem;
+					}
+					@include bp-l {
+						font-size: 10.4rem;
+					}
+					@include bp-xl {
+						font-size: 10.4rem;
+					}
+				}
+
+				.metric {
+					font-family: $font-code;
+					font-size: 1rem;
+					padding-bottom: 5rem;
+					text-transform: uppercase;
+
+					@include bp-xs {
+						padding-bottom: 0;
+					}
+				}
+			}
+
+			&-item {
+				text-align: center;
+
+				&:last-child .technology__statistics__data {
+					border-right-style: none;
+				}
+			}
+
+			&__description {
+				font-family: $font-sans-serif-semibold;
+				font-size: 18px;
+				padding: 3rem 0;
+				text-overflow: ellipsis;
+				overflow: auto;
+				white-space: nowrap;
+				border-top: 1px solid $color-primary--white;
+				border-bottom: 1px solid $color-primary--white;
+
+				@include bp-xs() {
+					border-top-style: none;
+				}
+			}
+		}
+	}
+
+	.slider {
+		p {
+			grid-column-end: span 7;
+
+			@include bp-xs() {
+				grid-column-end: span 12;
+			}
+		}
+
+		.swiper-slide {
+			margin-top: 6vw;
+
+			p {
+				margin: 1rem 0;
+
+				span {
+					font-family: $font-sans-serif-semibold;
+				}
+			}
+		}
+	}
+
+	.quote {
+		@include spacing-900(margin);
+		@include spacing-400(margin-right);
+
+		@include bp-xs {
+			@include spacing-400(margin-left);
+			@include spacing-400(margin-right);
+		}
+
+		&__speach {
+			@include headline-300();
+
+			max-width: 70vw;
+			margin-bottom: 0;
+			text-indent: -40px;
+			font-family: $font-sans-serif-light;
+
+			@include bp-xs {
+				max-width: 100%;
+				text-indent: 0;
+			}
+			@include bp-s {
+				text-indent: 0;
+			}
+			@include bp-m {
+				text-indent: 100px;
+			}
+
+			img {
+				@include bp-xs {
+					margin: 0 3vw 0 0;
+				}
+				@include bp-tablet {
+					margin: 0 3vw 0 -3vw;
+				}
+				@include bp-l {
+					margin: 0 2.5vw 0 3.5vw;
+				}
+				@include bp-xl {
+					margin: 0 5vw 0 -1vw;
+				}
+			}
+		}
+
+		&__author {
+			@include spacing-500(margin-top);
+
+			margin: 1rem 0;
+			font-size: 18px;
+			margin-left: 34px;
+			text-indent: -32px;
+
+			@include bp-xs {
+				font-size: 16px;
+			}
+
+			span {
+				font-family: $font-sans-serif-semibold;
+			}
+		}
+	}
+}

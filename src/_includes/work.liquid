@@ -1,20 +1,22 @@
 <div class="work">
-	<div class="grid">
-		<h3 class="work__headline col-start-6 col-start-1-xs col-end-12">
-			<div class="clip">
-				<span class="slide-in" data-delay="0s" data-js-item="slide-in">
-					{{ data.work.headline.top }}
-				</span>
-			</div>
-				<br />
-			<div class="clip">
-				<span class="slide-in" data-delay="0.1s" data-js-item="slide-in">
-					{{ data.work.headline.bottomFirst }}
-					<span class="headline-201">{{ data.work.headline.bottomSecond }}</span><span class="headline-202 clip__zone">{{ data.work.headline.bottomThird }}</span>
-				</span>
-			</div>
-		</h3>
-	</div>
+	{% if data.work.headline %}
+		<div class="grid">
+			<h3 class="work__headline col-start-6 col-start-1-xs col-end-12">
+				<div class="clip">
+					<span class="slide-in" data-delay="0s" data-js-item="slide-in">
+						{{ data.work.headline.top }}
+					</span>
+				</div>
+					<br />
+				<div class="clip">
+					<span class="slide-in" data-delay="0.1s" data-js-item="slide-in">
+						{{ data.work.headline.bottomFirst }}
+						<span class="headline-201">{{ data.work.headline.bottomSecond }}</span><span class="headline-202 clip__zone">{{ data.work.headline.bottomThird }}</span>
+					</span>
+				</div>
+			</h3>
+		</div>
+	{% endif %}
 	<div class="work__inner-wrapper">
 		<div class="video-container" data-js-item="video">
 			<video class="video-preview-loop" autoplay muted playsinline loop>
@@ -47,14 +49,16 @@
 				{{ data.work.customVideoButton.text }}
 			</button>
 		</div>
-		<div class="grid">
-			<div class="work__logos">
-				{% for logo in data.work.logos %}
-					<div class="work__logos-el-wrapper">
-						<img loading="lazy" src="{{ logo.imgSrc }}" alt="{{ logo.altText }}" />
-					</div>
-				{% endfor %}
+		{% if data.work.logos %}
+			<div class="grid">
+				<div class="work__logos">
+					{% for logo in data.work.logos %}
+						<div class="work__logos-el-wrapper">
+							<img loading="lazy" src="{{ logo.imgSrc }}" alt="{{ logo.altText }}" />
+						</div>
+					{% endfor %}
+				</div>
 			</div>
-		</div>
+		{% endif %}
 	</div>
 </div>

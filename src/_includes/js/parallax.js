@@ -1,12 +1,11 @@
 import simpleParallax from "simple-parallax-js";
 
 class Parallax {
-	showAnimations = window.matchMedia("(prefers-reduced-motion: no-preference)");
-	fastElements = document.querySelectorAll(".parallax-fast");
-	mediumElements = document.querySelectorAll(".parallax-medium");
-	slowElements = document.querySelectorAll(".parallax-slow");
-
 	constructor() {
+		this.showAnimations = window.matchMedia("(prefers-reduced-motion: no-preference)");
+		this.fastElements = document.querySelectorAll(".parallax-fast");
+		this.mediumElements = document.querySelectorAll(".parallax-medium");
+		this.slowElements = document.querySelectorAll(".parallax-slow");
 		if (this.showAnimations.matches) {
 			this.init();
 		}

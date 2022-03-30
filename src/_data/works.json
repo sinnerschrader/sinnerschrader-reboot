@@ -1,0 +1,32 @@
+[
+	{
+		"id": "all",
+		"name": "All",
+		"initialActive": true
+	},
+	{
+		"id": "automotive",
+		"name": "Automotive",
+		"initialActive": false
+	},
+	{
+		"id": "fintech",
+		"name": "Fintech",
+		"initialActive": false
+	},
+	{
+		"id": "commerce",
+		"name": "Commerce",
+		"initialActive": false
+	},
+	{
+		"id": "social",
+		"name": "Social",
+		"initialActive": false
+	},
+	{
+		"id": "item06",
+		"name": "Item 06",
+		"initialActive": false
+	}
+]

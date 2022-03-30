@@ -129,45 +129,45 @@
 		},
 		"slides": [
 			{
-				"mobileSrc": "./assets/images/mobile/culture1.webp",
-				"tabletSrc": "./assets/images/tablet/culture1.webp",
-				"desktopSrc": "./assets/images/desktop/culture1.webp",
-				"fallbackSrc": "./assets/images/fallback/culture1.jpg",
+				"mobileSrc": "/assets/images/mobile/culture1.webp",
+				"tabletSrc": "/assets/images/tablet/culture1.webp",
+				"desktopSrc": "/assets/images/desktop/culture1.webp",
+				"fallbackSrc": "/assets/images/fallback/culture1.jpg",
 				"altText": "Person trying to stack round couch stools in different colors"
 			},
 			{
-				"mobileSrc": "./assets/images/mobile/culture2.webp",
-				"tabletSrc": "./assets/images/tablet/culture2.webp",
-				"desktopSrc": "./assets/images/desktop/culture2.webp",
-				"fallbackSrc": "./assets/images/fallback/culture2.jpg",
+				"mobileSrc": "/assets/images/mobile/culture2.webp",
+				"tabletSrc": "/assets/images/tablet/culture2.webp",
+				"desktopSrc": "/assets/images/desktop/culture2.webp",
+				"fallbackSrc": "/assets/images/fallback/culture2.jpg",
 				"altText": "Smiling person standing on a balance board in front of lounge furniture"
 			},
 			{
-				"mobileSrc": "./assets/images/mobile/culture3.webp",
-				"tabletSrc": "./assets/images/tablet/culture3.webp",
-				"desktopSrc": "./assets/images/desktop/culture3.webp",
-				"fallbackSrc": "./assets/images/fallback/culture3.jpg",
+				"mobileSrc": "/assets/images/mobile/culture3.webp",
+				"tabletSrc": "/assets/images/tablet/culture3.webp",
+				"desktopSrc": "/assets/images/desktop/culture3.webp",
+				"fallbackSrc": "/assets/images/fallback/culture3.jpg",
 				"altText": "Dog curiously looking to the right while waggling their tail"
 			},
 			{
-				"mobileSrc": "./assets/images/mobile/culture4.webp",
-				"tabletSrc": "./assets/images/tablet/culture4.webp",
-				"desktopSrc": "./assets/images/desktop/culture4.webp",
-				"fallbackSrc": "./assets/images/fallback/culture4.jpg",
+				"mobileSrc": "/assets/images/mobile/culture4.webp",
+				"tabletSrc": "/assets/images/tablet/culture4.webp",
+				"desktopSrc": "/assets/images/desktop/culture4.webp",
+				"fallbackSrc": "/assets/images/fallback/culture4.jpg",
 				"altText": "Person in a hoodie juggling with three colored balls"
 			},
 			{
-				"mobileSrc": "./assets/images/mobile/culture5.webp",
-				"tabletSrc": "./assets/images/tablet/culture5.webp",
-				"desktopSrc": "./assets/images/desktop/culture5.webp",
-				"fallbackSrc": "./assets/images/fallback/culture5.jpg",
+				"mobileSrc": "/assets/images/mobile/culture5.webp",
+				"tabletSrc": "/assets/images/tablet/culture5.webp",
+				"desktopSrc": "/assets/images/desktop/culture5.webp",
+				"fallbackSrc": "/assets/images/fallback/culture5.jpg",
 				"altText": "Studio microphone with pop filter on a microphone stand"
 			},
 			{
-				"mobileSrc": "./assets/images/mobile/culture6.webp",
-				"tabletSrc": "./assets/images/tablet/culture6.webp",
-				"desktopSrc": "./assets/images/desktop/culture6.webp",
-				"fallbackSrc": "./assets/images/fallback/culture6.jpg",
+				"mobileSrc": "/assets/images/mobile/culture6.webp",
+				"tabletSrc": "/assets/images/tablet/culture6.webp",
+				"desktopSrc": "/assets/images/desktop/culture6.webp",
+				"fallbackSrc": "/assets/images/fallback/culture6.jpg",
 				"altText": "Person with blonde hair, wearing a black sports outfit doing a yoga tree pose with eyes closed"
 			}
 		]

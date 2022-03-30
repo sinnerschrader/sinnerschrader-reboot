@@ -1,11 +1,10 @@
 import { throttle } from "lodash-es";
 
 class OfferingHeader {
-	textContainer = document.querySelector(".offering__heading-wrapper");
-
-	showAnimations = window.matchMedia("(prefers-reduced-motion: no-preference)");
-
 	constructor() {
+		this.textContainer = document.querySelector(".offering__heading-wrapper");
+		this.showAnimations = window.matchMedia("(prefers-reduced-motion: no-preference)");
+
 		if (!this.textContainer) return;
 
 		this.textPathTop = this.textContainer.querySelector(".offering__heading-top");

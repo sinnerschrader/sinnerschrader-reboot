@@ -64,9 +64,11 @@ resizes.forEach((resize) => {
 		image
 			.metadata()
 			.then((metadata) => {
+				// Resize the image depends on orientation
+				const resizeBase = metadata.width > metadata.height ? metadata.width : metadata.height;
 				// Resize the image to a width specified by the `percent` value and output as PNG
 				return image
-					.resize(Math.round(metadata.width * (resize.percent / 100)))
+					.resize(Math.round(resizeBase * (resize.percent / 100)))
 					.toFormat("webp")
 					.webp({ force: true })
 					.toFile(`${resize.dist}/${filename}`)

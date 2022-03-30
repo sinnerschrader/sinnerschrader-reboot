@@ -275,6 +275,13 @@
 	font-family: $font-serif-italic;
 }
 
+// Headline smaller regular
+@mixin headline-203 {
+	@include font-serif-shared-small();
+
+	font-family: $font-sans-serif-regular;
+}
+
 @mixin headline-300 {
 	font-family: $font-sans-serif-regular;
 
@@ -392,6 +399,9 @@
 	line-height: 160%;
 	font-family: $font-sans-serif-light;
 	font-size: 1.8rem;
+	margin-block-start: 0;
+	margin-block-end: 0;
+	margin-bottom: 2rem;
 
 	@include bp-xs {
 		font-size: 1.6rem;

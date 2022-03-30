@@ -1,0 +1,6 @@
+---
+image: ""
+date: "2003-03-26"
+title: SinnerSchrader entwickelt interaktiven Guide für die T-Online Software 5.0
+content: <div class="newsbody"><p><strong>Egal ob Internet-Einsteiger, Neukunde oder erfahrener T-Online Nutzer - der von SinnerSchrader entwickelte interaktive Guide führt zukünftig jede Zielgruppe schnell und einfach zum Ziel ihrer Wünsche.</strong></p><p>Der Guide ist Bestandteil jeder Neukunden-CD und vermittelt Inhalte und Funktionen. Wie die neue T-Online-Software insgesamt ist auch der Guide noch einfacher in der Handhabung und übersichtlicher im Design. Bei seiner Entwicklung hat SinnerSchrader die Erfahrungen aus vielen hundert eBusiness-Projekten einfließen lassen.</p><p>Hinter der Guide-Oberfläche steckt eine von SinnerSchrader entwickelte interaktive Flash-Applikation, die Inhalt und Anwendung voneinander trennt. Auf diese Weise können die Produktentwickler bei T-Online in Zukunft alle Inhaltselemente wie Informationen oder Bilder einfach bearbeiten oder austauschen, ohne die Flash-Anwendung selbst modifizieren zu müssen. Auf die gleiche Weise ist auch ein Co-Branding des Guides für die jeweiligen Vertriebs- und Handelspartner möglich.</p></div>
+---

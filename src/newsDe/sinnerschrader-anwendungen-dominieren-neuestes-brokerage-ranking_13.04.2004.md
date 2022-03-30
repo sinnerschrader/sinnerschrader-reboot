@@ -1,0 +1,6 @@
+---
+image: ""
+date: "2004-04-13"
+title: SinnerSchrader-Anwendungen dominieren neuestes Brokerage-Ranking
+content: <div class="newsbody"><p><strong>Die beiden von SinnerSchrader entwickelten Brokerage-Portale comdirect.de und maxblue.de belegen Platz 1 und 2 beim großen Vergleichstest der Internet-Fachzeitschrift com!. DAB folgt auf Platz 3.</strong></p><p>Die Zeitschrift vergleicht in ihrer Mai-Ausgabe die Funktionen und Konditionen von 14 Online-Brokern. Bewertet werden die Kategorien Wertpapiere (Aktien, Anleihen, Fonds), Informationen &amp; Analyse-Instrumente sowie Kosten (Ordergebühren, Depotverwaltung). Mit 85 von 100 möglichen Punkten liegt comdirect knapp vor maxblue (83 Punkte), dem Finanzportal der Deutschen Bank. Besonders gut werden beide Anwendungen bei der Benutzerfreundlichkeit und den Instrumenten zur Abschätzung des Portfolio-Risikos benotet.</p><p>SinnerSchrader hat im vergangenen Jahr die neue Website von comdirect realisiert. maxblue ist seit dem Start im Jahr 2001 Kunde des Internetdienstleisters. maxblue erhielt den Business Germany Award, den Corporate Media Award und eine Auszeichnung beim Worldmediafestival 2002. Die Website von comdirect bekam 2003 ebenfalls den Corporate Media Award. Eine neue Studie von SirValUse Consulting testiert comdirect eine hohe Tauglichkeit für semiprofessionelle Händler.</p></div>
+---

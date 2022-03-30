@@ -1,0 +1,6 @@
+---
+image: ""
+date: "2001-01-16"
+title: SinnerSchrader launcht Businessangebot für Talkline
+content: <div class="newsbody"><p><strong>Talkline vertieft mit einem neuen Internetangebot das Geschäft mit Firmenkunden und Selbständigen.</strong></p><p>SinnerSchrader hat hierfür den Webauftritt talkline-business.de entwickelt, der Orientierung in der wachsenden Vielfalt der verschiedenen Kommunikationstechnologien bietet. Der Internetdienstleister betreut das deutsche Tochterunternehmen der Tele Danmark seit 1998 in allen Bereichen des internetgestützten Vertriebs von Telekommunikationsdienstleistungen. Talkline ist eines der wenigen Unternehmen, das Festnetz, Mobilfunk und Internet aus einer Hand anbietet. Um die Vielfalt der Sprach- und Datentechnologien je nach Beruf und Branche effizient einsetzen zu können, informiert die Website über alle Techniken, erklärt die Einsatzbereiche, bietet Praxisbeispiele und benennt ihre Kosten. Schwerpunkt von talkline-business.de sind die für professionelle Anwender besonders wichtigen Datendienste. Der Webauftritt bietet hierzu alles Wissenswerte über die Einsatzbereiche virtueller Datennetze, Breitband- und Satellitendienste sowie komplexer Internetlösungen.</p></div>
+---

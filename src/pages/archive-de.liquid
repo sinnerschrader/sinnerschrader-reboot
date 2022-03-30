@@ -1,0 +1,68 @@
+---
+title: SinnerSchrader
+layout: default
+permalink: "de/archive/page{{ pagination.pageNumber | plus: 1}}.html"
+pagination:
+  data: collections.newsDe
+  size: 9
+  reverse: true
+  alias: news
+bodyClass: is-bg-scroll
+dataJsItem: bg-scroll-animation
+---
+{% include navigation, data: global %}
+
+<main class="archive-page">
+	<section class="fade-bg-black archive-page__intro grid" data-no-offset-top>
+		<div class="grid">
+			<h1 class="headline-201 col-5 col-12-xs">
+				Stroll through <br />
+				our <span class="headline-202">archive</span>
+			</h1>
+		</div>
+	</section>
+
+	<section class="list">
+        <div class="grid">
+			{% for article in news %}
+				<div class="list__item col-4 col-6-s col-6-xs">
+					<a class="list__anchor" href="/newsDe/{{ article.data.title | slug }}-{{ article.data.date | slug }}.html">
+						<div class="list__image-wrapper">
+							{% if article.data.image.length > 0 %}
+								<img alt="{{ article.data.title }}" class="news-item-image"
+									loading="lazy" src="{{ article.data.image }}">
+							{% else %}
+								{% comment %} TODO: [NEWS] UPDATE DEFAULT IMAGE {% endcomment %}
+								<img alt="{{ article.data.title }}" class="news-item-image"
+									loading="lazy" src="/assets/images/fallback/culture1.jpg">
+							{% endif %}
+						</div>
+						<div class="list__item-title">{{ article.data.title }}</div>
+					</a>
+				</div>
+			{% endfor %}
+		</div>
+	</section>
+
+  	<section class="archive-page__pagination grid">
+		{% assign preLastPage = pagination.pages.length | minus: 1 %}
+
+		<div class="pagination">
+			{% if pagination.pageNumber > 0 %}
+				<a href="{{pagination.href.first}}"><p>First</p></a>
+			{% endif %}
+			{% if pagination.href.previous %}
+				<a href="{{pagination.href.previous}}"><p>Back</p></a>
+			{% endif %}
+			{% if pagination.href.next %}
+				<a href="{{pagination.href.next}}"><p>Next</p></a>
+			{% endif %}
+			{% if pagination.pageNumber < preLastPage %}
+				<a href="{{pagination.href.last}}"><p>Last</p></a>
+			{% endif %}
+		</div>
+		<p>Page {{ pagination.pageNumber | plus: 1}} of {{ pagination.pages.length }}</p>
+	</section>
+</main>
+
+{% include footer, data: global %}

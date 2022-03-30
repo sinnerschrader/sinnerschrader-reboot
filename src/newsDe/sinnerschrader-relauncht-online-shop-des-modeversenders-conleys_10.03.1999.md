@@ -1,0 +1,6 @@
+---
+image: ""
+date: "1999-03-10"
+title: SinnerSchrader relauncht Online-Shop des Modeversenders Conley's
+content: <div class="newsbody"><p><strong>Der Modeversender Conley's, bekannt durch hochwertige Mode- und Freizeitartikel, hat seinen Online-Shop www.conleys.de von der Internetagentur SinnerSchrader rechtzeitig zur Frühjahrssaison komplett überarbeiten lassen.</strong></p><p>Das Ergebnis ist der erste Online-Shop mit interaktiver Produktpräsentation&#58; Dank neuer Dynamic-HTML Features können Online-Shopper jetzt jedes Produkt per Drag&amp;Drop in einen Zooming-Bereich ziehen und so die Detailansichten samt Beschreibung sehen.</p><p>Die Grundmerkmale des Edel-Versenders hat SinnerSchrader in der neuen Shopgeneration weiter verfeinert&#58; Conley's unterteilt seinen Katalog jetzt in acht Kategorien. Neu sind Sektionen wie "Macho" oder "Emma Peel", in der sogar Agentenkameras und eine Jeep-TV-Boombox zu finden sind. Alle Produkte werden nach bewährter Conley's-Art aufwendig und mit viel Liebe zum Detail präsentiert; die intuitive Navigation und ein intelligentes Ordersystem gewährleisten ein entspanntes Online-Shoppen. Zusätzlich bietet Conley's ein Materiallexikon, das die Eigenschaften der verwendeten Stoffe und Materialien erklärt.</p></div>
+---

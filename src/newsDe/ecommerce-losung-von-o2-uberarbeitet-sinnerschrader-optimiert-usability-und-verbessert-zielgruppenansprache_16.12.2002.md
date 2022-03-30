@@ -1,0 +1,6 @@
+---
+image: ""
+date: "2002-12-16"
+title: eCommerce-Lösung von O2 überarbeitet&#58; SinnerSchrader optimiert Usability und verbessert Zielgruppenansprache
+content: <div class="newsbody"><p><strong>O2 Germany tritt jetzt mit einer verbesserten eCommerce-Anwendung auf. SinnerSchrader hat die Lösung stärker auf die Verkaufsleistung ausgerichtet und die Usability weiter optimiert.</strong></p><p>Das Ziel der Neugestaltung ist, die Konversionsrate zu steigern. O2 möchte mehr Kunden über das Internet gewinnen und einen höheren Anteil der Neuverträge ohne Medienbruch online abschließen. Schließlich zeichnet sich der Vertriebskanal Internet durch sehr niedrige Prozesskosten für das Mobilfunkunternehmen aus. Im nächsten Schritt wird SinnerSchrader den Bestellprozess des Shops überarbeiten und die Beratungsqualität erhöhen. Ein Handy- und Tarifberater sowie bessere Leistungsvergleiche zwischen den Produkten erhöhen die Transparenz des Kaufprozesses. Die Kunden von O2 werden zudem künftig den Bearbeitungsstatus ihrer Bestellung im Internet einsehen können.</p><p><a href="http&#58;//shop.o2online.de">shop.o2online.de</a></p><a href="http&#58;//shop.o2online.de"></a><p><a href="http&#58;//shop.o2online.de"></a></p></div>
+---

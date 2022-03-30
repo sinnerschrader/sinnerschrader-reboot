@@ -29,5 +29,13 @@
 			flex-wrap: wrap;
 			justify-content: space-around;
 		}
+
+		&.double-rows {
+			grid-template-columns: $spacing--600 $spacing--600 $spacing--600;
+		}
+
+		&.row {
+			grid-template-columns: $spacing--700 $spacing--700 $spacing--700 $spacing--700 $spacing--700 $spacing--700;
+		}
 	}
 }

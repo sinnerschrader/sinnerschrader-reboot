@@ -1,0 +1,6 @@
+---
+image: ""
+date: "2009-04-08"
+title: SinnerSchrader baut Frankfurter Büro aus und stärkt Beratungskompetenz / Neuer Standortleiter ist Dirk Hibbeler
+content: <div class="newsbody"><p><strong>Dirk Hibbeler (34) hat die Leitung des Frankfurter Büros von SinnerSchrader übernommen. Der gebürtige Frankfurter kommt von Syzygy, wo er als Business Unit Director 25 Mitarbeiter führte.</strong></p><p>Dirk Hibbeler wird in einer neugeschaffenen Position den Ausbau des Standorts Frankfurt vorantreiben. Derzeit arbeiten im Büro am Frankfurter Westhafen rund 20 Mitarbeiter u.a. für die Deutsche Bank, Steigenberger, Dow Jones und Depfa.</p><p>"Dies ist ein wesentlicher Schritt für SinnerSchrader Frankfurt", freut sich Laurent Burdin, Geschäftsführer Beratung von SinnerSchrader. "Interaktivagenturen stehen vor der Herausforderung, ihre Beratungskompetenz auszubauen. Mit Dirk Hibbeler haben wir einen starken Berater gewonnen, mit dem wir in Frankfurt weiter wachsen wollen."</p><p>In seiner bisherigen Funktion war Dirk Hibbeler verantwortlich für die Weiterentwicklung namhafter Bestandskunden wie o2, MLP, Deka Bank, Fraport und Fleurop. Als Neukunden konnte er zuletzt das ZDF gewinnen. Dirk Hibbeler ist Diplom-Ingenieur der Elektrotechnik mit der Fachrichtung Technische Informatik.</p></div>
+---

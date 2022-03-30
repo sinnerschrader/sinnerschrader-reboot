@@ -1,0 +1,6 @@
+---
+image: ""
+date: "2005-04-21"
+title: New Media Ranking 2005&#58; SinnerSchrader bleibt größter unabhängiger Interactive-Dienstleister in Deutschland
+content: <div class="newsbody"><p><strong>SinnerSchrader ist dem heute veröffentlichten New Media Service Ranking 2005 zufolge der größte unabhängige Interactive-Dienstleister in Deutschland und bestätigt damit seine im Vorjahr erreichte Position.</strong></p><p>Das Ranking weist SinnerSchrader auf Platz 4 aus und berücksichtigt einen Honorarumsatz von 12,36 Mio. Euro im Kalenderjahr 2004. Die auf den ersten drei Plätzen geführten Unternehmen sind Teile internationaler Konzerne oder haben ihren Schwerpunkt im Bereich klassischer Technologiedienstleistungen. SinnerSchrader ist ein eigenständiger, inhabergeführter und börsennotierter Interactive-Dienstleister.</p><p>Das New Media Service Ranking wird jährlich vom Bundesverband Digitale Wirtschaft (BVDW) und den Fachmedien Hightext-Verlag/iBusiness, Horizont und w&amp;v erhoben.</p><p><a href="http&#58;//www.newmediaranking.de">newmediaranking.de</a></p></div>
+---

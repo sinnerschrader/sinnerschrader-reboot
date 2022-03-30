@@ -2,6 +2,8 @@ import { AnchorNavigation } from "./anchor-navigation";
 import { SlideIn } from "./animate-slidein";
 import { BackgroundScrollAnimation } from "./bg-scroll-animation";
 import { CareerContact } from "./careerContact";
+// TOOD: [NEWS] uncomment, fix and improve after news tagging
+// import { FilterList } from "./filter-list";
 import { FilterList } from "./jobs";
 import { Locations } from "./locations";
 import { Navigation } from "./navigation";
@@ -66,6 +68,17 @@ import { Video } from "./video.js";
 			liveUpdate: true,
 		});
 	}
+
+	// TOOD: [NEWS] uncomment, fix and improve after news tagging
+	// if (isModuleNeeded("filter-news-list")) {
+	// 	new FilterList({
+	// 		parentSelector: "#js-filter-list",
+	// 		controlsSelector: "#js-filter-bar",
+	// 		listSelector: "#js-listing",
+	// 		liveUpdate: true,
+	// 		visibilityLimit: 9,
+	// 	});
+	// }
 
 	if (isModuleNeeded("share-buttons")) {
 		new ShareButtons();

@@ -46,7 +46,6 @@ export class FilterList {
 				const filter = evt.target.getAttribute("name");
 				// filter value
 				const value = evt.target.getAttribute("value");
-
 				if (evt.target.checked) {
 					// adds filter value
 					this.filters[filter].push(value);

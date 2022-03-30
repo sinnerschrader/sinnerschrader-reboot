@@ -1,0 +1,6 @@
+---
+image: https://sinnerschrader.news/media/filer_public_thumbnails/filer_public/c7/f1/c7f120ef-24c5-4311-b3c1-0369c46ae6e0/varfoldersdjk8pxf42x64d8fxslz8jcc8fc0000gnttmpa3ncps__480x288_q85_crop_subsampling-2_upscale.png
+date: "2010-12-27"
+title: Mobile Apps für simyo
+content: <div class="newsbody"><p><strong>Telefonieren mit simyo wird künftig noch einfacher und komfortabler. SinnerSchrader hat für den Düsseldorfer Mobilfunk-Anbieter die App “Mein simyo” entwickelt, die auf iPhones und Android-Geräten läuft. Mit “Mein simyo” haben Nutzer jederzeit den vollen Überblick über ihren Tarif und können ihn nun auch von unterwegs mühelos verwalten.</strong></p><p>simyo Kunden können so bequem ihren Kontostand überprüfen, ihr Guthaben aufladen oder die Verbindungsübersicht einsehen. Darüber hinaus haben sie den Verbrauch ihren Datenvolumens jederzeit im Blick und können bei Bedarf weitere Optionen hinzubuchen. Zudem zeigt die kostenlose simyo-App aktuelle Tweets des Twitterprofils @simyo_ticker an, so dass Kunden stets auf dem aktuellen Stand bleiben.</p><p>“Bei der Entwicklung von “Mein simyo” haben wir großen Wert auf einfach Bedienbarkeit und Performance gelegt. Die App orientiert sich konsequent an den Bedürfnissen des Telefonkunden” so Matthias Schrader, CEO SinnerSchrader.</p></div>
+---

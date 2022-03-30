@@ -1,0 +1,6 @@
+---
+image: ""
+date: "2001-06-07"
+title: SinnerSchrader relauncht Görtz
+content: <div class="newsbody"><p><strong>Schuhhaus baut eBusiness-Engagement aus.</strong></p><p>SinnerSchrader hat den Web-Auftritt von Ludwig Görtz, einem der führenden deutschen Schuhhäuser, komplett überarbeitet. Der neue Auftritt positioniert Görtz als Trendbarometer für Modeströmungen im Web. Görtz gehört zu den Kunden der ersten Stunde von SinnerSchrader&#58; Seit 1997 betreut der Internetdienstleister das Einzelhandelsunternehmen in allen Belangen des eBusiness.</p><p>Der Shop bietet zu jedem Trend den passenden Schuh. In einzelnen Flash-Filmen werden aktuelle Farben, Muster, Materialien und Formen der jeweiligen Modesaison vorgestellt. Optisch orientiert sich der Shop an dem modernen Görtz17-Look. Die Produkte lassen sich in der Großansicht aus verschiedenen Perspektiven betrachten. Die hauseigene Kundenkarte gewährt Treuerabatte auch beim Interneteinkauf. Zur Kundenbindung hat SinnerSchrader ein virtuelles Memory-Gewinnspiel entwickelt&#58; Wer alle zusammenpassenden Schuhpaare aufdeckt, nimmt an der Verlosung eines Jahresabonnements für Schuhe teil.</p><p>Görtz sucht über seine Website jetzt auch neue Mitarbeiter&#58; eine deutschlandweite Stellenbörse für alle 220 Filialen ermöglicht erstmals die direkte Bewerbung über das Internet.</p></div>
+---

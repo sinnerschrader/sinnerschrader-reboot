@@ -1,0 +1,6 @@
+---
+image: https://sinnerschrader.news/media/filer_public_thumbnails/filer_public/6e/3b/6e3b60a5-7383-4c06-ae1f-dd2c2cee767d/varfoldersdjk8pxf42x64d8fxslz8jcc8fc0000gnttmpbhfsl3__480x288_q85_crop_subsampling-2_upscale.jpg
+date: "2010-11-08"
+title: Armbrüster verstärkt User Experience Bereich
+content: <div class="newsbody"><p>Dr. Claudia Armbrüster (32) wird Director User Experience bei SinnerSchrader. Die promovierte Psychologin leitet dort künftig ein interdisziplinäres Team aus Designern und Konzeptern und wird die Entwicklung benutzerfreundlicher Websites vorantreiben.<br/>Während ihrer akademischen Laufbahn an der RWTH Aachen und der FH Bonn-Rhein-Sieg spezialisierte sich Dr. Claudia Armbrüster auf Mensch-Maschine-Interaktion mit den Schwerpunkten Usability und virtuelle Realität.</p><p>Chris Wallon, Geschäftsführer Kreation bei SinnerSchrader&#58; „Unsere Kunden fragen immer stärker auch Beratungsleistungen nach&#58; von strategischer Konzeption über Analyse bis hin zu der Entwicklung einer guten User Experience. Wir freuen uns, diesen Bereich mit Claudia Armbrüster zu verstärken.”</p><p>Als Head of User Experience Architecture bei Syzygy Deutschland in Bad Homburg betreute Dr. Claudia Armbrüster zuletzt Kunden wie ZDF, Deutsche Bank und o2.</p></div>
+---

@@ -8,6 +8,11 @@
 				"baseUrl": "",
 				"subUrl": "/jobs.html",
 				"linkText": "Careers"
+			},
+			{
+				"baseUrl": "",
+				"subUrl": "/news-en.html",
+				"linkText": "News"
 			}
 		],
 		"mobilePanel": {

@@ -1,0 +1,6 @@
+---
+image: ""
+date: "1999-03-13"
+title: SinnerSchrader doppelter Finalist der Innovation '98
+content: <div class="newsbody"><p><strong>Gleich mit zwei Webauftritten hat die Internetagentur SinnerSchrader bei der diesjährigen Preisverleihung zur "Innovation '98" den Sprung aufs Treppchen geschafft. Der Preis der Computerzeitung PC Professionell zeichnete im Rahmen der CeBIT zum achten Mal Lösungen aus, die durch herausragende Detaillösungen und zukunftsweisende Gesamtkonzepte überzeugen können.</strong></p><p>In der neu geschaffenen Kategorie "eBusiness" wurde SinnerSchrader für das Online-Auktionshaus ricardo.de und das Mietsystem europcar.de als innovative Online-Agentur geehrt. Die beiden Webauftritte seien "mustergültig" und "radikal kundenorientiert" konzipiert und umgesetzt, urteilte die Jury. Aus der Begründung der Jury im Wortlaut&#58; ricardo.de "Die technisch aufwendige Problemstellung einer Live-Auktion mit mehreren gleichzeitigen Mitbietern wurde mustergültig gelöst. Auch das Design der Internet-Seiten und die moderierten Produktvorstellungen können überzeugen." europcar.de "Die Umsetzung ist radikal kundenorientiert und macht die Online-Vermietung so einfach wie möglich."</p></div>
+---

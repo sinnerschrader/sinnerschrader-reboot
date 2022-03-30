@@ -7,10 +7,14 @@ class BackgroundScrollAnimation {
 
 	showAnimations = window.matchMedia("(prefers-reduced-motion: no-preference)");
 
+	isIOS = false;
+
 	constructor() {
 		if (document.body.classList.contains("is-bg-scroll")) {
 			this.init();
 		}
+
+		this.isIOS = this.detectiOS();
 	}
 
 	init() {
@@ -31,7 +35,7 @@ class BackgroundScrollAnimation {
 
 		if (!this.circleElement) return;
 
-		document.addEventListener("scroll", this.rotateCircle.bind(this));
+		document.addEventListener("scroll", throttle(this.rotateCircle.bind(this), 10));
 	}
 
 	viewPortDetection() {
@@ -54,21 +58,24 @@ class BackgroundScrollAnimation {
 	}
 
 	rotateCircle() {
-		if (this.showAnimations.matches) {
+		if (this.showAnimations.matches && this.isInViewport(this.circleElement, true)) {
 			this.circleElement.style.transform = `rotate(${window.pageYOffset / 4}deg)`;
 		}
 	}
 
-	isInViewport(el) {
+	isInViewport(el, isCircle = false) {
 		if (!el) return;
 
-		let elHeight = el.offsetHeight;
-		let elWidth = el.offsetWidth;
+		let offsetBetweenCircleAndContainer = isCircle ? (el.height / 2) * Math.sqrt(2) - el.height / 2 : 0;
+		let elOffsetHeight = el.offsetHeight;
+		let elOffsetWidth = el.offsetWidth;
+		const elHeight = el.height || 0;
+		const elWidth = el.width || 0;
 		let bounding = el.getBoundingClientRect();
 		let windowHeight;
 		let windowWidth;
 
-		if (this.detectiOS()) {
+		if (this.isIOS) {
 			windowHeight = document.documentElement.clientHeight;
 			windowWidth = document.documentElement.clientWidth;
 		} else {
@@ -77,10 +84,10 @@ class BackgroundScrollAnimation {
 		}
 
 		return (
-			bounding.top >= -elHeight &&
-			bounding.left >= -elWidth &&
-			bounding.right <= windowWidth + elWidth &&
-			bounding.bottom <= windowHeight + elHeight
+			bounding.top >= -elHeight - offsetBetweenCircleAndContainer &&
+			bounding.left >= -elWidth - offsetBetweenCircleAndContainer &&
+			bounding.right <= windowWidth + elOffsetWidth - offsetBetweenCircleAndContainer &&
+			bounding.bottom <= windowHeight + elOffsetHeight + offsetBetweenCircleAndContainer
 		);
 	}
 

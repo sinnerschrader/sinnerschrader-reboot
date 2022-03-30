@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 import { throttle } from "lodash-es";
 
+=======
+>>>>>>> c6ec30b (Feat/jobs list page (#200))
 export class FilterList {
 	// Reference to parent element
 	parent;
@@ -31,10 +34,15 @@ export class FilterList {
 		}
 
 		// apply Eventlisteners
+<<<<<<< HEAD
 		this.createFilters();
 		this.setInitialFiltersFromQueryParams();
 		this.bindListeners();
 		this.detectScrollPositionOfFilterBar();
+=======
+		this.bindListeners();
+		this.createFilters();
+>>>>>>> c6ec30b (Feat/jobs list page (#200))
 	}
 
 	// UI Events
@@ -46,21 +54,36 @@ export class FilterList {
 				const filter = evt.target.getAttribute("name");
 				// filter value
 				const value = evt.target.getAttribute("value");
+<<<<<<< HEAD
 
 				if (evt.target.checked) {
 					// adds filter value
 					this.filters[filter].push(value);
 					evt.target.parentElement.classList.add("is-active");
 					this.addFilterToQueryParam(filter, value);
+=======
+				if (evt.target.checked) {
+					// adds filter value
+					this.filters[filter].push(value);
+					evt.target.classList.add("is-active");
+>>>>>>> c6ec30b (Feat/jobs list page (#200))
 				} else {
 					// removes filter value
 					const index = this.filters[filter].indexOf(value);
 					this.filters[filter].splice(index, 1);
+<<<<<<< HEAD
 					evt.target.parentElement.classList.remove("is-active");
 					this.removeFilterFromQueryParam(filter, value);
 				}
 
 				this.updateActiveFilterTags();
+=======
+					evt.target.classList.remove("is-active");
+				}
+
+				this.updateActiveFilterTags();
+				this.updateListCategories();
+>>>>>>> c6ec30b (Feat/jobs list page (#200))
 
 				if (this.liveUpdate) {
 					this.updateList();
@@ -88,6 +111,10 @@ export class FilterList {
 		this.controls.querySelector("#js-apply-filter").addEventListener("click", (evt) => {
 			evt.preventDefault();
 			this.updateList();
+<<<<<<< HEAD
+=======
+			this.updateListCategories();
+>>>>>>> c6ec30b (Feat/jobs list page (#200))
 			this.toggleFilterBarOpen();
 			if (document.body.classList.contains("freeze-scroll")) {
 				document.body.classList.remove("freeze-scroll");
@@ -105,7 +132,10 @@ export class FilterList {
 			// reset inputs
 			this.controls.querySelectorAll('input[type="checkbox"]').forEach((input) => {
 				input.checked = false;
+<<<<<<< HEAD
 				input.parentElement.classList.remove("is-active");
+=======
+>>>>>>> c6ec30b (Feat/jobs list page (#200))
 			});
 
 			// update Labels
@@ -113,6 +143,7 @@ export class FilterList {
 
 			// update List
 			this.updateList();
+<<<<<<< HEAD
 
 			// reset url params
 			this.resetURLParams();
@@ -182,11 +213,16 @@ export class FilterList {
 		} else {
 			filterHeader.classList.remove("is-floating");
 		}
+=======
+			this.updateListCategories();
+		});
+>>>>>>> c6ec30b (Feat/jobs list page (#200))
 	}
 
 	// open close the filter bar
 	toggleFilterBarOpen() {
 		this.controls.classList.toggle("is-open");
+<<<<<<< HEAD
 
 		if (this.controls.classList.contains("is-open")) {
 			this.controls.querySelectorAll("input").forEach((input) => input.removeAttribute("tabindex"));
@@ -209,6 +245,8 @@ export class FilterList {
 				.setAttribute("tabindex", -1);
 			this.controls.querySelector("#js-job-filter-bar header button.js-toggle-filter-bar--mobile").removeAttribute("tabindex");
 		}
+=======
+>>>>>>> c6ec30b (Feat/jobs list page (#200))
 	}
 
 	// Loops through HTML Categories in the filter section and creates an filter object
@@ -251,6 +289,7 @@ export class FilterList {
 		});
 	}
 
+<<<<<<< HEAD
 	// Update Job list
 	updateList() {
 		// first reset all
@@ -281,6 +320,8 @@ export class FilterList {
 		this.updateEmptyState();
 	}
 
+=======
+>>>>>>> c6ec30b (Feat/jobs list page (#200))
 	// Update Categories
 	updateListCategories() {
 		const categories = this.list.querySelectorAll(".job-list__category");
@@ -308,6 +349,7 @@ export class FilterList {
 		});
 	}
 
+<<<<<<< HEAD
 	// Set empty state if there are no resultes for active filters
 	updateEmptyState() {
 		const emptyStateMessage = this.list.querySelector(".job-list__empty-state");
@@ -363,5 +405,61 @@ export class FilterList {
 		url.searchParams.delete("office");
 
 		history.replaceState({}, "", url);
+=======
+	// Update Job list
+	updateList() {
+		// first reset all
+		this.setAllActive();
+
+		// Filter items and add hidden class
+		Array.from(this.list.querySelectorAll("li"))
+			// by discipline
+			.filter((item) => {
+				const discipline = item.dataset.discipline;
+				// const level = item.dataset.level;
+				const location = item.dataset.location;
+				const excluded =
+					// discipline doesn't match and discipline section is active
+					(!this.filters["discipline"].includes(discipline) && this.isFilterActive("discipline")) ||
+					// location doesn't match and location section is active
+					(!this.filters["location"].includes(location) && this.isFilterActive("location"));
+				// all excluded ones are treated with an extra class
+				return excluded;
+			})
+			// applies hidden class for all excluded ones
+			.forEach((item, index, self) => {
+				item.classList.add(this.hiddenClass);
+			});
+	}
+}
+
+export class FloatObserver {
+	objective;
+	target;
+	targetClass = "";
+	observer;
+
+	constructor(props) {
+		this.objective = document.querySelector(props.objectiveSelector);
+		this.target = document.querySelector(props.targetSelector);
+		this.targetClass = props.targetClass;
+
+		if (this.objective === null || this.target === null) {
+			console.warn("No DOM elements found!");
+			return;
+		}
+
+		this.bindListeners();
+	}
+	bindListeners() {
+		this.observer = new IntersectionObserver((changes) => {
+			if (changes[0].isIntersecting) {
+				this.target.classList.remove(this.targetClass);
+			} else {
+				this.target.classList.add(this.targetClass);
+			}
+		});
+		this.observer.observe(this.objective);
+>>>>>>> c6ec30b (Feat/jobs list page (#200))
 	}
 }

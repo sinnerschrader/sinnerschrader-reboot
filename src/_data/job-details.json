@@ -170,6 +170,36 @@
 		"titleRequirements": "What you should bring with you",
 		"titleOffer": "What we offer"
 	},
+	"contacts": {
+		"vicky": {
+			"name": "Victoria Breuer",
+			"phone": "+49 40 39 88 55 0",
+			"mail": "victoria.breuer@accenture.com",
+			"xing": "https://www.xing.com/profile/Victoria_Breuer2",
+			"linkedIn": "https://www.linkedin.com/in/victoriabreuer/"
+		},
+		"robert": {
+			"name": "Robert Neuhann",
+			"phone": "+49 172 66 93 633",
+			"mail": "robert.neuhann@accenture.com",
+			"xing": "https://www.xing.com/profile/Robert_Neuhann",
+			"linkedIn": "https://www.linkedin.com/in/rneuhann/"
+		},
+		"daniel": {
+			"name": "Daniel Secorsky",
+			"phone": "+49 40 39 88 55 0",
+			"mail": "daniel.secorsky@accenture.com",
+			"xing": "https://www.xing.com/profile/Daniel_Secorsky",
+			"linkedIn": "https://www.linkedin.com/in/daniel-secorsky-286524189/"
+		},
+		"michael": {
+			"name": "Michael Bergmann",
+			"phone": "+49 160 93 41 68 21",
+			"mail": "michael.bergmann@accenture.com",
+			"xing": "https://www.xing.com/profile/Michael_Bergmann119",
+			"linkedIn": "https://www.linkedin.com/in/michaelbergmann-recruiting/"
+		}
+	},
 	"about": {
 		"text-teaser": {
 			"headline": "About us",

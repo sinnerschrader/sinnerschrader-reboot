@@ -1,15 +1,15 @@
 <section class="contact">
-	<h4 class="contact__headline">{{ data.headline }}</h4>
+	<h4 class="contact__headline">Contact</h4>
 	<div class="contact__person">
-		<img class="contact__image" src="{{ data.details.imgUrl }}" alt="" />
+		<img class="contact__image" src="/assets/meta-assets/contact-person.png" alt="Portriat of {{ data.contacts[contact].name }}" />
 		<div>
-			<p class="contact__person-data">{{ data.details.name }}</p>
-			<p class="contact__person-data">{{ data.details.title }}</p>
-			<a class="contact__link" href="tel:{{ data.details.phone }}">{{ data.details.phone }}</a>
+			<p class="contact__person-data">{{ data.contacts[contact].name }}</p>
+			<p class="contact__person-data">Talent Acquisition</p>
+			<a class="contact__link" href="tel:{{ data.contacts[contact].phone }}">{{ data.contacts[contact].phone }}</a>
 			<div class="contact__link-container">
-				<a class="text-teaser__link" href="mailto:{{ data.details.mail }}">Mail</a>
-				<a class="text-teaser__link" href="{{ data.details.linkedIn }}">LinkedIn</a>
-				<a class="text-teaser__link" href="{{ data.details.xing }}">Xing</a>
+				<a class="text-teaser__link" href="mailto:{{ data.contacts[contact].mail }}">Mail</a>
+				<a class="text-teaser__link" href="{{ data.contacts[contact].linkedIn }}">LinkedIn</a>
+				<a class="text-teaser__link" href="{{ data.contacts[contact].xing }}">Xing</a>
 			</div>
 		</div>
 	</div>

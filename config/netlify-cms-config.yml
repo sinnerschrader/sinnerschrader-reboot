@@ -51,6 +51,9 @@ collections:
         widget: "select"
         options:
           - { label: "Vicky", value: "vicky" }
+          - { label: "Robert", value: "robert" }
+          - { label: "Daniel", value: "daniel" }
+          - { label: "Michael", value: "michael" }
 
       - label: "Workday URL"
         name: "workdayLink"

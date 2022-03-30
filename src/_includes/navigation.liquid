@@ -1,15 +1,13 @@
 <header class="nav" data-js-item="navigation" data-js-option="{{ colorModifier }}">
 	<div class="nav__container grid">
 		<div class="nav__logo col-2">
-			<a href="/" >
-				{% include sinnerschrader-header-logo %}
-			</a>
+			<a href="/"> {% include sinnerschrader-header-logo %} </a>
 		</div>
 		<nav class="nav__wrapper col-10" aria-label="{{ data.navigation.ariaLabel }}">
 			<ul class="nav__list">
 				{% for item in data.navigation.links %}
 				<li class="nav__list__item">
-					<a class="nav__list__link" rel="external nofollow" href="{{ item.baseUrl }}{{ item.subUrl }}">
+					<a class="nav__list__link" rel="external nofollow" href="{{ item.subUrl }}">
 						{{ item.linkText }}
 					</a>
 				</li>

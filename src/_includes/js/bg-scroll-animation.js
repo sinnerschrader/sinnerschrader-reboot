@@ -62,11 +62,16 @@ class BackgroundScrollAnimation {
 	isInViewport(el) {
 		if (!el) return;
 
+<<<<<<< HEAD
 		let elHeight = el.offsetHeight;
 		let elWidth = el.offsetWidth;
 		let bounding = el.getBoundingClientRect();
 		let windowHeight;
 		let windowWidth;
+=======
+		const { top, bottom } = el.getBoundingClientRect();
+		const vHeight = document.body.clientHeight;
+>>>>>>> c6ec30b (Feat/jobs list page (#200))
 
 		if (this.detectiOS()) {
 			windowHeight = document.documentElement.clientHeight;

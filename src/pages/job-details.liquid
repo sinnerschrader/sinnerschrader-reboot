@@ -83,7 +83,7 @@ dataJsItem: bg-scroll-animation
 			<p>We look forward to hearing from you.</p>
 		</div>
 		<div class="col-start-10 col-end-13 col-start-9-s col-end-13-s col-start-1-xs col-end-13-xs">
-			{% include contact-person, data: components.contact workdayLink: job.data.workdayLink %}
+			{% include contact-person, contact: job.data.contact data: job-details workdayLink: job.data.workdayLink %}
 		</div>
 	</section>
 	<section class="job-details__apply grid">

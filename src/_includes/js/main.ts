@@ -74,6 +74,6 @@ import { Video } from "./video.js";
 	new Parallax();
 })();
 
-function isModuleNeeded(moduleName) {
+function isModuleNeeded(moduleName: string) {
 	return document.querySelectorAll(`[data-js-item='${moduleName}']`).length !== 0;
 }

@@ -1,5 +1,9 @@
 export class Notification {
-	constructor(notificationId) {
+	private timeout?: NodeJS.Timeout;
+	private notificationId: string;
+	private notificationElement: HTMLElement;
+
+	public constructor(notificationId: string) {
 		this.timeout = undefined;
 		this.notificationId = notificationId;
 		this.notificationElement = document.getElementById(this.notificationId);
@@ -9,7 +13,7 @@ export class Notification {
 		});
 	}
 
-	show() {
+	public show() {
 		this.notificationElement.classList.add("active");
 
 		if (this.timeout !== undefined) {
@@ -21,7 +25,7 @@ export class Notification {
 		}, 3000);
 	}
 
-	hide() {
+	private hide() {
 		this.notificationElement.classList.remove("active");
 	}
 }

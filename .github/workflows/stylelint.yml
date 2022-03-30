@@ -13,4 +13,4 @@ jobs:
           node-version: "14"
       - run: |
           npm ci
-          npm run stylelint
+          npm run lint:stylelint

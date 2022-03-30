@@ -1,9 +1,9 @@
 // core
+@import "./core/variables";
 @import "./core/animations";
 @import "./core/base";
 @import "./core/fonts";
 @import "./core/grid";
-@import "./core/variables";
 @import "./core/form";
 @import "./core/components-page";
 @import "./core/buttons";
@@ -42,4 +42,4 @@
 @import "./includes/notification";
 
 // External
-@import "node_modules/swiper/swiper";
+@import "../../node_modules/swiper/swiper";

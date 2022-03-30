@@ -1,0 +1,113 @@
+---
+title: SinnerSchrader
+layout: default.liquid
+pagination:
+  data: collections.jobs
+  size: 1
+  alias: job
+permalink: "jobs/{{ job.data.title | slug }}-{{ job.data.location | slug }}.html"
+bodyClass: is-bg-scroll
+dataJsItem: bg-scroll-animation
+---
+<div class="fade-bg-black">{% include navigation, data: global %}</div>
+<main class="job-details">
+	<section class="fade-bg-black grid">
+		<a class="job-details__openings" href="/jobs.html">
+			<svg class="button__icon">
+				<use href="/assets/svg/icons.svg#arrow-left" />
+			</svg>
+			<span>All openings</span>
+		</a>
+	</section>
+	<section class="fade-bg-black grid">{% include page-headline, firstline: job.data.title, secondline: '(f/m/d/-)' %}</section>
+	<section class="fade-bg-black job-details__description grid">
+		<div class="col-5 col-12-xs job-details__description__button">
+			<a href="#job-description" class="button button--secondary button--small">
+				<span class="button__text">see details</span>
+			</a>
+		</div>
+		<div class="col-7 col-12-xs">
+			<p class="text-teaser__text">{{ job.data.description }}</p>
+		</div>
+	</section>
+	<section class="fade-bg-black">
+		{% capture title %}{{ job.date | date: "%d.%m.%Y" }} &#183; {{ job.data.discipline }} &#183; {{ job.data.location }}{% endcapture %}
+		{% include section-header, title: title, spinningWheel: "spinning-wheel" %}
+	</section>
+	{% capture firstline %}Join our <span>{{ job.data.discipline }}</span> team {% endcapture %}
+	{% capture secondline %}in {{ job.data.location | capitalize }}{% endcapture %}
+	<section class="fade-bg-black grid">{% include page-headline, firstline: firstline, secondline: secondline %}</section>
+	<section>
+		{% case job.data.location %}
+			{% when "berlin" %}
+				{% assign locationSlides = job-details.slider.slides.berlin %}
+			{% when "frankfurt" %}
+				{% assign locationSlides = job-details.slider.slides.frankfurt %}
+			{% when "hamburg" %}
+				{% assign locationSlides = job-details.slider.slides.hamburg %}
+			{% when "munich" %}
+				{% assign locationSlides = job-details.slider.slides.munich %}
+			{% when "prague" %}
+				{% assign locationSlides = job-details.slider.slides.prague %}
+			{% when "zurich" %}
+				{% assign locationSlides = job-details.slider.slides.zurich %}
+		{% endcase %}
+		
+		{% case job.data.discipline %}
+			{% when "account management" %}
+				{% assign disciplineSlides = job-details.slider.slides.accountManagement %}
+			{% when "corporate functions" %}
+				{% assign disciplineSlides = job-details.slider.slides.corporateFunctions %}
+			{% when "creative" %}
+				{% assign disciplineSlides = job-details.slider.slides.creative %}
+			{% when "strategy" %}
+				{% assign disciplineSlides = job-details.slider.slides.strategy %}
+			{% when "tech" %}
+				{% assign disciplineSlides = job-details.slider.slides.tech %}
+		{% endcase %}
+
+		{% assign slides = locationSlides | concat: disciplineSlides %}
+
+		{% include slider, slides: slides %}
+	</section>
+	<section id="job-description">
+		{% include section-header, title: "job details", number: "02" %}
+	</section>
+	<section class="job-details__info grid">
+		<div class="job-details__info__content col-7 col-8-m col-7-s col-12-xs">
+			{% include job-info, data: job-details, expectations: job.data.expectations, requirements: job.data.requirements, offers: job.data.offers%}
+		</div>
+		<div class="col-12-xs job-details__interest--mobile">
+			<h3 class="copy--title">Interested?</h3>
+			<p>Please send us your application documents (including a link to your online portfolio) exclusively by e-mail to jobs@sinnerschrader.com.</p>
+			<p>We look forward to hearing from you.</p>
+		</div>
+		<div class="col-start-10 col-end-13 col-start-9-s col-end-13-s col-start-1-xs col-end-13-xs">
+			{% include contact-person, data: components.contact workdayLink: job.data.workdayLink %}
+		</div>
+	</section>
+	<section class="job-details__apply grid">
+		<div class="col-7 col-12-xs job-details__interest">
+			<h3 class="copy--title">Interested?</h3>
+			<p>Please send us your application documents (including a link to your online portfolio) exclusively by e-mail to jobs@sinnerschrader.com.</p>
+			<p>We look forward to hearing from you.</p>
+		</div>
+		<div class="col-start-10 col-end-13 col-start-11-s col-end-12-s col-start-1-xs col-end-13-xs">
+			{% include share-buttons, title:"Share this job" link:true facebook:true twitter:true devTo:true xing:true linkedIn:true %}
+		</div>
+	</section>
+	<section>{% include text-teaser, data: job-details.about %}</section>
+	<section>{% include text-teaser, data: job-details %}</section>
+	<section>
+	<div class="job-details__apply text-teaser grid">
+		<div class="col-5 col-12-xs">
+			<h3 class="copy--title">Sounds like you?</h3>
+		</div>
+			<div class="col-7 col-12-xs">
+				{% include button-apply, data: job-details workdayLink: job.data.workdayLink %}
+			</div>
+		<div>
+	</section>
+</main>
+
+{% include footer, data: global hasAccentureDisclaimer: true %}

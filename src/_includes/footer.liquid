@@ -1,52 +1,51 @@
 <footer class="footer">
-  <div class="accenture-brand">
-    <div class="grid">
-      <div class="accenture-brand__item col-start-11 col-end-13
-                          col-start-9-s col-end-11-s
-                          col-start-5-xs col-end-12-xs">
-        <img loading="lazy"
-             alt="{{ data.footer.topline.altText }}"
-             class="accenture-brand__logo"
-             src="{{ data.footer.topline.imgSrc }}">
-      </div>
+    <div class="accenture-brand">
+        <div class="grid">
+            <div class="accenture-brand__item col-start-11 col-end-13
+                                              col-start-9-s col-end-11-s
+                                              col-start-5-xs col-end-12-xs">
+                <img loading="lazy" alt="{{ data.footer.topline.altText }}" class="accenture-brand__logo" src="{{ data.footer.topline.imgSrc }}">
+            </div>
+        </div>
     </div>
-  </div>
-  <div class="grid footer__wrapper">
-    <a class="footer__s2-link col-start-1 col-end-6" href="{{ data.footer.logo.href }}">
-      <img loading="lazy"
-           alt="{{ data.footer.logo.altText }}"
-           src="{{ data.footer.logo.imgSrc }}"/>
-    </a>
-    <span class="footer__s2-conference-links col-start-1 col-end-12">
-        {{ data.footer.leftSideContent.toplineCopy }}
-	    <a class="footer__link underline-white"
-	       href="{{ data.footer.leftSideContent.toplineHref }}"
-	       rel="external nofollow">{{ data.footer.leftSideContent.toplineLinkText }}</a>
-        <br/>
-	    {{ data.footer.leftSideContent.bottomlineCopy }}
-	    <a class="footer__link"
-	       href="{{ data.footer.leftSideContent.bottomlineHref }}"
-	       rel="external nofollow">{{ data.footer.leftSideContent.bottomlineLinkText }}</a>
-    </span>
-    <div class="footer__s2-links col-start-9 col-end-11 col-start-7-m col-end-10-m
-                    col-start-6-s col-end-9-s col-start-1-xs col-end-7-xs">
-      <ul class="footer__list">
-	      {% for item in data.footer.linklist.left %}
-		      <li class="footer__item">
-			      <a class="footer__link" href="{{ item.href }}" rel="{{ item.ref }}">{{ item.text }}</a>
-		      </li>
-	      {% endfor %}
-      </ul>
+    <div class="grid footer__wrapper">
+        <a class="footer__s2-link col-start-1 col-end-6" href="{{ data.footer.logo.href }}">
+            <img loading="lazy" alt="{{ data.footer.logo.altText }}" src="{{ data.footer.logo.imgSrc }}"/>
+        </a>
+        <span class="footer__s2-conference-links col-start-1 col-end-12">
+            {{ data.footer.leftSideContent.toplineCopy }}
+            <a class="footer__link underline-white" href="{{ data.footer.leftSideContent.toplineHref }}" rel="external nofollow">{{ data.footer.leftSideContent.toplineLinkText }}</a>
+            <br/>
+            {{ data.footer.leftSideContent.bottomlineCopy }}
+            <a class="footer__link" href="{{ data.footer.leftSideContent.bottomlineHref }}" rel="external nofollow">{{ data.footer.leftSideContent.bottomlineLinkText }}</a>
+        </span>
+        <div class="footer__s2-links col-start-9 col-end-11 col-start-7-m col-end-10-m
+                                    col-start-6-s col-end-9-s col-start-1-xs col-end-7-xs">
+            <ul class="footer__list">
+                {% for item in data.footer.linklist.left %}
+                    <li class="footer__item">
+                        <a class="footer__link" href="{{ item.href }}" rel="{{ item.ref }}">{{ item.text }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="footer__s2-links col-start-11 col-end-13 col-start-10-m col-end-13-m col-start-10-s col-end-13-s
+                                    col-start-7-xs col-end-13-xs">
+            <ul class="footer__list">
+                {% for item in data.footer.linklist.right %}
+                    <li class="footer__item">
+                        <a class="footer__link" href="{{ item.href }}" rel="{{ item.ref }}">{{ item.text }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% if hasAccentureDisclaimer %}
+            <div class="footer__disclaimer">
+                <p>Since February 2017 SinnerSchrader is part of Accenture Interactive. This is why we would like to inform you that your application will be processed by the Accenture Recruiting Team. Our candidate management system Workday and our inbox will also be handled by Accenture.
+                Detailed information on our privacy policy can be found here:</p>
+                <a href="https://www.accenture.com/de-de/about/privacy-policy" rel="external nofollow" target="_blank">https://www.accenture.com/de-de/about/privacy-policy</a>
+                <a href="https://www.accenture.com/de-de/careers/life-at-accenture/privacy-policy" rel="external nofollow" target="_blank">https://www.accenture.com/de-de/careers/life-at-accenture/privacy-policy</a>
+            </div>
+        {% endif %}
     </div>
-    <div class="footer__s2-links col-start-11 col-end-13 col-start-10-m col-end-13-m col-start-10-s col-end-13-s
-                    col-start-7-xs col-end-13-xs">
-      <ul class="footer__list">
-	      {% for item in data.footer.linklist.right %}
-		      <li class="footer__item">
-			      <a class="footer__link" href="{{ item.href }}" rel="{{ item.ref }}">{{ item.text }}</a>
-		      </li>
-	      {% endfor %}
-      </ul>
-    </div>
-  </div>
 </footer>

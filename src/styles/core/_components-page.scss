@@ -1,0 +1,36 @@
+.components-page {
+	&__icon-button-wrapper {
+		display: flex;
+		padding: 2rem 10rem;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	&__share-buttons-wrapper {
+		display: flex;
+		justify-content: space-around;
+		margin: 2rem;
+	}
+
+	&__filter-checkbox-wrapper {
+		display: flex;
+		padding: 10rem;
+		justify-content: space-between;
+	}
+
+	&__button-wrapper {
+		@include bp-xs {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			min-height: 20rem;
+		}
+	}
+
+	&__notification-wrapper {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		margin: 5rem 0;
+	}
+}

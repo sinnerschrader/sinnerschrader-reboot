@@ -2,21 +2,17 @@
 	<div class="grid">
 		{% include headline-copy, data: data.slider.headlineCopy %}
 	</div>
-	<div class="swiper-container is-grid--right">
+	<div class="swiper-container is-grid--right" tabindex="0">
 		<div class="swiper-wrapper">
-			{% for slide in data.slider.slides %}
-				<div class="swiper-slide">
-					<picture>
-						<source media="(max-width: 599px)"
-							srcset="{{ slide.mobileSrc }}" type="image/webp" />
-						<source media="(min-width: 600px) and (max-width: 1199px)"
-							srcset="{{ slide.tabletSrc }}" type="image/webp" />
-						<source media="(min-width: 1200px)"
-							srcset="{{ slide.desktopSrc }}" type="image/webp" />
-						<img loading="lazy" src="{{ slide.fallbackSrc }}"
-						     alt="{{ slide.altText }}" class="parallax-medium" />
-					</picture>
-				</div>
+			{% for slide in slides %}
+			<div class="swiper-slide">
+				<picture>
+					<source media="(max-width: 599px)" srcset="{{ slide.mobileSrc }}" type="image/webp" />
+					<source media="(min-width: 600px) and (max-width: 1199px)" srcset="{{ slide.tabletSrc }}" type="image/webp" />
+					<source media="(min-width: 1200px)" srcset="{{ slide.desktopSrc }}" type="image/webp" />
+					<img loading="lazy" src="{{ slide.fallbackSrc }}" alt="{{ slide.altText }}" class="parallax-medium" />
+				</picture>
+			</div>
 			{% endfor %}
 		</div>
 	</div>

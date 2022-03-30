@@ -24,6 +24,11 @@ module.exports = (eleventyConfig) => {
 	});
 
 	eleventyConfig.setTemplateFormats(["liquid", "njk"]);
+	eleventyConfig.setTemplateFormats(["md", "liquid", "njk"]);
+
+	eleventyConfig.addLiquidFilter("groupByDiscipline", function (items, discipline) {
+		return items.filter((it) => it.data.discipline.toLowerCase() === discipline.toLowerCase());
+	});
 
 	eleventyConfig.addTransform("async-transform-name", async (content, outputPath) => {
 		if (outputPath.endsWith(".css")) {
@@ -58,8 +63,12 @@ module.exports = (eleventyConfig) => {
 		"./src/_includes/assets/fonts": "./assets/fonts",
 		"./src/_includes/assets/videos": "./assets/videos",
 		"./src/_includes/assets/svg": "./assets/svg",
+		"./src/_includes/assets/emojis": "./assets/emojis",
 		"./src/_includes/assets/meta-assets": "./assets/meta-assets",
 		"./src/_includes/data/*": "./data/",
+		"./config/netlify-cms-config.yml": "./admin/config.yml",
+		"./node_modules/netlify-cms/dist/netlify-cms.js": "./netlify-cms.js",
+		"./src/_includes/js/jobs.js": "jobs.js",
 	});
 
 	return {

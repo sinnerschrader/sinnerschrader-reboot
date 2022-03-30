@@ -1,0 +1,196 @@
+{
+	"slider": {
+		"slides": {
+			"accountManagement": [
+				{
+					"mobileSrc": "/assets/images/mobile/account_management.webp",
+					"tabletSrc": "/assets/images/tablet/account_management.webp",
+					"desktopSrc": "/assets/images/desktop/account_management.webp",
+					"fallbackSrc": "/assets/images/fallback/account_management.webp",
+					"altText": "TODO: account_management.webp"
+				}
+			],
+			"corporateFunctions": [
+				{
+					"mobileSrc": "/assets/images/mobile/corporate_functions1.webp",
+					"tabletSrc": "/assets/images/tablet/corporate_functions1.webp",
+					"desktopSrc": "/assets/images/desktop/corporate_functions1.webp",
+					"fallbackSrc": "/assets/images/fallback/corporate_functions1.webp",
+					"altText": "TODO: corporate_functions1.webp"
+				},
+				{
+					"mobileSrc": "/assets/images/mobile/corporate_functions2.webp",
+					"tabletSrc": "/assets/images/tablet/corporate_functions2.webp",
+					"desktopSrc": "/assets/images/desktop/corporate_functions2.webp",
+					"fallbackSrc": "/assets/images/fallback/corporate_functions2.webp",
+					"altText": "TODO: corporate_functions2.webp"
+				},
+				{
+					"mobileSrc": "/assets/images/mobile/corporate_functions3.webp",
+					"tabletSrc": "/assets/images/tablet/corporate_functions3.webp",
+					"desktopSrc": "/assets/images/desktop/corporate_functions3.webp",
+					"fallbackSrc": "/assets/images/fallback/corporate_functions3.webp",
+					"altText": "TODO: corporate_functions3.webp"
+				}
+			],
+			"creative": [
+				{
+					"mobileSrc": "/assets/images/mobile/creative.webp",
+					"tabletSrc": "/assets/images/tablet/creative.webp",
+					"desktopSrc": "/assets/images/desktop/creative.webp",
+					"fallbackSrc": "/assets/images/fallback/creative.webp",
+					"altText": "TODO: creative.webp"
+				}
+			],
+			"strategy": [
+				{
+					"mobileSrc": "/assets/images/mobile/strategy.webp",
+					"tabletSrc": "/assets/images/tablet/strategy.webp",
+					"desktopSrc": "/assets/images/desktop/strategy.webp",
+					"fallbackSrc": "/assets/images/fallback/strategy.webp",
+					"altText": "TODO: strategy.webp"
+				}
+			],
+			"tech": [
+				{
+					"mobileSrc": "/assets/images/mobile/tech1.webp",
+					"tabletSrc": "/assets/images/tablet/tech1.webp",
+					"desktopSrc": "/assets/images/desktop/tech1.webp",
+					"fallbackSrc": "/assets/images/fallback/tech1.webp",
+					"altText": "TODO: tech1.webp"
+				},
+				{
+					"mobileSrc": "/assets/images/mobile/tech2.webp",
+					"tabletSrc": "/assets/images/tablet/tech2.webp",
+					"desktopSrc": "/assets/images/desktop/tech2.webp",
+					"fallbackSrc": "/assets/images/fallback/tech2.webp",
+					"altText": "TODO: tech2.webp"
+				}
+			],
+			"berlin": [
+				{
+					"mobileSrc": "/assets/images/mobile/Berlin1.webp",
+					"tabletSrc": "/assets/images/tablet/Berlin1.webp",
+					"desktopSrc": "/assets/images/desktop/Berlin1.webp",
+					"fallbackSrc": "/assets/images/fallback/Berlin1.webp",
+					"altText": "TODO: berlin1.webp"
+				},
+				{
+					"mobileSrc": "/assets/images/mobile/Berlin2.webp",
+					"tabletSrc": "/assets/images/tablet/Berlin2.webp",
+					"desktopSrc": "/assets/images/desktop/Berlin2.webp",
+					"fallbackSrc": "/assets/images/fallback/Berlin2.webp",
+					"altText": "TODO: berlin2.webp"
+				}
+			],
+			"frankfurt": [
+				{
+					"mobileSrc": "/assets/images/mobile/Frankfurt1.webp",
+					"tabletSrc": "/assets/images/tablet/Frankfurt1.webp",
+					"desktopSrc": "/assets/images/desktop/Frankfurt1.webp",
+					"fallbackSrc": "/assets/images/fallback/Frankfurt1.webp",
+					"altText": "TODO: frankfurt1.webp"
+				},
+				{
+					"mobileSrc": "/assets/images/mobile/Frankfurt2.webp",
+					"tabletSrc": "/assets/images/tablet/Frankfurt2.webp",
+					"desktopSrc": "/assets/images/desktop/Frankfurt2.webp",
+					"fallbackSrc": "/assets/images/fallback/Frankfurt2.webp",
+					"altText": "TODO: frankfurt2.webp"
+				}
+			],
+			"hamburg": [
+				{
+					"mobileSrc": "/assets/images/mobile/Hamburg1.webp",
+					"tabletSrc": "/assets/images/tablet/Hamburg1.webp",
+					"desktopSrc": "/assets/images/desktop/Hamburg1.webp",
+					"fallbackSrc": "/assets/images/fallback/Hamburg1.webp",
+					"altText": "TODO: hamburg1.webp"
+				},
+				{
+					"mobileSrc": "/assets/images/mobile/Hamburg2.webp",
+					"tabletSrc": "/assets/images/tablet/Hamburg2.webp",
+					"desktopSrc": "/assets/images/desktop/Hamburg2.webp",
+					"fallbackSrc": "/assets/images/fallback/Hamburg2.webp",
+					"altText": "TODO: hamburg2.webp"
+				}
+			],
+			"munich": [
+				{
+					"mobileSrc": "/assets/images/mobile/Munich1.webp",
+					"tabletSrc": "/assets/images/tablet/Munich1.webp",
+					"desktopSrc": "/assets/images/desktop/Munich1.webp",
+					"fallbackSrc": "/assets/images/fallback/Munich1.webp",
+					"altText": "TODO: munich1.webp"
+				},
+				{
+					"mobileSrc": "/assets/images/mobile/Munich2.webp",
+					"tabletSrc": "/assets/images/tablet/Munich2.webp",
+					"desktopSrc": "/assets/images/desktop/Munich2.webp",
+					"fallbackSrc": "/assets/images/fallback/Munich2.webp",
+					"altText": "TODO: munich2.webp"
+				}
+			],
+			"prague": [
+				{
+					"mobileSrc": "/assets/images/mobile/Prague1.webp",
+					"tabletSrc": "/assets/images/tablet/Prague1.webp",
+					"desktopSrc": "/assets/images/desktop/Prague1.webp",
+					"fallbackSrc": "/assets/images/fallback/Prague1.webp",
+					"altText": "TODO: prague1.webp"
+				},
+				{
+					"mobileSrc": "/assets/images/mobile/Prague2.webp",
+					"tabletSrc": "/assets/images/tablet/Prague2.webp",
+					"desktopSrc": "/assets/images/desktop/Prague2.webp",
+					"fallbackSrc": "/assets/images/fallback/Prague2.webp",
+					"altText": "TODO: prague2.webp"
+				}
+			],
+			"zurich": [
+				{
+					"mobileSrc": "/assets/images/mobile/Zurich1.webp",
+					"tabletSrc": "/assets/images/tablet/Zurich1.webp",
+					"desktopSrc": "/assets/images/desktop/Zurich1.webp",
+					"fallbackSrc": "/assets/images/fallback/Zurich1.webp",
+					"altText": "TODO: zurich1.webp"
+				},
+				{
+					"mobileSrc": "/assets/images/mobile/Zurich2.webp",
+					"tabletSrc": "/assets/images/tablet/Zurich2.webp",
+					"desktopSrc": "/assets/images/desktop/Zurich2.webp",
+					"fallbackSrc": "/assets/images/fallback/Zurich2.webp",
+					"altText": "TODO: zurich2.webp"
+				}
+			]
+		}
+	},
+	"jobDescription": {
+		"titleExpectations": "What you can expect from us",
+		"titleRequirements": "What you should bring with you",
+		"titleOffer": "What we offer"
+	},
+	"about": {
+		"text-teaser": {
+			"headline": "About us",
+			"text": "We’re a colorful community of creators, developers, coders, and dreamers that craft experiences for an open and optimistic world. We’re also among one of the fastest growing agency families in the world, creating digital experiences for global brands like Volkswagen, Audi, and Telefónica – and pioneering companies like holoride, unzer, and Bosch eBike.",
+			"link": {
+				"text": "See cases",
+				"href": "#"
+			}
+		}
+	},
+	"text-teaser": {
+		"headline": "Our Culture",
+		"text": "Above all, we are an open community living in an inclusive culture of cultures. We welcome everyone that welcomes everyone. As a people brand, we also share a set of beliefs and basic principles that describe who we are and who we want to become.",
+		"link": {
+			"text": "Learn more",
+			"href": "#"
+		}
+	},
+	"apply": {
+		"mail": "jobs@sinnerschrader.com",
+		"buttonApplyMail": "Apply now",
+		"buttonApplyWorkday": "Apply via Workday"
+	}
+}

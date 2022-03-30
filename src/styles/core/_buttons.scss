@@ -1,0 +1,32 @@
+// BUTTON
+.button {
+	border: 0;
+	display: inline-flex;
+	box-sizing: border-box;
+	align-items: center;
+	font-size: 1.2rem;
+	text-transform: uppercase;
+	letter-spacing: 0.15rem;
+	padding: 1rem 1.6rem;
+	border-radius: 2.05rem;
+	margin: 0 1.6rem 1.6rem 0;
+
+	&--primary {
+		background-color: $color-primary--900;
+		color: $color-primary--white;
+	}
+
+	&--secondary {
+		background-color: $color-primary--beige;
+		color: $color-primary--black;
+	}
+
+	&--apply {
+		background-color: $color-primary--white;
+		color: $color-primary--black;
+	}
+
+	&--icon-left {
+		padding-left: 3.4rem;
+	}
+}

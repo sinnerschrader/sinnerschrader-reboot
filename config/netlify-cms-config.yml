@@ -1,0 +1,91 @@
+backend:
+  name: github
+  repo: sinnerschrader/sinnerschrader-reboot
+  branch: development # TODO: change to main before go-live once all new job postings have been added
+  base_url: https://k741x3mcij.execute-api.eu-central-1.amazonaws.com
+  auth_endpoint: /prod/auth
+
+media_library:
+  name: "disabled"
+
+editor:
+  preview: false
+
+publish_mode: editorial_workflow
+
+collections:
+  - label: "Job"
+    name: "job"
+    folder: "src/jobs"
+    create: true
+    delete: true
+    slug: "{{title}}-{{location}}"
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+
+      - label: "City"
+        name: "location"
+        widget: "select"
+        options:
+          - { label: "Hamburg", value: "hamburg" }
+          - { label: "Munich", value: "munich" }
+          - { label: "Frankfurt", value: "frankfurt" }
+          - { label: "Berlin", value: "berlin" }
+          - { label: "Prague", value: "prague" }
+          - { label: "Zurich", value: "zurich" }
+
+      - label: "Discipline"
+        name: "discipline"
+        widget: "select"
+        options:
+          - { label: "Tech", value: "tech" }
+          - { label: "Creative", value: "creative" }
+          - { label: "Strategy", value: "strategy" }
+          - { label: "Account Management", value: "account management" }
+          - { label: "Corporate Functions", value: "corporate functions" }
+
+      - label: "Contact"
+        name: "contact"
+        widget: "select"
+        options:
+          - { label: "Vicky", value: "vicky" }
+
+      - label: "Workday URL"
+        name: "workdayLink"
+        required: false
+        widget: "string"
+
+      - label: "Description"
+        name: "description"
+        widget: "text"
+
+      - label: "What you can expect from us"
+        name: "expectations"
+        label_singular: "expectation"
+        widget: "list"
+        field: { label: "expectation", name: "expectation", widget: "string" }
+        collapsed: false
+
+      - label: "What you should bring with you"
+        name: "requirements"
+        label_singular: "requirement"
+        widget: "list"
+        field: { label: "requirement", name: "requirement", widget: "string" }
+        collapsed: false
+
+      - label: "What we offer"
+        name: "offers"
+        label_singular: "offer"
+        widget: "list"
+        field: { label: "offer", name: "offer", widget: "string" }
+        collapsed: false
+        default:
+          [
+            "Exciting and innovative projects for well-known companies",
+            "Varied tasks and space for personal responsibility",
+            "Professional and personal development",
+            "A pleasant working atmosphere and short decision-making processes",
+            "Great benefits (Accident insurance, Workers Council, Employer share purchase program, Employee Referral Program, and more)",
+          ]

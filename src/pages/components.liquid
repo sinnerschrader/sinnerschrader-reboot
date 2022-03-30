@@ -1,0 +1,160 @@
+---
+title: SinnerSchrader
+layout: default.liquid
+permalink: components.html
+bodyClass: is-bg-scroll
+dataJsItem: bg-scroll-animation
+---
+
+{% include navigation, data: global %}
+
+<main>
+	{% include stage, data: components %}
+
+	<section class="fade-bg-black">
+		{% include section-header, title: "Image-Teaser", number: "01" %} {% capture exampleContent %}
+		<h1 style="color: inherit">Hello World</h1>
+		<p style="color: inherit">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+		</p>
+		<button>Use me</button>
+		{% endcapture %} {% include image-teaser, data: components, content: exampleContent %}
+	</section>
+	<section>{% include section-header, title: "Text-Teaser (on dark)", number: "02" %} {% include text-teaser, data: components %}</section>
+	<section>
+		{% include section-header, title: "Jobs offering List", number: "03" %} {% include offering-list-emoji, data: components %}
+	</section>
+
+	<section>{% include section-header, title: "Text-Teaser", number: "02" %} {% include text-teaser, data: components %}</section>
+
+	<section class="fade-bg-black">
+		{% include section-header, title: "Text-Teaser (on dark)", number: "03" %} {% include text-teaser, data: components%}
+	</section>
+
+	<section>
+		{% include section-header, title: "Icon-Button", number: "04" %}
+		<div class="components-page__icon-button-wrapper">
+			{% include button-notext, iconSrc:"/assets/svg/Chevron-down-L.svg" %} {% include button-notext,
+			iconSrc:"/assets/svg/Chevron-down-L.svg" option:"secondary"%} {% include button-notext, iconSrc:"/assets/svg/Chevron-down-L.svg"
+			option:"tertiary"%} {% include button-notext, iconSrc:"/assets/svg/Chevron-down-S.svg" size:"small"%} {% include button-notext,
+			iconSrc:"/assets/svg/Chevron-down-S.svg" option:"secondary" size:"small"%} {% include button-notext,
+			iconSrc:"/assets/svg/Chevron-down-S.svg" option:"tertiary" size:"small"%}
+		</div>
+		<div class="components-page__icon-button-wrapper">
+			{% include button-notext, iconSrc:"/assets/svg/Close-L.svg" aria:"close" %} {% include button-notext,
+			iconSrc:"/assets/svg/Close-L.svg" aria:"close" option:"secondary"%} {% include button-notext, iconSrc:"/assets/svg/Close-L.svg"
+			aria:"close" option:"tertiary"%} {% include button-notext, iconSrc:"/assets/svg/Close-S.svg" aria:"close" size:"small"%} {% include
+			button-notext, iconSrc:"/assets/svg/Close-S.svg" aria:"close" option:"secondary" size:"small"%} {% include button-notext,
+			iconSrc:"/assets/svg/Close-S.svg" aria:"close" option:"tertiary" size:"small"%}
+		</div>
+		<div class="components-page__icon-button-wrapper">
+			{% include button-notext, iconSrc:"/assets/svg/Filter-L.svg" aria:"filter" %} {% include button-notext,
+			iconSrc:"/assets/svg/Filter-L.svg" aria:"filter" option:"secondary"%} {% include button-notext, iconSrc:"/assets/svg/Filter-L.svg"
+			aria:"filter" option:"tertiary"%} {% include button-notext, iconSrc:"/assets/svg/Filter-S.svg" aria:"filter" size:"small"%} {% include
+			button-notext, iconSrc:"/assets/svg/Filter-S.svg" aria:"filter" option:"secondary" size:"small"%} {% include button-notext,
+			iconSrc:"/assets/svg/Filter-S.svg" aria:"filter" option:"tertiary" size:"small"%}
+		</div>
+	</section>
+
+	<section class="fade-bg-black">
+		{% include section-header, title: "Icon-Button(on dark)", number: "05" %}
+		<div class="components-page__icon-button-wrapper">
+			{% include button-notext, iconSrc:"/assets/svg/Chevron-down-L.svg" %} {% include button-notext,
+			iconSrc:"/assets/svg/Chevron-down-L.svg" option:"secondary"%} {% include button-notext, iconSrc:"/assets/svg/Chevron-down-L.svg"
+			option:"tertiary"%} {% include button-notext, iconSrc:"/assets/svg/Chevron-down-S.svg" size:"small"%} {% include button-notext,
+			iconSrc:"/assets/svg/Chevron-down-S.svg" option:"secondary" size:"small"%} {% include button-notext,
+			iconSrc:"/assets/svg/Chevron-down-S.svg" option:"tertiary" size:"small"%}
+		</div>
+		<div class="components-page__icon-button-wrapper">
+			{% include button-notext, iconSrc:"/assets/svg/Close-L.svg" aria:"close" %} {% include button-notext,
+			iconSrc:"/assets/svg/Close-L.svg" aria:"close" option:"secondary"%} {% include button-notext, iconSrc:"/assets/svg/Close-L.svg"
+			aria:"close" option:"tertiary"%} {% include button-notext, iconSrc:"/assets/svg/Close-S.svg" aria:"close" size:"small"%} {% include
+			button-notext, iconSrc:"/assets/svg/Close-S.svg" aria:"close" option:"secondary" size:"small"%} {% include button-notext,
+			iconSrc:"/assets/svg/Close-S.svg" aria:"close" option:"tertiary" size:"small"%}
+		</div>
+		<div class="components-page__icon-button-wrapper">
+			{% include button-notext, iconSrc:"/assets/svg/Filter-L.svg" aria:"filter" %} {% include button-notext,
+			iconSrc:"/assets/svg/Filter-L.svg" aria:"filter" option:"secondary"%} {% include button-notext, iconSrc:"/assets/svg/Filter-L.svg"
+			aria:"filter" option:"tertiary"%} {% include button-notext, iconSrc:"/assets/svg/Filter-S.svg" aria:"filter" size:"small"%} {% include
+			button-notext, iconSrc:"/assets/svg/Filter-S.svg" aria:"filter" option:"secondary" size:"small"%} {% include button-notext,
+			iconSrc:"/assets/svg/Filter-S.svg" aria:"filter" option:"tertiary" size:"small"%}
+		</div>
+	</section>
+
+	{% include section-header, title: "Button", number: "06" %}
+	<section class="grid">
+		<div class="components-page__button-wrapper">
+			<p>Primary</p>
+			{% include button, buttonText: "Large", buttonOption: "primary", buttonSize: "large", iconLeftID: "arrow-right" mobileFullWidth: true
+			%} {% include button, buttonText: "Small", buttonOption: "primary", buttonSize: "small" mobileFullWidth: true%} {% include button,
+			buttonText: "Disabled", buttonOption: "primary", buttonSize: "small", iconRightID: "arrow-right", state: "disabled" mobileFullWidth:
+			true%}
+		</div>
+		<div class="components-page__button-wrapper">
+			<p>Secondary</p>
+			{% include button, buttonText: "Large", buttonOption: "secondary", buttonSize: "large", iconRightID: "arrow-right" mobileFullWidth:
+			true%} {% include button, buttonText: "Small", buttonOption: "secondary", buttonSize: "small" mobileFullWidth: true%} {% include
+			button, buttonText: "Disabled", buttonOption: "secondary", buttonSize: "small", iconLeftID: "arrow-right", state: "disabled"
+			mobileFullWidth: true%}
+		</div>
+		<div class="components-page__button-wrapper">
+			<p>Tertiary</p>
+			{% include button, buttonText: "Large", buttonOption: "tertiary", buttonSize: "large" mobileFullWidth: true%} {% include button,
+			buttonText: "Disabled", buttonOption: "tertiary", buttonSize: "large", state: "disabled" mobileFullWidth: true%}
+		</div>
+	</section>
+
+	{% include section-header, title: "Button (on dark)", number: "07" %}
+	<section class="grid fade-bg-black">
+		<div class="components-page__button-wrapper">
+			<p>Primary</p>
+			{% include button, buttonText: "Large", buttonOption: "primary", buttonSize: "large", iconLeftID: "arrow-right" mobileFullWidth:
+			true%} {% include button, buttonText: "Small", buttonOption: "primary", buttonSize: "small" mobileFullWidth: true%} {% include button,
+			buttonText: "Disabled", buttonOption: "primary", buttonSize: "small", iconRightID: "arrow-right", state: "disabled"mobileFullWidth:
+			true %}
+		</div>
+		<div class="components-page__button-wrapper">
+			<p>Secondary</p>
+			{% include button, buttonText: "Large", buttonOption: "secondary", buttonSize: "large", iconRightID: "arrow-right" mobileFullWidth:
+			true%} {% include button, buttonText: "Small", buttonOption: "secondary", buttonSize: "small" mobileFullWidth: true%} {% include
+			button, buttonText: "Disabled", buttonOption: "secondary", buttonSize: "small", iconLeftID: "arrow-right", state: "disabled"
+			mobileFullWidth: true%}
+		</div>
+		<div class="components-page__button-wrapper">
+			<p>Tertiary</p>
+			{% include button, buttonText: "Large", buttonOption: "tertiary", buttonSize: "large" mobileFullWidth: true%} {% include button,
+			buttonText: "Disabled", buttonOption: "tertiary", buttonSize: "large", state: "disabled" mobileFullWidth: true%}
+		</div>
+	</section>
+
+	<section>
+		{% include section-header, title: "Filter Checkbox", number: "08" %}
+		<div class="components-page__filter-checkbox-wrapper">
+			{% include filter-checkbox, label:"LABEL", isReference:"checkbox1", name:"label" %} {% include filter-checkbox, label:"LABEL2",
+			isReference:"checkbox2", name:"label2" %}
+		</div>
+	</section>
+
+	<section class="fade-bg-black">
+		{% include section-header, title: "Filter Checkbox(on dark)", number: "09" %}
+		<div class="components-page__filter-checkbox-wrapper">
+			{% include filter-checkbox, label:"LABEL3", isReference:"checkbox3", name:"label3" %} {% include filter-checkbox, label:"LABEL4",
+			isReference:"checkbox4", name:"label4" %}
+		</div>
+	</section>
+
+	<section>
+		{% include section-header, title: "Share-buttons", number: "10" %}
+		<div class="components-page__share-buttons-wrapper">
+			{% include share-buttons, title:"Share this job" link:true facebook:true twitter:true devTo:true xing:true linkedIn:true %}
+		</div>
+	</section>
+	<section>
+		{% include section-header, title: "Notifications", number: "11" %}
+		<div class="components-page__notification-wrapper">
+			{% include notification, text:"Link saved", userClosable:true %} {% include notification, text:"Link saved" %}
+		</div>
+	</section>
+</main>
+
+{% include footer, data: global %}

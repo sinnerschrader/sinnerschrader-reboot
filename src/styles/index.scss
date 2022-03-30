@@ -5,6 +5,8 @@
 @import "./core/grid";
 @import "./core/variables";
 @import "./core/form";
+@import "./core/components-page";
+@import "./core/buttons";
 
 // includes
 @import "./includes/footer";
@@ -27,6 +29,17 @@
 @import "./includes/imprint";
 @import "./includes/career-landingpage";
 @import "./includes/button";
+@import "./includes/text-teaser";
+@import "./includes/button-notext";
+@import "./includes/button-icon";
+@import "./includes/filter-checkbox";
+@import "./includes/share-buttons";
+@import "./includes/image-teaser";
+@import "./includes/jobs-page";
+@import "./includes/job-details";
+@import "./includes/contact-person";
+@import "./includes/profile-link-contact-form";
+@import "./includes/notification";
 
 // External
 @import "node_modules/swiper/swiper";

@@ -1,24 +1,83 @@
 {
 	"navigation": {
-		"ariaLabel": "Main",
-		"logo": {
-			"top": "SinnerSchrader",
-			"bottom": {
-				"start": "Part of ",
-				"middle": "Accenture",
-				"end": " Interactive"
-			}
-		},
+		"ariaLabel": "Main navigation",
+		"ariaLabelMobileToggle": "Toggle main navigation",
+		"logoSrc": "/assets/svg/sinnerschrader-header-logo.svg",
 		"links": [
 			{
-				"href": "https://sinnerschrader.jobs",
-				"linkText": "Jobs"
-			},
-			{
-				"href": "https://sinnerschrader.news",
-				"linkText": "News"
+				"baseUrl": "",
+				"subUrl": "/jobs.html",
+				"linkText": "Careers"
 			}
-		]
+		],
+		"mobilePanel": {
+			"homeLink": {
+				"baseUrl": "",
+				"subUrl": "/",
+				"linkText": "Home"
+			},
+			"miscTitle": "Misc",
+			"miscLinks": [
+				{
+					"baseUrl": "mailto:info@sinnerschrader.com",
+					"subUrl": "",
+					"linkText": "Contact"
+				},
+				{
+					"baseUrl": "https://sinnerschrader.news/",
+					"subUrl": "en",
+					"linkText": "News"
+				},
+				{
+					"baseUrl": "",
+					"subUrl": "/data-policy",
+					"linkText": "Data policy"
+				},
+				{
+					"baseUrl": "",
+					"subUrl": "/imprint",
+					"linkText": "Imprint"
+				},
+				{
+					"baseUrl": "https://github.com/sinnerschrader/sinnerschrader-reboot",
+					"subUrl": "",
+					"linkText": "Improve this site"
+				}
+			],
+			"socialTitle": "Social",
+			"socialLinks": [
+				{
+					"baseUrl": "https://medium.com/still-day-one",
+					"subUrl": "",
+					"linkText": "Medium"
+				},
+				{
+					"baseUrl": "https://twitter.com/sinnerschrader",
+					"subUrl": "",
+					"linkText": "Twitter"
+				},
+				{
+					"baseUrl": "https://www.facebook.com/SinnerSchrader",
+					"subUrl": "",
+					"linkText": "Facebook"
+				},
+				{
+					"baseUrl": "https://www.linkedin.com/company/sinnerschrader/",
+					"subUrl": "",
+					"linkText": "LinkedIn"
+				},
+				{
+					"baseUrl": "https://dev.to/s2engineers",
+					"subUrl": "",
+					"linkText": "Dev.to"
+				},
+				{
+					"baseUrl": "https://github.com/sinnerschrader",
+					"subUrl": "",
+					"linkText": "GitHub"
+				}
+			]
+		}
 	},
 	"footer": {
 		"topline": {
@@ -41,6 +100,11 @@
 		"linklist": {
 			"left": [
 				{
+					"href": "https://sinnerschrader.news/en",
+					"text": "News",
+					"rel": "external nofollow"
+				},
+				{
 					"href": "mailto:info@sinnerschrader.com",
 					"text": "Contact",
 					"rel": ""
@@ -48,12 +112,12 @@
 				{
 					"href": "/data-policy",
 					"text": "Data Policy",
-					"rel": "nofollow"
+					"rel": "external nofollow"
 				},
 				{
 					"href": "/imprint",
 					"text": "Imprint",
-					"rel": "nofollow"
+					"rel": "external nofollow"
 				},
 				{
 					"href": "https://github.com/sinnerschrader/sinnerschrader-reboot",

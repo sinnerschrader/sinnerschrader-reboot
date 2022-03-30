@@ -11,8 +11,26 @@
 	}
 }
 
+@mixin bp-s-and-lower {
+	@media screen and (max-width: 899px) {
+		@content;
+	}
+}
+
+@mixin bp-s-and-above {
+	@media screen and (min-width: 600px) {
+		@content;
+	}
+}
+
 @mixin bp-m {
 	@media screen and (min-width: 900px) and (max-width: 1199px) {
+		@content;
+	}
+}
+
+@mixin bp-m-and-above {
+	@media screen and (min-width: 900px) {
 		@content;
 	}
 }
@@ -112,9 +130,9 @@
 	@include responsive-spacing($property, $spacing--200, $spacing--200, $spacing--200, $spacing--200);
 }
 
-// SP300 (mobile and desktop)
+// SP300 (mobile and desktop-xl)
 @mixin spacing-300($property) {
-	@include responsive-spacing($property, $spacing--300, $spacing--300--tablet, $spacing--300--tablet, $spacing--300--tablet);
+	@include responsive-spacing($property, $spacing--300, $spacing--300--tablet, $spacing--300--tablet, $spacing--300--desktop-xl);
 }
 
 // SP400
@@ -206,6 +224,7 @@
 // Headline smaller sans serif
 @mixin headline-200 {
 	font-family: $font-sans-serif-regular;
+	font-weight: 400;
 
 	@include bp-xs {
 		font-size: 3.2rem;
@@ -279,7 +298,7 @@
 
 @mixin headline-400 {
 	font-family: $font-sans-serif-regular;
-
+	font-weight: 400;
 	@include bp-xs {
 		font-size: 1.8rem;
 		line-height: 2rem;
@@ -295,6 +314,28 @@
 	@include bp-xl {
 		font-size: 3.2rem;
 		line-height: 2.6rem;
+	}
+}
+
+@mixin subheadline-100 {
+	font-family: $font-sans-serif-light;
+	font-weight: 300;
+
+	@include bp-xs {
+		font-size: 2.4rem;
+		line-height: 3.84rem;
+	}
+	@include bp-tablet {
+		font-size: 3.2rem;
+		line-height: 5.12rem;
+	}
+	@include bp-l {
+		font-size: 3.2rem;
+		line-height: 5.12rem;
+	}
+	@include bp-xl {
+		font-size: 4.8rem;
+		line-height: 7.68rem;
 	}
 }
 
@@ -390,5 +431,23 @@
 }
 
 @mixin default-animation($property) {
-	transition: $property 300ms ease-in-out;
+	transition: $property $transition-main ease-in-out;
+}
+
+@mixin bg-and-color-animation() {
+	transition: background-color $transition-main ease-in-out, color $transition-main ease-in-out;
+}
+
+@mixin filter-animation() {
+	transition: filter $transition-main ease-in-out;
+}
+
+@mixin button-animation() {
+	transition: transform 0.3s ease-in-out, letter-spacing 0.3s ease-in-out;
+
+	&:hover {
+		transform: scale(0.95);
+		letter-spacing: 0.3rem;
+		transition: transform 0.3s ease-in-out, letter-spacing 0.3s ease-in-out;
+	}
 }

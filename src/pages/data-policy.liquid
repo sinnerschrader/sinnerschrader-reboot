@@ -4,7 +4,7 @@ layout: default.liquid
 permalink: data-policy.html
 ---
 
-{% include navigation, data: global %}
+{% include navigation, data: global, colorModifier: "is-text-dark" %}
 
 <main class="privacy">
 	<section class="grid">
@@ -234,7 +234,11 @@ permalink: data-policy.html
 				</p>
 			</section>
 
-			<h2 id="social-media">Online presence on social media</h2>
+			<div id="social-media">
+				<div class="data-policy__content__text-divider">
+					<h2>Online presence on social media</h2>
+				</div>
+			</div>
 
 			<section id="policy-facebook-fan-pages">
 				<h3 class="copy--title">Data policy statement for Facebook fan pages</h3>

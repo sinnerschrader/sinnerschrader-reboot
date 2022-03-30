@@ -11,11 +11,12 @@
 				"except": ["after-single-line-comment", "first-nested"]
 			}
 		],
-		"max-nesting-depth": 3,
+		"max-nesting-depth": 6,
 		"selector-class-pattern": null,
 		"order/properties-alphabetical-order": null,
 		"property-no-vendor-prefix": null,
 		"selector-max-id": null,
-		"no-descending-specificity": null
+		"no-descending-specificity": null,
+		"selector-max-compound-selectors": null
 	}
 }

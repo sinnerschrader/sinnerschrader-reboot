@@ -1,0 +1,121 @@
+{
+	"stage": {
+		"headline": {
+			"top": "UI",
+			"bottom": "Components"
+		},
+		"subheadline": "Media Stage",
+		"button": {
+			"text": "OPTIONAL BTN"
+		},
+		"backgroundImage": { "image": "Berlin1.webp", "imageFallback": "Berlin1.jpg", "alt": "Berlin" },
+		"gradient": true
+	},
+	"image-teaser": {
+		"image": {
+			"mobileSrc": "./assets/images/mobile/job-list-teaser-mobile.webp",
+			"tabletSrc": "./assets/images/tablet/job-list-teaser-tablet.webp",
+			"desktopSrc": "./assets/images/desktop/job-list-teaser.webp",
+			"fallbackSrc": "./assets/images/fallback/job-list-teaser.png",
+			"altText": "Job List Teaser Picture of young man with vr goggles."
+		}
+	},
+	"text-teaser": {
+		"headline": "Headline",
+		"text": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.",
+		"link": {
+			"text": "Linktext",
+			"href": "#"
+		}
+	},
+	"offerings": {
+		"offeringList": [
+			{
+				"list": [
+					{
+						"alt": "clock emoji",
+						"emoji": "/assets/emojis/working-hours.png",
+						"item": "Flexible Working Hours"
+					},
+					{
+						"alt": "island with palm tree emoji",
+						"emoji": "/assets/emojis/remote-work.png",
+						"item": "Opportunity to work remotely"
+					},
+					{
+						"alt": "woman meditating emoji",
+						"emoji": "/assets/emojis/health-benefits.png",
+						"item": "Health benefits (sports, massage etc.)"
+					},
+					{
+						"alt": "man riding bicycle emoji",
+						"emoji": "/assets/emojis/company-bicycle.png",
+						"item": "Company bicycle"
+					}
+				]
+			},
+			{
+				"list": [
+					{
+						"alt": "bus emoji",
+						"emoji": "/assets/emojis/public-transport.png",
+						"item": "Public Transport (In Hambug)"
+					},
+					{
+						"alt": "shopping bags emoji",
+						"emoji": "/assets/emojis/discount.png",
+						"item": "Employee discount program"
+					},
+					{
+						"alt": "woman dancing emoji",
+						"emoji": "/assets/emojis/holidays.png",
+						"item": "Christmas & New year off"
+					},
+					{
+						"alt": "emoji with glasses",
+						"emoji": "/assets/emojis/pension.png",
+						"item": "Pension plan"
+					}
+				]
+			},
+			{
+				"list": [
+					{
+						"alt": "ambulance emoji",
+						"emoji": "/assets/emojis/accident-insurance.png",
+						"item": "Accident insurance"
+					},
+					{
+						"alt": "raised hands emoji",
+						"emoji": "/assets/emojis/workers-council.png",
+						"item": "Workers Council"
+					},
+					{
+						"alt": "graph emoji",
+						"emoji": "/assets/emojis/shares.png",
+						"item": "Employer share purchase program"
+					},
+					{
+						"alt": "diamond emoji",
+						"emoji": "/assets/emojis/referral.png",
+						"item": "Employee Referral Program"
+					}
+				]
+			}
+		]
+	},
+	"contact": {
+		"headline": "Contact",
+		"details": {
+			"name": "Victoria Breuer",
+			"title": "Talent Acquisition",
+			"phone": "+49 40 398855 485",
+			"mail": "jobs@sinnerschrader.com",
+			"linkedIn": "https://www.linkedin.com/",
+			"xing": "https://www.xing.com/",
+			"imgUrl": "/assets/meta-assets/contact-person.png"
+		},
+		"buttonText": "Apply now",
+		"buttonIconUrl": "/assets/meta-assets/favicon.png"
+	}
+}

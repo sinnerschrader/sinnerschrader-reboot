@@ -1,0 +1,22 @@
+<div class="job-list__category grid" id="js-list-category__{{ discipline | | downcase }}">
+	<div class="col-12-xs col-6-s col-5 hidden-xs job-list__category-title">
+		<h2 class="job-list__category-headline col-12-xs col-6-s col-5">{{ discipline }}</h2>
+	</div>
+
+	<h2 class="job-list__category-headline col-12-xs col-5 visible-xs">{{ discipline }}</h2>
+
+	<div class="col-12-xs col-6-s col-7">
+		<ul class="job-list__list">
+			{% for job in jobs %}
+			<li class="job-list__item" data-office="{{ job.data.location | downcase }}" data-discipline="{{ job.data.discipline | downcase }}">
+				<a class="job-list__anchor" href="/jobs/{{ job.data.title | slug }}-{{ job.data.location | slug }}.html">
+					<div class="job-list__item-title">{{ job.data.title }} (f/m/d/-)</div>
+					<div class="job-list__item-location">
+						{{ job.data.location }}
+					</div>
+				</a>
+			</li>
+			{% endfor %}
+		</ul>
+	</div>
+</div>

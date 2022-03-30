@@ -3,3 +3,5 @@ npm-debug.log
 .DS_Store
 _site/
 src/_includes/css/main.css
+.idea
+.vscode

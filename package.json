@@ -13,13 +13,14 @@
     "11ty:build": "eleventy",
     "11ty:watch": "eleventy --serve",
     "esbuild:build": "esbuild ./src/_includes/js/main.js --outfile=_site/bundle.js --bundle --minify",
-    "esbuild:watch": "esbuild ./src/_includes/js/main.js --outfile=_site/bundle.js --bundle --watch",
+    "esbuild:watch": "esbuild ./src/_includes/js/main.js --sourcemap --outfile=_site/bundle.js --bundle --watch",
     "responsiveImages": "rimraf ./_site/assets/images/ && node ./config/sharp.js",
     "stylelint": "stylelint ./src/styles/**/*.scss",
     "a11y-check": "pa11y-ci"
   },
   "dependencies": {
     "lodash-es": "^4.17.21",
+    "netlify-cms": "^2.10.179",
     "simple-parallax-js": "^5.6.2",
     "swiper": "^8.0.7"
   },

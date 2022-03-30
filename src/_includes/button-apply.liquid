@@ -1,0 +1,12 @@
+{% if workdayLink %}
+<a href="{{ workdayLink }}" target="_blank" rel="external nofollow" class="button button--apply button--primary button--apply">
+	<span class="button__text">{{ data.apply.buttonApplyWorkday }}</span>
+</a>
+{% else %}
+<a href="mailto:{{ data.apply.mail }}" class="button button--apply button--primary button--apply">
+	<span class="button__text">{{ data.apply.buttonApplyMail }}</span>
+	<svg class="button__icon button__icon--right">
+		<use href="/assets/svg/icons.svg#mail" />
+	</svg>
+</a>
+{% endif %}

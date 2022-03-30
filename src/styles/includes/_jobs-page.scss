@@ -8,8 +8,8 @@ fieldset {
 }
 
 // local variables
-$filter-bar-height--mobile: 7.2rem;
-$filter-bar-height--desktop: 11.8rem;
+$filter-bar__height--mobile: 7.2rem;
+$filter-bar__height--desktop: 11.8rem;
 
 @mixin active-filters {
 	@include code-100;
@@ -18,6 +18,27 @@ $filter-bar-height--desktop: 11.8rem;
 	color: $color-primary--600;
 	text-transform: uppercase;
 	letter-spacing: 0.15rem;
+}
+
+@mixin icon-button {
+	border: 0;
+	justify-content: center;
+	align-items: center;
+	width: 4rem;
+	height: 4rem;
+	border-radius: 50%;
+	background-color: $color-primary--900;
+	color: $color-primary--white;
+}
+
+.toggle-button {
+	display: inline-flex;
+
+	&:hover {
+		@include default-animation(transform);
+
+		transform: scale(calc(1.2 / 1.4));
+	}
 }
 
 .jobs__intro {
@@ -74,7 +95,6 @@ $filter-bar-height--desktop: 11.8rem;
 
 	.offering--info {
 		@include spacing-900(padding-bottom);
-
 		padding-top: 0;
 	}
 
@@ -126,7 +146,6 @@ $filter-bar-height--desktop: 11.8rem;
 		@include bp-s {
 			position: initial;
 		}
-
 		@include bp-xs {
 			position: initial;
 
@@ -144,6 +163,9 @@ $filter-bar-height--desktop: 11.8rem;
 		// position at top of screen when main navigation is not visible
 		&.is-mobile-nav-hidden {
 			top: 0;
+			max-height: $filter-bar__height--desktop;
+			padding-top: $spacing--400--desktop;
+			z-index: 12;
 		}
 
 		// This is toggle without animation for now.
@@ -169,7 +191,7 @@ $filter-bar-height--desktop: 11.8rem;
 			justify-content: space-between;
 			align-items: center;
 			padding: 0 $spacing--400;
-			height: $filter-bar-height--mobile;
+			height: $filter-bar__height--mobile;
 
 			@include bp-s-and-above {
 				display: none;
@@ -214,6 +236,7 @@ $filter-bar-height--desktop: 11.8rem;
 				@include active-filters();
 			}
 		}
+
 		// filter chip
 		&__filter-item {
 			line-height: initial;
@@ -233,6 +256,13 @@ $filter-bar-height--desktop: 11.8rem;
 				background-color: $color-primary--white;
 				color: $color-primary--900;
 
+
+			svg {
+				margin-left: 0;
+				filter: invert(1);
+			}
+
+			&:hover {
 				svg {
 					filter: invert(0);
 				}
@@ -282,6 +312,50 @@ $filter-bar-height--desktop: 11.8rem;
 					color: $color-primary--black;
 				}
 			}
+				circle {
+					transition: transform 0.3s ease-in-out;
+					transform: scale(1);
+				}
+			}
+
+			.filter-checkbox__icon__animated-path {
+				@include default-animation(transform);
+
+				transform-origin: center;
+			}
+		}
+
+		// active filter state
+		input[type="checkbox"]:checked + &__filter-item {
+			background-color: $color-primary--white;
+			color: $color-primary--900;
+
+			svg {
+				filter: invert(0);
+			}
+
+			&:hover {
+				svg {
+					filter: invert(1);
+				}
+
+				circle {
+					transition: transform 0.3s ease-in-out;
+					transform: scale(1);
+				}
+			}
+
+			.filter-checkbox__icon__animated-path {
+				@include default-animation(transform);
+
+				transform-origin: center;
+				transform: rotate(90deg);
+			}
+		}
+
+		// focus visible: only applies on keyboard-focus
+		input[type="checkbox"]:focus-visible + &__filter-item {
+			outline: $color-secondary--blue auto 1px;
 		}
 
 		// Button for open close the filter section
@@ -292,6 +366,11 @@ $filter-bar-height--desktop: 11.8rem;
 
 			@include bp-xs() {
 				display: flex;
+			}
+
+			// TODO: replace when icon button is implemented
+			.toggle-button {
+				@include icon-button();
 			}
 		}
 
@@ -324,6 +403,64 @@ $filter-bar-height--desktop: 11.8rem;
 			padding-top: $spacing--600;
 		}
 
+	// Filter Button that floats with scrolling
+	@include bp-xs {
+		.mobile-floater {
+			display: block;
+			position: sticky;
+			top: 90vh;
+			text-align: right;
+			max-width: 100%;
+			overflow: hidden;
+			z-index: 100;
+
+			.toggle-button {
+				@include icon-button();
+
+				position: relative;
+				cursor: pointer;
+				transform: translateX(4rem);
+				transition: transform 0.4s ease-in;
+			}
+
+			.freeze-scroll & {
+				display: none;
+			}
+
+			.is-floating ~ & {
+				.toggle-button {
+					transform: translateX(-4rem);
+				}
+			}
+
+			svg {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				left: 4px;
+				top: 5px;
+				filter: invert(1);
+			}
+		}
+
+		.js-toggle-filter-bar--mobile {
+			position: relative;
+
+			svg {
+				position: absolute;
+				width: 16px;
+				height: 16px;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+			}
+		}
+	}
+
+	.job-list {
+		padding-top: $spacing--600;
+		margin-top: 0;
+
 		// A category holds subheadline for discipline
 		// and a list for the offerings
 		&__category {
@@ -349,7 +486,7 @@ $filter-bar-height--desktop: 11.8rem;
 				z-index: 0;
 
 				@include bp-s-and-above {
-					top: $filter-bar-height--desktop + $spacing--400;
+					top: $filter-bar__height--desktop + $spacing--400;
 					border: 0;
 				}
 
@@ -442,6 +579,12 @@ $filter-bar-height--desktop: 11.8rem;
 		}
 	}
 
+	// When the fullscreen filter menu is open we want to prevent scrolling in the background
+	.freeze-scroll {
+		height: 100vh;
+		overflow-y: hidden;
+	}
+
 	.job-filter-wrapper {
 		@include bp-xs {
 			transform: translateX(100%);
@@ -475,6 +618,10 @@ $filter-bar-height--desktop: 11.8rem;
 				.button--clear {
 					background-color: $color-primary--gray;
 					color: $color-primary--white;
+				margin-top: 15rem;
+
+				.button--clear {
+					background-color: $color-primary--gray;
 				}
 			}
 		}
@@ -491,6 +638,7 @@ $filter-bar-height--desktop: 11.8rem;
 			position: sticky;
 			top: 0;
 			z-index: 1;
+			padding: 0;
 		}
 	}
 }
@@ -504,10 +652,6 @@ $filter-bar-height--desktop: 11.8rem;
 .toggle-button--jobs {
 	transition: transform 0.25s ease-out;
 
-	@include bp-xs {
-		display: none;
-	}
-
 	.is-open & {
 		transform: rotate(180deg);
 		transition: transform 0.25s ease-out;
@@ -519,14 +663,18 @@ $filter-bar-height--desktop: 11.8rem;
 }
 
 //openings title
-.openings {
-	@include spacing-900(margin-bottom);
 
+.openings {
 	height: 80rem;
 	background-repeat: no-repeat;
 	background-size: contain;
-	background-image: url("assets/svg/openings.svg");
+	background-image: url(assets/svg/openings.svg);
 	background-position-y: center;
+	@include spacing-900(margin-bottom);
+
+	.is-dark & {
+		filter: invert(1);
+	}
 
 	@include bp-xs {
 		height: 17rem;

@@ -6,7 +6,7 @@
 			"bottom": {
 				"start": "Part of ",
 				"middle": "Accenture",
-				"end": " Interactive"
+				"end": " Song"
 			}
 		},
 		"links": [
@@ -22,7 +22,7 @@
 	},
 	"footer": {
 		"topline": {
-			"altText": "text: part of Accenture Interactive",
+			"altText": "text: part of Accenture Song",
 			"imgSrc": "/assets/svg/accenture-logo.svg"
 		},
 		"logo": {

@@ -18,8 +18,8 @@ Völckersstraße 38
 Germany
 
 Executive Board:
-Thomas Dyckhoff, Evalotta Kahlen  
-Chairman of the Supervisory Board: Frank Riemensperger
+Thomas Müller, Beate Caglar  
+Chairman of the Supervisory Board: Roland Mayr
 
 ## Responsible For Data Protection
 

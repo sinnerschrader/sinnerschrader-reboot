@@ -11,9 +11,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2.3.4
+      - uses: actions/checkout@v3
 
-      - uses: actions/setup-node@v2.4.0
+      - uses: actions/setup-node@v3
         with:
           node-version: "14"
 
@@ -22,7 +22,7 @@ jobs:
           npm run build
 
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@4.1.5
+        uses: JamesIves/github-pages-deploy-action@v4.3.0
         with:
           branch: gh-pages
           folder: _site

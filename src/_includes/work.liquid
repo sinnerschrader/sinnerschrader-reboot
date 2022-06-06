@@ -39,7 +39,7 @@
 				        type="video/mp4"
 				        media="screen and (max-width: 600)"/>
 			</video>
-			<video class="video-reduced-motion">
+			<video class="video-reduced-motion" preload="none">
 				<source src="{{ data.work.reducedMotion.webmSrc }}" type="video/webm" />
 				<source src="{{ data.work.reducedMotion.mp4Src }}" type="video/mp4" />
 			</video>
@@ -51,7 +51,7 @@
 			<div class="work__logos">
 				{% for logo in data.work.logos %}
 					<div class="work__logos-el-wrapper">
-						<img src="{{ logo.imgSrc }}" alt="{{ logo.altText }}" />
+						<img loading="lazy" src="{{ logo.imgSrc }}" alt="{{ logo.altText }}" />
 					</div>
 				{% endfor %}
 			</div>

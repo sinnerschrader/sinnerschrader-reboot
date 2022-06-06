@@ -77,8 +77,8 @@ info@sinnerschrader.com
 
 #### **Management Board:**
 
-Thomas Dyckhoff, Evalotta Kahlen
-Chairperson Supervisory Board: Frank Riemensperger
+Thomas Müller, Beate Caglar
+Chairperson Supervisory Board: Roland Mayr
 
 Court of Registry: Amtsgericht Hamburg Registration Number – HRB 74455
 EU VAT ID: DE812894649
@@ -94,7 +94,7 @@ info@sinnerschrader.de
 
 #### **Management Board:**
 
-Dr. Axel Averdung (chairperson), Holger Blank, Kristina Bonitz, Philipp Kafkoulas, Sven Schmiede
+Dr. Axel Averdung (chairperson), Holger Blank, Philipp Kafkoulas, Sven Schmiede
 
 Court of Registry:
 Amtsgericht Hamburg Registration Number – HRB 63663

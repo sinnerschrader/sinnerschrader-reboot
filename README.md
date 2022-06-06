@@ -94,7 +94,7 @@ info@sinnerschrader.de
 
 #### **Management Board:**
 
-Dr. Axel Averdung (chairperson), Holger Blank, Kristina Bonitz, Philipp Kafkoulas, Florian Langmack, Sven Schmiede
+Dr. Axel Averdung (chairperson), Holger Blank, Kristina Bonitz, Philipp Kafkoulas, Sven Schmiede
 
 Court of Registry:
 Amtsgericht Hamburg Registration Number – HRB 63663

@@ -28,7 +28,7 @@
     "autoprefixer": "^10.4.4",
     "chokidar": "^3.5.3",
     "cssnano": "^5.1.7",
-    "esbuild": "^0.14.34",
+    "esbuild": "^0.15.6",
     "fibers": "^5.0.1",
     "fs-extra": "^10.0.1",
     "glob": "^7.2.0",
